@@ -54,6 +54,11 @@ documentation_docs.forEach(doc => {
 		'arg': url,
 		'uid': url,
 		'match': alfredMatcher,
+		'mods': {
+			'alt':{
+				'subtitle': "⌥: Copy Link",
+			},
+		}
 	});
 });
 

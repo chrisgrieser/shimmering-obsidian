@@ -1,0 +1,35 @@
+default-font,font,default-font
+mermaid-font,font,mermaid-font
+reveal-font,font,reveal-font
+font-monospace,font,font-monospace
+background-primary,light: #ffffff & dark: #202020,background-primary
+background-primary-alt,light: #f5f6f8 & dark: #1a1a1a,background-primary-alt
+background-secondary,light: #f2f3f5 & dark: #161616,background-secondary
+background-secondary-alt,light: #e3e5e8 & dark: #000000,background-secondary-alt
+background-modifier-border,light: #dddddd & dark: #333333,background-modifier-border
+background-modifier-form-field,light: #ffffffff & dark: #0000004d,background-modifier-form-field
+background-modifier-form-field-highlighted,light: #ffffffff & dark: #00000038,background-modifier-form-field-highlighted
+background-modifier-box-shadow,light: #0000001a & dark: #0000004d,background-modifier-box-shadow
+background-modifier-success,light: #A4E7C3 & dark: #197300,background-modifier-success
+background-modifier-error-rgb,light: #990000 & dark: #3d0000,background-modifier-error-rgb
+background-modifier-error-hover,light: #bb0000 & dark: #470000,background-modifier-error-hover
+background-modifier-cover,light: #000000cc & dark: #000000cc,background-modifier-cover
+text-accent,light: #705dcf & dark: #7f6df2,text-accent
+text-accent-hover,light: #7a6ae6 & dark: #8875ff,text-accent-hover
+text-normal,light: #2e3338 & dark: #dcddde,text-normal
+text-muted,light: #888888 & dark: #999999,text-muted
+text-faint,light: #999999 & dark: #666666,text-faint
+text-error,light: #800000 & dark: #ff3333,text-error
+text-error-hover,light: #990000 & dark: #990000,text-error-hover
+text-highlight-bg,light: #ffff0066 & dark: #ffff0066,text-highlight-bg
+text-highlight-bg-active,light: #ff800066 & dark: #ff800066,text-highlight-bg-active
+text-selection,light: #cce6fffc & dark: #17304dfc,text-selection
+text-selection,light: #f2f2f2 & dark: #dcddde,text-selection
+interactive-normal,light: #f2f3f5 & dark: #2a2a2a,interactive-normal
+interactive-hover,light: #e9e9e9 & dark: #303030,interactive-hover
+interactive-accent-rgb,light: #7b6cd9 & dark: #483699,interactive-accent-rgb
+interactive-accent-hover,light: #8273e6 & dark: #4d3ca6,interactive-accent-hover
+interactive-success,light: #197300 & dark: #197300,interactive-success
+scrollbar-bg,light: #0000000d & dark: #ffffff0d,scrollbar-bg
+scrollbar-thumb-bg,light: #0000001a & dark: #ffffff1a,scrollbar-thumb-bg
+scrollbar-active-thumb-bg,light: #00000033 & dark: #ffffff33,scrollbar-active-thumb-bg
