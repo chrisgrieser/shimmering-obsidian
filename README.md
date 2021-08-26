@@ -57,9 +57,7 @@ end tell
 - Only plugins officially included in the community plugins are displayed — plugins solely available via GitHub or still in review will not be shown.
 - The thousand separator used with the download numbers can be set in the workflow configuration (`thousand_seperator`).
 
-
-<img src="https://i.imgur.com/IxUjmQX.gif" alt="" width=60% height=60%>
-
+<img src="https://user-images.githubusercontent.com/73286100/131027623-5e8b3667-d00d-47dc-ba49-6938686e2aca.gif" alt="plugin search" width=60% height=60%>
 
 **`odual`: Enter [dual] mode.**
 - Will open a new pane with the current note in preview mode. This means, you will have the Editor and the Preview View side-by-side.
@@ -154,7 +152,7 @@ After installing the workflow, you need to configure the settings of this workfl
 3) Users familiar with Alfred: You can change any keyword mentioned, like with any other Alfred workflow. (All keyword triggers are located to the very left of this workflow.)
 
 <img src="https://i.imgur.com/swm7AaC.png" alt="Settings of this Workflow" width=40% height=40%>
-<img src="https://i.imgur.com/wlpht7f.png" alt="Setting Hotkeys" width=20% height=20%>
+<img src="https://i.imgur.com/wlpht7f.png" alt="Setting Hotkeys" width=15% height=15%>
 
 ---
 
