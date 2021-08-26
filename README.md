@@ -1,6 +1,13 @@
 # Shimmering Obsidian 
 *An Alfred Workflow with about a dozen features for Obsidian*
 
+
+[General Features](https://github.com/chrisgrieser/shimmering-obsidian#general-features)
+[CSS-related features](https://github.com/chrisgrieser/shimmering-obsidian#css-related-features)
+[Requirements & Installation](https://github.com/chrisgrieser/shimmering-obsidian#requirements--installation)
+[Workflow Configuration](https://github.com/chrisgrieser/shimmering-obsidian#workflow-configuration)
+[Credits](https://github.com/chrisgrieser/shimmering-obsidian#credits)
+
 ## Features
 Most features are triggered with dedicated Alfred keywords, as with any other Alfred workflow. The emphasized letter in the following feature list is the keyword you need to use. (Some features are triggered via Hotkey or [Universal Action](https://www.alfredapp.com/universal-actions/) instead.)
 
@@ -155,6 +162,8 @@ After installing the workflow, you need to configure the settings of this workfl
 <img src="https://i.imgur.com/wlpht7f.png" alt="Setting Hotkeys" width=15% height=15%>
 
 ---
+
+## Credits
 
 Many features of this plugin are only made possible by the invaluable [Advanced URI plugin](https://github.com/Vinzent03/obsidian-advanced-uri) by [@Vincent03](https://github.com/Vinzent03).
 
