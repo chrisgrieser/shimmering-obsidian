@@ -36,7 +36,7 @@ Most features are triggered with dedicated Alfred keywords, as with any other Al
 
 **`oh`: Get [h]elp by searching the official [Obsidian documentation](https://help.obsidian.md/Start+here).** 
 - This command mimics the search behavior on the official documentation site, meaning that it also searches for headings inside individual documentation pages. Press `return` to open in your default browser.
-- `return + opt`: copy the link to your clipboard instead.
+- `opt + return`: Copy the link to your clipboard instead.
 - If there are now results for your search query, you can also directly search the [Obsidian Forum](https://forum.obsidian.md/s). 
 - After major updates of the Obsidian documentation, this Alfred workflow needs to recreate its index of the Obsidian documentation. You can do so by selecting the respective option when typing keyword `osettings`. (Index recreation can take a few seconds depending on your internet connection. You will be notified when it is done.)
 
