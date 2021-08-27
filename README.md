@@ -27,7 +27,7 @@ Most features are triggered with dedicated Alfred keywords, as with any other Al
 
 <img src="https://i.imgur.com/niwUEa9.gif" alt="" width=60% height=60%>
 
-**Triggered via Hotkey: Take an OCR Screenshot.** 
+**`Triggered via Hotkey`: Take an OCR Screenshot.** 
 - Similar to the default Mac Hotkey `cmd + shift + 4`, you will be able to select part of your screen for a screenshot. However, instead of saving a screenshot, a new note will be created which contains the OCR-content of the selection.
 - If the file “OCR-Screenshot” already exists in your vault root, any subsequent OCR-Screenshots will instead append to this note. This is intended for taking a lot of OCR-Screenshots in succession, e.g., during a lecture or presentation.
 - For best results, you should set the proper languages of the text that is to be recognized with the workflow setting `ocr_languages`.
@@ -97,7 +97,7 @@ end tell
 - Open the “themes” or “snippets” folder located in `.obsidian` in Finder.
 - Create a **new CSS snippet** in mere seconds: The CSS file will be placed in your snippet folder, filled with your clipboard content, named after the query you enter after `ocss`, and then opened in your default text editor. (Furthermore, this will open the Obsidian Settings in the background, to save you yet another click. 🙂)
 
-**Triggered via Hotkey: Toggle one of your CSS snippets.**
+**`Triggered via Hotkey`: Toggle one of your CSS snippets.**
 - The snippet you wish to toggle must be set in the workflow configuration (`toggle_snippet`). 
 - This feature is useful for some CSS Snippets that you regularly want to turn on and off, like e.g., the [snippet to hide URLs](https://github.com/Dmitriy-Shulha/obsidian-css-snippets/blob/master/Snippets/URLs.md), or the [snippet to garble text](https://forum.obsidian.md/t/garble-text-on-screen-to-hide-private-info-with-added-features/23143).
 
@@ -105,7 +105,7 @@ end tell
 <img src="https://i.imgur.com/j1tyGQw.gif" alt="" width=60% height=60%>
 
 
-**Triggered via Hotkey: Convert a font file to CSS with base64.**
+**`Triggered via Hotkey`: Convert a font file to CSS with base64.**
 - This will take the selected font file (e.g., `.tff` or `.woff`), convert them into 
 - The Hotkey only works in Finder.
 - Alternatively, you can use the [Universal Action](https://www.alfredapp.com/universal-actions/) feature form Alfred to trigger the conversion.
@@ -133,7 +133,7 @@ First of all, you need the [Powerpack for Alfred](https://www.alfredapp.com/powe
 - Quick Switcher (Core Plugin) has to be enabled
 
 ### Required Third-Party Software
-For the OCR Screenshot Feature and for note previews from Alfred, you need to install [Tesseract](https://tesseract-ocr.github.io/tessdoc/Installation.html) and [qlmarkdown](https://github.com/toland/qlmarkdown/). With Homebrew, you can do do by running the following commands:
+For the OCR Screenshot Feature and for note previews via Alfred, you need to install [Tesseract](https://tesseract-ocr.github.io/tessdoc/Installation.html) and [qlmarkdown](https://github.com/toland/qlmarkdown/). With Homebrew, you can do so by running the following commands:
 
 ```bash
 brew install tesseract
@@ -142,7 +142,8 @@ brew install qlmarkdown
 ```
 
 ### Installation
-Download the [latest release at GitHub](https://github.com/chrisgrieser/shimmering-obsidian/releases/latest). Double-click the `.alfredworkflow` file.
+- Install all the requirements listed above.
+- Download the [latest release at GitHub](https://github.com/chrisgrieser/shimmering-obsidian/releases/latest). Double-click the `.alfredworkflow` file.
 
 ## Workflow Configuration
 After installing the workflow, you need to configure the settings of this workflow to make use of most of its features.
