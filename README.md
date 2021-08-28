@@ -38,7 +38,7 @@ Most features are triggered with dedicated Alfred keywords, as with any other Al
 	- `fn + return`: Append the content of your clipboard to the selected note. Then opens the note.
 	- `ctrl + return`: Copy the [Obsidian-URI to the selected file](https://help.obsidian.md/Advanced+topics/Using+obsidian+URI#Action+`hook-get-address`). 
 	- Press `shift` or `cmd + y` to preview the selected note via macOS' *Quick Look* feature. Press `shift` or `cmd + y` again to close the preview. (Caveat: Unfortunately, YAML-Headers are not displayed properly.)
-- This command *does* also look for **aliases**, when they are [defined in the YAML-Header](https://help.obsidian.md/How+to/Add+aliases+to+note#Set+aliases). (Searching the aliases takes a short moment, though.)
+- This command also looks for **aliases**, when they are [defined in the YAML-Header](https://help.obsidian.md/How+to/Add+aliases+to+note#Set+aliases). (Searching the aliases takes a short moment, though.)
 - When **selecting a folder**, you will “browse” the selected folder. This means that you are now searching only for files and folders inside that folder. This is useful for when you cannot recall a file's name or alias, but do know the folder where it is located. When browsing a folder, you also have the option to create a new note in that folder. 
 - When you have set `search_ignore_attachments` in the workflow configuration to “true”, files in your **attachment folder(s) will be ignored**. This basically mimics the behavior of Obsidian's QuickSwitch.
 
@@ -50,7 +50,7 @@ Most features are triggered with dedicated Alfred keywords, as with any other Al
 **`Triggered via Hotkey`: Take an OCR Screenshot.** 
 - Similar to the default Mac Hotkey `cmd + shift + 4`, you will be able to select part of your screen for a screenshot. However, instead of saving a screenshot, a new note will be created which contains the OCR-content of the selection.
 - If the file “OCR-Screenshot” already exists in your vault root, any subsequent OCR-Screenshots will instead append to this note. This is intended for taking a lot of OCR-Screenshots in succession, e.g., during a lecture or presentation.
-- For best results, you should set the proper languages of the text that is to be recognized with the workflow setting `ocr_languages`.
+- For best results, you should set the proper languages to be recognized with the workflow setting `ocr_languages`.
 
 <img src="https://i.imgur.com/xwdl1N5.gif" alt="OCR Screenshot" width=60% height=60%>
 
@@ -69,7 +69,7 @@ Most features are triggered with dedicated Alfred keywords, as with any other Al
 
 **`obackup`: Create a [backup] of your vault.** 
 - Your whole vault will be compressed into a *zip* file and then moved to the location you specified in the workflow configuration (`backup_destination`). There will be a notification when the backup has been completed. 
-- This command will respect the maximum number of backups you have set (`max_number_of_bkps`) to prevent taking up too much disk space. When the number is reached, every new backup cause the oldest backup to be deleted.
+- This command will respect the maximum number of backups you have set (`max_number_of_bkps`) to prevent taking up too much disk space. When the number is reached, every new backup causes the oldest backup to be deleted.
 - The hidden folders `.obsidian` and `.trash` are included in the backup.
 - Advanced users: you can use the following AppleScript snippet to trigger a backup. This is useful to create automated backups via [launchd](https://launchd.info/), cron jobs, or [Keyboard Maestro](https://www.keyboardmaestro.com/main/).
 
@@ -93,7 +93,7 @@ end tell
 - Note that using the [Force View Mode Plugin](https://github.com/bwydoogh/obsidian-force-view-mode-of-note) may result in the second pane opening in the wrong view.
 
 **`osetting`: Open the Obsidian [settings].** 
-- Also work when Obsidian is not running (like most commands of this workflow do).
+- Also works when Obsidian is not running (like most commands of this workflow do).
 
 **`otrash`: Open the [trash] folder of your vault.**
 - The hidden [.trash folder](https://help.obsidian.md/Advanced+topics/Deleting+files) located in your vault root will be opened in Finder. 
