@@ -202,6 +202,4 @@ After installing the workflow, you need to configure the settings of this workfl
 
 Many features of this plugin are only made possible by the invaluable [Advanced URI plugin](https://github.com/Vinzent03/obsidian-advanced-uri) by [@Vincent03](https://github.com/Vinzent03).
 
-This workflow has been created by @pseudometa ([Discord](https://discord.gg/veuWUTm)) aka [@chrisgrieser (GitHub)](https://github.com/chrisgrieser/).
-
-If you find this workflow to be helpful, feel free to donate [via PayPal](https://www.paypal.com/paypalme/ChrisGrieser). In my day job, I am a PhD student in sociology, studying the governance of the app economy. Visit [my academic homepage for more information](https://chris-grieser.de/).
+This workflow has been created by @pseudometa ([Discord](https://discord.gg/veuWUTm)) aka [@chrisgrieser (GitHub)](https://github.com/chrisgrieser/). If you find this workflow to be useful, feel free to donate [via PayPal](https://www.paypal.com/paypalme/ChrisGrieser). In my day job, I am a PhD student in sociology, studying the governance of the app economy. If you are interested in this subject, check out [my academic homepage](https://chris-grieser.de/) and get in touch.
