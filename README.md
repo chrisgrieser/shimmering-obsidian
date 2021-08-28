@@ -6,6 +6,7 @@
 ## Overview
 - [General Features](https://github.com/chrisgrieser/shimmering-obsidian#general-features)
 	- Search your Vault
+	- Search only Starred Files in your Vault
 	- OCR Screenshots
 	- Search the Obsidian Documentation
 	- Search community plugins and directly open them in Obsidian or GitHub
@@ -41,6 +42,9 @@ Most features are triggered with dedicated Alfred keywords, as with any other Al
 - When you have set `search_ignore_attachments` in the workflow configuration to “true”, files in your **attachment folder(s) will be ignored**. This basically mimics the behavior of Obsidian's QuickSwitch.
 
 <img src="https://i.imgur.com/niwUEa9.gif" alt="" width=60% height=60%>
+
+**`os`: Open [s]tarred files in your vault.** 
+- Exactly the same as the search with `o`, but only searches stared files. All the modifiers (`return + modification key`) apply the same way.
 
 **`Triggered via Hotkey`: Take an OCR Screenshot.** 
 - Similar to the default Mac Hotkey `cmd + shift + 4`, you will be able to select part of your screen for a screenshot. However, instead of saving a screenshot, a new note will be created which contains the OCR-content of the selection.
