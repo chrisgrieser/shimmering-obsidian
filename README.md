@@ -171,7 +171,7 @@ After installing the workflow, you need to configure the settings of this workfl
 	- `backup_destination`: Folder where the backups done by the `obackup` command should be saved.
 	- `max_number_of_bkps`: maximum number of backups that should be stored at the backup destination folder. When the number is reached, every new backup cause the oldest backup to be deleted. (Decrease this number, when your backup folder becomes to big.)
 	- `fontformat`: format of the base64-conversion of font files, e.g., “woff2”
-	- `ocr_languages`: set language codes of Tesseract, e.g., `eng+deu` for English and German. See here for a full list of [Tesseract Language Codes](https://tesseract-ocr.github.io/tessdoc/Data-Files-in-different-versions.html).
+	- `ocr_languages`: set language codes of Tesseract, e.g., `eng+deu` for English and German. You can find a list of [Tesseract Language Codes here](https://tesseract-ocr.github.io/tessdoc/Data-Files-in-different-versions.html).
 	- `search_ignore_attachments`: Whether to ignore attachments when using the `o` command to access the files in your vault. Will automatically retrieve recognize the attachment folder based on your Obsidian setting. Accepted values are “true” and “false”.
 	- `template_note_path`: Template to use when creating new notes with the `on` command or when browsing a folder via the `o` command.
 	- `thousand_seperator`: The thousand separator to use when download numbers are displayed, e.g., `.` or `,`.
