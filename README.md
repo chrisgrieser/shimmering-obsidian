@@ -109,7 +109,6 @@ end tell
 *When used, this workflow automatically checks once per day for new updates. Those new updates will be automatically downloaded.*
 
 
-
 ### CSS-related Features
 **`ocss`: Access your [css] files.** 
 - Open a theme or CSS snippet in your default text editor.
@@ -125,10 +124,9 @@ end tell
 
 
 **`Triggered via Hotkey`: Convert a font file to CSS with base64.**
-- This will take the selected font file (e.g., `.tff` or `.woff`), convert them into 
-- The Hotkey only works in Finder.
+- This will take the selected font file (e.g., `.tff` or `.woff`), convert them into base64 and write the base64-encoded font into a CSS file, which will be placed into your snippets folder.
 - Alternatively, you can use the [Universal Action](https://www.alfredapp.com/universal-actions/) feature form Alfred to trigger the conversion.
-- The snippet you wish to toggle must be set in the workflow configuration (`toggle_snippet`). 
+- The Hotkey only works in Finder.
 
 <img src="https://i.imgur.com/q0vKXzT.gif" alt="Conversion of CSS via universal command" width=60% height=60%>
 
