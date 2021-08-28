@@ -196,8 +196,7 @@ After installing the workflow, you need to configure the settings of this workfl
 - When the OCR Screenshot feature results in an empty note, make sure Alfred has permission to record your screen. (see [point 4 of the workflow configuration](https://github.com/chrisgrieser/shimmering-obsidian#workflow-configuration))
 - In some cases, the previewing markdown notes with `shift` or `cmd + Y` does not work due to Big Sur's high security measures. Follow the [instructions here](https://apple.stackexchange.com/a/424896) to resolve this issue.
 - If you did all of the above and there is still something not working, create an [issue](https://github.com/chrisgrieser/shimmering-obsidian/issues), message me on the [Obsidian Discord Server](https://discord.gg/veuWUTm) (my username there is `@pseudometa`), or write me on Twitter where my handle is [@pseudo_meta](https://twitter.com/pseudo_meta). Be sure to attach a **debugging log**, a screenshot, or a [screen recording](https://support.apple.com/guide/quicktime-player/record-your-screen-qtp97b08e666/mac) so I can figure out the issue.
-
-You can get a **debugging log** by opening the workflow in Alfred preferences and pressing `cmd + D`. A small window will open up which will log everything happening during the execution of the Workflow. Use the malfunctioning part of the workflow once more, copy the content of the log window, and attach it as text file.
+	- You can get a **debugging log** by opening the workflow in Alfred preferences and pressing `cmd + D`. A small window will open up which will log everything happening during the execution of the Workflow. Use the malfunctioning part of the workflow once more, copy the content of the log window, and attach it as text file.
 
 ## Credits
 
