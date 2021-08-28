@@ -24,6 +24,7 @@
 	- Display a list of Obsidian's default variables
 - [Requirements & Installation](https://github.com/chrisgrieser/shimmering-obsidian#requirements--installation)
 - [Workflow Configuration](https://github.com/chrisgrieser/shimmering-obsidian#workflow-configuration)
+- [Troubleshooting](https://github.com/chrisgrieser/shimmering-obsidian#troubleshooting)
 - [Credits](https://github.com/chrisgrieser/shimmering-obsidian#credits)
 
 ## Usage Guide
@@ -177,9 +178,11 @@ After installing the workflow, you need to configure the settings of this workfl
 	- `use_quickadd`: Instead of creating a new note based on a template, will trigger the [QuickAdd Plugin](https://github.com/chhoumann/quickadd). Accepted values are “true” and “false”.
 2) At the top left of the workflow, there are some sky-blue fields. You need to double-click them to set the Keyboard Shortcuts you want to use for the respective commands. 
 3) Users familiar with Alfred: You can change any keyword mentioned, like with any other Alfred workflow. (All keyword triggers are located to the very left of this workflow.)
+4) The first time you use the OCR screenshot feature, you might need to give Alfred permission to record your screen. YOu can do so under the macOS system settings (see image below)
 
 <img src="https://i.imgur.com/swm7AaC.png" alt="Settings of this Workflow" width=40% height=40%>
 <img src="https://i.imgur.com/wlpht7f.png" alt="Setting Hotkeys" width=15% height=15%>
+<img src="https://user-images.githubusercontent.com/73286100/131231644-a800c0b0-8dc2-4ae9-bd41-c3937741b94a.png" alt="Screenshot 2021-08-28 23 33 16" width=40% height=40%>
 
 ## Troubleshooting
 - Check that all requirements are properly installed.
@@ -190,7 +193,8 @@ After installing the workflow, you need to configure the settings of this workfl
 	- Do *not* escape any characters.
 	- You *do* need the leading `/`, and you *must not* add a `/` at the end of the file or folder path.
 	- You can use `~` in place of your home folder (useful for syncing settings accross devices.)
-- If you did all of the above and there is still something not working, create an [issue](https://github.com/chrisgrieser/shimmering-obsidian/issues), message me on the [Obsidian Discord Server](https://discord.gg/veuWUTm) (my username there is `@pseudometa`), or write me on Twitter where my handle is [@pseudo_meta](https://twitter.com/pseudo_meta) . Be sure to attach a **debugging log**, a screenshot, or a [screen recording](https://support.apple.com/guide/quicktime-player/record-your-screen-qtp97b08e666/mac) so I can figure out the issue.
+- When the OCR Screenshot feature results in an empty note, make sure Alfred has permission to record your screen. (see [point 4 of the workflow configuration](https://github.com/chrisgrieser/shimmering-obsidian#workflow-configuration))
+- If you did all of the above and there is still something not working, create an [issue](https://github.com/chrisgrieser/shimmering-obsidian/issues), message me on the [Obsidian Discord Server](https://discord.gg/veuWUTm) (my username there is `@pseudometa`), or write me on Twitter where my handle is [@pseudo_meta](https://twitter.com/pseudo_meta). Be sure to attach a **debugging log**, a screenshot, or a [screen recording](https://support.apple.com/guide/quicktime-player/record-your-screen-qtp97b08e666/mac) so I can figure out the issue.
 
 You can get a **debugging log** by opening the workflow in Alfred preferences and pressing `cmd + D`. A small window will open up which will log everything happening during the execution of the Workflow. Use the malfunctioning part of the workflow once more, copy the content of the log window, and attach it as text file.
 
@@ -198,6 +202,6 @@ You can get a **debugging log** by opening the workflow in Alfred preferences an
 
 Many features of this plugin are only made possible by the invaluable [Advanced URI plugin](https://github.com/Vinzent03/obsidian-advanced-uri) by [@Vincent03](https://github.com/Vinzent03).
 
-This workflow has been created by @pseudometa (Discord) aka [@chrisgrieser (GitHub)](https://github.com/chrisgrieser/).
+This workflow has been created by @pseudometa ([Discord](https://discord.gg/veuWUTm)) aka [@chrisgrieser (GitHub)](https://github.com/chrisgrieser/).
 
 If you find this workflow to be helpful, feel free to donate [via PayPal](https://www.paypal.com/paypalme/ChrisGrieser). In my day job, I am a PhD student in sociology, studying the governance of the app economy. Visit [my academic homepage for more information](https://chris-grieser.de/).
