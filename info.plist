@@ -1658,11 +1658,11 @@ tesseract "$temp_image" stdout -l $ocr_languages 2&gt;&amp;1</string>
 				<key>focusedappvariablename</key>
 				<string></string>
 				<key>hotkey</key>
-				<integer>0</integer>
+				<integer>18</integer>
 				<key>hotmod</key>
-				<integer>0</integer>
+				<integer>1179648</integer>
 				<key>hotstring</key>
-				<string></string>
+				<string>1</string>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -1764,7 +1764,7 @@ tesseract "$temp_image" stdout -l $ocr_languages 2&gt;&amp;1</string>
 				<key>lastpathcomponent</key>
 				<false/>
 				<key>onlyshowifquerypopulated</key>
-				<true/>
+				<false/>
 				<key>removeextension</key>
 				<false/>
 				<key>text</key>
@@ -3209,8 +3209,7 @@ echo "$backup"</string>
 				<key>escaping</key>
 				<integer>68</integer>
 				<key>script</key>
-				<string>set the clipboard to "{query}"
-delay 0.1
+				<string>delay 0.1
 tell application "System Events"
 	tell process "Obsidian"
 		set frontmost to true
@@ -3221,7 +3220,7 @@ tell application "System Events"
 end tell
 
 delay 0.2
-tell application "Obsidian" to open location "obsidian://advanced-uri?vault=Vault&amp;commandid=markdown%253Atoggle-preview"</string>
+tell application "Obsidian" to open location "obsidian://advanced-uri?commandid=markdown%253Atoggle-preview"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -4698,6 +4697,9 @@ Created by @pspeudometa (Discord) aka @chrisgrieser (GitHub).
 
 # Release Notes
 
+v. 1.2
+- bugfix for `odual` command
+
 v. 1.1: Public Release
 - Search starred files only via the keyword `os`
 - display starred status in general search (`o`)
@@ -5954,14 +5956,14 @@ DOUBLE CLICK THIS to set hotkey</string>
 	</dict>
 	<key>variablesdontexport</key>
 	<array>
+		<string>toggle_snippet</string>
 		<string>vault_path</string>
 		<string>backup_destination</string>
 		<string>template_note_path</string>
 		<string>use_quickadd</string>
-		<string>toggle_snippet</string>
 	</array>
 	<key>version</key>
-	<string>1.1</string>
+	<string>1.2</string>
 	<key>webaddress</key>
 	<string>https://chris-grieser.de/</string>
 </dict>
