@@ -187,7 +187,12 @@ After installing the workflow, you need to configure the settings of this workfl
 - Check that all requirements are properly installed.
 - Go through the documentation.
 - Update to the latest version of the workflow, chances are the problem has already been fixed.
-- If you did all of the above and there is still something not working, create an [issue](https://github.com/chrisgrieser/shimmering-obsidian/issues), message me on the [Obsidian Discord Server](https://discord.gg/veuWUTm) (my username there is `@pseudometa`), or write me on Twitter ([@pseudo_meta](https://twitter.com/pseudo_meta)) . Be sure to attach a **debugging log**, a screenshot, or a [screen recording](https://support.apple.com/guide/quicktime-player/record-your-screen-qtp97b08e666/mac) so I can figure out the issue.
+- For workflow settings which require a file or path, you have to enter the *full absolute path.* 
+	- i.e., do *not* use a vault-relative path. 
+	- Do *not* escape any characters.
+	- You *do* need the leading `/`, and you *must not* add a `/` at the end of the file or folder path.
+	- You can use `~` in place of your home folder (useful for syncing settings accross devices.)
+- If you did all of the above and there is still something not working, create an [issue](https://github.com/chrisgrieser/shimmering-obsidian/issues), message me on the [Obsidian Discord Server](https://discord.gg/veuWUTm) (my username there is `@pseudometa`), or write me on Twitter where my handle is [@pseudo_meta](https://twitter.com/pseudo_meta) . Be sure to attach a **debugging log**, a screenshot, or a [screen recording](https://support.apple.com/guide/quicktime-player/record-your-screen-qtp97b08e666/mac) so I can figure out the issue.
 
 You can get a **debugging log** by opening the workflow in Alfred preferences and pressing `cmd + D`. A small window will open up which will log everything happening during the execution of the Workflow. Use the malfunctioning part of the workflow once more, copy the content of the log window, and attach it as text file.
 
