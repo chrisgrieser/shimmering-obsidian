@@ -183,6 +183,14 @@ After installing the workflow, you need to configure the settings of this workfl
 <img src="https://i.imgur.com/swm7AaC.png" alt="Settings of this Workflow" width=40% height=40%>
 <img src="https://i.imgur.com/wlpht7f.png" alt="Setting Hotkeys" width=15% height=15%>
 
+## Troubleshooting
+- Check that all requirements are properly installed.
+- Go through the documentation.
+- Update to the latest version of the workflow, chances are the problem has already been fixed.
+- If you did all of the above and there is still something not working, create an [issue](https://github.com/chrisgrieser/shimmering-obsidian/issues), message me on the [Obsidian Discord Server](https://discord.gg/veuWUTm) (my username there is `@pseudometa`), or write me on Twitter ([@pseudo_meta](https://twitter.com/pseudo_meta)) . Be sure to attach a **debugging log**, screenshots or a [screen recording](https://support.apple.com/guide/quicktime-player/record-your-screen-qtp97b08e666/mac) so I can figure out the issue.
+
+You can get a **debugging log** by opening the workflow in Alfred preferences and pressing `cmd + D`. A small window will open up which will log everything happening during the execution of the Workflow. Use the malfunctioning part of the workflow once more, copy the content of the log window, and attach it as text file.
+
 ---
 
 ## Credits
