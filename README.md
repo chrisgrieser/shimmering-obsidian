@@ -26,7 +26,7 @@
 - [Workflow Configuration](https://github.com/chrisgrieser/shimmering-obsidian#workflow-configuration)
 - [Credits](https://github.com/chrisgrieser/shimmering-obsidian#credits)
 
-## Features
+## Usage Guide
 Most features are triggered with dedicated Alfred keywords, as with any other Alfred workflow. The emphasized letter in the following feature list is the keyword you need to use. (Some features are triggered via Hotkey or [Universal Action](https://www.alfredapp.com/universal-actions/) instead.)
 
 ### General Features
