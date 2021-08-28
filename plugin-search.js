@@ -55,14 +55,14 @@ work_array.forEach(plugin => {
  	}
 
  	//check whether already installed
- 	let installed_prefix = "";
+ 	let installed_icon = "";
  	if (installed_plugins.includes(id)){
- 		installed_prefix = "❇️ "
+ 		installed_icon = " ✅"
  	}
 
 	//create json for Alfred
 	jsonArray.push({
-		'title': installed_prefix + name,
+		'title': name + installed_icon,
 		'subtitle': description + " — by " + author + downloads,
 		'arg': name,
 		'mods': {
