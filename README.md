@@ -3,9 +3,24 @@
 
 ![](https://img.shields.io/github/downloads/chrisgrieser/shimmering-obsidian/total?label=Downloads&style=plastic)  ![](https://img.shields.io/github/v/release/chrisgrieser/shimmering-obsidian?label=Latest%20Release&style=plastic)
 
-## Content
+## Overview
 - [General Features](https://github.com/chrisgrieser/shimmering-obsidian#general-features)
+	- Search your Vault
+	- OCR Screenshots
+	- Search the Obsidian Documentation
+	- Search community plugins and directly open them in Obsidian or GitHub
+	- Create Backups of your Vault
+	- Enter Dual Mode (Edit + Preview)
+	- Create a new note
+	- Open various folders in `.obsidian`
+	- Open the Obsidian settings
 - [CSS-related features](https://github.com/chrisgrieser/shimmering-obsidian#css-related-features)
+	- Toggle a CSS Snippet
+	- One-Click-Convert a font file to base64-CSS
+	- Open your current theme CSS file
+	- Access your themes and snippets via Alfred
+	- Quickly create a new CSS snippet from clipboard content
+	- display a list of Obsidian's default variables
 - [Requirements & Installation](https://github.com/chrisgrieser/shimmering-obsidian#requirements--installation)
 - [Workflow Configuration](https://github.com/chrisgrieser/shimmering-obsidian#workflow-configuration)
 - [Credits](https://github.com/chrisgrieser/shimmering-obsidian#credits)
