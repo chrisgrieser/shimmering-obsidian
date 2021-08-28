@@ -55,7 +55,7 @@ Most features are triggered with dedicated Alfred keywords, as with any other Al
 
 **`oh`: Get [h]elp by searching the official [Obsidian documentation](https://help.obsidian.md/Start+here).** 
 - This command mimics the search behavior on the official documentation site, meaning that it also searches for headings inside individual documentation pages. Press `return` to open in your default browser.
-- `opt + return`: Copy the link to your clipboard instead.
+	- `opt + return`: Copy the link to your clipboard instead.
 - If there are now results for your search query, you can also directly search the [Obsidian Forum](https://forum.obsidian.md/s). 
 - After major updates of the Obsidian documentation, this Alfred workflow needs to recreate its index of the Obsidian documentation. You can do so by selecting the respective option when typing keyword `osettings`. (Index recreation can take a few seconds depending on your internet connection. You will be notified when it is done.)
 
@@ -80,8 +80,8 @@ end tell
 
 **`op`: Search Obsidian Community [p]lugins, directly from Alfred.** 
 - Press `return` to open the plugin in Obsidian's Community Plugin Browser. 
-- Use `cmd + return` to open the plugin's GitHub repository instead.
-- Press `opt + return` to copy the GitHub repository URL to your clipboard.
+	- Use `cmd + return` to open the plugin's GitHub repository instead.
+	- Press `opt + return` to copy the GitHub repository URL to your clipboard.
 - Only plugins officially included in the community plugins are displayed — plugins solely available via GitHub or still in review will not be shown.
 - The thousand separator used with the download numbers can be set in the workflow configuration (`thousand_seperator`).
 
@@ -152,7 +152,7 @@ First of all, you need the [Powerpack for Alfred](https://www.alfredapp.com/powe
 - Quick Switcher (Core Plugin) has to be enabled
 
 ### Required Third-Party Software
-For the OCR Screenshot Feature and for note previews via Alfred, you need to install [Tesseract](https://tesseract-ocr.github.io/tessdoc/Installation.html) and [qlmarkdown](https://github.com/toland/qlmarkdown/). With Homebrew, you can do so by running the following commands:
+For the OCR Screenshot Feature and for note previews via Alfred, you need to install [Tesseract](https://tesseract-ocr.github.io/tessdoc/Installation.html) and [qlmarkdown](https://github.com/toland/qlmarkdown/). When you have Homebrew, you can install both by simply running the following commands:
 
 ```bash
 brew install tesseract
