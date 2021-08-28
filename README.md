@@ -9,7 +9,7 @@
 	- Search only Starred Files in your Vault
 	- OCR Screenshots
 	- Search the Obsidian Documentation
-	- Search community plugins and directly open them in Obsidian or GitHub
+	- Search Community Plugins and directly open them in Obsidian or GitHub
 	- Create Backups of your Vault
 	- Enter Dual Mode (Edit + Preview)
 	- Create a new note
@@ -21,7 +21,7 @@
 	- Open your current theme CSS file
 	- Access your themes and snippets via Alfred
 	- Quickly create a new CSS snippet from clipboard content
-	- display a list of Obsidian's default variables
+	- Display a list of Obsidian's default variables
 - [Requirements & Installation](https://github.com/chrisgrieser/shimmering-obsidian#requirements--installation)
 - [Workflow Configuration](https://github.com/chrisgrieser/shimmering-obsidian#workflow-configuration)
 - [Credits](https://github.com/chrisgrieser/shimmering-obsidian#credits)
