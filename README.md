@@ -32,10 +32,10 @@ Most features are triggered with dedicated Alfred keywords, as with any other Al
 ### General Features
 **`o`: [o]pen files in your vault.** 
 - This works similar to Obsidian's built-in “QuickSwitch” feature, but can be triggered without Obsidian running (in which case it will open Obsidian with the selected note). Press `return` to open the selected file in Obsidian.
-	- `return + cmd`: Open the file in a new pane.
-	- `return + opt`: Reveal the file in Finder.
-	- `return + fn`: Append the content of your clipboard to the selected note. Then opens the note.
-	- `return + ctrl`: Copy the [Obsidian-URI to the selected file](https://help.obsidian.md/Advanced+topics/Using+obsidian+URI#Action+`hook-get-address`). 
+	- `cmd + return`: Open the file in a new pane.
+	- `opt + return`: Reveal the file in Finder.
+	- `fn + return`: Append the content of your clipboard to the selected note. Then opens the note.
+	- `ctrl + return`: Copy the [Obsidian-URI to the selected file](https://help.obsidian.md/Advanced+topics/Using+obsidian+URI#Action+`hook-get-address`). 
 	- Press `shift` or `cmd + y` to preview the selected note via macOS' *Quick Look* feature. Press `shift` or `cmd + y` again to close the preview. (Caveat: Unfortunately, YAML-Headers are not displayed properly.)
 - This command *does* also look for **aliases**, when they are [defined in the YAML-Header](https://help.obsidian.md/How+to/Add+aliases+to+note#Set+aliases). (Searching the aliases takes a short moment, though.)
 - When **selecting a folder**, you will “browse” the selected folder. This means that you are now searching only for files and folders inside that folder. This is useful for when you cannot recall a file's name or alias, but do know the folder where it is located. When browsing a folder, you also have the option to create a new note in that folder. 
@@ -44,7 +44,7 @@ Most features are triggered with dedicated Alfred keywords, as with any other Al
 <img src="https://i.imgur.com/niwUEa9.gif" alt="" width=60% height=60%>
 
 **`os`: Open [s]tarred files in your vault.** 
-- Exactly the same as the search with `o`, but only searches stared files. All the modifiers (`return + modification key`) apply the same way.
+- Exactly the same as the search with `o`, but only searches _starred_ files. All the modifiers (`cmd/ctrl/opt/fn + return`) apply the same way.
 
 **`Triggered via Hotkey`: Take an OCR Screenshot.** 
 - Similar to the default Mac Hotkey `cmd + shift + 4`, you will be able to select part of your screen for a screenshot. However, instead of saving a screenshot, a new note will be created which contains the OCR-content of the selection.
