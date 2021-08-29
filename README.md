@@ -157,19 +157,19 @@ end tell
 
 ## Requirements & Installation
 
-### Requirements (Dependencies) for this Workflow
-These requirements have to fulfilled, since this workflow won't work without them.
+### "Hard" Requirements
+These requirements need to be installed, since this workflow cannot work without them.
 - [Powerpack for Alfred](https://www.alfredapp.com/powerpack/) (costs around 30€, depending on the current exchange rate to the British Pound).
-- Install the [Advanced URI Plugin](https://github.com/Vinzent03/obsidian-advanced-uri) for Obsidian. (It is needed to enable controling Obsidian from a Third party app like Alfred.)
+- Install the [Advanced URI Plugin](https://github.com/Vinzent03/obsidian-advanced-uri) for Obsidian. (Needed to enable controling Obsidian from a third-party app like Alfred.)
 
-### Recommended Obsidian Plugins or Third-Party Software
-These requirements are only necessary for specific features of this workflow. If you do not plan to use a certain feature, you can forego installing them to your machine lean. It is recommended to install all of them, if you want to use all features of this workflow.
+### "Soft" Requirements
+These requirements are only necessary for specific features of this workflow. If you do not plan to use the respective feature, you can forego installing the requirement for it. It is recommended to install all requirements listed here to be able to use all features of _Shimmering Obsidian_.
 
 | Name                                                                   | Type                      | Function                                                                                     |
 | ---------------------------------------------------------------------- | ------------------------- | -------------------------------------------------------------------------------------------- |
 | [Quick Switcher](https://help.obsidian.md/Plugins/Quick+switcher) <br/>must be enabled      | Obsidian Core Plugin      | used to open notes in a new pane                                                             |
 | [Hotkey-Helper](https://github.com/pjeby/hotkey-helper)                | Obsidian Community Plugin | used to open plugins directly in the <br/> Community Plugin Browser                          |
-| [Tesseract](https://tesseract-ocr.github.io/tessdoc/Installation.html) | Third-Party Software      | needed for OCR screenshots                                                                   |
+| [Tesseract](https://tesseract-ocr.github.io/tessdoc/Installation.html) | Third-Party Software      | needed for **OCR screenshots**                                                                   |
 | [qlmarkdown](https://github.com/toland/qlmarkdown/)                    | Third-Party Software      | used to preview markdown notes with <br/> `shift` or `cmd + Y` when using searching with `o` | 
 
 If you have [Homebrew](https://brew.sh/), Tesseract and qlmarkdown can by installed via the following terminal commands:
