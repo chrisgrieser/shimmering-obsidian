@@ -112,7 +112,7 @@ end tell
 **`oplugin`: Open the [plugin] folder of your vault.**
 - The plugin folder in the hidden `.obsidian` folder will be opened in Finder. 
 
-**`ovault`: Open the [trash] folder of your vault.**
+**`ovault`: Change the [vault].**
 - Conveniently switch the vault used by this workflow. (Currently, this workflow only works on one vault at the same time.)
 
 
