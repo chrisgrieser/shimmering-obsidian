@@ -11,7 +11,7 @@ var plugin_array = app.doShellScript('curl -s "https://raw.githubusercontent.com
 var download_array = app.doShellScript('curl -s "https://raw.githubusercontent.com/obsidianmd/obsidian-releases/master/community-plugin-stats.json" | grep -E ": {|downloads" | tr "\n" "§" | sed -E "s/\{\§//g" | tr "§" "\n" | tr -d ' + "'" + '" ,' + "'" + ' | cut -d ":" -f 1,3').split("\r");
 
 // get community themes
-theme_array = app.doShellScript('curl -s "https://raw.githubusercontent.com/obsidianmd/obsidian-releases/master/community-css-themes.json" | grep ' + "'" + '"name":' +  "' -A 4").split("--\r");
+theme_array = app.doShellScript('curl -s "https://raw.githubusercontent.com/obsidianmd/obsidian-releases/master/community-css-themes.json" | grep ' + "'" + '"name":' +  "' -A 5").split("--\r");
 
 // get installed plugins
 const vault_path = $.getenv("vault_path").replace(/^~/, homepath);
@@ -25,7 +25,7 @@ const current_theme = app.doShellScript('cat "' + vault_path + '/.obsidian/appea
 
 //JSON reading
 function readJSON (json, lineNo){
-	if (json.split("\r") == null) return "";
+	if (json.split("\r")[lineNo] == null) return null;
 	return json.split("\r")[lineNo].split('"')[3];
 }
 let jsonArray = [];
@@ -92,9 +92,19 @@ theme_array.forEach(theme => {
 	let theme_name = readJSON (theme, 0);
  	let author = readJSON (theme, 1);
  	let repo = readJSON (theme, 2);
+
+ 	let branch = "master"
+ 	let branch_info = readJSON (theme, 5);
+ 	if (branch_info != null){
+		branch = branch_info;
+ 	}
  	let screenshotFile = readJSON (theme, 3);
  	let githubURL = "https://github.com/" + repo;
-  	let screenshotURL = "https://raw.githubusercontent.com/" + repo + "/main/" + screenshotFile;
+  	let screenshotURL =
+  		"https://raw.githubusercontent.com/"
+  		+ repo + "/" + branch + "/"
+  		+ screenshotFile
+  	;
 
 	//determine available modes
 	let modes = ""

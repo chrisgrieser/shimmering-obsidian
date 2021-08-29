@@ -4712,6 +4712,9 @@ Created by @pspeudometa (Discord) aka @chrisgrieser (GitHub).
 ---
 
 # Release Notes
+v. 1.3.1
+- fix for some screenshots not showing up properly
+
 v. 1.3: Search Themes
 - `op` now also searches community themes (which unfortunately, can only be opened in GitHub)
 - use `op themes` to only search for themes.
@@ -5961,7 +5964,7 @@ DOUBLE CLICK THIS to set hotkey</string>
 		<string>toggle_snippet</string>
 	</array>
 	<key>version</key>
-	<string>1.3</string>
+	<string>1.3.1</string>
 	<key>webaddress</key>
 	<string>https://chris-grieser.de/</string>
 </dict>
