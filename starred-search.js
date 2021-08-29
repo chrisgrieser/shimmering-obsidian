@@ -1,6 +1,5 @@
 #!/usr/bin/env osascript -l JavaScript
 
-//Basic
 ObjC.import("stdlib");
 app = Application.currentApplication();
 app.includeStandardAdditions = true;
@@ -31,7 +30,6 @@ starred_searches.forEach(searchQuery => {
 		title: "⭐️ " + searchQuery,
 		arg: "obsidian://search?query=" + searchQuery,
 		uid: searchQuery,
-		icon: { path: "search.png" },
 		mods: {
 			fn: {
 				subtitle: "",
