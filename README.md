@@ -96,7 +96,7 @@ end tell
 - Will open a new pane with the current note in preview mode. This means, you will have the Editor and the Preview View side-by-side.
 - Strictly speaking, `odual` will open the current note in the mode *not* set as `default new pane mode` (under `Settings ➞ Editor`). More precise behavior is right now not possible, as Obsidian does not expose the view mode to outside apps.
 - Note that using the [Force View Mode Plugin](https://github.com/bwydoogh/obsidian-force-view-mode-of-note) may result in the second pane opening in the wrong view.
-- Caveat: Opening the new pane as [linked pane](https://help.obsidian.md/Panes/Linked+pane) is not possible right now, [as Obsidian does not expose that function via command palette](https://forum.obsidian.md/t/open-a-note-in-a-new-pane-using-the-command-palette-or-a-keyboard-shortcut/23303). `odual` is therefore only able to open the an *unlinked* pane.
+- Caveat: Opening the new pane as [linked pane](https://help.obsidian.md/Panes/Linked+pane) is not possible right now, [as Obsidian does not expose that function via command palette](https://forum.obsidian.md/t/open-a-note-in-a-new-pane-using-the-command-palette-or-a-keyboard-shortcut/23303). `odual` is therefore only able to open an *unlinked* pane.
 
 **`osetting`: Open the Obsidian [settings].** 
 - Also works when Obsidian is not running (like most commands of this workflow do).
