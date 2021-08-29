@@ -10,15 +10,51 @@ const homepath = app.pathTo("home folder");
 var vault_path = $.getenv("vault_path").replace(/^~/, homepath);
 const vaultPathLength = vault_path.length + 1;
 
-//input
-var starred = app.doShellScript(
+//starred files
+var starred_files = app.doShellScript(
 	'grep "path" "' + vault_path + '/.obsidian/starred.json' +
+	'" | cut -d ' + "'" + '"' + "'" +' -f 4'
+).split("\r");
+
+//starred searches
+var starred_searches = app.doShellScript(
+	'grep "query" "' + vault_path + '/.obsidian/starred.json' +
 	'" | cut -d ' + "'" + '"' + "'" +' -f 4'
 ).split("\r");
 
 //JSON Construction
 let jsonArray = [];
-starred.forEach(starPath => {
+
+//Starred Searches
+starred_searches.forEach(searchQuery => {
+	jsonArray.push({
+		title: "⭐️ " + searchQuery,
+		arg: "obsidian://search?query=" + searchQuery,
+		uid: searchQuery,
+		icon: { path: "search.png" },
+		mods: {
+			fn: {
+				subtitle: "",
+				valid: false,
+			},
+			ctrl: {
+				subtitle: "",
+				valid: false,
+			},
+			cmd: {
+				subtitle: "",
+				valid: false,
+			},
+			alt: {
+				subtitle: "",
+				valid: false,
+			},
+		},
+	});
+});
+
+//Starred files
+starred_files.forEach(starPath => {
 	let absolutePath = vault_path + "/" + starPath;
 
 	// filename extraction
