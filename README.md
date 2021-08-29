@@ -213,8 +213,8 @@ After installing the workflow, you need to configure the settings of this workfl
 	- `search_ignore_attachments`: Whether to ignore attachments when using the `o` command to access the files in your vault. Will automatically retrieve recognize the attachment folder based on your Obsidian setting. Accepted values are “true” and “false”.
 	- `template_note_path`: Template to use when creating new notes with the `on` command or when browsing a folder via the `o` command.
 	- `thousand_seperator`: The thousand separator to use when download numbers are displayed, e.g., `.` or `,`.
-	- `toggle_snippet`: *Absolute* path to the CSS file in your snippet folder that you which to toggle via hotkey.
-	- `use_quickadd`: Instead of creating a new note based on a template, will trigger the [QuickAdd Plugin](https://github.com/chhoumann/quickadd). Accepted values are “true” and “false”.
+	- `toggle_snippet`: *Full* path to the CSS file in your snippet folder that you wish to toggle via hotkey.
+	- `use_quickadd`: Instead of creating a new note based on a template (with the keyword `on`), will trigger the [QuickAdd Plugin](https://github.com/chhoumann/quickadd). Accepted values are “true” and “false”.
 2) At the top left of the workflow, there are some sky-blue fields. You need to double-click them to set the Keyboard Shortcuts you want to use for the respective commands. 
 3) Users familiar with Alfred: You can change any keyword mentioned, like with any other Alfred workflow. (All keyword triggers are located to the very left of this workflow.)
 
