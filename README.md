@@ -28,6 +28,8 @@
 - [Troubleshooting](https://github.com/chrisgrieser/shimmering-obsidian#troubleshooting)
 - [Credits](https://github.com/chrisgrieser/shimmering-obsidian#credits)
 
+*You also might want to check out the [Alfred workflow by @hauselin](https://github.com/hauselin/obsidian-alfred), which focusses on a very different feature set, e.g. daily notes.* 
+
 ## Usage Guide
 Most features are triggered with dedicated Alfred keywords, as with any other Alfred workflow. The emphasized letter in the following feature list is the keyword you need to use. (Some features are triggered via Hotkey or [Universal Action](https://www.alfredapp.com/universal-actions/) instead.)
 
