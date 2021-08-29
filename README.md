@@ -214,18 +214,18 @@ After installing the workflow, you need to configure the settings of this workfl
 <img src="https://i.imgur.com/wlpht7f.png" alt="Setting Hotkeys" width=15% height=15%>
 
 ## Troubleshooting
-- Check that all requirements are properly installed, and you followed all installation steps.
-- Go through the documentation of the malfunctioning feature.
+- Make sure that all requirements are properly installed.
+- Check the documentation of the malfunctioning feature.
 - Update to the latest version of the workflow, chances are the problem has already been fixed.
-- For workflow settings which require a file or path, you have to enter the *full absolute path*, i.e., do *not* use a vault-relative path.
-- If you have trouble with OCR screenshots, be sure you have given Alfred permission to record your screen as explained in the [Installation Instructions](https://github.com/chrisgrieser/shimmering-obsidian#installation).
-- In case the previewing of markdown notes via `shift` or `cmd + Y` does not work properly, ensure you have given "qlmarkdown" permission run on your system as explained in the [Installation Instructions](https://github.com/chrisgrieser/shimmering-obsidian#installation).
+- For workflow settings which require a file or path, you have to enter the *full absolute path*, leading with a`/` and without a trailing `/`. Do *not* use a vault-relative path.
+- If you have trouble with OCR screenshots, ensure you have given Alfred permission to record your screen as explained in the [Installation Instructions](https://github.com/chrisgrieser/shimmering-obsidian#installation).
+- In case the previewing of markdown notes via `shift` or `cmd + Y` does not work properly, make you have given "qlmarkdown" permission run on your system as explained in the [Installation Instructions](https://github.com/chrisgrieser/shimmering-obsidian#installation).
 - If you did all of the above and there is still something not working, create an [issue](https://github.com/chrisgrieser/shimmering-obsidian/issues), message me on the [Obsidian Discord Server](https://discord.gg/veuWUTm) (my username there is `@pseudometa`), or write me on Twitter where my handle is [@pseudo_meta](https://twitter.com/pseudo_meta). 
 	- Be sure to attach a debugging log, a screenshot, or a [screen recording](https://support.apple.com/guide/quicktime-player/record-your-screen-qtp97b08e666/mac) so I can figure out the issue. 
 	- You can get a **debugging log** by opening the workflow in Alfred preferences and pressing `cmd + D`. A small window will open up which will log everything happening during the execution of the Workflow. Use the malfunctioning part of the workflow once more, copy the content of the log window, and attach it as text file.
 
 ## Credits
 
-Many features of this plugin are only made possible by the invaluable [Advanced URI plugin](https://github.com/Vinzent03/obsidian-advanced-uri) by [@Vincent03](https://github.com/Vinzent03).
+Most features of this plugin are only made possible by the invaluable [Advanced URI plugin](https://github.com/Vinzent03/obsidian-advanced-uri) by [@Vincent03](https://github.com/Vinzent03).
 
 This workflow has been created by @pseudometa ([Discord](https://discord.gg/veuWUTm)) aka [@chrisgrieser (GitHub)](https://github.com/chrisgrieser/). If you find this workflow to be useful, feel free to donate [via PayPal](https://www.paypal.com/paypalme/ChrisGrieser). In my day job, I am a PhD student in sociology, studying the governance of the app economy. If you are interested in this subject, check out [my academic homepage](https://chris-grieser.de/) and get in touch.
