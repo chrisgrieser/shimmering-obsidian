@@ -101,13 +101,14 @@ end tell
 - Note that you have to select `Move to Obsidian trash` in the Obsidian settings under the `Files & Links` before deleted files can be found here.
 
 **`o.obsidian`: Open the [.obsidian] folder of your vault.**
-- The hidden [.obsidian folder](https://help.obsidian.md/Advanced+topics/Deleting+files) located in your vault root will be opened in Finder. 
+- The hidden .obsidian folder located in your vault root will be opened in Finder. 
 - This work regardless of whether you have enabled displaying hidden files in macOS' Finder or not.
+
+**`oplugin`: Open the [plugin] folder of your vault.**
+- The plugin folder in the hidden `.obsidian` folder will be opened in Finder. 
 
 **`ovault`: Open the [trash] folder of your vault.**
 - Conveniently switch the vault used by this workflow. (Currently, this workflow only works on one vault at the same time.)
-
-*When used, this workflow automatically checks once per day for new updates. Those new updates will be automatically downloaded.*
 
 
 ### CSS-related Features
@@ -137,7 +138,8 @@ end tell
 - Pairs well with the [Theme Picker Plugin](https://github.com/kenset/obsidian-theme-picker).
 
 **`odefault`: Display (and search) a list of the font and color variables used in Obsidian's default theme.** 
-- This will simply open the current Obsidian theme in your default text editor. 
+- Select a variable with `return` to copy the name to your clipboard.
+- Press `cmd + return` to copy it in the format `var(--varname)` instead.
 - *Shoutout to @NothingIsLost for this feature.*
 
 <img src="https://i.imgur.com/RPHWjtj.png" alt="" width=60% height=60%>
@@ -183,6 +185,8 @@ After installing the workflow, you need to configure the settings of this workfl
 <img src="https://i.imgur.com/swm7AaC.png" alt="Settings of this Workflow" width=40% height=40%>
 <img src="https://i.imgur.com/wlpht7f.png" alt="Setting Hotkeys" width=15% height=15%>
 <img src="https://user-images.githubusercontent.com/73286100/131231644-a800c0b0-8dc2-4ae9-bd41-c3937741b94a.png" alt="Screenshot 2021-08-28 23 33 16" width=40% height=40%>
+
+_This workflow automatically checks daily for new versions and auto-updates._
 
 ## Troubleshooting
 - Check that all requirements are properly installed.
