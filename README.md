@@ -10,6 +10,7 @@
 	- OCR Screenshots
 	- Search the Obsidian Documentation
 	- Search Community Plugins and directly open them in Obsidian or GitHub
+	- Search & Preview Community Themes
 	- Create Backups of your Vault
 	- Enter Dual Mode (Edit + Preview)
 	- Create a new note
@@ -79,11 +80,13 @@ tell application id "com.runningwithcrayons.Alfred"
 end tell
 ```
 
-**`op`: Search Obsidian Community [p]lugins, directly from Alfred.** 
-- Press `return` to open the plugin in Obsidian's Community Plugin Browser. 
+**`op`: Search Obsidian Community [p]lugins AND themes, directly from Alfred.** 
+- Press `return` to open the plugin in Obsidian's Community Plugin Browser. (Will open the GitHub Repository for themes instead, as there is not a way to trigger the Obsidians theme browser yet.)
 	- Use `cmd + return` to open the plugin's GitHub repository instead.
 	- Press `opt + return` to copy the GitHub repository URL to your clipboard.
-- Only plugins officially included in the community plugins are displayed — plugins solely available via GitHub or still in review will not be shown.
+- Use `shift` or `cmd + Y` to open a Quick Look Preview of the theme. Press `shift` or `cmd + Y` again to close the preview.
+- Only plugins and themes officially included in the community plugins are displayed — plugins solely available via GitHub or still in review will not be shown.
+- Add "themes" to the keyword to only display themes (i.e., use `op themes` as keyword.).
 - The thousand separator used with the download numbers can be set in the workflow configuration (`thousand_seperator`).
 
 <img src="https://user-images.githubusercontent.com/73286100/131027623-5e8b3667-d00d-47dc-ba49-6938686e2aca.gif" alt="plugin search" width=60% height=60%>
@@ -116,6 +119,9 @@ end tell
 - Open a theme or CSS snippet in your default text editor.
 - Open the “themes” or “snippets” folder located in `.obsidian` in Finder.
 - Create a **new CSS snippet** in mere seconds: The CSS file will be placed in your snippet folder, filled with your clipboard content, named after the query you enter after `ocss`, and then opened in your default text editor. (Furthermore, this will open the Obsidian Settings in the background, to save you yet another click. 🙂)
+
+**`op themes`: Search Community [themes].**
+- see the `op` keyword further above.
 
 **`Triggered via Hotkey`: Toggle one of your CSS snippets.**
 - The snippet you wish to toggle must be set in the workflow configuration (`toggle_snippet`). 
