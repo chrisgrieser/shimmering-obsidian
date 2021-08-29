@@ -47,6 +47,10 @@ starred_searches.forEach(searchQuery => {
 				subtitle: "",
 				valid: false,
 			},
+			shift: {
+				subtitle: "",
+				valid: false,
+			},
 		},
 	});
 });
@@ -105,6 +109,10 @@ starred_files.forEach(starPath => {
 			},
 			ctrl: {
 				subtitle: hooking_subtitle,
+			},
+			shift: {
+				valid: type == ".md",
+				subtitle: new_pane_subtitle,
 			},
 		},
 	});

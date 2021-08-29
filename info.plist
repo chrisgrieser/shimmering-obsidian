@@ -83,11 +83,37 @@
 				<false/>
 			</dict>
 		</array>
+		<key>19958E7C-41A3-4560-BEB6-0CE5A630461A</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>31F21F7E-7450-444B-B9FC-D46650DF6F17</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>1A367216-E2AB-46D3-AB48-8709D58321C9</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>BE2117D8-695E-45FB-9B63-149EA1AB0D48</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>1D16496A-661B-46FB-AEE2-6A3AB41B77F3</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>27DF894D-0386-407B-8EF2-95BBD0395349</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -367,7 +393,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>1E72DA48-B05A-45E6-A27F-515AB0D4ADE6</string>
+				<string>81176B02-2767-4014-8A99-F98036B843DE</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -423,6 +449,21 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>3F7A599D-6A9E-4D70-B3E6-88217EA3D56C</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>E6FA0443-53FA-4967-A3EE-9AE429FFEE5F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>B8B85F6F-BB90-433B-8CFA-4A91259E4BED</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -570,6 +611,16 @@
 				<integer>524288</integer>
 				<key>modifiersubtext</key>
 				<string>⌥: Reveal in Finder</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>19958E7C-41A3-4560-BEB6-0CE5A630461A</string>
+				<key>modifiers</key>
+				<integer>131072</integer>
+				<key>modifiersubtext</key>
+				<string>⇧: Open in Dual Mode</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -727,6 +778,16 @@
 				<integer>524288</integer>
 				<key>modifiersubtext</key>
 				<string>⌥: Reveal in Finder</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>19958E7C-41A3-4560-BEB6-0CE5A630461A</string>
+				<key>modifiers</key>
+				<integer>131072</integer>
+				<key>modifiersubtext</key>
+				<string>⇧: Open in Dual Mode</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -906,6 +967,16 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
+				<string>19958E7C-41A3-4560-BEB6-0CE5A630461A</string>
+				<key>modifiers</key>
+				<integer>131072</integer>
+				<key>modifiersubtext</key>
+				<string>⇧: Open in Dual Mode</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
 				<string>31F21F7E-7450-444B-B9FC-D46650DF6F17</string>
 				<key>modifiers</key>
 				<integer>0</integer>
@@ -982,6 +1053,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>F8FA8843-EC3D-45BB-AD77-1F99F2E82DD8</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>81176B02-2767-4014-8A99-F98036B843DE</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>1E72DA48-B05A-45E6-A27F-515AB0D4ADE6</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1147,6 +1231,16 @@
 		</array>
 		<key>9E9A035A-DAD4-4251-8142-D4F6C963C982</key>
 		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>3F7A599D-6A9E-4D70-B3E6-88217EA3D56C</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
 			<dict>
 				<key>destinationuid</key>
 				<string>B0B1C61B-93A6-492E-BD07-2F06FB73F410</string>
@@ -1562,6 +1656,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>15582108-F470-4C2C-A0B9-A33D71A7EAFC</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>E6FA0443-53FA-4967-A3EE-9AE429FFEE5F</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>89B47E8A-C9EE-4792-80D7-CA0D46A6A2C9</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -2214,13 +2321,15 @@ echo -n "$base64encoded"</string>
 	delay 1.2
 end if
 
-tell application "Obsidian" to open location "obsidian://advanced-uri?commandid=quickadd%253ArunQuickAdd"</string>
+tell application "Obsidian" to open location "obsidian://advanced-uri?commandid=quickadd%253ArunQuickAdd"
+
+set parameter to do shell script "echo " &amp; quoted form of (system attribute "parameter") &amp; " | iconv -f UTF-8-MAC -t MACROMAN"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string></string>
+				<string>quickadd-trigger.applescript</string>
 				<key>type</key>
-				<integer>6</integer>
+				<integer>8</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
@@ -2256,7 +2365,7 @@ tell application "Obsidian" to open location "obsidian://advanced-uri?commandid=
 				<key>keyword</key>
 				<string>on</string>
 				<key>subtext</key>
-				<string></string>
+				<string>with title/parameter: '{query}'</string>
 				<key>text</key>
 				<string>🆕 New Note</string>
 				<key>withspace</key>
@@ -2304,7 +2413,7 @@ cat "$template_note"</string>
 				<key>createintermediatefolders</key>
 				<true/>
 				<key>filename</key>
-				<string>{var:vault_path}/Untitled.md</string>
+				<string>{var:vault_path}/{var:parameter}.md</string>
 				<key>filetext</key>
 				<string>{query}</string>
 				<key>ignoredynamicplaceholders</key>
@@ -2348,6 +2457,26 @@ cat "$template_note"</string>
 			<string>alfred.workflow.utility.conditional</string>
 			<key>uid</key>
 			<string>1E72DA48-B05A-45E6-A27F-515AB0D4ADE6</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{query}</string>
+				<key>passthroughargument</key>
+				<true/>
+				<key>variables</key>
+				<dict>
+					<key>parameter</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>81176B02-2767-4014-8A99-F98036B843DE</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -2859,6 +2988,26 @@ JSON.stringify({ 'items': jsonArray });
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>argument</key>
+				<string>{query}</string>
+				<key>passthroughargument</key>
+				<true/>
+				<key>variables</key>
+				<dict>
+					<key>dual_after</key>
+					<string>true</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>19958E7C-41A3-4560-BEB6-0CE5A630461A</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>adduuid</key>
 				<false/>
 				<key>allowemptyfiles</key>
@@ -3256,6 +3405,19 @@ echo "$backup"</string>
 			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
 			<string>C5E65176-674E-4553-A255-37A40EB99342</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>triggerid</key>
+				<string>trigger-dual-mode</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.external</string>
+			<key>uid</key>
+			<string>1D16496A-661B-46FB-AEE2-6A3AB41B77F3</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -4530,6 +4692,68 @@ tell application "System Events" to keystroke "{query}"</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>externaltriggerid</key>
+				<string>trigger-dual-mode</string>
+				<key>passinputasargument</key>
+				<true/>
+				<key>passvariables</key>
+				<true/>
+				<key>workflowbundleid</key>
+				<string>self</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>89B47E8A-C9EE-4792-80D7-CA0D46A6A2C9</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>seconds</key>
+				<string>.5</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.delay</string>
+			<key>uid</key>
+			<string>E6FA0443-53FA-4967-A3EE-9AE429FFEE5F</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:dual_after}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>true</string>
+						<key>outputlabel</key>
+						<string>open in dual</string>
+						<key>uid</key>
+						<string>B8B85F6F-BB90-433B-8CFA-4A91259E4BED</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>--</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>3F7A599D-6A9E-4D70-B3E6-88217EA3D56C</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>triggerid</key>
 				<string>open-in-obsidian</string>
 			</dict>
@@ -4773,14 +4997,18 @@ Created by @pspeudometa (Discord) aka @chrisgrieser (GitHub).
 ---
 
 # Release Notes
+v. 1.5
+- Open notes in dual mode via `shift + return` when using the `o` or `os` search (issue #7).
+- Pass a parameter to `on`: when note using QuickAdd, this becomes the note title, when using QuickAdd, this becomes the parameter for searching the QuickAdd options (issue #7).
+
 v. 1.4
 **New Feature**
 - access your starred searches via `os`
 
 **Bugfixes**
-- fixes a bug where `on` does not work properly when used to activate quickmode while Obsidian is not running
-- fixes a bug where `odual` does not work properly when used while Obsidian is not running
-- added explanation to the documenation that `odual` cannot open a *linked* new pane as Obsidian does not expose that function to third-party apps
+- fixed a bug where `on` does not work properly when used to activate quickadd while Obsidian is not running
+- fixed a bug where `odual` does not work properly when used while Obsidian is not running
+- added explanation to the documentation why `odual` cannot open a *linked* new pane (Obsidian does not expose that function to third-party apps)
 
 v. 1.3.2
 - changes the date formatting of OCR Screenshots to work better with more languages (issue #5).
@@ -4864,6 +5092,15 @@ v. 1.1: Public Release
 			<key>ypos</key>
 			<integer>2690</integer>
 		</dict>
+		<key>19958E7C-41A3-4560-BEB6-0CE5A630461A</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>9</integer>
+			<key>xpos</key>
+			<integer>460</integer>
+			<key>ypos</key>
+			<integer>1375</integer>
+		</dict>
 		<key>1A367216-E2AB-46D3-AB48-8709D58321C9</key>
 		<dict>
 			<key>colorindex</key>
@@ -4873,21 +5110,30 @@ v. 1.1: Public Release
 			<key>ypos</key>
 			<integer>3265</integer>
 		</dict>
+		<key>1D16496A-661B-46FB-AEE2-6A3AB41B77F3</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>6</integer>
+			<key>xpos</key>
+			<integer>55</integer>
+			<key>ypos</key>
+			<integer>2135</integer>
+		</dict>
 		<key>1E26935C-F1F3-4C69-AEFA-3A0D9D18291F</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>365</integer>
+			<integer>360</integer>
 			<key>ypos</key>
-			<integer>2130</integer>
+			<integer>2010</integer>
 		</dict>
 		<key>1E72DA48-B05A-45E6-A27F-515AB0D4ADE6</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>240</integer>
+			<integer>260</integer>
 			<key>ypos</key>
 			<integer>750</integer>
 		</dict>
@@ -4918,9 +5164,9 @@ v. 1.1: Public Release
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>510</integer>
+			<integer>505</integer>
 			<key>ypos</key>
-			<integer>2130</integer>
+			<integer>2010</integer>
 		</dict>
 		<key>25FCBA58-5263-4F11-B222-4978632AF5B9</key>
 		<dict>
@@ -5097,6 +5343,15 @@ v. 1.1: Public Release
 			<key>ypos</key>
 			<integer>365</integer>
 		</dict>
+		<key>3F7A599D-6A9E-4D70-B3E6-88217EA3D56C</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>6</integer>
+			<key>xpos</key>
+			<integer>730</integer>
+			<key>ypos</key>
+			<integer>5220</integer>
+		</dict>
 		<key>3F97414B-D2C1-42AC-A7AF-0683EA133B48</key>
 		<dict>
 			<key>colorindex</key>
@@ -5171,9 +5426,9 @@ v. 1.1: Public Release
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>25</integer>
+			<integer>20</integer>
 			<key>ypos</key>
-			<integer>2030</integer>
+			<integer>1895</integer>
 		</dict>
 		<key>4CF2D736-4165-4860-8FA3-6E1DF3763B5F</key>
 		<dict>
@@ -5445,9 +5700,18 @@ should have the same keyword as quicksearch</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>650</integer>
+			<integer>645</integer>
 			<key>ypos</key>
-			<integer>2130</integer>
+			<integer>2010</integer>
+		</dict>
+		<key>81176B02-2767-4014-8A99-F98036B843DE</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>9</integer>
+			<key>xpos</key>
+			<integer>185</integer>
+			<key>ypos</key>
+			<integer>760</integer>
 		</dict>
 		<key>82B904E5-D10A-418F-8FA4-6E885FE49813</key>
 		<dict>
@@ -5495,6 +5759,15 @@ should have the same keyword as quicksearch</string>
 			<integer>190</integer>
 			<key>ypos</key>
 			<integer>2810</integer>
+		</dict>
+		<key>89B47E8A-C9EE-4792-80D7-CA0D46A6A2C9</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>6</integer>
+			<key>xpos</key>
+			<integer>905</integer>
+			<key>ypos</key>
+			<integer>5185</integer>
 		</dict>
 		<key>8BC09525-BB68-46E3-A7E2-C0E5C489FF60</key>
 		<dict>
@@ -5618,11 +5891,11 @@ should have the same keyword as quicksearch</string>
 		<key>A6F41657-5917-4CD1-A28F-7C4B2519781B</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>9</integer>
+			<integer>6</integer>
 			<key>xpos</key>
-			<integer>25</integer>
+			<integer>55</integer>
 			<key>ypos</key>
-			<integer>1915</integer>
+			<integer>1780</integer>
 		</dict>
 		<key>ACE1AA07-094D-46BB-8462-D4CDFF0E337B</key>
 		<dict>
@@ -5749,9 +6022,9 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>25</integer>
+			<integer>20</integer>
 			<key>ypos</key>
-			<integer>2145</integer>
+			<integer>2010</integer>
 		</dict>
 		<key>C60C1880-E166-4304-A913-7E307B365032</key>
 		<dict>
@@ -5935,6 +6208,15 @@ DOUBLE CLICK THIS to set hotkey</string>
 			<key>ypos</key>
 			<integer>40</integer>
 		</dict>
+		<key>E6FA0443-53FA-4967-A3EE-9AE429FFEE5F</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>6</integer>
+			<key>xpos</key>
+			<integer>840</integer>
+			<key>ypos</key>
+			<integer>5215</integer>
+		</dict>
 		<key>E7ADA43C-52CF-46FD-AC9E-79616731DDA9</key>
 		<dict>
 			<key>colorindex</key>
@@ -6016,9 +6298,9 @@ DOUBLE CLICK THIS to set hotkey</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>790</integer>
+			<integer>785</integer>
 			<key>ypos</key>
-			<integer>2130</integer>
+			<integer>2010</integer>
 		</dict>
 	</dict>
 	<key>variables</key>
@@ -6040,7 +6322,7 @@ DOUBLE CLICK THIS to set hotkey</string>
 		<key>toggle_snippet</key>
 		<string>~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vault/.obsidian/snippets/Hide URLs.css</string>
 		<key>use_quickadd</key>
-		<string>true</string>
+		<string>false</string>
 		<key>vault_path</key>
 		<string>~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vault</string>
 	</dict>
@@ -6053,7 +6335,7 @@ DOUBLE CLICK THIS to set hotkey</string>
 		<string>toggle_snippet</string>
 	</array>
 	<key>version</key>
-	<string>1.4</string>
+	<string>1.5</string>
 	<key>webaddress</key>
 	<string>https://chris-grieser.de/</string>
 </dict>

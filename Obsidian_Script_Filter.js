@@ -58,7 +58,8 @@ file_array.forEach(absolutePath => {
 	let folder_subtitle_addition = "";
 	let hooking_folder_subtitle = "⌃: Copy Hook";
 	let new_pane_subtitle = "⌘: Open in new Pane";
-	let appending_md_subtitle = "⛔️ Cannot append: Not a markdown file.";
+	let dual_mode_subtitle = "⇧: Open in Dual Mode";
+	let appending_md_subtitle = "⛔️ Cannot append: Not a Markdown File.";
 	if (type == ".md") {
 		iconpath = "note.png";
 		appending_md_subtitle = "fn: Append clipboard content";
@@ -72,7 +73,7 @@ file_array.forEach(absolutePath => {
 		iconpath = "folder.png";
 		folder_subtitle_addition = "     (↵: Browse)";
 		hooking_folder_subtitle = "⛔️ Obsidian does not support linking to folders.";
-		new_pane_subtitle = "⛔️ Obsidian does not support opening folders."
+		new_pane_subtitle, new_pane_subtitle = "⛔️ Obsidian does not support opening folders.";
 	}
 
 	//add starred icon
@@ -103,6 +104,10 @@ file_array.forEach(absolutePath => {
 			ctrl: {
 				valid: type !== "",
 				subtitle: hooking_folder_subtitle,
+			},
+			shift: {
+				valid: type == ".md",
+				subtitle: dual_mode_subtitle,
 			},
 		},
 	});
