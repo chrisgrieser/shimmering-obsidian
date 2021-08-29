@@ -38,6 +38,7 @@ Most features are triggered with dedicated Alfred keywords, as with any other Al
 	- `opt + return`: Reveal the file in Finder.
 	- `fn + return`: Append the content of your clipboard to the selected note. Then opens the note.
 	- `ctrl + return`: Copy the [Obsidian-URI to the selected file](https://help.obsidian.md/Advanced+topics/Using+obsidian+URI#Action+`hook-get-address`). 
+	- `shift + return`: Open the file in Dual Mode (see `odual` below for more information on Dual Mode.)
 	- Press `shift` or `cmd + y` to preview the selected note via macOS' Quick Look feature. Press `shift` or `cmd + y` again to close the preview. (Unfortunately, YAML-Headers are not displayed properly.)
 - This command also looks for **aliases**, when they are [defined in the YAML-Header](https://help.obsidian.md/How+to/Add+aliases+to+note#Set+aliases). (Searching the aliases takes a short moment, though.)
 - When **selecting a folder**, you will “browse” the selected folder. This means that you are now searching only for files and folders inside that folder. This is useful for when you cannot recall a file's name or alias, but do know the folder where it is located. When browsing a folder, you also have the option to create a new note in that folder. 
@@ -46,11 +47,12 @@ Most features are triggered with dedicated Alfred keywords, as with any other Al
 <img src="https://i.imgur.com/niwUEa9.gif" alt="" width=60% height=60%>
 
 **`os`: Open [s]tarred Files and Searches** 
-- When you select a starred *file*, everything works exactly the same as the search with `o`, i.e. all the modifiers (`cmd/ctrl/opt/fn + return`) apply the same way.
+- When you select a starred *file*, everything works exactly the same as the search with `o`, i.e. all the modifiers (`cmd/ctrl/opt/fn/shift + return`) apply the same way.
 - If you select a starred *search*, Obsidian will open the search pane with the query.
 
 **`Triggered via Hotkey`: Take an OCR Screenshot.** 
 - Similar to the default Mac Hotkey `cmd + shift + 4`, you will be able to select part of your screen for a screenshot. However, instead of saving a screenshot, a new note will be created which contains the OCR-content of the selection.
+- To stay in line with the other macOS keyboard shortcuts for taking screenshots, I would suggest setting this hotkey to something like `cmd + shift + 2`.
 - If the file “OCR-Screenshot” already exists in your vault root, any subsequent OCR-Screenshots will instead append to this note. This is intended for taking a lot of OCR-Screenshots in succession, e.g., during a lecture or presentation.
 - For best results, you should set the proper languages to be recognized with the workflow setting `ocr_languages`.
 
@@ -67,6 +69,9 @@ Most features are triggered with dedicated Alfred keywords, as with any other Al
 **`on`: Create a [n]ew note.** 
 - Using the template set in the workflow configuration (`template_note_path`), a new note will be created in your vault root. 
 - If you have set `use_quickadd` to “true”, this command will instead trigger the [QuickAdd Plugin](https://github.com/chhoumann/quickadd).
+- Anything you write the keyword `on` (e.g. `on foobar`) will be used as argument:
+	-  Normally, this will become the filename of the note (e.g. `foobar.md`).
+	-  If you are using QuickAdd, this will search the QuickAdd options for the argument (e.g. `foobar`).
 - This command also works with Obsidian not running (in which case it will open Obsidian after note creation).
 
 **`obackup`: Create a [backup] of your vault.** 
