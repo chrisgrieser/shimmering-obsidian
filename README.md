@@ -6,7 +6,7 @@
 ## Overview
 - [General Features](https://github.com/chrisgrieser/shimmering-obsidian#general-features)
 	- Search your Vault
-	- Search only Starred Files in your Vault
+	- Search Starred Files/Searches
 	- OCR Screenshots
 	- Search the Obsidian Documentation
 	- Search Community Plugins/Themes and directly open them in Obsidian or GitHub
@@ -38,15 +38,16 @@ Most features are triggered with dedicated Alfred keywords, as with any other Al
 	- `opt + return`: Reveal the file in Finder.
 	- `fn + return`: Append the content of your clipboard to the selected note. Then opens the note.
 	- `ctrl + return`: Copy the [Obsidian-URI to the selected file](https://help.obsidian.md/Advanced+topics/Using+obsidian+URI#Action+`hook-get-address`). 
-	- Press `shift` or `cmd + y` to preview the selected note via macOS' *Quick Look* feature. Press `shift` or `cmd + y` again to close the preview. (Caveat: Unfortunately, YAML-Headers are not displayed properly.)
+	- Press `shift` or `cmd + y` to preview the selected note via macOS' Quick Look feature. Press `shift` or `cmd + y` again to close the preview. (Unfortunately, YAML-Headers are not displayed properly.)
 - This command also looks for **aliases**, when they are [defined in the YAML-Header](https://help.obsidian.md/How+to/Add+aliases+to+note#Set+aliases). (Searching the aliases takes a short moment, though.)
 - When **selecting a folder**, you will “browse” the selected folder. This means that you are now searching only for files and folders inside that folder. This is useful for when you cannot recall a file's name or alias, but do know the folder where it is located. When browsing a folder, you also have the option to create a new note in that folder. 
 - When you have set `search_ignore_attachments` in the workflow configuration to “true”, files in your **attachment folder(s) will be ignored**. This basically mimics the behavior of Obsidian's QuickSwitch.
 
 <img src="https://i.imgur.com/niwUEa9.gif" alt="" width=60% height=60%>
 
-**`os`: Open [s]tarred files in your vault.** 
-- Exactly the same as the search with `o`, but only searches _starred_ files. All the modifiers (`cmd/ctrl/opt/fn + return`) apply the same way.
+**`os`: Open [s]tarred Files and Searches** 
+- When you select a starred *file*, everything works exactly the same as the search with `o`, i.e. all the modifiers (`cmd/ctrl/opt/fn + return`) apply the same way.
+- If you select a starred *search*, Obsidian will open the search pane with the query.
 
 **`Triggered via Hotkey`: Take an OCR Screenshot.** 
 - Similar to the default Mac Hotkey `cmd + shift + 4`, you will be able to select part of your screen for a screenshot. However, instead of saving a screenshot, a new note will be created which contains the OCR-content of the selection.
