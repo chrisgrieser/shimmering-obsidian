@@ -7,7 +7,7 @@ const homepath = app.pathTo('home folder');
 // get all community plugins
 var plugin_array = app.doShellScript('curl -s "https://raw.githubusercontent.com/obsidianmd/obsidian-releases/master/community-plugins.json" | grep ' + "'" + '"id":' +  "' -A 4").split("--\r");
 
-// to get plugin download numbers
+// get plugin download numbers
 var download_array = app.doShellScript('curl -s "https://raw.githubusercontent.com/obsidianmd/obsidian-releases/master/community-plugin-stats.json" | grep -E ": {|downloads" | tr "\n" "§" | sed -E "s/\{\§//g" | tr "§" "\n" | tr -d ' + "'" + '" ,' + "'" + ' | cut -d ":" -f 1,3').split("\r");
 
 // get community themes
@@ -114,10 +114,15 @@ theme_array.forEach(theme => {
 		installed_icon = " ⭐️";
 	}
 
+	// better matching for Alfred
+	// and enables searching only for themes when using "op themes" as keyword
+	let alfredMatcher = "themes" + " " + theme_name.replaceAll ("-"," ") + " " + "themes";
+
 	//create json for Alfred
 	jsonArray.push({
 		'title': theme_name + installed_icon,
-		'subtitle': modes + " — by " + author,
+		'subtitle': modes + "  by " + author,
+		'match': alfredMatcher,
 		'arg': githubURL,
 		"quicklookurl": screenshotURL,
 		"icon": { "path": "css.png"}

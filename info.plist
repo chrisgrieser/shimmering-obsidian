@@ -4714,7 +4714,8 @@ Created by @pspeudometa (Discord) aka @chrisgrieser (GitHub).
 # Release Notes
 v. 1.3: Search Themes
 - `op` now also searches community themes (which unfortunately, can only be opened in GitHub)
-- use `shift` or `cmd + Y` to preview the theme. Use `shift` or `cmd + Y` to close the preview again.
+- use `op themes` to only search for themes.
+- use `shift` or `cmd + Y` to preview a theme. Use `shift` or `cmd + Y` to close the preview again.
 
 - bugfix for tesseract installations via homebrew on M1 Macs (issue #3)
 - improved documentation to better explain which requirements are needed for what function (issue #4)
@@ -4924,7 +4925,7 @@ v. 1.1: Public Release
 			<key>xpos</key>
 			<integer>630</integer>
 			<key>ypos</key>
-			<integer>3715</integer>
+			<integer>3710</integer>
 		</dict>
 		<key>31F21F7E-7450-444B-B9FC-D46650DF6F17</key>
 		<dict>
@@ -5196,7 +5197,7 @@ v. 1.1: Public Release
 			<key>xpos</key>
 			<integer>335</integer>
 			<key>ypos</key>
-			<integer>3715</integer>
+			<integer>3710</integer>
 		</dict>
 		<key>5E9B99E6-4356-4DC9-AC52-6B099C4ECBE2</key>
 		<dict>
@@ -5607,7 +5608,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>xpos</key>
 			<integer>490</integer>
 			<key>ypos</key>
-			<integer>3715</integer>
+			<integer>3710</integer>
 		</dict>
 		<key>BB3A12AE-1D70-48E3-852C-24D0C8E27A93</key>
 		<dict>
@@ -5729,7 +5730,7 @@ DOUBLE CLICK THIS to set hotkey</string>
 			<key>xpos</key>
 			<integer>190</integer>
 			<key>ypos</key>
-			<integer>3715</integer>
+			<integer>3710</integer>
 		</dict>
 		<key>CF8C9F05-0F8E-48AC-AA6E-49A41470DC53</key>
 		<dict>
