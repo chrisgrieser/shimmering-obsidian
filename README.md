@@ -170,10 +170,10 @@ These requirements are only necessary for specific features of this workflow. If
 
 | Name                                                                   | Type                      | Function                                                                                     |
 | ---------------------------------------------------------------------- | ------------------------- | -------------------------------------------------------------------------------------------- |
-| [Quick Switcher](https://help.obsidian.md/Plugins/Quick+switcher) must be enabled      | Obsidian Core Plugin      | used to open notes in a new pane                                                             |
+| [Quick Switcher](https://help.obsidian.md/Plugins/Quick+switcher) (already built in every Obsidian installation; must be enabled)      | Obsidian Core Plugin      | used to open notes in a new pane                                                             |
 | [Hotkey-Helper](https://github.com/pjeby/hotkey-helper)                | Obsidian Community Plugin | used to open plugins directly in the  Community Plugin Browser                          |
 | [Tesseract](https://tesseract-ocr.github.io/tessdoc/Installation.html) | Third-Party Software      | needed for **OCR screenshots**                                                                   |
-| [qlmarkdown](https://github.com/toland/qlmarkdown/)                    | Third-Party Software      | used to preview markdown notes with  `shift` or `cmd + Y` when using searching with `o` | 
+| [qlmarkdown](https://github.com/toland/qlmarkdown/)                    | Third-Party Software      | used to preview markdown notes with  `shift` or `cmd + Y` when searching with `o` | 
 
 If you have [Homebrew](https://brew.sh/), Tesseract and qlmarkdown can by installed via the following terminal commands:
 
