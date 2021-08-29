@@ -9,8 +9,7 @@
 	- Search only Starred Files in your Vault
 	- OCR Screenshots
 	- Search the Obsidian Documentation
-	- Search Community Plugins and directly open them in Obsidian or GitHub
-	- Search & Preview Community Themes
+	- Search Community Plugins/Themes and directly open them in Obsidian or GitHub
 	- Create Backups of your Vault
 	- Enter Dual Mode (Edit + Preview)
 	- Create a new note
@@ -20,6 +19,7 @@
 	- Toggle a CSS Snippet
 	- One-Click-Convert a font file to base64-CSS
 	- Open your current theme CSS file
+	- Search & Preview Community Themes
 	- Access your themes and snippets via Alfred
 	- Quickly create a new CSS snippet from clipboard content
 	- Display a list of Obsidian's default variables
