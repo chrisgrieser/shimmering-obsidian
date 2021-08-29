@@ -85,7 +85,7 @@ end tell
 	- Use `cmd + return` to open the plugin's GitHub repository instead.
 	- Press `opt + return` to copy the GitHub repository URL to your clipboard.
 - Use `shift` or `cmd + Y` to open a Quick Look Preview of the theme. Press `shift` or `cmd + Y` again to close the preview.
-- Only plugins and themes officially included in the community plugins are displayed — plugins solely available via GitHub or still in review will not be shown.
+- Only plugins and themes officially included in the community plugins/themes are displayed — plugins/themes solely available via GitHub or still in review will not be shown.
 - Add "themes" to the keyword to only display themes (i.e., use `op themes` as keyword.).
 - The thousand separator used with the download numbers can be set in the workflow configuration (`thousand_seperator`).
 
@@ -120,13 +120,18 @@ end tell
 - Open the “themes” or “snippets” folder located in `.obsidian` in Finder.
 - Create a **new CSS snippet** in mere seconds: The CSS file will be placed in your snippet folder, filled with your clipboard content, named after the query you enter after `ocss`, and then opened in your default text editor. (Furthermore, this will open the Obsidian Settings in the background, to save you yet another click. 🙂)
 
-**`op themes`: Search Community [themes].**
-- see the `op` keyword further above.
+**`op themes`: Search & Preview Community [themes].**
+- Press `return` to open the GitHub Repository.
+- Use `opt + return` to copy the GitHub repository URL to your clipboard instead.
+- Press `shift` or `cmd + Y` to open a Quick Look Preview of the theme. Press `shift` or `cmd + Y` again to close the preview.
+- Only themes officially included in the community themes are displayed — themes solely available via GitHub or still in review will not be shown.
+- see also the `op` keyword further above, as this is basically a filter for `op`.
+
+<img src="https://user-images.githubusercontent.com/73286100/131255059-1a56d6e7-8c2f-4ff0-b20d-247702bb7925.gif" alt="Theme Search" width=60% height=60%>
 
 **`Triggered via Hotkey`: Toggle one of your CSS snippets.**
 - The snippet you wish to toggle must be set in the workflow configuration (`toggle_snippet`). 
 - This feature is useful for some CSS Snippets that you regularly want to turn on and off, like e.g., the [snippet to hide URLs](https://github.com/Dmitriy-Shulha/obsidian-css-snippets/blob/master/Snippets/URLs.md), or the [snippet to garble text](https://forum.obsidian.md/t/garble-text-on-screen-to-hide-private-info-with-added-features/23143).
-
 
 <img src="https://i.imgur.com/j1tyGQw.gif" alt="" width=60% height=60%>
 
