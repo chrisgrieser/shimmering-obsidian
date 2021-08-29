@@ -156,15 +156,23 @@ end tell
 <img src="https://i.imgur.com/RPHWjtj.png" alt="" width=60% height=60%>
 
 ## Requirements & Installation
-First of all, you need the [Powerpack for Alfred](https://www.alfredapp.com/powerpack/), which costs around 30€ (depending on the current exchange rate to the British Pound).
 
-### Required Obsidian Plugins
-- [Advanced URI Schemes](https://github.com/Vinzent03/obsidian-advanced-uri)
-- [Hotkey-Helper](https://github.com/pjeby/hotkey-helper)
-- Quick Switcher (Core Plugin) has to be enabled
+### Requirements (Dependencies) for this Workflow
+These requirements have to fulfilled, since this workflow won't work without them.
+- [Powerpack for Alfred](https://www.alfredapp.com/powerpack/) (costs around 30€, depending on the current exchange rate to the British Pound).
+- Install the [Advanced URI Plugin](https://github.com/Vinzent03/obsidian-advanced-uri) for Obsidian. (It is needed to enable controling Obsidian from a Third party app like Alfred.)
 
-### Required Third-Party Software
-For the OCR Screenshot Feature and for note previews via Alfred, you need to install [Tesseract](https://tesseract-ocr.github.io/tessdoc/Installation.html) and [qlmarkdown](https://github.com/toland/qlmarkdown/). When you have Homebrew, you can install both by simply running the following commands:
+### Recommended Obsidian Plugins or Third-Party Software
+These requirements are only necessary for specific features of this workflow. If you do not plan to use a certain feature, you can forego installing them to your machine lean. It is recommended to install all of them, if you want to use all features of this workflow.
+
+| Name                                                                   | Type                      | Function                                                                                     |
+| ---------------------------------------------------------------------- | ------------------------- | -------------------------------------------------------------------------------------------- |
+| [Quick Switcher](https://help.obsidian.md/Plugins/Quick+switcher) <br/>must be enabled      | Obsidian Core Plugin      | used to open notes in a new pane                                                             |
+| [Hotkey-Helper](https://github.com/pjeby/hotkey-helper)                | Obsidian Community Plugin | used to open plugins directly in the <br/> Community Plugin Browser                          |
+| [Tesseract](https://tesseract-ocr.github.io/tessdoc/Installation.html) | Third-Party Software      | needed for OCR screenshots                                                                   |
+| [qlmarkdown](https://github.com/toland/qlmarkdown/)                    | Third-Party Software      | used to preview markdown notes with <br/> `shift` or `cmd + Y` when using searching with `o` | 
+
+If you have [Homebrew](https://brew.sh/), Tesseract and qlmarkdown can by installed via the following terminal commands:
 
 ```bash
 brew install tesseract
@@ -175,11 +183,19 @@ brew install qlmarkdown
 ### Installation
 - Install all the requirements listed above.
 - Download the [latest release at GitHub](https://github.com/chrisgrieser/shimmering-obsidian/releases/latest). Double-click the `.alfredworkflow` file.
+- In some cases, you have to allow _qlmarkdown_ to be executed before you can preview markdown notes via `shift` or `cmd + Y` (This is due to Big Sur's high security measures). Follow the [instructions here](https://github.com/toland/qlmarkdown/issues/98#issuecomment-607733093) to do that.
+- The first time you use the OCR screenshot feature, you might need to give Alfred permission to record your screen. You can do so under the macOS system settings (see image below)
+
+<img src="https://user-images.githubusercontent.com/73286100/131231644-a800c0b0-8dc2-4ae9-bd41-c3937741b94a.png" alt="Permissions for OCR Screenshots" width=35% height=35%>
+
+_When in use, this workflow checks regularly for new versions and auto-updates._
 
 ## Workflow Configuration
 After installing the workflow, you need to configure the settings of this workflow to make use of most of its features.
 1) You access the main workflow configuration by clicking the *`[x]`* at the top right of the workflow (see image below). There, you have the following configuration options:
-	- `vault_path`: The *absolute* path to your obsidian vault, e.g., `/User/pseudometa/MyVault` or `~/Documents/obsidianVault`. (You can change the vault that you want to control with this workflow via the `ovault` command, as described in the 'Features' section.)
+	- `vault_path`: The *absolute* path to your obsidian vault, e.g., `/User/pseudometa/MyVault` or `~/Documents/obsidianVault`. 
+		- You can use `~` in place of your home folder (useful for syncing settings accross devices.)
+		- You can later on change the vault that you want to control with this workflow via the `ovault` command, as described in the 'Features' section.
 	- `backup_destination`: Folder where the backups done by the `obackup` command should be saved.
 	- `max_number_of_bkps`: maximum number of backups that should be stored at the backup destination folder. When the number is reached, every new backup cause the oldest backup to be deleted. (Decrease this number, when your backup folder becomes to big.)
 	- `fontformat`: format of the base64-conversion of font files, e.g., “woff2”
@@ -191,26 +207,19 @@ After installing the workflow, you need to configure the settings of this workfl
 	- `use_quickadd`: Instead of creating a new note based on a template, will trigger the [QuickAdd Plugin](https://github.com/chhoumann/quickadd). Accepted values are “true” and “false”.
 2) At the top left of the workflow, there are some sky-blue fields. You need to double-click them to set the Keyboard Shortcuts you want to use for the respective commands. 
 3) Users familiar with Alfred: You can change any keyword mentioned, like with any other Alfred workflow. (All keyword triggers are located to the very left of this workflow.)
-4) The first time you use the OCR screenshot feature, you might need to give Alfred permission to record your screen. You can do so under the macOS system settings (see image below)
 
 <img src="https://i.imgur.com/swm7AaC.png" alt="Settings of this Workflow" width=40% height=40%>
 <img src="https://i.imgur.com/wlpht7f.png" alt="Setting Hotkeys" width=15% height=15%>
-<img src="https://user-images.githubusercontent.com/73286100/131231644-a800c0b0-8dc2-4ae9-bd41-c3937741b94a.png" alt="Screenshot 2021-08-28 23 33 16" width=40% height=40%>
-
-_This workflow automatically checks daily for new versions and auto-updates._
 
 ## Troubleshooting
-- Check that all requirements are properly installed.
-- Go through the documentation.
+- Check that all requirements are properly installed, and you followed all installation steps.
+- Go through the documentation of the malfunctioning feature.
 - Update to the latest version of the workflow, chances are the problem has already been fixed.
-- For workflow settings which require a file or path, you have to enter the *full absolute path.* 
-	- i.e., do *not* use a vault-relative path. 
-	- Do *not* escape any characters.
-	- You *do* need the leading `/`, and you *must not* add a `/` at the end of the file or folder path.
-	- You can use `~` in place of your home folder (useful for syncing settings accross devices.)
-- When the OCR Screenshot feature results in an empty note, make sure Alfred has permission to record your screen. (see [point 4 of the workflow configuration](https://github.com/chrisgrieser/shimmering-obsidian#workflow-configuration))
-- In some cases, the previewing markdown notes with `shift` or `cmd + Y` does not work due to Big Sur's high security measures. Follow the [instructions here](https://apple.stackexchange.com/a/424896) to resolve this issue.
-- If you did all of the above and there is still something not working, create an [issue](https://github.com/chrisgrieser/shimmering-obsidian/issues), message me on the [Obsidian Discord Server](https://discord.gg/veuWUTm) (my username there is `@pseudometa`), or write me on Twitter where my handle is [@pseudo_meta](https://twitter.com/pseudo_meta). Be sure to attach a **debugging log**, a screenshot, or a [screen recording](https://support.apple.com/guide/quicktime-player/record-your-screen-qtp97b08e666/mac) so I can figure out the issue.
+- For workflow settings which require a file or path, you have to enter the *full absolute path*, i.e., do *not* use a vault-relative path.
+- If you have trouble with OCR screenshots, be sure you have given Alfred permission to record your screen as explained in the [Installation Instructions](https://github.com/chrisgrieser/shimmering-obsidian#installation).
+- In case the previewing of markdown notes via `shift` or `cmd + Y` does not work properly, ensure you have given "qlmarkdown" permission run on your system as explained in the [Installation Instructions](https://github.com/chrisgrieser/shimmering-obsidian#installation).
+- If you did all of the above and there is still something not working, create an [issue](https://github.com/chrisgrieser/shimmering-obsidian/issues), message me on the [Obsidian Discord Server](https://discord.gg/veuWUTm) (my username there is `@pseudometa`), or write me on Twitter where my handle is [@pseudo_meta](https://twitter.com/pseudo_meta). 
+	- Be sure to attach a debugging log, a screenshot, or a [screen recording](https://support.apple.com/guide/quicktime-player/record-your-screen-qtp97b08e666/mac) so I can figure out the issue. 
 	- You can get a **debugging log** by opening the workflow in Alfred preferences and pressing `cmd + D`. A small window will open up which will log everything happening during the execution of the Workflow. Use the malfunctioning part of the workflow once more, copy the content of the log window, and attach it as text file.
 
 ## Credits
