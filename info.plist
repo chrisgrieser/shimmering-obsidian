@@ -139,7 +139,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>E29FE53D-5931-4761-BA49-D1EB697ECF65</string>
+				<string>9803A3DE-FCB4-4DC2-A568-C9EB70E8F623</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -151,7 +151,7 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>72EC336B-CECC-4EF2-BECC-BDC37E91C63D</string>
+				<string>D0CC42AB-11E5-447A-9C1F-BE2293E03B5B</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -393,7 +393,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>81176B02-2767-4014-8A99-F98036B843DE</string>
+				<string>1E72DA48-B05A-45E6-A27F-515AB0D4ADE6</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -825,6 +825,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>6A8372C5-8CF6-4C9F-8313-D09CB265C529</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>72EC336B-CECC-4EF2-BECC-BDC37E91C63D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>6A8AE7C9-2FE9-45DD-8CCC-69B6146E26F7</key>
 		<array>
 			<dict>
@@ -1061,19 +1074,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>81176B02-2767-4014-8A99-F98036B843DE</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>1E72DA48-B05A-45E6-A27F-515AB0D4ADE6</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>82B904E5-D10A-418F-8FA4-6E885FE49813</key>
 		<array>
 			<dict>
@@ -1183,6 +1183,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>BE2117D8-695E-45FB-9B63-149EA1AB0D48</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>9803A3DE-FCB4-4DC2-A568-C9EB70E8F623</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>E29FE53D-5931-4761-BA49-D1EB697ECF65</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1504,6 +1517,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>BDC15C17-E805-4F9B-80A1-BB60B442A7C0</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>D0CC42AB-11E5-447A-9C1F-BE2293E03B5B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>6A8372C5-8CF6-4C9F-8313-D09CB265C529</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -2341,6 +2367,26 @@ set parameter to do shell script "echo " &amp; quoted form of (system attribute 
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>argument</key>
+				<string>{query}</string>
+				<key>passthroughargument</key>
+				<true/>
+				<key>variables</key>
+				<dict>
+					<key>parameter</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>9803A3DE-FCB4-4DC2-A568-C9EB70E8F623</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>externaltriggerid</key>
 				<string>open-in-obsidian</string>
 				<key>passinputasargument</key>
@@ -2413,7 +2459,7 @@ cat "$template_note"</string>
 				<key>createintermediatefolders</key>
 				<true/>
 				<key>filename</key>
-				<string>{var:vault_path}/{var:parameter}.md</string>
+				<string>{var:vault_path}/{var:title}.md</string>
 				<key>filetext</key>
 				<string>{query}</string>
 				<key>ignoredynamicplaceholders</key>
@@ -2469,16 +2515,33 @@ cat "$template_note"</string>
 				<true/>
 				<key>variables</key>
 				<dict>
-					<key>parameter</key>
+					<key>title</key>
 					<string>{query}</string>
 				</dict>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
-			<string>81176B02-2767-4014-8A99-F98036B843DE</string>
+			<string>6A8372C5-8CF6-4C9F-8313-D09CB265C529</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>matchmode</key>
+				<integer>2</integer>
+				<key>matchstring</key>
+				<string></string>
+				<key>replacestring</key>
+				<string>Untitled</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.replace</string>
+			<key>uid</key>
+			<string>D0CC42AB-11E5-447A-9C1F-BE2293E03B5B</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -4999,7 +5062,9 @@ Created by @pspeudometa (Discord) aka @chrisgrieser (GitHub).
 # Release Notes
 v. 1.5
 - Open notes in dual mode via `shift + return` when using the `o` or `os` search (issue #7).
-- Pass a parameter to `on`: when note using QuickAdd, this becomes the note title, when using QuickAdd, this becomes the parameter for searching the QuickAdd options (issue #7).
+- Pass a parameter to `on`:
+  - this parameter will become the title of the new note.
+  - when using QuickAdd, this becomes the parameter for searching the QuickAdd options instead (issue #7).
 
 v. 1.4
 **New Feature**
@@ -5133,7 +5198,7 @@ v. 1.1: Public Release
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>260</integer>
+			<integer>215</integer>
 			<key>ypos</key>
 			<integer>750</integer>
 		</dict>
@@ -5583,6 +5648,15 @@ v. 1.1: Public Release
 			<key>ypos</key>
 			<integer>550</integer>
 		</dict>
+		<key>6A8372C5-8CF6-4C9F-8313-D09CB265C529</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>9</integer>
+			<key>xpos</key>
+			<integer>455</integer>
+			<key>ypos</key>
+			<integer>775</integer>
+		</dict>
 		<key>6A8AE7C9-2FE9-45DD-8CCC-69B6146E26F7</key>
 		<dict>
 			<key>colorindex</key>
@@ -5704,15 +5778,6 @@ should have the same keyword as quicksearch</string>
 			<key>ypos</key>
 			<integer>2010</integer>
 		</dict>
-		<key>81176B02-2767-4014-8A99-F98036B843DE</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>xpos</key>
-			<integer>185</integer>
-			<key>ypos</key>
-			<integer>760</integer>
-		</dict>
 		<key>82B904E5-D10A-418F-8FA4-6E885FE49813</key>
 		<dict>
 			<key>colorindex</key>
@@ -5831,6 +5896,15 @@ should have the same keyword as quicksearch</string>
 			<integer>1165</integer>
 			<key>ypos</key>
 			<integer>1170</integer>
+		</dict>
+		<key>9803A3DE-FCB4-4DC2-A568-C9EB70E8F623</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>9</integer>
+			<key>xpos</key>
+			<integer>455</integer>
+			<key>ypos</key>
+			<integer>710</integer>
 		</dict>
 		<key>9A56ECE8-BEFD-4301-9268-AF85737A5A87</key>
 		<dict>
@@ -6092,6 +6166,15 @@ DOUBLE CLICK THIS to set hotkey</string>
 			<key>ypos</key>
 			<integer>195</integer>
 		</dict>
+		<key>D0CC42AB-11E5-447A-9C1F-BE2293E03B5B</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>9</integer>
+			<key>xpos</key>
+			<integer>385</integer>
+			<key>ypos</key>
+			<integer>775</integer>
+		</dict>
 		<key>DD45D94E-9E2C-4477-9E37-66338FDCF4D0</key>
 		<dict>
 			<key>colorindex</key>
@@ -6335,7 +6418,7 @@ DOUBLE CLICK THIS to set hotkey</string>
 		<string>toggle_snippet</string>
 	</array>
 	<key>version</key>
-	<string>1.5</string>
+	<string>1.5.1</string>
 	<key>webaddress</key>
 	<string>https://chris-grieser.de/</string>
 </dict>
