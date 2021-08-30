@@ -183,7 +183,7 @@ These requirements are only necessary for specific features of this workflow. If
 
 | Name                                                                   | Type                      | Function                                                                                     |
 | ---------------------------------------------------------------------- | ------------------------- | -------------------------------------------------------------------------------------------- |
-| [Quick Switcher](https://help.obsidian.md/Plugins/Quick+switcher) (pre-installed Core Plugin; must be enabled)      | Obsidian Core Plugin      | used to open notes in a new pane                                                             |
+| [Quick Switcher](https://help.obsidian.md/Plugins/Quick+switcher) (pre-installed Core Plugin, must be enabled)      | Obsidian Core Plugin      | used to open notes in a new pane                                                             |
 | [Hotkey-Helper](https://github.com/pjeby/hotkey-helper)                | Obsidian Community Plugin | used to open plugins directly in the  Community Plugin Browser                          |
 | [Tesseract](https://tesseract-ocr.github.io/tessdoc/Installation.html) | Third-Party Software      | needed for **OCR screenshots**                                                                   |
 | [qlmarkdown](https://github.com/toland/qlmarkdown/)                    | Third-Party Software      | used to preview markdown notes with  `shift` or `cmd + Y` when searching with `o` | 
@@ -211,12 +211,12 @@ After installing the workflow, you need to configure the settings of this workfl
 1) You access the main workflow configuration by clicking the *`[x]`* at the top right of the workflow (see image below). There, you have the following configuration options:
 	- `vault_path`: The *absolute* path to your obsidian vault, e.g., `/User/pseudometa/MyVault` or `~/Documents/obsidianVault`. 
 		- You can use `~` in place of your home folder (useful for syncing settings accross devices.)
-		- You can later on change the vault that you want to control with this workflow via the `ovault` command, as described in the 'Features' section.
+		- You can later on change the vault that you want to control with this workflow via the `ovault` keyword, as described in the 'Features' section.
 	- `backup_destination`: Folder where the backups done by the `obackup` command should be saved.
-	- `max_number_of_bkps`: maximum number of backups that should be stored at the backup destination folder. When the number is reached, every new backup cause the oldest backup to be deleted. (Decrease this number, when your backup folder becomes to big.)
+	- `max_number_of_bkps`: maximum number of backups that should be stored at the backup destination folder. When the number is reached, every new backup cause the oldest backup to be deleted. (Decrease this number, when your backup folder becomes too big.)
 	- `fontformat`: format of the base64-conversion of font files, e.g., “woff2”
 	- `ocr_languages`: set language codes of Tesseract, e.g., `eng+deu` for English and German. You can find out the code for your language(s) in [this list](https://tesseract-ocr.github.io/tessdoc/Data-Files-in-different-versions.html).
-	- `ocr_prefix`: Set the prefix for OCR Screenshots. Does accept dynamic content like the current date or time when you use [Alfred's Placeholder-Syntax](https://www.alfredapp.com/help/workflows/advanced/placeholders/#date-time). Note that while not very visible, `ocr_prefix` _can_ have multi-line values.
+	- `ocr_prefix`: Set the prefix for OCR Screenshots. Does accept dynamic content like the current date or time when you use [Alfred's Placeholder Syntax](https://www.alfredapp.com/help/workflows/advanced/placeholders/#date-time). Note that while not easy to see, `ocr_prefix` can have multi-line values.
 	- `search_ignore_attachments`: Whether to ignore attachments when using the `o` command to access the files in your vault. Will automatically retrieve recognize the attachment folder based on your Obsidian setting. Accepted values are “true” and “false”.
 	- `template_note_path`: Template to use when creating new notes with the `on` command or when browsing a folder via the `o` command.
 	- `thousand_seperator`: The thousand separator to use when download numbers are displayed, e.g., `.` or `,`.
