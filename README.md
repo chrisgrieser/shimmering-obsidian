@@ -6,6 +6,7 @@
 ## Overview
 - [General Features](https://github.com/chrisgrieser/shimmering-obsidian#general-features)
 	- Search your Vault
+	- Browse the Folder in your Vault via Alfred
 	- Search Starred Files/Searches
 	- OCR Screenshots
 	- Search the Obsidian Documentation
