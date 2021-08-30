@@ -111,14 +111,25 @@ file_array.forEach(absolutePath => {
 	});
 });
 
-//new file in Folder
+// Additional options when browsing a folder
 if (pathToCheck != vault_path){
+	//New File in Folder
 	let currentFolder = pathToCheck.substring(vaultPathLength, pathToCheck.length);
 	jsonArray.push({
 		title: "Create new Note in here",
 		subtitle: "▸ " + currentFolder,
 		arg: "new",
 		icon: { path: "new.png" },
+	});
+	//go up to parent folder
+	let parentFolderAbs = pathToCheck.replace (/(.*)\/.*$/,"$1");
+	let parentFolderRel = parentFolderAbs.substring(vaultPathLength, parentFolderAbs.length);
+	if (parentFolderRel == "") parentFolderRel = "/";
+	jsonArray.push({
+		title: "⬆️ Browse the Parent Folder",
+		subtitle: "▸ " + parentFolderRel,
+		arg: parentFolderAbs,
+		icon: { path: "folder.png" },
 	});
 }
 

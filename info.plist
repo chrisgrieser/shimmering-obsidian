@@ -5127,11 +5127,21 @@ Created by @pspeudometa (Discord) aka @chrisgrieser (GitHub).
 ---
 
 # Release Notes
+v.1.6
+**new feature**
+- when browsing folders with `o`, you have the option to go up to the parent folder. Now you can basically browse your vault fully via Alfred!
+
+**Fixes &amp; Internal**
+- reduced file size
+- some refactoring
+- bugfix for some edge cases with M1 filesystems
+- fixed empty aliases showing up in small vaults
+
 v. 1.5.4
 - OCR Screenshots have now a setting in the workflow configuration, where you can insert a prefix.
 	- Default value is the date as before.
 	- You can insert a different date format by following [Alfred's Placeholder-Syntax](https://www.alfredapp.com/help/workflows/advanced/placeholders/#date-time).
-	- Leave the prefix empty or insert anything else (e.g. a YAML-Header) you want. Note that while not very visible, the workflow setting variables *do* accept multi-line values.
+	- Leave the prefix empty or insert something else (e.g. a YAML-Header). Note that while not very visible, the workflow setting variables *do* accept multi-line values.
 
 v. 1.5.3
 - improved `odual`: now properly switches view mode, regardless of current view (issue #7)
@@ -5262,7 +5272,7 @@ v. 1.1: Public Release
 			<key>colorindex</key>
 			<integer>6</integer>
 			<key>xpos</key>
-			<integer>55</integer>
+			<integer>30</integer>
 			<key>ypos</key>
 			<integer>2135</integer>
 		</dict>
@@ -5586,7 +5596,7 @@ v. 1.1: Public Release
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>20</integer>
+			<integer>30</integer>
 			<key>ypos</key>
 			<integer>1895</integer>
 		</dict>
@@ -6062,7 +6072,7 @@ should have the same keyword as quicksearch</string>
 			<key>colorindex</key>
 			<integer>6</integer>
 			<key>xpos</key>
-			<integer>55</integer>
+			<integer>35</integer>
 			<key>ypos</key>
 			<integer>1780</integer>
 		</dict>
@@ -6191,7 +6201,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>20</integer>
+			<integer>30</integer>
 			<key>ypos</key>
 			<integer>2010</integer>
 		</dict>
@@ -6511,19 +6521,20 @@ DOUBLE CLICK THIS to set hotkey</string>
 		<key>toggle_snippet</key>
 		<string>~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vault/.obsidian/snippets/Hide URLs.css</string>
 		<key>use_quickadd</key>
-		<string>false</string>
+		<string>true</string>
 		<key>vault_path</key>
 		<string>~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vault</string>
 	</dict>
 	<key>variablesdontexport</key>
 	<array>
+		<string>toggle_snippet</string>
+		<string>vault_path</string>
 		<string>backup_destination</string>
 		<string>template_note_path</string>
-		<string>vault_path</string>
-		<string>toggle_snippet</string>
+		<string>use_quickadd</string>
 	</array>
 	<key>version</key>
-	<string>1.5.4</string>
+	<string>1.6</string>
 	<key>webaddress</key>
 	<string>https://chris-grieser.de/</string>
 </dict>

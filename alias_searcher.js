@@ -2,24 +2,15 @@
 ObjC.import("stdlib");
 app = Application.currentApplication();
 app.includeStandardAdditions = true;
+const homepath = app.pathTo("home folder");
 
-var vault_path = $.getenv("vault_path");
-let homepath = app.pathTo("home folder");
-vault_path = vault_path.replace(/^~/, homepath);
+const vault_path = $.getenv("vault_path").replace(/^~/, homepath);
 const vaultPathLength = vault_path.length + 1;
-
-//either searches the vault, or a subfolder of the vault
-try {
-	var pathToCheck = $.getenv("browse_folder");
-} catch (error) {
-	var pathToCheck = vault_path;
-}
 
 // Input
 let files = app.doShellScript(
-	"echo -n | find '" +	pathToCheck +
-	"' -name '*.md' -not -path '*/.obsidian/*' -not -path '*/.trash/*' -not -path '*.DS_Store*' -not -path '*Icon?' | grep -Fxv '" +
-	pathToCheck + "'"
+	'find "' +	vault_path + '"'
+	+ " -name '*.md' -not -path '*/.obsidian/*' -not -path '*/.trash/*' -not -path '*.DS_Store*' -not -path '*Icon?' | grep -Fxv '" + vault_path + "'"
 );
 var file_array = files.split("\r");
 
@@ -45,16 +36,18 @@ file_array.forEach(absolutePath => {
 		';fi'
 	);
 
-	//push result
-	jsonArray.push({
-		title: aliases + "  ↪ " + filename_without_ext + "",
-		match: aliases,
-		subtitle: "▸ " + relativeLocation,
-		arg: absolutePath,
-		type: "file:skipcheck",
-		mods: { cmd: {	arg: relativePath	}	},
-		uid: absolutePath,
-	});
+	//push result, if there is an alias
+	if (aliases != ""){
+		jsonArray.push({
+			title: aliases + "  ↪ " + filename_without_ext + "",
+			match: aliases,
+			subtitle: "▸ " + relativeLocation,
+			arg: absolutePath,
+			type: "file:skipcheck",
+			mods: { cmd: {	arg: relativePath	}	},
+			uid: absolutePath,
+		});
+	}
 });
 
 JSON.stringify({ items: jsonArray });
