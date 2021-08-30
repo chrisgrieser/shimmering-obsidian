@@ -56,6 +56,9 @@ Most features are triggered with dedicated Alfred keywords, as with any other Al
 - Similar to the default Mac Hotkey `cmd + shift + 4`, you will be able to select part of your screen for a screenshot. However, instead of saving a screenshot, a new note will be created which contains the OCR-content of the selection.
 - To stay in line with the other macOS keyboard shortcuts for taking screenshots, I would suggest setting this hotkey to something like `cmd + shift + 2`.
 - If the file “OCR-Screenshot” already exists in your vault root, any subsequent OCR-Screenshots will instead append to this note. This is intended for taking a lot of OCR-Screenshots in succession, e.g., during a lecture or presentation.
+- You can change the prefix to OCR screenshots by changing the workflow configuration `ocr_prefix`.
+	- Use a different date format by following [Alfred's Placeholder-Syntax](https://www.alfredapp.com/help/workflows/advanced/placeholders/#date-time).
+	- You can leave `ocr_prefix` empty or insert any other fixed value (e.g. a YAML-Header). Note that while not very visible, the workflow configuration variables *do* accept multi-line values.
 - For best results, you should set the proper languages to be recognized with the workflow setting `ocr_languages`.
 
 <img src="https://i.imgur.com/xwdl1N5.gif" alt="OCR Screenshot" width=60% height=60%>
@@ -209,6 +212,7 @@ After installing the workflow, you need to configure the settings of this workfl
 	- `max_number_of_bkps`: maximum number of backups that should be stored at the backup destination folder. When the number is reached, every new backup cause the oldest backup to be deleted. (Decrease this number, when your backup folder becomes to big.)
 	- `fontformat`: format of the base64-conversion of font files, e.g., “woff2”
 	- `ocr_languages`: set language codes of Tesseract, e.g., `eng+deu` for English and German. You can find out the code for your language(s) in [this list](https://tesseract-ocr.github.io/tessdoc/Data-Files-in-different-versions.html).
+	- `ocr_prefix`: Set the prefix for OCR Screenshots. Does accept dynamic content like the current date or time when you use [Alfred's Placeholder-Syntax](https://www.alfredapp.com/help/workflows/advanced/placeholders/#date-time). Note that while not very visible, `ocr_prefix` _can_ have multi-line values.
 	- `search_ignore_attachments`: Whether to ignore attachments when using the `o` command to access the files in your vault. Will automatically retrieve recognize the attachment folder based on your Obsidian setting. Accepted values are “true” and “false”.
 	- `template_note_path`: Template to use when creating new notes with the `on` command or when browsing a folder via the `o` command.
 	- `thousand_seperator`: The thousand separator to use when download numbers are displayed, e.g., `.` or `,`.
