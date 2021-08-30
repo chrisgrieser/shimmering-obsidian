@@ -4,8 +4,6 @@
 <dict>
 	<key>bundleid</key>
 	<string>de.chris-grieser.shimmering-obsidian</string>
-	<key>category</key>
-	<string>App-Enhance</string>
 	<key>connections</key>
 	<dict>
 		<key>07C4D3F5-5CBC-4BAF-9004-B506BEF11C23</key>
@@ -1843,7 +1841,7 @@
 				<key>filename</key>
 				<string>{var:vault_path}/OCR-Screenshot.md</string>
 				<key>filetext</key>
-				<string>{date:yyyy-MM-dd}, {time:HH:mm}
+				<string>{var:ocr_datetime_format}
 
 ---
 {query}
@@ -1904,11 +1902,9 @@ tesseract "$temp_image" stdout -l $ocr_languages 2&gt;&amp;1</string>
 				<key>focusedappvariablename</key>
 				<string></string>
 				<key>hotkey</key>
-				<integer>18</integer>
+				<integer>0</integer>
 				<key>hotmod</key>
-				<integer>1179648</integer>
-				<key>hotstring</key>
-				<string>1</string>
+				<integer>0</integer>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -2049,11 +2045,9 @@ tesseract "$temp_image" stdout -l $ocr_languages 2&gt;&amp;1</string>
 				<key>focusedappvariablename</key>
 				<string></string>
 				<key>hotkey</key>
-				<integer>32</integer>
+				<integer>0</integer>
 				<key>hotmod</key>
-				<integer>1966080</integer>
-				<key>hotstring</key>
-				<string>U</string>
+				<integer>0</integer>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -2238,8 +2232,6 @@ echo -n "$base64encoded"</string>
 				<integer>0</integer>
 				<key>hotmod</key>
 				<integer>0</integer>
-				<key>hotstring</key>
-				<string></string>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -6489,25 +6481,27 @@ DOUBLE CLICK THIS to set hotkey</string>
 	<key>variables</key>
 	<dict>
 		<key>backup_destination</key>
-		<string>~/Google Drive/Dokumente/IT Backups/Obsidian Backups</string>
+		<string></string>
 		<key>fontformat</key>
 		<string>woff2</string>
 		<key>max_number_of_bkps</key>
 		<string>15</string>
+		<key>ocr_datetime_format</key>
+		<string>{date:yyyy-MM-dd}, {time:HH:mm}</string>
 		<key>ocr_languages</key>
 		<string>deu+eng</string>
 		<key>search_ignore_attachments</key>
 		<string>true</string>
 		<key>template_note_path</key>
-		<string>~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vault/Functionality/QuickAdd/Basic Template.md</string>
+		<string></string>
 		<key>thousand_seperator</key>
 		<string>.</string>
 		<key>toggle_snippet</key>
-		<string>~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vault/.obsidian/snippets/Hide URLs.css</string>
+		<string></string>
 		<key>use_quickadd</key>
-		<string>false</string>
+		<string></string>
 		<key>vault_path</key>
-		<string>~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vault</string>
+		<string></string>
 	</dict>
 	<key>variablesdontexport</key>
 	<array>
