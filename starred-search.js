@@ -21,6 +21,10 @@ var starred_searches = app.doShellScript(
 	'" | cut -d ' + "'" + '"' + "'" +' -f 4'
 ).split("\r");
 
+//handle no starred files
+if (starred_searches[0] == "") starred_searches = [];
+if (starred_files[0] == "") starred_files = [];
+
 //JSON Construction
 let jsonArray = [];
 

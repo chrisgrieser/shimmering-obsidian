@@ -5060,6 +5060,12 @@ Created by @pspeudometa (Discord) aka @chrisgrieser (GitHub).
 ---
 
 # Release Notes
+v. 1.5.2
+- fixed `os` when there are no starred files
+
+v. 1.5.1
+- fix empty filenames when using on without parameter
+
 v. 1.5
 - Open notes in dual mode via `shift + return` when using the `o` or `os` search (issue #7).
 - Pass a parameter to `on`:
@@ -5655,7 +5661,7 @@ v. 1.1: Public Release
 			<key>xpos</key>
 			<integer>455</integer>
 			<key>ypos</key>
-			<integer>775</integer>
+			<integer>760</integer>
 		</dict>
 		<key>6A8AE7C9-2FE9-45DD-8CCC-69B6146E26F7</key>
 		<dict>
@@ -5904,7 +5910,7 @@ should have the same keyword as quicksearch</string>
 			<key>xpos</key>
 			<integer>455</integer>
 			<key>ypos</key>
-			<integer>710</integer>
+			<integer>635</integer>
 		</dict>
 		<key>9A56ECE8-BEFD-4301-9268-AF85737A5A87</key>
 		<dict>
@@ -6173,7 +6179,7 @@ DOUBLE CLICK THIS to set hotkey</string>
 			<key>xpos</key>
 			<integer>385</integer>
 			<key>ypos</key>
-			<integer>775</integer>
+			<integer>760</integer>
 		</dict>
 		<key>DD45D94E-9E2C-4477-9E37-66338FDCF4D0</key>
 		<dict>
@@ -6418,7 +6424,7 @@ DOUBLE CLICK THIS to set hotkey</string>
 		<string>toggle_snippet</string>
 	</array>
 	<key>version</key>
-	<string>1.5.1</string>
+	<string>1.5.2</string>
 	<key>webaddress</key>
 	<string>https://chris-grieser.de/</string>
 </dict>
