@@ -43,7 +43,9 @@ Most features are triggered with dedicated Alfred keywords, as with any other Al
 	- `shift + return`: Open the file in Dual Mode (see `odual` below for more information on Dual Mode.)
 	- Press `shift` or `cmd + y` to preview the selected note via macOS' Quick Look feature. Press `shift` or `cmd + y` again to close the preview. (Unfortunately, YAML-Headers are not displayed properly.)
 - This command also looks for **aliases**, when they are [defined in the YAML-Header](https://help.obsidian.md/How+to/Add+aliases+to+note#Set+aliases). (Searching the aliases takes a short moment, though.)
-- When **selecting a folder**, you will “browse” the selected folder. This means that you are now searching only for files and folders inside that folder. This is useful for when you cannot recall a file's name or alias, but do know the folder where it is located. When browsing a folder, you also have the option to create a new note in that folder. 
+- When **selecting a folder**, you will **“browse”** the selected folder – this means that you are now searching only for files and folders inside that folder. 
+	- When browsing a folder, you also have the option to create a new note _in that folder_ (using the template note from `template_note_path`). 
+	- Furthermore, you can go up and browse the *parent* folder of the current folder. So basically, you can fully navigate the folder structure of your vault via Alfred.
 - When you have set `search_ignore_attachments` in the workflow configuration to “true”, files in your **attachment folder(s) will be ignored**. This basically mimics the behavior of Obsidian's QuickSwitch.
 
 <img src="https://i.imgur.com/niwUEa9.gif" alt="" width=60% height=60%>
