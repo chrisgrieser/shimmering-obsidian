@@ -113,7 +113,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>27DF894D-0386-407B-8EF2-95BBD0395349</string>
+				<string>42B2DB09-A39A-4087-9F06-C0B0F2C16E88</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -481,6 +481,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>42B2DB09-A39A-4087-9F06-C0B0F2C16E88</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>CDC3C416-1670-46AC-A7D1-D8EFEF574C3C</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>4357CED9-9613-4872-AFBA-58629EB27D48</key>
 		<array>
 			<dict>
@@ -717,7 +730,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>27DF894D-0386-407B-8EF2-95BBD0395349</string>
+				<string>42B2DB09-A39A-4087-9F06-C0B0F2C16E88</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1504,6 +1517,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>5E2BFA74-9185-4C41-82B0-274EB3C261BD</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>CDC3C416-1670-46AC-A7D1-D8EFEF574C3C</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>27DF894D-0386-407B-8EF2-95BBD0395349</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -3510,6 +3536,29 @@ echo "$backup"</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>get-view-modes.sh</string>
+				<key>type</key>
+				<integer>8</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>42B2DB09-A39A-4087-9F06-C0B0F2C16E88</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>keyword</key>
@@ -3525,6 +3574,26 @@ echo "$backup"</string>
 			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
 			<string>5E9B99E6-4356-4DC9-AC52-6B099C4ECBE2</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>switchView</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>CDC3C416-1670-46AC-A7D1-D8EFEF574C3C</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -4306,6 +4375,25 @@ echo -n `cat "$vault_path""/.obsidian/appearance.json" | grep "cssTheme" | head 
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>externaltriggerid</key>
+				<string>update-obsidian-workflow</string>
+				<key>passinputasargument</key>
+				<true/>
+				<key>passvariables</key>
+				<true/>
+				<key>workflowbundleid</key>
+				<string>self</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>5C1918E9-6508-4076-8D79-716B47ACFC20</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>alfredfiltersresults</key>
 				<true/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -4351,25 +4439,6 @@ echo -n `cat "$vault_path""/.obsidian/appearance.json" | grep "cssTheme" | head 
 			<string>6A8AE7C9-2FE9-45DD-8CCC-69B6146E26F7</string>
 			<key>version</key>
 			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>externaltriggerid</key>
-				<string>update-obsidian-workflow</string>
-				<key>passinputasargument</key>
-				<true/>
-				<key>passvariables</key>
-				<true/>
-				<key>workflowbundleid</key>
-				<string>self</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.callexternaltrigger</string>
-			<key>uid</key>
-			<string>5C1918E9-6508-4076-8D79-716B47ACFC20</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -5060,8 +5129,11 @@ Created by @pspeudometa (Discord) aka @chrisgrieser (GitHub).
 ---
 
 # Release Notes
+v. 1.5.3
+- improved `odual`: now properly switches view mode, regardless of current view (issue #7)
+
 v. 1.5.2
-- fixed `os` when there are no starred files
+- fix `os` when there are no starred files
 
 v. 1.5.1
 - fix empty filenames when using on without parameter
@@ -5261,8 +5333,10 @@ v. 1.1: Public Release
 		<dict>
 			<key>colorindex</key>
 			<integer>9</integer>
+			<key>note</key>
+			<string>open in Dual Mode</string>
 			<key>xpos</key>
-			<integer>190</integer>
+			<integer>405</integer>
 			<key>ypos</key>
 			<integer>2265</integer>
 		</dict>
@@ -5442,6 +5516,17 @@ v. 1.1: Public Release
 			<integer>545</integer>
 			<key>ypos</key>
 			<integer>1295</integer>
+		</dict>
+		<key>42B2DB09-A39A-4087-9F06-C0B0F2C16E88</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>9</integer>
+			<key>note</key>
+			<string>check default/view modes</string>
+			<key>xpos</key>
+			<integer>190</integer>
+			<key>ypos</key>
+			<integer>2265</integer>
 		</dict>
 		<key>4357CED9-9613-4872-AFBA-58629EB27D48</key>
 		<dict>
@@ -6159,6 +6244,15 @@ DOUBLE CLICK THIS to set hotkey</string>
 			<key>ypos</key>
 			<integer>3710</integer>
 		</dict>
+		<key>CDC3C416-1670-46AC-A7D1-D8EFEF574C3C</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>9</integer>
+			<key>xpos</key>
+			<integer>335</integer>
+			<key>ypos</key>
+			<integer>2295</integer>
+		</dict>
 		<key>CF8C9F05-0F8E-48AC-AA6E-49A41470DC53</key>
 		<dict>
 			<key>colorindex</key>
@@ -6424,7 +6518,7 @@ DOUBLE CLICK THIS to set hotkey</string>
 		<string>toggle_snippet</string>
 	</array>
 	<key>version</key>
-	<string>1.5.2</string>
+	<string>1.5.3</string>
 	<key>webaddress</key>
 	<string>https://chris-grieser.de/</string>
 </dict>

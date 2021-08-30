@@ -24,6 +24,9 @@ tell application "System Events"
 	keystroke return using {command down}
 end tell
 
-delay 0.3
--- toggle view mode
-tell application "Obsidian" to open location "obsidian://advanced-uri?commandid=markdown%253Atoggle-preview"
+-- toggle view mode, if current != default view mode
+if ((system attribute "switchView") is "switch-necessary")
+	delay 0.3
+	tell application "Obsidian" to open location "obsidian://advanced-uri?commandid=markdown%253Atoggle-preview"
+end if
+
