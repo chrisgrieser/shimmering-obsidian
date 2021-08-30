@@ -1,6 +1,4 @@
 #!/usr/bin/env osascript -l JavaScript
-
-//Basic
 ObjC.import("stdlib");
 app = Application.currentApplication();
 app.includeStandardAdditions = true;
@@ -27,9 +25,9 @@ if ($.getenv("search_ignore_attachments") == "true"){
 }
 
 var file_array = app.doShellScript(
-	"echo -n | find '" +	pathToCheck + "' " +
+	'find "' +	pathToCheck + '" ' +
 	" -not -path '*/.obsidian*' -not -path '*/.trash*' -not -path '*.DS_Store*' -not -path '*Icon?' " + attachm_subf +
-	"| grep -Fxv '" +	pathToCheck + "'"
+	'| grep -Fxv "' +	pathToCheck + '"'
 ).split("\r");
 
 var starred = app.doShellScript(
