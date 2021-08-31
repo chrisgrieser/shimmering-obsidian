@@ -27,6 +27,7 @@
 - [Requirements & Installation](https://github.com/chrisgrieser/shimmering-obsidian#requirements--installation)
 - [Workflow Configuration](https://github.com/chrisgrieser/shimmering-obsidian#workflow-configuration)
 - [Troubleshooting](https://github.com/chrisgrieser/shimmering-obsidian#troubleshooting)
+- [Contribute](https://github.com/chrisgrieser/shimmering-obsidian#contribute)
 - [Credits](https://github.com/chrisgrieser/shimmering-obsidian#credits)
 
 *You also might want to check out the [Alfred workflow by @hauselin](https://github.com/hauselin/obsidian-alfred), which focusses on a very different feature set, e.g. daily notes.* 
@@ -238,6 +239,9 @@ After installing the workflow, you need to configure the settings of this workfl
 - If you did all of the above and there is still something not working, create an [issue](https://github.com/chrisgrieser/shimmering-obsidian/issues), message me on the [Obsidian Discord Server](https://discord.gg/veuWUTm) (my username there is `@pseudometa`), or write me on Twitter where my handle is [@pseudo_meta](https://twitter.com/pseudo_meta). 
 	- Be sure to attach a debugging log, a screenshot, or a [screen recording](https://support.apple.com/guide/quicktime-player/record-your-screen-qtp97b08e666/mac) so I can figure out the issue. 
 	- You can get a **debugging log** by opening the workflow in Alfred preferences and pressing `cmd + D`. A small window will open up which will log everything happening during the execution of the Workflow. Use the malfunctioning part of the workflow once more, copy the content of the log window, and attach it as text file.
+
+## Contribute
+This workflow is built in a very modular manner, so feel free to check out certain parts or suggest features via Pull Request. In particular, I would like to improve the speed of Alias Search and implement a Search for Tags, but I lack the coding knowledge to implement this in a sufficiently efficient way. [Feel free to suggest implementations for that](https://github.com/chrisgrieser/shimmering-obsidian/issues/10). 🙂
 
 ## Credits
 
