@@ -48,7 +48,7 @@ Most features are triggered with dedicated Alfred keywords, as with any other Al
 - When **selecting a folder**, you will **“browse”** the selected folder – this means that you are now searching only for files and folders inside that folder. 
 	- When browsing a folder, you also have the option to create a new note _in that folder_ (using the template note from `template_note_path`). 
 	- Furthermore, you can go up and browse the *parent* folder of the current folder. So basically, you can fully navigate the folder structure of your vault via Alfred.
-- When you have set `search_ignore_attachments` in the workflow configuration to “true”, files in your **attachment folder(s) will be ignored**. This basically mimics the behavior of Obsidian's QuickSwitch.
+- When you have set `search_ignore_attachments` in the workflow configuration to “true”, attachment file types (images, PDFs, videos) are ignored. This basically mimics the behavior of Obsidian's QuickSwitch.
 
 <img src="https://i.imgur.com/niwUEa9.gif" alt="" width=60% height=60%>
 
@@ -218,7 +218,7 @@ After installing the workflow, you need to configure the settings of this workfl
 	- `fontformat`: format of the base64-conversion of font files, e.g., “woff2”
 	- `ocr_languages`: set language codes of Tesseract, e.g., `eng+deu` for English and German. You can find out the code for your language(s) in [this list](https://tesseract-ocr.github.io/tessdoc/Data-Files-in-different-versions.html).
 	- `ocr_prefix`: Set the prefix for OCR Screenshots. Does accept dynamic content like the current date or time when you use [Alfred's Placeholder Syntax](https://www.alfredapp.com/help/workflows/advanced/placeholders/#date-time). Note that while not easy to see, `ocr_prefix` can have multi-line values.
-	- `search_ignore_attachments`: Whether to ignore attachments when using the `o` command to access the files in your vault. Will automatically retrieve recognize the attachment folder based on your Obsidian setting. Accepted values are “true” and “false”.
+	- `search_ignore_attachments`: Whether to ignore attachment file types (images, PDFs, videos) when using the `o` search. Accepted values are “true” and “false”.
 	- `template_note_path`: Template to use when creating new notes with the `on` command or when browsing a folder via the `o` command.
 	- `thousand_seperator`: The thousand separator to use when download numbers are displayed, e.g., `.` or `,`.
 	- `toggle_snippet`: *Full* path to the CSS file in your snippet folder that you wish to toggle via hotkey.
