@@ -2845,7 +2845,9 @@ tell application "System Events"
 	end tell
 	delay 0.1
 	keystroke return using {command down}
-end tell</string>
+end tell
+
+delay 0.1</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -4375,25 +4377,6 @@ echo -n `cat "$vault_path""/.obsidian/appearance.json" | grep "cssTheme" | head 
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>externaltriggerid</key>
-				<string>update-obsidian-workflow</string>
-				<key>passinputasargument</key>
-				<true/>
-				<key>passvariables</key>
-				<true/>
-				<key>workflowbundleid</key>
-				<string>self</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.callexternaltrigger</string>
-			<key>uid</key>
-			<string>5C1918E9-6508-4076-8D79-716B47ACFC20</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>alfredfiltersresults</key>
 				<true/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -4439,6 +4422,25 @@ echo -n `cat "$vault_path""/.obsidian/appearance.json" | grep "cssTheme" | head 
 			<string>6A8AE7C9-2FE9-45DD-8CCC-69B6146E26F7</string>
 			<key>version</key>
 			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>externaltriggerid</key>
+				<string>update-obsidian-workflow</string>
+				<key>passinputasargument</key>
+				<true/>
+				<key>passvariables</key>
+				<true/>
+				<key>workflowbundleid</key>
+				<string>self</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>5C1918E9-6508-4076-8D79-716B47ACFC20</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -5129,6 +5131,11 @@ Created by @pspeudometa (Discord) aka @chrisgrieser (GitHub).
 ---
 
 # Release Notes
+v. 1.6.2
+- `search_ignore_attachments` now excludes attachment filetypes instread of attachment folders, in line with how the QUickSwitcher Core plugin works.
+- fixed bug where using root as attachment folder would break `o` search (thanks @porkchop).
+- fixed icons of themes and snippet folder
+
 v. 1.6.1
 - fixed bug where `odual`, `obackup`, templated-based note-creation and `snippet toggling` wouldn't work when *not* using `~` (issue #9).
 
@@ -6535,14 +6542,14 @@ DOUBLE CLICK THIS to set hotkey</string>
 	</dict>
 	<key>variablesdontexport</key>
 	<array>
+		<string>toggle_snippet</string>
 		<string>vault_path</string>
 		<string>backup_destination</string>
 		<string>template_note_path</string>
 		<string>use_quickadd</string>
-		<string>toggle_snippet</string>
 	</array>
 	<key>version</key>
-	<string>1.6.1</string>
+	<string>1.6.2</string>
 	<key>webaddress</key>
 	<string>https://chris-grieser.de/</string>
 </dict>

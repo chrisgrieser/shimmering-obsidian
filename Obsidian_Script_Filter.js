@@ -16,17 +16,15 @@ try {
 }
 
 // Input
-var attachm_subf = "";
+var attachment_search = "";
 if ($.getenv("search_ignore_attachments") == "true"){
-	// get name of attachment subfolder from Obsidian settings
-	attachm_subf = app.doShellScript('grep "attachmentFolderPath" "' + vault_path + '""/.obsidian/app.json" | cut -c 30- | sed "s/..$//"');
-	// build the parameters that are to be added in the doshellscript below
-	attachm_subf = "-not -path '*/" + attachm_subf + "*' ";
+	attachment_search = "-not -name '*.pdf' -not -name '*.jpg' -not -name '*.jpeg' -not -name '*.png' -not -name '*.gif' -not -name '*.mp4' -not -name '*.mov' ";
 }
 
 var file_array = app.doShellScript(
 	'find "' +	pathToCheck + '" ' +
-	" -not -path '*/.obsidian*' -not -path '*/.trash*' -not -path '*.DS_Store*' -not -path '*Icon?' " + attachm_subf +
+	" -not -path '*/.obsidian*' -not -path '*/.trash*' -not -name '*.DS_Store' -not -name '*Icon?' " +
+	attachment_search +
 	'| grep -Fxv "' +	pathToCheck + '"'
 ).split("\r");
 
