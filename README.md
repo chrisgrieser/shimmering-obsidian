@@ -8,6 +8,7 @@
 	- Search your Vault
 	- Browse the Folder in your Vault via Alfred
 	- Search Starred Files/Searches
+	- Open Recent Files
 	- OCR Screenshots
 	- Search the Obsidian Documentation
 	- Search Community Plugins/Themes and directly open them in Obsidian or GitHub
@@ -55,6 +56,10 @@ Most features are triggered with dedicated Alfred keywords, as with any other Al
 **`os`: Open [s]tarred Files and Searches** 
 - When you select a starred *file*, everything works exactly the same as the search with `o`, i.e. all the modifiers (`cmd/ctrl/opt/fn/shift + return`) apply the same way.
 - If you select a starred *search*, Obsidian will open the search pane with the query.
+
+**`or`: Open [r]ecent Files** 
+- Displays recent files that can be actioned on exactly the same way as the search with `o`, i.e. all the modifiers (`cmd/ctrl/opt/fn/shift + return`) apply the same way.
+- Up to 10 files are displayed
 
 **`Triggered via Hotkey`: Take an OCR Screenshot.** 
 - Similar to the default Mac Hotkey `cmd + shift + 4`, you will be able to select part of your screen for a screenshot. However, instead of saving a screenshot, a new note will be created which contains the OCR-content of the selection.
