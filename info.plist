@@ -1904,11 +1904,11 @@ tesseract "$temp_image" stdout -l $ocr_languages 2&gt;&amp;1</string>
 				<key>focusedappvariablename</key>
 				<string></string>
 				<key>hotkey</key>
-				<integer>18</integer>
+				<integer>0</integer>
 				<key>hotmod</key>
-				<integer>1179648</integer>
+				<integer>0</integer>
 				<key>hotstring</key>
-				<string>1</string>
+				<string></string>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -2238,6 +2238,8 @@ echo -n "$base64encoded"</string>
 				<integer>0</integer>
 				<key>hotmod</key>
 				<integer>0</integer>
+				<key>hotstring</key>
+				<string></string>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -2456,11 +2458,11 @@ set parameter to do shell script "echo " &amp; quoted form of (system attribute 
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>template_note=~`echo -n $template_note_path | sed -e "s/~//"`
+				<string>template_note="${template_note_path/#\~/$HOME}"
 
 cat "$template_note"</string>
 				<key>scriptargtype</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>scriptfile</key>
 				<string></string>
 				<key>type</key>
@@ -3127,11 +3129,11 @@ JSON.stringify({ 'items': jsonArray });
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>template_note=~`echo -n $template_note_path | sed -e "s/^~//"`
+				<string>template_note="${template_note_path/#\~/$HOME}"
 
 cat "$template_note"</string>
 				<key>scriptargtype</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>scriptfile</key>
 				<string></string>
 				<key>type</key>
@@ -3920,7 +3922,7 @@ echo -n `cat "$vault_path""/.obsidian/appearance.json" | grep "cssTheme" | head 
 				<key>subtext</key>
 				<string></string>
 				<key>text</key>
-				<string>⭐️ Open Current Theme</string>
+				<string>✅ Open Current Theme</string>
 				<key>withspace</key>
 				<true/>
 			</dict>
@@ -4373,6 +4375,25 @@ echo -n `cat "$vault_path""/.obsidian/appearance.json" | grep "cssTheme" | head 
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>externaltriggerid</key>
+				<string>update-obsidian-workflow</string>
+				<key>passinputasargument</key>
+				<true/>
+				<key>passvariables</key>
+				<true/>
+				<key>workflowbundleid</key>
+				<string>self</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>5C1918E9-6508-4076-8D79-716B47ACFC20</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>alfredfiltersresults</key>
 				<true/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -4418,25 +4439,6 @@ echo -n `cat "$vault_path""/.obsidian/appearance.json" | grep "cssTheme" | head 
 			<string>6A8AE7C9-2FE9-45DD-8CCC-69B6146E26F7</string>
 			<key>version</key>
 			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>externaltriggerid</key>
-				<string>update-obsidian-workflow</string>
-				<key>passinputasargument</key>
-				<true/>
-				<key>passvariables</key>
-				<true/>
-				<key>workflowbundleid</key>
-				<string>self</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.callexternaltrigger</string>
-			<key>uid</key>
-			<string>5C1918E9-6508-4076-8D79-716B47ACFC20</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -4841,19 +4843,6 @@ tell application "System Events" to keystroke "{query}"</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>seconds</key>
-				<string>.5</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.delay</string>
-			<key>uid</key>
-			<string>E6FA0443-53FA-4967-A3EE-9AE429FFEE5F</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>conditions</key>
 				<array>
 					<dict>
@@ -4878,6 +4867,19 @@ tell application "System Events" to keystroke "{query}"</string>
 			<string>alfred.workflow.utility.conditional</string>
 			<key>uid</key>
 			<string>3F7A599D-6A9E-4D70-B3E6-88217EA3D56C</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>seconds</key>
+				<string>.5</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.delay</string>
+			<key>uid</key>
+			<string>E6FA0443-53FA-4967-A3EE-9AE429FFEE5F</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -5127,6 +5129,10 @@ Created by @pspeudometa (Discord) aka @chrisgrieser (GitHub).
 ---
 
 # Release Notes
+v. 1.6.1
+- fixed bug where `odual`, `obackup`, templated-based note-creation and `snippet toggling` wouldn't work when *not* using `~` (issue #9).
+
+
 v.1.6
 **new feature**
 - when browsing folders with `o`, you have the option to go up to the parent folder. Now you can basically browse your vault fully via Alfred!
@@ -5272,7 +5278,7 @@ v. 1.1: Public Release
 			<key>colorindex</key>
 			<integer>6</integer>
 			<key>xpos</key>
-			<integer>30</integer>
+			<integer>25</integer>
 			<key>ypos</key>
 			<integer>2135</integer>
 		</dict>
@@ -5596,7 +5602,7 @@ v. 1.1: Public Release
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>30</integer>
+			<integer>25</integer>
 			<key>ypos</key>
 			<integer>1895</integer>
 		</dict>
@@ -5937,7 +5943,7 @@ should have the same keyword as quicksearch</string>
 			<key>xpos</key>
 			<integer>905</integer>
 			<key>ypos</key>
-			<integer>5185</integer>
+			<integer>5190</integer>
 		</dict>
 		<key>8BC09525-BB68-46E3-A7E2-C0E5C489FF60</key>
 		<dict>
@@ -6033,6 +6039,8 @@ should have the same keyword as quicksearch</string>
 		<dict>
 			<key>colorindex</key>
 			<integer>9</integer>
+			<key>note</key>
+			<string>Open in Obsidian</string>
 			<key>xpos</key>
 			<integer>470</integer>
 			<key>ypos</key>
@@ -6072,7 +6080,7 @@ should have the same keyword as quicksearch</string>
 			<key>colorindex</key>
 			<integer>6</integer>
 			<key>xpos</key>
-			<integer>35</integer>
+			<integer>25</integer>
 			<key>ypos</key>
 			<integer>1780</integer>
 		</dict>
@@ -6201,7 +6209,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>30</integer>
+			<integer>25</integer>
 			<key>ypos</key>
 			<integer>2010</integer>
 		</dict>
@@ -6412,7 +6420,7 @@ DOUBLE CLICK THIS to set hotkey</string>
 			<key>xpos</key>
 			<integer>840</integer>
 			<key>ypos</key>
-			<integer>5215</integer>
+			<integer>5220</integer>
 		</dict>
 		<key>E7ADA43C-52CF-46FD-AC9E-79616731DDA9</key>
 		<dict>
@@ -6509,7 +6517,7 @@ DOUBLE CLICK THIS to set hotkey</string>
 		<key>max_number_of_bkps</key>
 		<string>15</string>
 		<key>ocr_languages</key>
-		<string>eng+deu</string>
+		<string>deu+eng</string>
 		<key>ocr_prefix</key>
 		<string>{date:yyyy-MM-dd}, {time:HH:mm}</string>
 		<key>search_ignore_attachments</key>
@@ -6527,14 +6535,14 @@ DOUBLE CLICK THIS to set hotkey</string>
 	</dict>
 	<key>variablesdontexport</key>
 	<array>
-		<string>toggle_snippet</string>
 		<string>vault_path</string>
 		<string>backup_destination</string>
 		<string>template_note_path</string>
 		<string>use_quickadd</string>
+		<string>toggle_snippet</string>
 	</array>
 	<key>version</key>
-	<string>1.6</string>
+	<string>1.6.1</string>
 	<key>webaddress</key>
 	<string>https://chris-grieser.de/</string>
 </dict>

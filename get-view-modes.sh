@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-vault_path=~`echo -n $vault_path | sed -e "s/^~//"`
+vault_path="${vault_path/#\~/$HOME}"
 default_view=`grep "defaultViewMode" "$vault_path""/.obsidian/app.json" | cut -d '"' -f 4`
 current_view=`grep "mode" "$vault_path""/.obsidian/workspace" | head -n 1 | cut -d '"' -f 4`
 

@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 # resolve ~
-snippet=~`echo -n $toggle_snippet | sed -e "s/~//"`
+snippet="${toggle_snippet/#\~/$HOME}"
 
 snippet_css="${snippet##*/}"
 snippet_without_ext="${snippet_css%.*}"

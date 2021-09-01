@@ -19,7 +19,7 @@ theme_arr.forEach(themePath => {
 	filename = themePath.replace(/.*\/(.*)\..+/,"$1");
 	let current_icon, subtitle_prefix = "";
 	if (current_theme == filename){
-		current_icon = "⭐️ ";
+		current_icon = "✅ ";
 		subtitle_prefix = "current "
 	}
 	jsonArray.push ({

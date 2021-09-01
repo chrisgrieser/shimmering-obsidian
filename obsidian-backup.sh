@@ -1,8 +1,8 @@
 #!/bin/zsh
 timestamp=`date '+%Y-%m-%d_%H-%M'`
-resolved_bkp_dest=~`echo -n $backup_destination | sed -e "s/^~//"`
+resolved_bkp_dest="${backup_destination/#\~/$HOME}"
 backup="$resolved_bkp_dest""/Obsidian-Backup_""$timestamp"".zip"
-vault=~`echo -n $vault_path | sed -e "s/^~//"`
+vault="${vault_path/#\~/$HOME}"
 
 # directory change necessary to avoid zipping root folder https://unix.stackexchange.com/questions/245856/zip-a-file-without-including-the-parent-directory
 # "*" only matches non-hidden files, therefore adding them manually.

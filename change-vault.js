@@ -17,7 +17,7 @@ let jsonArray = [];
 vault_paths.forEach((vault_path) => {
 	let vault_name = vault_path.replace(/.*\//, "");
 	let current = "";
-	if (current_vault == vault_path) { current = "⭐️ ";	};
+	if (current_vault == vault_path) { current = "✅ ";	};
 	let short_path = vault_path.replace (/\/Users\/[^\/]*/,"~");
 
 	jsonArray.push({
