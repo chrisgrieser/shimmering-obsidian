@@ -5800,6 +5800,10 @@ Created by @pspeudometa (Discord) aka @chrisgrieser (GitHub).
 v. 1.7 New Feature: Search Recent Files
 - Search for *recently accessed files* with the new `or` search. Same modifiers (`cmd/ctrl/opt/fn/shift + return` and `shift` for preview) applies as with `o`
 
+**Bugfixes**
+- multiple themes displayed correctly in `ocss`
+- som refactoring of `o` and `os`
+
 
 v. 1.6.2
 - `search_ignore_attachments` now excludes attachment filetypes instead of attachment folders, in line with how the QuickSwitcher Core plugin works.

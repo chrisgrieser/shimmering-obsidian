@@ -17,7 +17,8 @@ let theme_arr = app.doShellScript("find '" + theme_path + "' -name '*.css' ").sp
 let jsonArray = [];
 theme_arr.forEach(themePath => {
 	filename = themePath.replace(/.*\/(.*)\..+/,"$1");
-	let current_icon, subtitle_prefix = "";
+	let current_icon = "";
+	let subtitle_prefix = "";
 	if (current_theme == filename){
 		current_icon = "✅ ";
 		subtitle_prefix = "current "
