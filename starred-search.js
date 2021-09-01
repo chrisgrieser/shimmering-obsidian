@@ -78,26 +78,28 @@ starred_files.forEach(starPath => {
 
 	//icon & type dependent actions
 	let iconpath = "";
-	let folder_subtitle_addition = "";
-	let hooking_subtitle = "⌃: Copy Hook";
 	let new_pane_subtitle = "⌘: Open in new Pane";
+	let dual_mode_subtitle = "⇧: Open in Dual Mode";
 	let appending_md_subtitle = "⛔️ Cannot append: Not a markdown file.";
 	if (type == ".md") {
 		iconpath = "note.png";
 		appending_md_subtitle = "fn: Append clipboard content";
-	} else if (type == ".png" || type == ".jpg") {
+	} else if (extension == ".png" || type == ".jpg" || type == ".jpeg") {
 		iconpath = "image.png";
-	} else if (type == ".pdf") {
+		dual_mode_subtitle = "⛔️ Cannot Open Image in Dual Mode";
+	} else if (extension == ".pdf") {
 		iconpath = "pdf.png";
-	} else if (type == ".csv") {
+		dual_mode_subtitle = "⛔️ Cannot Open PDF in Dual Mode";
+	} else if (extension == ".csv") {
 		iconpath = "csv.png";
+		dual_mode_subtitle = "⛔️ Cannot Open CSV in Dual Mode";
 	}
 
 	//push result
 	jsonArray.push({
 		title: "⭐️ " + filename,
 		match: filename + " " + AlfredMatcher,
-		subtitle: "▸ " + relativeLocation + folder_subtitle_addition,
+		subtitle: "▸ " + relativeLocation,
 		arg: absolutePath,
  		type: "file:skipcheck",
 		uid: absolutePath,
@@ -111,12 +113,9 @@ starred_files.forEach(starPath => {
 				arg: relativePath,
 				subtitle: new_pane_subtitle,
 			},
-			ctrl: {
-				subtitle: hooking_subtitle,
-			},
 			shift: {
 				valid: type == ".md",
-				subtitle: new_pane_subtitle,
+				subtitle: dual_mode_subtitle,
 			},
 		},
 	});

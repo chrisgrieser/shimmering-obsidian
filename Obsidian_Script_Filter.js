@@ -5,7 +5,7 @@ app.includeStandardAdditions = true;
 const homepath = app.pathTo("home folder");
 
 //vault path
-var vault_path = $.getenv("vault_path").replace(/^~/, homepath);
+const vault_path = $.getenv("vault_path").replace(/^~/, homepath);
 const vaultPathLength = vault_path.length + 1;
 
 //either searches the vault, or a subfolder of the vault
@@ -52,19 +52,22 @@ file_array.forEach(absolutePath => {
 	//icon & type dependent actions
 	let iconpath = "";
 	let folder_subtitle_addition = "";
-	let hooking_folder_subtitle = "⌃: Copy Hook";
-	let new_pane_subtitle = "⌘: Open in new Pane";
+	let hooking_folder_subtitle = "⌃: Copy Markdown Link";
+	let new_pane_subtitle = "⌘: Open in New Pane";
 	let dual_mode_subtitle = "⇧: Open in Dual Mode";
 	let appending_md_subtitle = "⛔️ Cannot append: Not a Markdown File.";
 	if (type == ".md") {
 		iconpath = "note.png";
 		appending_md_subtitle = "fn: Append clipboard content";
-	} else if (type == ".png" || type == ".jpg") {
+	} else if (extension == ".png" || type == ".jpg" || type == ".jpeg") {
 		iconpath = "image.png";
-	} else if (type == ".pdf") {
+		dual_mode_subtitle = "⛔️ Cannot Open Image in Dual Mode";
+	} else if (extension == ".pdf") {
 		iconpath = "pdf.png";
-	} else if (type == ".csv") {
+		dual_mode_subtitle = "⛔️ Cannot Open PDF in Dual Mode";
+	} else if (extension == ".csv") {
 		iconpath = "csv.png";
+		dual_mode_subtitle = "⛔️ Cannot Open CSV in Dual Mode";
 	} else if (type == "") {
 		iconpath = "folder.png";
 		folder_subtitle_addition = "     (↵: Browse)";
