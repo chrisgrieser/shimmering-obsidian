@@ -84,13 +84,13 @@ starred_files.forEach(starPath => {
 	if (type == ".md") {
 		iconpath = "note.png";
 		appending_md_subtitle = "fn: Append clipboard content";
-	} else if (extension == ".png" || type == ".jpg" || type == ".jpeg") {
+	} else if (type == ".png" || type == ".jpg" || type == ".jpeg") {
 		iconpath = "image.png";
 		dual_mode_subtitle = "⛔️ Cannot Open Image in Dual Mode";
-	} else if (extension == ".pdf") {
+	} else if (type == ".pdf") {
 		iconpath = "pdf.png";
 		dual_mode_subtitle = "⛔️ Cannot Open PDF in Dual Mode";
-	} else if (extension == ".csv") {
+	} else if (type == ".csv") {
 		iconpath = "csv.png";
 		dual_mode_subtitle = "⛔️ Cannot Open CSV in Dual Mode";
 	}

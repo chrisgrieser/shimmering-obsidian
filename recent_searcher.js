@@ -28,7 +28,7 @@ recent_files.forEach(relativePath => {
 	if (fileExists == "true"){
 		// filename extraction
 		let filename = absolutePath.replace(/.*\/(.*?)$/, "$1");
-		let extension = absolutePath.replace(/.*\/.*?(\.\w+)?$/, "$1");
+		let type = absolutePath.replace(/.*\/.*?(\.\w+)?$/, "$1");
 		let relativeLocation = absolutePath.substring(
 			vaultPathLength,
 			absolutePath.length - filename.length - 1
@@ -37,21 +37,21 @@ recent_files.forEach(relativePath => {
 		//matching for Alfred
 		let AlfredMatcher = filename.replace (/\-|\(|\)|\./g," ");
 	
-		//icon & extension dependent actions
+		//icon & type dependent actions
 		let iconpath = "";
 		let new_pane_subtitle = "⌘: Open in new Pane";
 		let dual_mode_subtitle = "⇧: Open in Dual Mode";
 		let appending_md_subtitle = "⛔️ Cannot append: Not a markdown file";
-		if (extension == ".md") {
+		if (type == ".md") {
 			iconpath = "note.png";
 			appending_md_subtitle = "fn: Append clipboard content";
-		} else if (extension == ".png" || extension == ".jpg" || extension == ".jpeg") {
+		} else if (type == ".png" || type == ".jpg" || type == ".jpeg") {
 			iconpath = "image.png";
 			dual_mode_subtitle = "⛔️ Cannot Open Image in Dual Mode";
-		} else if (extension == ".pdf") {
+		} else if (type == ".pdf") {
 			iconpath = "pdf.png";
 			dual_mode_subtitle = "⛔️ Cannot Open PDF in Dual Mode";
-		} else if (extension == ".csv") {
+		} else if (type == ".csv") {
 			iconpath = "csv.png";
 			dual_mode_subtitle = "⛔️ Cannot Open CSV in Dual Mode";
 		}
@@ -65,7 +65,7 @@ recent_files.forEach(relativePath => {
 			icon: { path: iconpath },
 			mods: {
 				fn: {
-					valid: extension == ".md",
+					valid: type == ".md",
 					subtitle: appending_md_subtitle,
 				},
 				cmd: {
@@ -73,7 +73,7 @@ recent_files.forEach(relativePath => {
 					subtitle: new_pane_subtitle,
 				},
 				shift: {
-					valid: extension == ".md",
+					valid: type == ".md",
 					subtitle: dual_mode_subtitle,
 				},
 			},
