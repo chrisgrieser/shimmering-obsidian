@@ -6,7 +6,7 @@
 ## Overview
 - [General Features](https://github.com/chrisgrieser/shimmering-obsidian#general-features)
 	- Search your Vault
-	- Browse the Folder in your Vault via Alfred
+	- Browse folders in your Vault in Alfred
 	- Search Starred Files/Searches
 	- Open Recent Files
 	- OCR Screenshots
