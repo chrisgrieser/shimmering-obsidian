@@ -97,7 +97,6 @@ file_array.forEach(absolutePath => {
 			},
 			cmd: {
 				valid: type !== "",
-				arg: relativePath,
 				subtitle: new_pane_subtitle,
 			},
 			ctrl: {

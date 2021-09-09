@@ -52,7 +52,6 @@ plugin_array.forEach(plugin => {
 
 	//get download numbers
 	//1st if-condition ensures that the plugin has download stats (new plugins dont)
-	//(new plugins do not have stats yet)
 	//the 2nd if-condition is a precaution in case the order of the two jsons isnt in
 	//sync anymore. In that case, no download-numbers are shown rather than a false one
  	let downloads = "";
@@ -60,7 +59,7 @@ plugin_array.forEach(plugin => {
 	 	if (download_array[i].includes(id)){
 			downloads = download_array[i].split(":")[1];
 			downloads = downloads.replace(/(.+)(.{3})$/,"$1"+$.getenv('thousand_seperator') +"$2");
-			downloads = "   ↓ " + downloads;
+			downloads = "  ↓ " + downloads;
 	 	}
 		i++;
  	}
@@ -81,6 +80,9 @@ plugin_array.forEach(plugin => {
 				'arg': githubURL,
 			},
 			'alt':{
+				'arg': githubURL,
+			},
+			'fn':{
 				'arg': githubURL,
 			},
 		}
@@ -105,6 +107,7 @@ theme_array.forEach(theme => {
   		+ repo + "/" + branch + "/"
   		+ screenshotFile
   	;
+  	let cssURL = githubURL + "/obsidian.css";
 
 	//determine available modes
 	let modes = ""
@@ -135,7 +138,13 @@ theme_array.forEach(theme => {
 		'match': alfredMatcher,
 		'arg': githubURL,
 		"quicklookurl": screenshotURL,
-		"icon": { "path": "css.png"}
+		"icon": { "path": "css.png" },
+		'mods': {
+			'fn': {
+				'arg': cssURL,
+				'subtitle': "fn: Download Theme CSS",
+			}
+		},
 	});
 });
 
