@@ -104,6 +104,7 @@ end tell
 - Press `return` to open the plugin in Obsidian's Community Plugin Browser. (Will open the GitHub Repository for themes instead, as there is not a way to trigger the Obsidians theme browser yet.)
 	- Use `cmd + return` to open the plugin's GitHub repository instead.
 	- Press `opt + return` to copy the GitHub repository URL to your clipboard.
+	- _For developers:_ Use `fn + return` to clone the GitHub Repository into the folder specified in the workflow configuration (`download_folder_path`). When a theme is selected, only the `.css` file will be downloaded instead. 
 - Use `shift` or `cmd + Y` to open a Quick Look Preview of the theme. Press `shift` or `cmd + Y` again to close the preview.
 - Only plugins and themes officially included in the community plugins/themes are displayed — plugins/themes solely available via GitHub or still in review will not be shown.
 - Add "themes" to the keyword to only display themes (i.e., use `op themes` as keyword.).
@@ -189,7 +190,6 @@ These requirements are only necessary for specific features of this workflow. If
 
 | Name                                                                   | Type                      | Function                                                                                     |
 | ---------------------------------------------------------------------- | ------------------------- | -------------------------------------------------------------------------------------------- |
-| [Quick Switcher](https://help.obsidian.md/Plugins/Quick+switcher) (pre-installed Core Plugin, must be enabled)      | Obsidian Core Plugin      | used to open notes in a new pane                                                             |
 | [Hotkey-Helper](https://github.com/pjeby/hotkey-helper)                | Obsidian Community Plugin | used to open plugins directly in the  Community Plugin Browser                          |
 | [Tesseract](https://tesseract-ocr.github.io/tessdoc/Installation.html) | Third-Party Software      | needed for **OCR screenshots**                                                                   |
 | [qlmarkdown](https://github.com/toland/qlmarkdown/)                    | Third-Party Software      | used to preview markdown notes with  `shift` or `cmd + Y` when searching with `o` | 
@@ -216,10 +216,11 @@ _When in use, this workflow checks regularly for new versions and auto-updates._
 After installing the workflow, you need to configure the settings of this workflow to make use of most of its features.
 1) You access the main workflow configuration by clicking the *`[x]`* at the top right of the workflow (see image below). There, you have the following configuration options:
 	- `vault_path`: The *absolute* path to your obsidian vault, e.g., `/User/pseudometa/MyVault` or `~/Documents/obsidianVault`. 
-		- You can use `~` in place of your home folder (useful for syncing settings accross devices.)
+	    - You can use `~` in place of your home folder (useful for syncing settings accross devices.)
 		- You can later on change the vault that you want to control with this workflow via the `ovault` keyword, as described in the 'Features' section.
 	- `backup_destination`: Folder where the backups done by the `obackup` command should be saved.
 	- `max_number_of_bkps`: maximum number of backups that should be stored at the backup destination folder. When the number is reached, every new backup cause the oldest backup to be deleted. (Decrease this number, when your backup folder becomes too big.)
+	- `download_folder_path`: path where downloads from the `op` search should be placed
 	- `fontformat`: format of the base64-conversion of font files, e.g., “woff2”
 	- `ocr_languages`: set language codes of Tesseract, e.g., `eng+deu` for English and German. You can find out the code for your language(s) in [this list](https://tesseract-ocr.github.io/tessdoc/Data-Files-in-different-versions.html).
 	- `ocr_prefix`: Set the prefix for OCR Screenshots. Does accept dynamic content like the current date or time when you use [Alfred's Placeholder Syntax](https://www.alfredapp.com/help/workflows/advanced/placeholders/#date-time). Note that while not easy to see, `ocr_prefix` can have multi-line values.
@@ -249,7 +250,6 @@ After installing the workflow, you need to configure the settings of this workfl
 This workflow is built in a very modular manner, so feel free to check out certain parts or suggest features via Pull Request. In particular, I would like to improve the speed of Alias Search and implement a Search for Tags, but I lack the coding knowledge to implement this in a sufficiently efficient way. [Feel free to suggest implementations for that](https://github.com/chrisgrieser/shimmering-obsidian/issues/10). 🙂
 
 ## Credits
-
 Most features of this plugin are only made possible by the invaluable [Advanced URI plugin](https://github.com/Vinzent03/obsidian-advanced-uri) by [@Vincent03](https://github.com/Vinzent03).
 
 This workflow has been created by @pseudometa ([Discord](https://discord.gg/veuWUTm)) aka [@pseudo_meta (Twitter)](https://twitter.com/pseudo_meta). If you find this workflow to be useful, feel free to donate [via PayPal](https://www.paypal.com/paypalme/ChrisGrieser). In my day job, I am a PhD student in sociology, studying the governance of the app economy. If you are interested in this subject, check out [my academic homepage](https://chris-grieser.de/) and get in touch.
