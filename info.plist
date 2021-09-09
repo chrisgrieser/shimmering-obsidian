@@ -5800,11 +5800,11 @@ Created by @pspeudometa (Discord) aka @chrisgrieser (GitHub).
 # Release Notes
 v. 1.8: **Download Plugin Repos / Theme css files**
 **new feature**
-- new feature for developers: use `fn + return` when using the `op` plugin/theme search to download the repository of the selected plugin into your download folder. (With themes, the theme's `css` file is downloaded instead.) You can need to specify your download folder in the workflow configuration (`download_folder_path`). (issue #14)
+- new feature for developers: use `fn + return` when using the `op` plugin/theme search to download the repository of the selected plugin into your download folder. (With themes, `.css` file is downloaded instead.) You can to specify your download folder in the workflow configuration (`download_folder_path`). (issue #14)
 
 **other improvements**
 - major speed improvement to `odual` and the speed of opening of files in new panes with `o` search
-- removed Obsidian's QuickSwitch as dependency. If you solely use the `o` search, you can now disable the QuickSwitch core plugin
+- **removed need for Obsidian's QuickSwitch as dependency**. If you solely use the `o` search, you can now disable the QuickSwitch core plugin
 
 v. 1.7.3
 **enhancement**
@@ -7416,7 +7416,7 @@ DOUBLE CLICK THIS to set hotkey</string>
 		<key>backup_destination</key>
 		<string>~/Google Drive/Dokumente/IT Backups/Obsidian Backups</string>
 		<key>download_folder_path</key>
-		<string>~/Google Drive/File Hub</string>
+		<string>~/Downloads</string>
 		<key>fontformat</key>
 		<string>woff2</string>
 		<key>max_number_of_bkps</key>
@@ -7440,12 +7440,11 @@ DOUBLE CLICK THIS to set hotkey</string>
 	</dict>
 	<key>variablesdontexport</key>
 	<array>
-		<string>use_quickadd</string>
+		<string>toggle_snippet</string>
 		<string>vault_path</string>
 		<string>backup_destination</string>
 		<string>template_note_path</string>
-		<string>download_folder_path</string>
-		<string>toggle_snippet</string>
+		<string>use_quickadd</string>
 	</array>
 	<key>version</key>
 	<string>1.8</string>
