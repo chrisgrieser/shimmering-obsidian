@@ -5798,6 +5798,9 @@ Created by @pspeudometa (Discord) aka @chrisgrieser (GitHub).
 ---
 
 # Release Notes
+v. 1.8.1
+- bugfix when downloading theme css files
+
 v. 1.8: **Download Plugin Repos / Theme css files**
 **new feature**
 - new feature for developers: use `fn + return` when using the `op` plugin/theme search to download the repository of the selected plugin into your download folder. (With themes, `.css` file is downloaded instead.) You can to specify your download folder in the workflow configuration (`download_folder_path`). (issue #14)
@@ -6390,7 +6393,7 @@ v. 1.1: Public Release
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>note</key>
-			<string>open in GitHub Repo</string>
+			<string>open GitHub Repo</string>
 			<key>xpos</key>
 			<integer>345</integer>
 			<key>ypos</key>
@@ -7420,7 +7423,7 @@ DOUBLE CLICK THIS to set hotkey</string>
 		<key>fontformat</key>
 		<string>woff2</string>
 		<key>max_number_of_bkps</key>
-		<string>15</string>
+		<string>20</string>
 		<key>ocr_languages</key>
 		<string>deu+eng</string>
 		<key>ocr_prefix</key>
@@ -7440,14 +7443,14 @@ DOUBLE CLICK THIS to set hotkey</string>
 	</dict>
 	<key>variablesdontexport</key>
 	<array>
-		<string>toggle_snippet</string>
+		<string>use_quickadd</string>
 		<string>vault_path</string>
 		<string>backup_destination</string>
 		<string>template_note_path</string>
-		<string>use_quickadd</string>
+		<string>toggle_snippet</string>
 	</array>
 	<key>version</key>
-	<string>1.8</string>
+	<string>1.8.1</string>
 	<key>webaddress</key>
 	<string>https://chris-grieser.de/</string>
 </dict>

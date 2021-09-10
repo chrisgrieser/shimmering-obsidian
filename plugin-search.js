@@ -67,7 +67,7 @@ plugin_array.forEach(plugin => {
  	//check whether already installed
  	let installed_icon = "";
  	if (installed_plugins.includes(id)){
- 		installed_icon = " ✅"
+ 		installed_icon = " ✅";
  	}
 
 	//create json for Alfred
@@ -95,7 +95,7 @@ theme_array.forEach(theme => {
  	let author = readJSON (theme, 1);
  	let repo = readJSON (theme, 2);
 
- 	let branch = "master"
+ 	let branch = "master";
  	let branch_info = readJSON (theme, 5);
  	if (branch_info != null){
 		branch = branch_info;
@@ -107,10 +107,10 @@ theme_array.forEach(theme => {
   		+ repo + "/" + branch + "/"
   		+ screenshotFile
   	;
-  	let cssURL = githubURL + "/obsidian.css";
+  	let cssURL = githubURL.replace(/https?:\/\/github.com\/(.*)/i,"https://raw.githubusercontent.com/$1/") + branch + "/obsidian.css";
 
 	//determine available modes
-	let modes = ""
+	let modes = "";
 	if (theme.split("\r")[4].includes("light")){
 		modes += "☀️ ";
 	}
@@ -121,7 +121,7 @@ theme_array.forEach(theme => {
 	//determine installation status
 	let installed_icon = "";
  	if (installed_themes.includes(theme_name)){
- 		installed_icon = " ✅"
+ 		installed_icon = " ✅";
  	}
  	if (current_theme == theme_name){
 		installed_icon = " ⭐️";

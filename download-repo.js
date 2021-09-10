@@ -11,7 +11,7 @@ function run (argv){
 
 	//in case it's a theme
 	if (githubURL.match(/\.css$/i) != null){
-		let theme_name = githubURL.replace(/https?:\/\/github.com\/.*?\/(.*?)\/.*/,"$1");
+		let theme_name = githubURL.replace(/https:\/\/raw\.githubusercontent\.com\/.*\/(.*)\/.*\/.*obsidian\.css/,"$1");
 		let dl_target = download_folder_path + "/" + theme_name + ".css";
 		app.doShellScript('curl -s "' + githubURL + '" > "' + dl_target + '"');
 		app.doShellScript('open -R "' + dl_target + '"'); //open folder
