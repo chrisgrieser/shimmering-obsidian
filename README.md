@@ -121,17 +121,11 @@ end tell
 **`osetting`: Open the Obsidian [settings].** 
 - Also works when Obsidian is not running (like most commands of this workflow do).
 
-**`otrash`: Open the [trash] folder of your vault.**
-- The hidden [.trash folder](https://help.obsidian.md/Advanced+topics/Deleting+files) located in your vault root will be opened in Finder. 
-- This work regardless of whether you have enabled displaying hidden files in macOS' Finder or not.
-- Note that you have to select `Move to Obsidian trash` in the Obsidian settings under the `Files & Links` before deleted files can be found here.
-
-**`o.obsidian`: Open the [.obsidian] folder of your vault.**
-- The hidden .obsidian folder located in your vault root will be opened in Finder. 
-- This work regardless of whether you have enabled displaying hidden files in macOS' Finder or not.
-
-**`oplugin`: Open the [plugin] folder of your vault.**
-- The plugin folder in the hidden `.obsidian` folder will be opened in Finder. 
+**Open Various Folders**
+- `o.obsidian`: The hidden .obsidian folder located in your vault root will be opened in Finder. 
+- `oapplicationsupport`: Open Obsidian's the Application Support folder.
+- `oplugin`: The plugin folder in the hidden `.obsidian` folder will be opened in Finder. 
+- `otrash`: Open the hidden [.trash folder](https://help.obsidian.md/Advanced+topics/Deleting+files) located in your vault root will be opened in Finder. (Note that you have to select `Move to Obsidian trash` in the Obsidian settings under the `Files & Links` before deleted files can be found here.)
 
 **`ovault`: Change the [vault].**
 - Conveniently switch the vault used by this workflow. (Currently, this workflow only works on one vault at the same time.)
