@@ -11,7 +11,7 @@ var plugin_array = app.doShellScript('curl -s "https://raw.githubusercontent.com
 var download_array = app.doShellScript('curl -s "https://raw.githubusercontent.com/obsidianmd/obsidian-releases/master/community-plugin-stats.json" | grep -E ": {|downloads" | tr "\n" "§" | sed -E "s/\{\§//g" | tr "§" "\n" | tr -d ' + "'" + '" ,' + "'" + ' | cut -d ":" -f 1,3').split("\r");
 
 // get community themes
-theme_array = app.doShellScript('curl -s "https://raw.githubusercontent.com/obsidianmd/obsidian-releases/master/community-css-themes.json" | grep ' + "'" + '"name":' +  "' -A 5").split("--\r");
+var theme_array = app.doShellScript('curl -s "https://raw.githubusercontent.com/obsidianmd/obsidian-releases/master/community-css-themes.json" | grep ' + "'" + '"name":' +  "' -A 5").split("--\r");
 
 // get installed plugins
 const vault_path = $.getenv("vault_path").replace(/^~/, homepath);
@@ -36,12 +36,17 @@ plugin_array.forEach(plugin => {
 	// to deal with escaped '"' in descriptions
 	plugin = plugin.replaceAll ('\\"',"'");
 
+	// Plugin Info
 	let id = readJSON (plugin, 0);
 	let plugin_name = readJSON (plugin, 1);
 
+	// Community Browser URI with Hotkey Helper
+	// https://github.com/pjeby/hotkey-helper#plugin-urls
+	let plugin_uri = "obsidian://goto-plugin?id=" + id;
+
 	// because sometimes author and description are switched in the JSON :(
 	let description, author;
-	if (plugin.match(/.*author.*?description/s) != null){
+	if (plugin.match(/.*author.*?description/si) != null){
 		description = readJSON (plugin, 3);
 		author = readJSON (plugin, 2);
 	} else {
@@ -66,18 +71,35 @@ plugin_array.forEach(plugin => {
 
  	//check whether already installed
  	let installed_icon = "";
+ 	let open_config_valid = false;
+ 	let config_subtitle = "⛔️ Configuration not available for uninstalled plugins.";
  	if (installed_plugins.includes(id)){
  		installed_icon = " ✅";
+ 		open_config_valid = true;
+ 		config_subtitle = "⌃: Open " + plugin_name + " Configuration";
  	}
+
+ 	// better matching for Alfred
+	let alfredMatcher =
+		plugin_name.replaceAll ("-"," ")
+		+ " " + author.replaceAll ("-"," ")
+		+ " " + id.replaceAll ("-"," ")
+	;
 
 	//create json for Alfred
 	jsonArray.push({
 		'title': plugin_name + installed_icon,
 		'subtitle': description + " — by " + author + downloads,
-		'arg': plugin_name,
+		'arg': plugin_uri,
+		'match': alfredMatcher,
 		'mods': {
 			'cmd':{
 				'arg': githubURL,
+			},
+			'ctrl':{
+				'valid': open_config_valid,
+				'arg': plugin_uri + "&show=config",
+				'subtitle': config_subtitle,
 			},
 			'alt':{
 				'arg': githubURL,
@@ -143,7 +165,11 @@ theme_array.forEach(theme => {
 			'fn': {
 				'arg': cssURL,
 				'subtitle': "fn: Download Theme CSS",
-			}
+			},
+			'ctrl':{
+				'valid': false,
+				'subtitle': "⛔️ Themes have no configuration.",
+			},
 		},
 	});
 });
