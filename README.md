@@ -16,13 +16,13 @@
 	- Enter Dual Mode (Edit + Preview)
 	- Create a new note
 	- Open various folders in `.obsidian`
-	- Open the Obsidian settings
+	- Open the Obsidian settings and Plugin Configurations
 - [CSS-related features](https://github.com/chrisgrieser/shimmering-obsidian#css-related-features)
 	- Toggle a CSS Snippet
-	- One-Click-Convert a font file to base64-CSS
-	- Open your current theme CSS file
 	- Search & Preview Community Themes
+	- Open your current theme CSS file
 	- Access your themes and snippets via Alfred
+	- base64-encode a font file with one click
 	- Quickly create a new CSS snippet from clipboard content
 	- Display a list of Obsidian's default variables
 - [Requirements & Installation](https://github.com/chrisgrieser/shimmering-obsidian#requirements--installation)
@@ -104,6 +104,7 @@ end tell
 - Press `return` to open the plugin in Obsidian's Community Plugin Browser. (Will open the GitHub Repository for themes instead, as there is not a way to trigger the Obsidians theme browser yet.)
 	- Use `cmd + return` to open the plugin's GitHub repository instead.
 	- Press `opt + return` to copy the GitHub repository URL to your clipboard.
+	- `ctrl + return` will open plugin configuration when the selected plugin is installed.
 	- _For developers:_ Use `fn + return` to clone the GitHub Repository into the folder specified in the workflow configuration (`download_folder_path`). When a theme is selected, only the `.css` file will be downloaded instead. 
 - Use `shift` or `cmd + Y` to open a Quick Look Preview of the theme. Press `shift` or `cmd + Y` again to close the preview.
 - Only plugins and themes officially included in the community plugins/themes are displayed — plugins/themes solely available via GitHub or still in review will not be shown.
@@ -152,7 +153,6 @@ end tell
 
 <img src="https://i.imgur.com/j1tyGQw.gif" alt="" width=60% height=60%>
 
-
 **`Triggered via Hotkey`: Convert a font file to CSS with base64.**
 - This will take the selected font file (e.g., `.tff` or `.woff`), convert them into base64 and write the base64-encoded font into a CSS file, which will be placed into your snippets folder.
 - Alternatively, you can use the [Universal Action](https://www.alfredapp.com/universal-actions/) feature form Alfred to trigger the conversion.
@@ -184,9 +184,9 @@ These requirements are only necessary for specific features of this workflow. If
 
 | Name                                                                   | Type                      | Function                                                                                     |
 | ---------------------------------------------------------------------- | ------------------------- | -------------------------------------------------------------------------------------------- |
-| [Hotkey-Helper](https://github.com/pjeby/hotkey-helper)                | Obsidian Community Plugin | used to open plugins directly in the  Community Plugin Browser                          |
+| [Hotkey-Helper](https://github.com/pjeby/hotkey-helper)                | Obsidian Community Plugin | used to open plugins and their configuration directly in Obsidian via `op`                        |
 | [Tesseract](https://tesseract-ocr.github.io/tessdoc/Installation.html) | Third-Party Software      | needed for **OCR screenshots**                                                                   |
-| [qlmarkdown](https://github.com/toland/qlmarkdown/)                    | Third-Party Software      | used to preview markdown notes with  `shift` or `cmd + Y` when searching with `o` | 
+| [qlmarkdown](https://github.com/toland/qlmarkdown/)                    | Third-Party Software      | used to preview markdown notes with  `shift` or `cmd + Y` when searching with `o`, `or`, or `os` | 
 
 If you have [Homebrew](https://brew.sh/), Tesseract and qlmarkdown can by installed via the following terminal commands:
 
