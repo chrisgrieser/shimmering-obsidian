@@ -1,0 +1,188 @@
+{"items": [
+{
+   "title": "debug help",
+   "args": "debug help",
+   "uid": "debug help",
+   "match": "debug help",
+},
+{
+   "title": "migration help",
+   "args": "migration help",
+   "uid": "migration help",
+   "match": "migration help notion roam evernote"
+},
+{
+   "title": "get insider build",
+   "args": "get insider build",
+   "uid": "get insider build",
+   "match": "get insider build"
+},
+{
+   "title": "spamming the server",
+   "args": "spamming the server",
+   "uid": "spamming the server",
+   "match": "spamming the server report"
+},
+{
+   "title": "wave",
+   "args": "wave",
+   "uid": "wave",
+   "match": "wave hello"
+},
+{
+   "title": "new to obsidian",
+   "args": "new to obsidian",
+   "uid": "new to obsidian",
+   "match": "new to obsidian roundup greet"
+},
+{
+   "title": "rabbit hole",
+   "args": "rabbit hole",
+   "uid": "rabbit hole",
+   "match": "rabbit hole"
+},
+{
+   "title": "format help",
+   "args": "format help",
+   "uid": "format help",
+   "match": "format help markdown"
+},
+{
+   "title": "graph view",
+   "args": "graph view",
+   "uid": "graph view",
+   "match": "graph view"
+},
+{
+   "title": "new here",
+   "args": "new here",
+   "uid": "new here",
+   "match": "new here roundup greet"
+},
+{
+   "title": "config help",
+   "args": "config help",
+   "uid": "config help",
+   "match": "config help"
+},
+{
+   "title": "xkcd automation",
+   "args": "xkcd automation",
+   "uid": "xkcd automation",
+   "match": "xkcd automation comic"
+},
+{
+   "title": "gtoa",
+   "args": "gtoa",
+   "uid": "gtoa",
+   "match": "gtoa insider"
+},
+{
+   "title": "alias help",
+   "args": "alias help",
+   "uid": "alias help",
+   "match": "alias help"
+},
+{
+   "title": "mobile help",
+   "args": "mobile help",
+   "uid": "mobile help",
+   "match": "mobile help"
+},
+{
+   "title": "early bird help",
+   "args": "early bird help",
+   "uid": "early bird help",
+   "match": "early bird help sync publish"
+},
+{
+   "title": "wysiwyg",
+   "args": "wysiwyg",
+   "uid": "wysiwyg",
+   "match": "wysiwyg"
+},
+{
+   "title": "template help",
+   "args": "template help",
+   "uid": "template help",
+   "match": "template help"
+},
+{
+   "title": "wall of toggles",
+   "args": "wall of toggles",
+   "uid": "wall of toggles",
+   "match": "wall of toggles"
+},
+{
+   "title": "get catalyst badge",
+   "args": "get catalyst badge",
+   "uid": "get catalyst badge",
+   "match": "get catalyst badge"
+},
+{
+   "title": "get roles",
+   "args": "get roles",
+   "uid": "get roles",
+   "match": "get roles"
+},
+{
+   "title": "sync help",
+   "args": "sync help",
+   "uid": "sync help",
+   "match": "sync help"
+},
+{
+   "title": "roadmap",
+   "args": "roadmap",
+   "uid": "roadmap",
+   "match": "roadmap"
+},
+{
+   "title": "linux help",
+   "args": "linux help",
+   "uid": "linux help",
+   "match": "linux help"
+},
+{
+   "title": "publish help",
+   "args": "publish help",
+   "uid": "publish help",
+   "match": "publish help"
+},
+{
+   "title": "check console",
+   "args": "check console",
+   "uid": "check console",
+   "match": "check console"
+},
+{
+   "title": "deathau",
+   "args": "deathau",
+   "uid": "deathau",
+   "match": "deathau"
+},
+{
+   "title": "getting started",
+   "args": "getting started",
+   "uid": "getting started",
+   "match": "getting started"
+},
+{
+   "title": "carl",
+   "args": "carl",
+   "uid": "carl",
+   "match": "carl"
+},
+{
+   "title": "css help",
+   "args": "css help",
+   "uid": "css help",
+   "match": "css help",
+},
+{
+   "title": "discord tricks",
+   "args": "discord tricks",
+   "uid": "discord tricks",
+   "match": "discord tricks"
+}
+]}
