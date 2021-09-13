@@ -17,6 +17,7 @@
 	- Create a new note
 	- Open various folders in `.obsidian`
 	- Open the Obsidian settings and Plugin Configurations
+	- Search Carl Auto-Reponses
 - [CSS-related features](https://github.com/chrisgrieser/shimmering-obsidian#css-related-features)
 	- Toggle a CSS Snippet
 	- Search & Preview Community Themes
@@ -130,6 +131,9 @@ end tell
 
 **`ovault`: Change the [vault].**
 - Conveniently switch the vault used by this workflow. (Currently, this workflow only works on one vault at the same time.)
+
+**`ocarl`: Search Carl's Autoreponses.**
+- Search and paste autoreponses from the beloved Discord Bot of the [Obsidian Discord Server](https://discord.gg/veuWUTm) 🐢
 
 
 ### CSS-related Features
