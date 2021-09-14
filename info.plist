@@ -5555,25 +5555,6 @@ open -R "$vault_path"/.obsidian/themes/"$theme".css</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>externaltriggerid</key>
-				<string>trigger-dual-mode</string>
-				<key>passinputasargument</key>
-				<true/>
-				<key>passvariables</key>
-				<true/>
-				<key>workflowbundleid</key>
-				<string>self</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.callexternaltrigger</string>
-			<key>uid</key>
-			<string>89B47E8A-C9EE-4792-80D7-CA0D46A6A2C9</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>autopaste</key>
 				<true/>
 				<key>clipboardtext</key>
@@ -5589,49 +5570,6 @@ open -R "$vault_path"/.obsidian/themes/"$theme".css</string>
 			<string>8960BAF4-D71A-4DC1-8382-E3864941AAB6</string>
 			<key>version</key>
 			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>seconds</key>
-				<string>.5</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.delay</string>
-			<key>uid</key>
-			<string>E6FA0443-53FA-4967-A3EE-9AE429FFEE5F</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>conditions</key>
-				<array>
-					<dict>
-						<key>inputstring</key>
-						<string>{var:dual_after}</string>
-						<key>matchcasesensitive</key>
-						<false/>
-						<key>matchmode</key>
-						<integer>0</integer>
-						<key>matchstring</key>
-						<string>true</string>
-						<key>outputlabel</key>
-						<string>open in dual</string>
-						<key>uid</key>
-						<string>B8B85F6F-BB90-433B-8CFA-4A91259E4BED</string>
-					</dict>
-				</array>
-				<key>elselabel</key>
-				<string>--</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.conditional</string>
-			<key>uid</key>
-			<string>3F7A599D-6A9E-4D70-B3E6-88217EA3D56C</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -5700,6 +5638,131 @@ end if</string>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
 			<string>9E9A035A-DAD4-4251-8142-D4F6C963C982</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>externaltriggerid</key>
+				<string>trigger-dual-mode</string>
+				<key>passinputasargument</key>
+				<true/>
+				<key>passvariables</key>
+				<true/>
+				<key>workflowbundleid</key>
+				<string>self</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>89B47E8A-C9EE-4792-80D7-CA0D46A6A2C9</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string>path="{query}";
+
+urlscheme = "obsidian://open?path=" + encodeURIComponent(path);
+
+app = Application.currentApplication();
+app.includeStandardAdditions = true;
+app.openLocation(urlscheme);</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>7</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>76EF97C3-981D-466E-BA90-47D34129BE96</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>triggerid</key>
+				<string>open-in-obsidian</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.external</string>
+			<key>uid</key>
+			<string>503B3F91-98A0-4357-92F2-A88BD6EDB404</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:dual_after}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>true</string>
+						<key>outputlabel</key>
+						<string>open in dual</string>
+						<key>uid</key>
+						<string>B8B85F6F-BB90-433B-8CFA-4A91259E4BED</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>--</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>3F7A599D-6A9E-4D70-B3E6-88217EA3D56C</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>seconds</key>
+				<string>.5</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.delay</string>
+			<key>uid</key>
+			<string>E6FA0443-53FA-4967-A3EE-9AE429FFEE5F</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>matchmode</key>
+				<integer>1</integer>
+				<key>matchstring</key>
+				<string>\n$</string>
+				<key>regexcaseinsensitive</key>
+				<false/>
+				<key>regexmultiline</key>
+				<false/>
+				<key>replacestring</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.replace</string>
+			<key>uid</key>
+			<string>3F3B3479-EB18-4BED-8549-C38FCF9B1EE5</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -5797,69 +5860,6 @@ fi</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>script</key>
-				<string>path="{query}";
-
-urlscheme = "obsidian://open?path=" + encodeURIComponent(path);
-
-app = Application.currentApplication();
-app.includeStandardAdditions = true;
-app.openLocation(urlscheme);</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>7</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>76EF97C3-981D-466E-BA90-47D34129BE96</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>triggerid</key>
-				<string>open-in-obsidian</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.external</string>
-			<key>uid</key>
-			<string>503B3F91-98A0-4357-92F2-A88BD6EDB404</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>matchmode</key>
-				<integer>1</integer>
-				<key>matchstring</key>
-				<string>\n$</string>
-				<key>regexcaseinsensitive</key>
-				<false/>
-				<key>regexmultiline</key>
-				<false/>
-				<key>replacestring</key>
-				<string></string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.replace</string>
-			<key>uid</key>
-			<string>3F3B3479-EB18-4BED-8549-C38FCF9B1EE5</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>triggerid</key>
 				<string>update-obsidian-workflow</string>
 			</dict>
@@ -5879,6 +5879,9 @@ Created by @pspeudometa (Discord) aka @chrisgrieser (GitHub).
 ---
 
 # Release Notes
+v. 1.11.1
+- bugfix for carl 🐢
+
 v. 1.11
 - new keyword `ocarl`: displays auto-reponses of our beloved Discord bot 🐢
 
@@ -6344,9 +6347,9 @@ v. 1.1: Public Release
 			<key>colorindex</key>
 			<integer>6</integer>
 			<key>xpos</key>
-			<integer>325</integer>
+			<integer>320</integer>
 			<key>ypos</key>
-			<integer>5790</integer>
+			<integer>5885</integer>
 		</dict>
 		<key>3F44687E-16F7-4830-BC8B-D16B1098C474</key>
 		<dict>
@@ -6364,9 +6367,9 @@ v. 1.1: Public Release
 			<key>colorindex</key>
 			<integer>6</integer>
 			<key>xpos</key>
-			<integer>730</integer>
+			<integer>745</integer>
 			<key>ypos</key>
-			<integer>5660</integer>
+			<integer>5880</integer>
 		</dict>
 		<key>3F97414B-D2C1-42AC-A7AF-0683EA133B48</key>
 		<dict>
@@ -6502,9 +6505,9 @@ v. 1.1: Public Release
 			<key>note</key>
 			<string>workflow-internal function</string>
 			<key>xpos</key>
-			<integer>20</integer>
+			<integer>15</integer>
 			<key>ypos</key>
-			<integer>5760</integer>
+			<integer>5855</integer>
 		</dict>
 		<key>506E519A-3B07-43B8-91CF-46161EB47E5E</key>
 		<dict>
@@ -6746,9 +6749,9 @@ should have the same keyword as quicksearch</string>
 			<key>note</key>
 			<string>Open in Vault</string>
 			<key>xpos</key>
-			<integer>385</integer>
+			<integer>380</integer>
 			<key>ypos</key>
-			<integer>5760</integer>
+			<integer>5855</integer>
 		</dict>
 		<key>7954C22E-D0FB-4539-87D1-D62DF328DBB2</key>
 		<dict>
@@ -6847,9 +6850,9 @@ should have the same keyword as quicksearch</string>
 			<key>colorindex</key>
 			<integer>6</integer>
 			<key>xpos</key>
-			<integer>905</integer>
+			<integer>930</integer>
 			<key>ypos</key>
-			<integer>5630</integer>
+			<integer>5855</integer>
 		</dict>
 		<key>8BC09525-BB68-46E3-A7E2-C0E5C489FF60</key>
 		<dict>
@@ -6874,7 +6877,7 @@ should have the same keyword as quicksearch</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>15</integer>
+			<integer>20</integer>
 			<key>ypos</key>
 			<integer>5630</integer>
 		</dict>
@@ -6997,9 +7000,9 @@ should have the same keyword as quicksearch</string>
 			<key>note</key>
 			<string>reveal in Obsidian's File Explorer</string>
 			<key>xpos</key>
-			<integer>540</integer>
+			<integer>535</integer>
 			<key>ypos</key>
-			<integer>5760</integer>
+			<integer>5855</integer>
 		</dict>
 		<key>9FF8D4E6-7A5E-4736-9976-17C280BC574A</key>
 		<dict>
@@ -7073,9 +7076,9 @@ should have the same keyword as quicksearch</string>
 			<key>note</key>
 			<string>OneUpdater (automatic update function)</string>
 			<key>xpos</key>
-			<integer>720</integer>
+			<integer>860</integer>
 			<key>ypos</key>
-			<integer>5760</integer>
+			<integer>6005</integer>
 		</dict>
 		<key>B156D204-E93B-4457-AD5B-27D5BBBAE0EC</key>
 		<dict>
@@ -7282,11 +7285,11 @@ DOUBLE CLICK THIS to set hotkey</string>
 		<key>D2E44E01-0D14-426A-BFEC-4A5AA83BB375</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>8</integer>
+			<integer>9</integer>
 			<key>xpos</key>
 			<integer>230</integer>
 			<key>ypos</key>
-			<integer>4155</integer>
+			<integer>4170</integer>
 		</dict>
 		<key>D8F01D44-B570-4956-B4AE-B3AE05B3D0EE</key>
 		<dict>
@@ -7438,9 +7441,9 @@ DOUBLE CLICK THIS to set hotkey</string>
 			<key>colorindex</key>
 			<integer>6</integer>
 			<key>xpos</key>
-			<integer>840</integer>
+			<integer>865</integer>
 			<key>ypos</key>
-			<integer>5660</integer>
+			<integer>5885</integer>
 		</dict>
 		<key>E7ADA43C-52CF-46FD-AC9E-79616731DDA9</key>
 		<dict>
@@ -7458,9 +7461,9 @@ DOUBLE CLICK THIS to set hotkey</string>
 			<key>note</key>
 			<string>workflow-internal function</string>
 			<key>xpos</key>
-			<integer>540</integer>
+			<integer>535</integer>
 			<key>ypos</key>
-			<integer>5910</integer>
+			<integer>6005</integer>
 		</dict>
 		<key>E844180D-E691-40D1-9EB1-6A06F69C73B9</key>
 		<dict>
@@ -7478,9 +7481,9 @@ DOUBLE CLICK THIS to set hotkey</string>
 			<key>note</key>
 			<string>check whether Obsidian is running</string>
 			<key>xpos</key>
-			<integer>190</integer>
+			<integer>185</integer>
 			<key>ypos</key>
-			<integer>5760</integer>
+			<integer>5855</integer>
 		</dict>
 		<key>ED398754-3DDB-495C-8B1F-9AEC976C96D1</key>
 		<dict>
@@ -7566,14 +7569,14 @@ DOUBLE CLICK THIS to set hotkey</string>
 	</dict>
 	<key>variablesdontexport</key>
 	<array>
+		<string>toggle_snippet</string>
 		<string>vault_path</string>
 		<string>backup_destination</string>
 		<string>template_note_path</string>
 		<string>use_quickadd</string>
-		<string>toggle_snippet</string>
 	</array>
 	<key>version</key>
-	<string>1.11</string>
+	<string>1.11.1</string>
 	<key>webaddress</key>
 	<string>https://chris-grieser.de/</string>
 </dict>

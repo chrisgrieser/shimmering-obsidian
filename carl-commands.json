@@ -1,187 +1,187 @@
 {"items": [
 {
    "title": "debug help",
-   "args": "debug help",
+   "arg": "debug help",
    "uid": "debug help",
    "match": "debug help",
 },
 {
    "title": "migration help",
-   "args": "migration help",
+   "arg": "migration help",
    "uid": "migration help",
    "match": "migration help notion roam evernote"
 },
 {
    "title": "get insider build",
-   "args": "get insider build",
+   "arg": "get insider build",
    "uid": "get insider build",
    "match": "get insider build"
 },
 {
    "title": "spamming the server",
-   "args": "spamming the server",
+   "arg": "spamming the server",
    "uid": "spamming the server",
    "match": "spamming the server report"
 },
 {
    "title": "wave",
-   "args": "wave",
+   "arg": "wave",
    "uid": "wave",
    "match": "wave hello"
 },
 {
    "title": "new to obsidian",
-   "args": "new to obsidian",
+   "arg": "new to obsidian",
    "uid": "new to obsidian",
    "match": "new to obsidian roundup greet"
 },
 {
    "title": "rabbit hole",
-   "args": "rabbit hole",
+   "arg": "rabbit hole",
    "uid": "rabbit hole",
    "match": "rabbit hole"
 },
 {
    "title": "format help",
-   "args": "format help",
+   "arg": "format help",
    "uid": "format help",
    "match": "format help markdown"
 },
 {
    "title": "graph view",
-   "args": "graph view",
+   "arg": "graph view",
    "uid": "graph view",
    "match": "graph view"
 },
 {
    "title": "new here",
-   "args": "new here",
+   "arg": "new here",
    "uid": "new here",
    "match": "new here roundup greet"
 },
 {
    "title": "config help",
-   "args": "config help",
+   "arg": "config help",
    "uid": "config help",
    "match": "config help"
 },
 {
    "title": "xkcd automation",
-   "args": "xkcd automation",
+   "arg": "xkcd automation",
    "uid": "xkcd automation",
    "match": "xkcd automation comic"
 },
 {
    "title": "gtoa",
-   "args": "gtoa",
+   "arg": "gtoa",
    "uid": "gtoa",
    "match": "gtoa insider"
 },
 {
    "title": "alias help",
-   "args": "alias help",
+   "arg": "alias help",
    "uid": "alias help",
    "match": "alias help"
 },
 {
    "title": "mobile help",
-   "args": "mobile help",
+   "arg": "mobile help",
    "uid": "mobile help",
    "match": "mobile help"
 },
 {
    "title": "early bird help",
-   "args": "early bird help",
+   "arg": "early bird help",
    "uid": "early bird help",
    "match": "early bird help sync publish"
 },
 {
    "title": "wysiwyg",
-   "args": "wysiwyg",
+   "arg": "wysiwyg",
    "uid": "wysiwyg",
    "match": "wysiwyg"
 },
 {
    "title": "template help",
-   "args": "template help",
+   "arg": "template help",
    "uid": "template help",
    "match": "template help"
 },
 {
    "title": "wall of toggles",
-   "args": "wall of toggles",
+   "arg": "wall of toggles",
    "uid": "wall of toggles",
    "match": "wall of toggles"
 },
 {
    "title": "get catalyst badge",
-   "args": "get catalyst badge",
+   "arg": "get catalyst badge",
    "uid": "get catalyst badge",
    "match": "get catalyst badge"
 },
 {
    "title": "get roles",
-   "args": "get roles",
+   "arg": "get roles",
    "uid": "get roles",
    "match": "get roles"
 },
 {
    "title": "sync help",
-   "args": "sync help",
+   "arg": "sync help",
    "uid": "sync help",
    "match": "sync help"
 },
 {
    "title": "roadmap",
-   "args": "roadmap",
+   "arg": "roadmap",
    "uid": "roadmap",
    "match": "roadmap"
 },
 {
    "title": "linux help",
-   "args": "linux help",
+   "arg": "linux help",
    "uid": "linux help",
    "match": "linux help"
 },
 {
    "title": "publish help",
-   "args": "publish help",
+   "arg": "publish help",
    "uid": "publish help",
    "match": "publish help"
 },
 {
    "title": "check console",
-   "args": "check console",
+   "arg": "check console",
    "uid": "check console",
    "match": "check console"
 },
 {
    "title": "deathau",
-   "args": "deathau",
+   "arg": "deathau",
    "uid": "deathau",
    "match": "deathau"
 },
 {
    "title": "getting started",
-   "args": "getting started",
+   "arg": "getting started",
    "uid": "getting started",
    "match": "getting started"
 },
 {
    "title": "carl",
-   "args": "carl",
+   "arg": "carl",
    "uid": "carl",
    "match": "carl"
 },
 {
    "title": "css help",
-   "args": "css help",
+   "arg": "css help",
    "uid": "css help",
    "match": "css help",
 },
 {
    "title": "discord tricks",
-   "args": "discord tricks",
+   "arg": "discord tricks",
    "uid": "discord tricks",
    "match": "discord tricks"
 }
