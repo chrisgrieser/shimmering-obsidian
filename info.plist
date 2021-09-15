@@ -173,6 +173,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>1EAE5E2F-C10A-4DB6-8DDB-32DE780608A2</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>25FCBA58-5263-4F11-B222-4978632AF5B9</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>1FE579F5-99C2-4C35-A110-CB55F903E327</key>
 		<array>
 			<dict>
@@ -358,6 +371,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>902431F8-34D6-476A-8917-EFF85864F369</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>3702534A-079B-43C2-B8DD-53683343E640</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>57CACB5D-8848-4706-9B61-3C0AFDA26C17</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -560,6 +586,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>47CB6610-109D-41E0-BBFF-BF83FB0FC8CE</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>25FCBA58-5263-4F11-B222-4978632AF5B9</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>4B4D3ECE-1162-41DA-ACCC-16B0AC6FA3D1</key>
 		<array>
 			<dict>
@@ -706,6 +745,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>902431F8-34D6-476A-8917-EFF85864F369</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>577E0F2F-C819-41CF-87BE-A16A976F6E68</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>1EAE5E2F-C10A-4DB6-8DDB-32DE780608A2</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1178,6 +1230,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>57CACB5D-8848-4706-9B61-3C0AFDA26C17</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>8960BAF4-D71A-4DC1-8382-E3864941AAB6</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>25FCBA58-5263-4F11-B222-4978632AF5B9</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -2134,11 +2199,9 @@ tesseract "$temp_image" stdout -l $ocr_languages 2&gt;&amp;1</string>
 				<key>focusedappvariablename</key>
 				<string></string>
 				<key>hotkey</key>
-				<integer>18</integer>
+				<integer>0</integer>
 				<key>hotmod</key>
-				<integer>1179648</integer>
-				<key>hotstring</key>
-				<string>1</string>
+				<integer>0</integer>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -2281,11 +2344,9 @@ tesseract "$temp_image" stdout -l $ocr_languages 2&gt;&amp;1</string>
 				<key>focusedappvariablename</key>
 				<string></string>
 				<key>hotkey</key>
-				<integer>32</integer>
+				<integer>0</integer>
 				<key>hotmod</key>
-				<integer>1966080</integer>
-				<key>hotstring</key>
-				<string>U</string>
+				<integer>0</integer>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -2371,8 +2432,6 @@ echo "" &gt; $snippet</string>
 				<integer>0</integer>
 				<key>hotmod</key>
 				<integer>0</integer>
-				<key>hotstring</key>
-				<string></string>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -5318,25 +5377,6 @@ open -R "$vault_path"/.obsidian/themes/"$theme".css</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>externaltriggerid</key>
-				<string>update-obsidian-workflow</string>
-				<key>passinputasargument</key>
-				<true/>
-				<key>passvariables</key>
-				<true/>
-				<key>workflowbundleid</key>
-				<string>self</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.callexternaltrigger</string>
-			<key>uid</key>
-			<string>25FCBA58-5263-4F11-B222-4978632AF5B9</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>keyword</key>
@@ -5392,6 +5432,25 @@ open -R "$vault_path"/.obsidian/themes/"$theme".css</string>
 			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
 			<string>17DD1F15-7CF7-4BBB-8BC7-A2DF795C9248</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>externaltriggerid</key>
+				<string>update-obsidian-workflow</string>
+				<key>passinputasargument</key>
+				<true/>
+				<key>passvariables</key>
+				<true/>
+				<key>workflowbundleid</key>
+				<string>self</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>25FCBA58-5263-4F11-B222-4978632AF5B9</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -5539,7 +5598,7 @@ open -R "$vault_path"/.obsidian/themes/"$theme".css</string>
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
-				<string></string>
+				<string>Carl Auto-Reponses</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -5570,6 +5629,74 @@ open -R "$vault_path"/.obsidian/themes/"$theme".css</string>
 			<string>8960BAF4-D71A-4DC1-8382-E3864941AAB6</string>
 			<key>version</key>
 			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<true/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>ow</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>loading...</string>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>open-workspace.js</string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Open Obsidian Workspace</string>
+				<key>type</key>
+				<integer>8</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>577E0F2F-C819-41CF-87BE-A16A976F6E68</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string></string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>1EAE5E2F-C10A-4DB6-8DDB-32DE780608A2</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -5879,6 +6006,9 @@ Created by @pspeudometa (Discord) aka @chrisgrieser (GitHub).
 ---
 
 # Release Notes
+v. 1.12
+- new command `ow`: get a list of your workspaces and opens them directly (requires Workspoace Core-Plugin, obviously)
+
 v. 1.11.1
 - bugfix for carl 🐢
 
@@ -6145,6 +6275,15 @@ v. 1.1: Public Release
 			<key>ypos</key>
 			<integer>750</integer>
 		</dict>
+		<key>1EAE5E2F-C10A-4DB6-8DDB-32DE780608A2</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>9</integer>
+			<key>xpos</key>
+			<integer>190</integer>
+			<key>ypos</key>
+			<integer>5830</integer>
+		</dict>
 		<key>1FE579F5-99C2-4C35-A110-CB55F903E327</key>
 		<dict>
 			<key>colorindex</key>
@@ -6181,9 +6320,9 @@ v. 1.1: Public Release
 			<key>colorindex</key>
 			<integer>6</integer>
 			<key>xpos</key>
-			<integer>515</integer>
+			<integer>610</integer>
 			<key>ypos</key>
-			<integer>4955</integer>
+			<integer>5170</integer>
 		</dict>
 		<key>260919C7-A9E6-4442-AEF6-E62D271910BF</key>
 		<dict>
@@ -6347,9 +6486,9 @@ v. 1.1: Public Release
 			<key>colorindex</key>
 			<integer>6</integer>
 			<key>xpos</key>
-			<integer>320</integer>
+			<integer>325</integer>
 			<key>ypos</key>
-			<integer>5885</integer>
+			<integer>6240</integer>
 		</dict>
 		<key>3F44687E-16F7-4830-BC8B-D16B1098C474</key>
 		<dict>
@@ -6367,9 +6506,9 @@ v. 1.1: Public Release
 			<key>colorindex</key>
 			<integer>6</integer>
 			<key>xpos</key>
-			<integer>745</integer>
+			<integer>750</integer>
 			<key>ypos</key>
-			<integer>5880</integer>
+			<integer>6235</integer>
 		</dict>
 		<key>3F97414B-D2C1-42AC-A7AF-0683EA133B48</key>
 		<dict>
@@ -6505,9 +6644,9 @@ v. 1.1: Public Release
 			<key>note</key>
 			<string>workflow-internal function</string>
 			<key>xpos</key>
-			<integer>15</integer>
+			<integer>25</integer>
 			<key>ypos</key>
-			<integer>5855</integer>
+			<integer>6210</integer>
 		</dict>
 		<key>506E519A-3B07-43B8-91CF-46161EB47E5E</key>
 		<dict>
@@ -6545,6 +6684,15 @@ v. 1.1: Public Release
 			<key>ypos</key>
 			<integer>3840</integer>
 		</dict>
+		<key>577E0F2F-C819-41CF-87BE-A16A976F6E68</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>9</integer>
+			<key>xpos</key>
+			<integer>20</integer>
+			<key>ypos</key>
+			<integer>5830</integer>
+		</dict>
 		<key>57CACB5D-8848-4706-9B61-3C0AFDA26C17</key>
 		<dict>
 			<key>colorindex</key>
@@ -6559,7 +6707,7 @@ v. 1.1: Public Release
 			<key>colorindex</key>
 			<integer>6</integer>
 			<key>xpos</key>
-			<integer>630</integer>
+			<integer>635</integer>
 			<key>ypos</key>
 			<integer>4235</integer>
 		</dict>
@@ -6749,9 +6897,9 @@ should have the same keyword as quicksearch</string>
 			<key>note</key>
 			<string>Open in Vault</string>
 			<key>xpos</key>
-			<integer>380</integer>
+			<integer>385</integer>
 			<key>ypos</key>
-			<integer>5855</integer>
+			<integer>6210</integer>
 		</dict>
 		<key>7954C22E-D0FB-4539-87D1-D62DF328DBB2</key>
 		<dict>
@@ -6843,16 +6991,16 @@ should have the same keyword as quicksearch</string>
 			<key>xpos</key>
 			<integer>190</integer>
 			<key>ypos</key>
-			<integer>5630</integer>
+			<integer>5705</integer>
 		</dict>
 		<key>89B47E8A-C9EE-4792-80D7-CA0D46A6A2C9</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>6</integer>
 			<key>xpos</key>
-			<integer>930</integer>
+			<integer>935</integer>
 			<key>ypos</key>
-			<integer>5855</integer>
+			<integer>6210</integer>
 		</dict>
 		<key>8BC09525-BB68-46E3-A7E2-C0E5C489FF60</key>
 		<dict>
@@ -6879,7 +7027,7 @@ should have the same keyword as quicksearch</string>
 			<key>xpos</key>
 			<integer>20</integer>
 			<key>ypos</key>
-			<integer>5630</integer>
+			<integer>5705</integer>
 		</dict>
 		<key>8CA441F0-9476-4FEF-8DC9-E8D8C19EC431</key>
 		<dict>
@@ -7000,9 +7148,9 @@ should have the same keyword as quicksearch</string>
 			<key>note</key>
 			<string>reveal in Obsidian's File Explorer</string>
 			<key>xpos</key>
-			<integer>535</integer>
+			<integer>540</integer>
 			<key>ypos</key>
-			<integer>5855</integer>
+			<integer>6210</integer>
 		</dict>
 		<key>9FF8D4E6-7A5E-4736-9976-17C280BC574A</key>
 		<dict>
@@ -7076,9 +7224,9 @@ should have the same keyword as quicksearch</string>
 			<key>note</key>
 			<string>OneUpdater (automatic update function)</string>
 			<key>xpos</key>
-			<integer>860</integer>
+			<integer>865</integer>
 			<key>ypos</key>
-			<integer>6005</integer>
+			<integer>6360</integer>
 		</dict>
 		<key>B156D204-E93B-4457-AD5B-27D5BBBAE0EC</key>
 		<dict>
@@ -7441,9 +7589,9 @@ DOUBLE CLICK THIS to set hotkey</string>
 			<key>colorindex</key>
 			<integer>6</integer>
 			<key>xpos</key>
-			<integer>865</integer>
+			<integer>870</integer>
 			<key>ypos</key>
-			<integer>5885</integer>
+			<integer>6240</integer>
 		</dict>
 		<key>E7ADA43C-52CF-46FD-AC9E-79616731DDA9</key>
 		<dict>
@@ -7461,9 +7609,9 @@ DOUBLE CLICK THIS to set hotkey</string>
 			<key>note</key>
 			<string>workflow-internal function</string>
 			<key>xpos</key>
-			<integer>535</integer>
+			<integer>540</integer>
 			<key>ypos</key>
-			<integer>6005</integer>
+			<integer>6360</integer>
 		</dict>
 		<key>E844180D-E691-40D1-9EB1-6A06F69C73B9</key>
 		<dict>
@@ -7481,9 +7629,9 @@ DOUBLE CLICK THIS to set hotkey</string>
 			<key>note</key>
 			<string>check whether Obsidian is running</string>
 			<key>xpos</key>
-			<integer>185</integer>
+			<integer>190</integer>
 			<key>ypos</key>
-			<integer>5855</integer>
+			<integer>6210</integer>
 		</dict>
 		<key>ED398754-3DDB-495C-8B1F-9AEC976C96D1</key>
 		<dict>
@@ -7569,14 +7717,14 @@ DOUBLE CLICK THIS to set hotkey</string>
 	</dict>
 	<key>variablesdontexport</key>
 	<array>
-		<string>toggle_snippet</string>
 		<string>vault_path</string>
 		<string>backup_destination</string>
 		<string>template_note_path</string>
 		<string>use_quickadd</string>
+		<string>toggle_snippet</string>
 	</array>
 	<key>version</key>
-	<string>1.11.1</string>
+	<string>1.12</string>
 	<key>webaddress</key>
 	<string>https://chris-grieser.de/</string>
 </dict>
