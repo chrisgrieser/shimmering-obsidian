@@ -9,6 +9,7 @@
 	- Browse folders in your Vault in Alfred
 	- Search Starred Files/Searches
 	- Open Recent Files
+	- Open Workspaces
 	- OCR Screenshots
 	- Search the Obsidian Documentation
 	- Search Community Plugins/Themes and directly open them in Obsidian or GitHub
@@ -61,6 +62,9 @@ Most features are triggered with dedicated Alfred keywords, as with any other Al
 **`or`: Open [r]ecent Files** 
 - Displays recent files that can be actioned on exactly the same way as the search with `o`, i.e. all the modifiers (`cmd/ctrl/opt/fn/shift + return`) apply the same way.
 - Up to 10 files are displayed
+
+**`ow`: Open a [w]orkspace** 
+- Displays a list of your workspaces. Select one to open the workspace.
 
 **`Triggered via Hotkey`: Take an OCR Screenshot.** 
 - Similar to the default Mac Hotkey `cmd + shift + 4`, you will be able to select part of your screen for a screenshot. However, instead of saving a screenshot, a new note will be created which contains the OCR-content of the selection.
