@@ -11,6 +11,7 @@
 	- Open Recent Files
 	- Open Workspaces
 	- OCR Screenshots
+	- Paste URL into Selection
 	- Search the Obsidian Documentation
 	- Search Community Plugins/Themes and directly open them in Obsidian or GitHub
 	- Create Backups of your Vault
@@ -66,6 +67,8 @@ Most features are triggered with dedicated Alfred keywords, as with any other Al
 **`ow`: Open a [w]orkspace** 
 - Displays a list of your workspaces. Select one to open the workspace.
 
+<img src="https://user-images.githubusercontent.com/73286100/133615940-a56731e5-6b60-4d28-b877-7ea48d10225e.gif" alt="workspace" width=60%>
+
 **`Triggered via Hotkey`: Take an OCR Screenshot.** 
 - Similar to the default Mac Hotkey `cmd + shift + 4`, you will be able to select part of your screen for a screenshot. However, instead of saving a screenshot, a new note will be created which contains the OCR-content of the selection.
 - To stay in line with the other macOS keyboard shortcuts for taking screenshots, I would suggest setting this hotkey to something like `cmd + shift + 2`.
@@ -76,6 +79,11 @@ Most features are triggered with dedicated Alfred keywords, as with any other Al
 - For best results, you should set the proper languages to be recognized with the workflow setting `ocr_languages`.
 
 <img src="https://i.imgur.com/xwdl1N5.gif" alt="OCR Screenshot" width=60% height=60%>
+
+**`Triggered via Hotkey`: Paste URL into selection.** 
+- Basically replicates the functionality of the [plugin of the same name](https://github.com/denolehov/obsidian-url-into-selection), that  unfortunately does not work anymore. This means when you have text selected, and an URL in your clipboard, it would automatically get inserted when pressing the hotkey. 
+- Suggested keyboard shortcut is `cmd + k` (after having deactivated the respective hotkey in Obsidian).
+ <img src="https://user-images.githubusercontent.com/73286100/133614452-ef3147bf-7cd1-4dad-9b76-880f93fdcdf8.gif" alt="paste url into selection" width=50%>
 
 **`oh`: Get [h]elp by searching the official [Obsidian documentation](https://help.obsidian.md/Start+here).** 
 - This command mimics the search behavior on the official documentation site, meaning that it also searches for headings inside individual documentation pages. Press `return` to open in your default browser.
