@@ -468,18 +468,7 @@
 			</dict>
 		</array>
 		<key>3F44687E-16F7-4830-BC8B-D16B1098C474</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>64249F79-8A34-461C-A40E-9BC13FD3D4B4</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
+		<array/>
 		<key>3F7A599D-6A9E-4D70-B3E6-88217EA3D56C</key>
 		<array>
 			<dict>
@@ -526,6 +515,31 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>76BE7619-FDB9-4324-81C7-6570B534A123</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>438AFA68-1629-472A-BAD5-0A1F3DA03359</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>6DC02650-EDEB-4C4B-8C9F-E0C7044C5863</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>A7DD96C9-1AEB-46B8-BF3C-B856105C5FFF</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>ADD571B0-8240-4430-B70C-07E041CA0063</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -766,6 +780,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>5B3AC1A9-7057-4FF6-B3C7-2F65A76E2826</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>438AFA68-1629-472A-BAD5-0A1F3DA03359</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>5E2BFA74-9185-4C41-82B0-274EB3C261BD</key>
 		<array>
 			<dict>
@@ -953,6 +980,19 @@
 				<integer>524288</integer>
 				<key>modifiersubtext</key>
 				<string>⌥: Copy GitHub Link</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>6DC02650-EDEB-4C4B-8C9F-E0C7044C5863</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>F47F7DE8-D29F-4CDE-85B4-84B7C8DB6AA6</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -1544,6 +1584,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>ADD571B0-8240-4430-B70C-07E041CA0063</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>F47F7DE8-D29F-4CDE-85B4-84B7C8DB6AA6</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>B156D204-E93B-4457-AD5B-27D5BBBAE0EC</key>
 		<array>
 			<dict>
@@ -1585,6 +1638,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>25FCBA58-5263-4F11-B222-4978632AF5B9</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>BA61A0A6-C130-430F-9729-6F6132F22C08</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>5B3AC1A9-7057-4FF6-B3C7-2F65A76E2826</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -2070,6 +2136,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>F47F7DE8-D29F-4CDE-85B4-84B7C8DB6AA6</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>04211D9D-11BA-4717-82D2-13B2A608E8F5</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>F6614DF6-BDC8-4C8D-93E7-855B687D5220</key>
 		<array>
 			<dict>
@@ -2344,9 +2423,11 @@ tesseract "$temp_image" stdout -l $ocr_languages 2&gt;&amp;1</string>
 				<key>focusedappvariablename</key>
 				<string></string>
 				<key>hotkey</key>
-				<integer>0</integer>
+				<integer>32</integer>
 				<key>hotmod</key>
-				<integer>0</integer>
+				<integer>1966080</integer>
+				<key>hotstring</key>
+				<string>U</string>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -2531,6 +2612,25 @@ echo -n "$base64encoded"</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>externaltriggerid</key>
+				<string>update-obsidian-workflow</string>
+				<key>passinputasargument</key>
+				<true/>
+				<key>passvariables</key>
+				<true/>
+				<key>workflowbundleid</key>
+				<string>self</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>8BCCDAB5-C842-48E7-985D-4D4FD0454360</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argument</key>
 				<string>{query}</string>
 				<key>passthroughargument</key>
@@ -2592,25 +2692,6 @@ echo -n "$base64encoded"</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>externaltriggerid</key>
-				<string>update-obsidian-workflow</string>
-				<key>passinputasargument</key>
-				<true/>
-				<key>passvariables</key>
-				<true/>
-				<key>workflowbundleid</key>
-				<string>self</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.callexternaltrigger</string>
-			<key>uid</key>
-			<string>64249F79-8A34-461C-A40E-9BC13FD3D4B4</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>acceptsmulti</key>
 				<integer>0</integer>
 				<key>filetypes</key>
@@ -2627,6 +2708,180 @@ echo -n "$base64encoded"</string>
 			<string>alfred.workflow.trigger.action</string>
 			<key>uid</key>
 			<string>DFEBE352-DF83-4B38-BBC5-A2B2FC8A6281</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtext</key>
+				<string>[{var:selection}]({clipboard})</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>6DC02650-EDEB-4C4B-8C9F-E0C7044C5863</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>1</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>40</integer>
+				<key>hotmod</key>
+				<integer>1048576</integer>
+				<key>hotstring</key>
+				<string>K</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedApps</key>
+				<array>
+					<string>md.obsidian</string>
+				</array>
+				<key>relatedAppsMode</key>
+				<integer>1</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>BA61A0A6-C130-430F-9729-6F6132F22C08</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{clipboard:2}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>04211D9D-11BA-4717-82D2-13B2A608E8F5</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>4</integer>
+						<key>matchstring</key>
+						<string>\b((?:[a-z][\w-]+:(?:\/{1,3}|[a-z0-9%])|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}\/)(?:[^\s()&lt;&gt;]+|\(([^\s()&lt;&gt;]+|(\([^\s()&lt;&gt;]+\)))*\))+(?:\(([^\s()&lt;&gt;]+|(\([^\s()&lt;&gt;]+\)))*\)|[^\s`!()\[\]{};:'".,&lt;&gt;?«»“”‘’]))</string>
+						<key>outputlabel</key>
+						<string>URL</string>
+						<key>uid</key>
+						<string>A7DD96C9-1AEB-46B8-BF3C-B856105C5FFF</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>no URL</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>438AFA68-1629-472A-BAD5-0A1F3DA03359</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{clipboard}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>selection</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>5B3AC1A9-7057-4FF6-B3C7-2F65A76E2826</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>seconds</key>
+				<string>.2</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.delay</string>
+			<key>uid</key>
+			<string>F47F7DE8-D29F-4CDE-85B4-84B7C8DB6AA6</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtext</key>
+				<string>[{var:selection}]({cursor})</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>ADD571B0-8240-4430-B70C-07E041CA0063</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>externaltriggerid</key>
+				<string>update-obsidian-workflow</string>
+				<key>passinputasargument</key>
+				<true/>
+				<key>passvariables</key>
+				<true/>
+				<key>workflowbundleid</key>
+				<string>self</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>64249F79-8A34-461C-A40E-9BC13FD3D4B4</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -5999,15 +6254,20 @@ fi</string>
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>Visit the GitHub Page for Information on Configuration and Usage: https://github.com/chrisgrieser/shimmering-obsidian#readme
+	<string>ℹ️ Visit the GitHub Page for Information on Configuration and Usage: https://github.com/chrisgrieser/shimmering-obsidian#readme
 
 Created by @pspeudometa (Discord) aka @chrisgrieser (GitHub).
 
 ---
 
 # Release Notes
+v. 1.13
+- `new hotkey`: **Paste URL into selection**. Basically replicates the functionality of the [plugin of the same name](https://github.com/denolehov/obsidian-url-into-selection), that is unfortunately not working anymore. This means when you have text selected, and an URL in your clipboard, it would automatically get inserted when pressing the hotkey. 
+- As with the other hotkeys, select the sky blue-field and set your hotkey. Suggested keyboard shortcut is `cmd + k`, after having deactivated the respective hotkey in Obsidian.
+- bugfix for `ow`
+
 v. 1.12
-- new command `ow`: get a list of your workspaces and opens them directly (requires Workspoace Core-Plugin, obviously)
+- new command `ow`: directly open a workspace
 
 v. 1.11.1
 - bugfix for carl 🐢
@@ -6129,6 +6389,17 @@ v. 1.1: Public Release
 - small fixes</string>
 	<key>uidata</key>
 	<dict>
+		<key>04211D9D-11BA-4717-82D2-13B2A608E8F5</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>9</integer>
+			<key>note</key>
+			<string>preserve order of the clipboard</string>
+			<key>xpos</key>
+			<integer>715</integer>
+			<key>ypos</key>
+			<integer>640</integer>
+		</dict>
 		<key>0645AAB4-66F5-4149-A92B-C58A80B649C7</key>
 		<dict>
 			<key>colorindex</key>
@@ -6136,7 +6407,7 @@ v. 1.1: Public Release
 			<key>xpos</key>
 			<integer>850</integer>
 			<key>ypos</key>
-			<integer>1040</integer>
+			<integer>1465</integer>
 		</dict>
 		<key>07C4D3F5-5CBC-4BAF-9004-B506BEF11C23</key>
 		<dict>
@@ -6145,16 +6416,16 @@ v. 1.1: Public Release
 			<key>xpos</key>
 			<integer>195</integer>
 			<key>ypos</key>
-			<integer>4465</integer>
+			<integer>4890</integer>
 		</dict>
 		<key>0B37C89C-B10F-40F3-927F-9E2DF3FD18DF</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>795</integer>
+			<integer>800</integer>
 			<key>ypos</key>
-			<integer>250</integer>
+			<integer>270</integer>
 		</dict>
 		<key>0CF629FC-A2DF-4AFA-B949-2D0D98C05B18</key>
 		<dict>
@@ -6163,7 +6434,7 @@ v. 1.1: Public Release
 			<key>xpos</key>
 			<integer>300</integer>
 			<key>ypos</key>
-			<integer>830</integer>
+			<integer>1250</integer>
 		</dict>
 		<key>0D5A5851-A18D-447B-8854-BFB799FC5977</key>
 		<dict>
@@ -6172,16 +6443,16 @@ v. 1.1: Public Release
 			<key>xpos</key>
 			<integer>195</integer>
 			<key>ypos</key>
-			<integer>3355</integer>
+			<integer>3780</integer>
 		</dict>
 		<key>0E50A3A3-8D61-48DF-964A-854927545A4A</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>505</integer>
+			<integer>550</integer>
 			<key>ypos</key>
-			<integer>395</integer>
+			<integer>415</integer>
 		</dict>
 		<key>0F72D532-AAE1-48A3-85FC-A819F196DC3E</key>
 		<dict>
@@ -6190,16 +6461,16 @@ v. 1.1: Public Release
 			<key>xpos</key>
 			<integer>230</integer>
 			<key>ypos</key>
-			<integer>4225</integer>
+			<integer>4650</integer>
 		</dict>
 		<key>15582108-F470-4C2C-A0B9-A33D71A7EAFC</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>550</integer>
+			<integer>555</integer>
 			<key>ypos</key>
-			<integer>40</integer>
+			<integer>60</integer>
 		</dict>
 		<key>16A2C5C4-4D7B-4854-96CF-E21ADE3A612F</key>
 		<dict>
@@ -6208,7 +6479,7 @@ v. 1.1: Public Release
 			<key>xpos</key>
 			<integer>480</integer>
 			<key>ypos</key>
-			<integer>1575</integer>
+			<integer>2000</integer>
 		</dict>
 		<key>17DD1F15-7CF7-4BBB-8BC7-A2DF795C9248</key>
 		<dict>
@@ -6219,7 +6490,7 @@ v. 1.1: Public Release
 			<key>xpos</key>
 			<integer>20</integer>
 			<key>ypos</key>
-			<integer>5140</integer>
+			<integer>5565</integer>
 		</dict>
 		<key>18228F67-7A45-4086-9DD7-2E18EEC5DF92</key>
 		<dict>
@@ -6228,7 +6499,7 @@ v. 1.1: Public Release
 			<key>xpos</key>
 			<integer>480</integer>
 			<key>ypos</key>
-			<integer>1795</integer>
+			<integer>2220</integer>
 		</dict>
 		<key>18CEC3E9-303B-43A2-812F-579FCD8F1F9A</key>
 		<dict>
@@ -6237,7 +6508,7 @@ v. 1.1: Public Release
 			<key>xpos</key>
 			<integer>195</integer>
 			<key>ypos</key>
-			<integer>3000</integer>
+			<integer>3425</integer>
 		</dict>
 		<key>1A367216-E2AB-46D3-AB48-8709D58321C9</key>
 		<dict>
@@ -6246,7 +6517,7 @@ v. 1.1: Public Release
 			<key>xpos</key>
 			<integer>345</integer>
 			<key>ypos</key>
-			<integer>3575</integer>
+			<integer>4000</integer>
 		</dict>
 		<key>1D16496A-661B-46FB-AEE2-6A3AB41B77F3</key>
 		<dict>
@@ -6255,7 +6526,7 @@ v. 1.1: Public Release
 			<key>xpos</key>
 			<integer>30</integer>
 			<key>ypos</key>
-			<integer>2445</integer>
+			<integer>2870</integer>
 		</dict>
 		<key>1E26935C-F1F3-4C69-AEFA-3A0D9D18291F</key>
 		<dict>
@@ -6264,16 +6535,16 @@ v. 1.1: Public Release
 			<key>xpos</key>
 			<integer>365</integer>
 			<key>ypos</key>
-			<integer>2320</integer>
+			<integer>2745</integer>
 		</dict>
 		<key>1E72DA48-B05A-45E6-A27F-515AB0D4ADE6</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>215</integer>
+			<integer>205</integer>
 			<key>ypos</key>
-			<integer>750</integer>
+			<integer>1155</integer>
 		</dict>
 		<key>1EAE5E2F-C10A-4DB6-8DDB-32DE780608A2</key>
 		<dict>
@@ -6282,7 +6553,7 @@ v. 1.1: Public Release
 			<key>xpos</key>
 			<integer>190</integer>
 			<key>ypos</key>
-			<integer>5830</integer>
+			<integer>6255</integer>
 		</dict>
 		<key>1FE579F5-99C2-4C35-A110-CB55F903E327</key>
 		<dict>
@@ -6293,7 +6564,7 @@ v. 1.1: Public Release
 			<key>xpos</key>
 			<integer>995</integer>
 			<key>ypos</key>
-			<integer>1315</integer>
+			<integer>1740</integer>
 		</dict>
 		<key>221F4BFD-7850-440F-BB16-C39AC39E729C</key>
 		<dict>
@@ -6304,7 +6575,7 @@ v. 1.1: Public Release
 			<key>xpos</key>
 			<integer>1370</integer>
 			<key>ypos</key>
-			<integer>1070</integer>
+			<integer>1495</integer>
 		</dict>
 		<key>24262C18-419C-4D91-8673-4C0BB27F31DA</key>
 		<dict>
@@ -6313,7 +6584,7 @@ v. 1.1: Public Release
 			<key>xpos</key>
 			<integer>510</integer>
 			<key>ypos</key>
-			<integer>2320</integer>
+			<integer>2745</integer>
 		</dict>
 		<key>25FCBA58-5263-4F11-B222-4978632AF5B9</key>
 		<dict>
@@ -6322,16 +6593,16 @@ v. 1.1: Public Release
 			<key>xpos</key>
 			<integer>610</integer>
 			<key>ypos</key>
-			<integer>5170</integer>
+			<integer>5595</integer>
 		</dict>
 		<key>260919C7-A9E6-4442-AEF6-E62D271910BF</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>795</integer>
+			<integer>800</integer>
 			<key>ypos</key>
-			<integer>125</integer>
+			<integer>145</integer>
 		</dict>
 		<key>27DF894D-0386-407B-8EF2-95BBD0395349</key>
 		<dict>
@@ -6342,7 +6613,7 @@ v. 1.1: Public Release
 			<key>xpos</key>
 			<integer>410</integer>
 			<key>ypos</key>
-			<integer>2575</integer>
+			<integer>3000</integer>
 		</dict>
 		<key>2864AC92-76E7-481E-89D4-F685DEB7926D</key>
 		<dict>
@@ -6351,7 +6622,7 @@ v. 1.1: Public Release
 			<key>xpos</key>
 			<integer>190</integer>
 			<key>ypos</key>
-			<integer>5140</integer>
+			<integer>5565</integer>
 		</dict>
 		<key>2B55DCB2-3C6A-42EC-A014-095939CB3FAB</key>
 		<dict>
@@ -6360,7 +6631,7 @@ v. 1.1: Public Release
 			<key>xpos</key>
 			<integer>1115</integer>
 			<key>ypos</key>
-			<integer>1710</integer>
+			<integer>2135</integer>
 		</dict>
 		<key>2C1D63BF-6BDE-49E3-880C-A23FE845879F</key>
 		<dict>
@@ -6369,7 +6640,7 @@ v. 1.1: Public Release
 			<key>xpos</key>
 			<integer>850</integer>
 			<key>ypos</key>
-			<integer>1180</integer>
+			<integer>1605</integer>
 		</dict>
 		<key>2F6320BD-6545-4FCC-BDCA-C6EF2FC85A7A</key>
 		<dict>
@@ -6378,16 +6649,16 @@ v. 1.1: Public Release
 			<key>xpos</key>
 			<integer>30</integer>
 			<key>ypos</key>
-			<integer>3875</integer>
+			<integer>4300</integer>
 		</dict>
 		<key>2FABD0F5-74D9-48D1-BF85-F3F56ACE8BD3</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>720</integer>
+			<integer>725</integer>
 			<key>ypos</key>
-			<integer>280</integer>
+			<integer>300</integer>
 		</dict>
 		<key>2FB281A9-8BFA-4836-A2A9-73A46C3DE6DD</key>
 		<dict>
@@ -6396,7 +6667,7 @@ v. 1.1: Public Release
 			<key>xpos</key>
 			<integer>190</integer>
 			<key>ypos</key>
-			<integer>4780</integer>
+			<integer>5205</integer>
 		</dict>
 		<key>2FD866C2-DDB1-4C2D-A420-3A580FBC60D2</key>
 		<dict>
@@ -6405,7 +6676,7 @@ v. 1.1: Public Release
 			<key>xpos</key>
 			<integer>640</integer>
 			<key>ypos</key>
-			<integer>3965</integer>
+			<integer>4390</integer>
 		</dict>
 		<key>31F21F7E-7450-444B-B9FC-D46650DF6F17</key>
 		<dict>
@@ -6414,7 +6685,7 @@ v. 1.1: Public Release
 			<key>xpos</key>
 			<integer>995</integer>
 			<key>ypos</key>
-			<integer>1735</integer>
+			<integer>2160</integer>
 		</dict>
 		<key>3217571A-763B-48DC-8111-2F1DD8A86113</key>
 		<dict>
@@ -6423,7 +6694,7 @@ v. 1.1: Public Release
 			<key>xpos</key>
 			<integer>200</integer>
 			<key>ypos</key>
-			<integer>3640</integer>
+			<integer>4065</integer>
 		</dict>
 		<key>3390E0CB-CE17-4CEB-848D-14C5547A6936</key>
 		<dict>
@@ -6432,7 +6703,7 @@ v. 1.1: Public Release
 			<key>xpos</key>
 			<integer>480</integer>
 			<key>ypos</key>
-			<integer>2025</integer>
+			<integer>2450</integer>
 		</dict>
 		<key>3702534A-079B-43C2-B8DD-53683343E640</key>
 		<dict>
@@ -6441,7 +6712,7 @@ v. 1.1: Public Release
 			<key>xpos</key>
 			<integer>695</integer>
 			<key>ypos</key>
-			<integer>3140</integer>
+			<integer>3565</integer>
 		</dict>
 		<key>378CFF0C-FF5A-40C2-BE7F-587887FA84F7</key>
 		<dict>
@@ -6450,7 +6721,7 @@ v. 1.1: Public Release
 			<key>xpos</key>
 			<integer>195</integer>
 			<key>ypos</key>
-			<integer>2860</integer>
+			<integer>3285</integer>
 		</dict>
 		<key>38F17F8F-FBE5-422F-B926-A8AFD40D5A4C</key>
 		<dict>
@@ -6459,7 +6730,7 @@ v. 1.1: Public Release
 			<key>xpos</key>
 			<integer>20</integer>
 			<key>ypos</key>
-			<integer>5275</integer>
+			<integer>5700</integer>
 		</dict>
 		<key>392928E0-864F-4EC0-82D3-2BF6C68DA21E</key>
 		<dict>
@@ -6468,7 +6739,7 @@ v. 1.1: Public Release
 			<key>xpos</key>
 			<integer>30</integer>
 			<key>ypos</key>
-			<integer>3515</integer>
+			<integer>3940</integer>
 		</dict>
 		<key>3CE4F8D3-5FF3-4687-92F8-A4227B78D8C0</key>
 		<dict>
@@ -6477,9 +6748,9 @@ v. 1.1: Public Release
 			<key>note</key>
 			<string>new note</string>
 			<key>xpos</key>
-			<integer>25</integer>
+			<integer>15</integer>
 			<key>ypos</key>
-			<integer>730</integer>
+			<integer>1135</integer>
 		</dict>
 		<key>3F3B3479-EB18-4BED-8549-C38FCF9B1EE5</key>
 		<dict>
@@ -6488,7 +6759,7 @@ v. 1.1: Public Release
 			<key>xpos</key>
 			<integer>325</integer>
 			<key>ypos</key>
-			<integer>6240</integer>
+			<integer>6665</integer>
 		</dict>
 		<key>3F44687E-16F7-4830-BC8B-D16B1098C474</key>
 		<dict>
@@ -6497,9 +6768,9 @@ v. 1.1: Public Release
 			<key>note</key>
 			<string>Opens settings for more convenient activating of css snippet</string>
 			<key>xpos</key>
-			<integer>795</integer>
+			<integer>800</integer>
 			<key>ypos</key>
-			<integer>365</integer>
+			<integer>385</integer>
 		</dict>
 		<key>3F7A599D-6A9E-4D70-B3E6-88217EA3D56C</key>
 		<dict>
@@ -6508,7 +6779,7 @@ v. 1.1: Public Release
 			<key>xpos</key>
 			<integer>750</integer>
 			<key>ypos</key>
-			<integer>6235</integer>
+			<integer>6660</integer>
 		</dict>
 		<key>3F97414B-D2C1-42AC-A7AF-0683EA133B48</key>
 		<dict>
@@ -6519,7 +6790,7 @@ v. 1.1: Public Release
 			<key>xpos</key>
 			<integer>30</integer>
 			<key>ypos</key>
-			<integer>2860</integer>
+			<integer>3285</integer>
 		</dict>
 		<key>40158B5B-4DBC-4FD4-AC40-4976E27C3792</key>
 		<dict>
@@ -6528,7 +6799,7 @@ v. 1.1: Public Release
 			<key>xpos</key>
 			<integer>995</integer>
 			<key>ypos</key>
-			<integer>1455</integer>
+			<integer>1880</integer>
 		</dict>
 		<key>42B2DB09-A39A-4087-9F06-C0B0F2C16E88</key>
 		<dict>
@@ -6539,7 +6810,7 @@ v. 1.1: Public Release
 			<key>xpos</key>
 			<integer>195</integer>
 			<key>ypos</key>
-			<integer>2575</integer>
+			<integer>3000</integer>
 		</dict>
 		<key>4357CED9-9613-4872-AFBA-58629EB27D48</key>
 		<dict>
@@ -6550,7 +6821,16 @@ v. 1.1: Public Release
 			<key>xpos</key>
 			<integer>30</integer>
 			<key>ypos</key>
-			<integer>2725</integer>
+			<integer>3150</integer>
+		</dict>
+		<key>438AFA68-1629-472A-BAD5-0A1F3DA03359</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>9</integer>
+			<key>xpos</key>
+			<integer>370</integer>
+			<key>ypos</key>
+			<integer>660</integer>
 		</dict>
 		<key>44ACD8E5-CFE0-4D48-98F9-DD31AFBC7362</key>
 		<dict>
@@ -6559,16 +6839,16 @@ v. 1.1: Public Release
 			<key>xpos</key>
 			<integer>20</integer>
 			<key>ypos</key>
-			<integer>5515</integer>
+			<integer>5940</integer>
 		</dict>
 		<key>46CD49AD-4C94-4C70-B62B-2E7745169D93</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>635</integer>
+			<integer>640</integer>
 			<key>ypos</key>
-			<integer>125</integer>
+			<integer>145</integer>
 		</dict>
 		<key>4752E9C9-D878-4C0E-AC6A-F39740E2BF8A</key>
 		<dict>
@@ -6577,7 +6857,7 @@ v. 1.1: Public Release
 			<key>xpos</key>
 			<integer>340</integer>
 			<key>ypos</key>
-			<integer>2860</integer>
+			<integer>3285</integer>
 		</dict>
 		<key>477D128E-EEF6-4956-8C44-A6186D7537D0</key>
 		<dict>
@@ -6588,7 +6868,7 @@ v. 1.1: Public Release
 			<key>xpos</key>
 			<integer>480</integer>
 			<key>ypos</key>
-			<integer>2860</integer>
+			<integer>3285</integer>
 		</dict>
 		<key>47CB6610-109D-41E0-BBFF-BF83FB0FC8CE</key>
 		<dict>
@@ -6597,7 +6877,7 @@ v. 1.1: Public Release
 			<key>xpos</key>
 			<integer>190</integer>
 			<key>ypos</key>
-			<integer>5515</integer>
+			<integer>5940</integer>
 		</dict>
 		<key>4B4D3ECE-1162-41DA-ACCC-16B0AC6FA3D1</key>
 		<dict>
@@ -6606,7 +6886,7 @@ v. 1.1: Public Release
 			<key>xpos</key>
 			<integer>1210</integer>
 			<key>ypos</key>
-			<integer>1040</integer>
+			<integer>1465</integer>
 		</dict>
 		<key>4C840008-B2DF-415E-9109-A7D1F6470E0B</key>
 		<dict>
@@ -6615,7 +6895,7 @@ v. 1.1: Public Release
 			<key>xpos</key>
 			<integer>30</integer>
 			<key>ypos</key>
-			<integer>2205</integer>
+			<integer>2630</integer>
 		</dict>
 		<key>4D2CDFC0-FABC-4A89-AB61-3BEB278DE479</key>
 		<dict>
@@ -6626,7 +6906,7 @@ v. 1.1: Public Release
 			<key>xpos</key>
 			<integer>30</integer>
 			<key>ypos</key>
-			<integer>1705</integer>
+			<integer>2130</integer>
 		</dict>
 		<key>4D7CE883-A32F-45EC-BC4A-106918BD64AF</key>
 		<dict>
@@ -6635,7 +6915,7 @@ v. 1.1: Public Release
 			<key>xpos</key>
 			<integer>350</integer>
 			<key>ypos</key>
-			<integer>4235</integer>
+			<integer>4660</integer>
 		</dict>
 		<key>503B3F91-98A0-4357-92F2-A88BD6EDB404</key>
 		<dict>
@@ -6646,7 +6926,7 @@ v. 1.1: Public Release
 			<key>xpos</key>
 			<integer>25</integer>
 			<key>ypos</key>
-			<integer>6210</integer>
+			<integer>6635</integer>
 		</dict>
 		<key>506E519A-3B07-43B8-91CF-46161EB47E5E</key>
 		<dict>
@@ -6655,7 +6935,7 @@ v. 1.1: Public Release
 			<key>xpos</key>
 			<integer>350</integer>
 			<key>ypos</key>
-			<integer>4465</integer>
+			<integer>4890</integer>
 		</dict>
 		<key>507B53E2-BBE0-4CD6-81F0-570EA461C871</key>
 		<dict>
@@ -6664,7 +6944,7 @@ v. 1.1: Public Release
 			<key>xpos</key>
 			<integer>850</integer>
 			<key>ypos</key>
-			<integer>1315</integer>
+			<integer>1740</integer>
 		</dict>
 		<key>52C6C47D-3998-4DF9-B9A4-04E586CC8380</key>
 		<dict>
@@ -6673,7 +6953,7 @@ v. 1.1: Public Release
 			<key>xpos</key>
 			<integer>300</integer>
 			<key>ypos</key>
-			<integer>1160</integer>
+			<integer>1585</integer>
 		</dict>
 		<key>560E177F-C4A4-432D-A640-5A15B7048CB8</key>
 		<dict>
@@ -6682,7 +6962,7 @@ v. 1.1: Public Release
 			<key>xpos</key>
 			<integer>500</integer>
 			<key>ypos</key>
-			<integer>3840</integer>
+			<integer>4265</integer>
 		</dict>
 		<key>577E0F2F-C819-41CF-87BE-A16A976F6E68</key>
 		<dict>
@@ -6691,7 +6971,7 @@ v. 1.1: Public Release
 			<key>xpos</key>
 			<integer>20</integer>
 			<key>ypos</key>
-			<integer>5830</integer>
+			<integer>6255</integer>
 		</dict>
 		<key>57CACB5D-8848-4706-9B61-3C0AFDA26C17</key>
 		<dict>
@@ -6700,7 +6980,16 @@ v. 1.1: Public Release
 			<key>xpos</key>
 			<integer>960</integer>
 			<key>ypos</key>
-			<integer>2925</integer>
+			<integer>3350</integer>
+		</dict>
+		<key>5B3AC1A9-7057-4FF6-B3C7-2F65A76E2826</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>9</integer>
+			<key>xpos</key>
+			<integer>305</integer>
+			<key>ypos</key>
+			<integer>670</integer>
 		</dict>
 		<key>5C1918E9-6508-4076-8D79-716B47ACFC20</key>
 		<dict>
@@ -6709,7 +6998,7 @@ v. 1.1: Public Release
 			<key>xpos</key>
 			<integer>635</integer>
 			<key>ypos</key>
-			<integer>4235</integer>
+			<integer>4660</integer>
 		</dict>
 		<key>5E2BFA74-9185-4C41-82B0-274EB3C261BD</key>
 		<dict>
@@ -6718,7 +7007,7 @@ v. 1.1: Public Release
 			<key>xpos</key>
 			<integer>345</integer>
 			<key>ypos</key>
-			<integer>3965</integer>
+			<integer>4390</integer>
 		</dict>
 		<key>5E9B99E6-4356-4DC9-AC52-6B099C4ECBE2</key>
 		<dict>
@@ -6729,7 +7018,7 @@ v. 1.1: Public Release
 			<key>xpos</key>
 			<integer>30</integer>
 			<key>ypos</key>
-			<integer>2575</integer>
+			<integer>3000</integer>
 		</dict>
 		<key>5F6CE94A-26BF-4826-8A67-2E02353646DB</key>
 		<dict>
@@ -6738,9 +7027,9 @@ v. 1.1: Public Release
 			<key>note</key>
 			<string>screenshot + OCR</string>
 			<key>xpos</key>
-			<integer>210</integer>
+			<integer>215</integer>
 			<key>ypos</key>
-			<integer>10</integer>
+			<integer>30</integer>
 		</dict>
 		<key>5FECA0A1-6B1F-419D-8159-77F3A96C540F</key>
 		<dict>
@@ -6751,7 +7040,7 @@ v. 1.1: Public Release
 			<key>xpos</key>
 			<integer>20</integer>
 			<key>ypos</key>
-			<integer>1050</integer>
+			<integer>1475</integer>
 		</dict>
 		<key>60AA4065-13A9-48FE-ADD4-461B2C7A334C</key>
 		<dict>
@@ -6762,16 +7051,16 @@ v. 1.1: Public Release
 			<key>xpos</key>
 			<integer>20</integer>
 			<key>ypos</key>
-			<integer>4780</integer>
+			<integer>5205</integer>
 		</dict>
 		<key>64249F79-8A34-461C-A40E-9BC13FD3D4B4</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>6</integer>
 			<key>xpos</key>
-			<integer>950</integer>
+			<integer>840</integer>
 			<key>ypos</key>
-			<integer>550</integer>
+			<integer>1010</integer>
 		</dict>
 		<key>6636C45E-04AC-482C-AC17-1F837BA5E9F8</key>
 		<dict>
@@ -6780,16 +7069,16 @@ v. 1.1: Public Release
 			<key>xpos</key>
 			<integer>480</integer>
 			<key>ypos</key>
-			<integer>1905</integer>
+			<integer>2330</integer>
 		</dict>
 		<key>6A8372C5-8CF6-4C9F-8313-D09CB265C529</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>455</integer>
+			<integer>445</integer>
 			<key>ypos</key>
-			<integer>760</integer>
+			<integer>1165</integer>
 		</dict>
 		<key>6A8AE7C9-2FE9-45DD-8CCC-69B6146E26F7</key>
 		<dict>
@@ -6800,7 +7089,16 @@ v. 1.1: Public Release
 			<key>xpos</key>
 			<integer>25</integer>
 			<key>ypos</key>
-			<integer>4235</integer>
+			<integer>4660</integer>
+		</dict>
+		<key>6DC02650-EDEB-4C4B-8C9F-E0C7044C5863</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>9</integer>
+			<key>xpos</key>
+			<integer>475</integer>
+			<key>ypos</key>
+			<integer>595</integer>
 		</dict>
 		<key>6F6934B4-5E81-42CB-A3CE-FC8B373E54A4</key>
 		<dict>
@@ -6809,7 +7107,7 @@ v. 1.1: Public Release
 			<key>xpos</key>
 			<integer>1000</integer>
 			<key>ypos</key>
-			<integer>1610</integer>
+			<integer>2035</integer>
 		</dict>
 		<key>6F833AE0-EF84-4B16-97BF-37B26E5FD791</key>
 		<dict>
@@ -6820,7 +7118,7 @@ v. 1.1: Public Release
 			<key>xpos</key>
 			<integer>1450</integer>
 			<key>ypos</key>
-			<integer>1500</integer>
+			<integer>1925</integer>
 		</dict>
 		<key>705EB199-4E33-4B00-849D-7C29222C9083</key>
 		<dict>
@@ -6829,7 +7127,7 @@ v. 1.1: Public Release
 			<key>xpos</key>
 			<integer>30</integer>
 			<key>ypos</key>
-			<integer>3995</integer>
+			<integer>4420</integer>
 		</dict>
 		<key>7107BFB2-1A6A-434E-9E32-F01F75AF1CF6</key>
 		<dict>
@@ -6838,7 +7136,7 @@ v. 1.1: Public Release
 			<key>xpos</key>
 			<integer>190</integer>
 			<key>ypos</key>
-			<integer>4655</integer>
+			<integer>5080</integer>
 		</dict>
 		<key>72EC336B-CECC-4EF2-BECC-BDC37E91C63D</key>
 		<dict>
@@ -6847,9 +7145,9 @@ v. 1.1: Public Release
 			<key>note</key>
 			<string>read template</string>
 			<key>xpos</key>
-			<integer>545</integer>
+			<integer>535</integer>
 			<key>ypos</key>
-			<integer>730</integer>
+			<integer>1135</integer>
 		</dict>
 		<key>738D350E-6833-4C2C-B9A5-81FD582C6793</key>
 		<dict>
@@ -6861,7 +7159,7 @@ should have the same keyword as quicksearch</string>
 			<key>xpos</key>
 			<integer>20</integer>
 			<key>ypos</key>
-			<integer>1190</integer>
+			<integer>1615</integer>
 		</dict>
 		<key>752227A0-68B5-41B9-8A42-CDB80B6EB137</key>
 		<dict>
@@ -6870,7 +7168,7 @@ should have the same keyword as quicksearch</string>
 			<key>xpos</key>
 			<integer>30</integer>
 			<key>ypos</key>
-			<integer>3640</integer>
+			<integer>4065</integer>
 		</dict>
 		<key>76BE7619-FDB9-4324-81C7-6570B534A123</key>
 		<dict>
@@ -6879,16 +7177,16 @@ should have the same keyword as quicksearch</string>
 			<key>xpos</key>
 			<integer>195</integer>
 			<key>ypos</key>
-			<integer>2725</integer>
+			<integer>3150</integer>
 		</dict>
 		<key>76BEB33A-CAE6-4776-A792-565E25257509</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>570</integer>
+			<integer>615</integer>
 			<key>ypos</key>
-			<integer>365</integer>
+			<integer>385</integer>
 		</dict>
 		<key>76EF97C3-981D-466E-BA90-47D34129BE96</key>
 		<dict>
@@ -6899,7 +7197,7 @@ should have the same keyword as quicksearch</string>
 			<key>xpos</key>
 			<integer>385</integer>
 			<key>ypos</key>
-			<integer>6210</integer>
+			<integer>6635</integer>
 		</dict>
 		<key>7954C22E-D0FB-4539-87D1-D62DF328DBB2</key>
 		<dict>
@@ -6908,7 +7206,7 @@ should have the same keyword as quicksearch</string>
 			<key>xpos</key>
 			<integer>650</integer>
 			<key>ypos</key>
-			<integer>2320</integer>
+			<integer>2745</integer>
 		</dict>
 		<key>7BA55F56-BE3A-483A-9CA6-CEE173CF2357</key>
 		<dict>
@@ -6917,7 +7215,7 @@ should have the same keyword as quicksearch</string>
 			<key>xpos</key>
 			<integer>850</integer>
 			<key>ypos</key>
-			<integer>1455</integer>
+			<integer>1880</integer>
 		</dict>
 		<key>81D69BF1-CF14-4A8E-A427-380B8C206C4C</key>
 		<dict>
@@ -6926,7 +7224,7 @@ should have the same keyword as quicksearch</string>
 			<key>xpos</key>
 			<integer>300</integer>
 			<key>ypos</key>
-			<integer>940</integer>
+			<integer>1365</integer>
 		</dict>
 		<key>82B904E5-D10A-418F-8FA4-6E885FE49813</key>
 		<dict>
@@ -6935,7 +7233,7 @@ should have the same keyword as quicksearch</string>
 			<key>xpos</key>
 			<integer>195</integer>
 			<key>ypos</key>
-			<integer>3240</integer>
+			<integer>3665</integer>
 		</dict>
 		<key>82C08ED7-D456-4D77-985B-6F4A779F0BC2</key>
 		<dict>
@@ -6946,7 +7244,7 @@ should have the same keyword as quicksearch</string>
 			<key>xpos</key>
 			<integer>1300</integer>
 			<key>ypos</key>
-			<integer>1620</integer>
+			<integer>2045</integer>
 		</dict>
 		<key>860C2D5F-C032-49DF-812C-2973A0E3F3E8</key>
 		<dict>
@@ -6955,7 +7253,7 @@ should have the same keyword as quicksearch</string>
 			<key>xpos</key>
 			<integer>1450</integer>
 			<key>ypos</key>
-			<integer>1620</integer>
+			<integer>2045</integer>
 		</dict>
 		<key>863C601A-3E8C-4BD2-8240-F66020F40A44</key>
 		<dict>
@@ -6964,16 +7262,16 @@ should have the same keyword as quicksearch</string>
 			<key>xpos</key>
 			<integer>480</integer>
 			<key>ypos</key>
-			<integer>1685</integer>
+			<integer>2110</integer>
 		</dict>
 		<key>87D648B1-066F-4D31-9215-70F290E8083A</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>440</integer>
+			<integer>485</integer>
 			<key>ypos</key>
-			<integer>395</integer>
+			<integer>415</integer>
 		</dict>
 		<key>87F25EEF-FBA4-4F94-AAEF-DBA71CD066AC</key>
 		<dict>
@@ -6982,7 +7280,7 @@ should have the same keyword as quicksearch</string>
 			<key>xpos</key>
 			<integer>195</integer>
 			<key>ypos</key>
-			<integer>3120</integer>
+			<integer>3545</integer>
 		</dict>
 		<key>8960BAF4-D71A-4DC1-8382-E3864941AAB6</key>
 		<dict>
@@ -6991,7 +7289,7 @@ should have the same keyword as quicksearch</string>
 			<key>xpos</key>
 			<integer>190</integer>
 			<key>ypos</key>
-			<integer>5705</integer>
+			<integer>6130</integer>
 		</dict>
 		<key>89B47E8A-C9EE-4792-80D7-CA0D46A6A2C9</key>
 		<dict>
@@ -7000,7 +7298,7 @@ should have the same keyword as quicksearch</string>
 			<key>xpos</key>
 			<integer>935</integer>
 			<key>ypos</key>
-			<integer>6210</integer>
+			<integer>6635</integer>
 		</dict>
 		<key>8BC09525-BB68-46E3-A7E2-C0E5C489FF60</key>
 		<dict>
@@ -7009,7 +7307,16 @@ should have the same keyword as quicksearch</string>
 			<key>xpos</key>
 			<integer>1300</integer>
 			<key>ypos</key>
-			<integer>1760</integer>
+			<integer>2185</integer>
+		</dict>
+		<key>8BCCDAB5-C842-48E7-985D-4D4FD0454360</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>6</integer>
+			<key>xpos</key>
+			<integer>995</integer>
+			<key>ypos</key>
+			<integer>385</integer>
 		</dict>
 		<key>8C461AD9-52A0-4555-B606-550DEAEB67F6</key>
 		<dict>
@@ -7018,7 +7325,7 @@ should have the same keyword as quicksearch</string>
 			<key>xpos</key>
 			<integer>535</integer>
 			<key>ypos</key>
-			<integer>3265</integer>
+			<integer>3690</integer>
 		</dict>
 		<key>8C93D170-EDBF-4A3E-BD7D-2DFD23E97AE9</key>
 		<dict>
@@ -7027,7 +7334,7 @@ should have the same keyword as quicksearch</string>
 			<key>xpos</key>
 			<integer>20</integer>
 			<key>ypos</key>
-			<integer>5705</integer>
+			<integer>6130</integer>
 		</dict>
 		<key>8CA441F0-9476-4FEF-8DC9-E8D8C19EC431</key>
 		<dict>
@@ -7036,7 +7343,7 @@ should have the same keyword as quicksearch</string>
 			<key>xpos</key>
 			<integer>20</integer>
 			<key>ypos</key>
-			<integer>5395</integer>
+			<integer>5820</integer>
 		</dict>
 		<key>8F7A58D6-9C9C-4D74-A9A6-2DA7D2CF6725</key>
 		<dict>
@@ -7045,7 +7352,7 @@ should have the same keyword as quicksearch</string>
 			<key>xpos</key>
 			<integer>300</integer>
 			<key>ypos</key>
-			<integer>1395</integer>
+			<integer>1820</integer>
 		</dict>
 		<key>902431F8-34D6-476A-8917-EFF85864F369</key>
 		<dict>
@@ -7054,7 +7361,7 @@ should have the same keyword as quicksearch</string>
 			<key>xpos</key>
 			<integer>940</integer>
 			<key>ypos</key>
-			<integer>3780</integer>
+			<integer>4205</integer>
 		</dict>
 		<key>90C2FB12-ABD4-40C2-A8F0-7BFFBDB0C9CE</key>
 		<dict>
@@ -7063,7 +7370,7 @@ should have the same keyword as quicksearch</string>
 			<key>xpos</key>
 			<integer>850</integer>
 			<key>ypos</key>
-			<integer>1580</integer>
+			<integer>2005</integer>
 		</dict>
 		<key>92307BE0-68AE-451F-9850-FE01218229BF</key>
 		<dict>
@@ -7072,7 +7379,7 @@ should have the same keyword as quicksearch</string>
 			<key>xpos</key>
 			<integer>1455</integer>
 			<key>ypos</key>
-			<integer>1040</integer>
+			<integer>1465</integer>
 		</dict>
 		<key>93E8830A-2A8F-4CA1-BE12-FDACD3D4CF59</key>
 		<dict>
@@ -7081,7 +7388,7 @@ should have the same keyword as quicksearch</string>
 			<key>xpos</key>
 			<integer>345</integer>
 			<key>ypos</key>
-			<integer>3460</integer>
+			<integer>3885</integer>
 		</dict>
 		<key>978E9BA4-99C1-4B74-A991-6E9345C7A20D</key>
 		<dict>
@@ -7090,16 +7397,16 @@ should have the same keyword as quicksearch</string>
 			<key>xpos</key>
 			<integer>1620</integer>
 			<key>ypos</key>
-			<integer>1350</integer>
+			<integer>1775</integer>
 		</dict>
 		<key>9803A3DE-FCB4-4DC2-A568-C9EB70E8F623</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>455</integer>
+			<integer>445</integer>
 			<key>ypos</key>
-			<integer>635</integer>
+			<integer>1040</integer>
 		</dict>
 		<key>99CFB472-ADBD-4D50-9A4E-70BCE3B09355</key>
 		<dict>
@@ -7110,7 +7417,7 @@ should have the same keyword as quicksearch</string>
 			<key>xpos</key>
 			<integer>30</integer>
 			<key>ypos</key>
-			<integer>1855</integer>
+			<integer>2280</integer>
 		</dict>
 		<key>9A56ECE8-BEFD-4301-9268-AF85737A5A87</key>
 		<dict>
@@ -7119,7 +7426,7 @@ should have the same keyword as quicksearch</string>
 			<key>xpos</key>
 			<integer>390</integer>
 			<key>ypos</key>
-			<integer>3215</integer>
+			<integer>3640</integer>
 		</dict>
 		<key>9DF5DAC0-2684-4842-B5FE-78EAB2E14AAB</key>
 		<dict>
@@ -7128,7 +7435,7 @@ should have the same keyword as quicksearch</string>
 			<key>xpos</key>
 			<integer>535</integer>
 			<key>ypos</key>
-			<integer>3140</integer>
+			<integer>3565</integer>
 		</dict>
 		<key>9E3B9072-3C3B-4C45-A973-426BC0F7E30F</key>
 		<dict>
@@ -7139,7 +7446,7 @@ should have the same keyword as quicksearch</string>
 			<key>xpos</key>
 			<integer>300</integer>
 			<key>ypos</key>
-			<integer>1515</integer>
+			<integer>1940</integer>
 		</dict>
 		<key>9E9A035A-DAD4-4251-8142-D4F6C963C982</key>
 		<dict>
@@ -7150,7 +7457,7 @@ should have the same keyword as quicksearch</string>
 			<key>xpos</key>
 			<integer>540</integer>
 			<key>ypos</key>
-			<integer>6210</integer>
+			<integer>6635</integer>
 		</dict>
 		<key>9FF8D4E6-7A5E-4736-9976-17C280BC574A</key>
 		<dict>
@@ -7159,7 +7466,7 @@ should have the same keyword as quicksearch</string>
 			<key>xpos</key>
 			<integer>30</integer>
 			<key>ypos</key>
-			<integer>3120</integer>
+			<integer>3545</integer>
 		</dict>
 		<key>A15E674D-4AF1-4F29-81E5-C8397A2CEC5C</key>
 		<dict>
@@ -7168,7 +7475,7 @@ should have the same keyword as quicksearch</string>
 			<key>xpos</key>
 			<integer>20</integer>
 			<key>ypos</key>
-			<integer>5025</integer>
+			<integer>5450</integer>
 		</dict>
 		<key>A170DF0F-C1AD-46DF-9738-FF54AA497695</key>
 		<dict>
@@ -7177,7 +7484,7 @@ should have the same keyword as quicksearch</string>
 			<key>xpos</key>
 			<integer>190</integer>
 			<key>ypos</key>
-			<integer>5395</integer>
+			<integer>5820</integer>
 		</dict>
 		<key>A3384012-6E44-47C2-9CB5-8067AEE35F34</key>
 		<dict>
@@ -7188,7 +7495,7 @@ should have the same keyword as quicksearch</string>
 			<key>xpos</key>
 			<integer>995</integer>
 			<key>ypos</key>
-			<integer>1180</integer>
+			<integer>1605</integer>
 		</dict>
 		<key>A6F41657-5917-4CD1-A28F-7C4B2519781B</key>
 		<dict>
@@ -7197,16 +7504,16 @@ should have the same keyword as quicksearch</string>
 			<key>xpos</key>
 			<integer>30</integer>
 			<key>ypos</key>
-			<integer>2085</integer>
+			<integer>2510</integer>
 		</dict>
 		<key>ACE1AA07-094D-46BB-8462-D4CDFF0E337B</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>6</integer>
 			<key>xpos</key>
-			<integer>850</integer>
+			<integer>840</integer>
 			<key>ypos</key>
-			<integer>730</integer>
+			<integer>1135</integer>
 		</dict>
 		<key>AD7DF1BF-E171-4081-A3B9-FDC3FA9D5DC3</key>
 		<dict>
@@ -7215,7 +7522,16 @@ should have the same keyword as quicksearch</string>
 			<key>xpos</key>
 			<integer>190</integer>
 			<key>ypos</key>
-			<integer>4910</integer>
+			<integer>5335</integer>
+		</dict>
+		<key>ADD571B0-8240-4430-B70C-07E041CA0063</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>9</integer>
+			<key>xpos</key>
+			<integer>475</integer>
+			<key>ypos</key>
+			<integer>705</integer>
 		</dict>
 		<key>B0B1C61B-93A6-492E-BD07-2F06FB73F410</key>
 		<dict>
@@ -7226,7 +7542,7 @@ should have the same keyword as quicksearch</string>
 			<key>xpos</key>
 			<integer>865</integer>
 			<key>ypos</key>
-			<integer>6360</integer>
+			<integer>6785</integer>
 		</dict>
 		<key>B156D204-E93B-4457-AD5B-27D5BBBAE0EC</key>
 		<dict>
@@ -7237,7 +7553,7 @@ should have the same keyword as quicksearch</string>
 			<key>xpos</key>
 			<integer>30</integer>
 			<key>ypos</key>
-			<integer>3240</integer>
+			<integer>3665</integer>
 		</dict>
 		<key>B68030A9-77F0-45C0-8293-0659C6970C5D</key>
 		<dict>
@@ -7248,9 +7564,9 @@ should have the same keyword as quicksearch</string>
 
 DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>xpos</key>
-			<integer>25</integer>
+			<integer>30</integer>
 			<key>ypos</key>
-			<integer>10</integer>
+			<integer>30</integer>
 		</dict>
 		<key>B6C37E17-4D77-4232-879B-5D7F955DEF25</key>
 		<dict>
@@ -7259,7 +7575,20 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>xpos</key>
 			<integer>190</integer>
 			<key>ypos</key>
-			<integer>5275</integer>
+			<integer>5700</integer>
+		</dict>
+		<key>BA61A0A6-C130-430F-9729-6F6132F22C08</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>7</integer>
+			<key>note</key>
+			<string>Paste URL into selection
+
+DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating in Obsidian)</string>
+			<key>xpos</key>
+			<integer>25</integer>
+			<key>ypos</key>
+			<integer>640</integer>
 		</dict>
 		<key>BB114F09-A7D5-48D6-89F1-F54F698E20B1</key>
 		<dict>
@@ -7268,7 +7597,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>xpos</key>
 			<integer>500</integer>
 			<key>ypos</key>
-			<integer>3965</integer>
+			<integer>4390</integer>
 		</dict>
 		<key>BB3A12AE-1D70-48E3-852C-24D0C8E27A93</key>
 		<dict>
@@ -7277,16 +7606,16 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>xpos</key>
 			<integer>30</integer>
 			<key>ypos</key>
-			<integer>3000</integer>
+			<integer>3425</integer>
 		</dict>
 		<key>BDC15C17-E805-4F9B-80A1-BB60B442A7C0</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>210</integer>
+			<integer>215</integer>
 			<key>ypos</key>
-			<integer>195</integer>
+			<integer>215</integer>
 		</dict>
 		<key>BE2117D8-695E-45FB-9B63-149EA1AB0D48</key>
 		<dict>
@@ -7295,7 +7624,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>xpos</key>
 			<integer>505</integer>
 			<key>ypos</key>
-			<integer>3500</integer>
+			<integer>3925</integer>
 		</dict>
 		<key>BF450A0C-67CF-4B13-8B0D-D94298462DE7</key>
 		<dict>
@@ -7306,7 +7635,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>xpos</key>
 			<integer>1140</integer>
 			<key>ypos</key>
-			<integer>1070</integer>
+			<integer>1495</integer>
 		</dict>
 		<key>BFF5266E-FA2A-455F-9C52-3A0480BAFF2F</key>
 		<dict>
@@ -7317,7 +7646,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>xpos</key>
 			<integer>995</integer>
 			<key>ypos</key>
-			<integer>1040</integer>
+			<integer>1465</integer>
 		</dict>
 		<key>C5E65176-674E-4553-A255-37A40EB99342</key>
 		<dict>
@@ -7326,7 +7655,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>xpos</key>
 			<integer>30</integer>
 			<key>ypos</key>
-			<integer>2320</integer>
+			<integer>2745</integer>
 		</dict>
 		<key>C60C1880-E166-4304-A913-7E307B365032</key>
 		<dict>
@@ -7335,16 +7664,16 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>xpos</key>
 			<integer>25</integer>
 			<key>ypos</key>
-			<integer>890</integer>
+			<integer>1315</integer>
 		</dict>
 		<key>C66650E3-CAD7-4141-912D-2C6E02BAA9F9</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>220</integer>
+			<integer>290</integer>
 			<key>ypos</key>
-			<integer>395</integer>
+			<integer>415</integer>
 		</dict>
 		<key>C81DA624-5B3B-4CDB-A1CC-16EF2A2E3DA6</key>
 		<dict>
@@ -7355,9 +7684,9 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 
 DOUBLE CLICK THIS to set hotkey</string>
 			<key>xpos</key>
-			<integer>25</integer>
+			<integer>30</integer>
 			<key>ypos</key>
-			<integer>365</integer>
+			<integer>385</integer>
 		</dict>
 		<key>C982E458-56A0-4C6A-833C-670C276DC3B3</key>
 		<dict>
@@ -7368,7 +7697,7 @@ DOUBLE CLICK THIS to set hotkey</string>
 			<key>xpos</key>
 			<integer>1300</integer>
 			<key>ypos</key>
-			<integer>1470</integer>
+			<integer>1895</integer>
 		</dict>
 		<key>C9A73A09-3030-4283-9C89-2EE7C36BE059</key>
 		<dict>
@@ -7377,7 +7706,7 @@ DOUBLE CLICK THIS to set hotkey</string>
 			<key>xpos</key>
 			<integer>300</integer>
 			<key>ypos</key>
-			<integer>1050</integer>
+			<integer>1475</integer>
 		</dict>
 		<key>CBAE02F7-62CC-4974-96C0-841453D73B48</key>
 		<dict>
@@ -7388,7 +7717,7 @@ DOUBLE CLICK THIS to set hotkey</string>
 			<key>xpos</key>
 			<integer>200</integer>
 			<key>ypos</key>
-			<integer>3965</integer>
+			<integer>4390</integer>
 		</dict>
 		<key>CDC3C416-1670-46AC-A7D1-D8EFEF574C3C</key>
 		<dict>
@@ -7397,7 +7726,7 @@ DOUBLE CLICK THIS to set hotkey</string>
 			<key>xpos</key>
 			<integer>340</integer>
 			<key>ypos</key>
-			<integer>2605</integer>
+			<integer>3030</integer>
 		</dict>
 		<key>CF8C9F05-0F8E-48AC-AA6E-49A41470DC53</key>
 		<dict>
@@ -7408,18 +7737,18 @@ DOUBLE CLICK THIS to set hotkey</string>
 
 DOUBLE CLICK THIS to set hotkey</string>
 			<key>xpos</key>
-			<integer>25</integer>
+			<integer>30</integer>
 			<key>ypos</key>
-			<integer>195</integer>
+			<integer>215</integer>
 		</dict>
 		<key>D0CC42AB-11E5-447A-9C1F-BE2293E03B5B</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>385</integer>
+			<integer>375</integer>
 			<key>ypos</key>
-			<integer>760</integer>
+			<integer>1165</integer>
 		</dict>
 		<key>D0CCD3E2-0D47-441C-A6E2-76DCCF2188CF</key>
 		<dict>
@@ -7428,7 +7757,7 @@ DOUBLE CLICK THIS to set hotkey</string>
 			<key>xpos</key>
 			<integer>350</integer>
 			<key>ypos</key>
-			<integer>4350</integer>
+			<integer>4775</integer>
 		</dict>
 		<key>D2E44E01-0D14-426A-BFEC-4A5AA83BB375</key>
 		<dict>
@@ -7437,7 +7766,7 @@ DOUBLE CLICK THIS to set hotkey</string>
 			<key>xpos</key>
 			<integer>230</integer>
 			<key>ypos</key>
-			<integer>4170</integer>
+			<integer>4595</integer>
 		</dict>
 		<key>D8F01D44-B570-4956-B4AE-B3AE05B3D0EE</key>
 		<dict>
@@ -7446,7 +7775,7 @@ DOUBLE CLICK THIS to set hotkey</string>
 			<key>xpos</key>
 			<integer>480</integer>
 			<key>ypos</key>
-			<integer>2140</integer>
+			<integer>2565</integer>
 		</dict>
 		<key>DD45D94E-9E2C-4477-9E37-66338FDCF4D0</key>
 		<dict>
@@ -7455,7 +7784,7 @@ DOUBLE CLICK THIS to set hotkey</string>
 			<key>xpos</key>
 			<integer>30</integer>
 			<key>ypos</key>
-			<integer>3755</integer>
+			<integer>4180</integer>
 		</dict>
 		<key>DD86C0A5-6797-45E0-91CF-BEA8262CCDD1</key>
 		<dict>
@@ -7464,25 +7793,25 @@ DOUBLE CLICK THIS to set hotkey</string>
 			<key>xpos</key>
 			<integer>345</integer>
 			<key>ypos</key>
-			<integer>3840</integer>
+			<integer>4265</integer>
 		</dict>
 		<key>DDE15544-E0CA-4DB0-92C0-F7861EE46206</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>6</integer>
 			<key>xpos</key>
-			<integer>795</integer>
+			<integer>800</integer>
 			<key>ypos</key>
-			<integer>10</integer>
+			<integer>30</integer>
 		</dict>
 		<key>DEC5719A-5BE8-41E4-83F9-E2024D31BF9B</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>365</integer>
+			<integer>370</integer>
 			<key>ypos</key>
-			<integer>195</integer>
+			<integer>215</integer>
 		</dict>
 		<key>DF5B66BD-78AD-45F3-B6B5-8E81957741FC</key>
 		<dict>
@@ -7491,7 +7820,7 @@ DOUBLE CLICK THIS to set hotkey</string>
 			<key>xpos</key>
 			<integer>200</integer>
 			<key>ypos</key>
-			<integer>1645</integer>
+			<integer>2070</integer>
 		</dict>
 		<key>DFEBE352-DF83-4B38-BBC5-A2B2FC8A6281</key>
 		<dict>
@@ -7500,9 +7829,9 @@ DOUBLE CLICK THIS to set hotkey</string>
 			<key>note</key>
 			<string>Use the new Universal Action (Alfred 4.5) to trigger the case64 conversion</string>
 			<key>xpos</key>
-			<integer>25</integer>
+			<integer>170</integer>
 			<key>ypos</key>
-			<integer>560</integer>
+			<integer>485</integer>
 		</dict>
 		<key>E001E52F-8242-4F82-872C-35F2D477BBBF</key>
 		<dict>
@@ -7511,9 +7840,9 @@ DOUBLE CLICK THIS to set hotkey</string>
 			<key>note</key>
 			<string>base64 encoding</string>
 			<key>xpos</key>
-			<integer>305</integer>
+			<integer>350</integer>
 			<key>ypos</key>
-			<integer>365</integer>
+			<integer>385</integer>
 		</dict>
 		<key>E15968CE-239E-4B7B-9208-C1C2C1D2679D</key>
 		<dict>
@@ -7522,18 +7851,18 @@ DOUBLE CLICK THIS to set hotkey</string>
 			<key>note</key>
 			<string>If you are using an external monitor</string>
 			<key>xpos</key>
-			<integer>380</integer>
+			<integer>385</integer>
 			<key>ypos</key>
-			<integer>40</integer>
+			<integer>60</integer>
 		</dict>
 		<key>E29FE53D-5931-4761-BA49-D1EB697ECF65</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>545</integer>
+			<integer>535</integer>
 			<key>ypos</key>
-			<integer>605</integer>
+			<integer>1010</integer>
 		</dict>
 		<key>E2A349EC-FD2E-4562-A58E-8D47A46956F6</key>
 		<dict>
@@ -7542,7 +7871,7 @@ DOUBLE CLICK THIS to set hotkey</string>
 			<key>xpos</key>
 			<integer>850</integer>
 			<key>ypos</key>
-			<integer>1705</integer>
+			<integer>2130</integer>
 		</dict>
 		<key>E37C01FA-97C5-40E1-9602-DAF61A794DCE</key>
 		<dict>
@@ -7553,7 +7882,7 @@ DOUBLE CLICK THIS to set hotkey</string>
 			<key>xpos</key>
 			<integer>1140</integer>
 			<key>ypos</key>
-			<integer>1210</integer>
+			<integer>1635</integer>
 		</dict>
 		<key>E47A4539-F74D-44B4-BE6C-C7E7000D292E</key>
 		<dict>
@@ -7562,7 +7891,7 @@ DOUBLE CLICK THIS to set hotkey</string>
 			<key>xpos</key>
 			<integer>1055</integer>
 			<key>ypos</key>
-			<integer>1735</integer>
+			<integer>2160</integer>
 		</dict>
 		<key>E487972E-5605-4FE5-9C82-DFA2E3C33792</key>
 		<dict>
@@ -7571,7 +7900,7 @@ DOUBLE CLICK THIS to set hotkey</string>
 			<key>xpos</key>
 			<integer>345</integer>
 			<key>ypos</key>
-			<integer>3720</integer>
+			<integer>4145</integer>
 		</dict>
 		<key>E5AF1834-8BDC-4E07-9F39-F8CE62A851B9</key>
 		<dict>
@@ -7580,9 +7909,9 @@ DOUBLE CLICK THIS to set hotkey</string>
 			<key>note</key>
 			<string>If you are using an external monitor</string>
 			<key>xpos</key>
-			<integer>475</integer>
+			<integer>480</integer>
 			<key>ypos</key>
-			<integer>40</integer>
+			<integer>60</integer>
 		</dict>
 		<key>E6FA0443-53FA-4967-A3EE-9AE429FFEE5F</key>
 		<dict>
@@ -7591,7 +7920,7 @@ DOUBLE CLICK THIS to set hotkey</string>
 			<key>xpos</key>
 			<integer>870</integer>
 			<key>ypos</key>
-			<integer>6240</integer>
+			<integer>6665</integer>
 		</dict>
 		<key>E7ADA43C-52CF-46FD-AC9E-79616731DDA9</key>
 		<dict>
@@ -7600,7 +7929,7 @@ DOUBLE CLICK THIS to set hotkey</string>
 			<key>xpos</key>
 			<integer>345</integer>
 			<key>ypos</key>
-			<integer>4655</integer>
+			<integer>5080</integer>
 		</dict>
 		<key>E7DAD30E-15A3-46BE-8534-7F5ABE826FC6</key>
 		<dict>
@@ -7611,7 +7940,7 @@ DOUBLE CLICK THIS to set hotkey</string>
 			<key>xpos</key>
 			<integer>540</integer>
 			<key>ypos</key>
-			<integer>6360</integer>
+			<integer>6785</integer>
 		</dict>
 		<key>E844180D-E691-40D1-9EB1-6A06F69C73B9</key>
 		<dict>
@@ -7620,7 +7949,7 @@ DOUBLE CLICK THIS to set hotkey</string>
 			<key>xpos</key>
 			<integer>20</integer>
 			<key>ypos</key>
-			<integer>4910</integer>
+			<integer>5335</integer>
 		</dict>
 		<key>E8D51B66-BCB4-461B-9C34-F82EB104606B</key>
 		<dict>
@@ -7631,7 +7960,7 @@ DOUBLE CLICK THIS to set hotkey</string>
 			<key>xpos</key>
 			<integer>190</integer>
 			<key>ypos</key>
-			<integer>6210</integer>
+			<integer>6635</integer>
 		</dict>
 		<key>ED398754-3DDB-495C-8B1F-9AEC976C96D1</key>
 		<dict>
@@ -7640,7 +7969,7 @@ DOUBLE CLICK THIS to set hotkey</string>
 			<key>xpos</key>
 			<integer>1140</integer>
 			<key>ypos</key>
-			<integer>1345</integer>
+			<integer>1770</integer>
 		</dict>
 		<key>EEC26A00-2E86-4743-8879-AB2FD3D614ED</key>
 		<dict>
@@ -7649,16 +7978,16 @@ DOUBLE CLICK THIS to set hotkey</string>
 			<key>xpos</key>
 			<integer>1615</integer>
 			<key>ypos</key>
-			<integer>1040</integer>
+			<integer>1465</integer>
 		</dict>
 		<key>EF82C5A9-E02A-44A9-A042-972E8353FFC1</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>695</integer>
+			<integer>685</integer>
 			<key>ypos</key>
-			<integer>730</integer>
+			<integer>1135</integer>
 		</dict>
 		<key>F117FF8C-E6E5-4B0E-9FCE-DDB0A6476CAB</key>
 		<dict>
@@ -7667,16 +7996,25 @@ DOUBLE CLICK THIS to set hotkey</string>
 			<key>xpos</key>
 			<integer>300</integer>
 			<key>ypos</key>
-			<integer>1280</integer>
+			<integer>1705</integer>
+		</dict>
+		<key>F47F7DE8-D29F-4CDE-85B4-84B7C8DB6AA6</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>9</integer>
+			<key>xpos</key>
+			<integer>645</integer>
+			<key>ypos</key>
+			<integer>670</integer>
 		</dict>
 		<key>F6614DF6-BDC8-4C8D-93E7-855B687D5220</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>635</integer>
+			<integer>640</integer>
 			<key>ypos</key>
-			<integer>10</integer>
+			<integer>30</integer>
 		</dict>
 		<key>F8FA8843-EC3D-45BB-AD77-1F99F2E82DD8</key>
 		<dict>
@@ -7685,7 +8023,7 @@ DOUBLE CLICK THIS to set hotkey</string>
 			<key>xpos</key>
 			<integer>790</integer>
 			<key>ypos</key>
-			<integer>2320</integer>
+			<integer>2745</integer>
 		</dict>
 	</dict>
 	<key>variables</key>
@@ -7697,7 +8035,7 @@ DOUBLE CLICK THIS to set hotkey</string>
 		<key>fontformat</key>
 		<string>woff2</string>
 		<key>max_number_of_bkps</key>
-		<string>20</string>
+		<string>25</string>
 		<key>ocr_languages</key>
 		<string>eng+deu</string>
 		<key>ocr_prefix</key>
@@ -7717,14 +8055,14 @@ DOUBLE CLICK THIS to set hotkey</string>
 	</dict>
 	<key>variablesdontexport</key>
 	<array>
+		<string>toggle_snippet</string>
 		<string>vault_path</string>
 		<string>backup_destination</string>
 		<string>template_note_path</string>
 		<string>use_quickadd</string>
-		<string>toggle_snippet</string>
 	</array>
 	<key>version</key>
-	<string>1.12</string>
+	<string>1.13</string>
 	<key>webaddress</key>
 	<string>https://chris-grieser.de/</string>
 </dict>

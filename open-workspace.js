@@ -9,19 +9,19 @@ var vault_path = $.getenv("vault_path").replace(/^~/, homepath);
 
 var workspace_array = app.doShellScript(
     'grep "main" -B1 "' + vault_path + '/.obsidian/workspaces.json"'
-    + '| grep -vE "\\-\\-|main" | cut -d ' + "'" + '"' + "'" + ' -f2'
-).split("\r");
-
+    + ' | cut -d ' + "'" + '"' + "'" + ' -f2'
+).split("\r--\r");
 
 let jsonArray = [];
 workspace_array.forEach(workspace => {
-	let alfredMatcher = workspace.replaceAll ("-", " ");
-	let workspace_URI = "obsidian://advanced-uri?workspace=" + encodeURIComponent(workspace);
+	let workspace_name = workspace.split("\r")[0];
+	let alfredMatcher = workspace_name.replaceAll ("-", " ");
+	let workspace_URI = "obsidian://advanced-uri?workspace=" + encodeURIComponent(workspace_name);
 	jsonArray.push({
-		'title': workspace,
-		'match': alfredMatcher + " " + workspace,
+		'title': workspace_name,
+		'match': alfredMatcher + " " + workspace_name,
 		'arg': workspace_URI,
-		'uid': workspace,
+		'uid': workspace_name,
 	});
 });
 
