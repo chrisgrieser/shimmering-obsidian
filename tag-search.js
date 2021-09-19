@@ -12,19 +12,19 @@ function readFile(file) {
     var fileString = file.toString();
     return app.read(Path(fileString));
 }
-
 var tags_array = JSON.parse (readFile(tagsJSON));
 
 let jsonArray = [];
 tags_array.forEach(tagData => {
 	tagName = tagData.tag;
 	tagCount = tagData.tagCount;
+	taggedNotes = tagData.relativePaths;
 
 	jsonArray.push({
 		'title': "#" + tagName,
 		'subtitle': tagCount,
 		'match': tagName,
-		'arg': tagName,
+		'arg': tagName + ";;" + JSON.stringify(taggedNotes),
 	});
 });
 
