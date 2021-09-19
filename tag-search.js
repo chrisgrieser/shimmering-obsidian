@@ -7,16 +7,18 @@ const homepath = app.pathTo("home folder");
 const vault_path = $.getenv("vault_path").replace(/^~/, homepath);
 const tagsJSON = vault_path + "/.obsidian/plugins/metadata-extractor/tags.json";
 
-var tags_array = app.doShellScript(
-   'cat "' + tagsJSON + '" | grep -A1 ' + "'" + '"tag"' + "'"
-    + ' | cut -d: -f2'
-).split("--\r");
+// JXA file reader
+function readFile(file) {
+    var fileString = file.toString();
+    return app.read(Path(fileString));
+}
 
+var tags_array = JSON.parse (readFile(tagsJSON));
 
 let jsonArray = [];
 tags_array.forEach(tagData => {
-	tagName = tagData.split("\r")[0].split('"')[1];
-	tagCount = tagData.split("\r")[1].slice(1,-1);
+	tagName = tagData.tag;
+	tagCount = tagData.tagCount;
 
 	jsonArray.push({
 		'title': "#" + tagName,
