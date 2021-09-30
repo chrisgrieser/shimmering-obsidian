@@ -257,7 +257,7 @@ After installing the workflow, you need to configure the settings of this workfl
 	- You can get a **debugging log** by opening the workflow in Alfred preferences and pressing `cmd + D`. A small window will open up which will log everything happening during the execution of the Workflow. Use the malfunctioning part of the workflow once more, copy the content of the log window, and attach it as text file.
 
 ## Contribute
-This workflow is built in a very modular manner, so feel free to check out certain parts or suggest features via Pull Request. In particular, I would like to improve the speed of Alias Search and implement a Search for Tags, but I lack the coding knowledge to implement this in a sufficiently efficient way. [Feel free to suggest implementations for that](https://github.com/chrisgrieser/shimmering-obsidian/issues/10). 🙂
+This workflow is built in a very modular manner, so feel free to check out certain parts or suggest features via Pull Request. 
 
 ## Credits
 Most features of this plugin are only made possible by the invaluable [Advanced URI plugin](https://github.com/Vinzent03/obsidian-advanced-uri) by [@Vincent03](https://github.com/Vinzent03).
