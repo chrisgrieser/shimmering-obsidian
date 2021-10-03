@@ -96,9 +96,9 @@ Most features are triggered with dedicated Alfred keywords, as with any other Al
 **`on`: Create a [n]ew note.** 
 - Using the template set in the workflow configuration (`template_note_path`), a new note will be created in your vault root. 
 - If you have set `use_quickadd` to “true”, this command will instead trigger the [QuickAdd Plugin](https://github.com/chhoumann/quickadd).
-- Anything you write the keyword `on` (e.g. `on foobar`) will be used as argument:
+- Anything you type after the keyword `on` (e.g. `on foobar`) will be used as argument:
 	-  Normally, this will become the filename of the note (e.g. `foobar.md`).
-	-  If you are using QuickAdd, this will search the QuickAdd options for the argument (e.g. `foobar`).
+	-  If you are using QuickAdd, this will instead search the QuickAdd options for the argument (e.g. `foobar`).
 - This command also works with Obsidian not running (in which case it will open Obsidian after note creation).
 
 **`obackup`: Create a [backup] of your vault.** 
@@ -113,24 +113,24 @@ tell application id "com.runningwithcrayons.Alfred"
 end tell
 ```
 
-**`op`: Search Obsidian Community [p]lugins AND themes, directly from Alfred.** 
+**`op`: Search Obsidian Community [p]lugins and themes, directly from Alfred.** 
 - Press `return` to open the plugin in Obsidian's Community Plugin Browser. (Will open the GitHub Repository for themes instead, as there is not a way to trigger the Obsidians theme browser yet.)
 	- Use `cmd + return` to open the plugin's GitHub repository instead.
 	- Press `opt + return` to copy the GitHub repository URL to your clipboard.
 	- `ctrl + return` will open plugin configuration when the selected plugin is installed.
-	- _For developers:_ Use `fn + return` to clone the GitHub Repository into the folder specified in the workflow configuration (`download_folder_path`). When a theme is selected, only the `.css` file will be downloaded instead. 
+	- _For developers:_ Use `fn + return` to clone the GitHub Repository into the folder specified in the workflow configuration (`download_folder_path`). When a theme is selected, only the main `.css` file will be downloaded instead. 
 - Use `shift` or `cmd + Y` to open a Quick Look Preview of the theme. Press `shift` or `cmd + Y` again to close the preview.
-- Only plugins and themes officially included in the community plugins/themes are displayed — plugins/themes solely available via GitHub or still in review will not be shown.
+- Only plugins and themes officially included in the community plugins/themes are displayed — plugins/themes solely available via GitHub or still in review are not shown.
 - Add "themes" to the keyword to only display themes (i.e., use `op themes` as keyword.).
 - The thousand separator used with the download numbers can be set in the workflow configuration (`thousand_seperator`).
 
 <img src="https://user-images.githubusercontent.com/73286100/131027623-5e8b3667-d00d-47dc-ba49-6938686e2aca.gif" alt="plugin search" width=60% height=60%>
 
 **`odual`: Enter [dual] mode.**
-- When the current note is in Editor Mode, will open a new pane with the current note in Preview Mode. When in Preview Mode, will open the new pane in Editor Mode. Basically, you will have both View Modes side by side.
+- When the current note is in Editor Mode, this will open a new pane with the current note in Preview Mode. When in Preview Mode, this will open the new pane in Editor Mode. Basically, you will have both View Modes side by side.
 - Note that using the [Force View Mode Plugin](https://github.com/bwydoogh/obsidian-force-view-mode-of-note) may result in the second pane opening in the wrong view.
 - Caveat #1: Opening the new pane as [linked pane](https://help.obsidian.md/Panes/Linked+pane) is not possible right now, [as Obsidian does not expose that function via command palette](https://forum.obsidian.md/t/open-a-note-in-a-new-pane-using-the-command-palette-or-a-keyboard-shortcut/23303). `odual` is therefore only able to open an *unlinked* pane.
-- Caveat #2: When you have more than one pane open, a pane that is *not* the leftmost is active, and the active pane has a different view mode than the leftmost pane, then `odual` will open in the wrong view mode. (Obsidian unfortunately does not expose enough information about the workspace state to ensure correct behavior for this  case.)
+- Caveat #2: When you have more than one pane open, a pane that is *not* the leftmost is active, and the active pane has a different view mode than the leftmost pane, then `odual` will open in the wrong view mode. (Obsidian unfortunately does not expose enough information about the workspace state to ensure correct behavior for this case.)
 
 **`osetting`: Open the Obsidian [settings].** 
 - Also works when Obsidian is not running (like most commands of this workflow do).
@@ -139,10 +139,10 @@ end tell
 - `o.obsidian`: The hidden .obsidian folder located in your vault root will be opened in Finder. 
 - `oapplicationsupport`: Open Obsidian's the Application Support folder.
 - `oplugin`: The plugin folder in the hidden `.obsidian` folder will be opened in Finder. 
-- `otrash`: Open the hidden [.trash folder](https://help.obsidian.md/Advanced+topics/Deleting+files) located in your vault root will be opened in Finder. (Note that you have to select `Move to Obsidian trash` in the Obsidian settings under the `Files & Links` before deleted files can be found here.)
+- `otrash`: Open the hidden [.trash folder](https://help.obsidian.md/Advanced+topics/Deleting+files) located in your vault root will be opened in Finder. (Note that you have to select `Move to Obsidian trash` in the Obsidian settings under the `Files & Links` pane before deleted files can be found here.)
 
 **`ovault`: Change the [vault].**
-- Conveniently switch the vault used by this workflow. (Currently, this workflow only works on one vault at the same time.)
+- Conveniently switch the vault used by _this workflow_. (This Alfred workflow can only work on one vault at the same time.)
 
 **`ocarl`: Search Carl's Autoreponses.**
 - Search and paste autoreponses from the beloved Discord Bot of the [Obsidian Discord Server](https://discord.gg/veuWUTm) 🐢
@@ -184,7 +184,7 @@ end tell
 **`odefault`: Display (and search) a list of the font and color variables used in Obsidian's default theme.** 
 - Select a variable with `return` to copy the name to your clipboard.
 - Press `cmd + return` to copy it in the format `var(--varname)` instead.
-- *Shoutout to @NothingIsLost for this feature.*
+- *Thanks to @NothingIsLost for this feature.*
 
 <img src="https://i.imgur.com/RPHWjtj.png" alt="" width=60% height=60%>
 
@@ -249,7 +249,7 @@ After installing the workflow, you need to configure the settings of this workfl
 - Make sure that all requirements are properly installed.
 - Check the documentation of the malfunctioning feature.
 - Update to the latest version of the workflow, chances are the problem has already been fixed.
-- For workflow settings which require a file or path, you have to enter the *full absolute path*, leading with a`/` and without a trailing `/`. Do *not* use a vault-relative path.
+- For workflow settings which require a file or path, you usually have to enter the *full absolute path including file extension*, leading with a`/` and without a trailing `/`. Do *not* use a vault-relative path.
 - If you have trouble with OCR screenshots, ensure you have given Alfred permission to record your screen as explained in the [Installation Instructions](https://github.com/chrisgrieser/shimmering-obsidian#installation).
 - In case the previewing of markdown notes via `shift` or `cmd + Y` does not work properly, make you have given "qlmarkdown" permission run on your system as explained in the [Installation Instructions](https://github.com/chrisgrieser/shimmering-obsidian#installation).
 - If you did all of the above and there is still something not working, create an [issue](https://github.com/chrisgrieser/shimmering-obsidian/issues), message me on the [Obsidian Discord Server](https://discord.gg/veuWUTm) (my username there is `@pseudometa`), or write me on Twitter where my handle is [@pseudo_meta](https://twitter.com/pseudo_meta). 
