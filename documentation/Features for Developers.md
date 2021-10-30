@@ -13,10 +13,10 @@
 **`ocheat`: Quickly Access Various Cheatsheets for developing plugins and designing themes in Obsidian.**
 - The cheatsheets will be opened via the macOS Quick Look feature, so you can simply close them by pressing `space`.
 
-<img src="https://i.imgur.com/Xz5j6TQ.png" alt="Cheatsheets" width=40%>
+<img src="https://i.imgur.com/Xz5j6TQ.png" alt="Cheatsheets" width=20%>
 
 ## Open various folders related to development
-➡️ Refer to the section [Quick Acess to hidden folders](documentation/Utility%20Features.md#Open%20Various%20Folders) for further information.
+➡️ Refer to the section [Quick Access to hidden folders](documentation/Utility%20Features.md#Open%20Various%20Folders) for further information.
 
 
 ## Vault-Related features
