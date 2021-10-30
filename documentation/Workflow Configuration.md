@@ -1,4 +1,4 @@
-[Go back to the Table of Content.](README.md#Feature Overview)
+[⏪ Go back to the Table of Content](README.md#Feature%20Overview)
 
 # Workflow Configuration
 You access the main workflow configuration by clicking the *`[x]`* at the top right of the workflow.
@@ -20,7 +20,7 @@ You access the main workflow configuration by clicking the *`[x]`* at the top ri
 template_note_path
 - `use_quickadd`: Instead of creating a new note based on a template (with the keyword `on`), will trigger the [QuickAdd Plugin](https://github.com/chhoumann/quickadd). Accepted values are `true` and `false`.
 
-## Plugin and Theme-Search
+## Plugin and Theme Search
 - `thousand_seperator`: The thousand separator to use when download numbers are displayed, e.g., `.` or `,`.
 - `download_folder_path`: Path where downloads from the `op` search should be placed. (cloned repositories for plugins or the main CSS-file for themes.)
 
@@ -29,9 +29,9 @@ template_note_path
 - `ocr_prefix`: Set the prefix for OCR Screenshots. Does accept dynamic content like the current date or time when you use [Alfred's Placeholder Syntax](https://www.alfredapp.com/help/workflows/advanced/placeholders/#date-time). Note that while not easy to see, `ocr_prefix` can have multi-line values.
 
 ## Misc
-- `daily_note_path`: *absolute* path to the folder where your daily notes are saved. See[Daily Notes](documentation/Utility Features.md#Daily Notes).
+- `daily_note_path`: *absolute* path to the folder where your daily notes are saved. See[Daily Notes](documentation/Utility%20Features.md#Daily%20Notes).
 - `fontformat`: format of the base64-conversion of font files, e.g., `woff2` or `ttf`.
-- `workspace_to_spellcheck`: Name of the Workspace where spellcheck should be turned on. Leave empty to not toggle any spellcheck setting with workspace changes. See [Workspace Switcher](documentation/Workspace Switcher.md).
+- `workspace_to_spellcheck`: Name of the Workspace where spellcheck should be turned on. Leave empty to not toggle any spellcheck setting with workspace changes. See [Workspace Switcher](documentation/Workspace%20Switcher.md).
 
 ## Backups
 - `backup_destination`: Folder where the backups done by the `obackup` command should be saved.
@@ -45,7 +45,7 @@ At the top left of the workflow, there are some sky-blue fields. You need to dou
 ## Metadata Extractor Settings
 To use the metadata-extractor with this workflow, **do not change any of the default values** how the metadata files are named and where there are placed – otherwise this workflow won't be able to find them.
 
-The two settings you can – and probably should – change are the ones regarding the automatic creation of the metadata files. In the plugin's settings, the lower the frequency is, the more accurate your Searches with the [Alfred Quick Switcher](documentation/Quick Switcher.md) will be.
+The two settings you can – and probably should – change are the ones regarding the automatic creation of the metadata files. In the plugin's settings, the lower the frequency is, the more accurate your Searches with the [Alfred Quick Switcher](documentation/Quick%20Switcher.md) will be.
 
 <img src="https://i.imgur.com/7YnQJ7K.png" alt="" width=70%>
 

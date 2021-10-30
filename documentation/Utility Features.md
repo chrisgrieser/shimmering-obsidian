@@ -1,19 +1,19 @@
-[Go back to the Table of Content.](README.md#Feature Overview)
+[⏪ Go back to the Table of Content](README.md#Feature%20Overview)
 
 # Utility Features
 
 ## Table of Content
-- [OCR Screenshots](#OCR Screenshots)
-- [Paste URL into selection](#Paste URL into selection)
-- [Move Note](#Move Note)
-- [Create new Note](#Create new Note)
-- [Backup your Vault](#Backup your Vault)
-- [Dual Mode](#Dual Mode)
-- [Access Obsidian Settings](#Access Obsidian Settings)
-- [Open Various Folders](#Open Various Folders)
-- [Change & Access your Vault](#Change & Access your Vault)
-- [Daily Notes](#Daily Notes)
-- [Carl 🐢](#Carl 🐢)
+- [OCR Screenshots](#OCR%20Screenshots)
+- [Paste URL into selection](#Paste%20URL%20into%20selection)
+- [Move Note](#Move%20Note)
+- [Create new Note](#Create%20new%20Note)
+- [Backup your Vault](#Backup%20your%20Vault)
+- [Dual Mode](#Dual%20Mode)
+- [Access Obsidian Settings](#Access%20Obsidian%20Settings)
+- [Open Various Folders](#Open%20Various%20Folders)
+- [Change and Access your Vault](#Change%20and%20Access%20your%20Vault)
+- [Daily Notes](#Daily%20Notes)
+- [Carl 🐢](#Carl)
 
 ## OCR Screenshots
 **`Triggered via Hotkey`: Take an OCR Screenshot.**
@@ -44,8 +44,8 @@
 
 ## Create new Note
 **`on`: Create a `n`ew note.**
-- Using the template set in the [workflow configuration](documentation/Workflow Configuration.md#New Note Creation) (`template_note_path`), a new note will be created in your vault root.
-- If you have set the [workflow configuration](documentation/Workflow Configuration.md#New Note Creation) `use_quickadd` to `true`, this command will instead trigger the [QuickAdd Plugin](https://github.com/chhoumann/quickadd).
+- Using the template set in the [workflow configuration](documentation/Workflow%20Configuration.md#New%20Note%20Creation) (`template_note_path`), a new note will be created in your vault root.
+- If you have set the [workflow configuration](documentation/Workflow%20Configuration.md#New%20Note%20Creation) `use_quickadd` to `true`, this command will instead trigger the [QuickAdd Plugin](https://github.com/chhoumann/quickadd).
 - Anything you type after the keyword `on` (e.g. `on foobar`) will be used as argument:
 	- Normally, this will become the filename of the note (e.g. `foobar.md`).
 	- If you are using QuickAdd, this will instead search the QuickAdd options for the argument (e.g. `foobar`).
@@ -53,8 +53,8 @@
 
 ## Backup your Vault
 **`obackup`: Create a `backup of your vault.**
-- Your whole vault will be compressed into a *zip* file and then moved to the location you specified in the [workflow configuration](documentation/Workflow Configuration.md#Backups) (`backup_destination`). There will be a notification when the backup has been completed.
-- This command will respect the maximum number of backups you have set ([workflow configuration](documentation/Workflow Configuration.md#Backups) `max_number_of_bkps`) to prevent taking up too much disk space. When the number is reached, every new backup causes the oldest backup to be deleted.
+- Your whole vault will be compressed into a *zip* file and then moved to the location you specified in the [workflow configuration](documentation/Workflow%20Configuration.md#Backups) (`backup_destination`). There will be a notification when the backup has been completed.
+- This command will respect the maximum number of backups you have set ([workflow configuration](documentation/Workflow%20Configuration.md#Backups) `max_number_of_bkps`) to prevent taking up too much disk space. When the number is reached, every new backup causes the oldest backup to be deleted.
 - The hidden folders `.obsidian` and `.trash` are included in the backup.
 - 💡 Advanced users: you can use the following AppleScript snippet to trigger a backup. This is useful to create automated backups via [launchd](https://launchd.info/), [Cron jobs](https://ostechnix.com/a-beginners-guide-to-cron-jobs/), or [Keyboard Maestro](https://www.keyboardmaestro.com/main/).
 
@@ -81,10 +81,10 @@ end tell
 - `oapplicationsupport`: Open Obsidian's Application Support folder.
 - `oplugin`: The plugin folder in the hidden `.obsidian` folder will be opened in Finder.
 
-## Change & Access your Vault
+## Change and Access your Vault
 **`ovault`: Open the Obsidian [settings].**
 - Conveniently switch the vault used by _this workflow_. (This Alfred workflow can only work on one vault at the same time.)
-- ⚠️ Note that the [required plugins](documentation/Installation.md#Hard Requirements) will have to be installed in **each vault** you to control via Alfred.
+- ⚠️ Note that the [required plugins](documentation/Installation.md#Hard%20Requirements) will have to be installed in **each vault** you to control via Alfred.
 - You can also choose to open a new vault or open your current vault's root in your Terminal or Finder. ([The Terminal app defined in the Alfred settings](https://www.alfredapp.com/help/features/terminal/) will be used.)
 - 💡 You can also use the command `ohelpvault` to open the Help Vault (once you have opened it at least once.)
 
@@ -96,6 +96,6 @@ end tell
 - This does *not* require the Daily Notes plugin to be enabled.
 - However, the daily notes must be exactly in the format `YYYY-MM-DD` for this feature to work.
 
-## Carl 🐢
+## Carl
 **`ocarl`: Search `carl` auto-responses.**
 - Search and paste auto-responses from the beloved Discord Bot of the [Obsidian Discord Server](https://discord.gg/veuWUTm)

@@ -1,4 +1,4 @@
-[Go back to the Table of Content.](README.md#Feature Overview)
+[⏪ Go back to the Table of Content](README.md#Feature%20Overview)
 
 # Workspace Switcher
 **`ow`: Switch to a [w]orkspace**

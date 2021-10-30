@@ -1,4 +1,4 @@
-[Go back to the Table of Content.](README.md#Feature Overview)
+[⏪ Go back to the Table of Content](README.md#Feature%20Overview)
 
 # Documentation Search
 

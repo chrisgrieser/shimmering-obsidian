@@ -3,19 +3,19 @@
 ## Shimmering Obsidian 🎩
 *An Alfred Workflow with dozens search features for Obsidian*
 
-![](https://img.shields.io/github/downloads/chrisgrieser/shimmering-obsidian/total?label=Downloads&style=plastic)![](https://img.shields.io/github/v/release/chrisgrieser/shimmering-obsidian?label=Latest%20Release&style=plastic)
+![](https://img.shields.io/github/downloads/chrisgrieser/shimmering-obsidian/total?label=Downloads&style=plastic) ![](https://img.shields.io/github/v/release/chrisgrieser/shimmering-obsidian?label=Latest%20Release&style=plastic)
 
-## [Breaking Changes](documentation/Breaking Changes.md)
+## [Breaking Changes](documentation/Breaking%20Changes.md)
 When updating from version 1.x to version 2.x, there are some breaking changes to some commands. But most importantly, this plugin now requires the [metadata extractor plugin](https://github.com/kometenstaub/metadata-extractor) to run most of its functionality.
 
-Please refer to [this document](Breaking%20Changes.md) for more in-detail information on breaking changes.
+Please refer to [this document](documentation/Breaking%20Changes.md) for more in-detail information on breaking changes.
 
 ## Feature Overview
 - *For a full documentation & usage guide, refer to the respective subsection.*
 - *Features marked with the 🆕 emoji are new to version 2.0.*
 - *Features marked with ✴️ been improved in version 2.0. Refer to the documentation to see what's new.*
 
-### [Powerful Quick Switcher](documentation/Quick Switcher.md)
+### [Powerful Quick Switcher](documentation/Quick%20Switcher.md)
 - ✴️ Search Notes
 - Open Notes in new Pane, append to notes, copy link, …
 - ✴️ Includes Aliases
@@ -29,19 +29,19 @@ Please refer to [this document](Breaking%20Changes.md) for more in-detail inform
 - 🆕 Graph Traversal via Alfred
 - ✴🆕 Smart Search: A query like `o foobar #moc starred` will only display files names "foobar" with the tag "#moc" that are also starred.
 
-### [Utility Features](documentation/Utility Features.md)
-- [OCR Screenshots](documentation/Utility Features.md#OCR Screenshots)
-- [🆕 Paste URL into selection](documentation/Utility Features.md#Paste URL into selection)
-- [🆕 Move Note to a different folder](documentation/Utility Features.md#Move Note)
-- [Create a new Note](documentation/Utility Features.md#Create new Note)
-- [Backup your Vault](documentation/Utility Features.md#Backup your Vault)
-- [Dual Mode (Edit + Preview)](documentation/Utility Features.md#Dual Mode)
-- [Conveniently access various folders like `.obsidian` or `.trash`](documentation/Utility Features.md#Open Various Folders)
-- [✴️ Multi-Vault-Support: Switch the Vault controlled by this workflow](documentation/Utility Features.md#Change & Access your Vault)
-- [🆕 Daily Notes](documentation/Utility Features.md#Daily Notes)
-- [Carl 🐢](documentation/Utility Features.md#Carl 🐢)
+### [Utility Features](documentation/Utility%20Features.md)
+- [OCR Screenshots](documentation/Utility%20Features.md#OCR%20Screenshots)
+- [🆕 Paste URL into selection](documentation/Utility%20Features.md#Paste%20URL%20into%20selection)
+- [🆕 Move Note to a different folder](documentation/Utility%20Features.md#Move%20Note)
+- [Create a new Note](documentation/Utility%20Features.md#Create%20new%20Note)
+- [Backup your Vault](documentation/Utility%20Features.md#Backup%20your%20Vault)
+- [Dual Mode (Edit + Preview)](documentation/Utility%20Features.md#Dual Mode)
+- [Conveniently access various folders like `.obsidian` or `.trash`](documentation/Utility%20Features.md#Open%20Various%20Folders)
+- [✴️ Multi-Vault-Support: Switch the Vault controlled by this workflow](documentation/Utility%20Features.md#Change%20%26%20Access%20your%20Vault)
+- [🆕 Daily Notes](documentation/Utility%20Features.md#Daily%20Notes)
+- [Carl 🐢](documentation/Utility%20Features.md#Carl)
 
-### [Plugin & Theme Search](documentation/Plugin & Theme Search.md)
+### [Plugin and Theme Search](Plugin%20and%20Theme%20Search.md)
 - Create new Notes (based on Template or via QuickAdd)
 - Search Community Plugins and Themes
 - Open in Obsidian or GitHub
@@ -49,24 +49,24 @@ Please refer to [this document](Breaking%20Changes.md) for more in-detail inform
 - 🆕 Search & Create GitHub Issues
 - 🆕 *No annoyed developers! When the installed version is out of date, issue creation is blocked and replaced by a shortcut to update the plugin instead*
 
-### [Workspace Switcher](documentation/Workspace Switcher.md)
+### [Workspace Switcher](documentation/Workspace%20Switcher.md)
 - ✴️ Quickly switch Workspaces
 - 🆕 Manage Workspaces
 - 🆕 Automatically toggle Spellchecking when switching to certain workspaces
 
-### [Documentation Search](documentation/Documentation Search.md)
+### [Documentation Search](documentation/Documentation%20Search.md)
 - Search the Official Obsidian Documentation
 - 🆕 Simultaneously search the Obsidian Hub
 - Search the Forum
 
-### [CSS-related Features](documentation/CSS-related Features.md)
+### [CSS-related Features](documentation/CSS-related%20Features.md)
 - Access themes & CSS Snippets via Alfred
 - Create new Snippets from Clipboard content
 - 🆕 Quick Access to cheat sheets for theme development, e.g. default variables
 - 🆕 Download a theme's CSS file via Theme Search
 - Convert a font file base64-encoded CSS
 
-### [Features for Developers](documentation/⚙️ Features for Developers.md)
+### [Features for Developers](documentation/Features%20for%20Developers.md)
 - 🆕 Quick Access to cheat sheets for Plugin Development, e.g. Obsidian API
 - ✴️ Quickly open various development-related folders
 - 🆕 Clone a plugin's repository via the Plugin Search
@@ -80,7 +80,7 @@ Please refer to [this document](Breaking%20Changes.md) for more in-detail inform
 - Installation
 - Troubleshooting
 
-## [Workflow Configuration](documentation/Workflow Configuration.md)
+## [Workflow Configuration](documentation/Workflow%20Configuration.md)
 - Workflow Settings
 - Setting up Hotkeys
 - Metadata Extractor Configuration
