@@ -1,7 +1,7 @@
 # README
 
 ## Shimmering Obsidian 🎩
-*An Alfred Workflow with ~~a two~~ dozens of features for Obsidian*
+*An Alfred Workflow with dozens of features for Obsidian*
 
 ![](https://img.shields.io/github/downloads/chrisgrieser/shimmering-obsidian/total?label=Downloads&style=plastic) ![](https://img.shields.io/github/v/release/chrisgrieser/shimmering-obsidian?label=Latest%20Release&style=plastic)
 
@@ -30,16 +30,16 @@ Please refer to [this document](documentation/Breaking%20Changes.md) for more in
 - ✴🆕 Smart Search: A query like `o foobar #moc starred` will only display files names "foobar" with the tag "#moc" that are also starred.
 
 ### [Utility Features](documentation/Utility%20Features.md)
-- [OCR Screenshots](documentation/Utility%20Features.md#OCR%20Screenshots)
-- [🆕 Paste URL into selection](documentation/Utility%20Features.md#Paste%20URL%20into%20selection)
-- [🆕 Move Note to a different folder](documentation/Utility%20Features.md#Move%20Note)
-- [Create a new Note](documentation/Utility%20Features.md#Create%20new%20Note)
-- [Backup your Vault](documentation/Utility%20Features.md#Backup%20your%20Vault)
-- [Dual Mode (Edit + Preview)](documentation/Utility%20Features.md#Dual%20Mode)
-- [Conveniently access various folders like `.obsidian` or `.trash`](documentation/Utility%20Features.md#Open%20Various%20Folders)
-- [✴️ Multi-Vault-Support: Switch the Vault controlled by this workflow](documentation/Utility%20Features.md#Change%20%26%20Access%20your%20Vault)
-- [🆕 Daily Notes](documentation/Utility%20Features.md#Daily%20Notes)
-- [Carl 🐢](documentation/Utility%20Features.md#Carl)
+- OCR Screenshots
+- 🆕 Paste URL into selection
+- 🆕 Move Note to a different folder
+- Create a new Note
+- Backup your Vault
+- Dual Mode (Edit + Preview)
+- Conveniently access various folders like `.obsidian` or `.trash`
+- ✴️ Multi-Vault-Support: Switch the Vault controlled by this workflow
+- 🆕 Daily Notes
+- 🐢 Carl Auto-Responses
 
 ### [Plugin and Theme Search](Plugin%20and%20Theme%20Search.md)
 - Create new Notes (based on Template or via QuickAdd)
@@ -78,7 +78,7 @@ Please refer to [this document](documentation/Breaking%20Changes.md) for more in
 ## [Installation](documentation/Installation.md)
 - Requirements
 - Installation
-- Troubleshooting
+- [Troubleshooting](documentation/Installation.md#Troubleshooting)
 
 ## [Workflow Configuration](documentation/Workflow%20Configuration.md)
 - Workflow Settings
@@ -86,7 +86,7 @@ Please refer to [this document](documentation/Breaking%20Changes.md) for more in
 - Metadata Extractor Configuration
 
 ## Credits
-- Big shout-out to @koala for developing the [metadata extractor plugin](https://github.com/kometenstaub/metadata-extractor), for which this workflow is right now the main client.
+- Big shoutout to @koala for developing the [metadata extractor plugin](https://github.com/kometenstaub/metadata-extractor), for which this workflow is right now the main client.
 - Also thanks to [@Vincent03](https://github.com/Vinzent03) for his invaluable [Advanced URI plugin](https://github.com/Vinzent03/obsidian-advanced-uri), which enables Alfred to control various aspects of Obsidian.
 - Main icon by [Jack Liu](https://www.reddit.com/user/jackliu1219), with some additional icons from [Freepik](https://www.freepik.com/).
 ---
