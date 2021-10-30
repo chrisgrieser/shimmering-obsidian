@@ -1,4 +1,4 @@
-[⏪ Go back to the Table of Content](README.md#Feature%20Overview)
+[⏪ Go back to the Feature Overview](https://github.com/chrisgrieser/shimmering-obsidian/blob/main/README.md#feature-overview)
 
 # CSS-related Features
 

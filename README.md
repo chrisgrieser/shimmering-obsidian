@@ -1,3 +1,5 @@
+# README
+
 # Shimmering Obsidian 🎩
 *An Alfred Workflow with dozens of features for Obsidian*
 

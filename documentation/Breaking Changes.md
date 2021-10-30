@@ -1,9 +1,9 @@
-[⏪ Go back to the Table of Content](README.md#Feature%20Overview)
+[⏪ Go back to the Feature Overview](https://github.com/chrisgrieser/shimmering-obsidian/blob/main/README.md#feature-overview)
 
 # Breaking Changes
 
 ## New Features in version 2.0
-ℹ️ The features new to version 2.0 are listed in the [Feature Overview section of the Readme](README.md#Feature%20Overview) with a 🆕 emoji.
+ℹ️ The features new to version 2.0 are listed in the [Feature Overview section of the Readme](https://github.com/chrisgrieser/shimmering-obsidian/blob/main/README.md#feature-overview) with a 🆕 emoji.
 
 ## New Requirement
 ⚠️  __The [Metadata Extractor Plugin](https://github.com/kometenstaub/metadata-extractor) is now a hard requirement that needs to be installed – without it, you will not be able to use this plugin anymore.__ The plugin allows Alfred to access various internal data like tags, aliases and headings which third-party apps normally would not be able to do. (It also greatly increases the speed of this workflow 🙂)

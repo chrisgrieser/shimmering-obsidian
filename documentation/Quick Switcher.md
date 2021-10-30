@@ -1,4 +1,4 @@
-[⏪ Go back to the Table of Content](README.md#Feature%20Overview)
+[⏪ Go back to the Feature Overview](https://github.com/chrisgrieser/shimmering-obsidian/blob/main/README.md#feature-overview)
 
 # Quick Switcher
 The Quick Switcher is basically an enhanced version of [Obsidian's Quick Switcher Core Plugin](https://help.obsidian.md/Plugins/Quick+switcher).
