@@ -1,6 +1,8 @@
 # Shimmering Obsidian 🎩
 *An Alfred Workflow with more than a dozen features for Obsidian*
 
+[test](./documentation/bla)
+
 ![](https://img.shields.io/github/downloads/chrisgrieser/shimmering-obsidian/total?label=Downloads&style=plastic)  ![](https://img.shields.io/github/v/release/chrisgrieser/shimmering-obsidian?label=Latest%20Release&style=plastic)
 
 ## Overview
