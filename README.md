@@ -1,7 +1,7 @@
 # README
 
 ## Shimmering Obsidian 🎩
-*An Alfred Workflow with dozens search features for Obsidian*
+*An Alfred Workflow with ~~a two~~ dozens of features for Obsidian*
 
 ![](https://img.shields.io/github/downloads/chrisgrieser/shimmering-obsidian/total?label=Downloads&style=plastic) ![](https://img.shields.io/github/v/release/chrisgrieser/shimmering-obsidian?label=Latest%20Release&style=plastic)
 
@@ -35,7 +35,7 @@ Please refer to [this document](documentation/Breaking%20Changes.md) for more in
 - [🆕 Move Note to a different folder](documentation/Utility%20Features.md#Move%20Note)
 - [Create a new Note](documentation/Utility%20Features.md#Create%20new%20Note)
 - [Backup your Vault](documentation/Utility%20Features.md#Backup%20your%20Vault)
-- [Dual Mode (Edit + Preview)](documentation/Utility%20Features.md#Dual Mode)
+- [Dual Mode (Edit + Preview)](documentation/Utility%20Features.md#Dual%20Mode)
 - [Conveniently access various folders like `.obsidian` or `.trash`](documentation/Utility%20Features.md#Open%20Various%20Folders)
 - [✴️ Multi-Vault-Support: Switch the Vault controlled by this workflow](documentation/Utility%20Features.md#Change%20%26%20Access%20your%20Vault)
 - [🆕 Daily Notes](documentation/Utility%20Features.md#Daily%20Notes)
