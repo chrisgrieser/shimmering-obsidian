@@ -2815,7 +2815,7 @@
 	<key>createdby</key>
 	<string>Chris Grieser</string>
 	<key>description</key>
-	<string>An Alfred Workflow with more than two dozen utility features for Obsidian</string>
+	<string>An Alfred Workflow with dozens of features for Obsidian</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
@@ -7990,184 +7990,17 @@ echo -n "$vault_path"</string>
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>ℹ️ Visit the GitHub Page for Information on Configuration and Usage: https://github.com/chrisgrieser/shimmering-obsidian#readme
-
-Created by @pspeudometa (Discord) aka @chrisgrieser (GitHub).
-Main icon by [Jack Liu](https://www.reddit.com/user/jackliu1219) With some additional icons from https://www.freepik.com/.
+	<string>ℹ️ The new version 2.0 is a complete overhaul of the workflow, with a few breaking changes and more than a dozen new features. For an overview of all changes, refer to the completely overhauled documentation.
+https://github.com/chrisgrieser/shimmering-obsidian/blob/main/README.md
 
 ---
 
-# Release Notes
-v. 2.0: Bridge-Plugin enabled features: Searching tags, aliases, headings and more!
+⚠️ This workflow now requires the metadata extractor plugin to function. Read information here:
+https://github.com/chrisgrieser/shimmering-obsidian/blob/main/documentation/Breaking%20Changes.md
 
-** For a better overview, all _new_ features have been marked as yellow in the workflow.**
+---
 
-**Information on version 2.0**
-Thanks to @koala's work on the [Metadata Extractor Plugin](https://github.com/kometenstaub/metadata-extractor), third-party apps like Alfred are now able to acess tons of vault data previously not available before – among them tags, aliases, heading, etc. Many thanks to @koala for enabling all of the following features! 
-**❗️So first of all, you need to install the [Bridge Plugin](https://github.com/kometenstaub/bridge) to be able to use any of the new features.**
-
-**new features**
-- new `ot` keyword searches all tags in your vault. selecting a tag will show all documents with that tag.
-	- New workflow configuration `merge_nested_tags` to toggle merging / not merging nested to to their parent-tag
-	- Press `cmd + return` to search for the tag inside Obsidian instead.
-- Selecting a result from `o` search with `shift + return` will now browse a list of **links and backlins** of that note. Selecting notes in that list with `shift + return` displays a list of links and backlinks of *that* note – this means you can basically traverse your graph via Alfred!
-- `ow` has an additional option to open the `Manage Workspaces` Command.
-- `o` now has improved and instant alias-search. 
-- `o` with improved speed and better matching
-- open `spellcheck_on_workspace` to toggle on spellcheck when switching to certain workspaces
-- `oh` now searches the Community Vault as well as the official documentation
-- new hotkey to turn word under cursor into wikilink-suggestion
-- `ocheat` displays several cheatsheets for Obsidian CSS Designers andDevelopers (replaces `odefault`). Thanks to  @TfTHacker and @ebullient for their cheat sheets
-- `o`-search is now also able to search headings and open the note at the heading.
-- new setting `h_lvl_ignore` defines which heading-levels will be ignored, e.g. "16" to ignore h1 and h6, "3456" to ignore h3 to h6.
-- `oupdate` keyword to update either the documentation/COmmunity-Vault-Search or to update the Metadata from the Metada-Extractor Plugin manually
-- now works with nested vaults as well
-- appending to a note (`fn + return`) now works in the background and will not open Obsidian
-base64 conversion now also accepts `.otf`
-- New workflow configuration `reveal_after_open` to auto-reveal files in the file explorer, when opening a file (issue #17)
-- `ow` command also has a spellcheck-toggle for convenience
-- `obeta` command to add a beta plugin to [Obsidian42 BRAT Plugin](https://github.com/TfTHacker/obsidian42-brat).
-- new `ohelp` command to pen the Help Vault.
-- new workflow configuration "auto_update". Set to "false" to stop automatic updates of this workflow
-- new workflow configuration "open_after_appending". 
-
-**⚠️ Breaking Change:**
-- the previous `ot` command to open the current theme has been **removed** to avoid overlap with the new tag search – it's functionaliy has been covered by the `ocss` command anyway.
-- the previous `otrash` command to open the current theme has been renamed to `o.`, to avoid crowding the `ot` keyword. For consistency, and simplicity, `o.obsidian` is now also accessible via `o.`
-- keyword `odefault` repalced with `ocheat`
-- forum search renamed to `of` because to crowded
-- open in Dualmode modifier is now cmd + shift instead of shift (there just aren't anough modifiers on the keyboard...)
-- `osettings` keyword *for updating the documentation search* has been renamed `oupdate` for consistency
-- attachment search removed – it would simply get to crowded
-- removed CSS Snippet toggling, as there are now multiple plugins that do that better
-- removed hotkey for font-base64-conversion for decluttering. (You can still set one of your own, if you want to!)
-
-v. 1.13
-- `new hotkey`: **Paste URL into selection**. Basically replicates the functionality of the [plugin of the same name](https://github.com/denolehov/obsidian-url-into-selection), that is unfortunately not working anymore. This means when you have text selected, and an URL in your clipboard, it would automatically get inserted when pressing the hotkey. 
-- As with the other hotkeys, select the sky blue-field and set your hotkey. Suggested keyboard shortcut is `cmd + k`, after having deactivated the respective hotkey in Obsidian.
-- bugfix for `ow`
-
-v. 1.12
-- new command `ow`: directly open a workspace
-
-v. 1.11.1
-- bugfix for carl 🐢
-
-v. 1.11
-- new keyword `ocarl`: displays auto-reponses of our beloved Discord bot 🐢
-
-v. 1.10
-- `op` command can now open the plugin configuration by using `ctrl + return`
-
-v. 1.9
-- for developers: new command `oapplicationsupport` to quickly open Obsidian's Application Support folder (which is located outside of the `.obsidian` folder). 
-- plugin/theme search via `op` is improved in speed, reliability and directly opens plugin pages now
-
-v. 1.8.1
-- bugfix when downloading theme css files
-
-v. 1.8: **Download Plugin Repos / Theme css files**
-**new feature**
-- new feature for developers: use `fn + return` when using the `op` plugin/theme search to download the repository of the selected plugin into your download folder. (With themes, `.css` file is downloaded instead.) You can to specify your download folder in the workflow configuration (`download_folder_path`). (issue #14)
-
-**other improvements**
-- major speed improvement to `odual` and the speed of opening of files in new panes with `o` search
-- **removed need for Obsidian's QuickSwitch as dependency**. If you solely use the `o` search, you can now disable the QuickSwitch core plugin
-
-v. 1.7.3
-**enhancement**
-- `ot` selected with `opt` (`opt + return`) now reveals the current theme in Finder (consistent other uses of `opt + return` in this workflow)
-
-**bugfix**
-- fixed bug with `obackup` not working when where was nothing in the vault trash folder (issue #12)
-
-v. 1.7.2
-- fixed bug when searching starred images in `os`
-
-v. 1.7.1
-- fixed `o` not showing up in some rare occasions 
-
-v. 1.7 New Feature: Search Recent Files
-- Search for *recently accessed files* with the new `or` search. Same modifiers (`cmd/ctrl/opt/fn/shift + return` and `shift` for preview) applies as with `o`
-
-**Bugfixes**
-- multiple themes displayed correctly in `ocss`
-- some refactoring of `o` and `os`
-
-
-v. 1.6.2
-- `search_ignore_attachments` now excludes attachment filetypes instead of attachment folders, in line with how the QuickSwitcher Core plugin works.
-- fixed bug where using root as attachment folder would break `o` search (thanks @porkchop).
-- fixed icons of themes and snippet folder
-
-v. 1.6.1
-- fixed bug where `odual`, `obackup`, templated-based note-creation and `snippet toggling` wouldn't work when *not* using `~` (issue #9).
-
-
-v.1.6
-**new feature**
-- when browsing folders with `o`, you have the option to go up to the parent folder. Now you can basically browse your vault fully via Alfred!
-
-**Fixes &amp; Internal**
-- reduced file size
-- some refactoring
-- bugfix for some edge cases with M1 filesystems
-- fixed empty aliases showing up in small vaults
-
-v. 1.5.4
-- OCR Screenshots have now a setting in the workflow configuration, where you can insert a prefix.
-	- Default value is the date as before.
-	- You can insert a different date format by following [Alfred's Placeholder-Syntax](https://www.alfredapp.com/help/workflows/advanced/placeholders/#date-time).
-	- Leave the prefix empty or insert something else (e.g. a YAML-Header). Note that while not very visible, the workflow setting variables *do* accept multi-line values.
-
-v. 1.5.3
-- improved `odual`: now properly switches view mode, regardless of current view (issue #7)
-
-v. 1.5.2
-- fix `os` when there are no starred files
-
-v. 1.5.1
-- fix empty filenames when using on without parameter
-
-v. 1.5
-- Open notes in dual mode via `shift + return` when using the `o` or `os` search (issue #7).
-- Pass a parameter to `on`:
-  - this parameter will become the title of the new note.
-  - when using QuickAdd, this becomes the parameter for searching the QuickAdd options instead (issue #7).
-
-v. 1.4
-**New Feature**
-- access your starred searches via `os`
-
-**Bugfixes**
-- fixed a bug where `on` does not work properly when used to activate quickadd while Obsidian is not running
-- fixed a bug where `odual` does not work properly when used while Obsidian is not running
-- added explanation to the documentation why `odual` cannot open a *linked* new pane (Obsidian does not expose that function to third-party apps)
-
-v. 1.3.2
-- changes the date formatting of OCR Screenshots to work better with more languages (issue #5).
-
-v. 1.3.1
-- fix for some theme screenshots not showing up properly
-
-v. 1.3: Search Themes
-- `op` now also searches community themes (which unfortunately, can only be opened in GitHub)
-- use `op themes` to only search for themes.
-- use `shift` or `cmd + Y` to preview a theme. Use `shift` or `cmd + Y` to close the preview again.
-
-- bugfix for tesseract installations via homebrew on M1 Macs (issue #3)
-- improved documentation to better explain which requirements are needed for what function (issue #4)
-- some refactoring
-
-
-v. 1.2
-- bugfix for `odual` command
-
-v. 1.1: Public Release
-- Search starred files only via the keyword `os`
-- display starred status in general search (`o`)
-- display icon for installed plugins in Plugin-Search
-- small fixes</string>
+Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (rl). https://chris-grieser.de/</string>
 	<key>uidata</key>
 	<dict>
 		<key>01DCEAE6-93DC-452F-86C2-6694ED7CB436</key>
@@ -10317,15 +10150,15 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 	</dict>
 	<key>variablesdontexport</key>
 	<array>
+		<string>use_quickadd</string>
+		<string>workspace_to_spellcheck</string>
 		<string>vault_path</string>
 		<string>daily_note_path</string>
-		<string>use_quickadd</string>
 		<string>backup_destination</string>
 		<string>template_note_path</string>
-		<string>workspace_to_spellcheck</string>
 	</array>
 	<key>version</key>
-	<string>1.13</string>
+	<string>2.0</string>
 	<key>webaddress</key>
 	<string>https://chris-grieser.de/</string>
 </dict>
