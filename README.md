@@ -71,8 +71,6 @@ Please refer to [this document](documentation/Breaking%20Changes.md) for more in
 - 🆕 Open the Vault's root in the default Terminal or in Finder
 - 🆕 Add & Update Beta Plugins via BRAT
 
----
-
 ## [Installation](documentation/Installation.md)
 - Requirements
 - Installation
@@ -90,10 +88,9 @@ Please refer to [this document](documentation/Breaking%20Changes.md) for more in
 - Also thanks to [@Vincent03](https://github.com/Vinzent03) for his invaluable [Advanced URI plugin](https://github.com/Vinzent03/obsidian-advanced-uri), which enables Alfred to control various aspects of Obsidian.
 - Main icon by [Jack Liu](https://www.reddit.com/user/jackliu1219), with some additional icons from [Freepik](https://www.freepik.com/).
 
-### Donations
+### Donations 🙏
 - [PayPal](https://www.paypal.com/paypalme/ChrisGrieser)
 - [Ko-Fi](https://ko-fi.com/pseudometa)
-- Thanks 🙏
 
 ### About the Developer
 - This Alfred workflow has been created by @pseudometa#9546 ([Discord](https://discord.gg/veuWUTm)) aka [@pseudo_meta (Twitter)](https://twitter.com/pseudo_meta), aka Chris Grieser (rl).
