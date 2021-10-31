@@ -5,7 +5,7 @@
 
 https://user-images.githubusercontent.com/73286100/139592494-02fad340-e562-424e-9487-544a350158a2.mov
 
-## [⚠️ Breaking Changes](documentation/Breaking%20Changes.md)
+## ⚠️ Breaking Changes
 When updating from version 1.x to version 2.x, there are some breaking changes to some commands. But most importantly, this plugin now requires the [metadata extractor plugin](https://github.com/kometenstaub/metadata-extractor) to run most of its features.
 
 Please refer to [this document](documentation/Breaking%20Changes.md) for more in-detail information on breaking changes.
@@ -15,7 +15,7 @@ Please refer to [this document](documentation/Breaking%20Changes.md) for more in
 - *Features marked with the 🆕 emoji are newly introduced in version 2.0.*
 - *Features marked with ✴️ been improved with version 2.0. Refer to the documentation to see what's new.*
 
-### [Powerful Alfred-based Quick Switcher](documentation/Alfred-based%20Quick%20Switcher.md)
+### Powerful Alfred-based Quick Switcher
 - ✴️ Search Notes
 - Open Notes in new pane, append to notes, copy Markdown links, …
 - ✴️ Includes Aliases
@@ -29,7 +29,9 @@ Please refer to [this document](documentation/Breaking%20Changes.md) for more in
 - 🆕 Graph Traversal via Alfred
 - 🆕 Smart Search: A query like `o foobar #moc starred` displays only files named "foobar" with the tag "#moc" that are also starred.
 
-### [Utility Features](documentation/Utility%20Features.md)
+➡️ [Full Documentation](documentation/Alfred-based%20Quick%20Switcher.md)
+
+### Utility Features
 - OCR Screenshots
 - 🆕 Paste URL into selection
 - 🆕 Move Note to a different folder
@@ -41,7 +43,9 @@ Please refer to [this document](documentation/Breaking%20Changes.md) for more in
 - 🆕 Daily Notes
 - 🐢 Carl Auto-Responses
 
-### [Plugin and Theme Search](documentation/Plugin%20and%20Theme%20Search.md)
+➡️ [Full Documentation](documentation/Utility%20Features.md)
+
+### Plugin and Theme Search
 - Create new Notes (based on Template or via QuickAdd)
 - Search Community Plugins and Themes
 - Open in Obsidian or GitHub
@@ -49,29 +53,39 @@ Please refer to [this document](documentation/Breaking%20Changes.md) for more in
 - 🆕 Search & Create GitHub Issues
 - 🆕 *No annoyed developers! When the installed version is out of date, issue creation is blocked and replaced by a shortcut to update the plugin instead.*
 
-### [Workspace Switcher](documentation/Workspace%20Switcher.md)
+➡️ [Full Documentation](documentation/Plugin%20and%20Theme%20Search.md)
+
+### Workspace Switcher
 - ✴️ Quickly switch Workspaces
 - 🆕 Manage Workspaces
 - 🆕 Automatically toggle Spellchecking when switching to certain workspaces
 
-### [Documentation Search](documentation/Documentation%20Search.md)
+➡️ [Full Documentation](documentation/Workspace%20Switcher.md)
+
+### Documentation Search
 - Search the Official Obsidian Documentation
 - 🆕 Simultaneously search the Obsidian Hub
 - Search the Forum
 
-### [CSS-related Features](documentation/CSS-related%20Features.md)
+➡️ [Full Documentation](documentation/Documentation%20Search.md)
+
+### CSS-related Features
 - Access themes & CSS Snippets via Alfred
 - Create new Snippets from Clipboard content
 - 🆕 Quick Access to cheat sheets for theme development, e.g. default variables
 - 🆕 Download a theme's CSS file via Theme Search
 - Convert a font file base64-encoded CSS
 
-### [Features for Developers](documentation/Features%20for%20Developers.md)
+➡️ [Full Documentation](documentation/CSS-related%20Features.md)
+
+### Features for Developers
 - 🆕 Quick Access to cheat sheets for Plugin Development, e.g. Obsidian API
 - ✴️ Quickly open various development-related folders
 - 🆕 Clone a plugin's repository via the Plugin Search
 - 🆕 Open the Vault's root in the default Terminal or in Finder
 - 🆕 Add & Update Beta Plugins via BRAT
+
+➡️ [Full Documentation](documentation/Features%20for%20Developers.md)
 
 ## [Installation](documentation/Installation.md)
 - Requirements
