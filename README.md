@@ -8,7 +8,7 @@ https://user-images.githubusercontent.com/73286100/139592494-02fad340-e562-424e-
 ## ⚠️ Breaking Changes
 When updating from version 1.x to version 2.x, there are some breaking changes to some commands. But most importantly, this plugin now requires the [metadata extractor plugin](https://github.com/kometenstaub/metadata-extractor) to run most of its features.
 
-Please refer to [this document](documentation/Breaking%20Changes.md) for more in-detail information on breaking changes.
+Please refer to [this information document on Breaking Changes](documentation/Breaking%20Changes.md) for more in-detail information.
 
 ## Feature Overview
 - *For a full documentation & usage guide, follow the links to the respective subsection.*
@@ -29,7 +29,7 @@ Please refer to [this document](documentation/Breaking%20Changes.md) for more in
 - 🆕 Graph Traversal via Alfred
 - 🆕 Smart Search: A query like `o foobar #moc starred` displays only files named "foobar" with the tag "#moc" that are also starred.
 
-➡️ [Full Documentation of Quick Switcher Features](documentation/Alfred-based%20Quick%20Switcher.md)
+➡️ [Documentation of Quick Switcher Features](documentation/Alfred-based%20Quick%20Switcher.md)
 
 ### Utility Features
 - OCR Screenshots
@@ -43,7 +43,7 @@ Please refer to [this document](documentation/Breaking%20Changes.md) for more in
 - 🆕 Daily Notes
 - 🐢 Carl Auto-Responses
 
-➡️ [Full Documentation of all Utility Features](documentation/Utility%20Features.md)
+➡️ [Documentation of all Utility Features](documentation/Utility%20Features.md)
 
 ### Plugin & Theme Search
 - Create new Notes (based on Template or via QuickAdd)
@@ -53,21 +53,21 @@ Please refer to [this document](documentation/Breaking%20Changes.md) for more in
 - 🆕 Search & Create GitHub Issues
 - 🆕 *No annoyed developers! When the installed version is out of date, issue creation is blocked and replaced by a shortcut to update the plugin instead.*
 
-➡️ [Full Documentation of the Plugin & Theme Search](documentation/Plugin%20and%20Theme%20Search.md)
+➡️ [Documentation of the Plugin & Theme Search](documentation/Plugin%20and%20Theme%20Search.md)
 
 ### Workspace Switcher
 - ✴️ Quickly switch Workspaces
 - 🆕 Manage Workspaces
 - 🆕 Automatically toggle Spellchecking when switching to certain workspaces
 
-➡️ [Full Documentation of the Workspace Switcher](documentation/Workspace%20Switcher.md)
+➡️ [Documentation of the Workspace Switcher](documentation/Workspace%20Switcher.md)
 
 ### Documentation Search
 - Search the Official Obsidian Documentation
 - 🆕 Simultaneously search the Obsidian Hub
 - Search the Forum
 
-➡️ [Full Documentation of Documentation Search](documentation/Documentation%20Search.md)
+➡️ [Documentation of the Documentation Search](documentation/Documentation%20Search.md)
 
 ### CSS-related Features
 - Access themes & CSS Snippets via Alfred
@@ -76,7 +76,7 @@ Please refer to [this document](documentation/Breaking%20Changes.md) for more in
 - 🆕 Download a theme's CSS file via Theme Search
 - Convert a font file base64-encoded CSS
 
-➡️ [Full Documentation of CSS-related Features](documentation/CSS-related%20Features.md)
+➡️ [Documentation of CSS-related Features](documentation/CSS-related%20Features.md)
 
 ### Features for Developers
 - 🆕 Quick Access to cheat sheets for Plugin Development, e.g. Obsidian API
@@ -85,21 +85,21 @@ Please refer to [this document](documentation/Breaking%20Changes.md) for more in
 - 🆕 Open the Vault's root in the default Terminal or in Finder
 - 🆕 Add & Update Beta Plugins via BRAT
 
-➡️ [Full Documentation of Features for Developers](documentation/Features%20for%20Developers.md)
+➡️ [Documentation of Features for Developers](documentation/Features%20for%20Developers.md)
 
 ## Installation
 - Requirements
 - Installation
 - [Troubleshooting](documentation/Installation.md#Troubleshooting)
 
-➡️ [Full Documentation of Installation & Setup](documentation/Installation.md)
+➡️ [Documentation of the Installation & Setup](documentation/Installation.md)
 
-## [Workflow Configuration
+## Workflow Configuration
 - Workflow Settings
 - Setting up Hotkeys
 - Metadata Extractor Configuration
 
-➡️ [Full Documentation of the Workflow Configuration](documentation/Workflow%20Configuration.md)
+➡️ [Documentation of the Workflow Configuration](documentation/Workflow%20Configuration.md)
 
 ## Credits
 
