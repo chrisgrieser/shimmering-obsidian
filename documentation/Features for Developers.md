@@ -7,13 +7,13 @@
 - the `fn + return` command to clone a plugin.
 - the [GitHub issue search](Plugin%20and%20Theme%20Search.md#%F0%9F%86%95-Searching-GitHub-Issues)
 
-<img src="https://user-images.githubusercontent.com/73286100/139559362-747b0c57-c29b-45b5-bc62-4ab53c0718c5.gif" alt="Issue Search" width=20%>
+<img src="https://user-images.githubusercontent.com/73286100/139559362-747b0c57-c29b-45b5-bc62-4ab53c0718c5.gif" alt="Issue Search" width=60%>
 
 ## 🆕 Cheatsheet
 **`ocheat`: Quickly Access Various Cheatsheets for developing plugins and designing themes in Obsidian.**
 - The cheatsheets will be opened via the macOS Quick Look feature, so you can simply close them by pressing `space`.
 
-<img src="https://i.imgur.com/nVT687p.png" alt="Cheatsheets" width=40%>
+<img src="https://i.imgur.com/nVT687p.png" alt="Cheatsheets" width=20%>
 
 ## Open various folders related to development
 ➡️ Refer to the section [Quick Access to hidden folders](Utility%20Features.md#Open-Various-Folders) for further information.
