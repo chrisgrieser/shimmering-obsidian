@@ -10616,15 +10616,15 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 	</dict>
 	<key>variablesdontexport</key>
 	<array>
-		<string>use_quickadd</string>
-		<string>workspace_to_spellcheck</string>
 		<string>vault_path</string>
+		<string>workspace_to_spellcheck</string>
 		<string>daily_note_path</string>
 		<string>backup_destination</string>
 		<string>template_note_path</string>
+		<string>use_quickadd</string>
 	</array>
 	<key>version</key>
-	<string>2.0.1</string>
+	<string>2.0.2</string>
 	<key>webaddress</key>
 	<string>https://chris-grieser.de/</string>
 </dict>
