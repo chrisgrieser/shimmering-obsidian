@@ -4,51 +4,51 @@
 
 ## Table of Content
 - [OCR Screenshots](#OCR-Screenshots)
-- [Paste URL into selection](#Paste-URL-into-selection)
-- [Move Note](#Move-Note)
+- [🆕 Paste URL into selection](#-Paste-URL-into-selection)
+- [🆕 Move Note](#-Move-Note)
 - [Create new Note](#Create-new-Note)
 - [Backup your Vault](#Backup-your-Vault)
 - [Dual Mode](#Dual-Mode)
 - [Access Obsidian Settings](#Access-Obsidian-Settings)
 - [Open Various Folders](#Open-Various-Folders)
-- [Change and Access your Vault](#Change-and-Access-your-Vault)
-- [Daily Notes](#Daily-Notes)
+- [✴️ Change and Access your Vault](#%EF%B8%8F-Change-and-Access-your-Vault)
+- [🆕 Daily Notes](#-Daily-Notes)
 - [Carl 🐢](#Carl)
 
 ## OCR Screenshots
 **`Triggered via Hotkey`: Take an OCR Screenshot.**
 - Similar to the default Mac Hotkey `cmd + shift + 4`, you will be able to select part of your screen for a screenshot. However, instead of saving a screenshot, a new note will be created which contains the OCR-content of the selection.
-- 💡 Recommendation: To stay in line with the other macOS keyboard shortcuts for taking screenshots,use something like `cmd + shift + 2` as hotkey.
+- 💡 Recommendation: To stay in line with the other macOS keyboard shortcuts for taking screenshots, use something like `cmd + shift + 2` as hotkey.
 - If the file “OCR-Screenshot” already exists in your vault root, any subsequent OCR-Screenshots will instead append to this note. This is intended for taking a lot of OCR-Screenshots in succession, e.g., during a lecture or presentation.
 - You can change the prefix to OCR screenshots by changing the [workflow configuration](documentation/Workflow Configuration.md#OCR-Screenshots) `ocr_prefix`.
 	- Use a different date format by following [Alfred's Placeholder-Syntax](https://www.alfredapp.com/help/workflows/advanced/placeholders/#date-time).
-	- You can leave `ocr_prefix` empty or insert any other fixed value (e.g. a YAML-Header). 
+	- You can leave `ocr_prefix` empty or insert any other fixed value (e.g., a YAML-Header). 
 	- 💡 While not very visible, the workflow configuration variables *do* accept multi-line values.
 - For best results, you should set the proper languages to be recognized with the workflow setting `ocr_languages`.
 
 <img src="https://i.imgur.com/xwdl1N5.gif" alt="OCR Screenshot" width=60% height=60%>
 
-## Paste URL into selection
+## 🆕 Paste URL into selection
 **`Triggered via Hotkey`: Paste URL into selection.**
 - Basically replicates the functionality of the [plugin of the same name](https://github.com/denolehov/obsidian-url-into-selection), which unfortunately does not work anymore. 
-- When you have text selected and an URL in your clipboard, this will automatically turn the selected text into a markdown link with the URL from the clipboard.
+- When you have text selected and an URL in your clipboard, this will automatically turn the selected text into a Markdown link with the URL from the clipboard.
 - Suggested keyboard shortcut is something like `cmd + k` 
 - 💡 Turn off respective hotkey in Obsidian to avoid conflicts.
 
  <img src="https://user-images.githubusercontent.com/73286100/133614452-ef3147bf-7cd1-4dad-9b76-880f93fdcdf8.gif" alt="paste url into selection" width=50%>
 
-## Move Note
+## 🆕 Move Note
 **`om` or `triggered via hotkey`: Move the current note to a different folder in your vault.**
 - This fully replicates the functionality of the `Move File to another folder`.
-- 💡 The reason for this command is that the `Move File to another folder` is only available when the file explorer core plugin is enabled. However, some users of this Alfred workflow (including myself) prefer to fully navigate their vault via Alfred, so that the file explorer isn't really needed anymore. – the move command is basically the last thing stopping you from simply deactivating the file explorer plugin.
+- 💡 The reason for this command is that the `Move File to another folder` is only available when the file explorer core plugin is enabled. However, some users of this Alfred workflow (including myself) prefer to fully navigate their vault via Alfred, so that the file explorer isn't really needed anymore — the move command is basically the last thing stopping you from simply deactivating the file explorer plugin.
 
-## Create new Note
+## Create a new Note
 **`on`: Create a `n`ew note.**
 - Using the template set in the [workflow configuration](documentation/Workflow%20Configuration.md#New-Note-Creation) (`template_note_path`), a new note will be created in your vault root.
 - If you have set the [workflow configuration](documentation/Workflow%20Configuration.md#New-Note-Creation) `use_quickadd` to `true`, this command will instead trigger the [QuickAdd Plugin](https://github.com/chhoumann/quickadd).
-- Anything you type after the keyword `on` (e.g. `on foobar`) will be used as argument:
-	- Normally, this will become the filename of the note (e.g. `foobar.md`).
-	- If you are using QuickAdd, this will instead search the QuickAdd options for the argument (e.g. `foobar`).
+- Anything you type after the keyword `on` (e.g., `on foobar`) will be used as argument:
+	- Normally, this will become the filename of the note (e.g., `foobar.md`).
+	- If you are using QuickAdd, this will instead search the QuickAdd options for the argument (e.g., `foobar`).
 - This command also works with Obsidian not running (in which case it will open Obsidian after note creation).
 
 ## Backup your Vault
@@ -76,19 +76,19 @@ end tell
 - Also works when Obsidian is not running (like most commands of this workflow do).
 
 ## Open Various Folders
-- `o.obsidian`: The hidden .obsidian folder located in your vault root will be opened in Finder.
-- `o.trash`: Open the hidden [.trash folder](https://help.obsidian.md/Advanced+topics/Deleting+files) located in your vault root will be opened in Finder. (Note that you have to select `Move to Obsidian trash` in the Obsidian settings under the `Files & Links` tab before deleted files can be found here.)
-- `oapplicationsupport`: Open Obsidian's Application Support folder.
+- `o.obsidian`: The hidden `.obsidian` folder located in your vault root will be opened in Finder.
+- `o.trash`: Open the hidden [`.trash` folder](https://help.obsidian.md/Advanced+topics/Deleting+files) located in your vault root will be opened in Finder. (Note that you have to select `Move to Obsidian trash` in the Obsidian settings under the `Files & Links` tab before deleted files can be found here.)
+- 🆕 `oapplicationsupport`: Open Obsidian's Application Support folder.
 - `oplugin`: The plugin folder in the hidden `.obsidian` folder will be opened in Finder.
 
-## Change and Access your Vault
+## ✴️ Change and Access your Vault
 **`ovault`: Open the Obsidian [settings].**
 - Conveniently switch the vault used by _this workflow_. (This Alfred workflow can only work on one vault at the same time.)
-- ⚠️ Note that the [required plugins](documentation/Installation.md#Hard-Requirements) will have to be installed in **each vault** you to control via Alfred.
+- ⚠️ Note that the [required plugins](documentation/Installation.md#Hard-Requirements) will have to be installed in **each vault** you want to control via Alfred.
 - You can also choose to open a new vault or open your current vault's root in your Terminal or Finder. ([The Terminal app defined in the Alfred settings](https://www.alfredapp.com/help/features/terminal/) will be used.)
 - 💡 You can also use the command `ohelpvault` to open the Help Vault (once you have opened it at least once.)
 
-## Daily Notes
+## 🆕 Daily Notes
 **`od`: Open & Append to today's daily note [settings].**
 - Either open today's daily note or append to today's daily note. 
 - This feature works without Obsidian running, since when appending, your daily note will not be opened. 
@@ -98,4 +98,4 @@ end tell
 
 ## Carl
 **`ocarl`: Search `carl` auto-responses.**
-- Search and paste auto-responses from the beloved Discord Bot of the [Obsidian Discord Server](https://discord.gg/veuWUTm)
+- Search and paste auto-responses from the beloved Discord Bot of the [Obsidian Discord Server](https://discord.gg/veuWUTm).

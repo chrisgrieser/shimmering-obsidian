@@ -5,15 +5,15 @@
 ## Plugin Search
 ➡️ Refer to the [Plugin & Theme Search](documentation/Plugin%20and%20Theme%20Search.md#Plugins) for the Information on the theme search capabilities. Particularly useful for plugin developers should be:
 - the `fn + return` command to clone a plugin.
-- The [GitHub issue search](documentation/Plugin%20and%20Theme%20Search.md#%F0%9F%86%95-Searching-GitHub-Issues)
+- the [GitHub issue search](documentation/Plugin%20and%20Theme%20Search.md#%F0%9F%86%95-Searching-GitHub-Issues)
 
 <img src="https://user-images.githubusercontent.com/73286100/139559362-747b0c57-c29b-45b5-bc62-4ab53c0718c5.gif" alt="Issue Search" width=60%>
 
-## 🆕  Cheatsheet
+## 🆕 Cheatsheet
 **`ocheat`: Quickly Access Various Cheatsheets for developing plugins and designing themes in Obsidian.**
 - The cheatsheets will be opened via the macOS Quick Look feature, so you can simply close them by pressing `space`.
 
-<img src="https://i.imgur.com/Xz5j6TQ.png" alt="Cheatsheets" width=60% height=30%>
+<img src="https://i.imgur.com/nVT687p.png" alt="Cheatsheets" width=40%>
 
 ## Open various folders related to development
 ➡️ Refer to the section [Quick Access to hidden folders](documentation/Utility%20Features.md#Open-Various-Folders) for further information.
@@ -31,5 +31,5 @@
 - Add a new plugin to your beta plugins.
 - Open the repository of a beta plugin.
 - Update all beta plugins.
-- All commands require the [BRAT Plugin](https://github.com/TfTHacker/obsidian42-brat)
+- All commands require the [BRAT Plugin](https://github.com/TfTHacker/obsidian42-brat).
 

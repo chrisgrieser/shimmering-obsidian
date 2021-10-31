@@ -10,14 +10,13 @@ You access the main workflow configuration by clicking the *`[x]`* at the top ri
 	- You can later on change the vault that you want to control with this workflow via the [`ovault` command](documentation/Utility%20features#Change-and-Access-your-Vault).
 - `auto_update`: Periodically check for updates *of this workflow* and update automatically. Accepts `true` or `false`.
 
-## Quick Switcher
-- `h_Ivl_ignore`: Heading levels that should be ignored in the Quick Switcher (`o` command). `h1 h6` will ignore h1 and h6, so only h2, h3, h4, and h5 show up in the Quick Switcher. `h4 h5 h6` will only show h1, h2 and h3 in the Quick Switcher. Enter  `h1 h2 h3 h4 h5 h6` to ignore all headings in the Quick Switcher.
-- `merge_nested_tags`: when using the `ot` search, merge all [nested tags](https://help.obsidian.md/Plugins/Tag+pane#Nested+tags) to their parent tag, e.g. `#inbox/toread` and `#inbox/later` would both be subsumed under `#inbox`. Accepts `true` or `false`.
+## Alfred-based Quick Switcher
+- `h_Ivl_ignore`: Heading levels that should be ignored in the Quick Switcher (`o` command). `h1 h6` will ignore h1 and h6, so only h2, h3, h4, and h5 show up in the Quick Switcher. `h4 h5 h6` will only show h1, h2 and h3 in the Quick Switcher. Enter `h1 h2 h3 h4 h5 h6` to ignore all headings in the Quick Switcher.
+- `merge_nested_tags`: when using the `ot` search, merge all [nested tags](https://help.obsidian.md/Plugins/Tag+pane#Nested+tags) to their parent tag, e.g., `#inbox/toread` and `#inbox/later` would both be subsumed under `#inbox`. Accepts `true` or `false`.
 - `open_after_appending`: When appending to a note (`fn + return`), the note will automatically be opened afterwards. Accepts `true` or `false`.
 
 ## New Note Creation
 - `template_note_path`: Template to use when creating new notes with the `on` command or when browsing a folder via the `o` command.
-template_note_path
 - `use_quickadd`: Instead of creating a new note based on a template (with the keyword `on`), will trigger the [QuickAdd Plugin](https://github.com/chhoumann/quickadd). Accepted values are `true` and `false`.
 
 ## Plugin and Theme Search
@@ -29,7 +28,7 @@ template_note_path
 - `ocr_prefix`: Set the prefix for OCR Screenshots. Does accept dynamic content like the current date or time when you use [Alfred's Placeholder Syntax](https://www.alfredapp.com/help/workflows/advanced/placeholders/#date-time). Note that while not easy to see, `ocr_prefix` can have multi-line values.
 
 ## Misc
-- `daily_note_path`: *absolute* path to the folder where your daily notes are saved. See[Daily Notes](documentation/Utility%20Features.md#Daily%20Notes).
+- `daily_note_path`: *absolute* path to the folder where your daily notes are saved. See [Daily Notes](documentation/Utility%20Features.md#Daily%20Notes).
 - `fontformat`: format of the base64-conversion of font files, e.g., `woff2` or `ttf`.
 - `workspace_to_spellcheck`: Name of the Workspace where spellcheck should be turned on. Leave empty to not toggle any spellcheck setting with workspace changes. See [Workspace Switcher](documentation/Workspace%20Switcher.md).
 
@@ -38,15 +37,15 @@ template_note_path
 - `max_number_of_bkps`: maximum number of backups that should be stored at the backup destination folder. When the number is reached, every new backup cause the oldest backup to be deleted. (Decrease this number, when your backup folder becomes too big.)
 
 ## Metadata Extractor Configuration
-**⚠️ Do not change any of the default values how the metadata extractor names its output files and where they are placed – otherwise this workflow won't be able to find them.** 
+**⚠️ Do not change any of the default values how the metadata extractor names its output files and where they are placed — otherwise this workflow won't be able to find them.** 
 
 The two settings you *can* change are the ones regarding the automatic refreshing of the metadata files. The higher the frequency (= lower number), the more accurate the Quick Switcher of this Alfred workflow will become.
 
-You can change the plugins either via the Obsidian's settings menu, or more conveniently, with the `ofreq` command followed by a number. For example, `ofreq 10` will make make the metadata refresh every 10 minutes. This means when using this workflow's Quick Switcher, the data will at most be 9 minutes out of date.
+You can change the plugins either via the Obsidian's settings menu, or more conveniently, with the `ofreq` command followed by a number. For example, `ofreq 10` will make the metadata refresh every 10 minutes. This means when using this workflow's Quick Switcher, the data will at most be 9 minutes out of date.
 
 <img src="https://i.imgur.com/7YnQJ7K.png" alt="Metadata Extractor Settings" width=70%> <img src="https://i.imgur.com/PtNCamH.png" alt="ofreq command" width=70%>
 
-For more in-detail information on the metadata extractor, refer to [the plugin's readme](https://github.com/kometenstaub/metadata-extractor).
+You can also set the value to "0" to completely disable automatic updating of the metadata. In that case, you can use the `oupdate` keyword to manually refresh the metadata. For more in-detail information on the metadata extractor, refer to [the plugin's README](https://github.com/kometenstaub/metadata-extractor).
 
 ## Setting up Hotkeys
 At the top left of the workflow, there are some sky-blue fields. You need to double-click them to set the Keyboard Shortcuts you want to use for the respective commands.

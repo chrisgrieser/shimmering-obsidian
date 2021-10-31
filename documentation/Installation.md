@@ -47,7 +47,7 @@ brew install qlmarkdown
 - For workflow settings which require a file or path, you usually have to enter the *full absolute path including file extension*, leading with a`/` and without a trailing `/`. Do **not** use a vault-relative path.
 - If you have trouble with OCR screenshots, ensure you have given Alfred permission to record your screen as explained above.
 - In case the previewing of markdown notes via `shift` or `cmd + Y` does not work properly, make you have given `qlmarkdown` permission to run on your system as explained above.
-- If the [Quick Switcher of this workflow](documentation/Quick%20Switcher.md) cannot find a newly create or renamed note, but can otherwise find all other notes, you should [increase the frequency of metadata refreshing](documentation/Workflow%20Configuration#Metadata-Extractor-Configuration).
+- If the [Quick Switcher of this workflow](Alfred-based%20Quick%20Switcher.md) cannot find a newly create or renamed note, but can otherwise find all other notes, you should [increase the frequency of metadata refreshing](documentation/Workflow%20Configuration#Metadata-Extractor-Configuration).
 
 ### Step 2: Contact
 - If you did all of the above and there is still something not working, create an [issue](https://github.com/chrisgrieser/shimmering-obsidian/issues), message me on the [Obsidian Discord Server](https://discord.gg/veuWUTm) (my username there is `@pseudometa#9546`), or write me on Twitter where my handle is [@pseudo_meta](https://twitter.com/pseudo_meta).
