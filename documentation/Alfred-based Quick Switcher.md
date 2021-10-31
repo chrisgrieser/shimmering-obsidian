@@ -22,7 +22,7 @@ This keyword searches all your notes, aliases, folders, and headings combined.
 - This works similar to Obsidian's built-in “QuickSwitch” feature, but can be triggered without Obsidian running (in which case it will open Obsidian with the selected note). Press `↵` to open the selected file in Obsidian.
 	- `cmd + ↵`: Open the file in a new pane.
 	- `opt + ↵`: Reveal the file in Finder.
-	- `fn + ↵`: Append the content of your clipboard to the selected note. When the [workflow configuration](documentation/Workflow%20Configuration.md#Quick-Switcher) `open_after_appending` is set to `true`, to open the note afterwards.
+	- `fn + ↵`: Append the content of your clipboard to the selected note. When the [workflow configuration](documentation/Workflow%20Configuration.md#Alfred-based-Quick-Switcher) `open_after_appending` is set to `true`, to open the note afterwards.
 	- `ctrl + ↵`: Copy the [Obsidian-URI to the selected file](https://help.obsidian.md/Advanced+topics/Using+obsidian+URI#Action+`hook-get-address`).
 	- 🆕 `shift + ↵`: Browse a list of all links of the selected note (outgoing links, backlinks, external links.) See at the [section "Browse Links" below](#%F0%9F%86%95%20Browse-Links-of-the-Current-Note) for further information.
 	- Press `shift` or `cmd + y` to preview the selected note via macOS' Quick Look feature. Press `shift` or `cmd + y` again to close the preview. (Caveat: YAML-Headers aren't displayed properly.)
