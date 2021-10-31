@@ -7,7 +7,7 @@ You access the main workflow configuration by clicking the *`[x]`* at the top ri
 ## Main Settings
 - `vault_path`: The *absolute* path to your obsidian vault, e.g., `/Users/pseudometa/MyVault` or `~/Documents/obsidianVault`.
 	- You can use `~` in place of your home folder (useful for syncing settings across devices.)
-	- You can later on change the vault that you want to control with this workflow via the [`ovault` command](documentation/Utility%20features#Change-and-Access-your-Vault).
+	- You can later on change the vault that you want to control with this workflow via the [`ovault` command](Utility%20features#Change-and-Access-your-Vault).
 - `auto_update`: Periodically check for updates *of this workflow* and update automatically. Accepts `true` or `false`.
 
 ## Alfred-based Quick Switcher
@@ -28,9 +28,9 @@ You access the main workflow configuration by clicking the *`[x]`* at the top ri
 - `ocr_prefix`: Set the prefix for OCR Screenshots. Does accept dynamic content like the current date or time when you use [Alfred's Placeholder Syntax](https://www.alfredapp.com/help/workflows/advanced/placeholders/#date-time). Note that while not easy to see, `ocr_prefix` can have multi-line values.
 
 ## Misc
-- `daily_note_path`: *absolute* path to the folder where your daily notes are saved. See [Daily Notes](documentation/Utility%20Features.md#Daily%20Notes).
+- `daily_note_path`: *absolute* path to the folder where your daily notes are saved. See [Daily Notes](Utility%20Features.md#Daily%20Notes).
 - `fontformat`: format of the base64-conversion of font files, e.g., `woff2` or `ttf`.
-- `workspace_to_spellcheck`: Name of the Workspace where spellcheck should be turned on. Leave empty to not toggle any spellcheck setting with workspace changes. See [Workspace Switcher](documentation/Workspace%20Switcher.md).
+- `workspace_to_spellcheck`: Name of the Workspace where spellcheck should be turned on. Leave empty to not toggle any spellcheck setting with workspace changes. See [Workspace Switcher](Workspace%20Switcher.md).
 
 ## Backups
 - `backup_destination`: Folder where the backups done by the `obackup` command should be saved.

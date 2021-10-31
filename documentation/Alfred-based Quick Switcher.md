@@ -37,7 +37,7 @@ This command also looks for **aliases**, when they are [defined in the YAML-Head
 
 ### ✴️ Search for Folders
 When **selecting a folder**, you will **“browse”** the selected folder – this means that you are now searching only for files and folders inside that folder.
-- When browsing a folder, you also have the option to create a new note _in that folder_. Will use the template note defined in the [workflow configuration](documentation/Workflow%20Configuration.md#New-Note-Creation) `template_note_path`.
+- When browsing a folder, you also have the option to create a new note _in that folder_. Will use the template note defined in the [workflow configuration](Workflow%20Configuration.md#New-Note-Creation) `template_note_path`.
 - 🆕 Furthermore, you can go up and browse the *parent* folder of the current folder. Basically, you can fully navigate the folder structure of your vault via Alfred.
 - 🆕 Add `folder` to your search query, to only display folders, e.g., `o foobar folder` will only display *folder* that have `foobar` in their name.
 - 🆕 When you are browsing inside a folder, use the query `..` or the `new` to quickly access the item for going up to the parent folder or creating a new note in that folder, respectively.
@@ -47,7 +47,7 @@ Displayed alongside the other search results are all headings in your vault. Sel
 - `ctrl + ↵`: Will copy the [Obsidian-URI to the selected file](https://help.obsidian.md/Advanced+topics/Using+obsidian+URI#Action+%60hook-get-address%60).
 - Add `heading` to your search query, to only display headings, e.g., `o foobar heading` will only display *headings* that include `foobar`.
 - Add `h1`, `h2`, … to your search query, to only display headings of a certain level, e.g., `o obsidian h2` will only display *level 2 headings* that include `obsidian`.
-- Use the [workflow configuration](documentation/Workflow%20Configuration.md#Alfred-based-Quick-Switcher)`h_Ivl_ignore` to completely ignore certain heading levels.
+- Use the [workflow configuration](Workflow%20Configuration.md#Alfred-based-Quick-Switcher)`h_Ivl_ignore` to completely ignore certain heading levels.
 - 💡 **Recommendation**: Add more heading levels to `h_lvl_ignore` if your search results become too crowded.
 
 ## 🆕 Browse Links of a Note
@@ -69,7 +69,7 @@ Displayed alongside the other search results are all headings in your vault. Sel
 	- Select a tag with `↵` to display & search all notes with that tag.
 	- In the subsequent list of your notes, all the modifiers (`cmd/ctrl/opt/fn/shift + ↵`) apply the same way as they do with the `o` search.
 	- Press `cmd + ↵` instead to open Obsidian's search pane and search for the tag there.
-- If [workflow configuration](/documentation/Workflow%20Configuration.md#Alfred-based-Quick-Switcher) `merge_nested_tags` is set to `true`, all nested tags are subsumed under their parent tag, e.g., `#inbox/toread` will be displayed under the `#inbox` tag. When set to `false`, all nested tags are displayed separately.
+- If [workflow configuration](/Workflow%20Configuration.md#Alfred-based-Quick-Switcher) `merge_nested_tags` is set to `true`, all nested tags are subsumed under their parent tag, e.g., `#inbox/toread` will be displayed under the `#inbox` tag. When set to `false`, all nested tags are displayed separately.
 
 ## Search Starred Files
 **`os`: Search `s`tarred Files and Searches**
