@@ -29,7 +29,7 @@ Please refer to [this document](documentation/Breaking%20Changes.md) for more in
 - 🆕 Graph Traversal via Alfred
 - 🆕 Smart Search: A query like `o foobar #moc starred` displays only files named "foobar" with the tag "#moc" that are also starred.
 
-➡️ [Full Documentation](documentation/Alfred-based%20Quick%20Switcher.md)
+➡️ [Full Documentation of Quick Switcher Features](documentation/Alfred-based%20Quick%20Switcher.md)
 
 ### Utility Features
 - OCR Screenshots
@@ -43,9 +43,9 @@ Please refer to [this document](documentation/Breaking%20Changes.md) for more in
 - 🆕 Daily Notes
 - 🐢 Carl Auto-Responses
 
-➡️ [Full Documentation](documentation/Utility%20Features.md)
+➡️ [Full Documentation of all Utility Features](documentation/Utility%20Features.md)
 
-### Plugin and Theme Search
+### Plugin & Theme Search
 - Create new Notes (based on Template or via QuickAdd)
 - Search Community Plugins and Themes
 - Open in Obsidian or GitHub
@@ -53,21 +53,21 @@ Please refer to [this document](documentation/Breaking%20Changes.md) for more in
 - 🆕 Search & Create GitHub Issues
 - 🆕 *No annoyed developers! When the installed version is out of date, issue creation is blocked and replaced by a shortcut to update the plugin instead.*
 
-➡️ [Full Documentation](documentation/Plugin%20and%20Theme%20Search.md)
+➡️ [Full Documentation of the Plugin & Theme Search](documentation/Plugin%20and%20Theme%20Search.md)
 
 ### Workspace Switcher
 - ✴️ Quickly switch Workspaces
 - 🆕 Manage Workspaces
 - 🆕 Automatically toggle Spellchecking when switching to certain workspaces
 
-➡️ [Full Documentation](documentation/Workspace%20Switcher.md)
+➡️ [Full Documentation of the Workspace Switcher](documentation/Workspace%20Switcher.md)
 
 ### Documentation Search
 - Search the Official Obsidian Documentation
 - 🆕 Simultaneously search the Obsidian Hub
 - Search the Forum
 
-➡️ [Full Documentation](documentation/Documentation%20Search.md)
+➡️ [Full Documentation of Documentation Search](documentation/Documentation%20Search.md)
 
 ### CSS-related Features
 - Access themes & CSS Snippets via Alfred
@@ -76,7 +76,7 @@ Please refer to [this document](documentation/Breaking%20Changes.md) for more in
 - 🆕 Download a theme's CSS file via Theme Search
 - Convert a font file base64-encoded CSS
 
-➡️ [Full Documentation](documentation/CSS-related%20Features.md)
+➡️ [Full Documentation of CSS-related Features](documentation/CSS-related%20Features.md)
 
 ### Features for Developers
 - 🆕 Quick Access to cheat sheets for Plugin Development, e.g. Obsidian API
@@ -85,17 +85,21 @@ Please refer to [this document](documentation/Breaking%20Changes.md) for more in
 - 🆕 Open the Vault's root in the default Terminal or in Finder
 - 🆕 Add & Update Beta Plugins via BRAT
 
-➡️ [Full Documentation](documentation/Features%20for%20Developers.md)
+➡️ [Full Documentation of Features for Developers](documentation/Features%20for%20Developers.md)
 
-## [Installation](documentation/Installation.md)
+## Installation
 - Requirements
 - Installation
 - [Troubleshooting](documentation/Installation.md#Troubleshooting)
 
-## [Workflow Configuration](documentation/Workflow%20Configuration.md)
+➡️ [Full Documentation of Installation & Setup](documentation/Installation.md)
+
+## [Workflow Configuration
 - Workflow Settings
 - Setting up Hotkeys
 - Metadata Extractor Configuration
+
+➡️ [Full Documentation of the Workflow Configuration](documentation/Workflow%20Configuration.md)
 
 ## Credits
 
