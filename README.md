@@ -1,4 +1,6 @@
 # README
+
+# Shimmering Obsidian 🎩
 *An Alfred Workflow with dozens of features for Obsidian*
 
 ![](https://img.shields.io/github/downloads/chrisgrieser/shimmering-obsidian/total?label=Downloads&style=plastic) ![](https://img.shields.io/github/v/release/chrisgrieser/shimmering-obsidian?label=Latest%20Release&style=plastic)
@@ -13,7 +15,7 @@ Please refer to [this document](documentation/Breaking%20Changes.md) for more in
 - *Features marked with the 🆕 emoji are newly introduced in version 2.0.*
 - *Features marked with ✴️ been improved with version 2.0. Refer to the documentation to see what's new.*
 
-### [Powerful Alfred-based Quick Switcher](Alfred-based%20Quick%20Switcher.md)
+### [Powerful Alfred-based Quick Switcher](documentation/Alfred-based%20Quick%20Switcher.md)
 - ✴️ Search Notes
 - Open Notes in new pane, append to notes, copy Markdown links, …
 - ✴️ Includes Aliases
