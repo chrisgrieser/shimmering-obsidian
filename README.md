@@ -9,7 +9,7 @@ When updating from version 1.x to version 2.x, there are some breaking changes t
 Please refer to [this document](documentation/Breaking%20Changes.md) for more in-detail information on breaking changes.
 
 ## Feature Overview
-- *For a full documentation & usage guide, refer to the respective subsection.*
+- *For a full documentation & usage guide, follow the links to the respective subsection.*
 - *Features marked with the 🆕 emoji are newly introduced in version 2.0.*
 - *Features marked with ✴️ been improved with version 2.0. Refer to the documentation to see what's new.*
 
