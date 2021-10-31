@@ -1,15 +1,15 @@
-[⏪ Go back to the Feature Overview](https://github.com/chrisgrieser/shimmering-obsidian/blob/main/README.md#feature-overview)
+[Go back to the Table of Content.](README.md#Feature Overview)
 
 # Plugin and Theme Search
-**`op`: Combined Search of community [p]lugins and community themes.**
+**`op`: Combined Search of community `p`lugins and community themes.**
 
 ## Plugins
 - Press `↵` to open the plugin in Obsidian's Community Plugin Browser.
 	- Use `cmd + ↵` to open the plugin's GitHub repository instead.
 	- Press `opt + ↵` to copy the GitHub repository URL to your clipboard.
 	- `ctrl + ↵` will open plugin configuration (when the selected plugin is installed).
-	- _⚙️ For developers:_ Use `fn + ↵` to clone the GitHub Repository into the folder specified in the [workflow configuration](documentation/Workflow%20Configuration.md#Plugin%20and%20Theme%20Search) (`download_folder_path`) via `git clone`.
-	- 🆕 `shift + ↵` to display & search the GitHub issues. See [the section below](#%F0%9F%86%95%20Searching%20GitHub%20Issues) for more information.
+	- _⚙️ For developers:_ Use `fn + ↵` to clone the GitHub Repository into the folder specified in the [workflow configuration](documentation/Workflow Configuration.md#Plugin-and-Theme-Search) (`download_folder_path`) via `git clone`.
+	- 🆕 `shift + ↵` to display & search the GitHub issues. See [the section below](#🆕-Searching-GitHub-Issues) for more information.
 - Only plugins officially included in the community plugins are displayed — plugins solely available via GitHub or still in review are not shown.
 - The thousand separator used with the download numbers can be set in the workflow configuration (`thousand_seperator`).
 - Add `plugin` to the search query to only display themes, e.g. use `op focus plugin` as search query to only display *plugins* with the term `focus`.
@@ -18,8 +18,8 @@
 ## Themes
 - Press `↵` (or `cmd + ↵`) to open the theme's GitHub Repository. (There are no separate theme pages in Obsidian Theme Browser that can be opened.)
 	- Press `opt + ↵` to copy the GitHub repository URL to your clipboard.
-	- _🎨 For Theme Designers:_ Use `fn + ↵` to download the main .css file of the theme into the folder specified in the [workflow configuration](documentation/Workflow%20Configuration.md#Plugin%20and%20Theme%20Search) (`download_folder_path`).
-	- 🆕 `shift + ↵` to display & search the GitHub issues. See [the section below](#%F0%9F%86%95%20Searching%20GitHub%20Issues) for more information.
+	- _🎨 For Theme Designers:_ Use `fn + ↵` to download the main .css file of the theme into the folder specified in the [workflow configuration](documentation/Workflow Configuration.md#Plugin-and-Theme-Search) (`download_folder_path`).
+	- 🆕 `shift + ↵` to display & search the GitHub issues. See [the section below](#🆕 Searching-GitHub-Issues) for more information.
 	- Use `shift` or `cmd + Y` to open a Quick Look Preview of the theme's promo screenshot. Press `shift` or `cmd + Y` again to close the preview.
 - Only themes officially included in the community themes are displayed — themes solely available via GitHub or still in review are not shown.
 - Add `theme` to the search query to only display themes, e.g. use `op focus theme` as search query to only display *themes* with the term `focus`.

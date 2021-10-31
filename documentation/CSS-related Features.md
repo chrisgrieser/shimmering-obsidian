@@ -3,7 +3,7 @@
 # CSS-related Features
 
 ## Open & Create your CSS Files
-**`ocss`: Access your [css] files.**
+**`ocss`: Access your `css` files.**
 - Open a theme or CSS snippet in your default text editor.
 - Open the “themes” or “snippets” folder located in `.obsidian` in Finder.
 - Create a **new CSS snippet** in mere seconds: The CSS file will be placed in your snippet folder, filled with your clipboard content, named after the query you enter after `ocss`, and then opened in your default text editor. Furthermore, this will open the Obsidian Settings in the background, to save you yet another click. 🙂

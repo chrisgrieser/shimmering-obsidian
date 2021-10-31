@@ -12,5 +12,5 @@
 <img src="https://i.imgur.com/RkKGrLw.gif" alt="Searching the Obsidian Documentation" width=60%>
 
 ## Forum Search
-**`of`: Search the Obsidian `f`orum by searching the official [Obsidian documentation](https://help.obsidian.md/Start+here) and the [Obsidian Hub](https://publish.obsidian.md/hub).**
-- Search the [Obsidian Forum](https://forum.obsidian.md/s).
+**`of`: Search the `f`orum.**
+- Search the official [Obsidian Forum](https://forum.obsidian.md/s).

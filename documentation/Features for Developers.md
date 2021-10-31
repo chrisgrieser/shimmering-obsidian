@@ -5,7 +5,7 @@
 ## Plugin Search
 ➡️ Refer to the [Plugin & Theme Search](documentation/Plugin%20and%20Theme%20Search.md#Plugins) for the Information on the theme search capabilities. Particularly useful for plugin developers should be:
 - the `fn + return` command to clone a plugin.
-- The [GitHub issue search](documentation/Plugin%20and%20Theme%20Search.md#%F0%9F%86%95%20Searching%20GitHub%20Issues)
+- The [GitHub issue search](documentation/Plugin%20and%20Theme%20Search.md#%F0%9F%86%95-Searching-GitHub-Issues)
 
 <img src="https://user-images.githubusercontent.com/73286100/139559362-747b0c57-c29b-45b5-bc62-4ab53c0718c5.gif" alt="Issue Search" width=60%>
 
@@ -16,11 +16,11 @@
 <img src="https://i.imgur.com/Xz5j6TQ.png" alt="Cheatsheets" width=60% height=30%>
 
 ## Open various folders related to development
-➡️ Refer to the section [Quick Access to hidden folders](documentation/Utility%20Features.md#Open%20Various%20Folders) for further information.
+➡️ Refer to the section [Quick Access to hidden folders](documentation/Utility%20Features.md#Open-Various-Folders) for further information.
 
 
 ## Vault-Related features
-➡️ Refer to the section [Change & Access your Vault](documentation/Utility%20Features.md#Change%20and%20Access%20your%20Vault) for information on how to:
+➡️ Refer to the section [Change & Access your Vault](documentation/Utility%20Features.md#Change-and-Access-your-Vault) for information on how to:
 - open the vault root in Finder
 - open the vault root in your (default) Terminal
 - quickly open the Help Vault

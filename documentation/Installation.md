@@ -32,19 +32,24 @@ brew install qlmarkdown
 - Install the requirements listed above.
 - Download the [latest release at GitHub](https://github.com/chrisgrieser/shimmering-obsidian/releases/latest). Double-click the `.alfredworkflow` file.
 - In some cases, you have to allow _qlmarkdown_ to be executed before you can preview markdown notes via `shift` or `cmd + Y` (This is due to Big Sur's high security measures). Follow the [instructions here](https://github.com/toland/qlmarkdown/issues/98#issuecomment-607733093) to do that.
-- The first time you use the OCR screenshot feature, you might need to give Alfred permission to record your screen. You can do so under the macOS system settings (see image below).
 - After installing the workflow, you need to configure the settings of this workflow to make use of most of its features. Refer to the [Workflow Configuration](documentation/Workflow%20Configuration.md) for further information.
-- Do **not** change the default settings of the metadata extractor plugin, regarding the name and location of the metadata files, otherwise this workflow will not be able to read them. For further information, see the [respective section of the workflow configuration](documentation/Workflow%20Configuration#Metadata%20Extractor%20Settings).
+- **⚠️ Do not change any of the default values how the metadata extractor names its output files and where they are placed – otherwise this workflow won't be able to find them.** You can however change the frequency how often the metadata is refreshed. For further information, see the [respective section of the workflow configuration](documentation/Workflow%20Configuration#Metadata-Extractor-Configuration).
+- The first time you use the OCR screenshot feature, you might need to give Alfred permission to record your screen. You can do so under the macOS system settings (see image below).
 
 <img src="https://user-images.githubusercontent.com/73286100/131231644-a800c0b0-8dc2-4ae9-bd41-c3937741b94a.png" alt="Permissions for OCR Screenshots" width=35% height=35%>
 
 ## Troubleshooting
+
+### Step 1: Common Solutions
 - Make sure that all requirements are properly installed.
 - Check the documentation of the malfunctioning feature.
 - Update to the latest version of the workflow, chances are the problem has already been fixed.
 - For workflow settings which require a file or path, you usually have to enter the *full absolute path including file extension*, leading with a`/` and without a trailing `/`. Do **not** use a vault-relative path.
 - If you have trouble with OCR screenshots, ensure you have given Alfred permission to record your screen as explained above.
-- In case the previewing of markdown notes via `shift` or `cmd + Y` does not work properly, make you have given "qlmarkdown" permission run on your system as explained above.
+- In case the previewing of markdown notes via `shift` or `cmd + Y` does not work properly, make you have given `qlmarkdown` permission to run on your system as explained above.
+- If the [Quick Switcher of this workflow](documentation/Quick%20Switcher.md) cannot find a newly create or renamed note, but can otherwise find all other notes, you should [increase the frequency of metadata refreshing](documentation/Workflow%20Configuration#Metadata-Extractor-Configuration).
+
+### Step 2: Contact
 - If you did all of the above and there is still something not working, create an [issue](https://github.com/chrisgrieser/shimmering-obsidian/issues), message me on the [Obsidian Discord Server](https://discord.gg/veuWUTm) (my username there is `@pseudometa#9546`), or write me on Twitter where my handle is [@pseudo_meta](https://twitter.com/pseudo_meta).
 - Be sure to attach a debugging log, a screenshot, or a [screen recording](https://support.apple.com/guide/quicktime-player/record-your-screen-qtp97b08e666/mac) so I can figure out the issue.
 - You can get a **debugging log** by opening the workflow in Alfred preferences and pressing `cmd + D`. A small window will open up which will log everything happening during the execution of the Workflow. Use the malfunctioning part of the workflow once more, copy the content of the log window, and attach it as text file.

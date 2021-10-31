@@ -7,8 +7,8 @@ You access the main workflow configuration by clicking the *`[x]`* at the top ri
 ## Main Settings
 - `vault_path`: The *absolute* path to your obsidian vault, e.g., `/Users/pseudometa/MyVault` or `~/Documents/obsidianVault`.
 	- You can use `~` in place of your home folder (useful for syncing settings across devices.)
-	- You can later on change the vault that you want to control with this workflow via the `ovault` keyword.
-- `auto_update`: Periodically check for updates of this workflow and update automatically. Accepts `true` or `false`.
+	- You can later on change the vault that you want to control with this workflow via the [`ovault` command](documentation/Utility%20features#Change-and-Access-your-Vault).
+- `auto_update`: Periodically check for updates *of this workflow* and update automatically. Accepts `true` or `false`.
 
 ## Quick Switcher
 - `h_Ivl_ignore`: Heading levels that should be ignored in the Quick Switcher (`o` command). `h1 h6` will ignore h1 and h6, so only h2, h3, h4, and h5 show up in the Quick Switcher. `h4 h5 h6` will only show h1, h2 and h3 in the Quick Switcher. Enter  `h1 h2 h3 h4 h5 h6` to ignore all headings in the Quick Switcher.
@@ -37,19 +37,21 @@ template_note_path
 - `backup_destination`: Folder where the backups done by the `obackup` command should be saved.
 - `max_number_of_bkps`: maximum number of backups that should be stored at the backup destination folder. When the number is reached, every new backup cause the oldest backup to be deleted. (Decrease this number, when your backup folder becomes too big.)
 
+## Metadata Extractor Configuration
+**⚠️ Do not change any of the default values how the metadata extractor names its output files and where they are placed – otherwise this workflow won't be able to find them.** 
+
+The two settings you *can* change are the ones regarding the automatic refreshing of the metadata files. The higher the frequency (= lower number), the more accurate the Quick Switcher of this Alfred workflow will become.
+
+You can change the plugins either via the Obsidian's settings menu, or more conveniently, with the `ofreq` command followed by a number. For example, `ofreq 10` will make make the metadata refresh every 10 minutes. This means when using this workflow's Quick Switcher, the data will at most be 9 minutes out of date.
+
+<img src="https://i.imgur.com/7YnQJ7K.png" alt="Metadata Extractor Settings" width=70%> <img src="https://i.imgur.com/PtNCamH.png" alt="ofreq command" width=70%>
+
+For more in-detail information on the metadata extractor, refer to [the plugin's readme](https://github.com/kometenstaub/metadata-extractor).
+
 ## Setting up Hotkeys
 At the top left of the workflow, there are some sky-blue fields. You need to double-click them to set the Keyboard Shortcuts you want to use for the respective commands.
 
 <img src="https://i.imgur.com/wlpht7f.png" alt="Setting Hotkeys" width=15% height=15%>
-
-## Metadata Extractor Settings
-To use the metadata-extractor with this workflow, **do not change any of the default values** how the metadata files are named and where there are placed – otherwise this workflow won't be able to find them.
-
-The two settings you can – and probably should – change are the ones regarding the automatic creation of the metadata files. In the plugin's settings, the lower the frequency is, the more accurate your Searches with the [Alfred Quick Switcher](documentation/Quick%20Switcher.md) will be.
-
-<img src="https://i.imgur.com/7YnQJ7K.png" alt="" width=70%>
-
-For more in-detail information on the plugin, refer to [the plugin's readme](https://github.com/kometenstaub/metadata-extractor).
 
 ## Recommended Settings
 - To avoid accidentally triggering the Quick Look feature, I suggest you turn off activating Quick Look via shift and use `cmd + Y` instead. You can do so with in the Alfred Settings under `Features → Previews`:

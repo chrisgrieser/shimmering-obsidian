@@ -1,4 +1,4 @@
-# Shimmering Obsidian 🎩
+# README
 *An Alfred Workflow with dozens of features for Obsidian*
 
 ![](https://img.shields.io/github/downloads/chrisgrieser/shimmering-obsidian/total?label=Downloads&style=plastic) ![](https://img.shields.io/github/v/release/chrisgrieser/shimmering-obsidian?label=Latest%20Release&style=plastic)
@@ -39,7 +39,7 @@ Please refer to [this document](documentation/Breaking%20Changes.md) for more in
 - 🆕 Daily Notes
 - 🐢 Carl Auto-Responses
 
-### [Plugin and Theme Search](Plugin%20and%20Theme%20Search.md)
+### [Plugin and Theme Search](documentation/Plugin%20and%20Theme%20Search.md)
 - Create new Notes (based on Template or via QuickAdd)
 - Search Community Plugins and Themes
 - Open in Obsidian or GitHub

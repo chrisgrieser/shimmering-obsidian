@@ -3,16 +3,16 @@
 # Utility Features
 
 ## Table of Content
-- [OCR Screenshots](#OCR%20Screenshots)
-- [Paste URL into selection](#Paste%20URL%20into%20selection)
-- [Move Note](#Move%20Note)
-- [Create new Note](#Create%20new%20Note)
-- [Backup your Vault](#Backup%20your%20Vault)
-- [Dual Mode](#Dual%20Mode)
-- [Access Obsidian Settings](#Access%20Obsidian%20Settings)
-- [Open Various Folders](#Open%20Various%20Folders)
-- [Change and Access your Vault](#Change%20and%20Access%20your%20Vault)
-- [Daily Notes](#Daily%20Notes)
+- [OCR Screenshots](#OCR-Screenshots)
+- [Paste URL into selection](#Paste-URL-into-selection)
+- [Move Note](#Move-Note)
+- [Create new Note](#Create-new-Note)
+- [Backup your Vault](#Backup-your-Vault)
+- [Dual Mode](#Dual-Mode)
+- [Access Obsidian Settings](#Access-Obsidian-Settings)
+- [Open Various Folders](#Open-Various-Folders)
+- [Change and Access your Vault](#Change-and-Access-your-Vault)
+- [Daily Notes](#Daily-Notes)
 - [Carl 🐢](#Carl)
 
 ## OCR Screenshots
@@ -20,7 +20,7 @@
 - Similar to the default Mac Hotkey `cmd + shift + 4`, you will be able to select part of your screen for a screenshot. However, instead of saving a screenshot, a new note will be created which contains the OCR-content of the selection.
 - 💡 Recommendation: To stay in line with the other macOS keyboard shortcuts for taking screenshots,use something like `cmd + shift + 2` as hotkey.
 - If the file “OCR-Screenshot” already exists in your vault root, any subsequent OCR-Screenshots will instead append to this note. This is intended for taking a lot of OCR-Screenshots in succession, e.g., during a lecture or presentation.
-- You can change the prefix to OCR screenshots by changing the [workflow configuration](documentation/Workflow Configuration.md#OCR Screenshots) `ocr_prefix`.
+- You can change the prefix to OCR screenshots by changing the [workflow configuration](documentation/Workflow Configuration.md#OCR-Screenshots) `ocr_prefix`.
 	- Use a different date format by following [Alfred's Placeholder-Syntax](https://www.alfredapp.com/help/workflows/advanced/placeholders/#date-time).
 	- You can leave `ocr_prefix` empty or insert any other fixed value (e.g. a YAML-Header). 
 	- 💡 While not very visible, the workflow configuration variables *do* accept multi-line values.
@@ -44,8 +44,8 @@
 
 ## Create new Note
 **`on`: Create a `n`ew note.**
-- Using the template set in the [workflow configuration](documentation/Workflow%20Configuration.md#New%20Note%20Creation) (`template_note_path`), a new note will be created in your vault root.
-- If you have set the [workflow configuration](documentation/Workflow%20Configuration.md#New%20Note%20Creation) `use_quickadd` to `true`, this command will instead trigger the [QuickAdd Plugin](https://github.com/chhoumann/quickadd).
+- Using the template set in the [workflow configuration](documentation/Workflow%20Configuration.md#New-Note-Creation) (`template_note_path`), a new note will be created in your vault root.
+- If you have set the [workflow configuration](documentation/Workflow%20Configuration.md#New-Note-Creation) `use_quickadd` to `true`, this command will instead trigger the [QuickAdd Plugin](https://github.com/chhoumann/quickadd).
 - Anything you type after the keyword `on` (e.g. `on foobar`) will be used as argument:
 	- Normally, this will become the filename of the note (e.g. `foobar.md`).
 	- If you are using QuickAdd, this will instead search the QuickAdd options for the argument (e.g. `foobar`).
@@ -84,7 +84,7 @@ end tell
 ## Change and Access your Vault
 **`ovault`: Open the Obsidian [settings].**
 - Conveniently switch the vault used by _this workflow_. (This Alfred workflow can only work on one vault at the same time.)
-- ⚠️ Note that the [required plugins](documentation/Installation.md#Hard%20Requirements) will have to be installed in **each vault** you to control via Alfred.
+- ⚠️ Note that the [required plugins](documentation/Installation.md#Hard-Requirements) will have to be installed in **each vault** you to control via Alfred.
 - You can also choose to open a new vault or open your current vault's root in your Terminal or Finder. ([The Terminal app defined in the Alfred settings](https://www.alfredapp.com/help/features/terminal/) will be used.)
 - 💡 You can also use the command `ohelpvault` to open the Help Vault (once you have opened it at least once.)
 
