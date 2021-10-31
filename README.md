@@ -13,7 +13,7 @@ Please refer to [this document](documentation/Breaking%20Changes.md) for more in
 - *Features marked with the 🆕 emoji are newly introduced in version 2.0.*
 - *Features marked with ✴️ been improved with version 2.0. Refer to the documentation to see what's new.*
 
-<img src="https://user-images.githubusercontent.com/73286100/139592277-b4c1ef70-bb5e-4a20-87f4-af558b2becb1.gif" alt="Promo Alfred Workflow" width=60%>
+https://user-images.githubusercontent.com/73286100/139592494-02fad340-e562-424e-9487-544a350158a2.mov
 
 ### [Powerful Alfred-based Quick Switcher](documentation/Alfred-based%20Quick%20Switcher.md)
 - ✴️ Search Notes
