@@ -91,7 +91,7 @@ issue_JSON.forEach(issue => {
 
 	let state = "";
 	if (issue.state == "open") state += "🟢 ";
-	else state += "🔴 ";
+	else state += "🟣 ";
 	if (title.toLowerCase().includes("request")) state += "🙏 ";
 	if (title.toLowerCase().includes("suggestion")) state += "💡 ";
 	if (title.toLowerCase().includes("bug")) state += "🐛 ";
