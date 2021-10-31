@@ -3,6 +3,8 @@
 # Alfred-based Quick Switcher
 The Alfred-based Quick Switcher is basically an enhanced version of [Obsidian's Quick Switcher Core Plugin](https://help.obsidian.md/Plugins/Quick+switcher).
 
+https://user-images.githubusercontent.com/73286100/139592494-02fad340-e562-424e-9487-544a350158a2.mov
+
 ## Table of Content
 - [Main Search (`o` search)](#Main-Search)
 	- [Search for Notes](#Search-for-Notes)
