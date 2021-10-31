@@ -3,7 +3,7 @@
 
 ![](https://img.shields.io/github/downloads/chrisgrieser/shimmering-obsidian/total?label=Downloads&style=plastic) ![](https://img.shields.io/github/v/release/chrisgrieser/shimmering-obsidian?label=Latest%20Release&style=plastic)
 
-## [Breaking Changes](documentation/Breaking%20Changes.md)
+## [⚠️ Breaking Changes](documentation/Breaking%20Changes.md)
 When updating from version 1.x to version 2.x, there are some breaking changes to some commands. But most importantly, this plugin now requires the [metadata extractor plugin](https://github.com/kometenstaub/metadata-extractor) to run most of its features.
 
 Please refer to [this document](documentation/Breaking%20Changes.md) for more in-detail information on breaking changes.
@@ -12,6 +12,8 @@ Please refer to [this document](documentation/Breaking%20Changes.md) for more in
 - *For a full documentation & usage guide, follow the links to the respective subsection.*
 - *Features marked with the 🆕 emoji are newly introduced in version 2.0.*
 - *Features marked with ✴️ been improved with version 2.0. Refer to the documentation to see what's new.*
+
+<img src="https://user-images.githubusercontent.com/73286100/139592277-b4c1ef70-bb5e-4a20-87f4-af558b2becb1.gif" alt="Promo Alfred Workflow" width=60%>
 
 ### [Powerful Alfred-based Quick Switcher](documentation/Alfred-based%20Quick%20Switcher.md)
 - ✴️ Search Notes
