@@ -10,8 +10,8 @@ Please refer to [this document](documentation/Breaking%20Changes.md) for more in
 
 ## Feature Overview
 - *For a full documentation & usage guide, refer to the respective subsection.*
-- *Features marked with the 🆕 emoji are new to version 2.0.*
-- *Features marked with ✴️ been improved in version 2.0. Refer to the documentation to see what's new.*
+- *Features marked with the 🆕 emoji are newly introduced in version 2.0.*
+- *Features marked with ✴️ been improved with version 2.0. Refer to the documentation to see what's new.*
 
 ### [Powerful Quick Switcher](documentation/Quick%20Switcher.md)
 - ✴️ Search Notes
