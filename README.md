@@ -25,7 +25,7 @@ Please refer to [this document](documentation/Breaking%20Changes.md) for more in
 - 🆕 Browse a note's links (outgoing, backlinks, external)
 - 🆕 Open External Links of a Note (without switching to the document or opening Obsidian)
 - 🆕 Graph Traversal via Alfred
-- ✴🆕 Smart Search: A query like `o foobar #moc starred` will only display files names "foobar" with the tag "#moc" that are also starred.
+- 🆕 Smart Search: A query like `o foobar #moc starred` will only display files names "foobar" with the tag "#moc" that are also starred.
 
 ### [Utility Features](documentation/Utility%20Features.md)
 - OCR Screenshots
