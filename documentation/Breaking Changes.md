@@ -15,7 +15,7 @@ The two settings you *can* change are the ones regarding the automatic refreshin
 
 You can change the plugins either via the Obsidian's settings menu, or more conveniently, with the `ofreq` command followed by a number. For example, `ofreq 10` will make the metadata refresh every 10 minutes. This means when using this workflow's Quick Switcher, the data will at most be 9 minutes out of date.
 
-<img src="https://i.imgur.com/7YnQJ7K.png" alt="Metadata Extractor Settings" width=70%> <img src="https://i.imgur.com/PtNCamH.png" alt="ofreq command" width=70%>
+<img src="https://i.imgur.com/7YnQJ7K.png" alt="Metadata Extractor Settings" width=70%> <img src="https://i.imgur.com/PtNCamH.png" alt="ofreq command" width=40%>
 
 For more in-detail information on the metadata extractor, refer to [the plugin's README](https://github.com/kometenstaub/metadata-extractor).
 
