@@ -15,7 +15,7 @@ Please refer to [this document](documentation/Breaking%20Changes.md) for more in
 
 ### [Powerful Quick Switcher](documentation/Quick%20Switcher.md)
 - ✴️ Search Notes
-- Open Notes in new Pane, append to notes, copy link, …
+- Open Notes in new pane, append to notes, copy markdown links, …
 - ✴️ Includes Aliases
 - 🆕 Search Headings (included heading levels configurable)
 - Search Starred Notes
