@@ -3,8 +3,6 @@
 # Alfred-based Quick Switcher
 The Alfred-based Quick Switcher is basically an enhanced version of [Obsidian's Quick Switcher Core Plugin](https://help.obsidian.md/Plugins/Quick+switcher).
 
-<img src="https://user-images.githubusercontent.com/73286100/139678407-9ac39baa-5f49-42a0-9622-0fbaf68540b2.gif" alt="promo video" width=70%> 
-
 ## Table of Content
 - [Main Search (`o` search)](#Main-Search)
 	- [Search for Notes](#Search-for-Notes)
@@ -15,6 +13,8 @@ The Alfred-based Quick Switcher is basically an enhanced version of [Obsidian's 
 - [🆕 Search Notes via their Tags](#-Search-Notes-via-their-Tags)
 - [Search Starred Files](#Search-Starred-Files)
 - [Search Recent Files](#Search-Recent-Files)
+
+<img src="https://user-images.githubusercontent.com/73286100/139678407-9ac39baa-5f49-42a0-9622-0fbaf68540b2.gif" alt="promo video" width=70%> 
 
 ## Main Search
 **`o`: Open files in your vault.**
