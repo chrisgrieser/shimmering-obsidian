@@ -33,7 +33,7 @@ brew install qlmarkdown
 - **⚠️ Do not change any of the default values how the metadata extractor names its output files and where they are placed** – otherwise this workflow won't be able to find them. You can however change the frequency how often the metadata is refreshed. (For further information on the metadata extractor plugin, see the [respective section of the workflow configuration](Workflow%20Configuration.md#Metadata-Extractor-Configuration).)
 - Download the [latest release at GitHub](https://github.com/chrisgrieser/shimmering-obsidian/releases/latest). Double-click the `.alfredworkflow` file.
 - In some cases, you have to allow _qlmarkdown_ to be executed before you can preview markdown notes via `shift` or `cmd + Y` (This is due to Big Sur's high security measures). Follow the [instructions here](https://github.com/toland/qlmarkdown/issues/98#issuecomment-607733093) to do that.
-- After installing the workflow, you need to configure the settings of this workflow to make use of most of its features. Refer to the [Workflow Configuration](Workflow%20Configuration.md) for further information.
+- After installing the workflow, **you need to configure the settings of this workflow to make use of most of its features.** Refer to the [Workflow Configuration](Workflow%20Configuration.md) for further information.
 - The first time you use the OCR screenshot feature, you might need to give Alfred permission to record your screen. You can do so under the macOS system settings (see image below).
 
 <img src="https://user-images.githubusercontent.com/73286100/131231644-a800c0b0-8dc2-4ae9-bd41-c3937741b94a.png" alt="Permissions for OCR Screenshots" width=35% height=35%>
@@ -44,10 +44,9 @@ brew install qlmarkdown
 - Make sure that all requirements are properly installed.
 - Check the documentation of the malfunctioning feature.
 - Update to the [latest version of the workflow](https://github.com/chrisgrieser/shimmering-obsidian/releases/latest), chances are the problem has already been fixed.
-- For workflow settings which require a file or path, you usually have to enter the *full absolute path including file extension*, leading with a`/` and without a trailing `/`. Do **not** use a vault-relative path.
-- If you have trouble with OCR screenshots, ensure you have given Alfred permission to record your screen [as explained above](## Workflow Installation).
-- In case the previewing of markdown notes via `shift` or `cmd + Y` does not work properly, make you have given `qlmarkdown` permission to run on your system [as explained above](## Workflow Installation).
-- If the [Quick Switcher of this workflow](Alfred-based%20Quick%20Switcher.md) cannot find a newly create or renamed note, but can otherwise find all other notes, you need to [use the `oupdate` command to refresh your metadata](Workflow%20Configuration#Metadata-Extractor-Configuration). You should [increase the frequency of metadata refreshing](Workflow%20Configuration#Metadata-Extractor-Configuration).
+- If you have trouble with OCR screenshots, ensure you have given Alfred permission to record your screen [as explained above](#-Workflow-Installation).
+- In case the previewing of markdown notes via `shift` or `cmd + Y` does not work properly, make you have given `qlmarkdown` permission to run on your system [as explained above](#Workflow-Installation).
+- If the [Quick Switcher of this workflow](Alfred-based%20Quick%20Switcher.md) cannot find a newly created or renamed note, but can otherwise find all other notes, you need to [use the `oupdate` command to refresh your metadata](Workflow%20Configuration#Metadata-Extractor-Configuration). You should also consider [increasing the frequency of metadata refreshing](Workflow%20Configuration#Metadata-Extractor-Configuration).
 - If the Alfred-based Quick Switcher does not work at all, make sure you haven't changed any of the default settings of the [Metadata-Extractor regarding the location & name of the JSON files](Workflow%20Configuration#Metadata-Extractor-Configuration). You should also make sure that there are three `.json` files in in the folder `{{your-vault-path}}/.obsidian/plugins/metadata-extractor`. (The folder `.obsidian` is hidden by default in Finder, so you might have to [make it visible first](https://www.macworld.co.uk/how-to/show-hidden-files-mac-3520878/) to be able to navigate there.)
 
 ### Step 2: Contact
