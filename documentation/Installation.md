@@ -43,7 +43,7 @@ brew install qlmarkdown
 ### Step 1: Common Solutions
 - Make sure that all requirements are properly installed.
 - Check the documentation of the malfunctioning feature.
-- Update to the latest version of the workflow, chances are the problem has already been fixed.
+- Update to the [latest version of the workflow](https://github.com/chrisgrieser/shimmering-obsidian/releases/latest), chances are the problem has already been fixed.
 - For workflow settings which require a file or path, you usually have to enter the *full absolute path including file extension*, leading with a`/` and without a trailing `/`. Do **not** use a vault-relative path.
 - If you have trouble with OCR screenshots, ensure you have given Alfred permission to record your screen as explained above.
 - In case the previewing of markdown notes via `shift` or `cmd + Y` does not work properly, make you have given `qlmarkdown` permission to run on your system as explained above.
@@ -51,5 +51,5 @@ brew install qlmarkdown
 
 ### Step 2: Contact
 - If you did all of the above and there is still something not working, create an [issue](https://github.com/chrisgrieser/shimmering-obsidian/issues), message me on the [Obsidian Discord Server](https://discord.gg/veuWUTm) (my username there is `@pseudometa#9546`), or write me on Twitter where my handle is [@pseudo_meta](https://twitter.com/pseudo_meta).
-- Be sure to attach a debugging log, a screenshot, or a [screen recording](https://support.apple.com/guide/quicktime-player/record-your-screen-qtp97b08e666/mac) so I can figure out the issue.
+- When messaging me, describe which feature you are using in which situation, and be sure to attach a debugging log, a screenshot, and/or a [screen recording](https://support.apple.com/guide/quicktime-player/record-your-screen-qtp97b08e666/mac). 
 - You can get a **debugging log** by opening the workflow in Alfred preferences and pressing `cmd + D`. A small window will open up which will log everything happening during the execution of the Workflow. Use the malfunctioning part of the workflow once more, copy the content of the log window, and attach it as text file.
