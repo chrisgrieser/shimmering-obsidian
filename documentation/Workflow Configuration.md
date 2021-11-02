@@ -1,4 +1,4 @@
-[⏪ Go back to the Feature Overview](https://github.com/chrisgrieser/shimmering-obsidian/blob/main/README.md#feature-overview)
+[⏪ Go back to the Feature Overview](../README.md#feature-overview)
 
 # Workflow Configuration
 You access the main workflow configuration by clicking the *`[x]`* at the top right of the workflow.
@@ -6,9 +6,8 @@ You access the main workflow configuration by clicking the *`[x]`* at the top ri
 
 ## Main Settings
 - `vault_path`: The *absolute* path to your obsidian vault, e.g., `/Users/pseudometa/MyVault` or `~/Documents/obsidianVault`.
-	- You can use `~` in place of your home folder (useful for syncing settings across devices.)
-	- You can later on change the vault that you want to control with this workflow via the [`ovault` command](Utility%20features#Change-and-Access-your-Vault).
-- `auto_update`: Periodically check for updates *of this workflow* and update automatically. Accepts `true` or `false`.
+- You can also configure which Vault to use with the [`ovault` command](Utility%20features.md#Change-and-Access-your-Vault).
+- `oupdate` will offer you several options for updating the metadata of this workflow. You need to run "Manually Refresh Metadata" at least once before you are able to use this workflow.
 
 ## Alfred-based Quick Switcher
 - `h_Ivl_ignore`: Heading levels that should be ignored in the Quick Switcher (`o` command). `h1 h6` will ignore h1 and h6, so only h2, h3, h4, and h5 show up in the Quick Switcher. `h4 h5 h6` will only show h1, h2 and h3 in the Quick Switcher. Enter `h1 h2 h3 h4 h5 h6` to ignore all headings in the Quick Switcher.
@@ -27,14 +26,15 @@ You access the main workflow configuration by clicking the *`[x]`* at the top ri
 - `ocr_languages`: set language codes of Tesseract, e.g., `eng+deu` for English and German. You can find out the code for your language(s) in [this list](https://tesseract-ocr.github.io/tessdoc/Data-Files-in-different-versions.html).
 - `ocr_prefix`: Set the prefix for OCR Screenshots. Does accept dynamic content like the current date or time when you use [Alfred's Placeholder Syntax](https://www.alfredapp.com/help/workflows/advanced/placeholders/#date-time). Note that while not easy to see, `ocr_prefix` can have multi-line values.
 
+## Backups
+- `backup_destination`: Folder where the backups done by the `obackup` command should be saved.
+- `max_number_of_bkps`: maximum number of backups that should be stored at the backup destination folder. When the number is reached, every new backup cause the oldest backup to be deleted. (Decrease this number, when your backup folder becomes too big.)
+
 ## Misc
 - `daily_note_path`: *absolute* path to the folder where your daily notes are saved. See [Daily Notes](Utility%20Features.md#Daily%20Notes).
 - `fontformat`: format of the base64-conversion of font files, e.g., `woff2` or `ttf`.
 - `workspace_to_spellcheck`: Name of the Workspace where spellcheck should be turned on. Leave empty to not toggle any spellcheck setting with workspace changes. See [Workspace Switcher](Workspace%20Switcher.md).
-
-## Backups
-- `backup_destination`: Folder where the backups done by the `obackup` command should be saved.
-- `max_number_of_bkps`: maximum number of backups that should be stored at the backup destination folder. When the number is reached, every new backup cause the oldest backup to be deleted. (Decrease this number, when your backup folder becomes too big.)
+- `auto_update`: Periodically check for updates *of this workflow* and update automatically. Accepts `true` or `false`.
 
 ## Metadata Extractor Configuration
 **⚠️ Do not change any of the default values how the metadata extractor names its output files and where they are placed — otherwise this workflow won't be able to find them.** 
