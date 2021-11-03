@@ -8,6 +8,8 @@ The features new to version 2.0 are listed in the [Feature Overview section of t
 ## New Requirement
 ⚠️ __The [Metadata Extractor Plugin](https://github.com/kometenstaub/metadata-extractor) is now a hard requirement that needs to be installed — without it, you will not be able to use this plugin anymore.__ The plugin allows Alfred to access various internal data like tags, aliases, and headings which third-party apps normally would not be able to do. (It also greatly increases the speed of this workflow!)
 
+👉 After installation, you need to create the metadata once before you can use the Alfred-based Quick Switcher: Run `opdate` → `Manually Refresh Metadata`.
+
 ## Metadata Extractor Configuration
 **⚠️ Do not change any of the default values how the metadata extractor names its output files and where they are placed — otherwise this workflow won't be able to find them.** 
 
