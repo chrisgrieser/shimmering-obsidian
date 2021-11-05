@@ -30,8 +30,8 @@ brew install qlmarkdown
 
 ## Workflow Installation
 - Install the requirements listed above.
-- **⚠️ Do not change any of the default values how the metadata extractor names its output files and where they are placed** – otherwise this workflow won't be able to find them. You can however change the frequency how often the metadata is refreshed. (For further information on the metadata extractor plugin, see the [respective section of the workflow configuration](Workflow%20Configuration.md#Metadata-Extractor-Configuration).)
 - Download the [latest release at GitHub](https://github.com/chrisgrieser/shimmering-obsidian/releases/latest). Double-click the `.alfredworkflow` file.
+- Configure the Metadata Extractor Plugin. It's **strongly recommended to set a frequency for periodic refreshing of the metadata.** (Otherwise, the metadata will be out of date soon). However, **do not** change any of the default values how the metadata extractor names its output files and where they are placed – otherwise this workflow won't be able to find them. See the [respective section of the workflow configuration](Workflow%20Configuration.md#Metadata-Extractor-Configuration).)
 - In some cases, you have to allow _qlmarkdown_ to be executed before you can preview markdown notes via `shift` or `cmd + Y` (This is due to Big Sur's high security measures). Follow the [instructions here](https://github.com/toland/qlmarkdown/issues/98#issuecomment-607733093) to do that.
 - After installing the workflow, **you need to configure the settings of this workflow to make use of most of its features.** Refer to the [Workflow Configuration](Workflow%20Configuration.md) for further information.
 - 👉 Among other settings, you have to run `oupdate` → `Manually Refresh Metadata` once so the metadata is created.
