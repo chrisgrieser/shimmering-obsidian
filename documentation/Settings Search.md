@@ -10,5 +10,6 @@ For other plugin-related features, see also the [Plugin & Theme Search](Plugin%2
 - The search smartly matches also the content of the respective settings tabs, e.g. the query `o, readabable line` will show the Editor Settings, since the "Readable line length" option can be found there.
 - Press `↵`to open the respective setting **directly**. [^1]
 - `⌥ + ↵` will open the local folder of the plugin in Finder.
+- 💡 `o,` refers to the `⌘ + ,` shortcut used to open the settings.
 
 [^1]: Thanks to @Vinzent03 for enabling this feature.
