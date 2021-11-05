@@ -10,6 +10,11 @@ When updating from version 1.x to version 2.x, there are some breaking changes t
 
 Please refer to [this information document on Breaking Changes](documentation/Breaking%20Changes.md) for more in-detail information.
 
+## Installation & Configuration
+- [Installation and Setup](documentation/Installation.md)
+- [Workflow Configuration](documentation/Workflow%20Configuration.md)
+- [Troubleshooting](documentation/Installation.md#Troubleshooting)
+
 ## Feature Overview
 - *For a full documentation & usage guide, follow the links to the respective subsection.*
 - *Features marked with the 🆕 emoji are newly introduced in version 2.0.*
