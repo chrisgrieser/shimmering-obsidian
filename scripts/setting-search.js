@@ -39,21 +39,21 @@ standard_settings.forEach(setting =>{
 	});
 });
 
-
-installed_plugins.forEach(pluginID =>{
+installed_plugins.forEach(pluginFolder =>{
 	let manifest = "";
 	try {
-		manifest = JSON.parse(readFile(vault_path + "/.obsidian/plugins/" + pluginID + "/manifest.json"));
+		manifest = JSON.parse(readFile(vault_path + "/.obsidian/plugins/" + pluginFolder + "/manifest.json"));
 	} catch (error) {
 		// catches error caused by polugins with "manifest.json" (beta plugins)
 		manifest = {
-			"name": pluginID.replaceAll ("-", " "),
+			"id": pluginFolder,
+			"name": pluginFolder.replaceAll ("-", " "),
 			"version": "Manifest.json missing. Please ask developer to add it.",
 			"description": ""
 		};
 	}
-	
-	let pluginFolderPath = vault_path + "/.obsidian/plugins/" + pluginID;
+	let pluginID = manifest.id;
+	let pluginFolderPath = vault_path + "/.obsidian/plugins/" + pluginFolder;
 
 	let pluginEnabled = false;
 	let titleSuffix = " 🛑";
