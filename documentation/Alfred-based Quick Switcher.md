@@ -3,6 +3,12 @@
 # Alfred-based Quick Switcher
 The Alfred-based Quick Switcher is basically an enhanced version of [Obsidian's Quick Switcher Core Plugin](https://help.obsidian.md/Plugins/Quick+switcher).
 
+---
+
+**⚠️ You need to run the command `oupdate` → `Manually Refresh Metadata` once** before the Alfred-based Quick Switcher is able to work! Please refer to the documentation of the [metadata extractor configuration](/Workflow%20Configuration.md#metadata-extractor-configuration) for further information.
+
+---
+
 ## Table of Content
 - [Main Search (`o` search)](#Main-Search)
 	- [Search for Notes](#Search-for-Notes)
