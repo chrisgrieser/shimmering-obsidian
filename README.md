@@ -94,23 +94,6 @@ Please refer to [this information document on Breaking Changes](documentation/Br
 
 ➡️ [Documentation of Features for Developers](documentation/Features%20for%20Developers.md)
 
-## Installation
-- Requirements
-- Installation
-- Troubleshooting
-
-➡️ [Documentation of the Installation & Setup](documentation/Installation.md)
-
-## Workflow Configuration
-- Workflow Settings
-- Setting up Hotkeys
-- Metadata Extractor Configuration
-
-➡️ [Documentation of the Workflow Configuration](documentation/Workflow%20Configuration.md)
-
-## 🆘 Troubleshooting
-- [All information needed for Troubleshooting](documentation/Installation.md#Troubleshooting)
-
 ## Credits
 
 ### Thanks
