@@ -97,7 +97,7 @@ Please refer to [this information document on Breaking Changes](documentation/Br
 ## Installation
 - Requirements
 - Installation
-- [Troubleshooting](documentation/Installation.md#Troubleshooting)
+- Troubleshooting
 
 ➡️ [Documentation of the Installation & Setup](documentation/Installation.md)
 
@@ -107,6 +107,9 @@ Please refer to [this information document on Breaking Changes](documentation/Br
 - Metadata Extractor Configuration
 
 ➡️ [Documentation of the Workflow Configuration](documentation/Workflow%20Configuration.md)
+
+## 🆘 Troubleshooting
+- [All information needed for Troubleshooting](documentation/Installation.md#Troubleshooting)
 
 ## Credits
 
