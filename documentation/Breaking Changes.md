@@ -8,7 +8,7 @@ The features new to version 2.0 are listed in the [Feature Overview section of t
 ## New Requirement
 ⚠️ __The [Metadata Extractor Plugin](https://github.com/kometenstaub/metadata-extractor) is now a hard requirement that needs to be installed — without it, you will not be able to use this plugin anymore.__ The plugin allows Alfred to access various internal data like tags, aliases, and headings which third-party apps normally would not be able to do. (It also greatly increases the speed of this workflow!)
 
-👉 After installation, you need to create the metadata once before you can use the Alfred-based Quick Switcher: Run `opdate` → `Manually Refresh Metadata`.
+❗️ After installation, you need to create the metadata once before you can use the Alfred-based Quick Switcher: Run `opdate` → `Manually Refresh Metadata`.
 
 ## Metadata Extractor Configuration
 **⚠️ Do not change any of the default values how the metadata extractor names its output files and where they are placed — otherwise this workflow won't be able to find them.** 
@@ -32,3 +32,6 @@ For more in-detail information on the metadata extractor, refer to [the plugin's
 - Attachment search removed for now, as it would crowd the now enhanced main search too much. If there is demand for it, I will implement a new, separate attachment search. [Please create a GitHub issue if you are interested in this.](https://github.com/chrisgrieser/shimmering-obsidian)
 - removed CSS Snippet toggling, as there are now [multiple](https://github.com/chetachiezikeuzor/MySnippets-Plugin) [plugins](https://github.com/deathau/snippet-commands-obsidian) that do that better
 - removed hotkey for font-base64-conversion for decluttering. (You can still set one of your own, if you want to!)
+
+*when updating to 2.1*
+- removed `osettings` command – improved version now available via the command `o,`. See [Settings-Search](Settings%20Search.md).
