@@ -41,6 +41,12 @@ brew install qlmarkdown
 
 ## Troubleshooting
 
+---
+
+**⚠️ You need to run the command `oupdate` → `Manually Refresh Metadata` once** before the Alfred-based Quick Switcher is able to work! Please refer to the documentation of the [metadata extractor configuration](/Workflow%20Configuration.md#metadata-extractor-configuration) for further information.
+
+---
+
 ### Step 1: Common Solutions
 - Make sure that all requirements are properly installed.
 - Check the documentation of the malfunctioning feature.
