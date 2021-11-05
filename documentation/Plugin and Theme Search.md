@@ -1,4 +1,4 @@
-[Go back to the Table of Content.](../README.md#Feature Overview)
+[⏪ Go back to the Feature Overview](../README.md#feature-overview)
 
 # Plugin and Theme Search
 **`op`: Combined Search of community `p`lugins and community themes.**
