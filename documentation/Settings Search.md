@@ -1,7 +1,5 @@
 [⏪ Go back to the Feature Overview](../README.md#feature-overview)
 
-For other plugin-related features, see also the [Plugin & Theme Search](Plugin%20and%20Theme%20Search.md).
-
 # Settings Search
 *🆕 version 2.1*
 
@@ -11,5 +9,6 @@ For other plugin-related features, see also the [Plugin & Theme Search](Plugin%2
 - Press `↵`to open the respective setting **directly**. [^1]
 - `⌥ + ↵` will open the local folder of the plugin in Finder.
 - 💡 `o,` refers to the `⌘ + ,` shortcut used to open the settings.
+- For other plugin-related features, see also the [Plugin & Theme Search](Plugin%20and%20Theme%20Search.md).
 
 [^1]: Thanks to @Vinzent03 for enabling this feature.
