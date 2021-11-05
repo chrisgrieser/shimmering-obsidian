@@ -1,0 +1,42 @@
+[
+   {
+      "title": "Editor",
+      "id": "editor",
+      "match": "editor readable line length brackets"
+   },
+   {
+      "title": "Files & Links",
+      "id": "file",
+      "match": "files links wikilinks trash path"
+   },
+   {
+      "title": "Hotkeys",
+      "id": "hotkeys",
+      "match": "hotkeys keyboard shortcut"
+   },
+   {
+      "title": "Appearance",
+      "id": "appearance",
+      "match": "appearance themes snippets"
+   },
+   {
+      "title": "About",
+      "id": "about",
+      "match": "about version update help"
+   },
+   {
+      "title": "Account",
+      "id": "account",
+      "match": "account sync publish mail password email"
+   },
+   {
+      "title": "Core Plugins",
+      "id": "core-plugins",
+      "match": "core plugins"
+   },
+   {
+      "title": "Community Plugins",
+      "id": "community-plugins",
+      "match": "community plugins"
+   }
+]
