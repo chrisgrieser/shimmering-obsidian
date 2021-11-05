@@ -69,6 +69,13 @@ Please refer to [this information document on Breaking Changes](documentation/Br
 
 ➡️ [Documentation of the Documentation Search](documentation/Documentation%20Search.md)
 
+### Settings Search
+- Search & quickly open specific Settings Tabs.
+- Includes Plugin Settings.
+- Open local plugin folders in `.obsidian/plugins/`
+
+➡️ [Documentation of the Settings Search](documentation/Settings%20Search.md)
+
 ### CSS-related Features
 - Access themes & CSS Snippets via Alfred
 - Create new Snippets from Clipboard content
