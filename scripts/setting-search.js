@@ -13,9 +13,6 @@ const readFile = function (path, encoding) {
     return ObjC.unwrap(str);
 };
 
-function alfredMatcher (str){
-	return str.replace (/[-\(\)_\.]/g," ") + " " + str;
-}
 function onlineJSON (url){
 	return JSON.parse (app.doShellScript('curl -s "' + url + '"'));
 }
@@ -44,7 +41,18 @@ standard_settings.forEach(setting =>{
 
 
 installed_plugins.forEach(pluginID =>{
-	let manifest = JSON.parse(readFile(vault_path + "/.obsidian/plugins/" + pluginID + "/manifest.json"));
+	let manifest = "";
+	try {
+		manifest = JSON.parse(readFile(vault_path + "/.obsidian/plugins/" + pluginID + "/manifest.json"));
+	} catch (error) {
+		// catches error caused by polugins with "manifest.json" (beta plugins)
+		manifest = {
+			"name": pluginID.replaceAll ("-", " "),
+			"version": "Manifest.json missing. Please ask developer to add it.",
+			"description": ""
+		};
+	}
+	
 	let pluginFolderPath = vault_path + "/.obsidian/plugins/" + pluginID;
 
 	let pluginEnabled = false;
@@ -58,7 +66,7 @@ installed_plugins.forEach(pluginID =>{
 		'title': manifest.name + titleSuffix,
 		'subtitle': manifest.version,
 		'uid': pluginID,
-		'match': alfredMatcher(manifest.name) + " " + manifest.description,
+		'match': manifest.name + " " + manifest.description,
 		'arg': "obsidian://advanced-uri?settingid=" + pluginID,
 		'valid': pluginEnabled,
 		"mods": {
