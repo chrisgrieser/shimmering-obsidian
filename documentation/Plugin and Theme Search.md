@@ -1,4 +1,4 @@
-[Go back to the Table of Content.](README.md#Feature Overview)
+[Go back to the Table of Content.](../README.md#Feature Overview)
 
 # Plugin and Theme Search
 **`op`: Combined Search of community `p`lugins and community themes.**
@@ -14,6 +14,7 @@
 - The thousand separator used with the download numbers can be set in the workflow configuration (`thousand_seperator`).
 - Add `plugin` to the search query to only display themes, e.g., use `op focus plugin` as search query to only display *plugins* with the term `focus`.
 - The `op` search will also consider the name of the plugin's author, meaning the query `op JaneDoe` will return all plugins (and themes) authored by the user `JaneDoe`.
+- To open local plugin folders and access settings of beta plugins, use the [Settings Search](Settings%20Search.md).
 
 ## Themes
 - Press `↵` (or `cmd + ↵`) to open the theme's GitHub Repository. (There are no separate theme pages in Obsidian Theme Browser that can be opened.)
