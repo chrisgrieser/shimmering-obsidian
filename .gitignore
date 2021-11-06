@@ -1,0 +1,7 @@
+# Mac
+.DS_Store
+
+# Alfred
+List Filter Images/
+Icons/
+*.png

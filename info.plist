@@ -2935,7 +2935,7 @@
 	<key>description</key>
 	<string>An Alfred Workflow with dozens of features for Obsidian</string>
 	<key>disabled</key>
-	<false/>
+	<true/>
 	<key>name</key>
 	<string>Shimmering Obsidian</string>
 	<key>objects</key>
