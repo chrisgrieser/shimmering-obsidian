@@ -50,6 +50,7 @@
 	- Normally, this will become the filename of the note (e.g., `foobar.md`).
 	- If you are using QuickAdd, this will instead search the QuickAdd options for the argument (e.g., `foobar`).
 - This command also works with Obsidian not running (in which case it will open Obsidian after note creation).
+- ℹ️ The `on` command doesn't display the results in Alfred as opposed to the other commands. SImply press enter to open Quick or the new Note in Obsidian
 
 ## Backup your Vault
 **`obackup`: Create a `backup of your vault.**
