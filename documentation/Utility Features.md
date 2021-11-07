@@ -6,7 +6,7 @@
 - [OCR Screenshots](#OCR-Screenshots)
 - [🆕 Paste URL into selection](#-Paste-URL-into-selection)
 - [🆕 Move Note](#-Move-Note)
-- [Create new Note](#Create-new-Note)
+- [Create a new Note](#Create-a-new-Note)
 - [Backup your Vault](#Backup-your-Vault)
 - [Dual Mode](#Dual-Mode)
 - [Access Obsidian Settings](#Access-Obsidian-Settings)
