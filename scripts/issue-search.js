@@ -48,11 +48,11 @@ if ($.getenv('plugin_id')){
 		"/manifest.json";
 	if (readFile(manifestJSON) != "") {
 		localVersion = JSON.parse(readFile(manifestJSON)).version;
-		latestVersion = app.doShellScript(
-			"curl -sL https://github.com/" + repo +
-			"/releases/latest/download/manifest.json" +
-			" | grep '\"version\"' | cut -d\\\" -f4"
-		);
+		latestVersion = JSON.parse(
+		    app.doShellScript(
+				"curl -sL https://github.com/" + repo +
+				"/releases/latest/download/manifest.json")
+			).version;
 		if (localVersion != latestVersion) outOfDate = true;
 	}
 }
@@ -72,7 +72,6 @@ if (outOfDate) {
 		'subtitle': subtitle,
 		'arg': "obsidian://advanced-uri?commandid=hotkey-helper%253Aopen-plugins",
 	});
-	console.log ("local " + localVersion)
 } else {
 	const newIssueURL = "https://github.com/" +	repo + "/issues/new?title=";
 	jsonArray.push({
