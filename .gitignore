@@ -3,5 +3,5 @@
 
 # Alfred
 List Filter Images/
-Icons/
-*.png
+/*.png
+!/icon.png
