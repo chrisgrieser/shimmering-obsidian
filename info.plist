@@ -8970,7 +8970,7 @@ Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (r
 			<key>xpos</key>
 			<integer>310</integer>
 			<key>ypos</key>
-			<integer>6745</integer>
+			<integer>6695</integer>
 		</dict>
 		<key>4B4D3ECE-1162-41DA-ACCC-16B0AC6FA3D1</key>
 		<dict>
@@ -9361,7 +9361,7 @@ takes file path (with or without heading) and opens it correctly</string>
 			<key>xpos</key>
 			<integer>25</integer>
 			<key>ypos</key>
-			<integer>6620</integer>
+			<integer>6570</integer>
 		</dict>
 		<key>72AACC40-46A8-4203-9BD5-B16971C30181</key>
 		<dict>
@@ -9788,7 +9788,7 @@ takes file path (with or without heading) and opens it correctly</string>
 			<key>xpos</key>
 			<integer>310</integer>
 			<key>ypos</key>
-			<integer>6620</integer>
+			<integer>6570</integer>
 		</dict>
 		<key>A3E485FC-C939-4776-8000-396EB2F3CC64</key>
 		<dict>
