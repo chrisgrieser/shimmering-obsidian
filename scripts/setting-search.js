@@ -48,7 +48,7 @@ installed_plugins.forEach(pluginFolder =>{
 		manifest = {
 			"id": pluginFolder,
 			"name": pluginFolder.replaceAll ("-", " "),
-			"version": "Manifest.json missing. Please ask developer to add it.",
+			"version": "Manifest.json missing. Ask developer to add it.",
 			"description": ""
 		};
 	}
@@ -68,6 +68,7 @@ installed_plugins.forEach(pluginFolder =>{
 		'uid': pluginID,
 		'match': manifest.name + " " + manifest.description,
 		'arg': "obsidian://advanced-uri?settingid=" + pluginID,
+		'icon': {'path': "icons/plugin.png"},
 		'valid': pluginEnabled,
 		"mods": {
 			"alt": {

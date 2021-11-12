@@ -3731,6 +3731,7 @@ tell application id "com.runningwithcrayons.Alfred" to remove configuration "ObR
 					<string>dyn.ah62d4rv4ge81s55gq2</string>
 					<string>dyn.ah62d4rv4ge81s55gq23a</string>
 					<string>public.opentype-font</string>
+					<string>public.truetype-collection-font</string>
 					<string>public.truetype-ttf-font</string>
 				</array>
 				<key>name</key>
@@ -4985,7 +4986,7 @@ cat "$template_note"</string>
 						<key>matchmode</key>
 						<integer>4</integer>
 						<key>matchstring</key>
-						<string>.*\/.*?\.\w+$</string>
+						<string>.*?\.\w+$</string>
 						<key>outputlabel</key>
 						<string>open file</string>
 						<key>uid</key>
@@ -5069,7 +5070,7 @@ cat "$template_note"</string>
 				<key>argument</key>
 				<string>{query}</string>
 				<key>passthroughargument</key>
-				<false/>
+				<true/>
 				<key>variables</key>
 				<dict>
 					<key>current_folder</key>
@@ -10611,9 +10612,9 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 	<array>
 		<string>backup_destination</string>
 		<string>daily_note_path</string>
-		<string>workspace_to_spellcheck</string>
 		<string>use_quickadd</string>
 		<string>fontformat</string>
+		<string>workspace_to_spellcheck</string>
 		<string>h_lvl_ignore</string>
 		<string>template_note_path</string>
 		<string>vault_path</string>
