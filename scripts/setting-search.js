@@ -13,10 +13,6 @@ const readFile = function (path, encoding) {
     return ObjC.unwrap(str);
 };
 
-function onlineJSON (url){
-	return JSON.parse (app.doShellScript('curl -s "' + url + '"'));
-}
-
 const vault_path = $.getenv("vault_path").replace(/^~/, app.pathTo('home folder'));
 const standard_settings = JSON.parse(readFile("./data/settings-database.json"));
 const installed_plugins = app.doShellScript('ls -1 "' + vault_path + '""/.obsidian/plugins/"').split("\r");
