@@ -8406,6 +8406,10 @@ https://github.com/chrisgrieser/shimmering-obsidian/blob/main/documentation/Brea
 `o,`: Settings Search.
 Refer to the documentation for more info
 
+🆕 in 2.2
+Settings Search now also browses plugin folders in Terminal. Issue Search allows links to be copied.
+Refer to the documentation for more info
+
 ---
 
 Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (rl). https://chris-grieser.de/</string>
@@ -10656,15 +10660,15 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 	<array>
 		<string>backup_destination</string>
 		<string>daily_note_path</string>
+		<string>vault_path</string>
 		<string>use_quickadd</string>
 		<string>fontformat</string>
-		<string>vault_path</string>
 		<string>h_lvl_ignore</string>
 		<string>template_note_path</string>
 		<string>workspace_to_spellcheck</string>
 	</array>
 	<key>version</key>
-	<string>2.1.2</string>
+	<string>2.2</string>
 	<key>webaddress</key>
 	<string>https://chris-grieser.de/</string>
 </dict>
