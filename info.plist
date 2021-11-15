@@ -1296,6 +1296,16 @@
 				<key>vitoclose</key>
 				<false/>
 			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>3374CD2F-3B5A-4267-B71E-862533887D36</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string>⌘: Open in Terminal</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
 		</array>
 		<key>72AACC40-46A8-4203-9BD5-B16971C30181</key>
 		<array>
@@ -7517,6 +7527,25 @@ tell application "Obsidian" to activate</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string></string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>A33900E9-EB4A-4AFE-8AA8-05503A501496</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>autopaste</key>
 				<false/>
 				<key>clipboardtext</key>
@@ -7551,25 +7580,6 @@ tell application "Obsidian" to activate</string>
 			<string>alfred.workflow.output.notification</string>
 			<key>uid</key>
 			<string>506E519A-3B07-43B8-91CF-46161EB47E5E</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>browser</key>
-				<string></string>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string></string>
-				<key>utf8</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
-			<key>uid</key>
-			<string>A33900E9-EB4A-4AFE-8AA8-05503A501496</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -7636,6 +7646,19 @@ tell application "Obsidian" to activate</string>
 			<string>48992F43-A163-41CB-9AD0-ED130267D058</string>
 			<key>version</key>
 			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>path</key>
+				<string>{query}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.browseinterminal</string>
+			<key>uid</key>
+			<string>3374CD2F-3B5A-4267-B71E-862533887D36</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -8796,6 +8819,17 @@ Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (r
 			<key>ypos</key>
 			<integer>4925</integer>
 		</dict>
+		<key>3374CD2F-3B5A-4267-B71E-862533887D36</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>note</key>
+			<string>opens in default Terminal</string>
+			<key>xpos</key>
+			<integer>250</integer>
+			<key>ypos</key>
+			<integer>6675</integer>
+		</dict>
 		<key>3390E0CB-CE17-4CEB-848D-14C5547A6936</key>
 		<dict>
 			<key>colorindex</key>
@@ -8979,9 +9013,9 @@ Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (r
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<integer>310</integer>
+			<integer>250</integer>
 			<key>ypos</key>
-			<integer>6695</integer>
+			<integer>6550</integer>
 		</dict>
 		<key>4B4D3ECE-1162-41DA-ACCC-16B0AC6FA3D1</key>
 		<dict>
@@ -9372,7 +9406,7 @@ takes file path (with or without heading) and opens it correctly</string>
 			<key>xpos</key>
 			<integer>25</integer>
 			<key>ypos</key>
-			<integer>6570</integer>
+			<integer>6500</integer>
 		</dict>
 		<key>72AACC40-46A8-4203-9BD5-B16971C30181</key>
 		<dict>
@@ -9797,9 +9831,9 @@ takes file path (with or without heading) and opens it correctly</string>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<integer>310</integer>
+			<integer>250</integer>
 			<key>ypos</key>
-			<integer>6570</integer>
+			<integer>6425</integer>
 		</dict>
 		<key>A3E485FC-C939-4776-8000-396EB2F3CC64</key>
 		<dict>

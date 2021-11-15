@@ -3,17 +3,20 @@
 # Utility Features
 
 ## Table of Content
-- [OCR Screenshots](#OCR-Screenshots)
-- [🆕 Paste URL into selection](#-Paste-URL-into-selection)
-- [🆕 Move Note](#-Move-Note)
-- [Create a new Note](#Create-a-new-Note)
-- [Backup your Vault](#Backup-your-Vault)
-- [Dual Mode](#Dual-Mode)
-- [Access Obsidian Settings](#Access-Obsidian-Settings)
-- [Open Various Folders](#Open-Various-Folders)
-- [✴️ Change and Access your Vault](#%EF%B8%8F-Change-and-Access-your-Vault)
-- [🆕 Daily Notes](#-Daily-Notes)
-- [Carl 🐢](#Carl)
+<!-- MarkdownTOC -->
+
+- [OCR Screenshots](#ocr-screenshots)
+- [🆕 Paste URL into selection](#%F0%9F%86%95-paste-url-into-selection)
+- [🆕 Move Note](#%F0%9F%86%95-move-note)
+- [Create a new Note](#create-a-new-note)
+- [Backup your Vault](#backup-your-vault)
+- [Dual Mode](#dual-mode)
+- [Open Various Folders](#open-various-folders)
+- [✴️ Change and Access your Vault](#%E2%9C%B4%EF%B8%8F-change-and-access-your-vault)
+- [🆕 Daily Notes](#%F0%9F%86%95-daily-notes)
+- [🐢 Carl](#%F0%9F%90%A2-carl)
+
+<!-- /MarkdownTOC -->
 
 ## OCR Screenshots
 **`Triggered via Hotkey`: Take an OCR Screenshot.**
@@ -53,7 +56,7 @@
 - ℹ️ The `on` command doesn't display the results in Alfred as opposed to the other commands. SImply press enter to open Quick or the new Note in Obsidian
 
 ## Backup your Vault
-**`obackup`: Create a `backup of your vault.**
+**`obackup`: Create a `backup` of your vault.**
 - Your whole vault will be compressed into a *zip* file and then moved to the location you specified in the [workflow configuration](Workflow%20Configuration.md#Backups) (`backup_destination`). There will be a notification when the backup has been completed.
 - This command will respect the maximum number of backups you have set ([workflow configuration](Workflow%20Configuration.md#Backups) `max_number_of_bkps`) to prevent taking up too much disk space. When the number is reached, every new backup causes the oldest backup to be deleted.
 - The hidden folders `.obsidian` and `.trash` are included in the backup.
@@ -72,21 +75,17 @@ end tell
 - Caveat #1: Opening the new pane as [linked pane](https://help.obsidian.md/Panes/Linked+pane) is not possible right now, [as Obsidian does not expose that function via command palette](https://forum.obsidian.md/t/open-a-note-in-a-new-pane-using-the-command-palette-or-a-keyboard-shortcut/23303). 
 - Caveat #2: When you have more than one pane open, a pane that is *not* the leftmost is active, and the active pane has a different view mode than the leftmost pane, then `odual` will open in the wrong view mode. (Obsidian unfortunately does not expose enough information about the workspace state to ensure correct behavior for this case.)
 
-## Access Obsidian Settings
-**`osetting`: Open the Obsidian [settings].**
-- Also works when Obsidian is not running (like most commands of this workflow do).
-
 ## Open Various Folders
 - `o.obsidian`: The hidden `.obsidian` folder located in your vault root will be opened in Finder.
 - `o.trash`: Open the hidden [`.trash` folder](https://help.obsidian.md/Advanced+topics/Deleting+files) located in your vault root will be opened in Finder. (Note that you have to select `Move to Obsidian trash` in the Obsidian settings under the `Files & Links` tab before deleted files can be found here.)
 - 🆕 `oapplicationsupport`: Open Obsidian's Application Support folder.
-- `oplugin`: The plugin folder in the hidden `.obsidian` folder will be opened in Finder.
+- `oplugin`: The plugin folder in `.obsidian` folder will be opened in Finder.
 
 ## ✴️ Change and Access your Vault
 **`ovault`: Open the Obsidian [settings].**
 - Conveniently switch the vault used by _this workflow_. (This Alfred workflow can only work on one vault at the same time.)
 - ⚠️ Note that the [required plugins](Installation.md#Hard-Requirements) will have to be installed in **each vault** you want to control via Alfred.
-- You can also choose to open a new vault or open your current vault's root in your Terminal or Finder. ([The Terminal app defined in the Alfred settings](https://www.alfredapp.com/help/features/terminal/) will be used.)
+- You can also choose to open a new vault or open your current vault's root in your Terminal or Finder.[^2]
 - 💡 You can also use the command `ohelpvault` to open the Help Vault (once you have opened it at least once.)
 
 ## 🆕 Daily Notes
@@ -97,6 +96,8 @@ end tell
 - This does *not* require the Daily Notes plugin to be enabled.
 - However, the daily notes must be exactly in the format `YYYY-MM-DD` for this feature to work.
 
-## Carl
+## 🐢 Carl
 **`ocarl`: Search `carl` auto-responses.**
 - Search and paste auto-responses from the beloved Discord Bot of the [Obsidian Discord Server](https://discord.gg/veuWUTm).
+
+[^2]: You can [change the default terminal in the Alfred Settings](https://www.alfredapp.com/help/features/terminal/).

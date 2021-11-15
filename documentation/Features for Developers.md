@@ -17,12 +17,12 @@
 
 ## Open various folders related to development
 - Refer to the section [Quick Access to hidden folders](Utility%20Features.md#Open-Various-Folders) for further information.
-- 🆕 To open local plugin folders in `.obsidian/plugins/`, use to the [Settings Search](Settings%20Search.md).
+- 🆕 To quickly open local plugin folders in `.obsidian/plugins/` in Finder or the Terminal, use to the [Settings Search](Settings%20Search.md).
 
 ## Vault-Related features
 ➡️ Refer to the section [Change & Access your Vault](Utility%20Features.md#Change-and-Access-your-Vault) for information on how to:
 - open the vault root in Finder
-- open the vault root in your (default) Terminal
+- open the vault root in your Terminal
 - quickly open the Help Vault
 
 ## 🆕 Beta Plugins

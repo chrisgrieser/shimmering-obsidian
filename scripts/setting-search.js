@@ -70,6 +70,9 @@ installed_plugins.forEach(pluginFolder =>{
 			"alt": {
 				"arg": pluginFolderPath,
 			},
+			"cmd": {
+				"arg": pluginFolderPath,
+			},
 		}
 	});
 });
