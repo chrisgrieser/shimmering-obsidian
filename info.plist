@@ -8651,7 +8651,7 @@ Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (r
 			<key>xpos</key>
 			<integer>205</integer>
 			<key>ypos</key>
-			<integer>8525</integer>
+			<integer>8510</integer>
 		</dict>
 		<key>1FE579F5-99C2-4C35-A110-CB55F903E327</key>
 		<dict>
@@ -8899,9 +8899,9 @@ Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (r
 			<key>note</key>
 			<string>toggle spellcheck, if Workspace set as Spellcheck Workspace</string>
 			<key>xpos</key>
-			<integer>390</integer>
+			<integer>415</integer>
 			<key>ypos</key>
-			<integer>8525</integer>
+			<integer>8510</integer>
 		</dict>
 		<key>3F44687E-16F7-4830-BC8B-D16B1098C474</key>
 		<dict>
@@ -9178,7 +9178,7 @@ takes file path (with or without heading) and opens it correctly</string>
 			<key>xpos</key>
 			<integer>30</integer>
 			<key>ypos</key>
-			<integer>8525</integer>
+			<integer>8510</integer>
 		</dict>
 		<key>57CACB5D-8848-4706-9B61-3C0AFDA26C17</key>
 		<dict>
@@ -9600,7 +9600,7 @@ takes file path (with or without heading) and opens it correctly</string>
 			<key>xpos</key>
 			<integer>205</integer>
 			<key>ypos</key>
-			<integer>8400</integer>
+			<integer>8385</integer>
 		</dict>
 		<key>89B47E8A-C9EE-4792-80D7-CA0D46A6A2C9</key>
 		<dict>
@@ -9645,7 +9645,7 @@ takes file path (with or without heading) and opens it correctly</string>
 			<key>xpos</key>
 			<integer>30</integer>
 			<key>ypos</key>
-			<integer>8400</integer>
+			<integer>8385</integer>
 		</dict>
 		<key>8CA441F0-9476-4FEF-8DC9-E8D8C19EC431</key>
 		<dict>
@@ -10660,12 +10660,12 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 	<array>
 		<string>backup_destination</string>
 		<string>daily_note_path</string>
-		<string>vault_path</string>
 		<string>use_quickadd</string>
 		<string>fontformat</string>
+		<string>workspace_to_spellcheck</string>
 		<string>h_lvl_ignore</string>
 		<string>template_note_path</string>
-		<string>workspace_to_spellcheck</string>
+		<string>vault_path</string>
 	</array>
 	<key>version</key>
 	<string>2.2</string>
