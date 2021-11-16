@@ -5,10 +5,6 @@ ObjC.import('Foundation');
 app = Application.currentApplication();
 app.includeStandardAdditions = true;
 
-function getEnv (path){
-	return $.getenv(path).replace(/^~/, app.pathTo("home folder"));
-}
-
 function readFile (path, encoding) {
     if (!encoding) encoding = $.NSUTF8StringEncoding;
     const fm = $.NSFileManager.defaultManager;
@@ -16,7 +12,9 @@ function readFile (path, encoding) {
     const str = $.NSString.alloc.initWithDataEncoding(data, encoding);
     return ObjC.unwrap(str);
 }
-const vault_path = getEnv("vault_path");
+
+
+const vault_path = $.getenv("vault_path").replace(/^~/, app.pathTo("home folder"));
 const workspace_to_spellcheck = $.getenv("workspace_to_spellcheck");
 const workspaceJSON = JSON.parse(readFile(vault_path + '/.obsidian/workspaces.json'));
 const workspace_array = Object.keys(workspaceJSON.workspaces);
@@ -38,11 +36,11 @@ workspace_array.forEach(workspaceName => {
 	if (workspaceName == workspace_to_spellcheck) spellcheckInfo = "  🖍";
 	let iconpath = "icons/workspace.png";
 	if (workspaceName.toLowerCase().includes("writing")) iconpath = "icons/writing.png";
+	if (workspaceName.toLowerCase().includes("write")) iconpath = "icons/writing.png";
 	if (workspaceName.toLowerCase().includes("longform")) iconpath = "icons/writing.png";
 
 	jsonArray.push({
 		'title': workspaceName + spellcheckInfo,
-		'subtitle': "Load",
 		'match': workspaceName.replaceAll ("-", " ") + " " + workspaceName,
 		'arg': workspace_URI,
 		'uid': workspaceName,
@@ -50,12 +48,11 @@ workspace_array.forEach(workspaceName => {
 		'mods': {
 			'cmd': {
 				'arg': workspaceSave_URI,
-				'subtitle': "⌘: Save " + currentWorkspace + ", then load",
+				'subtitle': "⌘: Save '" + currentWorkspace + "', then load",
 			}
 		},
 	});
 });
-
 
 //Manage Workspaces
 jsonArray.push({
@@ -67,10 +64,10 @@ jsonArray.push({
 
 //Save Current Workspace
 jsonArray.push({
-	'title': currentWorkspace,
-	'subtitle': "Save",
-	'arg': "obsidian://advanced-uri?saveworkspace",
-	'icon': { 'path': 'icons/workspace.png'},
+	'title': "Save Current Workspace",
+	'subtitle': currentWorkspace,
+	'arg': "obsidian://advanced-uri?saveworkspace=true",
+	'icon': { 'path': 'icons/save-workspace.png'},
 	'uid': "save-workspaces",
 });
 

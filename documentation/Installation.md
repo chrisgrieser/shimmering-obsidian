@@ -37,7 +37,7 @@ brew install qlmarkdown
 - 👉 Among other settings, you have to run `oupdate` → `Manually Refresh Metadata` once so the metadata is created.
 - The first time you use the OCR screenshot feature, you might need to give Alfred permission to record your screen. You can do so under the macOS system settings (see image below).
 
-<img src="https://user-images.githubusercontent.com/73286100/131231644-a800c0b0-8dc2-4ae9-bd41-c3937741b94a.png" alt="Permissions for OCR Screenshots" width=35% height=35%>
+<img src="https://user-images.githubusercontent.com/73286100/131231644-a800c0b0-8dc2-4ae9-bd41-c3937741b94a.png" alt="Permissions for OCR Screenshots" width=35%>
 
 ## Troubleshooting
 
@@ -49,6 +49,7 @@ brew install qlmarkdown
 
 ### Step 1: Common Solutions
 - Make sure that all requirements are properly installed.
+- When a new feature does not work, update to the newest version of the Advanced URI Plugin and the Metadata Extractor Plugin, since it is likely that they will depend on it.
 - Check the documentation of the malfunctioning feature.
 - Update to the [latest version of the workflow](https://github.com/chrisgrieser/shimmering-obsidian/releases/latest), chances are the problem has already been fixed.
 - If you have trouble with OCR screenshots, ensure you have given Alfred permission to record your screen [as explained above](#-Workflow-Installation).
