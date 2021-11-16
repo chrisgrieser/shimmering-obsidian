@@ -521,6 +521,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>34BBC261-A060-4D58-BB81-26428117292E</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>1EAE5E2F-C10A-4DB6-8DDB-32DE780608A2</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>378CFF0C-FF5A-40C2-BE7F-587887FA84F7</key>
 		<array>
 			<dict>
@@ -933,6 +946,16 @@
 				<string>1EAE5E2F-C10A-4DB6-8DDB-32DE780608A2</string>
 				<key>modifiers</key>
 				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>34BBC261-A060-4D58-BB81-26428117292E</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
 				<key>modifiersubtext</key>
 				<string></string>
 				<key>vitoclose</key>
@@ -8394,6 +8417,14 @@ echo -n "$vault_path"</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.junction</string>
+			<key>uid</key>
+			<string>34BBC261-A060-4D58-BB81-26428117292E</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string>ℹ️ The new version 2.0 is a complete overhaul of the workflow, with a few breaking changes and more than a dozen new features. For an overview of all changes, refer to the completely overhauled documentation.
@@ -8649,7 +8680,7 @@ Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (r
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>205</integer>
+			<integer>275</integer>
 			<key>ypos</key>
 			<integer>8510</integer>
 		</dict>
@@ -8843,6 +8874,15 @@ Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (r
 			<key>ypos</key>
 			<integer>3530</integer>
 		</dict>
+		<key>34BBC261-A060-4D58-BB81-26428117292E</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>xpos</key>
+			<integer>190</integer>
+			<key>ypos</key>
+			<integer>8585</integer>
+		</dict>
 		<key>378CFF0C-FF5A-40C2-BE7F-587887FA84F7</key>
 		<dict>
 			<key>colorindex</key>
@@ -8899,7 +8939,7 @@ Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (r
 			<key>note</key>
 			<string>toggle spellcheck, if Workspace set as Spellcheck Workspace</string>
 			<key>xpos</key>
-			<integer>415</integer>
+			<integer>485</integer>
 			<key>ypos</key>
 			<integer>8510</integer>
 		</dict>
