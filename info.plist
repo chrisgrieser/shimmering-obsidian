@@ -8884,7 +8884,7 @@ Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (r
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<integer>185</integer>
+			<integer>195</integer>
 			<key>ypos</key>
 			<integer>8925</integer>
 		</dict>
@@ -9039,7 +9039,7 @@ Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (r
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>270</integer>
+			<integer>280</integer>
 			<key>ypos</key>
 			<integer>8815</integer>
 		</dict>
@@ -9229,7 +9229,7 @@ Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (r
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<integer>190</integer>
+			<integer>200</integer>
 			<key>ypos</key>
 			<integer>8800</integer>
 		</dict>
@@ -9298,7 +9298,7 @@ Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (r
 			<key>note</key>
 			<string>toggle spellcheck, if Workspace set as Spellcheck Workspace</string>
 			<key>xpos</key>
-			<integer>480</integer>
+			<integer>490</integer>
 			<key>ypos</key>
 			<integer>8815</integer>
 		</dict>
@@ -9584,7 +9584,7 @@ takes file path (with or without heading) and opens it correctly</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>25</integer>
+			<integer>35</integer>
 			<key>ypos</key>
 			<integer>8815</integer>
 		</dict>
@@ -10497,7 +10497,7 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<integer>270</integer>
+			<integer>280</integer>
 			<key>ypos</key>
 			<integer>8950</integer>
 		</dict>
@@ -11069,6 +11069,8 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 	</dict>
 	<key>variables</key>
 	<dict>
+		<key>ObRunning</key>
+		<string>true</string>
 		<key>auto_update</key>
 		<string>true</string>
 		<key>backup_destination</key>
@@ -11106,12 +11108,13 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 	<array>
 		<string>backup_destination</string>
 		<string>daily_note_path</string>
-		<string>vault_path</string>
+		<string>workspace_to_spellcheck</string>
 		<string>use_quickadd</string>
 		<string>fontformat</string>
+		<string>ObRunning</string>
 		<string>h_lvl_ignore</string>
 		<string>template_note_path</string>
-		<string>workspace_to_spellcheck</string>
+		<string>vault_path</string>
 	</array>
 	<key>version</key>
 	<string>2.3.1</string>
