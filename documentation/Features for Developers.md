@@ -1,4 +1,4 @@
-[⏪ Go back to the Feature Overview](https://github.com/chrisgrieser/shimmering-obsidian/blob/main/README.md#feature-overview)
+[⏪ Go back to the Feature Overview](../README.md#feature-overview)
 
 # Features for Developers
 
