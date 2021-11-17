@@ -29,7 +29,7 @@ else spellcheckStatus = "OFF";
 let jsonArray = [];
 workspace_array.forEach(workspaceName => {
 	let workspaceLoad_URI = "obsidian://advanced-uri?workspace=" + encodeURIComponent(workspaceName);
-	let workspaceSaveLoad_URI = workspace_URI + "&saveworkspace=true";
+	let workspaceSaveLoad_URI = workspaceLoad_URI + "&saveworkspace=true";
 
 	// icons/emoji
 	let spellcheckInfo = "";
