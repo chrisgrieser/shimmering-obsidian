@@ -28,8 +28,8 @@ else spellcheckStatus = "OFF";
 
 let jsonArray = [];
 workspace_array.forEach(workspaceName => {
-	let workspace_URI = "obsidian://advanced-uri?workspace=" + encodeURIComponent(workspaceName);
-	let workspaceSave_URI = "obsidian://advanced-uri?saveworkspace&workspace=" + encodeURIComponent(workspaceName);
+	let workspaceLoad_URI = "obsidian://advanced-uri?workspace=" + encodeURIComponent(workspaceName);
+	let workspaceSaveLoad_URI = workspace_URI + "&saveworkspace=true";
 
 	// icons/emoji
 	let spellcheckInfo = "";
@@ -42,12 +42,12 @@ workspace_array.forEach(workspaceName => {
 	jsonArray.push({
 		'title': workspaceName + spellcheckInfo,
 		'match': workspaceName.replaceAll ("-", " ") + " " + workspaceName,
-		'arg': workspace_URI,
+		'arg': workspaceLoad_URI,
 		'uid': workspaceName,
 		'icon': { 'path': iconpath },
 		'mods': {
 			'cmd': {
-				'arg': workspaceSave_URI,
+				'arg': workspaceSaveLoad_URI,
 				'subtitle': "⌘: Save '" + currentWorkspace + "', then load",
 			}
 		},
@@ -68,7 +68,7 @@ jsonArray.push({
 	'subtitle': currentWorkspace,
 	'arg': "obsidian://advanced-uri?saveworkspace=true",
 	'icon': { 'path': 'icons/save-workspace.png'},
-	'uid': "save-workspaces",
+	'uid': "save-workspace",
 });
 
 // Toggle Spellcheck

@@ -6,13 +6,13 @@ app = Application.currentApplication();
 app.includeStandardAdditions = true;
 
 // > Functions
-const readFile = function (path, encoding) {
-    !encoding && (encoding = $.NSUTF8StringEncoding);
+function readFile (path, encoding) {
+    if (!encoding) encoding = $.NSUTF8StringEncoding;
     const fm = $.NSFileManager.defaultManager;
     const data = fm.contentsAtPath(path);
     const str = $.NSString.alloc.initWithDataEncoding(data, encoding);
     return ObjC.unwrap(str);
-};
+}
 
 function parentFolder (filePath){
 	if (!filePath.includes("/")) return "/";

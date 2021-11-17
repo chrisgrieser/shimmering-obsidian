@@ -8,18 +8,13 @@ The features new to version 2.0 are listed in the [Feature Overview section of t
 ## New Requirement
 ⚠️ __The [Metadata Extractor Plugin](https://github.com/kometenstaub/metadata-extractor) is now a hard requirement that needs to be installed — without it, you will not be able to use this plugin anymore.__ The plugin allows Alfred to access various internal data like tags, aliases, and headings which third-party apps normally would not be able to do. (It also greatly increases the speed of this workflow!)
 
-❗️ After installation, you need to create the metadata once before you can use the Alfred-based Quick Switcher: Run `opdate` → `Manually Refresh Metadata`.
+❗️ After installation, you need to create the metadata once before you can use the Alfred-based Quick Switcher: Run `opdate → Manually Refresh Metadata` to do so.
 
 ## Metadata Extractor Configuration
-**⚠️ Do not change any of the default values how the metadata extractor names its output files and where they are placed — otherwise this workflow won't be able to find them.** 
+- **⚠️ Do not change any of the default values how the metadata extractor names its output files and where they are placed — otherwise this workflow won't be able to find them.**
+- The setting _should_ change is the one regarding the automatic refreshing of the metadata files. The higher the frequency, the more accurate the Quick Switcher of this Alfred workflow will become.
 
-The two settings you *can* change are the ones regarding the automatic refreshing of the metadata files. The higher the frequency (= lower number), the more accurate the Quick Switcher of this Alfred workflow will become.
-
-You can change the plugins either via the Obsidian's settings menu, or more conveniently, with the `ofreq` command followed by a number. For example, `ofreq 10` will make the metadata refresh every 10 minutes. This means when using this workflow's Quick Switcher, the data will at most be 9 minutes out of date.
-
-<img src="https://i.imgur.com/7YnQJ7K.png" alt="Metadata Extractor Settings" width=70%> <img src="https://i.imgur.com/PtNCamH.png" alt="ofreq command" width=40%>
-
-For more in-detail information on the metadata extractor, refer to [the plugin's README](https://github.com/kometenstaub/metadata-extractor).
+<img src="https://i.imgur.com/7YnQJ7K.png" alt="Metadata Extractor Settings" width=70%>
 
 ## List of all other Breaking Changes 
 *when updating from v. 1.x to 2.x*
@@ -35,3 +30,7 @@ For more in-detail information on the metadata extractor, refer to [the plugin's
 
 *when updating to 2.1*
 - removed `osettings` command – improved version now available via the command `o,`. See [Settings-Search](Settings%20Search.md).
+
+*when updating to 2.3*
+- replaced `ovault` command with `ov`. See [Vault Switcher documentation](Vault%20Switcher.md).
+- removed `ofreq` for simplification, still available via `oupdate → Set Metadata Update Frequency`

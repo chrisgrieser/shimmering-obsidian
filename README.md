@@ -13,7 +13,7 @@ Please refer to [this information document on Breaking Changes](documentation/Br
 ## Installation & Configuration
 - [Installation and Setup](documentation/Installation.md)
 - [Workflow Configuration](documentation/Workflow%20Configuration.md)
-- [Troubleshooting](documentation/Installation.md#Troubleshooting)
+- [Troubleshooting](documentation/Troubleshooting.md)
 
 ## Feature Overview
 - *For a full documentation & usage guide, follow the links to the respective subsection.*
@@ -40,18 +40,16 @@ Please refer to [this information document on Breaking Changes](documentation/Br
 - OCR Screenshots
 - 🆕 Paste URL into selection
 - 🆕 Move Note to a different folder
-- Create a new Note
+- Create new Notes (based on Template or via QuickAdd)
 - Backup your Vault
 - Dual Mode (Edit + Preview)
 - Conveniently access various folders like `.obsidian` or `.trash`
-- ✴️ Multi-Vault-Support: Switch the Vault controlled by this workflow
 - 🆕 Daily Notes
 - 🐢 Carl Auto-Responses
 
 ➡️ [Documentation of all Utility Features](documentation/Utility%20Features.md)
 
 ### Plugin & Theme Search
-- Create new Notes (based on Template or via QuickAdd)
 - Search Community Plugins and Themes
 - Open in Obsidian or GitHub
 - 🆕 Access Plugin Settings
@@ -61,11 +59,19 @@ Please refer to [this information document on Breaking Changes](documentation/Br
 ➡️ [Documentation of the Plugin & Theme Search](documentation/Plugin%20and%20Theme%20Search.md)
 
 ### Workspace Switcher
-- ✴️ Quickly switch Workspaces
-- 🆕 Manage Workspaces
-- 🆕 Automatically toggle Spellchecking when switching to certain workspaces
+- ✴️ Quickly switch workspaces
+- 🆕 Manage workspaces
+- 🆕 Automatically toggle spellchecking when switching to certain workspaces
 
 ➡️ [Documentation of the Workspace Switcher](documentation/Workspace%20Switcher.md)
+
+### 🆕 Settings Search
+- Search & quickly open specific Settings Tabs, the Theme Browser, or the Community Browser.
+- Quickly update all plugins.
+- Open Plugin Settings.
+- Open local plugin folders in `.obsidian/plugins/`
+
+➡️ [Documentation of the Settings Search](documentation/Settings%20Search.md)
 
 ### Documentation Search
 - Search the Official Obsidian Documentation
@@ -74,12 +80,11 @@ Please refer to [this information document on Breaking Changes](documentation/Br
 
 ➡️ [Documentation of the Documentation Search](documentation/Documentation%20Search.md)
 
-### 🆕 Settings Search
-- Search & quickly open specific Settings Tabs.
-- Includes Plugin Settings.
-- Open local plugin folders in `.obsidian/plugins/`
+### Vault Switcher
+- Switch the Vault controlled by *this Alfred workflow*.
+- 🆕 Open vaults in Obsidian, Finder, or the Terminal.
 
-➡️ [Documentation of the Settings Search](documentation/Settings%20Search.md)
+➡️ [Documentation of the Vault Switcher](documentation/Vault%20Switcher.md)
 
 ### CSS-related Features
 - Access themes & CSS Snippets via Alfred
@@ -90,19 +95,21 @@ Please refer to [this information document on Breaking Changes](documentation/Br
 
 ➡️ [Documentation of CSS-related Features](documentation/CSS-related%20Features.md)
 
-### Features for Developers
-- 🆕 Quick Access to cheat sheets for Plugin Development, e.g. Obsidian API
+### Features for Developers 🆕
+- 🆕 Quick Access to cheat sheets for Plugin Development, e.g. the Obsidian API
 - ✴️ Quickly open various development-related folders
-- 🆕 Clone a plugin's repository via the Plugin Search
-- 🆕 Open the Vault's root in the default Terminal or in Finder
-- 🆕 Add & Update Beta Plugins via BRAT
+- 🆕 Open a local plugin's folder in Finder or the Terminal
+- 🆕 Quick Copy of a plugin's ID
+- Clone a plugin's repository via the Plugin Search
+- Open the Vault's root in the default Terminal or in Finder
+- Add & Update Beta Plugins via [BRAT](https://github.com/TfTHacker/obsidian42-brat)
 
 ➡️ [Documentation of Features for Developers](documentation/Features%20for%20Developers.md)
 
 ## Credits
 
 ### Thanks
-- Big shoutout to @koala for developing the [metadata extractor plugin](https://github.com/kometenstaub/metadata-extractor), for which this workflow is right now the main client.
+- Big shout-out to @koala for developing the [metadata extractor plugin](https://github.com/kometenstaub/metadata-extractor), for which this workflow is right now the main client.
 - Also thanks to [@Vinzent03](https://github.com/Vinzent03) for his invaluable [Advanced URI plugin](https://github.com/Vinzent03/obsidian-advanced-uri), which enables Alfred to control various aspects of Obsidian.
 - Main icon by [Jack Liu](https://www.reddit.com/user/jackliu1219), with some additional icons from [Freepik](https://www.freepik.com/).
 

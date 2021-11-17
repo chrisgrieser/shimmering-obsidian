@@ -29,4 +29,4 @@ logdata
 
 **Checklist**
 - [ ] I have updated to the latest version of this workflow, the Advanced URI plugin, and the Metadata Extractor plugin.
-- [ ] I tried all common solutions described in the [Troubleshooting Section of the Documentation](https://github.com/chrisgrieser/shimmering-obsidian/blob/main/documentation/Installation.md#troubleshooting).
+- [ ] I have read and checked the [Troubleshooting](https://github.com/chrisgrieser/shimmering-obsidian/blob/main/documentation/Troubleshooting.md).

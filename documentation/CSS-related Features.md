@@ -23,6 +23,7 @@
 ## 🎨 For Theme Designers: Quick Font File Conversion
 **`Triggered via Universal Action`: Convert a font file to CSS with base64.**
 - This will take the selected font file (e.g., `.tff` or `.woff`), convert them into base64 and write the base64-encoded font into a CSS file, which will be placed into your snippet folder.
-- See the Alfred Documentation for how to use [Universal Actions](https://www.alfredapp.com/universal-actions/).
+- Using the [workflow configuration](Workflow%20Configuration.md#Miscellaneous) `fontformat`, you can select the format that will be inserted into the base64-encoded CSS.
+- See the Alfred Documentation on how to use [Universal Actions](https://www.alfredapp.com/universal-actions/).
 
 <img src="https://i.imgur.com/q0vKXzT.gif" alt="Conversion of CSS via universal command" width=60%>

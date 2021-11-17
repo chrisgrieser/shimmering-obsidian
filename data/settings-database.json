@@ -7,7 +7,7 @@
    {
       "title": "Files & Links",
       "id": "file",
-      "match": "files links wikilinks trash path"
+      "match": "files links wikilinks trash path attachments"
    },
    {
       "title": "Hotkeys",
@@ -17,7 +17,7 @@
    {
       "title": "Appearance",
       "id": "appearance",
-      "match": "appearance themes snippets"
+      "match": "appearance themes snippets css"
    },
    {
       "title": "About",
@@ -38,5 +38,20 @@
       "title": "Community Plugins",
       "id": "community-plugins",
       "match": "community plugins"
+   },
+   {
+      "title": "Plugin Browser",
+      "id": "plugin-browser",
+      "match": "community plugins browser store"
+   },
+   {
+      "title": "Theme Browser",
+      "id": "theme-browser",
+      "match": "community themes browser store appearance css"
+   },
+   {
+      "title": "Update Community Plugins",
+      "id": "updateplugins",
+      "match": "plugins update"
    }
 ]

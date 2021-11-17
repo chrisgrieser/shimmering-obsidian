@@ -2,7 +2,7 @@
 
 # Utility Features
 
-## Table of Content
+## Table of Contents
 <!-- MarkdownTOC -->
 
 - [OCR Screenshots](#ocr-screenshots)
@@ -12,24 +12,29 @@
 - [Backup your Vault](#backup-your-vault)
 - [Dual Mode](#dual-mode)
 - [Open Various Folders](#open-various-folders)
-- [✴️ Change and Access your Vault](#%E2%9C%B4%EF%B8%8F-change-and-access-your-vault)
 - [🆕 Daily Notes](#%F0%9F%86%95-daily-notes)
 - [🐢 Carl](#%F0%9F%90%A2-carl)
+- [✴️ Update Plugins & Metadata](#%E2%9C%B4%EF%B8%8F-update-plugins--metadata)
 
 <!-- /MarkdownTOC -->
 
 ## OCR Screenshots
+
+<img src="https://i.imgur.com/xwdl1N5.gif" alt="OCR Screenshot" width=60% height=60%>
+
 **`Triggered via Hotkey`: Take an OCR Screenshot.**
 - Similar to the default Mac Hotkey `cmd + shift + 4`, you will be able to select part of your screen for a screenshot. However, instead of saving a screenshot, a new note will be created which contains the OCR-content of the selection.
-- 💡 Recommendation: To stay in line with the other macOS keyboard shortcuts for taking screenshots, use something like `cmd + shift + 2` as hotkey.
+- 💡 _Recommendation_: To stay in line with the other macOS keyboard shortcuts for taking screenshots, use something like `cmd + shift + 2` as hotkey.
 - If the file “OCR-Screenshot” already exists in your vault root, any subsequent OCR-Screenshots will instead append to this note. This is intended for taking a lot of OCR-Screenshots in succession, e.g., during a lecture or presentation.
-- You can change the prefix to OCR screenshots by changing the [workflow configuration](Workflow Configuration.md#OCR-Screenshots) `ocr_prefix`.
+- You can change the prefix to OCR screenshots by changing the [workflow configuration](Workflow%20Configuration.md#OCR-Screenshots) `ocr_prefix`.
 	- Use a different date format by following [Alfred's Placeholder-Syntax](https://www.alfredapp.com/help/workflows/advanced/placeholders/#date-time).
 	- You can leave `ocr_prefix` empty or insert any other fixed value (e.g., a YAML-Header). 
 	- 💡 While not very visible, the workflow configuration variables *do* accept multi-line values.
 - For best results, you should set the proper languages to be recognized with the workflow setting `ocr_languages`.
+- 💡 _The first time you use the OCR screenshot feature_, you might need to give Alfred permission to record your screen. You can do so under the macOS system settings (see image below).
 
-<img src="https://i.imgur.com/xwdl1N5.gif" alt="OCR Screenshot" width=60% height=60%>
+<img src="https://user-images.githubusercontent.com/73286100/131231644-a800c0b0-8dc2-4ae9-bd41-c3937741b94a.png" alt="Permissions for OCR Screenshots" width=35%>
+
 
 ## 🆕 Paste URL into selection
 **`Triggered via Hotkey`: Paste URL into selection.**
@@ -80,13 +85,9 @@ end tell
 - `o.trash`: Open the hidden [`.trash` folder](https://help.obsidian.md/Advanced+topics/Deleting+files) located in your vault root will be opened in Finder. (Note that you have to select `Move to Obsidian trash` in the Obsidian settings under the `Files & Links` tab before deleted files can be found here.)
 - 🆕 `oapplicationsupport`: Open Obsidian's Application Support folder.
 - `oplugin`: The plugin folder in `.obsidian` folder will be opened in Finder.
-
-## ✴️ Change and Access your Vault
-**`ovault`: Open the Obsidian [settings].**
-- Conveniently switch the vault used by _this workflow_. (This Alfred workflow can only work on one vault at the same time.)
-- ⚠️ Note that the [required plugins](Installation.md#Hard-Requirements) will have to be installed in **each vault** you want to control via Alfred.
-- You can also choose to open a new vault or open your current vault's root in your Terminal or Finder.[^2]
-- 💡 You can also use the command `ohelpvault` to open the Help Vault (once you have opened it at least once.)
+- `ocss`: Open the `themes` and `snippets` folder. (Along with your installed themes and snippets.)
+- Open your vault root with the [Vault Switcher](Vault%20Switcher.md).
+- Open local plugin folders with the [Plugin Settings Search](Settings%20Search.md).
 
 ## 🆕 Daily Notes
 **`od`: Open & Append to today's daily note [settings].**
@@ -94,10 +95,17 @@ end tell
 - This feature works without Obsidian running, since when appending, your daily note will not be opened. 
 - Use `cmd + ↵` to open your daily note after appending to it.
 - This does *not* require the Daily Notes plugin to be enabled.
-- However, the daily notes must be exactly in the format `YYYY-MM-DD` for this feature to work.
+- For now, the daily notes must be exactly in the format `YYYY-MM-DD` for this feature to work.
+- Using the [workflow configuration](Workflow%20Configuration.md#Miscellaneous) `daily_note_path`, you can set the location of your daily notes inside your vault.
 
 ## 🐢 Carl
 **`ocarl`: Search `carl` auto-responses.**
 - Search and paste auto-responses from the beloved Discord Bot of the [Obsidian Discord Server](https://discord.gg/veuWUTm).
 
-[^2]: You can [change the default terminal in the Alfred Settings](https://www.alfredapp.com/help/features/terminal/).
+## ✴️ Update Plugins & Metadata
+**`oupdate`: Update Plugins and Metadata used by this workflow**
+- Update your Community Plugins
+- Update your Beta Plugins (installed via [the BRAT Plugin](https://github.com/TfTHacker/obsidian42-brat))
+- Re-index the data for the [Documentation Search](Documentation%20Search.md).
+- Refresh the metadata used for this workflow manually or set an interval to refresh it automatically. See the section on [workflow configuration for more information](Workflow%20Configuration.md#Metadata-Extractor-Configuration)
+
