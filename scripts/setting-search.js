@@ -23,7 +23,7 @@ let jsonArray = [];
 standard_settings.forEach(setting =>{
 
 	let idURI = "obsidian://advanced-uri?settingid=" + setting.id;
-	if (setting.id == "updateplugins") idURI = "obsidian://advanced-uri?updateplugins";
+	if (setting.id == "updateplugins") idURI = "obsidian://advanced-uri?updateplugins=true";
 
 	jsonArray.push({
 		'title': setting.title,

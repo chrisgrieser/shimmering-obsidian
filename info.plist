@@ -7123,7 +7123,7 @@ open "obsidian://advanced-uri?commandid=metadata-extractor%253Awrite-allExceptMd
 				<key>fixedorder</key>
 				<false/>
 				<key>items</key>
-				<string>[{"title":"⚙️ Update all Plugins","arg":"obsidian:\/\/advanced-uri?updateplugins","subtitle":""},{"title":"🅱️ Update all Beta Plugins","arg":"obsidian:\/\/advanced-uri?commandid=obsidian42-brat%253ABRAT-checkForUpdatesAndUpdate","subtitle":"Obsidian42 BRAT Plugin"},{"title":"📓 Re-Index Documentation Search","arg":"documentations","subtitle":""},{"title":"🔁 Manually Refresh Metadata","arg":"manual_metadata","subtitle":""},{"title":"🕑 Set Metadata Update Frequency","arg":"metadata_frequency","subtitle":"will restart Obsidian afterwards"}]</string>
+				<string>[{"title":"⚙️ Update all Plugins","arg":"obsidian:\/\/advanced-uri?updateplugins=true","subtitle":""},{"title":"🅱️ Update Beta Plugins","arg":"obsidian:\/\/advanced-uri?commandid=obsidian42-brat%253ABRAT-checkForUpdatesAndUpdate","subtitle":"requires BRAT Plugin"},{"title":"📓 Re-index Documentation Search","arg":"documentations","subtitle":""},{"title":"🔁 Manually Refresh Metadata","arg":"manual_metadata","subtitle":""},{"title":"🕑 Set Metadata Update Frequency","arg":"metadata_frequency","subtitle":"will restart Obsidian afterwards"}]</string>
 				<key>keyword</key>
 				<string>oupdate</string>
 				<key>runningsubtext</key>
@@ -11107,17 +11107,17 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 	<key>variablesdontexport</key>
 	<array>
 		<string>backup_destination</string>
+		<string>ObRunning</string>
 		<string>daily_note_path</string>
-		<string>workspace_to_spellcheck</string>
 		<string>use_quickadd</string>
 		<string>fontformat</string>
-		<string>ObRunning</string>
+		<string>vault_path</string>
 		<string>h_lvl_ignore</string>
 		<string>template_note_path</string>
-		<string>vault_path</string>
+		<string>workspace_to_spellcheck</string>
 	</array>
 	<key>version</key>
-	<string>2.3.1</string>
+	<string>2.3.2</string>
 	<key>webaddress</key>
 	<string>https://chris-grieser.de/</string>
 </dict>
