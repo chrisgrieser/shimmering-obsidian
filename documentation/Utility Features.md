@@ -6,15 +6,15 @@
 <!-- MarkdownTOC -->
 
 - [OCR Screenshots](#ocr-screenshots)
-- [🆕 Paste URL into selection](#%F0%9F%86%95-paste-url-into-selection)
-- [🆕 Move Note](#%F0%9F%86%95-move-note)
+- [Paste URL into selection](#paste-url-into-selection)
+- [Move Note](#move-note)
 - [Create a new Note](#create-a-new-note)
 - [Backup your Vault](#backup-your-vault)
 - [Dual Mode](#dual-mode)
 - [Open Various Folders](#open-various-folders)
-- [🆕 Daily Notes](#%F0%9F%86%95-daily-notes)
-- [🐢 Carl](#%F0%9F%90%A2-carl)
-- [✴️ Update Plugins & Metadata](#%E2%9C%B4%EF%B8%8F-update-plugins--metadata)
+- [Daily Notes](#daily-notes)
+- [Carl](#carl)
+- [Update Plugins & Metadata](#update-plugins--metadata)
 
 <!-- /MarkdownTOC -->
 
@@ -36,7 +36,7 @@
 <img src="https://user-images.githubusercontent.com/73286100/131231644-a800c0b0-8dc2-4ae9-bd41-c3937741b94a.png" alt="Permissions for OCR Screenshots" width=35%>
 
 
-## 🆕 Paste URL into selection
+## Paste URL into selection
 **`Triggered via Hotkey`: Paste URL into selection.**
 - Basically replicates the functionality of the [plugin of the same name](https://github.com/denolehov/obsidian-url-into-selection), which unfortunately does not work anymore. 
 - When you have text selected and an URL in your clipboard, this will automatically turn the selected text into a Markdown link with the URL from the clipboard.
@@ -45,7 +45,7 @@
 
  <img src="https://user-images.githubusercontent.com/73286100/133614452-ef3147bf-7cd1-4dad-9b76-880f93fdcdf8.gif" alt="paste url into selection" width=50%>
 
-## 🆕 Move Note
+## Move Note
 **`om` or `triggered via hotkey`: Move the current note to a different folder in your vault.**
 - This fully replicates the functionality of the `Move File to another folder`.
 - 💡 The reason for this command is that the `Move File to another folder` is only available when the file explorer core plugin is enabled. However, some users of this Alfred workflow (including myself) prefer to fully navigate their vault via Alfred, so that the file explorer isn't really needed anymore — the move command is basically the last thing stopping you from simply deactivating the file explorer plugin.
@@ -89,7 +89,7 @@ end tell
 - Open your vault root with the [Vault Switcher](Vault%20Switcher.md).
 - Open local plugin folders with the [Plugin Settings Search](Settings%20Search.md).
 
-## 🆕 Daily Notes
+## Daily Notes
 **`od`: Open & Append to today's daily note [settings].**
 - Either open today's daily note or append to today's daily note. 
 - This feature works without Obsidian running, since when appending, your daily note will not be opened. 
@@ -98,11 +98,11 @@ end tell
 - For now, the daily notes must be exactly in the format `YYYY-MM-DD` for this feature to work.
 - Using the [workflow configuration](Workflow%20Configuration.md#Miscellaneous) `daily_note_path`, you can set the location of your daily notes inside your vault.
 
-## 🐢 Carl
-**`ocarl`: Search `carl` auto-responses.**
+## Carl
+**`ocarl`: Search `carl` auto-responses. 🐢 **
 - Search and paste auto-responses from the beloved Discord Bot of the [Obsidian Discord Server](https://discord.gg/veuWUTm).
 
-## ✴️ Update Plugins & Metadata
+## Update Plugins & Metadata
 **`oupdate`: Update Plugins and Metadata used by this workflow**
 - Update your Community Plugins
 - Update your Beta Plugins (installed via [the BRAT Plugin](https://github.com/TfTHacker/obsidian42-brat))
