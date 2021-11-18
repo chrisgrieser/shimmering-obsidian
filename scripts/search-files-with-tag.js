@@ -12,14 +12,13 @@ function parentFolder (filePath){
 function alfredMatcher (str){
 	return str.replace (/[-\(\)_\.]/g," ") + " " + str;
 }
-const readFile = function (path, encoding) {
-    !encoding && (encoding = $.NSUTF8StringEncoding);
+function readFile (path, encoding) {
+    if (!encoding) encoding = $.NSUTF8StringEncoding;
     const fm = $.NSFileManager.defaultManager;
     const data = fm.contentsAtPath(path);
     const str = $.NSString.alloc.initWithDataEncoding(data, encoding);
     return ObjC.unwrap(str);
-};
-
+}
 
 const homepath = app.pathTo("home folder");
 const vault_path = $.getenv("vault_path").replace(/^~/, homepath);
@@ -42,7 +41,7 @@ const recent_files =
 	JSON.parse(readFile(recentJSON))
 	.lastOpenFiles;
 
-//filter the metadataJSON for the items w/ relativePaths of starred files
+//filter the metadataJSON for the items w/ relativePaths of tagged files
 let selected_tag = app.doShellScript ("echo '" + $.getenv("selected_tag") + "' | iconv -f UTF-8-MAC -t MACROMAN");
 if (merge_nested_tags) selected_tag = selected_tag.split("/")[0];
 
@@ -53,7 +52,8 @@ if (merge_nested_tags) {
 	file_array = file_array.filter(function (f){
 		let hasParentTag = false;
 		f.tags.forEach(tag => {
-			if (tag.startsWith(selected_tag)) hasParentTag = true;
+			if (tag.startsWith(selected_tag + "/")) hasParentTag = true;
+			if (tag == selected_tag) hasParentTag = true;
 		});
 		return hasParentTag;
 	});
