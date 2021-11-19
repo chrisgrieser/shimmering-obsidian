@@ -138,21 +138,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>0B872C1D-665B-4E26-8801-20122362F0E0</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>C32B3DC4-B5E1-41D3-A194-28EFE473177B</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>sourceoutputuid</key>
-				<string>4DE5AC46-B16C-485C-AB1A-488DC8CB3AEB</string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>0C46CBB1-C490-4F62-8CC4-F59D7B1016D6</key>
 		<array>
 			<dict>
@@ -1037,16 +1022,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>1EAE5E2F-C10A-4DB6-8DDB-32DE780608A2</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>0B872C1D-665B-4E26-8801-20122362F0E0</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -8776,57 +8751,6 @@ tell application "Obsidian" to activate</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>conditions</key>
-				<array>
-					<dict>
-						<key>inputstring</key>
-						<string></string>
-						<key>matchcasesensitive</key>
-						<false/>
-						<key>matchmode</key>
-						<integer>0</integer>
-						<key>matchstring</key>
-						<string>obsidian://advanced-uri?saveworkspace=true</string>
-						<key>outputlabel</key>
-						<string>save</string>
-						<key>uid</key>
-						<string>4DE5AC46-B16C-485C-AB1A-488DC8CB3AEB</string>
-					</dict>
-				</array>
-				<key>elselabel</key>
-				<string>--</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.conditional</string>
-			<key>uid</key>
-			<string>0B872C1D-665B-4E26-8801-20122362F0E0</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<true/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string></string>
-				<key>title</key>
-				<string>💾 Workspace saved</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>C32B3DC4-B5E1-41D3-A194-28EFE473177B</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
 	</array>
 	<key>readme</key>
 	<string>ℹ️ The new version 2.0 is a complete overhaul of the workflow, with a few breaking changes and more than a dozen new features. For an overview of all changes, refer to the completely overhauled documentation.
@@ -8931,15 +8855,6 @@ Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (r
 			<integer>870</integer>
 			<key>ypos</key>
 			<integer>1175</integer>
-		</dict>
-		<key>0B872C1D-665B-4E26-8801-20122362F0E0</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>3</integer>
-			<key>xpos</key>
-			<integer>195</integer>
-			<key>ypos</key>
-			<integer>8925</integer>
 		</dict>
 		<key>0BBE0C0E-D057-4A44-B000-02727F0AEDE5</key>
 		<dict>
@@ -10563,15 +10478,6 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<key>ypos</key>
 			<integer>6200</integer>
 		</dict>
-		<key>C32B3DC4-B5E1-41D3-A194-28EFE473177B</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>3</integer>
-			<key>xpos</key>
-			<integer>280</integer>
-			<key>ypos</key>
-			<integer>8950</integer>
-		</dict>
 		<key>C3B79CB2-4DD0-4C32-AF64-5AC35DD58529</key>
 		<dict>
 			<key>colorindex</key>
@@ -11188,7 +11094,7 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 		<string>vault_path</string>
 	</array>
 	<key>version</key>
-	<string>2.3.2</string>
+	<string>2.3.3</string>
 	<key>webaddress</key>
 	<string>https://chris-grieser.de/</string>
 </dict>
