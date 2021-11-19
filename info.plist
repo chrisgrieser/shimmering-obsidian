@@ -1992,6 +1992,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>A8D6D21C-0A25-4DAC-A516-F8F3DDF5F93E</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>569B6FA7-2D27-4250-9937-AEC7F8947206</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>AD7DF1BF-E171-4081-A3B9-FDC3FA9D5DC3</key>
 		<array>
 			<dict>
@@ -6979,6 +6992,46 @@ echo "$backup"</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>oupdate</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>⚙️ Update all Plugins</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>A8D6D21C-0A25-4DAC-A516-F8F3DDF5F93E</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>obsidian://advanced-uri?updateplugins=true</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>569B6FA7-2D27-4250-9937-AEC7F8947206</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>browser</key>
 				<string></string>
 				<key>spaces</key>
@@ -7123,7 +7176,7 @@ open "obsidian://advanced-uri?commandid=metadata-extractor%253Awrite-allExceptMd
 				<key>fixedorder</key>
 				<false/>
 				<key>items</key>
-				<string>[{"title":"⚙️ Update all Plugins","arg":"obsidian:\/\/advanced-uri?updateplugins=true","subtitle":""},{"title":"🅱️ Update Beta Plugins","arg":"obsidian:\/\/advanced-uri?commandid=obsidian42-brat%253ABRAT-checkForUpdatesAndUpdate","subtitle":"requires BRAT Plugin"},{"title":"📓 Re-index Documentation Search","arg":"documentations","subtitle":""},{"title":"🔁 Manually Refresh Metadata","arg":"manual_metadata","subtitle":""},{"title":"🕑 Set Metadata Update Frequency","arg":"metadata_frequency","subtitle":"will restart Obsidian afterwards"}]</string>
+				<string>[{"imagefile":"480f3609e44ea0ceed5bd6bc0fb19a7874881127.png","title":"🅱️ Update Beta Plugins","arg":"obsidian:\/\/advanced-uri?commandid=obsidian42-brat%253ABRAT-checkForUpdatesAndUpdate","subtitle":"requires BRAT Plugin"},{"title":"📓 Re-index Documentation Search","arg":"documentations","subtitle":""},{"title":"🔁 Manually Refresh Metadata","arg":"manual_metadata","subtitle":""},{"title":"🕑 Set Metadata Update Frequency","arg":"metadata_frequency","subtitle":"will restart Obsidian afterwards"}]</string>
 				<key>keyword</key>
 				<string>oupdate</string>
 				<key>runningsubtext</key>
@@ -9570,6 +9623,15 @@ takes file path (with or without heading) and opens it correctly</string>
 			<key>ypos</key>
 			<integer>5125</integer>
 		</dict>
+		<key>569B6FA7-2D27-4250-9937-AEC7F8947206</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>xpos</key>
+			<integer>180</integer>
+			<key>ypos</key>
+			<integer>5230</integer>
+		</dict>
 		<key>57322297-1206-4FF2-99BA-FD0E76398989</key>
 		<dict>
 			<key>colorindex</key>
@@ -10280,6 +10342,15 @@ takes file path (with or without heading) and opens it correctly</string>
 			<integer>25</integer>
 			<key>ypos</key>
 			<integer>1570</integer>
+		</dict>
+		<key>A8D6D21C-0A25-4DAC-A516-F8F3DDF5F93E</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>xpos</key>
+			<integer>25</integer>
+			<key>ypos</key>
+			<integer>5230</integer>
 		</dict>
 		<key>AC3931E7-5D73-42C4-8975-1E4B4DB66B69</key>
 		<dict>

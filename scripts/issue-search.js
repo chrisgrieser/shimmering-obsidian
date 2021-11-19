@@ -4,13 +4,13 @@ ObjC.import("stdlib");
 ObjC.import('Foundation');
 app = Application.currentApplication();
 app.includeStandardAdditions = true;
-const readFile = function (path, encoding) {
-    !encoding && (encoding = $.NSUTF8StringEncoding);
+function readFile (path, encoding) {
+    if (!encoding) encoding = $.NSUTF8StringEncoding;
     const fm = $.NSFileManager.defaultManager;
     const data = fm.contentsAtPath(path);
     const str = $.NSString.alloc.initWithDataEncoding(data, encoding);
     return ObjC.unwrap(str);
-};
+}
 
 function alfredMatcher (str){
 	return str.replace (/[-\(\)_\.]/g," ") + " " + str;
