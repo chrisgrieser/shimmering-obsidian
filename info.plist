@@ -11053,7 +11053,7 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 		<key>backup_destination</key>
 		<string>~/Library/Mobile Documents/com~apple~CloudDocs/Dokumente/IT Backups/Obsidian Backups</string>
 		<key>daily_note_path</key>
-		<string>~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vault/Archive</string>
+		<string></string>
 		<key>download_folder_path</key>
 		<string>~/Downloads</string>
 		<key>fontformat</key>
@@ -11071,7 +11071,7 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 		<key>open_after_appending</key>
 		<string>false</string>
 		<key>template_note_path</key>
-		<string>~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vault/Functionality/Templates/T Basic.md</string>
+		<string>~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vault/Meta/Templates/T Basic.md</string>
 		<key>thousand_separator</key>
 		<string>.</string>
 		<key>use_quickadd</key>
@@ -11088,13 +11088,13 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 		<string>daily_note_path</string>
 		<string>use_quickadd</string>
 		<string>fontformat</string>
-		<string>workspace_to_spellcheck</string>
+		<string>vault_path</string>
 		<string>h_lvl_ignore</string>
 		<string>template_note_path</string>
-		<string>vault_path</string>
+		<string>workspace_to_spellcheck</string>
 	</array>
 	<key>version</key>
-	<string>2.3.3</string>
+	<string>2.3.4</string>
 	<key>webaddress</key>
 	<string>https://chris-grieser.de/</string>
 </dict>

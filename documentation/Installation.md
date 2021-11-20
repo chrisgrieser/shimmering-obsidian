@@ -24,14 +24,17 @@ These requirements are only necessary for specific features of this workflow. If
 
 | Name                                                                   | Type                      | Function                                                                                        |
 | ---------------------------------------------------------------------- | ------------------------- | ----------------------------------------------------------------------------------------------- |
-| [Hotkey-Helper](https://github.com/pjeby/hotkey-helper)                | Obsidian Community Plugin | used to open plugins and their configuration directly in Obsidian via `op`                      |
+| [Hotkey-Helper](https://github.com/pjeby/hotkey-helper)[^2]                | Obsidian Community Plugin | used to open plugins and their configuration directly in Obsidian via `op`                      |
 | [Tesseract](https://tesseract-ocr.github.io/tessdoc/Installation.html) | Third-Party Software      | needed for [OCR screenshots](Utility%20Features.md#OCR-Screenshots)                                                                  |
 | [qlmarkdown](https://github.com/toland/qlmarkdown/)                    | Third-Party Software      | used to preview markdown notes with `shift` or `cmd + Y` when searching with `o`, `or`, or `os` |
+
 
 If you have [Homebrew](https://brew.sh/), Tesseract and qlmarkdown can by installed via the following terminal commands:
 
 ```bash
 brew install tesseract
-brew install tesseract-lang
+brew install tesseract-lang # for non-English languages
 brew install qlmarkdown
 ```
+
+[^2]: From Release 0.13+ on, the Hotkey Helper Plugin won't be needed anymore.  
