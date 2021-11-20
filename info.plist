@@ -11094,7 +11094,7 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 		<string>workspace_to_spellcheck</string>
 	</array>
 	<key>version</key>
-	<string>2.3.4</string>
+	<string>2.3.5</string>
 	<key>webaddress</key>
 	<string>https://chris-grieser.de/</string>
 </dict>
