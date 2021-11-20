@@ -1,0 +1,38 @@
+[
+   {
+      "title": "Quick Switcher",
+      "id": "switcher"
+   },
+   {
+      "title": "Page Preview (Popover)",
+      "id": "page-preview"
+   },
+   {
+      "title": "Daily Notes",
+      "id": "daily-notes"
+   },
+   {
+      "title": "Templates",
+      "id": "templates"
+   },
+   {
+      "title": "Note Composer",
+      "id": "note-composer"
+   },
+   {
+      "title": "Command Palette",
+      "id": "command-palette"
+   },
+   {
+      "title": "Zettelkasten Prefixer",
+      "id": "zk-prefixer"
+   },
+   {
+      "title": "File Recovery",
+      "id": "file-recovery"
+   },
+   {
+      "title": "Sync",
+      "id": "sync"
+   }
+]

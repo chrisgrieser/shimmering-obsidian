@@ -14,11 +14,48 @@ function readFile (path, encoding) {
 }
 
 const vault_path = $.getenv("vault_path").replace(/^~/, app.pathTo('home folder'));
-const standard_settings = JSON.parse(readFile("./data/settings-database.json"));
-const installed_plugins = app.doShellScript('ls -1 "' + vault_path + '""/.obsidian/plugins/"').split("\r");
-const enabled_core_plugins = JSON.parse(readFile(vault_path + "/.obsidian/core-plugins.json"));
-const enabled_com_plugins = JSON.parse(readFile(vault_path + "/.obsidian/community-plugins.json"));
 let jsonArray = [];
+
+const standard_settings = JSON.parse(readFile("./data/settings-database.json"));
+
+const installed_plugins = app.doShellScript('ls -1 "' + vault_path + '""/.obsidian/plugins/"').split("\r");
+const enabled_com_plugins = JSON.parse(readFile(vault_path + "/.obsidian/community-plugins.json"));
+
+const corePluginsWithSettings = JSON.parse(readFile("./data/core-plugins-with-settings-database.json"));
+const enabled_core_plugins = JSON.parse(readFile(vault_path + "/.obsidian/core-plugins.json"));
+
+enabled_core_plugins.forEach(pluginID =>{
+	let hasSettings =
+		corePluginsWithSettings
+		.map(p => p.id)
+		.includes(pluginID);
+	if (!hasSettings) return;
+
+	let pluginName = corePluginsWithSettings
+		.filter(item => item.id == pluginID)
+		[0].title;
+
+	jsonArray.push({
+		'title': pluginName,
+		'uid': pluginID,
+		'match': pluginName,
+		'arg': "obsidian://advanced-uri?settingid=" + pluginID,
+		'icon': {'path': "icons/plugin.png"},
+		"mods": {
+			"alt": {
+				"valid": false,
+			},
+			"cmd": {
+				"valid": false,
+			},
+			"ctrl": {
+				"arg": pluginID,
+				"subtitle": "⌃: Copy plugin ID '" + pluginID + "'",
+			}
+		},
+	});
+
+});
 
 standard_settings.forEach(setting =>{
 
@@ -49,7 +86,7 @@ installed_plugins.forEach(pluginFolder =>{
 	try {
 		manifest = JSON.parse(readFile(vault_path + "/.obsidian/plugins/" + pluginFolder + "/manifest.json"));
 	} catch (error) {
-		// catches error caused by plugins with "manifest.json" (beta plugins)
+		// catches error caused by plugins without "manifest.json" (beta plugins)
 		manifest = {
 			"id": pluginFolder,
 			"name": pluginFolder.replaceAll ("-", " "),

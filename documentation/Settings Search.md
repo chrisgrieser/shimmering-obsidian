@@ -12,7 +12,7 @@
 - _⚙️ For developers:_
 	- `⌘ + ↵` will open browse the local plugin folder in your default Terminal.[^2]
 	- `⌃ + ↵` copies the plugin's id.
-	- Hold `⌃` to see the plugin's id.
+	- Hold `⌃` to see the plugin's id. `⌃ + ↵` to copy the plugin id.
 
 ## Tips
 - 💡 `o,` refers to the `⌘ ,` shortcut used to open the settings.
