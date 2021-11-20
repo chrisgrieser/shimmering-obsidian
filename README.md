@@ -6,9 +6,9 @@
 <img src="https://user-images.githubusercontent.com/73286100/139678407-9ac39baa-5f49-42a0-9622-0fbaf68540b2.gif" alt="promo video" width=70%> 
 
 ## ⚠️ Breaking Changes
-When updating from version 1.x to version 2.x, there are some breaking changes to some commands. But most importantly, this plugin now requires the [metadata extractor plugin](https://github.com/kometenstaub/metadata-extractor) to run most of its features.
+When updating from version 1.x to version 2.x, there are some breaking changes for certain commands. Most importantly, this plugin now requires the [metadata extractor plugin](https://github.com/kometenstaub/metadata-extractor) to run most of its features.
 
-Please refer to [this information document on Breaking Changes](documentation/Breaking%20Changes.md) for more in-detail information.
+Please refer to [the Breaking Changes Docs](documentation/Breaking%20Changes.md) for more in-detail information.
 
 ## Installation & Configuration
 - [Installation and Setup](documentation/Installation.md)
@@ -81,7 +81,7 @@ Please refer to [this information document on Breaking Changes](documentation/Br
 ➡️ [Documentation of the Documentation Search](documentation/Documentation%20Search.md)
 
 ### Vault Switcher
-- Switch the Vault controlled by *this Alfred workflow*.
+- Switch the Vault controlled by this Alfred workflow.
 - 🆕 Open vaults in Obsidian, Finder, or the Terminal.
 
 ➡️ [Documentation of the Vault Switcher](documentation/Vault%20Switcher.md)
