@@ -26,7 +26,7 @@ vault_array.forEach(vault_path => {
 
 	jsonArray.push({
 		'title': vault_name,
-		'subtitle': "Control this vault with 'Shimmering Obsidian'.",
+		'subtitle': "Control this vault with 'Shimmering Obsidian'",
 		'arg': vault_path,
 	});
 });

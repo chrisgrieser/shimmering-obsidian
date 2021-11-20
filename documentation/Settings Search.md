@@ -11,8 +11,8 @@
 - `⌥ + ↵` will open the local plugin folder in `.obsidian/plugins/` in Finder.
 - _⚙️ For developers:_
 	- `⌘ + ↵` will open browse the local plugin folder in your default Terminal.[^2]
-	- `⌃ + ↵` copies the plugin's id.
-	- Hold `⌃` to see the plugin's id. `⌃ + ↵` to copy the plugin id.
+	- `⌃ + ↵` copies the plugin's id. (Hold `⌃` to see the plugin's id.)
+	- `fn + ↵` runs `git pull` in the plugin's directory.
 
 ## Tips
 - 💡 `o,` refers to the `⌘ ,` shortcut used to open the settings.

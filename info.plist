@@ -660,6 +660,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>42201C8D-D1DE-4EA8-9EC8-7F92FDF17572</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>6B3A98B8-CA8A-4745-AA31-24F1A7C7BF86</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>42B2DB09-A39A-4087-9F06-C0B0F2C16E88</key>
 		<array>
 			<dict>
@@ -1404,6 +1417,16 @@
 				<integer>262144</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>42201C8D-D1DE-4EA8-9EC8-7F92FDF17572</string>
+				<key>modifiers</key>
+				<integer>8388608</integer>
+				<key>modifiersubtext</key>
+				<string>fn: git pull</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -7910,6 +7933,52 @@ tell application "Obsidian" to activate</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>✅ git pull</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>6B3A98B8-CA8A-4745-AA31-24F1A7C7BF86</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>cd "$*"
+
+echo | git pull</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>5</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>42201C8D-D1DE-4EA8-9EC8-7F92FDF17572</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argumenttype</key>
 				<integer>2</integer>
 				<key>keyword</key>
@@ -8039,7 +8108,7 @@ tell application "Obsidian" to activate</string>
 				<key>text</key>
 				<string></string>
 				<key>title</key>
-				<string>🥳 Workflow Setup finished</string>
+				<string>🥳 Workflow Setup complete</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.notification</string>
@@ -8145,7 +8214,7 @@ open "obsidian://advanced-uri?commandid=metadata-extractor%253Awrite-allExceptMd
 				<key>escaping</key>
 				<integer>68</integer>
 				<key>script</key>
-				<string>tell application id "com.runningwithcrayons.Alfred" to set configuration "vault_path" to value query in workflow (system attribute "alfred_workflow_bundleid")</string>
+				<string>tell application id "com.runningwithcrayons.Alfred" to set configuration "vault_path" to value "{query}" in workflow (system attribute "alfred_workflow_bundleid")</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -8872,7 +8941,7 @@ Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (r
 			<key>xpos</key>
 			<integer>805</integer>
 			<key>ypos</key>
-			<integer>7340</integer>
+			<integer>7420</integer>
 		</dict>
 		<key>0CF629FC-A2DF-4AFA-B949-2D0D98C05B18</key>
 		<dict>
@@ -8926,9 +8995,9 @@ Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (r
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>205</integer>
+			<integer>195</integer>
 			<key>ypos</key>
-			<integer>7055</integer>
+			<integer>7185</integer>
 		</dict>
 		<key>15582108-F470-4C2C-A0B9-A33D71A7EAFC</key>
 		<dict>
@@ -9031,7 +9100,7 @@ Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (r
 			<key>xpos</key>
 			<integer>340</integer>
 			<key>ypos</key>
-			<integer>7340</integer>
+			<integer>7420</integer>
 		</dict>
 		<key>221F4BFD-7850-440F-BB16-C39AC39E729C</key>
 		<dict>
@@ -9087,9 +9156,9 @@ Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (r
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>30</integer>
+			<integer>20</integer>
 			<key>ypos</key>
-			<integer>7170</integer>
+			<integer>7300</integer>
 		</dict>
 		<key>2B55DCB2-3C6A-42EC-A014-095939CB3FAB</key>
 		<dict>
@@ -9226,7 +9295,7 @@ Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (r
 			<key>xpos</key>
 			<integer>955</integer>
 			<key>ypos</key>
-			<integer>7340</integer>
+			<integer>7420</integer>
 		</dict>
 		<key>38F17F8F-FBE5-422F-B926-A8AFD40D5A4C</key>
 		<dict>
@@ -9309,6 +9378,17 @@ Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (r
 			<integer>1485</integer>
 			<key>ypos</key>
 			<integer>2040</integer>
+		</dict>
+		<key>42201C8D-D1DE-4EA8-9EC8-7F92FDF17572</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>note</key>
+			<string>git pull</string>
+			<key>xpos</key>
+			<integer>245</integer>
+			<key>ypos</key>
+			<integer>6900</integer>
 		</dict>
 		<key>42B2DB09-A39A-4087-9F06-C0B0F2C16E88</key>
 		<dict>
@@ -9467,9 +9547,9 @@ Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (r
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>205</integer>
+			<integer>195</integer>
 			<key>ypos</key>
-			<integer>6940</integer>
+			<integer>7070</integer>
 		</dict>
 		<key>503B3F91-98A0-4357-92F2-A88BD6EDB404</key>
 		<dict>
@@ -9675,9 +9755,9 @@ takes file path (with or without heading) and opens it correctly</string>
 			<key>colorindex</key>
 			<integer>11</integer>
 			<key>xpos</key>
-			<integer>30</integer>
+			<integer>20</integer>
 			<key>ypos</key>
-			<integer>7340</integer>
+			<integer>7420</integer>
 		</dict>
 		<key>60DC73A1-43D8-4B35-9A21-5C476D863A73</key>
 		<dict>
@@ -9754,6 +9834,15 @@ takes file path (with or without heading) and opens it correctly</string>
 			<integer>25</integer>
 			<key>ypos</key>
 			<integer>6200</integer>
+		</dict>
+		<key>6B3A98B8-CA8A-4745-AA31-24F1A7C7BF86</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>xpos</key>
+			<integer>400</integer>
+			<key>ypos</key>
+			<integer>6900</integer>
 		</dict>
 		<key>6DC02650-EDEB-4C4B-8C9F-E0C7044C5863</key>
 		<dict>
@@ -10080,9 +10169,9 @@ takes file path (with or without heading) and opens it correctly</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>30</integer>
+			<integer>20</integer>
 			<key>ypos</key>
-			<integer>6940</integer>
+			<integer>7070</integer>
 		</dict>
 		<key>8F317FDD-5FC0-4097-BC7B-914DB2BDDDA8</key>
 		<dict>
@@ -10290,7 +10379,7 @@ takes file path (with or without heading) and opens it correctly</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>210</integer>
+			<integer>205</integer>
 			<key>ypos</key>
 			<integer>8135</integer>
 		</dict>
@@ -10432,9 +10521,9 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>30</integer>
+			<integer>20</integer>
 			<key>ypos</key>
-			<integer>7055</integer>
+			<integer>7185</integer>
 		</dict>
 		<key>BF2C7CBD-67E0-45CC-8948-E68291FF2B50</key>
 		<dict>
@@ -10572,7 +10661,7 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<key>xpos</key>
 			<integer>190</integer>
 			<key>ypos</key>
-			<integer>7340</integer>
+			<integer>7420</integer>
 		</dict>
 		<key>CDC3C416-1670-46AC-A7D1-D8EFEF574C3C</key>
 		<dict>
@@ -10682,9 +10771,9 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>205</integer>
+			<integer>195</integer>
 			<key>ypos</key>
-			<integer>7170</integer>
+			<integer>7300</integer>
 		</dict>
 		<key>DD45D94E-9E2C-4477-9E37-66338FDCF4D0</key>
 		<dict>
@@ -10831,7 +10920,7 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<key>xpos</key>
 			<integer>495</integer>
 			<key>ypos</key>
-			<integer>7340</integer>
+			<integer>7420</integer>
 		</dict>
 		<key>E6475931-8EC3-4AB2-BF19-F2C0F1F9B98C</key>
 		<dict>
@@ -10985,7 +11074,7 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<key>xpos</key>
 			<integer>665</integer>
 			<key>ypos</key>
-			<integer>7340</integer>
+			<integer>7420</integer>
 		</dict>
 		<key>F117FF8C-E6E5-4B0E-9FCE-DDB0A6476CAB</key>
 		<dict>
@@ -11088,13 +11177,13 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 		<string>daily_note_path</string>
 		<string>use_quickadd</string>
 		<string>fontformat</string>
-		<string>vault_path</string>
+		<string>workspace_to_spellcheck</string>
 		<string>h_lvl_ignore</string>
 		<string>template_note_path</string>
-		<string>workspace_to_spellcheck</string>
+		<string>vault_path</string>
 	</array>
 	<key>version</key>
-	<string>2.3.5</string>
+	<string>2.3.6</string>
 	<key>webaddress</key>
 	<string>https://chris-grieser.de/</string>
 </dict>
