@@ -34,6 +34,8 @@ echo "new $workflowName.alfredworkflow file created."
 mv -v info.plist ~/.trash
 mv -v info-original.plist info.plist
 
+echo ""
+
 # # push to remote
 git add -A
 git commit -m "release $nextVersion"
