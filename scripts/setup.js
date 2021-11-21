@@ -23,10 +23,12 @@ let jsonArray = [];
 vault_array.forEach(vault_path => {
 	let vault_name = vault_path.replace(/.*\//, "");
 	let short_path = vault_path.replace (/\/Users\/[^\/]*/,"~");
+	let subtitle = "Control this vault with 'Shimmering Obsidian'";
+	if (vault_array.length == 1) subtitle = "Confirm with 'return' that this is your vault.";
 
 	jsonArray.push({
 		'title': vault_name,
-		'subtitle': "Control this vault with 'Shimmering Obsidian'",
+		'subtitle': subtitle,
 		'arg': vault_path,
 	});
 });

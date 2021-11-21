@@ -12,5 +12,5 @@ noExport.forEach(eVar =>{
 	replacePlistKey ("variables." + eVar, "");
 	i++;
 });
-console.log("Removed " + i + " variables flagged as 'no export'.");
+console.log("Removed " + i + " variables flagged as 'no export' removed from 'info.plist'.");
 

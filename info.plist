@@ -9676,6 +9676,8 @@ takes file path (with or without heading) and opens it correctly</string>
 		<dict>
 			<key>colorindex</key>
 			<integer>9</integer>
+			<key>note</key>
+			<string>Workspace Switcher</string>
 			<key>xpos</key>
 			<integer>35</integer>
 			<key>ypos</key>
@@ -10815,6 +10817,8 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 		<dict>
 			<key>colorindex</key>
 			<integer>9</integer>
+			<key>note</key>
+			<string>Documentation Search</string>
 			<key>xpos</key>
 			<integer>30</integer>
 			<key>ypos</key>
@@ -10885,7 +10889,7 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>note</key>
-			<string>open vault</string>
+			<string>Vault Switcher</string>
 			<key>xpos</key>
 			<integer>25</integer>
 			<key>ypos</key>
@@ -11227,7 +11231,7 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 		<string>vault_path</string>
 	</array>
 	<key>version</key>
-	<string>2.3.6</string>
+	<string>2.3.7</string>
 	<key>webaddress</key>
 	<string>https://chris-grieser.de/</string>
 </dict>
