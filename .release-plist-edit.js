@@ -14,5 +14,3 @@ noExport.forEach(eVar =>{
 });
 console.log("Removed " + i + " variables flagged as 'no export'.");
 
-//zip
-app.doShellScript();
