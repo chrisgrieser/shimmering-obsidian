@@ -28,7 +28,7 @@
 
 ## Open various folders related to development
 - Refer to the section on [Quick Access to hidden folders](Utility%20Features.md#Open-Various-Folders) for further information.
-- 🆕 To quickly open local plugin folders in `.obsidian/plugins/`, use to the [Settings Search](Settings%20Search.md).
+- To quickly open local plugin folders in `.obsidian/plugins/`, use to the [Settings Search](Settings%20Search.md).
 
 ## Local plugins
 Refer to the section on [Settings Search](Settings%20Search.md) for further information on how to:

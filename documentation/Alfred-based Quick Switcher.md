@@ -30,7 +30,7 @@ This keyword searches all your notes, aliases, folders, and headings combined.
 	- `⌥ + ↵`: Reveal the file in Finder.
 	- `fn + ↵`: Append the content of your clipboard to the selected note. When the [workflow configuration](Workflow%20Configuration.md#Alfred-based-Quick-Switcher) `open_after_appending` is set to `true`, to open the note afterwards.
 	- `⌃ + ↵`: Copy the [Obsidian-URI to the selected file](https://help.obsidian.md/Advanced+topics/Using+obsidian+URI#Action+`hook-get-address`).
-	- 🆕 `⇧ + ↵`: Browse a list of all links of the selected note (outgoing links, backlinks, external links.) See at the [section "Browse Links" below](#Browse-Links-of-the-Current-Note) for further information.
+	- `⇧ + ↵`: Browse a list of all links of the selected note (outgoing links, backlinks, external links.) See at the [section "Browse Links" below](#Browse-Links-of-the-Current-Note) for further information.
 	- Press `⇧` or `⌘ y` to preview the selected note via macOS' Quick Look feature. Press `⇧` or `⌘ y` again to close the preview.[^1] (Caveat: YAML-Headers aren't displayed properly.)
 - Add `filename` or `title` to your search query, to display only files and no aliases, folders, or headings. For example, `o obsidian filename` will display only notes that have the `obsidian` in their filename.
 - Similarly, you can also filter for starred or recent files by adding `starred` or `recent` to your query.
@@ -38,15 +38,15 @@ This keyword searches all your notes, aliases, folders, and headings combined.
 
 ### Search for Aliases
 This command also looks for **aliases**, when they are [defined in the YAML-Header](https://help.obsidian.md/How+to/Add+aliases+to+note#Set+aliases).
-- ✴️ As compared to version 1.x, there is no delay anymore!
+- As compared to version 1.x, there is no delay anymore!
 - Add `alias` to your search query, to only display aliases, e.g., `o obsidian alias` will only display notes that have the *alias* `obsidian`.
 
 ### Search for Folders
 When **selecting a folder**, you will **“browse”** the selected folder – this means that you are now searching only for files and folders inside that folder.
 - When browsing a folder, you also have the ⌥ion to create a new note _in that folder_. Will use the template note defined in the [workflow configuration](Workflow%20Configuration.md#New-Note-Creation) `template_note_path`.
-- 🆕 Furthermore, you can go up and browse the *parent* folder of the current folder. Basically, you can fully navigate the folder structure of your vault via Alfred.
-- 🆕 Add `folder` to your search query, to only display folders, e.g., `o foobar folder` will only display *folder* that have `foobar` in their name.
-- 🆕 When you are browsing inside a folder, use the query `..` or the `new` to quickly access the item for going up to the parent folder or creating a new note in that folder, respectively.
+- Furthermore, you can go up and browse the *parent* folder of the current folder. Basically, you can fully navigate the folder structure of your vault via Alfred.
+- Add `folder` to your search query, to only display folders, e.g., `o foobar folder` will only display *folder* that have `foobar` in their name.
+- When you are browsing inside a folder, use the query `..` or the `new` to quickly access the item for going up to the parent folder or creating a new note in that folder, respectively.
 
 ### Search for Headings
 Displayed alongside the other search results are all headings in your vault. Selecting a heading with `↵` will open the file *at the respective heading*.

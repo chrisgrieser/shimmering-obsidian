@@ -83,7 +83,7 @@ end tell
 ## Open Various Folders
 - `o.obsidian`: The hidden `.obsidian` folder located in your vault root will be opened in Finder.
 - `o.trash`: Open the hidden [`.trash` folder](https://help.obsidian.md/Advanced+topics/Deleting+files) located in your vault root will be opened in Finder. (Note that you have to select `Move to Obsidian trash` in the Obsidian settings under the `Files & Links` tab before deleted files can be found here.)
-- 🆕 `oapplicationsupport`: Open Obsidian's Application Support folder.
+- `oapplicationsupport`: Open Obsidian's Application Support folder.
 - `oplugin`: The plugin folder in `.obsidian` folder will be opened in Finder.
 - `ocss`: Open the `themes` and `snippets` folder. (Along with your installed themes and snippets.)
 - Open your vault root with the [Vault Switcher](Vault%20Switcher.md).

@@ -9,7 +9,7 @@ These requirements **need to be installed**, since this workflow cannot work wit
 | -------------------------------------------------------------------------- | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Powerpack for Alfred](https://www.alfredapp.com/powerpack/)               | Alfred Upgrade            | Needed to access advanced Alfred functionality. (Costs around 30€.)                                                                                                               |
 | [Advanced URI](https://github.com/Vinzent03/obsidian-advanced-uri)         | Obsidian Community Plugin | Required for Alfred to be able to control Obsidian.                                                                                                                               |
-| 🆕 [Metadata Extractor](https://github.com/kometenstaub/metadata-extractor) | Obsidian Community Plugin | Needed to read Obsidian metadata Third-Party Apps normally do not have access to. (see also [Information on Breaking Changes](Breaking%20Changes.md#New-Requirement)) |
+| [Metadata Extractor](https://github.com/kometenstaub/metadata-extractor) | Obsidian Community Plugin | Needed to read Obsidian metadata Third-Party Apps normally do not have access to. (see also [Information on Breaking Changes](Breaking%20Changes.md#New-Requirement)) |
 
 ## Workflow Installation
 1. Install the requirements listed above. (ℹ️ When you have multiple vaults, you have to install them in each.)

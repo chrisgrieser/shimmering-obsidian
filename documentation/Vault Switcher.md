@@ -9,4 +9,3 @@
 	- `⌥ + ↵` open the root in Finder.
 	- `⇧ + ↵` to control the selected vault with _Shimmering Obsidian_. (This Alfred workflow can only work on one vault a the same time.) Note that you have to you need to install [the requirements](Installation.md#Hard-Requirements) in every vault.
 - Open the Vault Menu to create new vaults or remove vaults.
-

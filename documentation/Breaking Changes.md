@@ -2,13 +2,10 @@
 
 # Breaking Changes
 
-## New Features in version 2.0
-The features new to version 2.0 are listed in the [Feature Overview section of the README](https://github.com/chrisgrieser/shimmering-obsidian/blob/main/README.md#feature-overview) with a 🆕 emoji.
-
 ## New Requirement
 ⚠️ __The [Metadata Extractor Plugin](https://github.com/kometenstaub/metadata-extractor) is now a hard requirement that needs to be installed — without it, you will not be able to use this plugin anymore.__ The plugin allows Alfred to access various internal data like tags, aliases, and headings which third-party apps normally would not be able to do. (It also greatly increases the speed of this workflow!)
 
-❗️ After installation, you need to create the metadata once before you can use the Alfred-based Quick Switcher: Run `opdate → Manually Refresh Metadata` to do so.
+❗️ After installation, you need to run the `osetup` command once. You are prompted to select the vault you want to control and Obsidian will restart. Then you are ready to go!
 
 ## Metadata Extractor Configuration
 - **⚠️ Do not change any of the default values how the metadata extractor names its output files and where they are placed — otherwise this workflow won't be able to find them.**
@@ -16,7 +13,7 @@ The features new to version 2.0 are listed in the [Feature Overview section of t
 
 <img src="https://i.imgur.com/7YnQJ7K.png" alt="Metadata Extractor Settings" width=70%>
 
-## List of all other Breaking Changes 
+## List of all other Breaking Changes
 *when updating from v. 1.x to 2.x*
 - the previous `ot` command to open the current theme has been **removed** to avoid overlap with the new tag search – the command id now called via the `ocss` command.
 - the previous `otrash` command to open the current theme has been renamed to `o.`, to avoid crowding the `ot` keyword. For consistency, and simplicity, `o.obsidian` is now also accessible via `o.`
