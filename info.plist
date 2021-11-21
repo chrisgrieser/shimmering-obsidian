@@ -306,19 +306,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>207801BA-EDBE-4043-9EA6-26A11C2F70D8</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>E5E0B205-1716-4D34-A458-4CC01834DCFE</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>221F4BFD-7850-440F-BB16-C39AC39E729C</key>
 		<array>
 			<dict>
@@ -2372,6 +2359,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>CCB61EC0-26E7-4CE6-9703-BF95602B73D6</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>E5E0B205-1716-4D34-A458-4CC01834DCFE</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>CCF6C3D3-E4F2-4D86-8F43-CE79E1DE3CFC</key>
 		<array>
 			<dict>
@@ -2389,7 +2389,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>207801BA-EDBE-4043-9EA6-26A11C2F70D8</string>
+				<string>CCB61EC0-26E7-4CE6-9703-BF95602B73D6</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -8138,7 +8138,7 @@ echo | git pull</string>
 				<key>lastpathcomponent</key>
 				<false/>
 				<key>onlyshowifquerypopulated</key>
-				<true/>
+				<false/>
 				<key>removeextension</key>
 				<false/>
 				<key>text</key>
@@ -8156,27 +8156,23 @@ echo | git pull</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
+				<key>lastpathcomponent</key>
 				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>open "obsidian://advanced-uri?commandid=metadata-extractor%253Awrite-metadata-json"
-open "obsidian://advanced-uri?commandid=metadata-extractor%253Awrite-tags-json"
-open "obsidian://advanced-uri?commandid=metadata-extractor%253Awrite-allExceptMd-json"</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
 				<string></string>
-				<key>type</key>
-				<integer>5</integer>
+				<key>title</key>
+				<string>⏳ Restarting Obsidian...</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.script</string>
+			<string>alfred.workflow.output.notification</string>
 			<key>uid</key>
-			<string>207801BA-EDBE-4043-9EA6-26A11C2F70D8</string>
+			<string>CCB61EC0-26E7-4CE6-9703-BF95602B73D6</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -8225,7 +8221,7 @@ open "obsidian://advanced-uri?commandid=metadata-extractor%253Awrite-allExceptMd
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string>scripts/setup.js</string>
+				<string>scripts/osetup_1.js</string>
 				<key>subtext</key>
 				<string>Obsidian will restart afterwards</string>
 				<key>title</key>
@@ -8315,14 +8311,21 @@ delay 0.2
 repeat until application "Obsidian" is not running 
 	delay 0.2
 end repeat
-delay 0.2
-tell application "Obsidian" to activate</string>
+delay 1
+
+# dump metadata
+tell application "Obsidian"
+	activate
+	open location "obsidian://advanced-uri?commandid=metadata-extractor%253Awrite-metadata-json"
+	open location "obsidian://advanced-uri?commandid=metadata-extractor%253Awrite-tags-json"
+	open location "obsidian://advanced-uri?commandid=metadata-extractor%253Awrite-allExceptMd-json"
+end tell</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string></string>
+				<string>scripts/osetup_2.applescript</string>
 				<key>type</key>
-				<integer>6</integer>
+				<integer>8</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
@@ -8975,7 +8978,7 @@ Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (r
 			<key>colorindex</key>
 			<integer>11</integer>
 			<key>xpos</key>
-			<integer>805</integer>
+			<integer>790</integer>
 			<key>ypos</key>
 			<integer>7420</integer>
 		</dict>
@@ -9015,7 +9018,7 @@ Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (r
 			<key>xpos</key>
 			<integer>265</integer>
 			<key>ypos</key>
-			<integer>7940</integer>
+			<integer>7970</integer>
 		</dict>
 		<key>0F72D532-AAE1-48A3-85FC-A819F196DC3E</key>
 		<dict>
@@ -9031,7 +9034,7 @@ Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (r
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>195</integer>
+			<integer>185</integer>
 			<key>ypos</key>
 			<integer>7185</integer>
 		</dict>
@@ -9126,17 +9129,6 @@ Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (r
 			<integer>1485</integer>
 			<key>ypos</key>
 			<integer>1900</integer>
-		</dict>
-		<key>207801BA-EDBE-4043-9EA6-26A11C2F70D8</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>11</integer>
-			<key>note</key>
-			<string>dump metadata</string>
-			<key>xpos</key>
-			<integer>340</integer>
-			<key>ypos</key>
-			<integer>7420</integer>
 		</dict>
 		<key>221F4BFD-7850-440F-BB16-C39AC39E729C</key>
 		<dict>
@@ -9239,7 +9231,7 @@ Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (r
 			<key>xpos</key>
 			<integer>265</integer>
 			<key>ypos</key>
-			<integer>7550</integer>
+			<integer>7580</integer>
 		</dict>
 		<key>2FD866C2-DDB1-4C2D-A420-3A580FBC60D2</key>
 		<dict>
@@ -9329,7 +9321,7 @@ Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (r
 			<key>colorindex</key>
 			<integer>11</integer>
 			<key>xpos</key>
-			<integer>955</integer>
+			<integer>940</integer>
 			<key>ypos</key>
 			<integer>7420</integer>
 		</dict>
@@ -9527,7 +9519,7 @@ Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (r
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>25</integer>
+			<integer>30</integer>
 			<key>ypos</key>
 			<integer>3660</integer>
 		</dict>
@@ -9583,7 +9575,7 @@ Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (r
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>195</integer>
+			<integer>185</integer>
 			<key>ypos</key>
 			<integer>7070</integer>
 		</dict>
@@ -9643,7 +9635,7 @@ takes file path (with or without heading) and opens it correctly</string>
 			<key>xpos</key>
 			<integer>265</integer>
 			<key>ypos</key>
-			<integer>7805</integer>
+			<integer>7835</integer>
 		</dict>
 		<key>560E177F-C4A4-432D-A640-5A15B7048CB8</key>
 		<dict>
@@ -9909,7 +9901,7 @@ takes file path (with or without heading) and opens it correctly</string>
 			<key>xpos</key>
 			<integer>480</integer>
 			<key>ypos</key>
-			<integer>7550</integer>
+			<integer>7580</integer>
 		</dict>
 		<key>71E0BF31-47DE-49AF-AA5F-FD4E20F5491E</key>
 		<dict>
@@ -10092,7 +10084,7 @@ takes file path (with or without heading) and opens it correctly</string>
 			<key>xpos</key>
 			<integer>890</integer>
 			<key>ypos</key>
-			<integer>7745</integer>
+			<integer>7775</integer>
 		</dict>
 		<key>86ED5D91-FB4E-4F5D-8C29-639E251FED61</key>
 		<dict>
@@ -10370,7 +10362,7 @@ takes file path (with or without heading) and opens it correctly</string>
 			<key>colorindex</key>
 			<integer>6</integer>
 			<key>xpos</key>
-			<integer>25</integer>
+			<integer>30</integer>
 			<key>ypos</key>
 			<integer>3540</integer>
 		</dict>
@@ -10570,7 +10562,7 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<key>xpos</key>
 			<integer>265</integer>
 			<key>ypos</key>
-			<integer>7675</integer>
+			<integer>7705</integer>
 		</dict>
 		<key>BF450A0C-67CF-4B13-8B0D-D94298462DE7</key>
 		<dict>
@@ -10623,7 +10615,7 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>25</integer>
+			<integer>30</integer>
 			<key>ypos</key>
 			<integer>3775</integer>
 		</dict>
@@ -10672,6 +10664,15 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<key>ypos</key>
 			<integer>5470</integer>
 		</dict>
+		<key>CCB61EC0-26E7-4CE6-9703-BF95602B73D6</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>11</integer>
+			<key>xpos</key>
+			<integer>335</integer>
+			<key>ypos</key>
+			<integer>7420</integer>
+		</dict>
 		<key>CCF6C3D3-E4F2-4D86-8F43-CE79E1DE3CFC</key>
 		<dict>
 			<key>colorindex</key>
@@ -10697,7 +10698,7 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<key>note</key>
 			<string>set vault</string>
 			<key>xpos</key>
-			<integer>190</integer>
+			<integer>185</integer>
 			<key>ypos</key>
 			<integer>7420</integer>
 		</dict>
@@ -10809,7 +10810,7 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>195</integer>
+			<integer>185</integer>
 			<key>ypos</key>
 			<integer>7300</integer>
 		</dict>
@@ -10893,7 +10894,7 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<key>xpos</key>
 			<integer>25</integer>
 			<key>ypos</key>
-			<integer>7725</integer>
+			<integer>7755</integer>
 		</dict>
 		<key>E29FE53D-5931-4761-BA49-D1EB697ECF65</key>
 		<dict>
@@ -10958,7 +10959,7 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<key>note</key>
 			<string>configure Metadata Extractor</string>
 			<key>xpos</key>
-			<integer>495</integer>
+			<integer>480</integer>
 			<key>ypos</key>
 			<integer>7420</integer>
 		</dict>
@@ -10998,7 +10999,7 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<key>xpos</key>
 			<integer>635</integer>
 			<key>ypos</key>
-			<integer>7550</integer>
+			<integer>7580</integer>
 		</dict>
 		<key>E7DAD30E-15A3-46BE-8534-7F5ABE826FC6</key>
 		<dict>
@@ -11065,7 +11066,7 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<key>xpos</key>
 			<integer>410</integer>
 			<key>ypos</key>
-			<integer>7580</integer>
+			<integer>7610</integer>
 		</dict>
 		<key>EDD0CFEF-63C0-4BD0-8E9E-4BD5B43D92DD</key>
 		<dict>
@@ -11110,9 +11111,9 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<key>colorindex</key>
 			<integer>11</integer>
 			<key>note</key>
-			<string>restart Obsidian</string>
+			<string>restart Obsidian &amp; dump metadata</string>
 			<key>xpos</key>
-			<integer>665</integer>
+			<integer>635</integer>
 			<key>ypos</key>
 			<integer>7420</integer>
 		</dict>
@@ -11215,7 +11216,7 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 		<key>use_quickadd</key>
 		<string>true</string>
 		<key>vault_path</key>
-		<string>~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vault</string>
+		<string>/Users/chrisgrieser/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vault</string>
 		<key>workspace_to_spellcheck</key>
 		<string>Longform</string>
 	</dict>
@@ -11223,12 +11224,12 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 	<array>
 		<string>backup_destination</string>
 		<string>daily_note_path</string>
+		<string>vault_path</string>
 		<string>use_quickadd</string>
 		<string>fontformat</string>
-		<string>workspace_to_spellcheck</string>
 		<string>h_lvl_ignore</string>
 		<string>template_note_path</string>
-		<string>vault_path</string>
+		<string>workspace_to_spellcheck</string>
 	</array>
 	<key>version</key>
 	<string>2.3.8</string>
