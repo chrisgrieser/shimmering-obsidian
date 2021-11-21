@@ -1,4 +1,4 @@
-name: Release ALfred Workflow
+name: Release Alfred Workflow
 
 on:
   push:
@@ -40,6 +40,6 @@ jobs:
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: ./${{ env.WORKFLOW_NAME }}.zip
-          asset_name: ${{ env.WORKFLOW_NAME }}-${{ steps.build.outputs.tag_name }}.zip
+          asset_name: ${{ env.WORKFLOW_NAME }}.zip
           asset_content_type: application/zip
 
