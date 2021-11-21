@@ -39,7 +39,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./${{ env.WORKFLOW_NAME }}.zip
-          asset_name: ${{ env.WORKFLOW_NAME }}.zip
+          asset_path: ./${{ env.WORKFLOW_NAME }}.alfredworkflow
+          asset_name: ${{ env.WORKFLOW_NAME }}.alfredworkflow
           asset_content_type: application/zip
 
