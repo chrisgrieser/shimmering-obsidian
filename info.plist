@@ -11224,9 +11224,9 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 	<array>
 		<string>backup_destination</string>
 		<string>daily_note_path</string>
-		<string>vault_path</string>
 		<string>use_quickadd</string>
 		<string>fontformat</string>
+		<string>vault_path</string>
 		<string>h_lvl_ignore</string>
 		<string>template_note_path</string>
 		<string>workspace_to_spellcheck</string>

@@ -3,6 +3,12 @@
 # Alfred workflow release
 # -----------------------
 
+# safety net
+if [[ !-f ".release-plist-edit.js" ]] ; then
+	echo ".release-plist-edit.js missing. Aborting."
+	return
+fi
+
 # prompt for version
 lastVersion=$(plutil -extract version xml1 -o - info.plist | sed -n 4p | cut -d">" -f2 | cut -d"<" -f1)
 echo "Last Version: $lastVersion"

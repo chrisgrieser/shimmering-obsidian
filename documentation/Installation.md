@@ -20,12 +20,12 @@ These requirements **need to be installed**, since this workflow cannot work wit
 [^1]: _Shimmering Obsidian_ can only control one vault at a time. However, you can switch between the vaults that you want to control with the [Vault Switcher](Vault%20Switcher.md).
 
 ## Optional Requirements
-These requirements are only necessary for specific features of this workflow. If you do not plan to use the respective feature, you can forego installing the requirement for it. It is recommended to install all requirements listed here to be able to use all features of _Shimmering Obsidian_.
+These requirements are *only necessary for specific features* of this workflow. If you do not plan to use the respective feature, you can forego installing the requirement for it. It is recommended to install all requirements listed here to be able to use all features of _Shimmering Obsidian_.
 
 | Name                                                                   | Type                      | Function                                                                                        |
 | ---------------------------------------------------------------------- | ------------------------- | ----------------------------------------------------------------------------------------------- |
 | [Hotkey-Helper](https://github.com/pjeby/hotkey-helper)[^2]                | Obsidian Community Plugin | used to open plugins and their configuration directly in Obsidian via `op`                      |
-| [Tesseract](https://tesseract-ocr.github.io/tessdoc/Installation.html) | Third-Party Software      | needed for [OCR screenshots](Utility%20Features.md#OCR-Screenshots)                                                                  |
+| [Tesseract](https://tesseract-ocr.github.io/tessdoc/Installation.html) | Third-Party Software      | needed for [OCR screenshots](Screenshot%20Features.md#OCR-Screenshots)                                                                  |
 | [qlmarkdown](https://github.com/toland/qlmarkdown/)                    | Third-Party Software      | used to preview markdown notes with `shift` or `cmd + Y` when searching with `o`, `or`, or `os` |
 
 

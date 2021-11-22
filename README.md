@@ -34,15 +34,23 @@ Please refer to [the Breaking Changes Docs](documentation/Breaking%20Changes.md)
 
 ➡️ [Documentation of Quick Switcher Features](documentation/Alfred-based%20Quick%20Switcher.md)
 
-### Utility Features
-- OCR Screenshots
-- Paste URL into selection
-- Move Note to a different folder
+### Note-related Features
 - Create new Notes (based on Template or via QuickAdd)
+- Move Note to a different folder
+- Daily Notes
+
+➡️ [Documentation of Note-related Features](documentation/Note-related%Features.md)
+
+### Screenshot Features
+- OCR Screenshots
+
+➡️ [Documentation of Screenshot Features](documentation/Screenshot%20Features.md)
+
+### Utility Features
 - Backup your Vault
+- Paste URL into selection
 - Dual Mode (Edit + Preview)
 - Conveniently access various folders like `.obsidian` or `.trash`
-- Daily Notes
 - 🐢 Carl Auto-Responses
 
 ➡️ [Documentation of all Utility Features](documentation/Utility%20Features.md)

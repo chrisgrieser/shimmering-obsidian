@@ -54,7 +54,7 @@ You access the main workflow configuration by clicking the *`[x]`* at the top ri
 - `max_number_of_bkps`: maximum number of backups that should be stored at the backup destination folder. When the number is reached, every new backup cause the oldest backup to be deleted. (Decrease this number, when your backup folder becomes too big.)
 
 ### Miscellaneous
-- `daily_note_path`: *absolute* path to the folder where your daily notes are saved. See [Daily Notes](Utility%20Features.md#Daily%20Notes).
+- `daily_note_path`: *absolute* path to the folder where your daily notes are saved. See [Daily Notes](Note-related%20Features.md#Daily%20Notes).
 - `fontformat`: format of the base64-conversion of font files, e.g., `woff2` or `ttf`.
 - `workspace_to_spellcheck`: Name of the Workspace where spellcheck should be turned on. Leave empty to not toggle any spellcheck setting with workspace changes. See [Workspace Switcher](Workspace%20Switcher.md).
 - `auto_update`: Periodically check for updates *of this workflow* and update automatically. Accepts `true` or `false`.
