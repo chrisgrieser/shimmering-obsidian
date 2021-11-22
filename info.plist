@@ -537,6 +537,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>353C9BBE-FF88-4A2F-8B67-01D7D1F812CD</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>1E497866-1199-4947-BC1A-AC23ADDD6C82</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>378CFF0C-FF5A-40C2-BE7F-587887FA84F7</key>
 		<array>
 			<dict>
@@ -1093,6 +1106,16 @@
 				<string></string>
 				<key>sourceoutputuid</key>
 				<string>B631E15C-B7B7-4471-BFF6-701FEA2FCA69</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>353C9BBE-FF88-4A2F-8B67-01D7D1F812CD</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -4920,6 +4943,29 @@ return "{query}"</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>scripts/absolute-to-relative-path.js</string>
+				<key>type</key>
+				<integer>8</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>6EB09DCF-CB1C-42D8-9CFF-90E7EAF28FBA</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>triggerid</key>
 				<string>append-to-note</string>
 			</dict>
@@ -4961,29 +5007,6 @@ return "{query}"</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>script</key>
-				<string></string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string>scripts/absolute-to-relative-path.js</string>
-				<key>type</key>
-				<integer>8</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>6EB09DCF-CB1C-42D8-9CFF-90E7EAF28FBA</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>conditions</key>
 				<array>
 					<dict>
@@ -5021,6 +5044,44 @@ return "{query}"</string>
 			<string>alfred.workflow.trigger.external</string>
 			<key>uid</key>
 			<string>C60C1880-E166-4304-A913-7E307B365032</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string></string>
+				<key>title</key>
+				<string>✅ Appended to Note</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>1E497866-1199-4947-BC1A-AC23ADDD6C82</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{clipboard}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>353C9BBE-FF88-4A2F-8B67-01D7D1F812CD</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -9101,6 +9162,15 @@ Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (r
 			<key>ypos</key>
 			<integer>3775</integer>
 		</dict>
+		<key>1E497866-1199-4947-BC1A-AC23ADDD6C82</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>6</integer>
+			<key>xpos</key>
+			<integer>1900</integer>
+			<key>ypos</key>
+			<integer>1980</integer>
+		</dict>
 		<key>1E72DA48-B05A-45E6-A27F-515AB0D4ADE6</key>
 		<dict>
 			<key>colorindex</key>
@@ -9297,6 +9367,15 @@ Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (r
 			<integer>200</integer>
 			<key>ypos</key>
 			<integer>8800</integer>
+		</dict>
+		<key>353C9BBE-FF88-4A2F-8B67-01D7D1F812CD</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>6</integer>
+			<key>xpos</key>
+			<integer>1845</integer>
+			<key>ypos</key>
+			<integer>2010</integer>
 		</dict>
 		<key>378CFF0C-FF5A-40C2-BE7F-587887FA84F7</key>
 		<dict>
@@ -9754,7 +9833,7 @@ takes file path (with or without heading) and opens it correctly</string>
 			<key>colorindex</key>
 			<integer>6</integer>
 			<key>xpos</key>
-			<integer>1945</integer>
+			<integer>1755</integer>
 			<key>ypos</key>
 			<integer>1920</integer>
 		</dict>
@@ -9890,9 +9969,9 @@ takes file path (with or without heading) and opens it correctly</string>
 			<key>note</key>
 			<string>absolute to relative path</string>
 			<key>xpos</key>
-			<integer>2040</integer>
+			<integer>2075</integer>
 			<key>ypos</key>
-			<integer>1900</integer>
+			<integer>1890</integer>
 		</dict>
 		<key>7107BFB2-1A6A-434E-9E32-F01F75AF1CF6</key>
 		<dict>
@@ -10244,7 +10323,7 @@ takes file path (with or without heading) and opens it correctly</string>
 			<key>colorindex</key>
 			<integer>6</integer>
 			<key>xpos</key>
-			<integer>2190</integer>
+			<integer>2225</integer>
 			<key>ypos</key>
 			<integer>1765</integer>
 		</dict>
