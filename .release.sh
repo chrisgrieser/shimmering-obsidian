@@ -56,7 +56,7 @@ mv -v info-original.plist info.plist
 echo ""
 
 # Update Changelog
-git log --pretty=format:"%ad%x09%s" --date=short > ./Changelog.md
+echo $(git log --pretty=format:"%ad%x09%s  " --date=short | grep -Ev "typos?$") > ./Changelog.md
 
 # --------------------
 # git push
