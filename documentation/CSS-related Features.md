@@ -15,7 +15,7 @@
 <img src="https://user-images.githubusercontent.com/73286100/131255059-1a56d6e7-8c2f-4ff0-b20d-247702bb7925.gif" alt="Theme Search" width=60% height=60%>
 
 ## 🎨 For Theme Designers: Cheatsheet
-**`ocheat`: Quickly Access Various Cheatsheets for designing themes in Obsidian.**
+**`oc`: Quickly Access Various Cheatsheets for designing themes in Obsidian.**
 - The cheatsheets will be opened via the macOS Quick Look feature, so you can simply close them by pressing `space`.
 
 <img src="https://i.imgur.com/nVT687p.png" alt="Cheatsheets" width=40%>

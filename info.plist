@@ -6824,7 +6824,7 @@ echo "$backup"</string>
 				<key>items</key>
 				<string>[{"title":"Default Colors","arg":"default-colors.pdf","subtitle":"by @ebullient"},{"imagefile":"480f3609e44ea0ceed5bd6bc0fb19a7874881127.png","title":"Object Model API","arg":"object-model-api.png","subtitle":"by @TfTHacker"},{"imagefile":"37bbef56f2b94de84c98e87c63fc00ab9008b6ee.png","title":"CSS Classes","arg":"css-classes.png","subtitle":"by @TfTHacker"},{"imagefile":"37bbef56f2b94de84c98e87c63fc00ab9008b6ee.png","title":"All Default CSS Variables","arg":"https:\/\/github.com\/mgmeyers\/obsidian-style-settings\/blob\/main\/obsidian-default-theme.css","subtitle":"by @mgmeyers"},{"imagefile":"480f3609e44ea0ceed5bd6bc0fb19a7874881127.png","title":"Obsidian Full API","arg":"https:\/\/github.com\/obsidianmd\/obsidian-api\/blob\/master\/obsidian.d.ts","subtitle":"by @Licat &amp; @Silver"}]</string>
 				<key>keyword</key>
-				<string>ocheat</string>
+				<string>oc</string>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>subtext</key>

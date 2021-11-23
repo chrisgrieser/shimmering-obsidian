@@ -34,3 +34,6 @@
 
 *when updating to 2.4*
 - Accessing the settings of an installed plugin via [the plugin search](Plugin%20and%20Theme%20Search.md) (`op`) via `ctrl + ↵` has been disabled. Instead, *holding* `ctrl` will display download numbers, author, and plugin ID.
+
+*when updating to 2.4.2*
+- `ocheat` command abbreviated to `oc`.
