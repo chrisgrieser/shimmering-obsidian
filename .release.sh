@@ -53,13 +53,15 @@ echo "new $workflowName.alfredworkflow file created."
 # restore original
 mv -v info.plist ~/.trash
 mv -v info-original.plist info.plist
+echo ""
 
+# Update Changelog
+git log --pretty=format:"%ad%x09%s" --date=short > ./Changelog.md
 
 # --------------------
 # git push
 # --------------------
 
-echo ""
 # push to remote
 git add -A
 git commit -m "release $nextVersion"
