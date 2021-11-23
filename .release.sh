@@ -12,6 +12,7 @@ lastVersion=$(plutil -extract version xml1 -o - info.plist | sed -n 4p | cut -d"
 echo "Last Version: $lastVersion"
 echo -n "Next Version: "
 read nextVersion
+echo ""
 
 # Close Alfred Prefs to avoid conflicts
 osascript -e 'tell application "Alfred Preferences" to if it is running then quit'
