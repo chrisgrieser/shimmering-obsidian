@@ -5034,7 +5034,7 @@ return "{query}"</string>
 				<key>removeextension</key>
 				<false/>
 				<key>text</key>
-				<string></string>
+				<string>'{query}'</string>
 				<key>title</key>
 				<string>✅ Appended to Note</string>
 			</dict>
