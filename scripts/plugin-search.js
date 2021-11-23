@@ -50,13 +50,9 @@ pluginJSON.forEach(plugin => {
 
  	//check whether already installed
  	let installed_icon = "";
- 	let open_config_valid = false;
- 	let config_subtitle = "⛔️ Configuration not available for uninstalled plugins.";
- 	if (installed_plugins.includes(id)){
- 		installed_icon = " ✅";
- 		open_config_valid = true;
- 		config_subtitle = "⌃: Open '" + name + "' Configuration";
- 	}
+ 	if (installed_plugins.includes(id)) installed_icon = " ✅";
+
+ 	// Better matching for some plugins
  	let URImatcher = "";
  	if (name.includes("URI")) URImatcher = "URL ";
 
@@ -65,16 +61,15 @@ pluginJSON.forEach(plugin => {
 		'title': name + installed_icon,
 		'subtitle': description + " — by " + author + downloads_str,
 		'arg': plugin_uri,
-		'match':	"plugin " + URImatcher + alfredMatcher (name) + " "	+ alfredMatcher (author) + " " + alfredMatcher (id),
+		'match':	"plugin " + URImatcher + alfredMatcher (name) + " " + alfredMatcher (author) + " " + alfredMatcher (id) + " " + alfredMatcher (description),
 		'mods': {
 			'cmd': {'arg': githubURL },
 			'alt': {'arg': githubURL },
 			'fn': {'arg': githubURL },
 			'shift': {'arg': repo + ";" + id + ";" + name},
 			'ctrl':{
-				'valid': open_config_valid,
-				'arg': plugin_uri + "&show=config",
-				'subtitle': config_subtitle,
+				'valid': false,
+				'subtitle': "by " + author + downloads_str + "  (plugin-id: " + id + ")",
 			},
 		}
 	});
@@ -118,7 +113,7 @@ themeJSON.forEach(theme => {
 			},
 			'ctrl':{
 				'valid': false,
-				'subtitle': "⛔️ Themes have no configuration.",
+				'subtitle': "⛔️ Theme Download numbers not supported yet.",
 			},
 			'shift': {'arg': repo },
 		},

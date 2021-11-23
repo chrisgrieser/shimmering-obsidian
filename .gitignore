@@ -7,6 +7,3 @@ List Filter Images/
 
 # "/*" affects only images in the root directory
 /*.png
-
-# Sublime Markdown Preview Plugin
-*.html

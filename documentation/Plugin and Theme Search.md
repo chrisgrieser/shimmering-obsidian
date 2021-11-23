@@ -7,13 +7,13 @@
 - Press `↵` to open the plugin in Obsidian's Community Plugin Browser.
 	- Use `⌘ + ↵` to open the plugin's GitHub repository instead.
 	- Press `⌥ + ↵` to copy the GitHub repository URL to your clipboard.
-	- `⌃ + ↵` will open plugin configuration (when the selected plugin is installed).
-	- _⚙️ For developers:_ Use `fn + ↵` to clone the GitHub Repository into the folder specified in the [workflow configuration](Workflow%20Configuration.md#Plugin-and-Theme-Search) (`download_folder_path`) via `git clone` (http).
 	- `⇧ + ↵` to display & search the GitHub issues. See [the section below](#-Searching-GitHub-Issues) for more information.
+	- 🆕 *Holding* `ctrl` will display download numbers, author, and plugin ID. This is useful, when the plugin description is so long, that you cannot see this anymore.[^2]
+	- _⚙️ For developers:_ Use `fn + ↵` to clone the GitHub Repository into the folder specified in the [workflow configuration](Workflow%20Configuration.md#Plugin-and-Theme-Search) (`download_folder_path`) via `git clone` (http).
 - Only plugins officially included in the community plugins are displayed — plugins solely available via GitHub or still in review are not shown.
-- The thousand separator used with the download numbers can be set in the workflow configuration (`thousand_seperator`).
 - Add `plugin` to the search query to only display themes, e.g., use `op focus plugin` as search query to only display *plugins* with the term `focus`.
 - The `op` search will also consider the name of the plugin's author, meaning the query `op JaneDoe` will return all plugins (and themes) authored by the user `JaneDoe`.
+- The thousand separator used with the download numbers can be set in the [workflow configuration](Workflow%20Configuration.md#Plugin-and-Theme-Search) (`thousand_seperator`).
 - To open local plugin folders and access settings of beta plugins, use the [Settings Search](Settings%20Search.md).
 
 ## Themes
@@ -40,3 +40,4 @@
 <img src="https://i.imgur.com/AvavR7n.png" alt="update information" width=60%>
 
 [^1]: Unfortunately, there isn't enough versioning information for themes to do the same for them.
+[^2]: Accessing the settings of an installed plugin via [the plugin search](Plugin%20and%20Theme%20Search.md) (`op`) via `ctrl + ↵` has been disabled in release 2.4.

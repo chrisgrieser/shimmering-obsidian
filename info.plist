@@ -1290,16 +1290,6 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>D2E44E01-0D14-426A-BFEC-4A5AA83BB375</string>
-				<key>modifiers</key>
-				<integer>262144</integer>
-				<key>modifiersubtext</key>
-				<string>⌃: Open Plugin Configuration</string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
 				<string>4D7CE883-A32F-45EC-BC4A-106918BD64AF</string>
 				<key>modifiers</key>
 				<integer>0</integer>
@@ -2465,19 +2455,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>EBDFE697-8466-45B6-9B43-EB7DC83BB404</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>D2E44E01-0D14-426A-BFEC-4A5AA83BB375</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>4D7CE883-A32F-45EC-BC4A-106918BD64AF</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -7641,14 +7618,6 @@ tell application "Obsidian" to activate</string>
 			<key>type</key>
 			<string>alfred.workflow.utility.junction</string>
 			<key>uid</key>
-			<string>D2E44E01-0D14-426A-BFEC-4A5AA83BB375</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.junction</string>
-			<key>uid</key>
 			<string>0F72D532-AAE1-48A3-85FC-A819F196DC3E</string>
 			<key>version</key>
 			<integer>1</integer>
@@ -10816,15 +10785,6 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<integer>340</integer>
 			<key>ypos</key>
 			<integer>1705</integer>
-		</dict>
-		<key>D2E44E01-0D14-426A-BFEC-4A5AA83BB375</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>xpos</key>
-			<integer>235</integer>
-			<key>ypos</key>
-			<integer>6065</integer>
 		</dict>
 		<key>D3A5EAC3-A2D8-4186-8B20-892495845C0E</key>
 		<dict>

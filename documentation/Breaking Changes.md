@@ -31,3 +31,6 @@
 *when updating to 2.3*
 - replaced `ovault` command with `ov`. See [Vault Switcher documentation](Vault%20Switcher.md).
 - removed `ofreq` for simplification, still available via `oupdate → Set Metadata Update Frequency`
+
+*when updating to 2.4*
+- Accessing the settings of an installed plugin via [the plugin search](Plugin%20and%20Theme%20Search.md) (`op`) via `ctrl + ↵` has been disabled. Instead, *holding* `ctrl` will display download numbers, author, and plugin ID.
