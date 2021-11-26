@@ -11235,7 +11235,7 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 		<key>download_folder_path</key>
 		<string>~/Downloads</string>
 		<key>fontformat</key>
-		<string>TrueType</string>
+		<string>ttf</string>
 		<key>h_lvl_ignore</key>
 		<string>h1 h4 h5 h6</string>
 		<key>max_number_of_bkps</key>
@@ -11265,10 +11265,10 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 		<string>daily_note_path</string>
 		<string>use_quickadd</string>
 		<string>fontformat</string>
-		<string>vault_path</string>
+		<string>workspace_to_spellcheck</string>
 		<string>h_lvl_ignore</string>
 		<string>template_note_path</string>
-		<string>workspace_to_spellcheck</string>
+		<string>vault_path</string>
 	</array>
 	<key>version</key>
 	<string>2.4.2</string>

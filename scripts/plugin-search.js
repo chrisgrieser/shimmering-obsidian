@@ -5,7 +5,7 @@ app = Application.currentApplication();
 app.includeStandardAdditions = true;
 
 function alfredMatcher (str){
-	return str.replace (/[-\(\)_\.]/g," ") + " " + str;
+	return str.replace (/[-()_.]/g," ") + " " + str;
 }
 function onlineJSON (url){
 	return JSON.parse (app.doShellScript('curl -s "' + url + '"'));
@@ -28,7 +28,7 @@ const downloadsJSON = onlineJSON ('https://raw.githubusercontent.com/obsidianmd/
 const themeJSON = onlineJSON('https://raw.githubusercontent.com/obsidianmd/obsidian-releases/master/community-css-themes.json');
 const installed_plugins = app.doShellScript('ls -1 "' + vault_path + '""/.obsidian/plugins/"');
 const installed_themes = app.doShellScript("find '" + vault_path + "/.obsidian/themes/' -name '*.css' ");
-const current_theme = app.doShellScript('cat "' + vault_path + '/.obsidian/appearance.json' +'" | grep "cssTheme" | head -n 1 | cut -d\\\" -f 4');
+const current_theme = app.doShellScript('cat "' + vault_path + '/.obsidian/appearance.json' +'" | grep "cssTheme" | head -n 1 | cut -d\\\" -f 4');  // eslint-disable-line no-useless-escape
 
 //add PLUGINS to the JSON
 pluginJSON.forEach(plugin => {
@@ -48,13 +48,13 @@ pluginJSON.forEach(plugin => {
 		downloads_str = "  ↓ " + insert1000sep(downloads);
 	}
 
- 	//check whether already installed
- 	let installed_icon = "";
- 	if (installed_plugins.includes(id)) installed_icon = " ✅";
+	//check whether already installed
+	let installed_icon = "";
+	if (installed_plugins.includes(id)) installed_icon = " ✅";
 
- 	// Better matching for some plugins
- 	let URImatcher = "";
- 	if (name.includes("URI")) URImatcher = "URL ";
+	// Better matching for some plugins
+	let URImatcher = "";
+	if (name.includes("URI")) URImatcher = "URL ";
 
 	//create json for Alfred
 	jsonArray.push({
@@ -78,16 +78,16 @@ pluginJSON.forEach(plugin => {
 // add THEMES to the JSON
 themeJSON.forEach(theme => {
 	let name = theme.name;
- 	let author = theme.author;
- 	let repo = theme.repo;
- 	let branch;
- 	if (theme.branch) branch = theme.branch;
- 	else branch = "master";
+	let author = theme.author;
+	let repo = theme.repo;
+	let branch;
+	if (theme.branch) branch = theme.branch;
+	else branch = "master";
 
- 	let githubURL = "https://github.com/" + repo;
- 	let rawGitHub = "https://raw.githubusercontent.com/" + repo + "/" + branch + "/";
-  	let screenshotURL = rawGitHub + theme.screenshot;
-  	let cssURL = rawGitHub + "obsidian.css";
+	let githubURL = "https://github.com/" + repo;
+	let rawGitHub = "https://raw.githubusercontent.com/" + repo + "/" + branch + "/";
+	let screenshotURL = rawGitHub + theme.screenshot;
+	let cssURL = rawGitHub + "obsidian.css";
 
 	let modes = "";
 	let installed_icon = "";
@@ -95,8 +95,8 @@ themeJSON.forEach(theme => {
 		if (theme.modes.includes("light")) modes += "☀️ ";
 		if (theme.modes.includes("dark")) modes += "🌒 ";
 	}
- 	if (installed_themes.includes(name)) installed_icon = " ✅";
- 	if (current_theme == name) installed_icon = " ⭐️";
+	if (installed_themes.includes(name)) installed_icon = " ✅";
+	if (current_theme === name) installed_icon = " ⭐️";
 
 	//create json for Alfred
 	jsonArray.push({
