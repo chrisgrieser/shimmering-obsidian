@@ -6,7 +6,7 @@
 <img src="https://user-images.githubusercontent.com/73286100/139678407-9ac39baa-5f49-42a0-9622-0fbaf68540b2.gif" alt="promo video" width=70%> 
 
 ## ⚠️ Breaking Changes
-When updating from version 1.x to version 2.x, there are some breaking changes for certain commands. Most importantly, this plugin now requires the [metadata extractor plugin](https://github.com/kometenstaub/metadata-extractor) to run most of its features.
+When updating from version 1.x to version 2.x, there are some breaking changes for certain commands. Most importantly, this plugin now requires the [Metadata Extractor Plugin](https://github.com/kometenstaub/metadata-extractor) to run most of its features.
 
 Please refer to [the Breaking Changes Docs](documentation/Breaking%20Changes.md) for more in-detail information.
 
@@ -14,6 +14,7 @@ Please refer to [the Breaking Changes Docs](documentation/Breaking%20Changes.md)
 - [Installation and Setup](documentation/Installation.md)
 - [Workflow Configuration](documentation/Workflow%20Configuration.md)
 - [Troubleshooting](documentation/Troubleshooting.md)
+- [Changelog](Changelog.md)
 
 ## Feature Overview
 *For a full documentation & usage guide, follow the links to the respective subsection.*
@@ -122,9 +123,9 @@ Please refer to [the Breaking Changes Docs](documentation/Breaking%20Changes.md)
 - Main icon by [Jack Liu](https://www.reddit.com/user/jackliu1219), with some additional icons from [Freepik](https://www.freepik.com/).
 
 ### Donations 🙏
-- [PayPal](https://www.paypal.com/paypalme/ChrisGrieser)
-- [Ko-Fi](https://ko-fi.com/pseudometa)
+**Donations** are welcome via [PayPal](https://www.paypal.com/paypalme/ChrisGrieser) or [Ko-Fi](https://ko-fi.com/pseudometa). 🙏
 
 ### About the Developer
-- This Alfred workflow has been created by @pseudometa#9546 ([Discord](https://discord.gg/veuWUTm)) aka [@pseudo_meta (Twitter)](https://twitter.com/pseudo_meta), aka Chris Grieser (rl).
-- In my day job, I am a PhD student in sociology, investigating the governance of the app economy. If you are interested in this subject, feel free to visit [my academic homepage](https://chris-grieser.de/) and get in touch!
+My ([Discord](https://discord.gg/veuWUTm)) handle is `@pseudometa#9546` and you can find me on Twitter as [@pseudo_meta (Twitter)](https://twitter.com/pseudo_meta).
+
+In my day job, I am a researcher and sociology. In my phD project, I investigate the governance of the app economy and how software ecosystems manage the tension between innovation and compatibility. If you are interested in this subject, feel free to visit [my academic homepage](https://chris-grieser.de/) and get in touch!
