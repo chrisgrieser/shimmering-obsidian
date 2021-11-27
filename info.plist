@@ -229,19 +229,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>1D16496A-661B-46FB-AEE2-6A3AB41B77F3</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>42B2DB09-A39A-4087-9F06-C0B0F2C16E88</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>1E26935C-F1F3-4C69-AEFA-3A0D9D18291F</key>
 		<array>
 			<dict>
@@ -632,21 +619,6 @@
 		</array>
 		<key>3F44687E-16F7-4830-BC8B-D16B1098C474</key>
 		<array/>
-		<key>3F7A599D-6A9E-4D70-B3E6-88217EA3D56C</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>E6FA0443-53FA-4967-A3EE-9AE429FFEE5F</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>sourceoutputuid</key>
-				<string>B8B85F6F-BB90-433B-8CFA-4A91259E4BED</string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>3F97414B-D2C1-42AC-A7AF-0683EA133B48</key>
 		<array>
 			<dict>
@@ -890,16 +862,6 @@
 				<key>vitoclose</key>
 				<false/>
 			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>D8F01D44-B570-4956-B4AE-B3AE05B3D0EE</string>
-				<key>modifiers</key>
-				<integer>1179648</integer>
-				<key>modifiersubtext</key>
-				<string>⌘⇧: Open in Dual Mode</string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
 		</array>
 		<key>4D7CE883-A32F-45EC-BC4A-106918BD64AF</key>
 		<array>
@@ -919,6 +881,31 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>D3A85314-C314-49E8-BA70-08DD01FC2E21</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>4DFA3143-56A4-4661-8DF9-4103FFA7D703</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>DBA6DBFB-3701-4BFC-B72C-406BF62DF384</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>B631E15C-B7B7-4471-BFF6-701FEA2FCA69</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>88723AC0-4348-4B23-AFD7-FEFE6C532A94</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -972,7 +959,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>1FE579F5-99C2-4C35-A110-CB55F903E327</string>
+				<string>A5BA80AA-D2FF-43BC-AE70-4C34D0BB4E20</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1547,16 +1534,6 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>3F7A599D-6A9E-4D70-B3E6-88217EA3D56C</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
 				<string>F826AEF3-E14A-4E94-BAD8-359D59B5F1B4</string>
 				<key>modifiers</key>
 				<integer>0</integer>
@@ -1662,6 +1639,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>57CACB5D-8848-4706-9B61-3C0AFDA26C17</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>88723AC0-4348-4B23-AFD7-FEFE6C532A94</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>1FE579F5-99C2-4C35-A110-CB55F903E327</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1862,16 +1852,6 @@
 				<key>vitoclose</key>
 				<false/>
 			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>D8F01D44-B570-4956-B4AE-B3AE05B3D0EE</string>
-				<key>modifiers</key>
-				<integer>1179648</integer>
-				<key>modifiersubtext</key>
-				<string>⌘⇧: Open in Dual Mode</string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
 		</array>
 		<key>9B3822BB-6392-424B-A166-328A7EBCAF30</key>
 		<array>
@@ -1956,6 +1936,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>CCF6C3D3-E4F2-4D86-8F43-CE79E1DE3CFC</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>A5BA80AA-D2FF-43BC-AE70-4C34D0BB4E20</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>4DFA3143-56A4-4661-8DF9-4103FFA7D703</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -2530,16 +2523,6 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>E7DD15AC-087E-4C99-9380-9F7A848FD952</string>
-				<key>modifiers</key>
-				<integer>1179648</integer>
-				<key>modifiersubtext</key>
-				<string>⌘⇧: Open in Dual Mode</string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
 				<string>5A09F715-0609-4CD9-A1B8-B7677229F80B</string>
 				<key>modifiers</key>
 				<integer>131072</integer>
@@ -2590,6 +2573,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>7D288B7C-5CB7-4A0E-B99D-3A2D9186DEC5</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>DBA6DBFB-3701-4BFC-B72C-406BF62DF384</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>1FE579F5-99C2-4C35-A110-CB55F903E327</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -2882,19 +2878,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>E6FA0443-53FA-4967-A3EE-9AE429FFEE5F</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>89B47E8A-C9EE-4792-80D7-CA0D46A6A2C9</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>E7ADA43C-52CF-46FD-AC9E-79616731DDA9</key>
 		<array>
 			<dict>
@@ -3040,18 +3023,6 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>51D8E207-AB3E-41F7-A0F6-4205DF43F270</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>sourceoutputuid</key>
-				<string>01F4973B-5C98-4501-8132-CCDC40AE7FE4</string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
 				<string>5875C4B6-87C8-444B-A51B-4C118BB196FE</string>
 				<key>modifiers</key>
 				<integer>0</integer>
@@ -3059,6 +3030,18 @@
 				<string></string>
 				<key>sourceoutputuid</key>
 				<string>FE2D6144-AE23-4EF8-B290-E03922D68DA1</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>51D8E207-AB3E-41F7-A0F6-4205DF43F270</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>01F4973B-5C98-4501-8132-CCDC40AE7FE4</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -3781,25 +3764,6 @@ mv "$filepath" "$target_folder"</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>externaltriggerid</key>
-				<string>trigger-dual-mode</string>
-				<key>passinputasargument</key>
-				<true/>
-				<key>passvariables</key>
-				<true/>
-				<key>workflowbundleid</key>
-				<string>self</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.callexternaltrigger</string>
-			<key>uid</key>
-			<string>89B47E8A-C9EE-4792-80D7-CA0D46A6A2C9</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -3865,49 +3829,6 @@ app.openLocation(urlscheme);</string>
 			<string>alfred.workflow.trigger.external</string>
 			<key>uid</key>
 			<string>503B3F91-98A0-4357-92F2-A88BD6EDB404</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>conditions</key>
-				<array>
-					<dict>
-						<key>inputstring</key>
-						<string>{var:dual_after}</string>
-						<key>matchcasesensitive</key>
-						<false/>
-						<key>matchmode</key>
-						<integer>0</integer>
-						<key>matchstring</key>
-						<string>true</string>
-						<key>outputlabel</key>
-						<string>open in dual</string>
-						<key>uid</key>
-						<string>B8B85F6F-BB90-433B-8CFA-4A91259E4BED</string>
-					</dict>
-				</array>
-				<key>elselabel</key>
-				<string>--</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.conditional</string>
-			<key>uid</key>
-			<string>3F7A599D-6A9E-4D70-B3E6-88217EA3D56C</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>seconds</key>
-				<string>.5</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.delay</string>
-			<key>uid</key>
-			<string>E6FA0443-53FA-4967-A3EE-9AE429FFEE5F</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -4920,6 +4841,53 @@ return "{query}"</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>adduuid</key>
+				<false/>
+				<key>allowemptyfiles</key>
+				<false/>
+				<key>createintermediatefolders</key>
+				<false/>
+				<key>filename</key>
+				<string>{var:vault_path}/{var:relative_path}</string>
+				<key>filetext</key>
+				<string>{query}
+</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>relativepathmode</key>
+				<integer>0</integer>
+				<key>type</key>
+				<integer>2</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.writefile</string>
+			<key>uid</key>
+			<string>1FE579F5-99C2-4C35-A110-CB55F903E327</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>subtext</key>
+				<string>to note: {var:relative_path}</string>
+				<key>text</key>
+				<string>Append: '{query}'</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>DBA6DBFB-3701-4BFC-B72C-406BF62DF384</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -4944,40 +4912,12 @@ return "{query}"</string>
 			<key>config</key>
 			<dict>
 				<key>triggerid</key>
-				<string>append-to-note</string>
+				<string>browser-folder-loop</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.trigger.external</string>
 			<key>uid</key>
-			<string>507B53E2-BBE0-4CD6-81F0-570EA461C871</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>adduuid</key>
-				<false/>
-				<key>allowemptyfiles</key>
-				<false/>
-				<key>createintermediatefolders</key>
-				<false/>
-				<key>filename</key>
-				<string>{var:vault_path}/{query}</string>
-				<key>filetext</key>
-				<string>{clipboard}
-</string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>relativepathmode</key>
-				<integer>0</integer>
-				<key>type</key>
-				<integer>2</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.writefile</string>
-			<key>uid</key>
-			<string>1FE579F5-99C2-4C35-A110-CB55F903E327</string>
+			<string>C60C1880-E166-4304-A913-7E307B365032</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -5015,33 +4955,42 @@ return "{query}"</string>
 			<key>config</key>
 			<dict>
 				<key>triggerid</key>
-				<string>browser-folder-loop</string>
+				<string>append-to-note</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.trigger.external</string>
 			<key>uid</key>
-			<string>C60C1880-E166-4304-A913-7E307B365032</string>
+			<string>507B53E2-BBE0-4CD6-81F0-570EA461C871</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<true/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string>'{query}'</string>
-				<key>title</key>
-				<string>✅ Appended to Note</string>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:input_append}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>manual</string>
+						<key>outputlabel</key>
+						<string>manual</string>
+						<key>uid</key>
+						<string>B631E15C-B7B7-4471-BFF6-701FEA2FCA69</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>clipboard</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
+			<string>alfred.workflow.utility.conditional</string>
 			<key>uid</key>
-			<string>1E497866-1199-4947-BC1A-AC23ADDD6C82</string>
+			<string>4DFA3143-56A4-4661-8DF9-4103FFA7D703</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -5049,16 +4998,19 @@ return "{query}"</string>
 			<key>config</key>
 			<dict>
 				<key>argument</key>
-				<string>{clipboard}</string>
+				<string></string>
 				<key>passthroughargument</key>
 				<false/>
 				<key>variables</key>
-				<dict/>
+				<dict>
+					<key>relative_path</key>
+					<string>{query}</string>
+				</dict>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
-			<string>353C9BBE-FF88-4A2F-8B67-01D7D1F812CD</string>
+			<string>A5BA80AA-D2FF-43BC-AE70-4C34D0BB4E20</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -5084,26 +5036,38 @@ return "{query}"</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>path</key>
-				<string>{var:vault_path}/{query}</string>
+				<key>argument</key>
+				<string>{clipboard}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.revealfile</string>
+			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
-			<string>40158B5B-4DBC-4FD4-AC40-4976E27C3792</string>
+			<string>88723AC0-4348-4B23-AFD7-FEFE6C532A94</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>triggerid</key>
-				<string>reveal-in-finder</string>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>'{query}'</string>
+				<key>title</key>
+				<string>✅ Appended to '{var:relative_path}'</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.trigger.external</string>
+			<string>alfred.workflow.output.notification</string>
 			<key>uid</key>
-			<string>7BA55F56-BE3A-483A-9CA6-CEE173CF2357</string>
+			<string>1E497866-1199-4947-BC1A-AC23ADDD6C82</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -5159,6 +5123,23 @@ return "{query}"</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>argument</key>
+				<string>{clipboard}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>353C9BBE-FF88-4A2F-8B67-01D7D1F812CD</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>externaltriggerid</key>
 				<string>append-to-note</string>
 				<key>passinputasargument</key>
@@ -5172,6 +5153,32 @@ return "{query}"</string>
 			<string>alfred.workflow.output.callexternaltrigger</string>
 			<key>uid</key>
 			<string>81D69BF1-CF14-4A8E-A427-380B8C206C4C</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>path</key>
+				<string>{var:vault_path}/{query}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.revealfile</string>
+			<key>uid</key>
+			<string>40158B5B-4DBC-4FD4-AC40-4976E27C3792</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>triggerid</key>
+				<string>reveal-in-finder</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.external</string>
+			<key>uid</key>
+			<string>7BA55F56-BE3A-483A-9CA6-CEE173CF2357</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -5658,6 +5665,25 @@ cat "$template_note"</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string></string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>9E3B9072-3C3B-4C45-A973-426BC0F7E30F</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>alfredfiltersresults</key>
 				<true/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -5712,25 +5738,6 @@ cat "$template_note"</string>
 			<string>alfred.workflow.trigger.external</string>
 			<key>uid</key>
 			<string>586CA10A-CD8A-4C01-8388-351A83CC9B09</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>browser</key>
-				<string></string>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string></string>
-				<key>utf8</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
-			<key>uid</key>
-			<string>9E3B9072-3C3B-4C45-A973-426BC0F7E30F</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -5808,25 +5815,6 @@ cat "$template_note"</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>autopaste</key>
-				<false/>
-				<key>clipboardtext</key>
-				<string>{query}</string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>transient</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>7E35A968-B0D2-449B-B6F5-ECCE886E4BE8</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>keyword</key>
@@ -5844,6 +5832,25 @@ cat "$template_note"</string>
 			<string>F8A28B5B-0774-406B-BD27-E4F0C69FD6A2</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>7E35A968-B0D2-449B-B6F5-ECCE886E4BE8</string>
+			<key>version</key>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -5979,25 +5986,6 @@ cat "$template_note"</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>externaltriggerid</key>
-				<string>open-in-new-pane</string>
-				<key>passinputasargument</key>
-				<true/>
-				<key>passvariables</key>
-				<true/>
-				<key>workflowbundleid</key>
-				<string>self</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.callexternaltrigger</string>
-			<key>uid</key>
-			<string>9DA49FEA-E8E8-41DF-9645-53CC395531A2</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>alfredfiltersresults</key>
 				<true/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -6048,6 +6036,25 @@ cat "$template_note"</string>
 			<key>config</key>
 			<dict>
 				<key>externaltriggerid</key>
+				<string>open-in-new-pane</string>
+				<key>passinputasargument</key>
+				<true/>
+				<key>passvariables</key>
+				<true/>
+				<key>workflowbundleid</key>
+				<string>self</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>9DA49FEA-E8E8-41DF-9645-53CC395531A2</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>externaltriggerid</key>
 				<string>append-to-note</string>
 				<key>passinputasargument</key>
 				<true/>
@@ -6067,7 +6074,7 @@ cat "$template_note"</string>
 			<key>config</key>
 			<dict>
 				<key>externaltriggerid</key>
-				<string>open-in-dual</string>
+				<string>note-link-list</string>
 				<key>passinputasargument</key>
 				<true/>
 				<key>passvariables</key>
@@ -6078,7 +6085,7 @@ cat "$template_note"</string>
 			<key>type</key>
 			<string>alfred.workflow.output.callexternaltrigger</string>
 			<key>uid</key>
-			<string>E7DD15AC-087E-4C99-9380-9F7A848FD952</string>
+			<string>5A09F715-0609-4CD9-A1B8-B7677229F80B</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -6225,25 +6232,6 @@ JSON.stringify({ 'items': jsonArray });
 			<key>config</key>
 			<dict>
 				<key>externaltriggerid</key>
-				<string>note-link-list</string>
-				<key>passinputasargument</key>
-				<true/>
-				<key>passvariables</key>
-				<true/>
-				<key>workflowbundleid</key>
-				<string>self</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.callexternaltrigger</string>
-			<key>uid</key>
-			<string>5A09F715-0609-4CD9-A1B8-B7677229F80B</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>externaltriggerid</key>
 				<string>reveal-in-finder</string>
 				<key>passinputasargument</key>
 				<true/>
@@ -6288,25 +6276,6 @@ JSON.stringify({ 'items': jsonArray });
 			<string>alfred.workflow.trigger.external</string>
 			<key>uid</key>
 			<string>A6F41657-5917-4CD1-A28F-7C4B2519781B</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>externaltriggerid</key>
-				<string>open-in-dual</string>
-				<key>passinputasargument</key>
-				<true/>
-				<key>passvariables</key>
-				<true/>
-				<key>workflowbundleid</key>
-				<string>self</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.callexternaltrigger</string>
-			<key>uid</key>
-			<string>D8F01D44-B570-4956-B4AE-B3AE05B3D0EE</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -6444,19 +6413,6 @@ echo "$backup"</string>
 			<string>alfred.workflow.output.playsound</string>
 			<key>uid</key>
 			<string>F8FA8843-EC3D-45BB-AD77-1F99F2E82DD8</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>triggerid</key>
-				<string>trigger-dual-mode</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.external</string>
-			<key>uid</key>
-			<string>1D16496A-661B-46FB-AEE2-6A3AB41B77F3</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -7362,23 +7318,6 @@ open "obsidian://advanced-uri?commandid=metadata-extractor%253Awrite-allExceptMd
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argument</key>
-				<string></string>
-				<key>passthroughargument</key>
-				<false/>
-				<key>variables</key>
-				<dict/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>51D8E207-AB3E-41F7-A0F6-4205DF43F270</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>adduuid</key>
 				<false/>
 				<key>allowemptyfiles</key>
@@ -7530,13 +7469,17 @@ tell application "Obsidian" to activate</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>triggerid</key>
-				<string>min-input-loop</string>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.trigger.external</string>
+			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
-			<string>A3E485FC-C939-4776-8000-396EB2F3CC64</string>
+			<string>51D8E207-AB3E-41F7-A0F6-4205DF43F270</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -7592,6 +7535,19 @@ tell application "Obsidian" to activate</string>
 			<string>alfred.workflow.output.callexternaltrigger</string>
 			<key>uid</key>
 			<string>0BBE0C0E-D057-4A44-B000-02727F0AEDE5</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>triggerid</key>
+				<string>min-input-loop</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.external</string>
+			<key>uid</key>
+			<string>A3E485FC-C939-4776-8000-396EB2F3CC64</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -8891,14 +8847,16 @@ end tell</string>
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>ℹ️ The new version 2.0 is a complete overhaul of the workflow, with a few breaking changes and more than a dozen new features. For an overview of all changes, refer to the completely overhauled documentation.
+	<string>Documentation
+-------------
 https://github.com/chrisgrieser/shimmering-obsidian/blob/main/README.md
 
-⚠️ This workflow now requires the metadata extractor plugin to function. Read information here:
-https://github.com/chrisgrieser/shimmering-obsidian/blob/main/documentation/Breaking%20Changes.md
+Changelog
+---------
+https://github.com/chrisgrieser/shimmering-obsidian/blob/main/README.md
 
----
-
+Credits
+-------
 Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (rl). https://chris-grieser.de/</string>
 	<key>uidata</key>
 	<dict>
@@ -8927,7 +8885,7 @@ Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (r
 			<key>xpos</key>
 			<integer>280</integer>
 			<key>ypos</key>
-			<integer>785</integer>
+			<integer>880</integer>
 		</dict>
 		<key>04211D9D-11BA-4717-82D2-13B2A608E8F5</key>
 		<dict>
@@ -8938,7 +8896,7 @@ Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (r
 			<key>xpos</key>
 			<integer>670</integer>
 			<key>ypos</key>
-			<integer>295</integer>
+			<integer>425</integer>
 		</dict>
 		<key>04305878-B92D-4ACB-AA2D-045D29CB4F8B</key>
 		<dict>
@@ -9113,32 +9071,23 @@ Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (r
 			<key>ypos</key>
 			<integer>4435</integer>
 		</dict>
-		<key>1D16496A-661B-46FB-AEE2-6A3AB41B77F3</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>6</integer>
-			<key>xpos</key>
-			<integer>30</integer>
-			<key>ypos</key>
-			<integer>3895</integer>
-		</dict>
 		<key>1E26935C-F1F3-4C69-AEFA-3A0D9D18291F</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>360</integer>
+			<integer>335</integer>
 			<key>ypos</key>
 			<integer>3775</integer>
 		</dict>
 		<key>1E497866-1199-4947-BC1A-AC23ADDD6C82</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>6</integer>
+			<integer>9</integer>
 			<key>xpos</key>
-			<integer>1900</integer>
+			<integer>2350</integer>
 			<key>ypos</key>
-			<integer>1980</integer>
+			<integer>2065</integer>
 		</dict>
 		<key>1E72DA48-B05A-45E6-A27F-515AB0D4ADE6</key>
 		<dict>
@@ -9161,22 +9110,22 @@ Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (r
 		<key>1FE579F5-99C2-4C35-A110-CB55F903E327</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>6</integer>
+			<integer>9</integer>
 			<key>note</key>
 			<string>Append Clipboard Content</string>
 			<key>xpos</key>
-			<integer>1485</integer>
+			<integer>1980</integer>
 			<key>ypos</key>
-			<integer>1900</integer>
+			<integer>1905</integer>
 		</dict>
 		<key>221F4BFD-7850-440F-BB16-C39AC39E729C</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>6</integer>
+			<integer>9</integer>
 			<key>note</key>
 			<string>Strip Markdown</string>
 			<key>xpos</key>
-			<integer>1860</integer>
+			<integer>1960</integer>
 			<key>ypos</key>
 			<integer>1655</integer>
 		</dict>
@@ -9185,7 +9134,7 @@ Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (r
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>505</integer>
+			<integer>480</integer>
 			<key>ypos</key>
 			<integer>3775</integer>
 		</dict>
@@ -9230,9 +9179,9 @@ Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (r
 		<key>2B55DCB2-3C6A-42EC-A014-095939CB3FAB</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>6</integer>
+			<integer>9</integer>
 			<key>xpos</key>
-			<integer>1610</integer>
+			<integer>1710</integer>
 			<key>ypos</key>
 			<integer>2280</integer>
 		</dict>
@@ -9286,16 +9235,16 @@ Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (r
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>185</integer>
+			<integer>190</integer>
 			<key>ypos</key>
-			<integer>600</integer>
+			<integer>695</integer>
 		</dict>
 		<key>31F21F7E-7450-444B-B9FC-D46650DF6F17</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>6</integer>
+			<integer>9</integer>
 			<key>xpos</key>
-			<integer>1485</integer>
+			<integer>1555</integer>
 			<key>ypos</key>
 			<integer>2320</integer>
 		</dict>
@@ -9340,11 +9289,11 @@ Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (r
 		<key>353C9BBE-FF88-4A2F-8B67-01D7D1F812CD</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>6</integer>
+			<integer>9</integer>
 			<key>xpos</key>
-			<integer>1845</integer>
+			<integer>2295</integer>
 			<key>ypos</key>
-			<integer>2010</integer>
+			<integer>2095</integer>
 		</dict>
 		<key>378CFF0C-FF5A-40C2-BE7F-587887FA84F7</key>
 		<dict>
@@ -9402,7 +9351,7 @@ Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (r
 			<key>xpos</key>
 			<integer>345</integer>
 			<key>ypos</key>
-			<integer>755</integer>
+			<integer>850</integer>
 		</dict>
 		<key>3E583649-4839-4CB9-B6CC-2F52E2442E86</key>
 		<dict>
@@ -9426,15 +9375,6 @@ Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (r
 			<key>ypos</key>
 			<integer>1005</integer>
 		</dict>
-		<key>3F7A599D-6A9E-4D70-B3E6-88217EA3D56C</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>6</integer>
-			<key>xpos</key>
-			<integer>2160</integer>
-			<key>ypos</key>
-			<integer>1050</integer>
-		</dict>
 		<key>3F97414B-D2C1-42AC-A7AF-0683EA133B48</key>
 		<dict>
 			<key>colorindex</key>
@@ -9449,11 +9389,11 @@ Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (r
 		<key>40158B5B-4DBC-4FD4-AC40-4976E27C3792</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>6</integer>
+			<integer>9</integer>
 			<key>xpos</key>
-			<integer>1485</integer>
+			<integer>1585</integer>
 			<key>ypos</key>
-			<integer>2040</integer>
+			<integer>2175</integer>
 		</dict>
 		<key>42201C8D-D1DE-4EA8-9EC8-7F92FDF17572</key>
 		<dict>
@@ -9495,7 +9435,7 @@ Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (r
 			<key>xpos</key>
 			<integer>325</integer>
 			<key>ypos</key>
-			<integer>315</integer>
+			<integer>445</integer>
 		</dict>
 		<key>44ACD8E5-CFE0-4D48-98F9-DD31AFBC7362</key>
 		<dict>
@@ -9556,9 +9496,9 @@ Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (r
 		<key>4B4D3ECE-1162-41DA-ACCC-16B0AC6FA3D1</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>6</integer>
+			<integer>9</integer>
 			<key>xpos</key>
-			<integer>1700</integer>
+			<integer>1800</integer>
 			<key>ypos</key>
 			<integer>1625</integer>
 		</dict>
@@ -9587,9 +9527,9 @@ Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (r
 			<key>colorindex</key>
 			<integer>6</integer>
 			<key>xpos</key>
-			<integer>1985</integer>
+			<integer>2050</integer>
 			<key>ypos</key>
-			<integer>2640</integer>
+			<integer>2670</integer>
 		</dict>
 		<key>4D7CE883-A32F-45EC-BC4A-106918BD64AF</key>
 		<dict>
@@ -9605,9 +9545,20 @@ Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (r
 			<key>colorindex</key>
 			<integer>6</integer>
 			<key>xpos</key>
-			<integer>1440</integer>
+			<integer>1505</integer>
 			<key>ypos</key>
-			<integer>2840</integer>
+			<integer>2870</integer>
+		</dict>
+		<key>4DFA3143-56A4-4661-8DF9-4103FFA7D703</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>note</key>
+			<string>input</string>
+			<key>xpos</key>
+			<integer>1620</integer>
+			<key>ypos</key>
+			<integer>1955</integer>
 		</dict>
 		<key>4E837984-2AAC-4058-B559-0FD9F2A668A1</key>
 		<dict>
@@ -9616,7 +9567,7 @@ Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (r
 			<key>xpos</key>
 			<integer>660</integer>
 			<key>ypos</key>
-			<integer>755</integer>
+			<integer>850</integer>
 		</dict>
 		<key>4EA9A40E-C1AF-4EB5-B118-A36B1F0CE6F7</key>
 		<dict>
@@ -9656,16 +9607,16 @@ takes file path (with or without heading) and opens it correctly</string>
 			<key>xpos</key>
 			<integer>1340</integer>
 			<key>ypos</key>
-			<integer>1900</integer>
+			<integer>1935</integer>
 		</dict>
 		<key>51D8E207-AB3E-41F7-A0F6-4205DF43F270</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>185</integer>
+			<integer>245</integer>
 			<key>ypos</key>
-			<integer>5570</integer>
+			<integer>5750</integer>
 		</dict>
 		<key>52C6C47D-3998-4DF9-B9A4-04E586CC8380</key>
 		<dict>
@@ -9708,9 +9659,9 @@ takes file path (with or without heading) and opens it correctly</string>
 			<key>colorindex</key>
 			<integer>6</integer>
 			<key>xpos</key>
-			<integer>1985</integer>
+			<integer>2050</integer>
 			<key>ypos</key>
-			<integer>2750</integer>
+			<integer>2780</integer>
 		</dict>
 		<key>577E0F2F-C819-41CF-87BE-A16A976F6E68</key>
 		<dict>
@@ -9737,27 +9688,27 @@ takes file path (with or without heading) and opens it correctly</string>
 			<key>colorindex</key>
 			<integer>6</integer>
 			<key>xpos</key>
-			<integer>1280</integer>
+			<integer>1345</integer>
 			<key>ypos</key>
-			<integer>2810</integer>
+			<integer>2840</integer>
 		</dict>
 		<key>5875C4B6-87C8-444B-A51B-4C118BB196FE</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>335</integer>
+			<integer>395</integer>
 			<key>ypos</key>
-			<integer>5570</integer>
+			<integer>5590</integer>
 		</dict>
 		<key>5A09F715-0609-4CD9-A1B8-B7677229F80B</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>6</integer>
 			<key>xpos</key>
-			<integer>1985</integer>
+			<integer>2050</integer>
 			<key>ypos</key>
-			<integer>3350</integer>
+			<integer>3275</integer>
 		</dict>
 		<key>5B3AC1A9-7057-4FF6-B3C7-2F65A76E2826</key>
 		<dict>
@@ -9766,7 +9717,7 @@ takes file path (with or without heading) and opens it correctly</string>
 			<key>xpos</key>
 			<integer>260</integer>
 			<key>ypos</key>
-			<integer>325</integer>
+			<integer>455</integer>
 		</dict>
 		<key>5C1918E9-6508-4076-8D79-716B47ACFC20</key>
 		<dict>
@@ -9800,11 +9751,13 @@ takes file path (with or without heading) and opens it correctly</string>
 		<key>5EF4465D-1198-4857-BFAD-B843B6339E84</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>6</integer>
+			<integer>9</integer>
+			<key>note</key>
+			<string>open after</string>
 			<key>xpos</key>
-			<integer>1755</integer>
+			<integer>2140</integer>
 			<key>ypos</key>
-			<integer>1920</integer>
+			<integer>1925</integer>
 		</dict>
 		<key>5F6CE94A-26BF-4826-8A67-2E02353646DB</key>
 		<dict>
@@ -9867,13 +9820,13 @@ takes file path (with or without heading) and opens it correctly</string>
 		<key>65F857FA-3AC7-4FF7-8F59-083ADF0CDADE</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>6</integer>
+			<integer>9</integer>
 			<key>note</key>
 			<string>link</string>
 			<key>xpos</key>
-			<integer>1845</integer>
+			<integer>1910</integer>
 			<key>ypos</key>
-			<integer>2870</integer>
+			<integer>2900</integer>
 		</dict>
 		<key>6636C45E-04AC-482C-AC17-1F837BA5E9F8</key>
 		<dict>
@@ -9929,18 +9882,18 @@ takes file path (with or without heading) and opens it correctly</string>
 			<key>xpos</key>
 			<integer>430</integer>
 			<key>ypos</key>
-			<integer>250</integer>
+			<integer>380</integer>
 		</dict>
 		<key>6EB09DCF-CB1C-42D8-9CFF-90E7EAF28FBA</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>6</integer>
+			<integer>9</integer>
 			<key>note</key>
 			<string>absolute to relative path</string>
 			<key>xpos</key>
-			<integer>2075</integer>
+			<integer>2280</integer>
 			<key>ypos</key>
-			<integer>1890</integer>
+			<integer>1905</integer>
 		</dict>
 		<key>7107BFB2-1A6A-434E-9E32-F01F75AF1CF6</key>
 		<dict>
@@ -9974,13 +9927,13 @@ takes file path (with or without heading) and opens it correctly</string>
 		<key>72AACC40-46A8-4203-9BD5-B16971C30181</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>6</integer>
+			<integer>9</integer>
 			<key>note</key>
 			<string>link</string>
 			<key>xpos</key>
-			<integer>1795</integer>
+			<integer>1860</integer>
 			<key>ypos</key>
-			<integer>2510</integer>
+			<integer>2540</integer>
 		</dict>
 		<key>72EC336B-CECC-4EF2-BECC-BDC37E91C63D</key>
 		<dict>
@@ -10045,7 +9998,7 @@ takes file path (with or without heading) and opens it correctly</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>645</integer>
+			<integer>620</integer>
 			<key>ypos</key>
 			<integer>3775</integer>
 		</dict>
@@ -10056,12 +10009,12 @@ takes file path (with or without heading) and opens it correctly</string>
 			<key>xpos</key>
 			<integer>1340</integer>
 			<key>ypos</key>
-			<integer>2040</integer>
+			<integer>2175</integer>
 		</dict>
 		<key>7D288B7C-5CB7-4A0E-B99D-3A2D9186DEC5</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>9</integer>
+			<integer>6</integer>
 			<key>xpos</key>
 			<integer>480</integer>
 			<key>ypos</key>
@@ -10072,9 +10025,9 @@ takes file path (with or without heading) and opens it correctly</string>
 			<key>colorindex</key>
 			<integer>6</integer>
 			<key>xpos</key>
-			<integer>1985</integer>
+			<integer>2050</integer>
 			<key>ypos</key>
-			<integer>2880</integer>
+			<integer>2910</integer>
 		</dict>
 		<key>80F4A804-DF34-4A90-8659-0BFF41513417</key>
 		<dict>
@@ -10099,20 +10052,20 @@ takes file path (with or without heading) and opens it correctly</string>
 		<key>82C08ED7-D456-4D77-985B-6F4A779F0BC2</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>6</integer>
+			<integer>9</integer>
 			<key>note</key>
 			<string>read template</string>
 			<key>xpos</key>
-			<integer>1790</integer>
+			<integer>1890</integer>
 			<key>ypos</key>
 			<integer>2205</integer>
 		</dict>
 		<key>860C2D5F-C032-49DF-812C-2973A0E3F3E8</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>6</integer>
+			<integer>9</integer>
 			<key>xpos</key>
-			<integer>1940</integer>
+			<integer>2040</integer>
 			<key>ypos</key>
 			<integer>2205</integer>
 		</dict>
@@ -10161,6 +10114,15 @@ takes file path (with or without heading) and opens it correctly</string>
 			<key>ypos</key>
 			<integer>4555</integer>
 		</dict>
+		<key>88723AC0-4348-4B23-AFD7-FEFE6C532A94</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>xpos</key>
+			<integer>1765</integer>
+			<key>ypos</key>
+			<integer>2040</integer>
+		</dict>
 		<key>8960BAF4-D71A-4DC1-8382-E3864941AAB6</key>
 		<dict>
 			<key>colorindex</key>
@@ -10169,15 +10131,6 @@ takes file path (with or without heading) and opens it correctly</string>
 			<integer>205</integer>
 			<key>ypos</key>
 			<integer>8620</integer>
-		</dict>
-		<key>89B47E8A-C9EE-4792-80D7-CA0D46A6A2C9</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>6</integer>
-			<key>xpos</key>
-			<integer>2335</integer>
-			<key>ypos</key>
-			<integer>1025</integer>
 		</dict>
 		<key>89E2FCF0-5A14-4078-8D1F-C0FCAC339F63</key>
 		<dict>
@@ -10202,7 +10155,7 @@ takes file path (with or without heading) and opens it correctly</string>
 			<key>colorindex</key>
 			<integer>6</integer>
 			<key>xpos</key>
-			<integer>1790</integer>
+			<integer>1890</integer>
 			<key>ypos</key>
 			<integer>2345</integer>
 		</dict>
@@ -10213,7 +10166,7 @@ takes file path (with or without heading) and opens it correctly</string>
 			<key>xpos</key>
 			<integer>880</integer>
 			<key>ypos</key>
-			<integer>495</integer>
+			<integer>625</integer>
 		</dict>
 		<key>8C93D170-EDBF-4A3E-BD7D-2DFD23E97AE9</key>
 		<dict>
@@ -10272,9 +10225,9 @@ takes file path (with or without heading) and opens it correctly</string>
 		<key>92307BE0-68AE-451F-9850-FE01218229BF</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>6</integer>
+			<integer>9</integer>
 			<key>xpos</key>
-			<integer>1945</integer>
+			<integer>2045</integer>
 			<key>ypos</key>
 			<integer>1625</integer>
 		</dict>
@@ -10283,16 +10236,16 @@ takes file path (with or without heading) and opens it correctly</string>
 			<key>colorindex</key>
 			<integer>6</integer>
 			<key>xpos</key>
-			<integer>1985</integer>
+			<integer>2050</integer>
 			<key>ypos</key>
-			<integer>2530</integer>
+			<integer>2560</integer>
 		</dict>
 		<key>978E9BA4-99C1-4B74-A991-6E9345C7A20D</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>6</integer>
 			<key>xpos</key>
-			<integer>2225</integer>
+			<integer>2435</integer>
 			<key>ypos</key>
 			<integer>1765</integer>
 		</dict>
@@ -10332,9 +10285,9 @@ takes file path (with or without heading) and opens it correctly</string>
 			<key>colorindex</key>
 			<integer>6</integer>
 			<key>xpos</key>
-			<integer>1985</integer>
+			<integer>2050</integer>
 			<key>ypos</key>
-			<integer>3120</integer>
+			<integer>3150</integer>
 		</dict>
 		<key>9E3B9072-3C3B-4C45-A973-426BC0F7E30F</key>
 		<dict>
@@ -10356,7 +10309,7 @@ takes file path (with or without heading) and opens it correctly</string>
 			<key>xpos</key>
 			<integer>20</integer>
 			<key>ypos</key>
-			<integer>755</integer>
+			<integer>850</integer>
 		</dict>
 		<key>9FF8D4E6-7A5E-4736-9976-17C280BC574A</key>
 		<dict>
@@ -10379,11 +10332,11 @@ takes file path (with or without heading) and opens it correctly</string>
 		<key>A3384012-6E44-47C2-9CB5-8067AEE35F34</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>6</integer>
+			<integer>9</integer>
 			<key>note</key>
 			<string>open new pane</string>
 			<key>xpos</key>
-			<integer>1485</integer>
+			<integer>1585</integer>
 			<key>ypos</key>
 			<integer>1765</integer>
 		</dict>
@@ -10403,7 +10356,16 @@ takes file path (with or without heading) and opens it correctly</string>
 			<key>xpos</key>
 			<integer>325</integer>
 			<key>ypos</key>
-			<integer>5865</integer>
+			<integer>5870</integer>
+		</dict>
+		<key>A5BA80AA-D2FF-43BC-AE70-4C34D0BB4E20</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>xpos</key>
+			<integer>1540</integer>
+			<key>ypos</key>
+			<integer>1965</integer>
 		</dict>
 		<key>A6F41657-5917-4CD1-A28F-7C4B2519781B</key>
 		<dict>
@@ -10439,9 +10401,9 @@ takes file path (with or without heading) and opens it correctly</string>
 			<key>colorindex</key>
 			<integer>6</integer>
 			<key>xpos</key>
-			<integer>1985</integer>
+			<integer>2050</integer>
 			<key>ypos</key>
-			<integer>3000</integer>
+			<integer>3030</integer>
 		</dict>
 		<key>ACE1AA07-094D-46BB-8462-D4CDFF0E337B</key>
 		<dict>
@@ -10468,7 +10430,7 @@ takes file path (with or without heading) and opens it correctly</string>
 			<key>xpos</key>
 			<integer>430</integer>
 			<key>ypos</key>
-			<integer>360</integer>
+			<integer>490</integer>
 		</dict>
 		<key>AF194963-CC28-4A3D-8EFA-616B21079843</key>
 		<dict>
@@ -10479,7 +10441,7 @@ takes file path (with or without heading) and opens it correctly</string>
 			<key>xpos</key>
 			<integer>500</integer>
 			<key>ypos</key>
-			<integer>755</integer>
+			<integer>850</integer>
 		</dict>
 		<key>B0B1C61B-93A6-492E-BD07-2F06FB73F410</key>
 		<dict>
@@ -10488,7 +10450,7 @@ takes file path (with or without heading) and opens it correctly</string>
 			<key>note</key>
 			<string>OneUpdater (automatic update function)</string>
 			<key>xpos</key>
-			<integer>2335</integer>
+			<integer>2215</integer>
 			<key>ypos</key>
 			<integer>1220</integer>
 		</dict>
@@ -10517,9 +10479,9 @@ takes file path (with or without heading) and opens it correctly</string>
 		<key>B61CBDAF-02B6-4FC2-B752-103E23E72E56</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>6</integer>
+			<integer>9</integer>
 			<key>xpos</key>
-			<integer>1765</integer>
+			<integer>1955</integer>
 			<key>ypos</key>
 			<integer>1795</integer>
 		</dict>
@@ -10550,9 +10512,9 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>colorindex</key>
 			<integer>6</integer>
 			<key>xpos</key>
-			<integer>2165</integer>
+			<integer>2230</integer>
 			<key>ypos</key>
-			<integer>2880</integer>
+			<integer>2910</integer>
 		</dict>
 		<key>BA61A0A6-C130-430F-9729-6F6132F22C08</key>
 		<dict>
@@ -10565,7 +10527,7 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<key>xpos</key>
 			<integer>20</integer>
 			<key>ypos</key>
-			<integer>215</integer>
+			<integer>345</integer>
 		</dict>
 		<key>BB114F09-A7D5-48D6-89F1-F54F698E20B1</key>
 		<dict>
@@ -10615,22 +10577,22 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 		<key>BF450A0C-67CF-4B13-8B0D-D94298462DE7</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>6</integer>
+			<integer>9</integer>
 			<key>note</key>
 			<string>remove \n</string>
 			<key>xpos</key>
-			<integer>1630</integer>
+			<integer>1730</integer>
 			<key>ypos</key>
 			<integer>1655</integer>
 		</dict>
 		<key>BFF5266E-FA2A-455F-9C52-3A0480BAFF2F</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>6</integer>
+			<integer>9</integer>
 			<key>note</key>
 			<string>Copy Markdown Link</string>
 			<key>xpos</key>
-			<integer>1485</integer>
+			<integer>1585</integer>
 			<key>ypos</key>
 			<integer>1625</integer>
 		</dict>
@@ -10656,7 +10618,7 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<key>xpos</key>
 			<integer>20</integer>
 			<key>ypos</key>
-			<integer>435</integer>
+			<integer>565</integer>
 		</dict>
 		<key>C5E65176-674E-4553-A255-37A40EB99342</key>
 		<dict>
@@ -10802,9 +10764,9 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<key>note</key>
 			<string>browse links of a documents</string>
 			<key>xpos</key>
-			<integer>1515</integer>
+			<integer>1580</integer>
 			<key>ypos</key>
-			<integer>2810</integer>
+			<integer>2840</integer>
 		</dict>
 		<key>D508118D-D946-434E-93B0-471D6FE85B18</key>
 		<dict>
@@ -10826,15 +10788,6 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<key>ypos</key>
 			<integer>1780</integer>
 		</dict>
-		<key>D8F01D44-B570-4956-B4AE-B3AE05B3D0EE</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>6</integer>
-			<key>xpos</key>
-			<integer>480</integer>
-			<key>ypos</key>
-			<integer>3645</integer>
-		</dict>
 		<key>D90C57E0-D5DB-46B0-BE60-68A3838E35FC</key>
 		<dict>
 			<key>colorindex</key>
@@ -10852,6 +10805,15 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<integer>185</integer>
 			<key>ypos</key>
 			<integer>7300</integer>
+		</dict>
+		<key>DBA6DBFB-3701-4BFC-B72C-406BF62DF384</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>xpos</key>
+			<integer>1730</integer>
+			<key>ypos</key>
+			<integer>1905</integer>
 		</dict>
 		<key>DD45D94E-9E2C-4477-9E37-66338FDCF4D0</key>
 		<dict>
@@ -10965,9 +10927,9 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 		<key>E47A4539-F74D-44B4-BE6C-C7E7000D292E</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>6</integer>
+			<integer>9</integer>
 			<key>xpos</key>
-			<integer>1545</integer>
+			<integer>1645</integer>
 			<key>ypos</key>
 			<integer>2320</integer>
 		</dict>
@@ -11022,15 +10984,6 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<key>ypos</key>
 			<integer>5870</integer>
 		</dict>
-		<key>E6FA0443-53FA-4967-A3EE-9AE429FFEE5F</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>6</integer>
-			<key>xpos</key>
-			<integer>2270</integer>
-			<key>ypos</key>
-			<integer>1055</integer>
-		</dict>
 		<key>E7ADA43C-52CF-46FD-AC9E-79616731DDA9</key>
 		<dict>
 			<key>colorindex</key>
@@ -11051,15 +11004,6 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<key>ypos</key>
 			<integer>1230</integer>
 		</dict>
-		<key>E7DD15AC-087E-4C99-9380-9F7A848FD952</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>6</integer>
-			<key>xpos</key>
-			<integer>1985</integer>
-			<key>ypos</key>
-			<integer>3235</integer>
-		</dict>
 		<key>E844180D-E691-40D1-9EB1-6A06F69C73B9</key>
 		<dict>
 			<key>colorindex</key>
@@ -11074,9 +11018,9 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<key>colorindex</key>
 			<integer>6</integer>
 			<key>xpos</key>
-			<integer>1985</integer>
+			<integer>2050</integer>
 			<key>ypos</key>
-			<integer>2415</integer>
+			<integer>2445</integer>
 		</dict>
 		<key>EBDFE697-8466-45B6-9B43-EB7DC83BB404</key>
 		<dict>
@@ -11114,7 +11058,7 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<key>note</key>
 			<string>auto_update</string>
 			<key>xpos</key>
-			<integer>2165</integer>
+			<integer>2105</integer>
 			<key>ypos</key>
 			<integer>1250</integer>
 		</dict>
@@ -11123,7 +11067,7 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<key>colorindex</key>
 			<integer>6</integer>
 			<key>xpos</key>
-			<integer>2105</integer>
+			<integer>2205</integer>
 			<key>ypos</key>
 			<integer>1625</integer>
 		</dict>
@@ -11172,7 +11116,7 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<key>xpos</key>
 			<integer>190</integer>
 			<key>ypos</key>
-			<integer>325</integer>
+			<integer>455</integer>
 		</dict>
 		<key>F47F7DE8-D29F-4CDE-85B4-84B7C8DB6AA6</key>
 		<dict>
@@ -11181,7 +11125,7 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<key>xpos</key>
 			<integer>600</integer>
 			<key>ypos</key>
-			<integer>325</integer>
+			<integer>455</integer>
 		</dict>
 		<key>F6614DF6-BDC8-4C8D-93E7-855B687D5220</key>
 		<dict>
@@ -11199,7 +11143,7 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<key>note</key>
 			<string>remove "ObRunning"</string>
 			<key>xpos</key>
-			<integer>1995</integer>
+			<integer>1935</integer>
 			<key>ypos</key>
 			<integer>1230</integer>
 		</dict>
@@ -11219,7 +11163,7 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>780</integer>
+			<integer>755</integer>
 			<key>ypos</key>
 			<integer>3775</integer>
 		</dict>
@@ -11238,6 +11182,8 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 		<string>ttf</string>
 		<key>h_lvl_ignore</key>
 		<string>h1 h4 h5 h6</string>
+		<key>input_append</key>
+		<string>clipboard</string>
 		<key>max_number_of_bkps</key>
 		<string>25</string>
 		<key>merge_nested_tags</key>
@@ -11263,9 +11209,9 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 	<array>
 		<string>backup_destination</string>
 		<string>daily_note_path</string>
+		<string>workspace_to_spellcheck</string>
 		<string>use_quickadd</string>
 		<string>fontformat</string>
-		<string>workspace_to_spellcheck</string>
 		<string>h_lvl_ignore</string>
 		<string>template_note_path</string>
 		<string>vault_path</string>

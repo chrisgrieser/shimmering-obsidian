@@ -36,6 +36,7 @@ You access the main workflow configuration by clicking the *`[x]`* at the top ri
 - `h_Ivl_ignore`: Heading levels that should be ignored in the Quick Switcher (`o` command). `h1 h6` will ignore h1 and h6, so only h2, h3, h4, and h5 show up in the Quick Switcher. `h4 h5 h6` will only show h1, h2 and h3 in the Quick Switcher. Enter `h1 h2 h3 h4 h5 h6` to ignore all headings in the Quick Switcher.
 - `merge_nested_tags`: when using the `ot` search, merge all [nested tags](https://help.obsidian.md/Plugins/Tag+pane#Nested+tags) to their parent tag, e.g., `#inbox/to-read` and `#inbox/later` would both be subsumed under `#inbox`. Accepts `true` or `false`.
 - `open_after_appending`: When appending to a note (`fn + return`), the note will automatically be opened afterwards. Accepts `true` or `false`.
+- `input_append`: What type of content is used when appending to a note (`fn + return`). Accepts `clipboard` or `manual` (= prompting you to enter something).
 
 ### New Note Creation
 - `template_note_path`: Template to use when creating new notes with the `on` command or when browsing a folder via [the Alfred-based Quick Switcher](Alfred-based%20Quick%20Switcher.md).

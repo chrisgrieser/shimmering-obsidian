@@ -55,8 +55,10 @@ mv -v info.plist ~/.trash
 mv -v info-original.plist info.plist
 echo ""
 
+# --------------------
 # Update Changelog
-git log --pretty=format:"- %ad%x09%s" --date=short | grep -Ev "typos?$" > ./Changelog.md
+# --------------------
+git log --pretty=format:"- %ad%x09%s" --date=short | egrep "\t\+|\trelease \d" > ./Changelog.md
 
 # --------------------
 # git push
