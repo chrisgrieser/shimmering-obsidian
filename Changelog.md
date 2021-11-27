@@ -1,3 +1,4 @@
+- 2021-11-27	+ appending to a note via `fn + return` now accepts either clipboard or manual content. Use workflow configuration `input_append`.
 - 2021-11-23	release 2.4.2
 - 2021-11-23	release 2.4.1
 - 2021-11-23	release 2.4
