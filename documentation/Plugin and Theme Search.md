@@ -1,9 +1,18 @@
 [⏪ Go back to the Feature Overview](../README.md#feature-overview)
 
 # Plugin and Theme Search
-**`op`: Combined Search of community `p`lugins and community themes.**
+
+## Table of Contents
+<!-- MarkdownTOC -->
+
+- [Plugins](#plugins)
+- [Themes](#themes)
+- [Searching GitHub Issues](#searching-github-issues)
+
+<!-- /MarkdownTOC -->
 
 ## Plugins
+**`op`: Combined Search of community `p`lugins and community themes.**
 - Press `↵` to open the plugin in Obsidian's Community Plugin Browser.
 	- Use `⌘ + ↵` to open the plugin's GitHub repository instead.
 	- Press `⌥ + ↵` to copy the GitHub repository URL to your clipboard. When the [workflow configuration](Workflow%20Configuration.md#Miscellaneous) `discord_ready_links` is set to `true`, the copied link will be surrounded with `<` `>` for more convenient pasting in the Discord Desktop app (disables auto-preview).
@@ -17,6 +26,7 @@
 - To open local plugin folders and access settings of beta plugins, use the [Settings Search](Settings%20Search.md).
 
 ## Themes
+**`op`: Combined Search of community `p`lugins and community themes.**
 - Press `↵`[^3] to open the theme's GitHub Repository. (There are no separate theme pages in Obsidian Theme Browser that can be opened.)
 	- Press `⌥ + ↵` to copy the GitHub repository URL to your clipboard. When the [workflow configuration](Workflow%20Configuration.md#Miscellaneous) `discord_ready_links` is set to `true`, the copied link will be surrounded with `<` `>` for more convenient pasting in the Discord Desktop app (disables auto-preview).
 	- `⇧ + ↵` to display & search the GitHub issues. See [the section below](#-Searching-GitHub-Issues) for more information.
@@ -29,7 +39,7 @@
 <img src="https://user-images.githubusercontent.com/73286100/131027623-5e8b3667-d00d-47dc-ba49-6938686e2aca.gif" alt="plugin search" width=60%>
 
 ## Searching GitHub Issues
-**When pressing `⇧ + ↵` on a plugin or theme, a list of its GitHub is displayed.**
+**Triggered by pressing `⇧ + ↵` on a plugin or theme. Will display a list of its GitHub issues.**
 - The list will display the open/closed status, author, and number of comments. The list of issues can be searched like any Alfred Search.
 - You can also choose to create a new issue, pre-populated as Feature Request or Bug Report. 
 - Use `⌥ + ↵` on an issue to copy the issue URL to the clipboard.

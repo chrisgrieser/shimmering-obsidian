@@ -15,6 +15,7 @@ The Alfred-based Quick Switcher is basically an enhanced version of [Obsidian's 
 - [Search Notes via their Tags](#search-notes-via-their-tags)
 - [Search Starred Files](#search-starred-files)
 - [Search Recent Files](#search-recent-files)
+- [Recommended Alfred Setting](#recommended-alfred-setting)
 
 <!-- /MarkdownTOC -->
 
@@ -91,3 +92,8 @@ Displayed alongside the other search results are all headings in your vault. Sel
 - Up to the 10 most recent files are displayed.
 
 [^1]: In case the previewing of markdown notes via `⇧` or `⌘ + Y` does not work properly, you have to allow _qlmarkdown_ to be executed before you can preview markdown notes via `⇧` or `⌘ + Y` (This is due to Big Sur's high security measures). Follow the [instructions here](https://github.com/toland/qlmarkdown/issues/98#issuecomment-607733093) to do that.
+
+## Recommended Alfred Setting
+- To avoid accidentally triggering the Quick Look feature, I suggest you turn off activating Quick Look via shift and use `cmd + Y` instead. You can do so with in the Alfred Settings under `Features → Previews`:
+
+<img src="https://i.imgur.com/hDut8wK.png" alt="" width=60%>

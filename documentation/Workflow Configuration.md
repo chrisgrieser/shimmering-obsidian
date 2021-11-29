@@ -9,13 +9,12 @@
 - [Alfred Environment Variables](#alfred-environment-variables)
 	- [Alfred-based Quick Switcher](#alfred-based-quick-switcher)
 	- [New Note Creation](#new-note-creation)
-	- [Plugin and Theme Search](#plugin-and-theme-search)
 	- [Screenshots Features](#screenshots-features)
+	- [Plugin and Theme Search](#plugin-and-theme-search)
 	- [Backups](#backups)
 	- [Miscellaneous](#miscellaneous)
 - [Setting up Hotkeys](#setting-up-hotkeys)
-- [Recommended Settings](#recommended-settings)
-- [Tips for Users familiar with Alfred](#tips-for-users-familiar-with-alfred)
+- [For Users familiar with Alfred](#for-users-familiar-with-alfred)
 - [Default Terminal](#default-terminal)
 
 <!-- /MarkdownTOC -->
@@ -40,15 +39,15 @@ You access the main workflow configuration by clicking the *`[x]`* at the top ri
 - `template_note_path`: Template to use when creating new notes with the `on` command or when browsing a folder via [the Alfred-based Quick Switcher](Alfred-based%20Quick%20Switcher.md).
 - `use_quickadd`: Instead of creating a new note based on a template (with the keyword `on`), will trigger the [QuickAdd Plugin](https://github.com/chhoumann/quickadd). Accepted values are `true` and `false`.
 
-### Plugin and Theme Search
-- `thousand_seperator`: The thousand separator to use when download numbers are displayed, e.g., `.` or `,`.
-- `download_folder_path`: Path where downloads from the `op` search should be placed. (cloned repositories for plugins or the main CSS-file for themes.)
-
 ### Screenshots Features
 - `ocr_languages`: set language codes of Tesseract, e.g., `eng+deu` for English and German. You can find out the code for your language(s) in [this list](https://tesseract-ocr.github.io/tessdoc/Data-Files-in-different-versions.html).
 - `ocr_prefix`: Set the prefix for OCR Screenshots. Does accept dynamic content like the current date or time when you use [Alfred's Placeholder Syntax](https://www.alfredapp.com/help/workflows/advanced/placeholders/#date-time). Note that while not easy to see, `ocr_prefix` can have multi-line values.
 - `open_after_screenshot`: When doing an OCR screenshot or an image screenshot, will open the note afterwards. Accepts `true` or `false`.
 - `screenshot_path`: *Absolute* path to the folder where the screenshots should be saved to. Must be a folder in your vault to be embedded correctly. When empty, will save them the images to `{vault-path}/screenshots/`.
+
+### Plugin and Theme Search
+- `thousand_seperator`: The thousand separator to use when download numbers are displayed, e.g., `.` or `,`.
+- `download_folder_path`: Path where downloads from the `op` search should be placed. (cloned repositories for plugins or the main CSS-file for themes.)
 
 ### Backups
 - `backup_destination`: Folder where the backups done by the `obackup` command should be saved.
@@ -67,12 +66,7 @@ At the top left of the workflow, there are some sky-blue fields. You need to dou
 
 <img src="https://i.imgur.com/wlpht7f.png" alt="Setting Hotkeys" width=15% height=15%>
 
-## Recommended Settings
-- To avoid accidentally triggering the Quick Look feature, I suggest you turn off activating Quick Look via shift and use `cmd + Y` instead. You can do so with in the Alfred Settings under `Features → Previews`:
-
-<img src="https://i.imgur.com/hDut8wK.png" alt="" width=60%>
-
-## Tips for Users familiar with Alfred
+## For Users familiar with Alfred
 You can change any keyword mentioned, like with any other Alfred workflow. All keyword triggers are located to the very left of this workflow.
 
 ## Default Terminal
