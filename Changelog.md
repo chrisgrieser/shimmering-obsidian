@@ -1,3 +1,5 @@
+- 2021-11-29	+ New Feature: Image screenshots into the vault (issue #11)
+- 2021-11-29	release 2.6.3
 - 2021-11-29	release 2.6.2
 - 2021-11-29	release 2.6.1
 - 2021-11-29	+ `discord_ready_links` now also applies to issue search and documentation search
