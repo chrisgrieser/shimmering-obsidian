@@ -1,3 +1,4 @@
+- 2021-11-29	release 2.6.2
 - 2021-11-29	release 2.6.1
 - 2021-11-29	+ `discord_ready_links` now also applies to issue search and documentation search
 - 2021-11-29	release 2.6
