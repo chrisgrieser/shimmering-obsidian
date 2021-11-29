@@ -6,7 +6,7 @@
 ## Plugins
 - Press `↵` to open the plugin in Obsidian's Community Plugin Browser.
 	- Use `⌘ + ↵` to open the plugin's GitHub repository instead.
-	- Press `⌥ + ↵` to copy the GitHub repository URL to your clipboard.
+	- Press `⌥ + ↵` to copy the GitHub repository URL to your clipboard. When the [workflow configuration](Workflow%20Configuration.md#Plugin-and-Theme-Search) `discord_ready_links` is set to `true`, the copied link will be surrounded with `<` `>` for more convenient pasting in the Discord Desktop app (disables auto-preview)
 	- `⇧ + ↵` to display & search the GitHub issues. See [the section below](#-Searching-GitHub-Issues) for more information.
 	- 🆕 *Holding* `ctrl` will display download numbers, author, and plugin ID. This is useful, when the plugin description is so long, that you cannot see this anymore.[^2]
 	- _⚙️ For developers:_ Use `fn + ↵` to clone the GitHub Repository into the folder specified in the [workflow configuration](Workflow%20Configuration.md#Plugin-and-Theme-Search) (`download_folder_path`) via `git clone` (http).

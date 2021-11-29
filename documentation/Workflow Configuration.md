@@ -44,6 +44,7 @@ You access the main workflow configuration by clicking the *`[x]`* at the top ri
 ### Plugin and Theme Search
 - `thousand_seperator`: The thousand separator to use when download numbers are displayed, e.g., `.` or `,`.
 - `download_folder_path`: Path where downloads from the `op` search should be placed. (cloned repositories for plugins or the main CSS-file for themes.)
+- 🆕 `discord_ready_links`: When set to `true`, links copied will be surrounded with `<` `>` for more convenient pasting in the Discord Desktop app (disables auto-preview).
 
 ### OCR Screenshots
 - `ocr_languages`: set language codes of Tesseract, e.g., `eng+deu` for English and German. You can find out the code for your language(s) in [this list](https://tesseract-ocr.github.io/tessdoc/Data-Files-in-different-versions.html).

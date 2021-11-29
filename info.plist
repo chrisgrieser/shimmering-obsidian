@@ -9538,7 +9538,7 @@ Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (r
 			<key>xpos</key>
 			<integer>670</integer>
 			<key>ypos</key>
-			<integer>6065</integer>
+			<integer>6060</integer>
 		</dict>
 		<key>4DF84BCE-770F-422E-A73E-D30C945BA815</key>
 		<dict>
@@ -11176,6 +11176,8 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 		<string>~/Library/Mobile Documents/com~apple~CloudDocs/Dokumente/IT Backups/Obsidian Backups</string>
 		<key>daily_note_path</key>
 		<string></string>
+		<key>discord_ready_links</key>
+		<string>true</string>
 		<key>download_folder_path</key>
 		<string>~/Downloads</string>
 		<key>fontformat</key>
@@ -11209,6 +11211,7 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 	<array>
 		<string>backup_destination</string>
 		<string>daily_note_path</string>
+		<string>discord_ready_links</string>
 		<string>use_quickadd</string>
 		<string>fontformat</string>
 		<string>workspace_to_spellcheck</string>
