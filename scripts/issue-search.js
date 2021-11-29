@@ -76,7 +76,7 @@ if (outOfDate) {
 } else {
 	const newIssueURL = "https://github.com/" +	repo + "/issues/new?title=";
 	jsonArray.push({
-		"title": "🐛 New Bug Report",
+		"title": "🪲 New Bug Report",
 		"arg": newIssueURL + encodeURIComponent("[BUG]: "),
 	});
 	jsonArray.push({
