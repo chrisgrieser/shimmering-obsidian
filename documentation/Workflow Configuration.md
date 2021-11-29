@@ -10,7 +10,7 @@
 	- [Alfred-based Quick Switcher](#alfred-based-quick-switcher)
 	- [New Note Creation](#new-note-creation)
 	- [Plugin and Theme Search](#plugin-and-theme-search)
-	- [OCR Screenshots](#ocr-screenshots)
+	- [Screenshots Features](#screenshots-features)
 	- [Backups](#backups)
 	- [Miscellaneous](#miscellaneous)
 - [Setting up Hotkeys](#setting-up-hotkeys)
@@ -27,13 +27,12 @@
 <img src="https://i.imgur.com/7YnQJ7K.png" alt="Metadata Extractor Settings" width=70%>
 
 ## Alfred Environment Variables
-
 You access the main workflow configuration by clicking the *`[x]`* at the top right of the workflow.
 <img src="https://i.imgur.com/swm7AaC.png" alt="Settings of this Workflow" width=40% height=40%>
 
 ### Alfred-based Quick Switcher
 - `h_Ivl_ignore`: Heading levels that should be ignored in the Quick Switcher (`o` command). `h1 h6` will ignore h1 and h6, so only h2, h3, h4, and h5 show up in the Quick Switcher. `h4 h5 h6` will only show h1, h2 and h3 in the Quick Switcher. Enter `h1 h2 h3 h4 h5 h6` to ignore all headings in the Quick Switcher.
-- `merge_nested_tags`: when using the `ot` search, merge all [nested tags](https://help.obsidian.md/Plugins/Tag+pane#Nested+tags) to their parent tag, e.g., `#inbox/to-read` and `#inbox/later` would both be subsumed under `#inbox`. Accepts `true` or `false`.
+- `merge_nested_tags`: When using the `ot` search, merge all [nested tags](https://help.obsidian.md/Plugins/Tag+pane#Nested+tags) to their parent tag, e.g., `#inbox/to-read` and `#inbox/later` would both be subsumed under `#inbox`. Accepts `true` or `false`.
 - `open_after_appending`: When appending to a note (`fn + return`), the note will automatically be opened afterwards. Accepts `true` or `false`.
 - 🆕 `input_append`: What type of content is used when appending to a note (`fn + return`). Accepts `clipboard` or `manual` (= prompting you to enter something).
 
@@ -45,18 +44,20 @@ You access the main workflow configuration by clicking the *`[x]`* at the top ri
 - `thousand_seperator`: The thousand separator to use when download numbers are displayed, e.g., `.` or `,`.
 - `download_folder_path`: Path where downloads from the `op` search should be placed. (cloned repositories for plugins or the main CSS-file for themes.)
 
-### OCR Screenshots
+### Screenshots Features
 - `ocr_languages`: set language codes of Tesseract, e.g., `eng+deu` for English and German. You can find out the code for your language(s) in [this list](https://tesseract-ocr.github.io/tessdoc/Data-Files-in-different-versions.html).
 - `ocr_prefix`: Set the prefix for OCR Screenshots. Does accept dynamic content like the current date or time when you use [Alfred's Placeholder Syntax](https://www.alfredapp.com/help/workflows/advanced/placeholders/#date-time). Note that while not easy to see, `ocr_prefix` can have multi-line values.
+- `open_after_screenshot`: When doing an OCR screenshot or an image screenshot, will open the note afterwards. Accepts `true` or `false`.
+- `screenshot_path`: *Absolute* path to the folder where the screenshots should be saved to. Must be a folder in your vault to be embedded correctly. When empty, will save them the images to `{vault-path}/screenshots/`.
 
 ### Backups
 - `backup_destination`: Folder where the backups done by the `obackup` command should be saved.
-- `max_number_of_bkps`: maximum number of backups that should be stored at the backup destination folder. When the number is reached, every new backup cause the oldest backup to be deleted. (Decrease this number, when your backup folder becomes too big.)
+- `max_number_of_bkps`: Maximum number of backups that should be stored at the backup destination folder. When the number is reached, every new backup cause the oldest backup to be deleted. (Decrease this number, when your backup folder becomes too big.)
 
 ### Miscellaneous
 - 🆕 `discord_ready_links`: When set to `true`, links copied in the Plugin, Theme, and Documentation Searches (via `⌥ + ↵`) will be surrounded with `<` `>` for more convenient pasting in the Discord Desktop app (disables auto-preview).
 - `daily_note_path`: *absolute* path to the folder where your daily notes are saved. See [Daily Notes](Note-related%20Features.md#Daily%20Notes).
-- `fontformat`: format of the base64-conversion of font files, e.g., `woff2` or `ttf`.
+- `fontformat`: Format of the base64-conversion of font files, e.g., `woff2` or `ttf`.
 - `workspace_to_spellcheck`: Name of the Workspace where spellcheck should be turned on. Leave empty to not toggle any spellcheck setting with workspace changes. See [Workspace Switcher](Workspace%20Switcher.md).
 - `auto_update`: Periodically check for updates *of this workflow* and update automatically. Accepts `true` or `false`.
 - `vault_path`: The *absolute* path to your obsidian vault, e.g., `/Users/pseudometa/MyVault` or `~/Documents/obsidianVault`. (💡 You do not need to set it manually though, the [`osetup` command](#metadata-extractor-configuration) will set that value for you already.)
