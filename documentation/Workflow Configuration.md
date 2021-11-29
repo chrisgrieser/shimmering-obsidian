@@ -44,7 +44,6 @@ You access the main workflow configuration by clicking the *`[x]`* at the top ri
 ### Plugin and Theme Search
 - `thousand_seperator`: The thousand separator to use when download numbers are displayed, e.g., `.` or `,`.
 - `download_folder_path`: Path where downloads from the `op` search should be placed. (cloned repositories for plugins or the main CSS-file for themes.)
-- 🆕 `discord_ready_links`: When set to `true`, links copied will be surrounded with `<` `>` for more convenient pasting in the Discord Desktop app (disables auto-preview).
 
 ### OCR Screenshots
 - `ocr_languages`: set language codes of Tesseract, e.g., `eng+deu` for English and German. You can find out the code for your language(s) in [this list](https://tesseract-ocr.github.io/tessdoc/Data-Files-in-different-versions.html).
@@ -55,6 +54,7 @@ You access the main workflow configuration by clicking the *`[x]`* at the top ri
 - `max_number_of_bkps`: maximum number of backups that should be stored at the backup destination folder. When the number is reached, every new backup cause the oldest backup to be deleted. (Decrease this number, when your backup folder becomes too big.)
 
 ### Miscellaneous
+- 🆕 `discord_ready_links`: When set to `true`, links copied in the Plugin, Theme, and Documentation Searches (via `⌥ + ↵`) will be surrounded with `<` `>` for more convenient pasting in the Discord Desktop app (disables auto-preview).
 - `daily_note_path`: *absolute* path to the folder where your daily notes are saved. See [Daily Notes](Note-related%20Features.md#Daily%20Notes).
 - `fontformat`: format of the base64-conversion of font files, e.g., `woff2` or `ttf`.
 - `workspace_to_spellcheck`: Name of the Workspace where spellcheck should be turned on. Leave empty to not toggle any spellcheck setting with workspace changes. See [Workspace Switcher](Workspace%20Switcher.md).

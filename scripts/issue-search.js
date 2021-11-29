@@ -1,96 +1,97 @@
 #!/usr/bin/env osascript -l JavaScript
 
 ObjC.import("stdlib");
-ObjC.import('Foundation');
+ObjC.import("Foundation");
 app = Application.currentApplication();
 app.includeStandardAdditions = true;
 function readFile (path, encoding) {
-    if (!encoding) encoding = $.NSUTF8StringEncoding;
-    const fm = $.NSFileManager.defaultManager;
-    const data = fm.contentsAtPath(path);
-    const str = $.NSString.alloc.initWithDataEncoding(data, encoding);
-    return ObjC.unwrap(str);
+	if (!encoding) encoding = $.NSUTF8StringEncoding;
+	const fm = $.NSFileManager.defaultManager;
+	const data = fm.contentsAtPath(path);
+	const str = $.NSString.alloc.initWithDataEncoding(data, encoding);
+	return ObjC.unwrap(str);
 }
 
 function alfredMatcher (str){
-	return str.replace (/[-\(\)_\.]/g," ") + " " + str;
+	return str.replace (/[-()_.]/g, " ") + " " + str;
 }
 
-let jsonArray = [];
+const jsonArray = [];
 
 // get plugin issues
-const repo = $.getenv('repo');
-const issueAPI_URL =
+const repo = $.getenv("repo");
+const discordReadyLinks = $.getenv("discord_ready_links");
+
+const issueAPIURL =
 	"https://api.github.com/repos/" + repo
 	+ "/issues?state=all"
-	+ "&per_page=100"; //GitHub API only returns 100 results https://stackoverflow.com/questions/30656761/github-search-api-only-return-30-results
+	+ "&per_page=100"; // GitHub API only returns 100 results https://stackoverflow.com/questions/30656761/github-search-api-only-return-30-results
 
-const issue_JSON =
-	JSON.parse(app.doShellScript('curl -s "' + issueAPI_URL + '"'))
-	.sort(function (x,y) { //sort open issues on top
-		let a = x.state;
-		let b = y.state;
-		return a == b ? 0 : a < b ? 1 : -1;
-	});
+const issueJSON =
+	JSON.parse(app.doShellScript("curl -s \"" + issueAPIURL + "\""))
+		.sort(function (x, y) { // sort open issues on top
+			const a = x.state;
+			const b = y.state;
+			return a === b ? 0 : a < b ? 1 : -1; // eslint-disable-line no-nested-ternary
+		});
 
 // Get plugin version
 let outOfDate = false;
 let localVersion = "";
 let latestVersion = "";
 
-if ($.getenv('plugin_id')){
-	let homepath = app.pathTo('home folder');
-	let vault_path = $.getenv("vault_path").replace(/^~/, homepath);
-	let manifestJSON =
-		vault_path +
+if ($.getenv("plugin_id")){
+	const vaultPath = $.getenv("vault_path").replace(/^~/, app.pathTo("home folder"));
+	const manifestJSON =
+		vaultPath +
 		"/.obsidian/plugins/" +
-		$.getenv('plugin_id') +
+		$.getenv("plugin_id") +
 		"/manifest.json";
-	if (readFile(manifestJSON) != "") {
+	if (readFile(manifestJSON) !== "") {
 		localVersion = JSON.parse(readFile(manifestJSON)).version;
 		latestVersion = JSON.parse(
-		    app.doShellScript(
+			app.doShellScript(
 				"curl -sL https://github.com/" + repo +
 				"/releases/latest/download/manifest.json")
-			).version;
-		if (localVersion != latestVersion) outOfDate = true;
+		).version;
+		if (localVersion !== latestVersion) outOfDate = true;
 	}
 }
 
 
 // out of date info OR option to create issue
 if (outOfDate) {
-	let title =
+	const title =
 		"⚠️ New Version " +
-		"for '" + $.getenv('plugin_name') + "' available";
-	let subtitle =
+		"for '" + $.getenv("plugin_name") + "' available";
+	const subtitle =
 		"New: v." + latestVersion + " ⬩ " +
 		"Installed: v." + localVersion + " ⬩ " +
 		"Press [return] to open Obsidian Settings for updating.";
 	jsonArray.push({
-		'title': title,
-		'subtitle': subtitle,
-		'arg': "obsidian://advanced-uri?commandid=hotkey-helper%253Aopen-plugins",
+		"title": title,
+		"subtitle": subtitle,
+		"arg": "obsidian://advanced-uri?commandid=hotkey-helper%253Aopen-plugins",
 	});
 } else {
 	const newIssueURL = "https://github.com/" +	repo + "/issues/new?title=";
 	jsonArray.push({
-		'title': "🐛 New Bug Report",
-		'arg': newIssueURL + encodeURIComponent("[BUG]: "),
+		"title": "🐛 New Bug Report",
+		"arg": newIssueURL + encodeURIComponent("[BUG]: "),
 	});
 	jsonArray.push({
-		'title': "🙏 New Feature Request",
-		'arg': newIssueURL + encodeURIComponent("Feature Request: "),
+		"title": "🙏 New Feature Request",
+		"arg": newIssueURL + encodeURIComponent("Feature Request: "),
 	});
 }
 
 // existing issues
-issue_JSON.forEach(issue => {
-	let title = issue.title;
-	let issue_creator = issue.user.login;
+issueJSON.forEach(issue => {
+	const title = issue.title;
+	const issueCreator = issue.user.login;
 
 	let state = "";
-	if (issue.state == "open") state += "🟢 ";
+	if (issue.state === "open") state += "🟢 ";
 	else state += "🟣 ";
 	if (title.toLowerCase().includes("request")) state += "🙏 ";
 	if (title.toLowerCase().includes("suggestion")) state += "💡 ";
@@ -98,13 +99,28 @@ issue_JSON.forEach(issue => {
 	if (title.toLowerCase().includes("warning")) state += "⚠️ ";
 	if (title.includes("?")) state += "❓ ";
 	let comments = "";
-	if (issue.comments != "0") comments = "   💬 " + issue.comments;
+	if (issue.comments !== "0") comments = "   💬 " + issue.comments;
+
+	let shareURL, isDiscordReady;
+	if (discordReadyLinks) {
+		shareURL = "<" + issue.html_url + ">";
+		isDiscordReady = " (discord ready)";
+	} else {
+		shareURL = issue.html_url;
+		isDiscordReady = "";
+	}
 
 	jsonArray.push({
-		'title': state + title,
-		'match': issue.state + " " + alfredMatcher (title) + " " + alfredMatcher (issue_creator),
-		'subtitle': "#" + issue.number + " by " + issue_creator	+ comments,
-		'arg': issue.html_url,
+		"title": state + title,
+		"match": issue.state + " " + alfredMatcher (title) + " " + alfredMatcher (issueCreator),
+		"subtitle": "#" + issue.number + " by " + issueCreator	+ comments,
+		"arg": issue.html_url,
+		"mods": {
+			"alt": {
+				"arg": shareURL,
+				"subtitle": "⌥: Copy GitHub Link" + isDiscordReady,
+			}
+		}
 	});
 });
 

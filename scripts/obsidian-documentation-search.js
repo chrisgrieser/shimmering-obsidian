@@ -2,105 +2,121 @@
 ObjC.import("stdlib");
 app = Application.currentApplication();
 app.includeStandardAdditions = true;
-let jsonArray = [];
-const community_docs_url = "https://publish.obsidian.md/hub/";
-const official_docs_url = "https://help.obsidian.md/";
-const raw_gh_URL = "https://raw.githubusercontent.com/obsidianmd/obsidian-docs/master/";
+const jsonArray = [];
+const communityDocsURL = "https://publish.obsidian.md/hub/";
+const officialDocsURL = "https://help.obsidian.md/";
+const rawGhURL = "https://raw.githubusercontent.com/obsidianmd/obsidian-docs/master/";
+const discordReadyLinks = $.getenv("discord_ready_links");
 
 
 // > COMMUNITY DOCS
 //-----------------------------------
-let community_docs = JSON.parse (app.doShellScript (
+let communityDocs = JSON.parse (app.doShellScript (
 	"curl -s 'https://api.github.com/repos/obsidian-community/obsidian-hub/git/trees/main?recursive=1'")).tree;
-community_docs = community_docs.filter ( item => 
-	item.path.slice(-3) == '.md'
+communityDocs = communityDocs.filter ( item =>
+	item.path.slice(-3) === ".md"
 );
 
-community_docs.forEach(item => {
-	let area = item.path.split("/").slice(1,-1).join("/");
-	let url = community_docs_url + item.path.replaceAll (" ", "+");
+communityDocs.forEach(item => {
+	const area = item.path.split("/").slice(1, -1).join("/");
+	const url = communityDocsURL + item.path.replaceAll (" ", "+");
 	let title = item.path.split("/").pop().slice(0, -3);
-	if (title.slice(0,4) == "T - ") title = title.slice (4);
-	let alfredMatcher = title.replaceAll("-"," ") + " " + title;
+	if (title.slice(0, 4) === "T - ") title = title.slice (4);
+	const alfredMatcher = title.replaceAll("-", " ") + " " + title;
+
+	let shareURL, isDiscordReady;
+	if (discordReadyLinks) {
+		shareURL = "<" + url + ">";
+		isDiscordReady = " (discord ready)";
+	} else {
+		shareURL = url;
+		isDiscordReady = "";
+	}
 
 	jsonArray.push({
-		'title': title,
-		'match': alfredMatcher,
-		'subtitle': area,
-		'arg': url,
-		'uid': url,
-		'icon': {'path' : 'icons/community-vault.png'},
+		"title": title,
+		"match": alfredMatcher,
+		"subtitle": area,
+		"icon": {"path" : "icons/community-vault.png"},
+		"uid": url,
+		"arg": url,
+		"mods": {
+			"alt": {
+				"arg": shareURL,
+				"subtitle": "⌥: Copy GitHub Link" + isDiscordReady,
+			}
+		}
 	});
 });
 
 
 // > OFFICIAL DOCS
 // --------------------------------
-let official_docs = JSON.parse (app.doShellScript (
+let officialDocs = JSON.parse (app.doShellScript (
 	"curl -s 'https://api.github.com/repos/obsidianmd/obsidian-docs/git/trees/master?recursive=1'")).tree;
-official_docs = official_docs.filter ( item => 
-	item.path.slice(-3) == '.md' && 
-	item.path.slice(0, 3) == 'en/' &&
-	item.path.slice(0, 9) != 'en/.trash'
+officialDocs = officialDocs.filter ( item =>
+	item.path.slice(-3) === ".md" &&
+	item.path.slice(0, 3) === "en/" &&
+	item.path.slice(0, 9) !== "en/.trash"
 );
 
 // get the headings
-var documentation_headers = [];
-official_docs.forEach(doc => {
-	let doc_url = raw_gh_URL + encodeURI(doc.path);
-	let doc_headers = app.doShellScript("curl -s '" + doc_url + "' | grep -E '^#' | cut -d ' ' -f 2-").split("\r");
+const documentationHeaders = [];
+officialDocs.forEach(doc => {
+	const docURL = rawGhURL + encodeURI(doc.path);
+	const docHeaders = app.doShellScript("curl -s '" + docURL + "' | grep -E '^#' | cut -d ' ' -f 2-").split("\r");
 
-	//add header to search hits
-	if (doc_headers[0] != ""){
-		doc_headers.forEach(header_name => {
-			documentation_headers.push (doc.path + "#" + header_name);
+	// add header to search hits
+	if (docHeaders[0] !== ""){
+		docHeaders.forEach(headerName => {
+			documentationHeaders.push (doc.path + "#" + headerName);
 		});
 	}
 });
 
-documentation_headers.forEach(header => {
-	let header_name = header.split("#")[1];
-	let area = header.split("#").slice(0,-1).join().slice(3,-3);
-	let alfredMatcher = header.replace (/[\/#`\-_]/g," ");
-	let url = official_docs_url + header.slice(3).replaceAll(" ", "+");
+documentationHeaders.forEach(header => {
+	const headerName = header.split("#")[1];
+	const area = header.split("#").slice(0, -1).join().slice(3, -3);
+	const alfredMatcher = header.replace (/[/#`\-_]/g, " ");
+	const url = officialDocsURL + header.slice(3).replaceAll(" ", "+");
 
 	jsonArray.push({
-		'title': header_name,
-		'subtitle': area,
-		'arg': url,
-		'uid': url,
-		'match': alfredMatcher,
+		"title": headerName,
+		"subtitle": area,
+		"arg": url,
+		"uid": url,
+		"match": alfredMatcher,
 	});
 });
 
 
-official_docs.forEach(item => {
-	let area = item.path.split("/").slice(1,-1).join("/");
-	let url = official_docs_url + item.path.slice(3, -3).replaceAll (" ", "+");
-	let title = item.path.split("/").pop().slice(0, -3);
-	let alfredMatcher = title.replaceAll("-"," ") + " " + title;
+officialDocs.forEach(item => {
+	const area = item.path.split("/").slice(1, -1).join("/");
+	const url = officialDocsURL + item.path.slice(3, -3).replaceAll (" ", "+");
+	const title = item.path.split("/").pop().slice(0, -3);
+	const alfredMatcher = title.replaceAll("-", " ") + " " + title;
 
 	jsonArray.push({
-		'title': title,
-		'match': alfredMatcher,
-		'subtitle': area,
-		'arg': url,
-		'uid': url,
+		"title": title,
+		"match": alfredMatcher,
+		"subtitle": area,
+		"arg": url,
+		"uid": url,
 	});
 });
 
 
-//index and start-here
+// index and start-here
 jsonArray.push({
-	'title': "Index",
-	'arg': "https://help.obsidian.md/Index",
-	'uid': "1",
+	"title": "Index",
+	"arg": "https://help.obsidian.md/Index",
+	"uid": "1",
 });
 
 jsonArray.push({
-	'title': "Start here",
-	'arg': "https://help.obsidian.md/Start+here",
-	'uid': "2",
+	"title": "Start here",
+	"arg": "https://help.obsidian.md/Start+here",
+	"uid": "2",
 });
 
 
