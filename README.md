@@ -8,13 +8,15 @@
 ## ⚠️ Breaking Changes
 When updating from version 1.x to version 2.x, there are some breaking changes for certain commands. Most importantly, this plugin now requires the [Metadata Extractor Plugin](https://github.com/kometenstaub/metadata-extractor) to run most of its features.
 
-Please refer to [the Breaking Changes Docs](documentation/Breaking%20Changes.md) for more in-detail information.
+Please refer to the [Breaking Changes Documentation](documentation/Breaking%20Changes.md) for more in-detail information.
 
 ## Installation & Configuration
 - [Installation and Setup](documentation/Installation.md)
 - [Workflow Configuration](documentation/Workflow%20Configuration.md)
 - [Troubleshooting](documentation/Troubleshooting.md)
 - [Changelog](Changelog.md)
+
+---
 
 ## Feature Overview
 *For a full documentation & usage guide, follow the links to the respective subsection.*
@@ -35,6 +37,8 @@ Please refer to [the Breaking Changes Docs](documentation/Breaking%20Changes.md)
 
 ➡️ [Documentation of Quick Switcher Features](documentation/Alfred-based%20Quick%20Switcher.md)
 
+---
+
 ### Note-related Features
 - Create new Notes (based on Template or via QuickAdd)
 - Move Note to a different folder
@@ -42,12 +46,16 @@ Please refer to [the Breaking Changes Docs](documentation/Breaking%20Changes.md)
 
 ➡️ [Documentation of Note-related Features](documentation/Note-related%20Features.md)
 
+---
+
 ### Screenshot Features
 - OCR Screenshots
 - 🆕 Image Screenshot
 - 🆕 Both work for screenshots taken in quick succession, e.g. during a live presentation or lecture.
 
 ➡️ [Documentation of Screenshot Features](documentation/Screenshot%20Features.md)
+
+---
 
 ### Utility Features
 - Backup your Vault
@@ -58,6 +66,8 @@ Please refer to [the Breaking Changes Docs](documentation/Breaking%20Changes.md)
 
 ➡️ [Documentation of all Utility Features](documentation/Utility%20Features.md)
 
+---
+
 ### Plugin & Theme Search
 - Search Community Plugins and Themes
 - Open in Obsidian or GitHub
@@ -67,6 +77,8 @@ Please refer to [the Breaking Changes Docs](documentation/Breaking%20Changes.md)
 
 ➡️ [Documentation of the Plugin & Theme Search](documentation/Plugin%20and%20Theme%20Search.md)
 
+---
+
 ### Workspace Switcher
 - Quickly switch workspaces
 - 🆕 Save Workspaces
@@ -74,6 +86,8 @@ Please refer to [the Breaking Changes Docs](documentation/Breaking%20Changes.md)
 - Automatically toggle spellchecking when switching to certain workspaces
 
 ➡️ [Documentation of the Workspace Switcher](documentation/Workspace%20Switcher.md)
+
+---
 
 ### 🆕 Settings Search
 - Search & quickly open specific Settings Tabs, the Theme Browser, or the Community Browser.
@@ -83,6 +97,8 @@ Please refer to [the Breaking Changes Docs](documentation/Breaking%20Changes.md)
 
 ➡️ [Documentation of the Settings Search](documentation/Settings%20Search.md)
 
+---
+
 ### Documentation Search
 - Search the Official Obsidian Documentation
 - Simultaneously search the Obsidian Hub
@@ -90,11 +106,15 @@ Please refer to [the Breaking Changes Docs](documentation/Breaking%20Changes.md)
 
 ➡️ [Documentation of the Documentation Search](documentation/Documentation%20Search.md)
 
+---
+
 ### 🆕 Vault Switcher
 - Switch the Vault controlled by this Alfred workflow.
 - Open vaults in Obsidian, Finder, or the Terminal.
 
 ➡️ [Documentation of the Vault Switcher](documentation/Vault%20Switcher.md)
+
+---
 
 ### CSS-related Features
 - Access themes & CSS Snippets via Alfred
@@ -104,6 +124,8 @@ Please refer to [the Breaking Changes Docs](documentation/Breaking%20Changes.md)
 - Convert a font file base64-encoded CSS
 
 ➡️ [Documentation of CSS-related Features](documentation/CSS-related%20Features.md)
+
+---
 
 ### Features for Developers
 - Quickly open various development-related folders
@@ -116,6 +138,8 @@ Please refer to [the Breaking Changes Docs](documentation/Breaking%20Changes.md)
 - Quick Access to cheat sheets for Plugin Development, e.g. the Obsidian API
 
 ➡️ [Documentation of Features for Developers](documentation/Features%20for%20Developers.md)
+
+---
 
 ## Credits
 
