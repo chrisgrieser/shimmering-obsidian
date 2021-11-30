@@ -1,3 +1,5 @@
+- 2021-11-30	+ Visual improvements to the Workspace Switcher
+- 2021-11-29	release 2.7
 - 2021-11-29	+ New Feature: Image screenshots into the vault (issue #11)
 - 2021-11-29	release 2.6.3
 - 2021-11-29	release 2.6.2
