@@ -1,6 +1,6 @@
 [⏪ Go back to the Feature Overview](../README.md#feature-overview)
 
-# Plugin and Theme Search
+# Plugin & Theme Search
 
 ## Table of Contents
 <!-- MarkdownTOC -->
@@ -17,8 +17,9 @@
 	- Use `⌘ + ↵` to open the plugin's GitHub repository instead.
 	- Press `⌥ + ↵` to copy the GitHub repository URL to your clipboard. When the [workflow configuration](Workflow%20Configuration.md#Miscellaneous) `discord_ready_links` is set to `true`, the copied link will be surrounded with `<` `>` for more convenient pasting in the Discord Desktop app (disables auto-preview).
 	- `⇧ + ↵` to display & search the GitHub issues. See [the section below](#-Searching-GitHub-Issues) for more information.
-	- 🆕 *Holding* `ctrl` will display download numbers, author, and plugin ID. This is useful, when the plugin description is so long, that you cannot see this anymore.[^2]
+	- 🆕 *Holding* `⌃` will display download numbers, author, and plugin ID.[^2] This is useful, when the plugin description is so long, that you cannot see this anymore.
 	- _⚙️ For developers:_ Use `fn + ↵` to clone the GitHub Repository into the folder specified in the [workflow configuration](Workflow%20Configuration.md#Plugin-and-Theme-Search) (`download_folder_path`) via `git clone` (http).
+	- _⚙️ For developers:_ *Pressing* `⌃ + ↵` will copy the plugin ID to the clipboard.
 - Only plugins officially included in the community plugins are displayed — plugins solely available via GitHub or still in review are not shown.
 - Add `plugin` to the search query to only display themes, e.g., use `op focus plugin` as search query to only display *plugins* with the term `focus`.
 - The `op` search will also consider the name of the plugin's author, meaning the query `op JaneDoe` will return all plugins (and themes) authored by the user `JaneDoe`.

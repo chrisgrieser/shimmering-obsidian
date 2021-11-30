@@ -1302,6 +1302,16 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
+				<string>92A627E0-B9B0-4D58-A5C1-78438EC4573B</string>
+				<key>modifiers</key>
+				<integer>262144</integer>
+				<key>modifiersubtext</key>
+				<string>⌃: Copy Plugin ID</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
 				<string>4D7CE883-A32F-45EC-BC4A-106918BD64AF</string>
 				<key>modifiers</key>
 				<integer>0</integer>
@@ -1807,6 +1817,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>EEC26A00-2E86-4743-8879-AB2FD3D614ED</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>92A627E0-B9B0-4D58-A5C1-78438EC4573B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>CF41BB03-A327-49A6-AD69-3A5F1F6F5A83</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -7652,6 +7675,23 @@ tell application "Obsidian" to activate</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>51D8E207-AB3E-41F7-A0F6-4205DF43F270</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>lastpathcomponent</key>
 				<false/>
 				<key>onlyshowifquerypopulated</key>
@@ -7692,6 +7732,19 @@ tell application "Obsidian" to activate</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>triggerid</key>
+				<string>min-input-loop</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.external</string>
+			<key>uid</key>
+			<string>A3E485FC-C939-4776-8000-396EB2F3CC64</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>conditions</key>
 				<array>
 					<dict>
@@ -7716,23 +7769,6 @@ tell application "Obsidian" to activate</string>
 			<string>alfred.workflow.utility.conditional</string>
 			<key>uid</key>
 			<string>E3314C31-45B0-46E1-AD03-0DF437619DB2</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string></string>
-				<key>passthroughargument</key>
-				<false/>
-				<key>variables</key>
-				<dict/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>51D8E207-AB3E-41F7-A0F6-4205DF43F270</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -7794,13 +7830,40 @@ tell application "Obsidian" to activate</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>triggerid</key>
-				<string>min-input-loop</string>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.trigger.external</string>
+			<string>alfred.workflow.output.clipboard</string>
 			<key>uid</key>
-			<string>A3E485FC-C939-4776-8000-396EB2F3CC64</string>
+			<string>92A627E0-B9B0-4D58-A5C1-78438EC4573B</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>'{query}'</string>
+				<key>title</key>
+				<string>✅ Plugin ID copied</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>CF41BB03-A327-49A6-AD69-3A5F1F6F5A83</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -9208,7 +9271,7 @@ Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (r
 		<key>0BBE0C0E-D057-4A44-B000-02727F0AEDE5</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>6</integer>
+			<integer>1</integer>
 			<key>xpos</key>
 			<integer>990</integer>
 			<key>ypos</key>
@@ -9508,7 +9571,7 @@ Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (r
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>200</integer>
+			<integer>185</integer>
 			<key>ypos</key>
 			<integer>4925</integer>
 		</dict>
@@ -9882,9 +9945,9 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>245</integer>
+			<integer>270</integer>
 			<key>ypos</key>
-			<integer>5835</integer>
+			<integer>5735</integer>
 		</dict>
 		<key>52C6C47D-3998-4DF9-B9A4-04E586CC8380</key>
 		<dict>
@@ -10070,7 +10133,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 		<key>622A967D-2CA5-4495-BCCB-1679A5D8A571</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>6</integer>
+			<integer>1</integer>
 			<key>xpos</key>
 			<integer>720</integer>
 			<key>ypos</key>
@@ -10517,6 +10580,15 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>ypos</key>
 			<integer>2560</integer>
 		</dict>
+		<key>92A627E0-B9B0-4D58-A5C1-78438EC4573B</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>xpos</key>
+			<integer>305</integer>
+			<key>ypos</key>
+			<integer>5965</integer>
+		</dict>
 		<key>978E9BA4-99C1-4B74-A991-6E9345C7A20D</key>
 		<dict>
 			<key>colorindex</key>
@@ -10629,11 +10701,11 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 		<key>A3E485FC-C939-4776-8000-396EB2F3CC64</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>6</integer>
+			<integer>1</integer>
 			<key>xpos</key>
-			<integer>325</integer>
+			<integer>150</integer>
 			<key>ypos</key>
-			<integer>5955</integer>
+			<integer>5800</integer>
 		</dict>
 		<key>A5BA80AA-D2FF-43BC-AE70-4C34D0BB4E20</key>
 		<dict>
@@ -11025,6 +11097,15 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<key>ypos</key>
 			<integer>4040</integer>
 		</dict>
+		<key>CF41BB03-A327-49A6-AD69-3A5F1F6F5A83</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>xpos</key>
+			<integer>455</integer>
+			<key>ypos</key>
+			<integer>5965</integer>
+		</dict>
 		<key>D0CC42AB-11E5-447A-9C1F-BE2293E03B5B</key>
 		<dict>
 			<key>colorindex</key>
@@ -11280,7 +11361,7 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 		<key>E6F3CEED-BE74-4A6D-B64B-9BC54FDFBB58</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>6</integer>
+			<integer>1</integer>
 			<key>note</key>
 			<string>Error Sound</string>
 			<key>xpos</key>

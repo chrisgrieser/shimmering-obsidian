@@ -15,8 +15,9 @@
 
 ## Plugin Search
 ➡️ Refer to the [Plugin & Theme Search](Plugin%20and%20Theme%20Search.md#Plugins) for the Information on the theme search capabilities. Particularly useful for plugin developers should be:
-- the `fn + return` command to clone a plugin.
+- the `fn + ↵` command to clone a plugin.
 - the [GitHub issue search](Plugin%20and%20Theme%20Search.md#%F0%9F%86%95-Searching-GitHub-Issues)
+- `⌃ + ↵` to see and copy plugin IDs
 
 <img src="https://user-images.githubusercontent.com/73286100/139559362-747b0c57-c29b-45b5-bc62-4ab53c0718c5.gif" alt="Issue Search" width=60%>
 

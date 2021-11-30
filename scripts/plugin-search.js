@@ -80,7 +80,7 @@ pluginJSON.forEach(plugin => {
 			"shift": {"arg": repo + ";" + id + ";" + name},
 			"ctrl":{
 				"valid": false,
-				"subtitle": "by " + author + downloadsStr + "  (plugin-id: " + id + ")",
+				"subtitle": "by " + author + downloadsStr + "  —  plugin ID: " + id + " (⌃: Copy ID)",
 			},
 		}
 	});
