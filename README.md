@@ -40,7 +40,7 @@ Please refer to [the Breaking Changes Docs](documentation/Breaking%20Changes.md)
 - Move Note to a different folder
 - Daily Notes
 
-➡️ [Documentation of Note-related Features](documentation/Note-related%Features.md)
+➡️ [Documentation of Note-related Features](documentation/Note-related%20Features.md)
 
 ### Screenshot Features
 - OCR Screenshots
