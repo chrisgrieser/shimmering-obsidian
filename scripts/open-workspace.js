@@ -1,83 +1,78 @@
 #!/usr/bin/env osascript -l JavaScript
 
 ObjC.import("stdlib");
-ObjC.import('Foundation');
+ObjC.import("Foundation");
 app = Application.currentApplication();
 app.includeStandardAdditions = true;
 
 function readFile (path, encoding) {
-    if (!encoding) encoding = $.NSUTF8StringEncoding;
-    const fm = $.NSFileManager.defaultManager;
-    const data = fm.contentsAtPath(path);
-    const str = $.NSString.alloc.initWithDataEncoding(data, encoding);
-    return ObjC.unwrap(str);
+	if (!encoding) encoding = $.NSUTF8StringEncoding;
+	const fm = $.NSFileManager.defaultManager;
+	const data = fm.contentsAtPath(path);
+	const str = $.NSString.alloc.initWithDataEncoding(data, encoding);
+	return ObjC.unwrap(str);
 }
 
-
-const vault_path = $.getenv("vault_path").replace(/^~/, app.pathTo("home folder"));
-const workspace_to_spellcheck = $.getenv("workspace_to_spellcheck");
-const workspaceJSON = JSON.parse(readFile(vault_path + '/.obsidian/workspaces.json'));
-const workspace_array = Object.keys(workspaceJSON.workspaces);
+const vaultPath = $.getenv("vault_path").replace(/^~/, app.pathTo("home folder"));
+const workspaceToSpellcheck = $.getenv("workspace_to_spellcheck");
+const workspaceJSON = JSON.parse(readFile(vaultPath + "/.obsidian/workspaces.json"));
+const workspaceArray = Object.keys(workspaceJSON.workspaces);
 const currentWorkspace = workspaceJSON.active;
 
 // get current spellcheck status
-const currentSpellCheck = JSON.parse(readFile(vault_path + '/.obsidian/app.json')).spellcheck == "true";
+const currentSpellCheck = JSON.parse(readFile(vaultPath + "/.obsidian/app.json")).spellcheck === "true";
 let spellcheckStatus;
-if (currentSpellCheck) spellcheckStatus = "ON";
-else spellcheckStatus = "OFF";
+if (currentSpellCheck) spellcheckStatus = "Enable";
+else spellcheckStatus = "Disable";
 
-let jsonArray = [];
-workspace_array.forEach(workspaceName => {
-	let workspaceLoad_URI = "obsidian://advanced-uri?workspace=" + encodeURIComponent(workspaceName);
-	let workspaceSaveLoad_URI = workspaceLoad_URI + "&saveworkspace=true";
+const jsonArray = [];
+workspaceArray.forEach(workspaceName => {
+	const workspaceLoadURI = "obsidian://advanced-uri?workspace=" + encodeURIComponent(workspaceName);
+	const workspaceSaveLoadURI = workspaceLoadURI + "&saveworkspace=true";
 
 	// icons/emoji
 	let spellcheckInfo = "";
-	if (workspaceName == workspace_to_spellcheck) spellcheckInfo = "  🖍";
+	if (workspaceName === workspaceToSpellcheck) spellcheckInfo = "  🖍";
 	let iconpath = "icons/workspace.png";
 	if (workspaceName.toLowerCase().includes("writing")) iconpath = "icons/writing.png";
 	if (workspaceName.toLowerCase().includes("write")) iconpath = "icons/writing.png";
 	if (workspaceName.toLowerCase().includes("longform")) iconpath = "icons/writing.png";
 
 	jsonArray.push({
-		'title': workspaceName + spellcheckInfo,
-		'match': workspaceName.replaceAll ("-", " ") + " " + workspaceName,
-		'arg': workspaceLoad_URI,
-		'uid': workspaceName,
-		'icon': { 'path': iconpath },
-		'mods': {
-			'cmd': {
-				'arg': workspaceSaveLoad_URI,
-				'subtitle': "⌘: Save '" + currentWorkspace + "', then load",
+		"title": "Load '" + workspaceName + "'" + spellcheckInfo,
+		"match": workspaceName.replaceAll ("-", " ") + " " + workspaceName,
+		"arg": workspaceLoadURI,
+		"uid": workspaceName,
+		"icon": { "path": iconpath },
+		"mods": {
+			"cmd": {
+				"arg": workspaceSaveLoadURI,
+				"subtitle": "⌘: Save '" + currentWorkspace + "', then load",
 			}
 		},
 	});
 });
 
-//Manage Workspaces
+// Save Current Workspace
 jsonArray.push({
-	'title': "Manage Workspaces",
-	'arg': "obsidian://advanced-uri?commandid=workspaces%253Aopen-modal",
-	'icon': { 'path': 'icons/settings.png'},
-	'uid': "manage-workspaces",
+	"title": "Save '" + currentWorkspace + "'",
+	"arg": "obsidian://advanced-uri?saveworkspace=true",
+	"icon": { "path": "icons/save-workspace.png"},
+	"uid": "save-workspace",
 });
 
-//Save Current Workspace
+// Manage Workspaces (no UID to ensure it is on bottom)
 jsonArray.push({
-	'title': "Save Current Workspace",
-	'subtitle': currentWorkspace,
-	'arg': "obsidian://advanced-uri?saveworkspace=true",
-	'icon': { 'path': 'icons/save-workspace.png'},
-	'uid': "save-workspace",
+	"title": "Manage Workspaces",
+	"arg": "obsidian://advanced-uri?commandid=workspaces%253Aopen-modal",
+	"icon": { "path": "icons/settings.png"},
 });
 
-// Toggle Spellcheck
+// Toggle Spellcheck (no UID to ensure it is on bottom)
 jsonArray.push({
-	'title': "Toggle Spellcheck",
-	'subtitle': "Currently: " + spellcheckStatus,
-	'arg': "obsidian://advanced-uri?commandid=editor%253Atoggle-spellcheck",
-	'icon': { 'path': 'icons/spellcheck.png'},
-	'uid': "toggle-spellcheck",
+	"title": spellcheckStatus + " Spellcheck",
+	"arg": "obsidian://advanced-uri?commandid=editor%253Atoggle-spellcheck",
+	"icon": { "path": "icons/spellcheck.png"},
 });
 
 JSON.stringify({ items: jsonArray });
