@@ -1,3 +1,5 @@
+- 2021-11-30	+ `ctrl + return` now also copies the plugin ID for the `op`search
+- 2021-11-30	release 2.7.2
 - 2021-11-30	release 2.7.1
 - 2021-11-30	+ Visual improvements to the Workspace Switcher
 - 2021-11-29	release 2.7
