@@ -20,9 +20,9 @@ const workspaceArray = Object.keys(workspaceJSON.workspaces);
 const currentWorkspace = workspaceJSON.active;
 
 // get current spellcheck status
-const currentSpellCheck = JSON.parse(readFile(vaultPath + "/.obsidian/app.json")).spellcheck === "true";
+const currentSpellCheck = JSON.parse(readFile(vaultPath + "/.obsidian/app.json")).spellcheck;
 let spellcheckStatus;
-if (currentSpellCheck) spellcheckStatus = "Disable";
+if (currentSpellCheck === true) spellcheckStatus = "Disable";
 else spellcheckStatus = "Enable";
 
 const jsonArray = [];
