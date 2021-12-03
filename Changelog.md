@@ -1,3 +1,4 @@
+- 2021-11-30	release 2.7.4
 - 2021-11-30	release 2.7.3
 - 2021-11-30	+ `ctrl + return` now also copies the plugin ID for the `op`search
 - 2021-11-30	release 2.7.2
