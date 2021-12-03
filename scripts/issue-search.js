@@ -13,7 +13,7 @@ function readFile (path, encoding) {
 }
 
 function alfredMatcher (str){
-	return str.replace (/[-()_.]/g, " ") + " " + str;
+	return " " + str.replace (/[-()_.]/g, " ") + " " + str + " ";
 }
 
 const jsonArray = [];
@@ -112,7 +112,7 @@ issueJSON.forEach(issue => {
 
 	jsonArray.push({
 		"title": state + title,
-		"match": issue.state + " " + alfredMatcher (title) + " " + alfredMatcher (issueCreator),
+		"match": issue.state + alfredMatcher (title) + alfredMatcher (issueCreator),
 		"subtitle": "#" + issue.number + " by " + issueCreator	+ comments,
 		"arg": issue.html_url,
 		"mods": {
