@@ -11321,10 +11321,12 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 		<dict>
 			<key>colorindex</key>
 			<integer>9</integer>
+			<key>note</key>
+			<string>re-index documentation</string>
 			<key>xpos</key>
-			<integer>485</integer>
+			<integer>525</integer>
 			<key>ypos</key>
-			<integer>5555</integer>
+			<integer>5525</integer>
 		</dict>
 		<key>CCB61EC0-26E7-4CE6-9703-BF95602B73D6</key>
 		<dict>
