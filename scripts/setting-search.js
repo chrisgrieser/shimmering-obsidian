@@ -82,7 +82,10 @@ installedPlugins.forEach(pluginFolder => {
 			"name": pluginFolder.replaceAll ("-", " ")
 		};
 	}
+
 	const pluginFolderPath = vaultPath + "/.obsidian/plugins/" + pluginFolder;
+
+	const isDeveloped = app.doShellScript('');
 
 	let pluginEnabled = false;
 	let settingSubtitle = "🛑 disabled";
