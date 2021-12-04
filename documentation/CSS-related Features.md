@@ -47,6 +47,3 @@
 - The cheatsheets will be opened via the macOS Quick Look feature, so you can simply close them by pressing `space`.
 
 <img src="https://i.imgur.com/nVT687p.png" alt="Cheat Sheets" width=30%>
-
-
-
