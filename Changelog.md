@@ -1,3 +1,6 @@
+- 2021-12-04	+ icons being developed will be indicated by a ⚙️ emoji
+- 2021-12-04	+ git pull for vaults (ov ➞ fn + return)
+- 2021-12-04	release 2.8
 - 2021-12-04	+ SVG to Data URI Conversion
 - 2021-12-03	release 2.7.6
 - 2021-12-03	release 2.7.5
