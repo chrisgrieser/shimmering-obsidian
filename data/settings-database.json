@@ -27,7 +27,7 @@
    {
       "title": "Account",
       "id": "account",
-      "match": "account sync publish mail password email"
+      "match": "account sync publish mail login password email"
    },
    {
       "title": "Core Plugins",
