@@ -1,3 +1,5 @@
+- 2021-12-04	+ SVG to Data URI Conversion
+- 2021-12-03	release 2.7.6
 - 2021-12-03	release 2.7.5
 - 2021-11-30	release 2.7.4
 - 2021-11-30	release 2.7.3
