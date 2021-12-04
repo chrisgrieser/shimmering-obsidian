@@ -1,3 +1,5 @@
+- 2021-12-04	+ fixed display of headings in documentation search
+- 2021-12-04	release 2.8.1
 - 2021-12-04	+ icons being developed will be indicated by a ⚙️ emoji
 - 2021-12-04	+ git pull for vaults (ov ➞ fn + return)
 - 2021-12-04	release 2.8
