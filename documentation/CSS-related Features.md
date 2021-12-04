@@ -23,13 +23,13 @@
 ➡️ Refer to the [Plugin & Theme Search](Plugin%20and%20Theme%20Search.md#Themes) for information on the theme search capabilities.
 - Useful for 🎨 theme designers will be the `fn + return` command to quickly download any theme's CSS.
 
-<img src="https://user-images.githubusercontent.com/73286100/131255059-1a56d6e7-8c2f-4ff0-b20d-247702bb7925.gif" alt="Theme Search" width=60% height=60%>
+<img src="https://user-images.githubusercontent.com/73286100/131255059-1a56d6e7-8c2f-4ff0-b20d-247702bb7925.gif" alt="Theme Search" width=60%>
 
 ## 🎨 For Theme Designers: Cheat Sheets
 **`oc`: Quickly Access Various Cheat Sheets for designing themes in Obsidian.**
 - The cheatsheets will be opened via the macOS Quick Look feature, so you can simply close them by pressing `space`.
 
-<img src="https://i.imgur.com/nVT687p.png" alt="Cheat Sheets" width=40%>
+<img src="https://i.imgur.com/nVT687p.png" alt="Cheat Sheets" width=30%>
 
 ## 🎨 For Theme Designers: Quick Font File Conversion
 **`Triggered via Universal Action`: Convert a font file to CSS with base64.**
@@ -45,3 +45,6 @@
 - The [workflow configuration](Workflow%20Configuration.md#Miscellaneous) `svg_size` determines the size inserted into the data URI, e.g. `1.3em` (defaults to `1em` if left empty).
 - You can use <https://icon-sets.iconify.design/> to browse for icons as SVG.
 - ❗️ This command requires [`mini-svg-data-uri`](https://www.npmjs.com/package/mini-svg-data-uri), which you can easily install via `npm -g install mini-svg-data-uri`.
+
+![Screen Recording 2021-12-04 at 00 56 37](https://user-images.githubusercontent.com/73286100/144687883-102e4e1b-6227-4b56-afce-416ca0b08b80.gif)
+
