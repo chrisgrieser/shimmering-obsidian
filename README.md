@@ -122,6 +122,7 @@ Please refer to the [Breaking Changes Documentation](documentation/Breaking%20Ch
 - Quick Access to cheat sheets for theme development, e.g. default variables
 - Download a theme's CSS file via Theme Search
 - Convert a font file base64-encoded CSS
+- 🆕 Convert a SVG to Data URI
 
 ➡️ [Documentation of CSS-related Features](documentation/CSS-related%20Features.md)
 

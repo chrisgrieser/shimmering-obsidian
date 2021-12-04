@@ -23,7 +23,7 @@
 - `osettings` keyword *for updating the documentation search* has been renamed `oupdate` for consistency.
 - Attachment search removed for now, as it would crowd the now enhanced main search too much. If there is demand for it, I will implement a new, separate attachment search. [Please create a GitHub issue if you are interested in this.](https://github.com/chrisgrieser/shimmering-obsidian)
 - removed CSS Snippet toggling, as there are now [multiple](https://github.com/chetachiezikeuzor/MySnippets-Plugin) [plugins](https://github.com/deathau/snippet-commands-obsidian) that do that better
-- removed hotkey for font-base64-conversion for decluttering. (You can still set one of your own, if you want to!)
+- removed hotkey for font-base64-conversion for de-cluttering. (You can still set one of your own, if you want to!)
 
 *when updating to 2.1*
 - removed `osettings` command – improved version now available via the command `o,`. See [Settings-Search](Settings%20Search.md).
@@ -37,3 +37,7 @@
 
 *when updating to 2.4.2*
 - `ocheat` command abbreviated to `oc`.
+
+*when updating to 2.8*
+- Converting a font file to base64 will prompt for the format and copy to the clipboard instead of saving to the snippet folder.
+- Workflow configuration `fontformat` dropped, as base64 conversion will prompt for it. 

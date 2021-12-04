@@ -56,8 +56,8 @@ You access the main workflow configuration by clicking the *`[x]`* at the top ri
 ### Miscellaneous
 - 🆕 `discord_ready_links`: When set to `true`, links copied in the Plugin, Theme, and Documentation Searches (via `⌥ + ↵`) will be surrounded with `<` `>` for more convenient pasting in the Discord Desktop app (disables auto-preview).
 - `daily_note_path`: *absolute* path to the folder where your daily notes are saved. See [Daily Notes](Note-related%20Features.md#Daily%20Notes).
-- `fontformat`: Format of the base64-conversion of font files, e.g., `woff2` or `ttf`.
 - `workspace_to_spellcheck`: Name of the Workspace where spellcheck should be turned on. Leave empty to not toggle any spellcheck setting with workspace changes. See [Workspace Switcher](Workspace%20Switcher.md).
+- `svg_size`: the size the [svg data URI](#%F0%9F%8E%A8-for-theme-designers-quick-svg-data-uri-conversion) will have after conversion, e.g., `1.3em` (defaults to `1em` if left empty).
 - `auto_update`: Periodically check for updates *of this workflow* and update automatically. Accepts `true` or `false`.
 - `vault_path`: The *absolute* path to your obsidian vault, e.g., `/Users/pseudometa/MyVault` or `~/Documents/obsidianVault`. (💡 You do not need to set it manually though, the [`osetup` command](#metadata-extractor-configuration) will set that value for you already.)
 
