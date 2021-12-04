@@ -84,8 +84,10 @@ installedPlugins.forEach(pluginFolder => {
 	}
 
 	const pluginFolderPath = vaultPath + "/.obsidian/plugins/" + pluginFolder;
-
-	const isDeveloped = app.doShellScript('');
+	const finderApp = Application("Finder");
+	const isDeveloped = finderApp.exists(Path(pluginFolderPath + "/.git"));
+	let devIcon = "";
+	if (isDeveloped) devIcon = " ⚙️";
 
 	let pluginEnabled = false;
 	let settingSubtitle = "🛑 disabled";
@@ -95,7 +97,7 @@ installedPlugins.forEach(pluginFolder => {
 	}
 
 	jsonArray.push({
-		"title": manifest.name,
+		"title": manifest.name + devIcon,
 		"uid": manifest.id,
 		"subtitle": settingSubtitle,
 		"arg": "obsidian://advanced-uri?settingid=" + manifest.id,
