@@ -7,9 +7,9 @@
 
 - [Open & Create your CSS Files](#open--create-your-css-files)
 - [Theme Search](#theme-search)
-- [🎨 For Theme Designers: Cheat Sheets](#%F0%9F%8E%A8-for-theme-designers-cheat-sheets)
-- [🎨 For Theme Designers: Quick Font File Conversion](#%F0%9F%8E%A8-for-theme-designers-quick-font-file-conversion)
-- [🎨 For Theme Designers: Quick SVG Data URI Conversion](#%F0%9F%8E%A8-for-theme-designers-quick-svg-data-uri-conversion)
+- [Quick SVG Data URI Conversion](#quick-svg-data-uri-conversion)
+- [For Theme Designers: Quick Font File Conversion](#for-theme-designers-quick-font-file-conversion)
+- [For Theme Designers: Cheat Sheets](#for-theme-designers-cheat-sheets)
 
 <!-- /MarkdownTOC -->
 
@@ -25,20 +25,7 @@
 
 <img src="https://user-images.githubusercontent.com/73286100/131255059-1a56d6e7-8c2f-4ff0-b20d-247702bb7925.gif" alt="Theme Search" width=60%>
 
-## 🎨 For Theme Designers: Cheat Sheets
-**`oc`: Quickly Access Various Cheat Sheets for designing themes in Obsidian.**
-- The cheatsheets will be opened via the macOS Quick Look feature, so you can simply close them by pressing `space`.
-
-<img src="https://i.imgur.com/nVT687p.png" alt="Cheat Sheets" width=30%>
-
-## 🎨 For Theme Designers: Quick Font File Conversion
-**`Triggered via Universal Action`: Convert a font file to CSS with base64.**
-- This will take the selected font file (e.g., `.tff` or `.woff`), convert them into base64, prompt you for the correct format, and copies base64-encoded font wrapped in CSS into your clipboard.
-- See the Alfred Documentation on how to use [Universal Actions](https://www.alfredapp.com/universal-actions/).
-
-<img src="https://i.imgur.com/q0vKXzT.gif" alt="Conversion of CSS via universal command" width=60%>
-
-## 🎨 For Theme Designers: Quick SVG Data URI Conversion
+## Quick SVG Data URI Conversion
 **🆕 `osvg`: Convert convert the `svg` in your clipboard to Data URI.**
 - [Explainer why converting SVGs is useful](https://css-tricks.com/lodge/svg/09-svg-data-uris/).
 - Takes the .svg files in you clipboard, converts it to a SVG Data URI, and copies it wrapped in CSS into your clipboard. 
@@ -46,5 +33,20 @@
 - You can use <https://icon-sets.iconify.design/> to browse for icons as SVG.
 - ❗️ This command requires [`mini-svg-data-uri`](https://www.npmjs.com/package/mini-svg-data-uri), which you can easily install via `npm -g install mini-svg-data-uri`.
 
-![Screen Recording 2021-12-04 at 00 56 37](https://user-images.githubusercontent.com/73286100/144687883-102e4e1b-6227-4b56-afce-416ca0b08b80.gif)
+![SVG to Data URI Conversion](https://user-images.githubusercontent.com/73286100/144687883-102e4e1b-6227-4b56-afce-416ca0b08b80.gif)
+
+## For Theme Designers: Quick Font File Conversion
+**`Triggered via Universal Action`: Convert a font file to CSS with base64.**
+- This will take the selected font file (e.g., `.tff` or `.woff`), convert them into base64, prompt you for the correct format, and copies base64-encoded font wrapped in CSS into your clipboard.
+- See the Alfred Documentation on how to use [Universal Actions](https://www.alfredapp.com/universal-actions/).
+
+<img src="https://i.imgur.com/q0vKXzT.gif" alt="Conversion of CSS via universal command" width=60%>
+
+## For Theme Designers: Cheat Sheets
+**`oc`: Quickly Access Various Cheat Sheets for designing themes in Obsidian.**
+- The cheatsheets will be opened via the macOS Quick Look feature, so you can simply close them by pressing `space`.
+
+<img src="https://i.imgur.com/nVT687p.png" alt="Cheat Sheets" width=30%>
+
+
 
