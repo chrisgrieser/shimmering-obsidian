@@ -2,6 +2,7 @@
 
 function run (argv) {
 	ObjC.import("stdlib");
+	
 	const vaultPath = argv.join("");
 	const vaultName = vaultPath.split("/").pop();
 
@@ -10,9 +11,9 @@ function run (argv) {
 		inWorkflow: $.getenv("alfred_workflow_bundleid"),
 		exportable: false
 	});
-	
-	Application("com.runningwithcrayons.Alfred").setConfiguration ("vault_name", {
-		toValue: vaultName,
+
+	Application("com.runningwithcrayons.Alfred").setConfiguration ("vault_name_ENC", {
+		toValue: encodeURIComponent(vaultName),
 		inWorkflow: $.getenv("alfred_workflow_bundleid"),
 		exportable: false
 	});

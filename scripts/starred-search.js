@@ -4,64 +4,65 @@ ObjC.import("stdlib");
 app = Application.currentApplication();
 app.includeStandardAdditions = true;
 
-// > Functions
-function parentFolder (filePath){
+function parentFolder (filePath) {
 	if (!filePath.includes("/")) return "/";
-	return filePath.split("/").slice(0,-1).join("/");
+	return filePath.split("/").slice(0, -1).join("/");
 }
-function alfredMatcher (str){
-	return str.replace (/[-\(\)_\.]/g," ") + " " + str;
+
+function alfredMatcher (str) {
+	return str.replace (/[-()_.]/g, " ") + " " + str;
 }
+
 const readFile = function (path, encoding) {
-    !encoding && (encoding = $.NSUTF8StringEncoding);
-    const fm = $.NSFileManager.defaultManager;
-    const data = fm.contentsAtPath(path);
-    const str = $.NSString.alloc.initWithDataEncoding(data, encoding);
-    return ObjC.unwrap(str);
+	!encoding && (encoding = $.NSUTF8StringEncoding);
+	const fm = $.NSFileManager.defaultManager;
+	const data = fm.contentsAtPath(path);
+	const str = $.NSString.alloc.initWithDataEncoding(data, encoding);
+	return ObjC.unwrap(str);
 };
 
 const homepath = app.pathTo("home folder");
-const vault_path = $.getenv("vault_path").replace(/^~/, homepath);
-const metadataJSON = vault_path + "/.obsidian/plugins/metadata-extractor/metadata.json";
-const starredJSON = vault_path + "/.obsidian/starred.json";
-const recentJSON = vault_path + "/.obsidian/workspace";
-let jsonArray = [];
+const vaultPath = $.getenv("vault_path").replace(/^~/, homepath);
+const metadataJSON = vaultPath + "/.obsidian/plugins/metadata-extractor/metadata.json";
+const starredJSON = vaultPath + "/.obsidian/starred.json";
+const recentJSON = vaultPath + "/.obsidian/workspace";
+const jsonArray = [];
 
-let starred_files = [];
-if (readFile(starredJSON) != ""){
-	starred_files = 
+let starredFiles = [];
+if (readFile(starredJSON) !== "") {
+	starredFiles =
 		JSON.parse(readFile(starredJSON))
-		.items
-		.filter (item => item.type == "file")
-		.map (item => item.path);
+			.items
+			.filter (item => item.type === "file")
+			.map (item => item.path);
 }
 
-const recent_files = 
+const recentFiles =
 	JSON.parse(readFile(recentJSON))
-  .lastOpenFiles;
+		.lastOpenFiles;
 
-//filter the metadataJSON for the items w/ relativePaths of starred files
-const file_array = 
+// filter the metadataJSON for the items w/ relativePaths of starred files
+const fileArray =
 	JSON.parse(readFile(metadataJSON))
-	.filter(item => starred_files.includes(item.relativePath));
+		.filter(item => starredFiles.includes(item.relativePath));
 
-const starred_searches = 
+const starredSearches =
 	JSON.parse(readFile(starredJSON))
-	.items
-	.filter (item => item.type == "search")
-	.map (item => item.query);
+		.items
+		.filter (item => item.type === "search")
+		.map (item => item.query);
 
 
-file_array.forEach(file => {
+fileArray.forEach(file => {
 
-	let filename = file.fileName;
-	let relativePath = file.relativePath;
+	const filename = file.fileName;
+	const relativePath = file.relativePath;
 
-	//icon & type dependent actions
+	// icon & type dependent actions
 	let iconpath = "icons/note.png";
 	let emoji = "⭐️ ";
 	let additionalMatcher = "";
-	if (recent_files.includes(relativePath)) {
+	if (recentFiles.includes(relativePath)) {
 		emoji += "🕑 ";
 		additionalMatcher += "recent ";
 	}	
@@ -69,32 +70,31 @@ file_array.forEach(file => {
 	if (filename.toLowerCase().includes("to do")) emoji += "☑️ ";
 	if (filename.toLowerCase().includes("template")) emoji += "📄 ";
 	if (filename.toLowerCase().includes("inbox")) emoji += "📥 ";
-	if (filename.includes("MOC")) emoji += "🗺 ";
-	if (filename.includes("MoC")) emoji += "🗺 ";
+	if (filename.toLowerCase().includes("moc")) emoji += "🗺 ";
 
 	// >> check link existence of file
 	let hasLinks = false;
-	let links_subtitle = "⛔️ Note without Outgoing Links or Backlinks";
-	let links_existent = "⇧: Browse Links in Note";
+	let linksSubtitle = "⛔️ Note without Outgoing Links or Backlinks";
+	const linksExistent = "⇧: Browse Links in Note";
 	if (file.links) {
-		if (file.links.some(l => l.relativePath)){
+		if (file.links.some(l => l.relativePath)) {
 			hasLinks = true;
-			links_subtitle = links_existent;
+			linksSubtitle = linksExistent;
 		}
-	} else if (file.backlinks != null) {
+	} else if (file.backlinks) {
 		hasLinks = true;
-		links_subtitle = links_existent;
+		linksSubtitle = linksExistent;
 	} else {
-		let external_link_list =
-			readFile(vault_path + "/" + relativePath)
-			.match (/\[.*?\]\(.*?\)/); //no g-flag, since existence of 1 link sufficient
-		if (external_link_list != null){
+		const externalLinkList =
+			readFile(vaultPath + "/" + relativePath)
+				.match (/\[.*?\]\(.*?\)/); // no g-flag, since existence of 1 link sufficient
+		if (externalLinkList !== null) {
 			hasLinks = true;
-			links_subtitle = links_existent;
+			linksSubtitle = linksExistent;
 		}
 	}
 
-	//push result
+	// push result
 	jsonArray.push({
 		title: emoji + filename,
 		match: additionalMatcher + alfredMatcher(filename),
@@ -106,19 +106,19 @@ file_array.forEach(file => {
 		mods: {
 			shift: { 
 				valid: hasLinks,
-				subtitle: links_subtitle
+				subtitle: linksSubtitle
 			},
 		},
 	});
 });
 
 
-//Starred Searches
-starred_searches.forEach(searchQuery => {
-	let subtitle = "⛔️ Cannot do that with a starred search.";
+// Starred Searches
+starredSearches.forEach(searchQuery => {
+	const subtitle = "⛔️ Cannot do that with a starred search.";
 	jsonArray.push({
 		title: "⭐️ " + searchQuery,
-		arg: "obsidian://search?query=" + searchQuery,
+		arg: "obsidian://search?vault=" + $.getenv("vault_name_ENC") + "t&query=" + searchQuery,
 		uid: searchQuery,
 		mods: {
 			fn: {

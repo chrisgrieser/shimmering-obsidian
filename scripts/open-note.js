@@ -2,8 +2,6 @@
 
 function run (argv) {
 	ObjC.import("stdlib");
-	app = Application.currentApplication();
-	app.includeStandardAdditions = true;
 
 	// import variables
 	const relativePath = argv.join("").split("#")[0];
@@ -13,15 +11,16 @@ function run (argv) {
 	let urlScheme = "obsidian://";
 	if (heading === undefined) {
 		urlScheme +=
-			"open?vault=" + encodeURIComponent (vault_name) +
+			"open?vault=" + encodeURIComponent (vaultName) +
 			"&file=" + encodeURIComponent(relativePath);
 	} else {
 		urlScheme +=
-			"advanced-uri?vault=" + encodeURIComponent (vault_name) +
+			"advanced-uri?vault=" + encodeURIComponent (vaultName) +
 			"&filepath=" + encodeURIComponent(relativePath) +
 			"&heading= " + encodeURIComponent(heading);
 	}
 
+	app = Application.currentApplication();
+	app.includeStandardAdditions = true;
 	app.openLocation (urlScheme);
-	return urlScheme;
 }

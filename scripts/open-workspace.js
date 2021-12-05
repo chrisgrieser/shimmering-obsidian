@@ -13,6 +13,7 @@ function readFile (path, encoding) {
 	return ObjC.unwrap(str);
 }
 
+const vaultNameEnc = $.getenv("vault_name_ENC");
 const vaultPath = $.getenv("vault_path").replace(/^~/, app.pathTo("home folder"));
 const workspaceToSpellcheck = $.getenv("workspace_to_spellcheck");
 const workspaceJSON = JSON.parse(readFile(vaultPath + "/.obsidian/workspaces.json"));
@@ -27,7 +28,10 @@ else spellcheckStatus = "Enable";
 
 const jsonArray = [];
 workspaceArray.forEach(workspaceName => {
-	const workspaceLoadURI = "obsidian://advanced-uri?workspace=" + encodeURIComponent(workspaceName);
+	const workspaceLoadURI =
+		"obsidian://advanced-uri?" +
+		"vault=" + vaultNameEnc +
+		"&workspace=" + encodeURIComponent(workspaceName);
 	const workspaceSaveLoadURI = workspaceLoadURI + "&saveworkspace=true";
 
 	// icons/emoji
@@ -39,7 +43,7 @@ workspaceArray.forEach(workspaceName => {
 	if (workspaceName.toLowerCase().includes("longform")) iconpath = "icons/writing.png";
 
 	jsonArray.push({
-		"title": "Load '" + workspaceName + "'" + spellcheckInfo,
+		"title": "Load \"" + workspaceName + "\"" + spellcheckInfo,
 		"match": workspaceName.replaceAll ("-", " ") + " " + workspaceName,
 		"arg": workspaceLoadURI,
 		"uid": workspaceName,
@@ -55,24 +59,24 @@ workspaceArray.forEach(workspaceName => {
 
 // Save Current Workspace
 jsonArray.push({
-	"title": "Save '" + currentWorkspace + "'",
-	"arg": "obsidian://advanced-uri?saveworkspace=true",
-	"icon": { "path": "icons/save-workspace.png"},
+	"title": "Save \"" + currentWorkspace + "\"",
+	"arg": "obsidian://advanced-uri?vault=" + vaultNameEnc + "&saveworkspace=true",
+	"icon": { "path": "icons/save-workspace.png" },
 	"uid": "save-workspace",
 });
 
 // Manage Workspaces (no UID to ensure it is on bottom)
 jsonArray.push({
 	"title": "Manage Workspaces",
-	"arg": "obsidian://advanced-uri?commandid=workspaces%253Aopen-modal",
-	"icon": { "path": "icons/settings.png"},
+	"arg": "obsidian://advanced-uri?vault=" + vaultNameEnc + "&commandid=workspaces%253Aopen-modal",
+	"icon": { "path": "icons/settings.png" },
 });
 
 // Toggle Spellcheck (no UID to ensure it is on bottom)
 jsonArray.push({
 	"title": spellcheckStatus + " Spellcheck",
-	"arg": "obsidian://advanced-uri?commandid=editor%253Atoggle-spellcheck",
-	"icon": { "path": "icons/spellcheck.png"},
+	"arg": "obsidian://advanced-uri?vault=" + vaultNameEnc + "&commandid=editor%253Atoggle-spellcheck",
+	"icon": { "path": "icons/spellcheck.png" },
 });
 
 JSON.stringify({ items: jsonArray });

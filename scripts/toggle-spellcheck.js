@@ -17,23 +17,22 @@ function run (argv){
 	// get target spellcheck status
 	const urlscheme = argv.join("");
 	const workspaceName = decodeURIComponent(urlscheme.split("=")[1]);
-	const workspace_to_spellcheck = $.getenv("workspace_to_spellcheck");
+	const workspaceToSpellcheck = $.getenv("workspace_to_spellcheck");
 
 	// abort and do nothing when workspaces are managed, spellcheck toggled
 	// or no spellcheck-workspace defined
-	if (urlscheme == "obsidian://advanced-uri?commandid=workspaces%253Aopen-modal") return;
-	if (urlscheme == "obsidian://advanced-uri?commandid=editor%253Atoggle-spellcheck") return;
-	if (urlscheme == "obsidian://advanced-uri?saveworkspace=true") return;
-	if (workspace_to_spellcheck == "") return;
+	if (urlscheme === "obsidian://advanced-uri?commandid=workspaces%253Aopen-modal") return;
+	if (urlscheme === "obsidian://advanced-uri?commandid=editor%253Atoggle-spellcheck") return;
+	if (urlscheme === "obsidian://advanced-uri?saveworkspace=true") return;
+	if (workspaceToSpellcheck === "") return;
 
 	// get current spellcheck status
-	const vault_path = $.getenv("vault_path").replace(/^~/, app.pathTo('home folder'));
-	const turnSpellCheckOn = (workspaceName == workspace_to_spellcheck);
-	const currentSpellCheck = JSON.parse(readFile(vault_path + '/.obsidian/app.json')).spellcheck == "true";
-
+	const vaultPath = $.getenv("vault_path").replace(/^~/, app.pathTo('home folder'));
+	const turnSpellCheckOn = (workspaceName === workspaceToSpellcheck);
+	const currentSpellCheck = JSON.parse(readFile(vaultPath + '/.obsidian/app.json')).spellcheck === "true";
 
 	// toggle if change is needed
-	if (turnSpellCheckOn != currentSpellCheck) {
-		app.openLocation("obsidian://advanced-uri?commandid=editor%253Atoggle-spellcheck");
+	if (turnSpellCheckOn !== currentSpellCheck) {
+		app.openLocation("obsidian://advanced-uri?vault=" + $.getenv("vault_name_ENC") + "&commandid=editor%253Atoggle-spellcheck",);
 	}
 }

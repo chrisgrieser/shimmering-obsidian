@@ -10,7 +10,8 @@ function onlineJSON (url) {
 function alfredMatcher (str) {
 	// not the same Alfred Matcher used in the other scripts
 	// has to include "#" and "+" as well for headers
-	return " " + str.replace (/[-()_#+.]/g, " ") + " " + str + " ";
+	// "`" has to be included for inline code in headers
+	return " " + str.replace (/[-()_#+.`]/g, " ") + " " + str + " ";
 }
 
 const jsonArray = [];

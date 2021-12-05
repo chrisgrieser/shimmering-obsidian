@@ -13,6 +13,7 @@
 	- [Plugin and Theme Search](#plugin-and-theme-search)
 	- [Backups](#backups)
 	- [Miscellaneous](#miscellaneous)
+	- [Internal](#internal)
 - [Setting up Hotkeys](#setting-up-hotkeys)
 - [For Users familiar with Alfred](#for-users-familiar-with-alfred)
 - [Default Terminal](#default-terminal)
@@ -59,7 +60,12 @@ You access the main workflow configuration by clicking the *`[x]`* at the top ri
 - `workspace_to_spellcheck`: Name of the Workspace where spellcheck should be turned on. Leave empty to not toggle any spellcheck setting with workspace changes. See [Workspace Switcher](Workspace%20Switcher.md).
 - `svg_size`: the size the [svg data URI](#%F0%9F%8E%A8-for-theme-designers-quick-svg-data-uri-conversion) will have after conversion, e.g., `1.3em` (defaults to `1em` if left empty).
 - `auto_update`: Periodically check for updates *of this workflow* and update automatically. Accepts `true` or `false`.
-- `vault_path`: The *absolute* path to your obsidian vault, e.g., `/Users/pseudometa/MyVault` or `~/Documents/obsidianVault`. (💡 You do not need to set it manually though, the [`osetup` command](#metadata-extractor-configuration) will set that value for you already.)
+
+### Internal
+These variables are only here for internal and debugging reasons, you do not need (and normally shouldn't) change them. (The [`osetup` command](#metadata-extractor-configuration) fills them in automatically.)
+
+- `vault_path`: The *absolute* path to your obsidian vault.
+- `vault_name_ENC`: The encoded name of you vault.
 
 ## Setting up Hotkeys
 At the top left of the workflow, there are some sky-blue fields. You need to double-click them to set the Keyboard Shortcuts you want to use for the respective commands.

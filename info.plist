@@ -7036,7 +7036,7 @@ echo "$backup"</string>
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
-				<string>obsidian://advanced-uri?commandid=app%253Aopen-settings</string>
+				<string>obsidian://advanced-uri?vault={var:vault_name_ENC}&amp;commandid=app%253Aopen-settings</string>
 				<key>utf8</key>
 				<true/>
 			</dict>
@@ -7497,7 +7497,7 @@ echo "$backup"</string>
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
-				<string>obsidian://advanced-uri?updateplugins=true</string>
+				<string>obsidian://advanced-uri?vault={var:vault_name_ENC}&amp;updateplugins=true</string>
 				<key>utf8</key>
 				<true/>
 			</dict>
@@ -7655,7 +7655,7 @@ open "obsidian://advanced-uri?commandid=metadata-extractor%253Awrite-allExceptMd
 				<key>fixedorder</key>
 				<false/>
 				<key>items</key>
-				<string>[{"imagefile":"480f3609e44ea0ceed5bd6bc0fb19a7874881127.png","title":"🅱️ Update Beta Plugins","arg":"obsidian:\/\/advanced-uri?commandid=obsidian42-brat%253ABRAT-checkForUpdatesAndUpdate","subtitle":"requires BRAT Plugin"},{"title":"📓 Re-index Documentation Search","arg":"documentations","subtitle":""},{"title":"🔁 Manually Refresh Metadata","arg":"manual_metadata","subtitle":""},{"title":"🕑 Set Metadata Update Frequency","arg":"metadata_frequency","subtitle":"will restart Obsidian afterwards"}]</string>
+				<string>[{"imagefile":"480f3609e44ea0ceed5bd6bc0fb19a7874881127.png","title":"🅱️ Update Beta Plugins","arg":"obsidian:\/\/advanced-uri?vault={var:vault_name_ENC}&amp;commandid=obsidian42-brat%253ABRAT-checkForUpdatesAndUpdate","subtitle":"requires BRAT Plugin"},{"title":"📓 Re-index Documentation Search","arg":"documentations","subtitle":""},{"title":"🔁 Manually Refresh Metadata","arg":"manual_metadata","subtitle":""},{"title":"🕑 Set Metadata Update Frequency","arg":"metadata_frequency","subtitle":"will restart Obsidian afterwards"}]</string>
 				<key>keyword</key>
 				<string>oupdate</string>
 				<key>runningsubtext</key>
@@ -8533,7 +8533,7 @@ echo | git pull</string>
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
-				<string>obsidian://advanced-uri?commandid=obsidian42-brat%253ABRAT-AddBetaPlugin</string>
+				<string>obsidian://advanced-uri?vault={var:vault_name_ENC}&amp;commandid=obsidian42-brat%253ABRAT-AddBetaPlugin</string>
 				<key>utf8</key>
 				<true/>
 			</dict>
@@ -8573,7 +8573,7 @@ echo | git pull</string>
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
-				<string>obsidian://advanced-uri?commandid=obsidian42-brat%253ABRAT-checkForUpdatesAndUpdate</string>
+				<string>obsidian://advanced-uri?vault={var:vault_name_ENC}&amp;commandid=obsidian42-brat%253ABRAT-checkForUpdatesAndUpdate</string>
 				<key>utf8</key>
 				<true/>
 			</dict>
@@ -8613,7 +8613,7 @@ echo | git pull</string>
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
-				<string>obsidian://advanced-uri?commandid=obsidian42-brat%253ABRAT-openGitHubRepository</string>
+				<string>obsidian://advanced-uri?vault={var:vault_name_ENC}&amp;commandid=obsidian42-brat%253ABRAT-openGitHubRepository</string>
 				<key>utf8</key>
 				<true/>
 			</dict>
@@ -8836,11 +8836,11 @@ end tell</string>
 				<key>script</key>
 				<string>tell application id "com.runningwithcrayons.Alfred" to set configuration "vault_path" to value query in workflow (system attribute "alfred_workflow_bundleid")</string>
 				<key>scriptargtype</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>scriptfile</key>
-				<string></string>
+				<string>scripts/osetup_2.js</string>
 				<key>type</key>
-				<integer>6</integer>
+				<integer>8</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
@@ -8909,6 +8909,27 @@ end tell</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>✅ git pull</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>31A86D6E-0757-460B-9840-AC7E2BD728BC</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -8930,27 +8951,6 @@ echo | git pull</string>
 			<string>624851C6-4CE8-40FF-939A-6A2905B80486</string>
 			<key>version</key>
 			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<true/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string>{query}</string>
-				<key>title</key>
-				<string>✅ git pull</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>31A86D6E-0757-460B-9840-AC7E2BD728BC</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -9573,7 +9573,7 @@ After updating to version 2.9+, you need to either enter your vault NAME in the 
 			<key>xpos</key>
 			<integer>185</integer>
 			<key>ypos</key>
-			<integer>7185</integer>
+			<integer>7180</integer>
 		</dict>
 		<key>156DEEC1-0E00-49BA-A920-228BB3A7FBFC</key>
 		<dict>
@@ -9758,10 +9758,12 @@ After updating to version 2.9+, you need to either enter your vault NAME in the 
 		<dict>
 			<key>colorindex</key>
 			<integer>3</integer>
+			<key>note</key>
+			<string>set vault</string>
 			<key>xpos</key>
 			<integer>265</integer>
 			<key>ypos</key>
-			<integer>7580</integer>
+			<integer>7565</integer>
 		</dict>
 		<key>2FD866C2-DDB1-4C2D-A420-3A580FBC60D2</key>
 		<dict>
@@ -9788,7 +9790,7 @@ After updating to version 2.9+, you need to either enter your vault NAME in the 
 			<key>xpos</key>
 			<integer>480</integer>
 			<key>ypos</key>
-			<integer>7700</integer>
+			<integer>7695</integer>
 		</dict>
 		<key>31F21F7E-7450-444B-B9FC-D46650DF6F17</key>
 		<dict>
@@ -10486,7 +10488,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>xpos</key>
 			<integer>480</integer>
 			<key>ypos</key>
-			<integer>7580</integer>
+			<integer>7565</integer>
 		</dict>
 		<key>71E0BF31-47DE-49AF-AA5F-FD4E20F5491E</key>
 		<dict>
@@ -11021,7 +11023,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>note</key>
-			<string>type</string>
+			<string>font format</string>
 			<key>xpos</key>
 			<integer>425</integer>
 			<key>ypos</key>
@@ -11212,7 +11214,7 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<key>xpos</key>
 			<integer>20</integer>
 			<key>ypos</key>
-			<integer>7185</integer>
+			<integer>7180</integer>
 		</dict>
 		<key>BF2C7CBD-67E0-45CC-8948-E68291FF2B50</key>
 		<dict>
@@ -11332,7 +11334,7 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<key>xpos</key>
 			<integer>525</integer>
 			<key>ypos</key>
-			<integer>5525</integer>
+			<integer>5540</integer>
 		</dict>
 		<key>CCB61EC0-26E7-4CE6-9703-BF95602B73D6</key>
 		<dict>
@@ -11738,7 +11740,7 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<key>xpos</key>
 			<integer>410</integer>
 			<key>ypos</key>
-			<integer>7610</integer>
+			<integer>7595</integer>
 		</dict>
 		<key>EDD0CFEF-63C0-4BD0-8E9E-4BD5B43D92DD</key>
 		<dict>
@@ -11906,8 +11908,8 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 		<string>.</string>
 		<key>use_quickadd</key>
 		<string>true</string>
-		<key>vault_name</key>
-		<string></string>
+		<key>vault_name_ENC</key>
+		<string>Vault</string>
 		<key>vault_path</key>
 		<string>/Users/chrisgrieser/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vault</string>
 		<key>workspace_to_spellcheck</key>
@@ -11919,11 +11921,11 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 		<string>daily_note_path</string>
 		<string>discord_ready_links</string>
 		<string>use_quickadd</string>
+		<string>vault_name_ENC</string>
 		<string>workspace_to_spellcheck</string>
 		<string>h_lvl_ignore</string>
 		<string>svg_size</string>
 		<string>template_note_path</string>
-		<string>vault_name</string>
 		<string>vault_path</string>
 	</array>
 	<key>version</key>

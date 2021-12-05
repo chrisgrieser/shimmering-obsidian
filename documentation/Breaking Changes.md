@@ -19,7 +19,7 @@
 <!-- /MarkdownTOC -->
 
 ## Version 2.9
-After updating to version 2.9+, you need to either enter your vault __name__ in the workflow configurations (`vault_name`) or re-run `osetup` once.
+After updating to version 2.9+, you need to re-run `osetup` once.
 
 ## Version 2.8
 - Converting a font file to base64 will prompt for the format and copy to the clipboard instead of saving to the snippet folder.
