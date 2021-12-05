@@ -78,6 +78,8 @@ const jsonArray = [];
 fileArray.forEach(file => {
 	const filename = file.fileName;
 	const relativePath = file.relativePath;
+	const absolutePath = vaultPath + "/" + relativePath;
+
 
 	let tagMatcher = "";
 	if (file.tags) tagMatcher = " #" + file.tags.join(" #");
@@ -128,7 +130,8 @@ fileArray.forEach(file => {
 		"match": alfredMatcher(filename) + tagMatcher + " filename name title",
 		"subtitle": "▸ " + parentFolder(relativePath),
 		"arg": relativePath,
- 		"type": "file:skipcheck",
+		"quicklookurl": absolutePath,
+		"type": "file:skipcheck",
 		"uid": relativePath,
 		"icon": { "path": iconpath },
 		"mods": {
@@ -147,6 +150,7 @@ fileArray.forEach(file => {
 				"match": additionalMatcher + "alias " + alfredMatcher(alias),
 				"subtitle": "↪ " + filename,
 				"arg": relativePath,
+				"quicklookurl": absolutePath,
 				"type": "file:skipcheck",
 				"uid": alias + "_" + relativePath,
 				"icon": { "path": "icons/alias.png" },
@@ -176,7 +180,8 @@ fileArray.forEach(file => {
 			"match": matchStr,
 			"subtitle": "➣ " + filename,
 			"arg": relativePath + "#" + hName,
-	 		"type": "file:skipcheck",
+			"quicklookurl": absolutePath,
+			"type": "file:skipcheck",
 			"uid": hName + "_" + relativePath,
 			"icon": { "path": iconpath },
 			"mods": {
@@ -200,7 +205,7 @@ folderArray.forEach(absolutePath => {
 		"match": alfredMatcher(name) + " folder",
 		"subtitle": "▸ " + parentFolder(relativePath) + "   [↵: Browse]",
 		"arg": relativePath,
- 		"type": "file:skipcheck",
+		"type": "file:skipcheck",
 		"uid": relativePath,
 		"icon": { "path": "icons/folder.png" },
 		"mods": {
