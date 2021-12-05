@@ -9415,7 +9415,7 @@ Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (r
 
 ⚠️⚠️ BREAKING CHANGE! ⚠️⚠️
 ============================
-After updating to version 2.9+, you need to either enter your vault NAME in the workflow configuration to the right or re-run `osetup`.</string>
+After updating to version 2.9+, you need to re-run `osetup` once.</string>
 	<key>uidata</key>
 	<dict>
 		<key>01DCEAE6-93DC-452F-86C2-6694ED7CB436</key>
@@ -11929,7 +11929,7 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 		<string>vault_path</string>
 	</array>
 	<key>version</key>
-	<string>2.8.2</string>
+	<string>2.9</string>
 	<key>webaddress</key>
 	<string>https://chris-grieser.de/</string>
 </dict>
