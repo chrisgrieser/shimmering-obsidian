@@ -8740,11 +8740,11 @@ echo | git pull</string>
 				<key>script</key>
 				<string>tell application id "com.runningwithcrayons.Alfred" to set configuration "vault_path" to value "{query}" in workflow (system attribute "alfred_workflow_bundleid")</string>
 				<key>scriptargtype</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>scriptfile</key>
-				<string></string>
+				<string>scripts/osetup_2.js</string>
 				<key>type</key>
-				<integer>6</integer>
+				<integer>8</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
@@ -8815,7 +8815,7 @@ end tell</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string>scripts/osetup_2.applescript</string>
+				<string>scripts/osetup_3.applescript</string>
 				<key>type</key>
 				<integer>8</integer>
 			</dict>
@@ -9409,7 +9409,13 @@ https://github.com/chrisgrieser/shimmering-obsidian/blob/main/Changelog.md
 
 Credits
 -------
-Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (rl). https://chris-grieser.de/</string>
+Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (rl). https://chris-grieser.de/
+
+----------------------------------------------------------------
+
+⚠️⚠️ BREAKING CHANGE! ⚠️⚠️
+============================
+After updating to version 2.9+, you need to either enter your vault NAME in the workflow configuration to the right or re-run `osetup`.</string>
 	<key>uidata</key>
 	<dict>
 		<key>01DCEAE6-93DC-452F-86C2-6694ED7CB436</key>
@@ -11900,6 +11906,8 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 		<string>.</string>
 		<key>use_quickadd</key>
 		<string>true</string>
+		<key>vault_name</key>
+		<string></string>
 		<key>vault_path</key>
 		<string>/Users/chrisgrieser/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vault</string>
 		<key>workspace_to_spellcheck</key>
@@ -11915,6 +11923,7 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 		<string>h_lvl_ignore</string>
 		<string>svg_size</string>
 		<string>template_note_path</string>
+		<string>vault_name</string>
 		<string>vault_path</string>
 	</array>
 	<key>version</key>
