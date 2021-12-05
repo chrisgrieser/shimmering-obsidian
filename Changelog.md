@@ -1,3 +1,4 @@
+- 2021-12-05	release 2.9
 - 2021-12-05	+ prepared multi-vault-support (⚠️ Breaking Change) and fixed #34
 - 2021-12-04	release 2.8.2
 - 2021-12-04	+ fixed display of headings in documentation search
