@@ -1,7 +1,6 @@
 #!/usr/bin/env osascript -l JavaScript
 
-/* eslint-disable camelcase */
-function run (){ /* exported run */
+function run () { /* exported run */
 	ObjC.import("stdlib");
 	ObjC.import("Foundation");
 	app = Application.currentApplication();
@@ -16,21 +15,20 @@ function run (){ /* exported run */
 		return ObjC.unwrap(str);
 	};
 
-	function parentFolder (filePath){
+	function parentFolder (filePath) {
 		if (!filePath.includes("/")) return "/";
 		return filePath.split("/").slice(0, -1).join("/");
 	}
 
-	function alfredMatcher (str){
+	function alfredMatcher (str) {
 		return str.replace (/[-()_.]/g, " ") + " " + str;
 	}
 
 	// Import Data
-	const homepath = app.pathTo("home folder");
-	const vault_path = $.getenv("vault_path").replace(/^~/, homepath);
-	const metadataJSON = vault_path + "/.obsidian/plugins/metadata-extractor/metadata.json";
-	const starredJSON = vault_path + "/.obsidian/starred.json";
-	const recentJSON = vault_path + "/.obsidian/workspace";
+	const vaultPath = $.getenv("vault_path").replace(/^~/, app.pathTo("home folder"));
+	const metadataJSON = vaultPath + "/.obsidian/plugins/metadata-extractor/metadata.json";
+	const starredJSON = vaultPath + "/.obsidian/starred.json";
+	const recentJSON = vaultPath + "/.obsidian/workspace";
 	const jsonArray = [];
 
 	// create input note JSON
@@ -38,67 +36,67 @@ function run (){ /* exported run */
 	// but iconv can't handle emojis, while normal getenv can't handle special
 	// characters. So a filename with special characters AND emojis
 	// will not be handled properly.
-	let input_path = "";
+	let inputPath = "";
 	try {
-		input_path = app.doShellScript ("echo '" + $.getenv("input_path") + "' | iconv -f UTF-8-MAC -t MACROMAN");
+		inputPath = app.doShellScript ("echo '" + $.getenv("input_path") + "' | iconv -f UTF-8-MAC -t MACROMAN");
 	}	catch (error) {
-		input_path = $.getenv("input_path");
+		inputPath = $.getenv("input_path");
 	}
 
-	const meta_JSON = JSON.parse(readFile(metadataJSON));
-	const input_note_JSON =
-		meta_JSON.filter(n => n.relativePath.includes(input_path)) [0];
+	const metaJSON = JSON.parse(readFile(metadataJSON));
+	const inputNoteJSON =
+		metaJSON.filter(n => n.relativePath.includes(inputPath))[0];
 
 	// create list of links and backlinks and merge them
-	let both_links_list = [];
-	let link_list = [];
-	let backlink_list = [];
-	if (input_note_JSON.links) {
-		link_list =
-			input_note_JSON
+	let bothLinksList = [];
+	let linkList = [];
+	let backlinkList = [];
+	if (inputNoteJSON.links) {
+		linkList =
+			inputNoteJSON
 				.links
 				.filter(l => l.relativePath)
 				.map(item => item.relativePath);
-		both_links_list.push (...link_list);
+		bothLinksList.push (...linkList);
 	}
-	if (input_note_JSON.backlinks) {
-		backlink_list =
-			input_note_JSON
+	if (inputNoteJSON.backlinks) {
+		backlinkList =
+			inputNoteJSON
 				.backlinks
 				.map(item => item.relativePath);
-		both_links_list.push (...backlink_list);
+		bothLinksList.push (...backlinkList);
 	}
-	both_links_list = [...new Set(both_links_list)]; // only unique items
+	bothLinksList = [...new Set(bothLinksList)]; // only unique items
 
 	// get starred and recent files
-	let starred_files = [];
-	if (readFile(starredJSON) !== ""){
-		starred_files =
+	let starredFiles = [];
+	if (readFile(starredJSON) !== "") {
+		starredFiles =
 			JSON.parse(readFile(starredJSON))
 				.items
 				.filter (item => item.type === "file")
 				.map (item => item.path);
 	}
-	const recent_files =
+	const recentFiles =
 		JSON.parse(readFile(recentJSON))
 			.lastOpenFiles;
 
 	// get external links
-	let external_link_list =
-		readFile(vault_path + "/" + input_path)
+	let externalLinkList =
+		readFile(vaultPath + "/" + inputPath)
 			.match (/\[(?! ]).*?\]\(.*?\)/g); // prevents links in markdown tasks from matching
-	if (external_link_list){
-		external_link_list =	external_link_list.map (mdlink => [
+	if (externalLinkList) {
+		externalLinkList =	externalLinkList.map (mdlink => [
 			mdlink.split("](")[0].slice(1),
 			mdlink.split("](")[1].slice(0, -1)
 		]);
 	} else {
-		external_link_list = [];
+		externalLinkList = [];
 	}
 
 	// guard clause if no links of any sort (should only occur with "ol" command though)
 	// -----------------------------
-	if (both_links_list === null && external_link_list.length === 0){
+	if (bothLinksList === null && externalLinkList.length === 0) {
 		jsonArray.push({
 			"title": "No links recognized in the file.",
 			"subtitle": "Press [Esc] to abort."
@@ -109,32 +107,32 @@ function run (){ /* exported run */
 
 	// create JSON for Script Filter
 	// -----------------------------
-	const file_array = meta_JSON
-		.filter(item => both_links_list.includes(item.relativePath));
+	const fileArray = metaJSON
+		.filter(item => bothLinksList.includes(item.relativePath));
 
-	file_array.forEach(file => {
+	fileArray.forEach(file => {
 		const filename = file.fileName;
 		const relativePath = file.relativePath;
 
 		// >> check link existence of file
 		let hasLinks = false;
-		let links_subtitle = "⛔️ Note without Outgoing Links or Backlinks";
-		const links_existent = "⇧: Browse Links in Note";
+		let linksSubtitle = "⛔️ Note without Outgoing Links or Backlinks";
+		const linksExistent = "⇧: Browse Links in Note";
 		if (file.links) {
-			if (file.links.some(l => l.relativePath)){
+			if (file.links.some(l => l.relativePath)) {
 				hasLinks = true;
-				links_subtitle = links_existent;
+				linksSubtitle = linksExistent;
 			}
 		} else if (file.backlinks) {
 			hasLinks = true;
-			links_subtitle = links_existent;
+			linksSubtitle = linksExistent;
 		} else {
-			const external_link_list =
-				readFile(vault_path + "/" + relativePath)
+			const externalLinkList_ =
+				readFile(vaultPath + "/" + relativePath)
 					.match (/\[.*?\]\(.*?\)/); // no g-flag, since existence of 1 link sufficient
-			if (external_link_list){
+			if (externalLinkList_) {
 				hasLinks = true;
-				links_subtitle = links_existent;
+				linksSubtitle = linksExistent;
 			}
 		}
 
@@ -142,11 +140,11 @@ function run (){ /* exported run */
 		let iconpath = "icons/note.png";
 		let emoji = "";
 		let additionalMatcher = "";
-		if (starred_files.includes(relativePath))	{
+		if (starredFiles.includes(relativePath))	{
 			emoji += "⭐️ ";
 			additionalMatcher += "starred ";
 		}
-		if (recent_files.includes(relativePath)) {
+		if (recentFiles.includes(relativePath)) {
 			emoji += "🕑 ";
 			additionalMatcher += "recent ";
 		}
@@ -154,31 +152,33 @@ function run (){ /* exported run */
 		if (filename.toLowerCase().includes("to do")) emoji += "☑️ ";
 		if (filename.toLowerCase().includes("template")) emoji += "📄 ";
 		if (filename.toLowerCase().includes("inbox")) emoji += "📥 ";
+		if (filename.toLowerCase().includes("moc")) emoji += "🗺 ";
 
 		// >> emojis dependent on link type
 		let linkIcon = "";
-		if (link_list.includes (relativePath)) linkIcon += "🔗 ";
-		if (backlink_list.includes (relativePath)) linkIcon += "⬅️ ";
+		if (linkList.includes (relativePath)) linkIcon += "🔗 ";
+		if (backlinkList.includes (relativePath)) linkIcon += "⬅️ ";
 
 		jsonArray.push({
 			"title": linkIcon + emoji + filename,
 			"match": additionalMatcher + alfredMatcher(filename),
 			"subtitle": "▸ " + parentFolder(relativePath),
 			"type": "file:skipcheck",
+			"quicklookurl": vaultPath + "/" + relativePath,
 			"uid": relativePath,
 			"arg": relativePath,
 			"icon": { "path": iconpath },
 			"mods": {
 				"shift": {
 					"valid": hasLinks,
-					"subtitle": links_subtitle
+					"subtitle": linksSubtitle
 				},
 			},
 		});
 	});
 
 	// add external Links to Script-Filter JSON
-	external_link_list.forEach(link => {
+	externalLinkList.forEach(link => {
 		const title = link[0];
 		const url = link[1];
 		const invalidSubtitle = "⛔️ Cannot do that with external link.";
@@ -207,9 +207,7 @@ function run (){ /* exported run */
 					"valid": false,
 					"subtitle": invalidSubtitle,
 				},
-				"alt": {
-					"subtitle": "⌥: Copy URL",
-				},
+				"alt": { "subtitle": "⌥: Copy URL" },
 			},
 		});
 	});

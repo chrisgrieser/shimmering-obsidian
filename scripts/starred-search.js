@@ -21,8 +21,7 @@ const readFile = function (path, encoding) {
 	return ObjC.unwrap(str);
 };
 
-const homepath = app.pathTo("home folder");
-const vaultPath = $.getenv("vault_path").replace(/^~/, homepath);
+const vaultPath = $.getenv("vault_path").replace(/^~/, app.pathTo("home folder"));
 const metadataJSON = vaultPath + "/.obsidian/plugins/metadata-extractor/metadata.json";
 const starredJSON = vaultPath + "/.obsidian/starred.json";
 const recentJSON = vaultPath + "/.obsidian/workspace";
@@ -88,7 +87,7 @@ fileArray.forEach(file => {
 		const externalLinkList =
 			readFile(vaultPath + "/" + relativePath)
 				.match (/\[.*?\]\(.*?\)/); // no g-flag, since existence of 1 link sufficient
-		if (externalLinkList !== null) {
+		if (externalLinkList) {
 			hasLinks = true;
 			linksSubtitle = linksExistent;
 		}
@@ -96,17 +95,18 @@ fileArray.forEach(file => {
 
 	// push result
 	jsonArray.push({
-		title: emoji + filename,
-		match: additionalMatcher + alfredMatcher(filename),
-		subtitle: "▸ " + parentFolder(relativePath),
-		arg: relativePath,
- 		type: "file:skipcheck",
-		uid: relativePath,
-		icon: { path: iconpath },
-		mods: {
-			shift: { 
-				valid: hasLinks,
-				subtitle: linksSubtitle
+		"title": emoji + filename,
+		"match": additionalMatcher + alfredMatcher(filename),
+		"subtitle": "▸ " + parentFolder(relativePath),
+		"arg": relativePath,
+		"quicklookurl": vaultPath + "/" + relativePath,
+		"type": "file:skipcheck",
+		"uid": relativePath,
+		"icon": { "path": iconpath },
+		"mods": {
+			"shift": {
+				"valid": hasLinks,
+				"subtitle": linksSubtitle
 			},
 		},
 	});
@@ -117,29 +117,29 @@ fileArray.forEach(file => {
 starredSearches.forEach(searchQuery => {
 	const subtitle = "⛔️ Cannot do that with a starred search.";
 	jsonArray.push({
-		title: "⭐️ " + searchQuery,
-		arg: "obsidian://search?vault=" + $.getenv("vault_name_ENC") + "t&query=" + searchQuery,
-		uid: searchQuery,
-		mods: {
-			fn: {
-				subtitle: subtitle,
-				valid: false,
+		"title": "⭐️ " + searchQuery,
+		"arg": "obsidian://search?vault=" + $.getenv("vault_name_ENC") + "t&query=" + searchQuery,
+		"uid": searchQuery,
+		"mods": {
+			"fn": {
+				"subtitle": subtitle,
+				"valid": false,
 			},
-			ctrl: {
-				subtitle: subtitle,
-				valid: false,
+			"ctrl": {
+				"subtitle": subtitle,
+				"valid": false,
 			},
-			cmd: {
-				subtitle: subtitle,
-				valid: false,
+			"cmd": {
+				"subtitle": subtitle,
+				"valid": false,
 			},
-			alt: {
-				subtitle: subtitle,
-				valid: false,
+			"alt": {
+				"subtitle": subtitle,
+				"valid": false,
 			},
-			shift: {
-				subtitle: subtitle,
-				valid: false,
+			"shift": {
+				"subtitle": subtitle,
+				"valid": false,
 			},
 		},
 	});
