@@ -38,7 +38,7 @@ brew install qlmarkdown --cask
 ### QLMarkdown
 QLMarkdown must be started at least once.
 
-
+<img width="654" alt="Screenshot 2021-12-05 01 49 11" src="https://user-images.githubusercontent.com/73286100/144729141-72d8cd41-8e45-43e0-a11a-ce98ba97c2ac.png">
 
 [^1]: _Shimmering Obsidian_ can only control one vault at a time. However, you can switch between the vaults that you want to control with the [Vault Switcher](Vault%20Switcher.md).
 [^2]: From Release 0.13+ on, the Hotkey Helper Plugin won't be needed anymore.  
