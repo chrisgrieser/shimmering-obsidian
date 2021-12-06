@@ -6,6 +6,7 @@ function run () { /* exported run */
 	app = Application.currentApplication();
 	app.includeStandardAdditions = true;
 
+	// Functions
 	const readFile = function (path, encoding) {
 		!encoding && (encoding = $.NSUTF8StringEncoding);
 		const fm = $.NSFileManager.defaultManager;

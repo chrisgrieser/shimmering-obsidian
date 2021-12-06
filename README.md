@@ -5,8 +5,8 @@
 
 <img src="https://user-images.githubusercontent.com/73286100/139678407-9ac39baa-5f49-42a0-9622-0fbaf68540b2.gif" alt="Promo Video" width=70%> 
 
-## ⚠️ Breaking Changes
-When updating from version 1.x to version 2.x, there are some breaking changes for certain commands. Most importantly, this plugin now requires the [Metadata Extractor Plugin](https://github.com/kometenstaub/metadata-extractor) to run most of its features.
+## ⚠️ Breaking Changes when upgrading to 2.9+
+When upgrading to 2.9 or later, you need to re-run the `osetup` command *once*.
 
 Please refer to the [Breaking Changes Documentation](documentation/Breaking%20Changes.md) for more in-detail information.
 
