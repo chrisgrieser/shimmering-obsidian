@@ -96,7 +96,7 @@ function run () { /* exported run */
 
 	// guard clause if no links of any sort (should only occur with "ol" command though)
 	// -----------------------------
-	if (bothLinksList === null && externalLinkList.length === 0) {
+	if (!bothLinksList && !externalLinkList) {
 		jsonArray.push({
 			"title": "No links recognized in the file.",
 			"subtitle": "Press [Esc] to abort."
