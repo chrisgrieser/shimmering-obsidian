@@ -8514,7 +8514,7 @@ echo | git pull</string>
 				<key>subtext</key>
 				<string>Obsidian42 BRAT</string>
 				<key>text</key>
-				<string>Add Beta Plugin</string>
+				<string>❇️ Add Beta Plugin</string>
 				<key>withspace</key>
 				<false/>
 			</dict>
@@ -8594,7 +8594,7 @@ echo | git pull</string>
 				<key>subtext</key>
 				<string>Obsidian42 BRAT</string>
 				<key>text</key>
-				<string>Open GitHub Repository of Beta Plugin</string>
+				<string>🌐 Open GitHub Repository of Beta Plugin</string>
 				<key>withspace</key>
 				<false/>
 			</dict>
@@ -11922,8 +11922,8 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 		<string>discord_ready_links</string>
 		<string>use_quickadd</string>
 		<string>vault_name_ENC</string>
-		<string>workspace_to_spellcheck</string>
 		<string>h_lvl_ignore</string>
+		<string>workspace_to_spellcheck</string>
 		<string>svg_size</string>
 		<string>template_note_path</string>
 		<string>vault_path</string>
