@@ -8,7 +8,7 @@
 ## ⚠️ Breaking Changes when upgrading to 2.9+
 When upgrading to 2.9 or later, you need to re-run the `osetup` command *once*.
 
-Please refer to the [Breaking Changes Documentation](documentation/Breaking%20Changes.md) for more in-detail information.
+Please refer to the [Breaking Changes Documentation](documentation/Breaking%20Changes.md) for more in-detail information and for information on breaking changes when updating from older versions.
 
 ## Installation & Configuration
 - [Installation and Setup](documentation/Installation.md)
