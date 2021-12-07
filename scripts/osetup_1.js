@@ -22,7 +22,6 @@ for (const hash in vaultList) vaultArray.push(vaultList[hash].path);
 const jsonArray = [];
 vaultArray.forEach(vaultPath => {
 	const vaultName = vaultPath.replace(/.*\//, "");
-	const shortPath = vaultPath.replace (/\/Users\/[^/]*/, "~");
 	let subtitle = "Control this vault with 'Shimmering Obsidian'";
 	if (vaultArray.length === 1) subtitle = "Confirm with 'return' that this is your vault.";
 

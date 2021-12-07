@@ -14,6 +14,7 @@ function readFile (path, encoding) {
 }
 
 const vaultPath = $.getenv("vault_path").replace(/^~/, app.pathTo("home folder"));
+const URIstart = "obsidian://advanced-uri?vault=" + $.getenv("vault_name_ENC");
 const jsonArray = [];
 
 const standardSettings = JSON.parse(readFile("./data/settings-database.json"));
@@ -35,15 +36,18 @@ enabledCorePlugins.forEach(pluginID => {
 		.filter(item => item.id === pluginID)[0]
 		.title;
 
+	const URI = URIstart + "&settingid=" + pluginID;
+
 	jsonArray.push({
 		"title": pluginName,
 		"uid": pluginID,
 		"match": pluginName,
-		"arg": "obsidian://advanced-uri?settingid=" + pluginID,
+		"arg": URI,
 		"icon": { "path": "icons/plugin.png" },
 		"mods": {
 			"alt": { "valid": false },
 			"cmd": { "valid": false },
+			"fn": { "valid": false },
 			"ctrl": {
 				"arg": pluginID,
 				"subtitle": "⌃: Copy plugin ID '" + pluginID + "'",
@@ -55,26 +59,29 @@ enabledCorePlugins.forEach(pluginID => {
 
 standardSettings.forEach(setting => {
 
-	let idURI = "obsidian://advanced-uri?settingid=" + setting.id;
-	if (setting.id === "updateplugins") idURI = "obsidian://advanced-uri?updateplugins=true";
+	let URI = URIstart + "&settingid=" + setting.id;
+	if (setting.id === "updateplugins") URI = URIstart + "&updateplugins=true";
 
 	jsonArray.push({
 		"title": setting.title,
 		"match": setting.match,
 		"uid": setting.id,
-		"arg": idURI,
+		"arg": URI,
 		"mods": {
 			"alt": { "valid": false },
 			"cmd": { "valid": false },
 			"ctrl": { "valid": false },
+			"fn": { "valid": false },
 		}
 	});
 });
 
 installedPlugins.forEach(pluginFolder => {
+	const pluginFolderPath = vaultPath + "/.obsidian/plugins/" + pluginFolder;
+
 	let manifest = "";
 	try {
-		manifest = JSON.parse(readFile(vaultPath + "/.obsidian/plugins/" + pluginFolder + "/manifest.json"));
+		manifest = JSON.parse(readFile(pluginFolderPath + "/manifest.json"));
 	} catch (error) {
 		// catches error caused by plugins without "manifest.json" (beta plugins)
 		manifest = {
@@ -83,11 +90,16 @@ installedPlugins.forEach(pluginFolder => {
 		};
 	}
 
-	const pluginFolderPath = vaultPath + "/.obsidian/plugins/" + pluginFolder;
 	const finderApp = Application("Finder");
 	const isDeveloped = finderApp.exists(Path(pluginFolderPath + "/.git"));
-	let devIcon = "";
-	if (isDeveloped) devIcon = " ⚙️";
+	let devIcon, devSubtitle;
+	if (isDeveloped) {
+		devIcon = " ⚙️";
+		devSubtitle = "fn: git pull";
+	} else {
+		devIcon = "";
+		devSubtitle = "No '.git' folder found.";
+	}
 
 	let pluginEnabled = false;
 	let settingSubtitle = "🛑 disabled";
@@ -96,16 +108,23 @@ installedPlugins.forEach(pluginFolder => {
 		settingSubtitle = "";
 	}
 
+	const URI = URIstart + "&settingid="+ manifest.id;
+
 	jsonArray.push({
 		"title": manifest.name + devIcon,
 		"uid": manifest.id,
 		"subtitle": settingSubtitle,
-		"arg": "obsidian://advanced-uri?settingid=" + manifest.id,
+		"arg": URI,
 		"icon": { "path": "icons/plugin.png" },
 		"valid": pluginEnabled,
 		"mods": {
 			"alt": { "arg": pluginFolderPath },
 			"cmd": { "arg": pluginFolderPath },
+			"fn": {
+				"arg": pluginFolderPath,
+				"valid": isDeveloped,
+				"subtitle": devSubtitle,
+			},
 			"ctrl": {
 				"arg": manifest.id,
 				"subtitle": "⌃: Copy plugin ID '" + manifest.id + "'",

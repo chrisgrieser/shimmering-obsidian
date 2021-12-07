@@ -1485,7 +1485,7 @@
 				<key>modifiers</key>
 				<integer>8388608</integer>
 				<key>modifiersubtext</key>
-				<string>fn: git pull</string>
+				<string></string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
