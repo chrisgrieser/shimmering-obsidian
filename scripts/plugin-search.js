@@ -78,7 +78,10 @@ pluginJSON.forEach(plugin => {
 			},
 			"fn": { "arg": githubURL },
 			"shift": { "arg": repo + ";" + id + ";" + name },
-			"ctrl": { "subtitle": "by " + author + downloadsStr + "  —  plugin ID: " + id + " (⌃: Copy ID)" },
+			"ctrl": {
+				"arg": id,
+				"subtitle": "by " + author + "   " + downloadsStr + "       ID: " + id + " (⌃: Copy ID)"
+			},
 		}
 	});
 });
