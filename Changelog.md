@@ -1,3 +1,4 @@
+- 2021-12-07	release 2.9.3
 - 2021-12-06	release 2.9.2
 - 2021-12-06	+ prevented failure of osetup when having a non-selected vault in the foreground while using osetup
 - 2021-12-06	+ minor improvements to 'osvg'
