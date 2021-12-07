@@ -15,10 +15,10 @@
 <!-- /MarkdownTOC -->
 
 ## Paste URL into selection
+⚠️ *Deprecated – this feature will not be further developed and potentially replaced due plugins able to achieve the same thing better.*
 **`Triggered via Hotkey`: Paste URL into selection.**
-- Basically replicates the functionality of the [plugin of the same name](https://github.com/denolehov/obsidian-url-into-selection), which unfortunately does not work anymore. 
 - When you have text selected and an URL in your clipboard, this will automatically turn the selected text into a Markdown link with the URL from the clipboard.
-- Suggested keyboard shortcut is something like `cmd + k` 
+- Suggested keyboard shortcut is something like `cmd + K` 
 - 💡 Turn off respective hotkey in Obsidian to avoid conflicts.
 
  <img src="https://user-images.githubusercontent.com/73286100/133614452-ef3147bf-7cd1-4dad-9b76-880f93fdcdf8.gif" alt="paste url into selection" width=50%>
@@ -62,4 +62,3 @@ end tell
 - Update your Beta Plugins (installed via [the BRAT Plugin](https://github.com/TfTHacker/obsidian42-brat))
 - Re-index the data for the [Documentation Search](Documentation%20Search.md).
 - Refresh the metadata used for this workflow manually or set an interval to refresh it automatically. See the section on [workflow configuration for more information](Workflow%20Configuration.md#Metadata-Extractor-Configuration)
-
