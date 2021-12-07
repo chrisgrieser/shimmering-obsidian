@@ -2762,6 +2762,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>DBC87028-34A2-44C9-BB87-6DDCE8C65CED</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>ACE1AA07-094D-46BB-8462-D4CDFF0E337B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>DD45D94E-9E2C-4477-9E37-66338FDCF4D0</key>
 		<array>
 			<dict>
@@ -3254,7 +3267,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>ACE1AA07-094D-46BB-8462-D4CDFF0E337B</string>
+				<string>DBC87028-34A2-44C9-BB87-6DDCE8C65CED</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -4651,6 +4664,23 @@ cat "$template_note"</string>
 			<string>alfred.workflow.output.callexternaltrigger</string>
 			<key>uid</key>
 			<string>ACE1AA07-094D-46BB-8462-D4CDFF0E337B</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{var:title}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>DBC87028-34A2-44C9-BB87-6DDCE8C65CED</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -11043,7 +11073,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>colorindex</key>
 			<integer>6</integer>
 			<key>xpos</key>
-			<integer>815</integer>
+			<integer>890</integer>
 			<key>ypos</key>
 			<integer>1355</integer>
 		</dict>
@@ -11486,6 +11516,17 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<key>ypos</key>
 			<integer>1905</integer>
 		</dict>
+		<key>DBC87028-34A2-44C9-BB87-6DDCE8C65CED</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>9</integer>
+			<key>note</key>
+			<string>pass relative path</string>
+			<key>xpos</key>
+			<integer>815</integer>
+			<key>ypos</key>
+			<integer>1385</integer>
+		</dict>
 		<key>DD45D94E-9E2C-4477-9E37-66338FDCF4D0</key>
 		<dict>
 			<key>colorindex</key>
@@ -11907,7 +11948,7 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 		<key>thousand_separator</key>
 		<string>.</string>
 		<key>use_quickadd</key>
-		<string>true</string>
+		<string>false</string>
 		<key>vault_name_ENC</key>
 		<string>Vault</string>
 		<key>vault_path</key>
@@ -11922,8 +11963,8 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 		<string>discord_ready_links</string>
 		<string>use_quickadd</string>
 		<string>vault_name_ENC</string>
-		<string>workspace_to_spellcheck</string>
 		<string>h_lvl_ignore</string>
+		<string>workspace_to_spellcheck</string>
 		<string>svg_size</string>
 		<string>template_note_path</string>
 		<string>vault_path</string>
