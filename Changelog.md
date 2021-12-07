@@ -1,3 +1,5 @@
+- 2021-12-07	+ plugin id can be in op search can now be copied
+- 2021-12-07	release 2.9.4
 - 2021-12-07	release 2.9.3
 - 2021-12-06	release 2.9.2
 - 2021-12-06	+ prevented failure of osetup when having a non-selected vault in the foreground while using osetup
