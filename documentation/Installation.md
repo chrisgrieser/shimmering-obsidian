@@ -14,7 +14,7 @@ These requirements **need to be installed**, since this workflow cannot work wit
 ## Workflow Installation
 1. Install the requirements listed above. (ℹ️ When you have multiple vaults, you have to install them in each.)
 2. Download the [latest release at GitHub](https://github.com/chrisgrieser/shimmering-obsidian/releases/latest). Double-click the `.alfredworkflow` file to install it.
-3. Run the Alfred Command `osetup` and select the vault you want to control with _Shimmering Obsidian_. Obsidian will then restart.[^1] Even if you have only one vault, you need to confirm that one vault once before you can use the workflow.
+3. Run the Alfred Command `osetup` and select the vault you want to control with _Shimmering Obsidian_.[^1] Obsidian will then restart. (Even if you have only one vault, you need to confirm that one vault once before you can use the workflow. )
 4. _Recommended:_ After installing the workflow, you should configure the settings of this workflow to make use of most of its features. Refer to the [Workflow Configuration](Workflow%20Configuration.md) for further information.
 
 ## Optional Requirements

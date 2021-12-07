@@ -5,24 +5,20 @@
 ## Table of Contents
 <!-- MarkdownTOC -->
 
-- [Metadata Extractor Configuration](#metadata-extractor-configuration)
 - [Alfred Environment Variables](#alfred-environment-variables)
 	- [Alfred-based Quick Switcher](#alfred-based-quick-switcher)
 	- [New Note Creation](#new-note-creation)
 	- [Screenshots Features](#screenshots-features)
-	- [Plugin and Theme Search](#plugin-and-theme-search)
+	- [Plugin & Theme Search](#plugin--theme-search)
 	- [Backups](#backups)
 	- [Miscellaneous](#miscellaneous)
 	- [Internal](#internal)
-- [Setting up Hotkeys](#setting-up-hotkeys)
+- [Setting up the Hotkeys](#setting-up-the-hotkeys)
 - [For Users familiar with Alfred](#for-users-familiar-with-alfred)
 - [Default Terminal](#default-terminal)
+- [Metadata Extractor Plugin Configuration](#metadata-extractor-plugin-configuration)
 
 <!-- /MarkdownTOC -->
-
-## Metadata Extractor Configuration
-- **⚠️ Do not change any of the default values how the metadata extractor names its output files and where they are placed — otherwise this workflow won't be able to find them.**
-- The setting _should_ change is the one regarding the automatic refreshing of the metadata files. The higher the frequency, the more accurate the Quick Switcher of this Alfred workflow will become. (You can also use `oupdate → Set Metadata Update Frequency` to change this setting conveniently via Alfred.)
 
 <img src="https://i.imgur.com/7YnQJ7K.png" alt="Metadata Extractor Settings" width=70%>
 
@@ -46,7 +42,7 @@ You access the main workflow configuration by clicking the *`[x]`* at the top ri
 - `open_after_screenshot`: When doing an OCR screenshot or an image screenshot, will open the note afterwards. Accepts `true` or `false`.
 - `screenshot_path`: *Absolute* path to the folder where the screenshots should be saved to. Must be a folder in your vault to be embedded correctly. When empty, will save them the images to `{vault-path}/screenshots/`.
 
-### Plugin and Theme Search
+### Plugin & Theme Search
 - `thousand_seperator`: The thousand separator to use when download numbers are displayed, e.g., `.` or `,`.
 - `download_folder_path`: Path where downloads from the `op` search should be placed. (cloned repositories for plugins or the main CSS-file for themes.)
 
@@ -62,18 +58,23 @@ You access the main workflow configuration by clicking the *`[x]`* at the top ri
 - `auto_update`: Periodically check for updates *of this workflow* and update automatically. Accepts `true` or `false`.
 
 ### Internal
-These variables are only here for internal and debugging reasons, you do not need (and normally shouldn't) change them. (The [`osetup` command](#metadata-extractor-configuration) fills them in automatically.)
+These variables are only here for internal and debugging reasons, you do not need to (and normally shouldn't) change them. 
 
 - `vault_path`: The *absolute* path to your obsidian vault.
 - `vault_name_ENC`: The encoded name of you vault.
 
-## Setting up Hotkeys
+## Setting up the Hotkeys
 At the top left of the workflow, there are some sky-blue fields. You need to double-click them to set the Keyboard Shortcuts you want to use for the respective commands.
 
-<img src="https://i.imgur.com/wlpht7f.png" alt="Setting Hotkeys" width=15% height=15%>
+<img src="https://i.imgur.com/wlpht7f.png" alt="Setting up Hotkeys" width=15%>
 
 ## For Users familiar with Alfred
 You can change any keyword mentioned, like with any other Alfred workflow. All keyword triggers are located to the very left of this workflow.
 
 ## Default Terminal
 You can change the default terminal used by this workflow [in the Alfred Settings](https://www.alfredapp.com/help/features/terminal/).
+
+## Metadata Extractor Plugin Configuration
+- **⚠️ Do not change any of the default values how the metadata extractor names its output files and where they are placed — otherwise this workflow won't be able to find them.**
+- The _only_ setting you can change is the one regarding the automatic refreshing of the metadata files. The higher the frequency, the more accurate the Quick Switcher of this Alfred workflow will become.
+- You can also use `oupdate → Set Metadata Update Frequency` to change this setting via Alfred.
