@@ -4,18 +4,18 @@ ObjC.import("stdlib");
 app = Application.currentApplication();
 app.includeStandardAdditions = true;
 
-function alfredMatcher (str){
+function alfredMatcher (str) {
 	return str.replace (/[-()_.]/g, " ") + " " + str;
 }
-function onlineJSON (url){
+function onlineJSON (url) {
 	return JSON.parse (app.doShellScript("curl -s \"" + url + "\""));
 }
-function insert1000sep (num){
+function insert1000sep (num) {
 	let numText = String(num);
-	if (num >= 10000) numText =
+	if (num >= 10000) {numText =
 		numText.slice(0, -3) +
 		$.getenv("thousand_separator") +
-		numText.slice (-3);
+		numText.slice (-3);}
 	return numText;
 }
 
@@ -40,7 +40,7 @@ pluginJSON.forEach(plugin => {
 
 	const githubURL = "https://github.com/" + repo;
 	const pluginUri = "obsidian://goto-plugin?id=" + id; // Community Browser URI with Hotkey Helper https://github.com/pjeby/hotkey-helper#plugin-urls
-	let shareURL, isDiscordReady;
+	let isDiscordReady, shareURL;
 	if (discordReadyLinks) {
 		shareURL = "<" + githubURL + ">";
 		isDiscordReady = " (discord ready)";
@@ -51,7 +51,7 @@ pluginJSON.forEach(plugin => {
 
 	// Download Numbers
 	let downloadsStr = "";
-	if (downloadsJSON[id]){
+	if (downloadsJSON[id]) {
 		const downloads = downloadsJSON[id].downloads;
 		downloadsStr = "  ↓ " + insert1000sep(downloads);
 	}
@@ -71,17 +71,14 @@ pluginJSON.forEach(plugin => {
 		"arg": pluginUri,
 		"match":	"plugin " + URImatcher + alfredMatcher (name) + " " + alfredMatcher (author) + " " + alfredMatcher (id) + " " + alfredMatcher (description),
 		"mods": {
-			"cmd": {"arg": githubURL },
+			"cmd": { "arg": githubURL },
 			"alt": {
 				"arg": shareURL,
 				"subtitle": "⌥: Copy GitHub Link" + isDiscordReady
 			},
-			"fn": {"arg": githubURL },
-			"shift": {"arg": repo + ";" + id + ";" + name},
-			"ctrl":{
-				"valid": false,
-				"subtitle": "by " + author + downloadsStr + "  —  plugin ID: " + id + " (⌃: Copy ID)",
-			},
+			"fn": { "arg": githubURL },
+			"shift": { "arg": repo + ";" + id + ";" + name },
+			"ctrl": { "subtitle": "by " + author + downloadsStr + "  —  plugin ID: " + id + " (⌃: Copy ID)" },
 		}
 	});
 });
@@ -100,7 +97,7 @@ themeJSON.forEach(theme => {
 	const screenshotURL = rawGitHub + theme.screenshot;
 	const cssURL = rawGitHub + "obsidian.css";
 
-	let shareURL, isDiscordReady;
+	let isDiscordReady, shareURL;
 	if (discordReadyLinks) {
 		shareURL = "<" + githubURL + ">";
 		isDiscordReady = " (discord ready)";
@@ -111,7 +108,7 @@ themeJSON.forEach(theme => {
 
 	let modes = "";
 	let installedIcon = "";
-	if (theme.modes){
+	if (theme.modes) {
 		if (theme.modes.includes("light")) modes += "☀️ ";
 		if (theme.modes.includes("dark")) modes += "🌒 ";
 	}
@@ -127,7 +124,7 @@ themeJSON.forEach(theme => {
 		"quicklookurl": screenshotURL,
 		"icon": { "path": "icons/css.png" },
 		"mods": {
-			"shift": {"arg": repo },
+			"shift": { "arg": repo },
 			"alt": {
 				"arg": shareURL,
 				"subtitle": "⌥: Copy GitHub Link" + isDiscordReady
