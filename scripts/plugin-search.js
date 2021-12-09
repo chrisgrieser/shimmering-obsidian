@@ -5,7 +5,7 @@ app = Application.currentApplication();
 app.includeStandardAdditions = true;
 
 function alfredMatcher (str) {
-	return str.replace (/[-()_.]/g, " ") + " " + str;
+	return " " + str.replace (/[-()_.@]/g, " ") + " " + str;
 }
 function onlineJSON (url) {
 	return JSON.parse (app.doShellScript("curl -s \"" + url + "\""));
@@ -62,14 +62,14 @@ pluginJSON.forEach(plugin => {
 
 	// Better matching for some plugins
 	let URImatcher = "";
-	if (name.includes("URI")) URImatcher = "URL ";
+	if (name.includes("URI")) URImatcher = "URL";
 
 	// create json for Alfred
 	jsonArray.push({
 		"title": name + installedIcon,
 		"subtitle": description + " — by " + author + downloadsStr,
 		"arg": pluginUri,
-		"match":	"plugin " + URImatcher + alfredMatcher (name) + " " + alfredMatcher (author) + " " + alfredMatcher (id) + " " + alfredMatcher (description),
+		"match":	"plugin " + URImatcher + alfredMatcher (name) + alfredMatcher (author) + alfredMatcher (id) + alfredMatcher (description),
 		"mods": {
 			"cmd": { "arg": githubURL },
 			"alt": {
@@ -122,7 +122,7 @@ themeJSON.forEach(theme => {
 	jsonArray.push({
 		"title": name + installedIcon,
 		"subtitle": modes + "  by " + author,
-		"match": "theme " + author + " " + alfredMatcher(name),
+		"match": "theme" + alfredMatcher(author) + alfredMatcher(name),
 		"arg": githubURL,
 		"quicklookurl": screenshotURL,
 		"icon": { "path": "icons/css.png" },
