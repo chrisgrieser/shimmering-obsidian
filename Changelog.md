@@ -1,3 +1,5 @@
+- 2021-12-09	+ improved matching for plugin and theme search
+- 2021-12-07	release 2.9.6
 - 2021-12-07	release 2.9.5
 - 2021-12-07	+ plugin id can be in op search can now be copied
 - 2021-12-07	release 2.9.4
