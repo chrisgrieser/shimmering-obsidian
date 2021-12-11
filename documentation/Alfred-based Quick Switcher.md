@@ -67,7 +67,7 @@ Displayed alongside the other search results are all headings in your vault. Sel
 - Will display a list of *all* links of the note: outgoing links, backlinks, and external links.
 - Selecting an outgoing link or backlink will open the respective note.
 	- All the modifiers (`⌘/⌃/⌥/fn/⇧ + ↵`) apply the same way as with the main `o` search.
-	- **YES, this means you can repeatedly use `⇧ + ↵` to fully traverse your graph via Alfred! 😎**
+	- **YES, this means you can repeatedly use `⇧ + ↵` to fully traverse your graph via Alfred. 😎**
 - for external links:
 	- Selecting an external link with `↵` will open the link in the default browser.
 	- Press `⌥ + ↵` on an external link to copy the URL to the clipboard instead.
