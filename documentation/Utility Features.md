@@ -62,3 +62,5 @@ end tell
 - Update your Beta Plugins (installed via [the BRAT Plugin](https://github.com/TfTHacker/obsidian42-brat))
 - Re-index the data for the [Documentation Search](Documentation%20Search.md).
 - Refresh the metadata used for this workflow manually or set an interval to refresh it automatically. See the section on [workflow configuration for more information](Workflow%20Configuration.md#Metadata-Extractor-Configuration)
+
+[⬆️ Go Back to Top](#Table-of-Contents)

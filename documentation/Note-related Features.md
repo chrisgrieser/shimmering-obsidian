@@ -34,3 +34,5 @@
 **`om` or `triggered via hotkey`: Move the current note to a different folder in your vault.**
 - This fully replicates the functionality of the `Move File to another folder`.
 - 💡 The reason for this command is that the `Move File to another folder` is only available when the file explorer core plugin is enabled. However, some users of this Alfred workflow (including myself) prefer to fully navigate their vault via Alfred, so that the file explorer isn't really needed anymore — the move command is basically the last thing stopping you from simply deactivating the file explorer plugin.
+
+[⬆️ Go Back to Top](#Table-of-Contents)

@@ -17,3 +17,5 @@
 - If you did all of the above and there is still something not working, create an [issue on GitHub](https://github.com/chrisgrieser/shimmering-obsidian/issues). 
 - Be sure to attach a debugging log, a screenshot, and/or a [screen recording](https://support.apple.com/guide/quicktime-player/record-your-screen-qtp97b08e666/mac). 
 - You can get a **debugging log** by opening the workflow in Alfred preferences and pressing `⌘ D`. A small window will open up which will log everything happening during the execution of the Workflow. Use the malfunctioning part of the workflow once more, copy the content of the log window, and attach it.
+
+[⬆️ Go Back to Top](#Table-of-Contents)

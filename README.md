@@ -10,11 +10,13 @@ After upgrading to 2.9 (or later), you need to re-run the `osetup` command once.
 
 Please refer to the [Breaking Changes Documentation](documentation/Breaking%20Changes.md) for more in-detail information and for information on breaking changes when updating from older versions.
 
-## Installation & Configuration
+## Table of Contents
 - [Installation and Setup](documentation/Installation.md)
 - [Workflow Configuration](documentation/Workflow%20Configuration.md)
 - [Troubleshooting](documentation/Troubleshooting.md)
 - [Changelog](Changelog.md)
+- [Feature Overview](#Feature-Overview)
+- [Credits & Donations](#Credits)
 
 ---
 
@@ -62,6 +64,7 @@ Please refer to the [Breaking Changes Documentation](documentation/Breaking%20Ch
 - Paste URL into selection
 - Dual Mode (Edit + Preview)
 - Conveniently access various folders like `.obsidian` or `.trash`
+- Update Plugins
 - Carl Auto-Responses 🐢
 
 ➡️ [Documentation of all Utility Features](documentation/Utility%20Features.md)
@@ -89,13 +92,13 @@ Please refer to the [Breaking Changes Documentation](documentation/Breaking%20Ch
 
 ---
 
-### 🆕 Settings Search
+### Settings & Local Plugin Search
 - Search & quickly open specific Settings Tabs, the Theme Browser, or the Community Browser.
 - Quickly update all plugins.
 - Open Plugin Settings.
 - Open local plugin folders in `.obsidian/plugins/`
 
-➡️ [Documentation of the Settings Search](documentation/Settings%20Search.md)
+➡️ [Documentation of the Settings Search](documentation/Settings%20and%20Local%20Plugin%20Search.md)
 
 ---
 
@@ -139,6 +142,10 @@ Please refer to the [Breaking Changes Documentation](documentation/Breaking%20Ch
 - Quick Access to cheat sheets for Plugin Development, e.g. the Obsidian API
 
 ➡️ [Documentation of Features for Developers](documentation/Features%20for%20Developers.md)
+
+---
+
+[⬆️ Go Back to Top](#Table-of-Contents)
 
 ---
 

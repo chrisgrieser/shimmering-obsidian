@@ -2,7 +2,7 @@
 
 <img src="https://user-images.githubusercontent.com/73286100/142665796-c588ec37-97b2-446a-841c-e19a92ecaa22.gif" alt="Screen Recording 2021-11-19 at 18 21 21" width=60%>
 
-# Settings Search
+# Settings & Local Plugin Search
 *Introduced in version 2.1*
 
 **`o,`: Search and directly open specific setting tabs.[^1]**
@@ -18,6 +18,8 @@
 ## Tips
 - 💡 `o,` refers to the `⌘ ,` shortcut used to open the settings.
 - For other plugin-related features, see also the [Plugin & Theme Search](Plugin%20and%20Theme%20Search.md).
+
+[⬆️ Go Back to Top](#Table-of-Contents)
 
 [^1]: Thanks to @Vinzent03 for enabling this feature.
 [^2]: You can [change the default terminal in the Alfred Settings](https://www.alfredapp.com/help/features/terminal/).

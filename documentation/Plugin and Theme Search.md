@@ -24,7 +24,7 @@
 - Add `plugin` to the search query to only display themes, e.g., use `op focus plugin` as search query to only display *plugins* with the term `focus`.
 - The `op` search will also consider the name of the plugin's author, meaning the query `op JaneDoe` will return all plugins (and themes) authored by the user `JaneDoe`.
 - The thousand separator used with the download numbers can be set in the [workflow configuration](Workflow%20Configuration.md#Plugin-and-Theme-Search) (`thousand_seperator`).
-- To open local plugin folders and access settings of beta plugins, use the [Settings Search](Settings%20Search.md).
+- To open local plugin folders and access settings of beta plugins, use the [Settings & Local Plugin Search](Settings%20and%20Local%20Plugin%20Search.md).
 
 ## Themes
 **`op`: Combined Search of community `p`lugins and community themes.**
@@ -49,6 +49,8 @@
 
 <img src="https://user-images.githubusercontent.com/73286100/139559362-747b0c57-c29b-45b5-bc62-4ab53c0718c5.gif" alt="Issue Search" width=60%>
 <img src="https://i.imgur.com/AvavR7n.png" alt="update information" width=60%>
+
+[⬆️ Go Back to Top](#Table-of-Contents)
 
 [^1]: Unfortunately, there isn't enough versioning information for themes to do the same for them.
 [^2]: Accessing the settings of an installed plugin via [the plugin search](Plugin%20and%20Theme%20Search.md) (`op`) via `ctrl + ↵` has been disabled in release 2.4.

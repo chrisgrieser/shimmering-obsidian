@@ -40,3 +40,5 @@ At the top left of the workflow, there are some sky-blue fields. You need to dou
 💡 To stay in line with the other macOS keyboard shortcuts for taking screenshots, you can use something like `⌘⇧ + 1` as hotkey.
 
 <img src="https://i.imgur.com/wlpht7f.png" alt="Setting Hotkeys" width=15% height=15%>
+
+[⬆️ Go Back to Top](#Table-of-Contents)

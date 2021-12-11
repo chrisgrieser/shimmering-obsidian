@@ -14,3 +14,5 @@
 ## Forum Search
 **`of`: Search the `f`orum.**
 - Search the official [Obsidian Forum](https://forum.obsidian.md/s).
+
+[⬆️ Go Back to Top](#Table-of-Contents)

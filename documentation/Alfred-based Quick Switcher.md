@@ -95,3 +95,5 @@ Displayed alongside the other search results are all headings in your vault. Sel
 - To avoid accidentally triggering the Quick Look feature, I suggest you turn off activating Quick Look via shift and use `cmd + Y` instead. You can do so with in the Alfred Settings under `Features → Previews`:
 
 <img src="https://i.imgur.com/hDut8wK.png" alt="" width=60%>
+
+[⬆️ Go Back to Top](#Table-of-Contents)

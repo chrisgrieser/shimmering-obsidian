@@ -2,6 +2,16 @@
 
 # Installation
 
+## Table of Contents
+<!-- MarkdownTOC -->
+
+- [Requirements](#requirements)
+- [Workflow Installation](#workflow-installation)
+- [Optional Requirements](#optional-requirements)
+	- [QLMarkdown](#qlmarkdown)
+
+<!-- /MarkdownTOC -->
+
 ## Requirements
 These requirements **need to be installed**, since this workflow cannot work without them.
 
@@ -43,3 +53,5 @@ To enable proper display of YAML headers, you need to enable the respective sett
 
 [^1]: _Shimmering Obsidian_ can only control one vault at a time. However, you can switch between the vaults that you want to control with the [Vault Switcher](Vault%20Switcher.md).
 [^2]: From Release 0.13+ on, the Hotkey Helper Plugin won't be needed anymore.  
+
+[⬆️ Go Back to Top](#Table-of-Contents)

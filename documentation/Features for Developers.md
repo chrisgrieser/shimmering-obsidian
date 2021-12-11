@@ -29,10 +29,10 @@
 
 ## Open various folders related to development
 - Refer to the section on [Quick Access to hidden folders](Utility%20Features.md#Open-Various-Folders) for further information.
-- To quickly open local plugin folders in `.obsidian/plugins/`, use to the [Settings Search](Settings%20Search.md).
+- To quickly open local plugin folders in `.obsidian/plugins/`, use to the [Settings & Local Plugin Search](Settings%20and%20Local%20Plugin%20Search.md).
 
 ## Local plugins
-Refer to the section on [Settings Search](Settings%20Search.md) for further information on how to:
+Refer to the section on [Settings & Local Plugin Search](Settings%20and%20Local%20Plugin%20Search.md) for further information on how to:
 - Open local Folders in Finder or the Terminal.
 - Run `git pull` in a local repository.
 
@@ -45,3 +45,5 @@ Refer to the section on [Settings Search](Settings%20Search.md) for further info
 - Open the repository of a beta plugin.
 - Update all beta plugins.
 - All commands require the [BRAT Plugin](https://github.com/TfTHacker/obsidian42-brat).
+
+[⬆️ Go Back to Top](#Table-of-Contents)
