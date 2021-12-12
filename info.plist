@@ -4445,6 +4445,32 @@ echo -n "$base64encoded"</string>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>ObjC.import('stdlib');
+Application('com.runningwithcrayons.Alfred').removeConfiguration('ObRunning', {
+  inWorkflow: $.getenv('alfred_workflow_bundleid')
+});</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>scripts/finish-and-debug.js</string>
+				<key>type</key>
+				<integer>8</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>F826AEF3-E14A-4E94-BAD8-359D59B5F1B4</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
 				<integer>0</integer>
 				<key>script</key>
 				<string># THESE VARIABLES MUST BE SET. SEE THE ONEUPDATER README FOR AN EXPLANATION OF EACH.
@@ -4527,29 +4553,6 @@ fi</string>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
 			<string>B0B1C61B-93A6-492E-BD07-2F06FB73F410</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>tell application id "com.runningwithcrayons.Alfred" to remove configuration "ObRunning" in workflow (system attribute "alfred_workflow_bundleid")</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>6</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>F826AEF3-E14A-4E94-BAD8-359D59B5F1B4</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -6198,6 +6201,27 @@ cat "$template_note"</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>'{query}'</string>
+				<key>title</key>
+				<string>✅ Copied to clipboard</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>B81BA4E7-D57D-4746-9387-926DEA6386F9</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>conditions</key>
 				<array>
 					<dict>
@@ -6228,23 +6252,21 @@ cat "$template_note"</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>lastpathcomponent</key>
+				<key>autopaste</key>
 				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<true/>
-				<key>removeextension</key>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
 				<false/>
-				<key>text</key>
-				<string>'{query}'</string>
-				<key>title</key>
-				<string>✅ Copied to clipboard</string>
+				<key>transient</key>
+				<false/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
+			<string>alfred.workflow.output.clipboard</string>
 			<key>uid</key>
-			<string>B81BA4E7-D57D-4746-9387-926DEA6386F9</string>
+			<string>7E35A968-B0D2-449B-B6F5-ECCE886E4BE8</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -6266,25 +6288,6 @@ cat "$template_note"</string>
 			<string>F8A28B5B-0774-406B-BD27-E4F0C69FD6A2</string>
 			<key>version</key>
 			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>autopaste</key>
-				<false/>
-				<key>clipboardtext</key>
-				<string>{query}</string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>transient</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>7E35A968-B0D2-449B-B6F5-ECCE886E4BE8</string>
-			<key>version</key>
-			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -6420,6 +6423,25 @@ cat "$template_note"</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>externaltriggerid</key>
+				<string>open-in-new-pane</string>
+				<key>passinputasargument</key>
+				<true/>
+				<key>passvariables</key>
+				<true/>
+				<key>workflowbundleid</key>
+				<string>self</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>9DA49FEA-E8E8-41DF-9645-53CC395531A2</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>alfredfiltersresults</key>
 				<true/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -6465,25 +6487,6 @@ cat "$template_note"</string>
 			<string>4D2CDFC0-FABC-4A89-AB61-3BEB278DE479</string>
 			<key>version</key>
 			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>externaltriggerid</key>
-				<string>open-in-new-pane</string>
-				<key>passinputasargument</key>
-				<true/>
-				<key>passvariables</key>
-				<true/>
-				<key>workflowbundleid</key>
-				<string>self</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.callexternaltrigger</string>
-			<key>uid</key>
-			<string>9DA49FEA-E8E8-41DF-9645-53CC395531A2</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -10302,7 +10305,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>xpos</key>
 			<integer>2050</integer>
 			<key>ypos</key>
-			<integer>3275</integer>
+			<integer>3265</integer>
 		</dict>
 		<key>5B0C16ED-7757-4376-AB67-2B080E4AAC86</key>
 		<dict>
@@ -10652,7 +10655,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>xpos</key>
 			<integer>2050</integer>
 			<key>ypos</key>
-			<integer>2910</integer>
+			<integer>2900</integer>
 		</dict>
 		<key>80F4A804-DF34-4A90-8659-0BFF41513417</key>
 		<dict>
@@ -10921,7 +10924,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>xpos</key>
 			<integer>2050</integer>
 			<key>ypos</key>
-			<integer>3150</integer>
+			<integer>3140</integer>
 		</dict>
 		<key>9E3B9072-3C3B-4C45-A973-426BC0F7E30F</key>
 		<dict>
@@ -11066,7 +11069,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>xpos</key>
 			<integer>2050</integer>
 			<key>ypos</key>
-			<integer>3030</integer>
+			<integer>3020</integer>
 		</dict>
 		<key>ACE1AA07-094D-46BB-8462-D4CDFF0E337B</key>
 		<dict>
@@ -11122,9 +11125,9 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>note</key>
 			<string>OneUpdater (automatic update function)</string>
 			<key>xpos</key>
-			<integer>2215</integer>
+			<integer>2210</integer>
 			<key>ypos</key>
-			<integer>1220</integer>
+			<integer>1240</integer>
 		</dict>
 		<key>B1EC7FA6-1C91-4BCD-92C6-66771F207D9A</key>
 		<dict>
@@ -11195,7 +11198,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>xpos</key>
 			<integer>2230</integer>
 			<key>ypos</key>
-			<integer>2910</integer>
+			<integer>2900</integer>
 		</dict>
 		<key>BA61A0A6-C130-430F-9729-6F6132F22C08</key>
 		<dict>
@@ -11790,9 +11793,9 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<key>note</key>
 			<string>auto_update</string>
 			<key>xpos</key>
-			<integer>2105</integer>
+			<integer>2100</integer>
 			<key>ypos</key>
-			<integer>1250</integer>
+			<integer>1270</integer>
 		</dict>
 		<key>EEC26A00-2E86-4743-8879-AB2FD3D614ED</key>
 		<dict>
@@ -11884,9 +11887,9 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<key>colorindex</key>
 			<integer>6</integer>
 			<key>note</key>
-			<string>remove "ObRunning"</string>
+			<string>remove Variables &amp; Logging</string>
 			<key>xpos</key>
-			<integer>1935</integer>
+			<integer>1930</integer>
 			<key>ypos</key>
 			<integer>1240</integer>
 		</dict>

@@ -8,17 +8,17 @@
 - [Requirements](#requirements)
 - [Workflow Installation](#workflow-installation)
 - [Optional Requirements](#optional-requirements)
-	- [QLMarkdown](#qlmarkdown)
+	- [QLMarkdown or Peek?](#qlmarkdown-or-peek)
 
 <!-- /MarkdownTOC -->
 
 ## Requirements
 These requirements **need to be installed**, since this workflow cannot work without them.
 
-| Name                                                                       | Type                      | Function                                                                                                                                                                          |
-| -------------------------------------------------------------------------- | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Powerpack for Alfred](https://www.alfredapp.com/powerpack/)               | Alfred Upgrade            | Needed to access advanced Alfred functionality. (Costs around 30€.)                                                                                                               |
-| [Advanced URI](https://github.com/Vinzent03/obsidian-advanced-uri)         | Obsidian Community Plugin | Required for Alfred to be able to control Obsidian.                                                                                                                               |
+| Name                                                                     | Type                      | Function                                                                                                                                                              |
+| ------------------------------------------------------------------------ | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Powerpack for Alfred](https://www.alfredapp.com/powerpack/)             | Alfred Upgrade            | Needed to access advanced Alfred functionality. (Costs around 30€.)                                                                                                   |
+| [Advanced URI](https://github.com/Vinzent03/obsidian-advanced-uri)       | Obsidian Community Plugin | Required for Alfred to be able to control Obsidian.                                                                                                                   |
 | [Metadata Extractor](https://github.com/kometenstaub/metadata-extractor) | Obsidian Community Plugin | Needed to read Obsidian metadata Third-Party Apps normally do not have access to. (see also [Information on Breaking Changes](Breaking%20Changes.md#New-Requirement)) |
 
 ## Workflow Installation
@@ -30,13 +30,13 @@ These requirements **need to be installed**, since this workflow cannot work wit
 ## Optional Requirements
 These requirements are *only necessary for specific features* of this workflow. If you do not plan to use the respective feature, you can forego installing the requirement for it. It is recommended to install all requirements listed here to be able to use all features of _Shimmering Obsidian_.
 
-| Name                                                                   | Type                      | Function                                                                                        |
-| ---------------------------------------------------------------------- | ------------------------- | ----------------------------------------------------------------------------------------------- |
-| [Hotkey-Helper](https://github.com/pjeby/hotkey-helper)[^2]                | Obsidian Community Plugin | used to open plugins and their configuration directly in Obsidian via `op`                      |
-| [Tesseract](https://tesseract-ocr.github.io/tessdoc/Installation.html) | Third-Party Software      | needed for [OCR screenshots](Screenshot%20Features.md#OCR-Screenshots)                                                                  |
-| [qlmarkdown](https://github.com/sbarex/QLMarkdown)                    | Third-Party Software      | used to preview markdown notes with `shift` or `cmd + Y` when searching with the Alfred-based Quick Switcher |
+| Name                                                                                                                                         | Type                      | Function                                                                                                     |
+| -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| [Hotkey-Helper](https://github.com/pjeby/hotkey-helper)                                                                                  | Obsidian Community Plugin | used to open plugins and their configuration directly in Obsidian via `op`                                   |
+| [Tesseract](https://tesseract-ocr.github.io/tessdoc/Installation.html)                                                                       | Third-Party Software      | needed for [OCR screenshots](Screenshot%20Features.md#OCR-Screenshots)                                       |
+| [QLmarkdown](https://github.com/sbarex/QLMarkdown) (free) OR [Peek](https://apps.apple.com/app/peek-quick-look-extension/id1554235898) (~5€) | Third-Party Software      | used to preview markdown notes with `shift` or `cmd + Y` when searching with the Alfred-based Quick Switcher |
 
-If you have [Homebrew](https://brew.sh/), Tesseract and qlmarkdown can by installed via the following terminal commands:
+If you have [Homebrew](https://brew.sh/), Tesseract and QLmarkdown can by installed via the following terminal commands:
 
 ```bash
 brew install tesseract
@@ -44,14 +44,13 @@ brew install tesseract-lang # for non-English languages
 brew install --cask qlmarkdown
 ```
 
-### QLMarkdown
-QLMarkdown must be started at least once to be able to run. (You may need to right-click the app and select `open`, to be able be able to allow macOS to trust the app.)
-
-To enable proper display of YAML headers, you need to enable the respective setting in the Advanced Options of QLMarkdown.
+### QLMarkdown or Peek?
+[QLmarkdown](https://github.com/sbarex/QLMarkdown) and [Peek](https://apps.apple.com/app/peek-quick-look-extension/id1554235898) both enable previewing of Markdown documents. Peek works with a wide range of other files than Markdown, but costs around 5€. QLMarkdown is free, but only works for Markdown and requires a small setup:
+- QLMarkdown must be started at least once to be able to run. (You may need to right-click the app and select `open`, to be able be able to allow macOS to trust the app.)
+- To enable proper display of YAML headers, you need to enable the respective setting in the Advanced Options of QLMarkdown.
 
 <img width="654" alt="Screenshot 2021-12-05 01 49 11" src="https://user-images.githubusercontent.com/73286100/144729141-72d8cd41-8e45-43e0-a11a-ce98ba97c2ac.png">
 
 [^1]: _Shimmering Obsidian_ can only control one vault at a time. However, you can switch between the vaults that you want to control with the [Vault Switcher](Vault%20Switcher.md).
-[^2]: From Release 0.13+ on, the Hotkey Helper Plugin won't be needed anymore.  
 
 [⬆️ Go Back to Top](#Table-of-Contents)
