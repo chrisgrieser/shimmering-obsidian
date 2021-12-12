@@ -2,10 +2,10 @@
 
 ObjC.import("stdlib");
 ObjC.import("Foundation");
-app = Application.currentApplication();
+const app = Application.currentApplication();
 app.includeStandardAdditions = true;
 
-// > Functions
+// Functions
 function readFile (path, encoding) {
 	if (!encoding) encoding = $.NSUTF8StringEncoding;
 	const fm = $.NSFileManager.defaultManager;
@@ -74,7 +74,6 @@ for (let i = 1; i < 7; i++) {
 
 const jsonArray = [];
 
-// Push files
 fileArray.forEach(file => {
 	const filename = file.fileName;
 	const relativePath = file.relativePath;
@@ -118,7 +117,7 @@ fileArray.forEach(file => {
 		const externalLinkList =
 			readFile(vaultPath + "/" + relativePath)
 				.match (/\[.*?\]\(.*?\)/); // no g-flag, since existence of 1 link sufficient
-		if (externalLinkList !== null) {
+		if (externalLinkList) {
 			hasLinks = true;
 			linksSubtitle = linksExistent;
 		}
@@ -143,7 +142,7 @@ fileArray.forEach(file => {
 	});
 
 	// Aliases
-	if (file.aliases !== undefined) {
+	if (file.aliases) {
 		file.aliases.forEach(alias => {
 			jsonArray.push({
 				"title": alias,

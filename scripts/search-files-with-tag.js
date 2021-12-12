@@ -2,16 +2,15 @@
 
 ObjC.import("stdlib");
 ObjC.import("Foundation");
-app = Application.currentApplication();
+const app = Application.currentApplication();
 app.includeStandardAdditions = true;
 
 function parentFolder (filePath) {
 	if (!filePath.includes("/")) return "/";
 	return filePath.split("/").slice(0, -1).join("/");
 }
-function alfredMatcher (str) {
-	return str.replace (/[-()_.]/g, " ") + " " + str;
-}
+const alfredMatcher = str => " " + str.replace (/[-()_.@]/g, " ") + " " + str + " ";
+
 function readFile (path, encoding) {
 	if (!encoding) encoding = $.NSUTF8StringEncoding;
 	const fm = $.NSFileManager.defaultManager;
@@ -20,8 +19,7 @@ function readFile (path, encoding) {
 	return ObjC.unwrap(str);
 }
 
-const homepath = app.pathTo("home folder");
-const vaultPath = $.getenv("vault_path").replace(/^~/, homepath);
+const vaultPath = $.getenv("vault_path").replace(/^~/, app.pathTo("home folder"));
 const metadataJSON = vaultPath + "/.obsidian/plugins/metadata-extractor/metadata.json";
 const starredJSON = vaultPath + "/.obsidian/starred.json";
 const recentJSON = vaultPath + "/.obsidian/workspace";
@@ -30,30 +28,24 @@ const jsonArray = [];
 
 let starredFiles = [];
 if (readFile(starredJSON) !== "") {
-	starredFiles =
-		JSON.parse(readFile(starredJSON))
-			.items
-			.filter (s => s.type === "file")
-			.map (s => s.path);
+	starredFiles = JSON.parse(readFile(starredJSON))
+		.items
+		.filter (s => s.type === "file")
+		.map (s => s.path);
 }
 
-const recentFiles =
-	JSON.parse(readFile(recentJSON))
-		.lastOpenFiles;
+const recentFiles = JSON.parse(readFile(recentJSON)).lastOpenFiles;
 
 // filter the metadataJSON for the items w/ relativePaths of tagged files
-let selectedTag = app.doShellScript ("echo '" + $.getenv("selected_tag") + "' | iconv -f UTF-8-MAC -t MACROMAN");
+let selectedTag = readFile($.getenv("alfred_workflow_data") + "/buffer_selectedTag");
 if (mergeNestedTags) selectedTag = selectedTag.split("/")[0];
 
-let fileArray =
-	JSON.parse(readFile(metadataJSON))
-		.filter(j => j.tags);
+let fileArray = JSON.parse(readFile(metadataJSON)).filter(j => j.tags);
 if (mergeNestedTags) {
 	fileArray = fileArray.filter(function (f) {
 		let hasParentTag = false;
 		f.tags.forEach(tag => {
-			if (tag.startsWith(selectedTag + "/")) hasParentTag = true;
-			if (tag === selectedTag) hasParentTag = true;
+			if (tag.startsWith(selectedTag + "/") || tag === selectedTag) hasParentTag = true;
 		});
 		return hasParentTag;
 	});
@@ -100,7 +92,7 @@ fileArray.forEach(file => {
 	} else {
 		const externalLinkList =
 			readFile(vaultPath + "/" + relativePath)
-				.match (/\[.*?\]\(.*?\)/); // no g-flag, since existence of 1 link sufficient
+				.match (/\[.*?\]\(.+\)/); // no g-flag, since existence of 1 link sufficient
 		if (externalLinkList) {
 			hasLinks = true;
 			linksSubtitle = linksExistent;

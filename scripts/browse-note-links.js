@@ -3,26 +3,23 @@
 function run () { /* exported run */
 	ObjC.import("stdlib");
 	ObjC.import("Foundation");
-	app = Application.currentApplication();
+	const app = Application.currentApplication();
 	app.includeStandardAdditions = true;
 
-	// Functions
-	const readFile = function (path, encoding) {
-		!encoding && (encoding = $.NSUTF8StringEncoding);
+	function readFile (path, encoding) {
+		if (!encoding) encoding = $.NSUTF8StringEncoding;
 		const fm = $.NSFileManager.defaultManager;
 		const data = fm.contentsAtPath(path);
 		const str = $.NSString.alloc.initWithDataEncoding(data, encoding);
 		return ObjC.unwrap(str);
-	};
+	}
 
 	function parentFolder (filePath) {
 		if (!filePath.includes("/")) return "/";
 		return filePath.split("/").slice(0, -1).join("/");
 	}
 
-	function alfredMatcher (str) {
-		return str.replace (/[-()_.]/g, " ") + " " + str;
-	}
+	const alfredMatcher = str => " " + str.replace (/[-()_.@]/g, " ") + " " + str + " ";
 
 	// Import Data
 	const vaultPath = $.getenv("vault_path").replace(/^~/, app.pathTo("home folder"));
@@ -36,34 +33,26 @@ function run () { /* exported run */
 	// but iconv can't handle emojis, while normal getenv can't handle special
 	// characters. So a filename with special characters AND emojis
 	// will not be handled properly.
-	let inputPath = "";
-	try {
-		inputPath = app.doShellScript ("echo '" + $.getenv("input_path") + "' | iconv -f UTF-8-MAC -t MACROMAN");
-	}	catch (error) {
-		inputPath = $.getenv("input_path");
-	}
+	const inputPath = readFile($.getenv("alfred_workflow_data") + "/buffer_inputPath");
 
 	const metaJSON = JSON.parse(readFile(metadataJSON));
-	const inputNoteJSON =
-		metaJSON.filter(n => n.relativePath.includes(inputPath))[0];
+	const inputNoteJSON = metaJSON.filter(n => n.relativePath.includes(inputPath))[0];
 
 	// create list of links and backlinks and merge them
 	let bothLinksList = [];
 	let linkList = [];
 	let backlinkList = [];
 	if (inputNoteJSON.links) {
-		linkList =
-			inputNoteJSON
-				.links
-				.filter(l => l.relativePath)
-				.map(item => item.relativePath);
+		linkList = inputNoteJSON
+			.links
+			.filter(l => l.relativePath)
+			.map(item => item.relativePath);
 		bothLinksList.push (...linkList);
 	}
 	if (inputNoteJSON.backlinks) {
-		backlinkList =
-			inputNoteJSON
-				.backlinks
-				.map(item => item.relativePath);
+		backlinkList = inputNoteJSON
+			.backlinks
+			.map(item => item.relativePath);
 		bothLinksList.push (...backlinkList);
 	}
 	bothLinksList = [...new Set(bothLinksList)]; // only unique items
@@ -71,22 +60,18 @@ function run () { /* exported run */
 	// get starred and recent files
 	let starredFiles = [];
 	if (readFile(starredJSON) !== "") {
-		starredFiles =
-			JSON.parse(readFile(starredJSON))
-				.items
-				.filter (item => item.type === "file")
-				.map (item => item.path);
+		starredFiles = JSON.parse(readFile(starredJSON))
+			.items
+			.filter (item => item.type === "file")
+			.map (item => item.path);
 	}
-	const recentFiles =
-		JSON.parse(readFile(recentJSON))
-			.lastOpenFiles;
+	const recentFiles = JSON.parse(readFile(recentJSON)).lastOpenFiles;
 
 	// get external links
-	let externalLinkList =
-		readFile(vaultPath + "/" + inputPath)
-			.match (/\[(?! ]).*?\]\(.*?\)/g); // prevents links in markdown tasks from matching
+	let externalLinkList = readFile(vaultPath + "/" + inputPath)
+		.match (/\[.*?\]\(.+\)/); // no g-flag, since existence of 1 link sufficient
 	if (externalLinkList) {
-		externalLinkList =	externalLinkList.map (mdlink => [
+		externalLinkList = externalLinkList.map (mdlink => [
 			mdlink.split("](")[0].slice(1),
 			mdlink.split("](")[1].slice(0, -1)
 		]);
@@ -95,7 +80,7 @@ function run () { /* exported run */
 	}
 
 	// guard clause if no links of any sort (should only occur with "ol" command though)
-	// -----------------------------
+	// -----------------------------------------------------
 	if (!bothLinksList && !externalLinkList) {
 		jsonArray.push({
 			"title": "No links recognized in the file.",
