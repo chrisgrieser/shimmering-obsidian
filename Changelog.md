@@ -1,3 +1,5 @@
+- 2021-12-13	+ added new settings tab of backlinks core plugin to `o,` settings search (thanks @kometenstaub)
+- 2021-12-13	release 2.9.9
 - 2021-12-13	+ new command 'odebug' for debugging purposes
 - 2021-12-12	release 2.9.8
 - 2021-12-09	release 2.9.7
