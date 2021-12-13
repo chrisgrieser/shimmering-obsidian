@@ -145,10 +145,6 @@ Please refer to the [Breaking Changes Documentation](documentation/Breaking%20Ch
 
 ---
 
-[⬆️ Go Back to Top](#Table-of-Contents)
-
----
-
 ## Credits
 
 ### Thanks
@@ -164,3 +160,7 @@ In my day job, I am a researcher and sociology. In my phD project, I investigate
 
 - [Discord](https://discord.gg/veuWUTm): `@pseudometa#9546`
 - Twitter: [@pseudo_meta](https://twitter.com/pseudo_meta)
+
+---
+
+[⬆️ Go Back to Top](#Table-of-Contents)

@@ -1,0 +1,94 @@
+{
+  "main": {
+    "id": "2b1d0fa49cea47c6",
+    "type": "split",
+    "children": [
+      {
+        "id": "825333da61c1d80a",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Community plugins.md",
+            "mode": "source"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "69e28c69e7912b01",
+    "type": "split",
+    "children": [
+      {
+        "id": "b49f11b07cde785a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c86807d85bf075ac",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "8ba9d24edf60ac29",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "a751c456ae27256b",
+    "type": "split",
+    "children": [
+      {
+        "id": "b9eda12d0e8a75bd",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7f9a5b49ae6c49e8",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Community plugins.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "825333da61c1d80a",
+  "lastOpenFiles": [
+    "Community plugins.md",
+    "Accepted file formats.md"
+  ]
+}
