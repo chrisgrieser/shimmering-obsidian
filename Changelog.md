@@ -1,3 +1,5 @@
+- 2021-12-13	+ new command 'odebug' for debugging purposes
+- 2021-12-12	release 2.9.8
 - 2021-12-09	release 2.9.7
 - 2021-12-09	+ improved matching for plugin and theme search
 - 2021-12-07	release 2.9.6
