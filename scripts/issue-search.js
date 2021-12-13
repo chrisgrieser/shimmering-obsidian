@@ -2,7 +2,7 @@
 
 ObjC.import("stdlib");
 ObjC.import("Foundation");
-app = Application.currentApplication();
+const app = Application.currentApplication();
 app.includeStandardAdditions = true;
 function readFile (path, encoding) {
 	if (!encoding) encoding = $.NSUTF8StringEncoding;
@@ -12,7 +12,7 @@ function readFile (path, encoding) {
 	return ObjC.unwrap(str);
 }
 
-function alfredMatcher (str){
+function alfredMatcher (str) {
 	return " " + str.replace (/[-()_.]/g, " ") + " " + str + " ";
 }
 
@@ -40,7 +40,7 @@ let outOfDate = false;
 let localVersion = "";
 let latestVersion = "";
 
-if ($.getenv("plugin_id")){
+if ($.getenv("plugin_id")) {
 	const vaultPath = $.getenv("vault_path").replace(/^~/, app.pathTo("home folder"));
 	const manifestJSON =
 		vaultPath +
@@ -71,7 +71,7 @@ if (outOfDate) {
 	jsonArray.push({
 		"title": title,
 		"subtitle": subtitle,
-		"arg": "obsidian://advanced-uri?commandid=hotkey-helper%253Aopen-plugins",
+		"arg": "obsidian://advanced-uri?vault=" + $.getenv("vault_name_ENC") + "&updateplugins=true",
 	});
 } else {
 	const newIssueURL = "https://github.com/" +	repo + "/issues/new?title=";
@@ -101,7 +101,7 @@ issueJSON.forEach(issue => {
 	let comments = "";
 	if (issue.comments !== "0") comments = "   💬 " + issue.comments;
 
-	let shareURL, isDiscordReady;
+	let isDiscordReady, shareURL;
 	if (discordReadyLinks) {
 		shareURL = "<" + issue.html_url + ">";
 		isDiscordReady = " (discord ready)";

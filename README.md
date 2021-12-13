@@ -63,7 +63,7 @@ Please refer to the [Breaking Changes Documentation](documentation/Breaking%20Ch
 - Backup your Vault
 - Paste URL into selection
 - Dual Mode (Edit + Preview)
-- Conveniently access various folders like `.obsidian` or `.trash`
+- Access various folders like `.obsidian` or `.trash`
 - Update Plugins
 - Carl Auto-Responses 🐢
 

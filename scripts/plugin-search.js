@@ -1,7 +1,7 @@
 #!/usr/bin/env osascript -l JavaScript
 
 ObjC.import("stdlib");
-app = Application.currentApplication();
+const app = Application.currentApplication();
 app.includeStandardAdditions = true;
 
 function alfredMatcher (str) {
