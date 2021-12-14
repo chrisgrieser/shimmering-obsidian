@@ -1,3 +1,4 @@
+- 2021-12-14	release 2.9.12
 - 2021-12-14	release 2.9.11
 - 2021-12-13	release 2.9.10
 - 2021-12-13	+ added new settings tab of backlinks core plugin to `o,` settings search (thanks @kometenstaub)
