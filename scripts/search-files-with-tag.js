@@ -27,12 +27,12 @@ const mergeNestedTags = $.getenv("merge_nested_tags") === "true" || false;
 const jsonArray = [];
 
 let starredFiles = [];
-if (readFile(starredJSON) !== "") {
-	starredFiles = JSON.parse(readFile(starredJSON))
-		.items
-		.filter (s => s.type === "file")
-		.map (s => s.path);
+if (readFile(starredJSON) !== "") { starredFiles = JSON.parse(readFile(starredJSON))
+	.items
+	.filter (s => s.type === "file")
+	.map (s => s.path);
 }
+
 
 const recentFiles = JSON.parse(readFile(recentJSON)).lastOpenFiles;
 
@@ -41,17 +41,16 @@ let selectedTag = readFile($.getenv("alfred_workflow_data") + "/buffer_selectedT
 if (mergeNestedTags) selectedTag = selectedTag.split("/")[0];
 
 let fileArray = JSON.parse(readFile(metadataJSON)).filter(j => j.tags);
-if (mergeNestedTags) {
-	fileArray = fileArray.filter(function (f) {
+if (mergeNestedTags) { fileArray = fileArray
+	.filter(function (f) {
 		let hasParentTag = false;
 		f.tags.forEach(tag => {
 			if (tag.startsWith(selectedTag + "/") || tag === selectedTag) hasParentTag = true;
 		});
 		return hasParentTag;
 	});
-} else {
-	fileArray = fileArray.filter(j => j.tags.includes(selectedTag));
 }
+else fileArray = fileArray.filter(j => j.tags.includes(selectedTag));
 
 
 fileArray.forEach(file => {
@@ -77,27 +76,16 @@ fileArray.forEach(file => {
 	if (filename.includes("MOC")) emoji += "🗺 ";
 	if (filename.includes("MoC")) emoji += "🗺 ";
 
-	// >> check link existence of file
+	// check link existence of file
 	let hasLinks = false;
-	let linksSubtitle = "⛔️ Note without Outgoing Links or Backlinks";
-	const linksExistent = "⇧: Browse Links in Note";
-	if (file.links) {
-		if (file.links.some(l => l.relativePath)) {
-			hasLinks = true;
-			linksSubtitle = linksExistent;
-		}
-	} else if (file.backlinks) {
-		hasLinks = true;
-		linksSubtitle = linksExistent;
-	} else {
-		const externalLinkList =
-			readFile(vaultPath + "/" + relativePath)
-				.match (/\[.*?\]\(.+\)/); // no g-flag, since existence of 1 link sufficient
-		if (externalLinkList) {
-			hasLinks = true;
-			linksSubtitle = linksExistent;
-		}
+	if (file.links) hasLinks = (file.links.some(l => l.relativePath)); // no relativePath = unresolved link
+	else if (file.backlinks) hasLinks = true;
+	else {
+		const noteContent = readFile(vaultPath + "/" + relativePath);
+		hasLinks = /\[.*?\]\(.+?\)/.test(noteContent);
 	}
+	let linksSubtitle = "⛔️ Note without Outgoing Links or Backlinks";
+	if (hasLinks) linksSubtitle = "⇧: Browse Links in Note";
 
 	// push result
 	jsonArray.push({

@@ -1,7 +1,7 @@
 #!/usr/bin/env osascript -l JavaScript
 
 ObjC.import("stdlib");
-app = Application.currentApplication();
+const app = Application.currentApplication();
 app.includeStandardAdditions = true;
 
 function parentFolder (filePath) {
@@ -10,16 +10,15 @@ function parentFolder (filePath) {
 }
 
 function alfredMatcher (str) {
-	return str.replace (/[-()_.]/g, " ") + " " + str;
+	return " " + str.replace (/[-()_.@]/g, " ") + " " + str + " ";
 }
-
-const readFile = function (path, encoding) {
+function readFile (path, encoding) {
 	!encoding && (encoding = $.NSUTF8StringEncoding);
 	const fm = $.NSFileManager.defaultManager;
 	const data = fm.contentsAtPath(path);
 	const str = $.NSString.alloc.initWithDataEncoding(data, encoding);
 	return ObjC.unwrap(str);
-};
+}
 
 const vaultPath = $.getenv("vault_path").replace(/^~/, app.pathTo("home folder"));
 const metadataJSON = vaultPath + "/.obsidian/plugins/metadata-extractor/metadata.json";
@@ -29,27 +28,22 @@ const jsonArray = [];
 
 let starredFiles = [];
 if (readFile(starredJSON) !== "") {
-	starredFiles =
-		JSON.parse(readFile(starredJSON))
-			.items
-			.filter (item => item.type === "file")
-			.map (item => item.path);
+	starredFiles = JSON.parse(readFile(starredJSON))
+		.items
+		.filter (item => item.type === "file")
+		.map (item => item.path);
 }
 
-const recentFiles =
-	JSON.parse(readFile(recentJSON))
-		.lastOpenFiles;
+const recentFiles = JSON.parse(readFile(recentJSON)).lastOpenFiles;
 
 // filter the metadataJSON for the items w/ relativePaths of starred files
-const fileArray =
-	JSON.parse(readFile(metadataJSON))
-		.filter(item => starredFiles.includes(item.relativePath));
+const fileArray = JSON.parse(readFile(metadataJSON))
+	.filter(item => starredFiles.includes(item.relativePath));
 
-const starredSearches =
-	JSON.parse(readFile(starredJSON))
-		.items
-		.filter (item => item.type === "search")
-		.map (item => item.query);
+const starredSearches = JSON.parse(readFile(starredJSON))
+	.items
+	.filter (item => item.type === "search")
+	.map (item => item.query);
 
 
 fileArray.forEach(file => {
@@ -71,27 +65,16 @@ fileArray.forEach(file => {
 	if (filename.toLowerCase().includes("inbox")) emoji += "📥 ";
 	if (filename.toLowerCase().includes("moc")) emoji += "🗺 ";
 
-	// >> check link existence of file
+	// check link existence of file
 	let hasLinks = false;
-	let linksSubtitle = "⛔️ Note without Outgoing Links or Backlinks";
-	const linksExistent = "⇧: Browse Links in Note";
-	if (file.links) {
-		if (file.links.some(l => l.relativePath)) {
-			hasLinks = true;
-			linksSubtitle = linksExistent;
-		}
-	} else if (file.backlinks) {
-		hasLinks = true;
-		linksSubtitle = linksExistent;
-	} else {
-		const externalLinkList =
-			readFile(vaultPath + "/" + relativePath)
-				.match (/\[.*?\]\(.*?\)/); // no g-flag, since existence of 1 link sufficient
-		if (externalLinkList) {
-			hasLinks = true;
-			linksSubtitle = linksExistent;
-		}
+	if (file.links) hasLinks = (file.links.some(l => l.relativePath)); // no relativePath = unresolved link
+	else if (file.backlinks) hasLinks = true;
+	else {
+		const noteContent = readFile(vaultPath + "/" + relativePath);
+		hasLinks = /\[.*?\]\(.+?\)/.test(noteContent);
 	}
+	let linksSubtitle = "⛔️ Note without Outgoing Links or Backlinks";
+	if (hasLinks) linksSubtitle = "⇧: Browse Links in Note";
 
 	// push result
 	jsonArray.push({

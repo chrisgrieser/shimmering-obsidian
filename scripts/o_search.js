@@ -103,25 +103,14 @@ fileArray.forEach(file => {
 
 	// check link existence of file
 	let hasLinks = false;
-	let linksSubtitle = "⛔️ Note without Outgoing Links or Backlinks";
-	const linksExistent = "⇧: Browse Links in Note";
-	if (file.links) {
-		if (file.links.some(l => l.relativePath)) {
-			hasLinks = true;
-			linksSubtitle = linksExistent;
-		}
-	} else if (file.backlinks) {
-		hasLinks = true;
-		linksSubtitle = linksExistent;
-	} else {
-		const externalLinkList =
-			readFile(vaultPath + "/" + relativePath)
-				.match (/\[.*?\]\(.*?\)/); // no g-flag, since existence of 1 link sufficient
-		if (externalLinkList) {
-			hasLinks = true;
-			linksSubtitle = linksExistent;
-		}
+	if (file.links) hasLinks = (file.links.some(l => l.relativePath)); // no relativePath = unresolved link
+	else if (file.backlinks) hasLinks = true;
+	else {
+		const noteContent = readFile(vaultPath + "/" + relativePath);
+		hasLinks = /\[.*?\]\(.+?\)/.test(noteContent);
 	}
+	let linksSubtitle = "⛔️ Note without Outgoing Links or Backlinks";
+	if (hasLinks) linksSubtitle = "⇧: Browse Links in Note";
 
 	// Notes (file names)
 	jsonArray.push({

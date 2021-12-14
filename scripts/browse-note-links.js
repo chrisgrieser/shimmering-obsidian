@@ -59,25 +59,25 @@ function run () { /* exported run */
 
 	// get starred and recent files
 	let starredFiles = [];
-	if (readFile(starredJSON) !== "") {
-		starredFiles = JSON.parse(readFile(starredJSON))
-			.items
-			.filter (item => item.type === "file")
-			.map (item => item.path);
-	}
+	if (readFile(starredJSON) !== "")
+	{starredFiles = JSON.parse(readFile(starredJSON))
+		.items
+		.filter (item => item.type === "file")
+		.map (item => item.path);}
+
 	const recentFiles = JSON.parse(readFile(recentJSON)).lastOpenFiles;
 
 	// get external links
 	let externalLinkList = readFile(vaultPath + "/" + inputPath)
-		.match (/\[.*?\]\(.+\)/); // no g-flag, since existence of 1 link sufficient
+		.match (/\[.*?\]\(.+?\)/g);
 	if (externalLinkList) {
 		externalLinkList = externalLinkList.map (mdlink => [
 			mdlink.split("](")[0].slice(1),
 			mdlink.split("](")[1].slice(0, -1)
 		]);
-	} else {
-		externalLinkList = [];
 	}
+	else	externalLinkList = [];
+
 
 	// guard clause if no links of any sort (should only occur with "ol" command though)
 	// -----------------------------------------------------
@@ -99,27 +99,16 @@ function run () { /* exported run */
 		const filename = file.fileName;
 		const relativePath = file.relativePath;
 
-		// >> check link existence of file
+		// check link existence of file
 		let hasLinks = false;
-		let linksSubtitle = "⛔️ Note without Outgoing Links or Backlinks";
-		const linksExistent = "⇧: Browse Links in Note";
-		if (file.links) {
-			if (file.links.some(l => l.relativePath)) {
-				hasLinks = true;
-				linksSubtitle = linksExistent;
-			}
-		} else if (file.backlinks) {
-			hasLinks = true;
-			linksSubtitle = linksExistent;
-		} else {
-			const externalLinkList_ =
-				readFile(vaultPath + "/" + relativePath)
-					.match (/\[.*?\]\(.*?\)/); // no g-flag, since existence of 1 link sufficient
-			if (externalLinkList_) {
-				hasLinks = true;
-				linksSubtitle = linksExistent;
-			}
+		if (file.links) hasLinks = (file.links.some(l => l.relativePath)); // no relativePath = unresolved link
+		else if (file.backlinks) hasLinks = true;
+		else {
+			const noteContent = readFile(vaultPath + "/" + relativePath);
+			hasLinks = /\[.*?\]\(.+?\)/.test(noteContent);
 		}
+		let linksSubtitle = "⛔️ Note without Outgoing Links or Backlinks";
+		if (hasLinks) linksSubtitle = "⇧: Browse Links in Note";
 
 		// >> icon & emojis
 		let iconpath = "icons/note.png";
