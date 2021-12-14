@@ -10264,7 +10264,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>note</key>
 			<string>git pull</string>
 			<key>xpos</key>
-			<integer>245</integer>
+			<integer>250</integer>
 			<key>ypos</key>
 			<integer>6900</integer>
 		</dict>
@@ -10460,7 +10460,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 
 takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>xpos</key>
-			<integer>1345</integer>
+			<integer>1340</integer>
 			<key>ypos</key>
 			<integer>1030</integer>
 		</dict>
@@ -11225,7 +11225,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<integer>1345</integer>
+			<integer>1340</integer>
 			<key>ypos</key>
 			<integer>1425</integer>
 		</dict>
@@ -11428,7 +11428,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>note</key>
 			<string>OneUpdater (automatic update function)</string>
 			<key>xpos</key>
-			<integer>2075</integer>
+			<integer>2080</integer>
 			<key>ypos</key>
 			<integer>1240</integer>
 		</dict>
@@ -11827,7 +11827,7 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<integer>1845</integer>
+			<integer>1830</integer>
 			<key>ypos</key>
 			<integer>1455</integer>
 		</dict>
@@ -11916,7 +11916,7 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<key>note</key>
 			<string>base64 encoding</string>
 			<key>xpos</key>
-			<integer>235</integer>
+			<integer>230</integer>
 			<key>ypos</key>
 			<integer>1050</integer>
 		</dict>
@@ -12065,7 +12065,7 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<key>note</key>
 			<string>workflow-internal function</string>
 			<key>xpos</key>
-			<integer>1345</integer>
+			<integer>1340</integer>
 			<key>ypos</key>
 			<integer>1240</integer>
 		</dict>
