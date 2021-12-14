@@ -64,7 +64,7 @@ Displayed alongside the other search results are all headings in your vault. Sel
 
 **OR use `⇧ + ↵` on any search result of the main `o` search to browse the links of that note**
 
-- Will display a list of *all* links of the note: outgoing links, backlinks, and external links.
+- Will display a list of *all* links of the note: outgoing links, backlinks, and external links. (As of now, unresolved internal links are not displayed though.)
 - Selecting an outgoing link or backlink will open the respective note.
 	- All the modifiers (`⌘/⌃/⌥/fn/⇧ + ↵`) apply the same way as with the main `o` search.
 	- **YES, this means you can repeatedly use `⇧ + ↵` to fully traverse your graph via Alfred. 😎**

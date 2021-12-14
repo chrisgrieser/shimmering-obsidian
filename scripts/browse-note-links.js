@@ -29,10 +29,6 @@ function run () { /* exported run */
 	const jsonArray = [];
 
 	// create input note JSON
-	// Caveat: the try scope is needed for special characters,
-	// but iconv can't handle emojis, while normal getenv can't handle special
-	// characters. So a filename with special characters AND emojis
-	// will not be handled properly.
 	const inputPath = readFile($.getenv("alfred_workflow_data") + "/buffer_inputPath");
 
 	const metaJSON = JSON.parse(readFile(metadataJSON));
@@ -110,7 +106,7 @@ function run () { /* exported run */
 		let linksSubtitle = "⛔️ Note without Outgoing Links or Backlinks";
 		if (hasLinks) linksSubtitle = "⇧: Browse Links in Note";
 
-		// >> icon & emojis
+		// icon & emojis
 		let iconpath = "icons/note.png";
 		let emoji = "";
 		let additionalMatcher = "";
@@ -128,7 +124,7 @@ function run () { /* exported run */
 		if (filename.toLowerCase().includes("inbox")) emoji += "📥 ";
 		if (filename.toLowerCase().includes("moc")) emoji += "🗺 ";
 
-		// >> emojis dependent on link type
+		// emojis dependent on link type
 		let linkIcon = "";
 		if (linkList.includes (relativePath)) linkIcon += "🔗 ";
 		if (backlinkList.includes (relativePath)) linkIcon += "⬅️ ";
