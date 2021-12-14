@@ -9,13 +9,21 @@ function run (argv) {
 	const vaultNameENC = $.getenv("vault_name_ENC");
 
 	let urlScheme = "obsidian://";
-	if (!heading) urlScheme +=
-		"open?vault=" + vaultNameENC +
-		"&file=" + encodeURIComponent(relativePath);
-	if (heading) urlScheme +=
-		"advanced-uri?vault=" + vaultNameENC +
-		"&filepath=" + encodeURIComponent(relativePath) +
-		"&heading=" + encodeURIComponent(heading);
+	if (!heading) {
+		urlScheme +=
+			"open?vault=" + vaultNameENC +
+			"&file=" + encodeURIComponent(relativePath);
+	}
+	if (heading) {
+		urlScheme +=
+			"advanced-uri?vault=" + vaultNameENC +
+			"&filepath=" + encodeURIComponent(relativePath) +
+			"&heading=" + encodeURIComponent(heading);
+	}
+
+	const app = Application.currentApplication();
+	app.includeStandardAdditions = true;
+	app.openLocation (urlScheme);
 
 	// for debugging
 	if ($.getenv("alfred_debug") === "1") {
@@ -25,7 +33,4 @@ function run (argv) {
 		console.log("URL Scheme: " + urlScheme);
 	}
 
-	const app = Application.currentApplication();
-	app.includeStandardAdditions = true;
-	app.openLocation (urlScheme);
 }

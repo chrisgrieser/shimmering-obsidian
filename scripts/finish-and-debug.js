@@ -52,7 +52,7 @@ function run(argv) {
 
 	const numberOfJSONS = app.doShellScript("ls '" + vaultPath + "/.obsidian/plugins/metadata-extractor/' | grep \".json\" | grep -v \"manifest\" | grep -v \"^data\" | wc -l | tr -d \" \"");
 
-	log(" ");
+	log("_");
 	log("-------------------------------");
 	log("INSTALLED VERSION");
 	log("macOS: " + macVer);
