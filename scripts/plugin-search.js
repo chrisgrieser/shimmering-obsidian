@@ -38,7 +38,7 @@ const obsiVer =
 	.match(/^\d+\.\d+/)[0]
 	.split(".");
 // eslint-disable-next-line no-magic-numbers
-if (parseInt(obsiVer[0]) > 0 || parseInt(obsiVer[1]) > 12) pluginURI = "obsidian://goto-plugin?id="; // pre 0.13 Hotkey Helper https://github.com/pjeby/hotkey-helper#plugin-urls
+if (parseInt(obsiVer[0]) === 0 || parseInt(obsiVer[1]) < 12) pluginURI = "obsidian://goto-plugin?id="; // pre 0.13 Hotkey Helper https://github.com/pjeby/hotkey-helper#plugin-urls
 
 
 // add PLUGINS to the JSON
