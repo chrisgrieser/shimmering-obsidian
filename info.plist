@@ -12310,7 +12310,7 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 		<string>vault_path</string>
 	</array>
 	<key>version</key>
-	<string>2.9.15</string>
+	<string>2.9.16</string>
 	<key>webaddress</key>
 	<string>https://chris-grieser.de/</string>
 </dict>
