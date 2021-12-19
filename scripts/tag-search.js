@@ -2,7 +2,7 @@
 
 ObjC.import("stdlib");
 ObjC.import("Foundation");
-app = Application.currentApplication();
+const app = Application.currentApplication();
 app.includeStandardAdditions = true;
 
 const readFile = function (path, encoding) {
@@ -65,8 +65,15 @@ tagsArray.forEach(tagData => {
 	}
 	if (tagName.includes ("/")) extraMatcher += " nested child";
 
+	let prefixIcon = "";
+	if (tagName === "seedling") prefixIcon = "🌱 ";
+	if (tagName === "moc") prefixIcon = "🗺 ";
+	if (tagName === "evergreen") prefixIcon = "🌲 ";
+	if (tagName === "inbox") prefixIcon = "📥 ";
+	if (tagName === "urgent") prefixIcon = "⚠️ ";
+
 	jsonArray.push({
-		"title": "#" + tagName,
+		"title": prefixIcon + "#" + tagName,
 		"subtitle": tagData.tagCount + "x" + mergeInfo,
 		"match": alfredMatcher (tagName) + " #" + alfredMatcher (tagName) + extraMatcher,
 		"uid": tagName,
