@@ -5,7 +5,7 @@ const app = Application.currentApplication();
 app.includeStandardAdditions = true;
 
 function alfredMatcher (str) {
-	return " " + str.replace (/[-()_.@]/g, " ") + " " + str;
+	return " " + str.replace (/[-()_.@]/g, " ") + " " + str + " ";
 }
 function onlineJSON (url) {
 	return JSON.parse (app.doShellScript("curl -s \"" + url + "\""));
@@ -29,6 +29,17 @@ const themeJSON = onlineJSON("https://raw.githubusercontent.com/obsidianmd/obsid
 const installedPlugins = app.doShellScript("ls -1 \"" + vaultPath + "\"\"/.obsidian/plugins/\"");
 const installedThemes = app.doShellScript("find '" + vaultPath + "/.obsidian/themes/' -name '*.css' ");
 const currentTheme = app.doShellScript("cat \"" + vaultPath + "/.obsidian/appearance.json\" | grep \"cssTheme\" | head -n 1 | cut -d\\\" -f 4"); // eslint-disable-line no-useless-escape
+const appTempPath = app.pathTo("home folder") + "/Library/Application Support/obsidian/";
+
+// use URI depending on the installed Obsidian Version
+let pluginURI = "obsidian://show-plugin?" //Obsidian version 0.13+
+const obsiVer =
+	app.doShellScript("cd '" + appTempPath + "'; ls *.asar | grep -Eo '(\\d|\\.)*'")
+	.match(/^\d+\.\d+/)[0]
+	.split(".");
+// eslint-disable-next-line no-magic-numbers
+if (parseInt(obsiVer[0]) > 0 || parseInt(obsiVer[1]) > 12) pluginURI = "obsidian://goto-plugin?id="; // pre 0.13 Hotkey Helper https://github.com/pjeby/hotkey-helper#plugin-urls
+
 
 // add PLUGINS to the JSON
 pluginJSON.forEach(plugin => {
@@ -39,7 +50,7 @@ pluginJSON.forEach(plugin => {
 	const repo = plugin.repo;
 
 	const githubURL = "https://github.com/" + repo;
-	const pluginUri = "obsidian://goto-plugin?id=" + id; // Community Browser URI with Hotkey Helper https://github.com/pjeby/hotkey-helper#plugin-urls
+	const installURI = pluginURI + id;
 	let isDiscordReady, shareURL;
 	if (discordReadyLinks) {
 		shareURL = "<" + githubURL + ">";
@@ -68,7 +79,7 @@ pluginJSON.forEach(plugin => {
 	jsonArray.push({
 		"title": name + installedIcon,
 		"subtitle": description + " — by " + author + downloadsStr,
-		"arg": pluginUri,
+		"arg": installURI,
 		"match":	"plugin " + URImatcher + alfredMatcher (name) + alfredMatcher (author) + alfredMatcher (id) + alfredMatcher (description),
 		"mods": {
 			"cmd": { "arg": githubURL },

@@ -24,7 +24,10 @@
 - Add `plugin` to the search query to only display themes, e.g., use `op focus plugin` as search query to only display *plugins* with the term `focus`.
 - The `op` search will also consider the name of the plugin's author, meaning the query `op JaneDoe` will return all plugins (and themes) authored by the user `JaneDoe`.
 - The thousand separator used with the download numbers can be set in the [workflow configuration](Workflow%20Configuration.md#Plugin-and-Theme-Search) (`thousand_seperator`).
-- To open local plugin folders and access settings of beta plugins, use the [Settings & Local Plugin Search](Settings%20and%20Local%20Plugin%20Search.md).
+
+💡 To open local plugin folders and access settings of beta plugins, use the [Settings & Local Plugin Search](Settings%20and%20Local%20Plugin%20Search.md).
+
+💡 Note that prior to Obsidian version 0.13+, you need the [Hotkey Helper Plugin](https://github.com/pjeby/hotkey-helper) to open a plugin in the community browser.
 
 ## Themes
 **`op`: Combined Search of community `p`lugins and community themes.**
