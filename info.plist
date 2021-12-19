@@ -4274,7 +4274,7 @@ app.openLocation(urlscheme);</string>
 					<string>public.truetype-ttf-font</string>
 				</array>
 				<key>name</key>
-				<string>Save as Base64 in Obsidian's Snippet Folder</string>
+				<string>Convert Font to Base64</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.trigger.action</string>
@@ -4291,10 +4291,10 @@ app.openLocation(urlscheme);</string>
 				<key>clipboardtext</key>
 				<string>@font-face {
 	font-family: "{query}";
+	font-display: swap;
 	src:
 		url("data:font/{var:format};charset=utf-8;base64,{var:base64}")
 		format("{var:format}");
-	font-display: swap;
 }
 </string>
 				<key>ignoredynamicplaceholders</key>
@@ -7286,7 +7286,7 @@ echo "$backup"</string>
 				<key>subtext</key>
 				<string>with clipboard content</string>
 				<key>text</key>
-				<string>New Snippet: '{query}'</string>
+				<string>🆕 New Snippet: '{query}'</string>
 				<key>withspace</key>
 				<true/>
 			</dict>
@@ -7305,7 +7305,7 @@ echo "$backup"</string>
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
-				<string>obsidian://advanced-uri?vault={var:vault_name_ENC}&amp;commandid=app%253Aopen-settings</string>
+				<string>obsidian://advanced-uri?vault={var:vault_name_ENC}&amp;settingid=appearance</string>
 				<key>utf8</key>
 				<true/>
 			</dict>
@@ -9171,23 +9171,19 @@ end tell</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>matchmode</key>
-				<integer>1</integer>
-				<key>matchstring</key>
-				<string>\n$</string>
-				<key>regexcaseinsensitive</key>
+				<key>argument</key>
+				<string>{var:vault_path}</string>
+				<key>passthroughargument</key>
 				<false/>
-				<key>regexmultiline</key>
-				<false/>
-				<key>replacestring</key>
-				<string></string>
+				<key>variables</key>
+				<dict/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.utility.replace</string>
+			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
 			<string>ECE5DEF0-6F35-4E9B-818C-56057511EE91</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -10543,7 +10539,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>note</key>
 			<string>Workspace Switcher</string>
 			<key>xpos</key>
-			<integer>35</integer>
+			<integer>30</integer>
 			<key>ypos</key>
 			<integer>8815</integer>
 		</dict>

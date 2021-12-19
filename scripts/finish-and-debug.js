@@ -33,8 +33,8 @@ function run(argv) {
 	if ($.getenv("alfred_debug") !== "1" && !odebug) return;
 
 	// log Version info to debugging log
-	const logPath = app.pathTo("home folder") + "/Library/Application Support/obsidian/obsidian.log";
-	const obsiVer = app.doShellScript("grep -Eo \"version is [0-9.]+\" \"" + logPath + "\" | tail -n1 | cut -c12-" || true);
+	const appTempPath = app.pathTo("home folder") + "/Library/Application Support/obsidian/";
+	const obsiVer = app.doShellScript("cd '" + appTempPath + "'; ls *.asar | grep -Eo '(\\d|\\.)*'").slice (0, -1);
 	const macVer = app.doShellScript("sw_vers -productVersion");
 	const advancedUriVer = JSON.parse(readFile(vaultPath + "/.obsidian/plugins/obsidian-advanced-uri/manifest.json")).version;
 	const metadataExVer = JSON.parse(readFile(vaultPath + "/.obsidian/plugins/metadata-extractor/manifest.json")).version;
