@@ -1,3 +1,5 @@
+- 2021-12-19	+ drop Hotkey Helper as Requirement for Obsidian v. 0.13+
+- 2021-12-14	release 2.9.13
 - 2021-12-14	release 2.9.12
 - 2021-12-14	release 2.9.11
 - 2021-12-13	release 2.9.10
