@@ -1,3 +1,5 @@
+- 2021-12-19	+ added icons to some tag searches
+- 2021-12-19	release 2.9.14
 - 2021-12-19	+ drop Hotkey Helper as Requirement for Obsidian v. 0.13+
 - 2021-12-14	release 2.9.13
 - 2021-12-14	release 2.9.12
