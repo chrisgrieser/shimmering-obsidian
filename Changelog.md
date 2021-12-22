@@ -1,3 +1,4 @@
+- 2021-12-19	release 2.9.16
 - 2021-12-19	release 2.9.15
 - 2021-12-19	+ added icons to some tag searches
 - 2021-12-19	release 2.9.14
