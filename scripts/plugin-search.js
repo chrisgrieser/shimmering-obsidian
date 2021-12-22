@@ -31,16 +31,6 @@ const installedThemes = app.doShellScript("find '" + vaultPath + "/.obsidian/the
 const currentTheme = app.doShellScript("cat \"" + vaultPath + "/.obsidian/appearance.json\" | grep \"cssTheme\" | head -n 1 | cut -d\\\" -f 4"); // eslint-disable-line no-useless-escape
 const appTempPath = app.pathTo("home folder") + "/Library/Application Support/obsidian/";
 
-// use URI depending on the installed Obsidian Version
-let pluginURI = "obsidian://show-plugin?" //Obsidian version 0.13+
-const obsiVer =
-	app.doShellScript("cd '" + appTempPath + "'; ls *.asar | grep -Eo '(\\d|\\.)*'")
-	.match(/^\d+\.\d+/)[0]
-	.split(".");
-// eslint-disable-next-line no-magic-numbers
-if (parseInt(obsiVer[0]) === 0 || parseInt(obsiVer[1]) < 13) pluginURI = "obsidian://goto-plugin?id="; // pre 0.13 Hotkey Helper https://github.com/pjeby/hotkey-helper#plugin-urls
-
-
 // add PLUGINS to the JSON
 pluginJSON.forEach(plugin => {
 	const id = plugin.id;
@@ -50,10 +40,10 @@ pluginJSON.forEach(plugin => {
 	const repo = plugin.repo;
 
 	const githubURL = "https://github.com/" + repo;
-	const installURI = pluginURI + id;
+	const pluginURI = "obsidian://show-plugin?" + id; //Obsidian version 0.13+
 	let isDiscordReady, shareURL;
 	if (discordReadyLinks) {
-		shareURL = "<" + githubURL + ">";
+		shareURL = "<" + pluginURI + ">";
 		isDiscordReady = " (discord ready)";
 	} else {
 		shareURL = githubURL;
@@ -79,13 +69,13 @@ pluginJSON.forEach(plugin => {
 	jsonArray.push({
 		"title": name + installedIcon,
 		"subtitle": description + " — by " + author + downloadsStr,
-		"arg": installURI,
+		"arg": pluginURI,
 		"match":	"plugin " + URImatcher + alfredMatcher (name) + alfredMatcher (author) + alfredMatcher (id) + alfredMatcher (description),
 		"mods": {
 			"cmd": { "arg": githubURL },
 			"alt": {
 				"arg": shareURL,
-				"subtitle": "⌥: Copy GitHub Link" + isDiscordReady
+				"subtitle": "⌥: Copy Link" + isDiscordReady
 			},
 			"fn": { "arg": githubURL },
 			"shift": { "arg": repo + ";" + id + ";" + name },

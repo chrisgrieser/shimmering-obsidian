@@ -15,9 +15,9 @@
 **`op`: Combined Search of community `p`lugins and community themes.**
 - Press `↵` to open the plugin in Obsidian's Community Plugin Browser.
 	- Use `⌘ + ↵` to open the plugin's GitHub repository instead.
-	- Press `⌥ + ↵` to copy the GitHub repository URL to your clipboard. When the [workflow configuration](Workflow%20Configuration.md#Miscellaneous) `discord_ready_links` is set to `true`, the copied link will be surrounded with `<` `>` for more convenient pasting in the Discord Desktop app (disables auto-preview).
+	- Press `⌥ + ↵` to copy the plugin URI (`obsidian://show-plugin?id=...`) to your clipboard. When the [workflow configuration](Workflow%20Configuration.md#Miscellaneous) `discord_ready_links` is set to `true`, the copied link will be surrounded with `<` `>` for more convenient pasting in the Discord Desktop app (disables auto-preview).
 	- `⇧ + ↵` to display & search the GitHub issues. See [the section below](#-Searching-GitHub-Issues) for more information.
-	- 🆕 *Holding* `⌃` will display download numbers, author, and plugin ID.[^2] This is useful, when the plugin description is so long, that you cannot see this anymore.
+	- *Holding* `⌃` will display download numbers, author, and plugin ID.[^2] This is useful, when the plugin description is so long, that you cannot see this anymore.
 	- _⚙️ For developers:_ Use `fn + ↵` to clone the GitHub Repository into the folder specified in the [workflow configuration](Workflow%20Configuration.md#Plugin-and-Theme-Search) (`download_folder_path`) via `git clone` (http).
 	- _⚙️ For developers:_ *Pressing* `⌃ + ↵` will copy the plugin ID to the clipboard.
 - Only plugins officially included in the community plugins are displayed — plugins solely available via GitHub or still in review are not shown.
@@ -47,7 +47,7 @@
 - The list will display the open/closed status, author, and number of comments. The list of issues can be searched like any Alfred Search.
 - You can also choose to create a new issue, pre-populated as Feature Request or Bug Report. 
 - Use `⌥ + ↵` on an issue to copy the issue URL to the clipboard.
-- 💡 To avoid unnecessary issues, the creation of new issues is *disabled* when the local version of the plugin[^1] is outdated. Instead, you will be provided with a quick shortcut to update the plugin 🙂
+- 💡 To avoid unnecessary issues, the creation of new issues is *disabled* when the local version of the plugin is outdated. Instead, you will be provided with a quick shortcut to update the plugin 🙂
 - ℹ️ Due to restrictions of the GitHub API, only the most recent 100 issues can be displayed.
 
 <img src="https://user-images.githubusercontent.com/73286100/139559362-747b0c57-c29b-45b5-bc62-4ab53c0718c5.gif" alt="Issue Search" width=60%>

@@ -8577,7 +8577,7 @@ tell application "Obsidian" to activate</string>
 				<key>text</key>
 				<string>{query}</string>
 				<key>title</key>
-				<string>✅ Github URL copied</string>
+				<string>✅ Plugin URI copied</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.notification</string>
@@ -10249,7 +10249,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>885</integer>
+			<integer>890</integer>
 			<key>ypos</key>
 			<integer>1215</integer>
 		</dict>
@@ -11261,7 +11261,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>885</integer>
+			<integer>890</integer>
 			<key>ypos</key>
 			<integer>1050</integer>
 		</dict>
@@ -12294,7 +12294,7 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 		<key>vault_path</key>
 		<string>/Users/chrisgrieser/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vault</string>
 		<key>workspace_to_spellcheck</key>
-		<string>Longform</string>
+		<string></string>
 	</dict>
 	<key>variablesdontexport</key>
 	<array>
@@ -12303,8 +12303,8 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 		<string>discord_ready_links</string>
 		<string>use_quickadd</string>
 		<string>vault_name_ENC</string>
-		<string>h_lvl_ignore</string>
 		<string>workspace_to_spellcheck</string>
+		<string>h_lvl_ignore</string>
 		<string>svg_size</string>
 		<string>template_note_path</string>
 		<string>vault_path</string>
