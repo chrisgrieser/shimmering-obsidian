@@ -642,6 +642,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>40158B5B-4DBC-4FD4-AC40-4976E27C3792</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>75571120-8CAD-415A-8B57-F7BDDE3A629E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>41A0A259-DF50-4204-9B32-07FEC782F6D9</key>
 		<array>
 			<dict>
@@ -5765,25 +5778,6 @@ return "{query}"</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>externaltriggerid</key>
-				<string>append-to-note</string>
-				<key>passinputasargument</key>
-				<true/>
-				<key>passvariables</key>
-				<true/>
-				<key>workflowbundleid</key>
-				<string>self</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.callexternaltrigger</string>
-			<key>uid</key>
-			<string>81D69BF1-CF14-4A8E-A427-380B8C206C4C</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>path</key>
 				<string>{var:vault_path}/{query}</string>
 			</dict>
@@ -5804,6 +5798,44 @@ return "{query}"</string>
 			<string>alfred.workflow.trigger.external</string>
 			<key>uid</key>
 			<string>7BA55F56-BE3A-483A-9CA6-CEE173CF2357</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>externaltriggerid</key>
+				<string>update-obsidian-workflow</string>
+				<key>passinputasargument</key>
+				<true/>
+				<key>passvariables</key>
+				<true/>
+				<key>workflowbundleid</key>
+				<string>self</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>75571120-8CAD-415A-8B57-F7BDDE3A629E</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>externaltriggerid</key>
+				<string>append-to-note</string>
+				<key>passinputasargument</key>
+				<true/>
+				<key>passvariables</key>
+				<true/>
+				<key>workflowbundleid</key>
+				<string>self</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>81D69BF1-CF14-4A8E-A427-380B8C206C4C</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -10240,9 +10272,9 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>1585</integer>
+			<integer>1510</integer>
 			<key>ypos</key>
-			<integer>2175</integer>
+			<integer>2125</integer>
 		</dict>
 		<key>41A0A259-DF50-4204-9B32-07FEC782F6D9</key>
 		<dict>
@@ -10855,6 +10887,15 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>ypos</key>
 			<integer>4925</integer>
 		</dict>
+		<key>75571120-8CAD-415A-8B57-F7BDDE3A629E</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>6</integer>
+			<key>xpos</key>
+			<integer>1695</integer>
+			<key>ypos</key>
+			<integer>2125</integer>
+		</dict>
 		<key>7683FF60-6516-43F6-B54D-D4B8553D8680</key>
 		<dict>
 			<key>colorindex</key>
@@ -10918,7 +10959,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>xpos</key>
 			<integer>1340</integer>
 			<key>ypos</key>
-			<integer>2175</integer>
+			<integer>2125</integer>
 		</dict>
 		<key>7D288B7C-5CB7-4A0E-B99D-3A2D9186DEC5</key>
 		<dict>
