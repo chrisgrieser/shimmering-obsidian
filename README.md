@@ -16,6 +16,7 @@ Please refer to the [Breaking Changes Documentation](documentation/Breaking%20Ch
 - [Troubleshooting](documentation/Troubleshooting.md)
 - [Changelog](Changelog.md)
 - [Feature Overview](#Feature-Overview)
+- [Alfred Themes](#Alfred%20Themes)
 - [Credits & Donations](#Credits)
 
 ---
@@ -144,6 +145,9 @@ Please refer to the [Breaking Changes Documentation](documentation/Breaking%20Ch
 ➡️ [Documentation of Features for Developers](documentation/Features%20for%20Developers.md)
 
 ---
+
+## Alfred Themes
+I also designed some [themes for Alfred](https://github.com/chrisgrieser/alfred-themes) you can check out.
 
 ## Credits
 
