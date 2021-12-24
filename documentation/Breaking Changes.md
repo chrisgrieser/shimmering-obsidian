@@ -5,6 +5,7 @@
 ## Table of Contents
 <!-- MarkdownTOC -->
 
+- [Version 2.10](#version-210)
 - [Version 2.9](#version-29)
 - [Version 2.8](#version-28)
 - [Version 2.4.2](#version-242)
@@ -17,6 +18,9 @@
 	- [List of all other Breaking Changes](#list-of-all-other-breaking-changes)
 
 <!-- /MarkdownTOC -->
+
+## Version 2.10
+Hotkey Helper isn't a requirement for the Plugin search anymore, but you need to upgrade to Obsidian 0.13.14+ for the Plugin Search now.
 
 ## Version 2.9
 After updating to version 2.9+, you need to re-run `osetup` once.

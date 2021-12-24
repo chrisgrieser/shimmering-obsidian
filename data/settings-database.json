@@ -2,7 +2,7 @@
    {
       "title": "Editor",
       "id": "editor",
-      "match": "editor readable line length brackets"
+      "match": "editor readable line length brackets spellcheck dictionary languages"
    },
    {
       "title": "Files & Links",

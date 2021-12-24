@@ -6,7 +6,8 @@
 <img src="https://user-images.githubusercontent.com/73286100/139678407-9ac39baa-5f49-42a0-9622-0fbaf68540b2.gif" alt="Promo Video" width=70%> 
 
 ## ⚠️ Breaking Changes when upgrading to 2.9+
-After upgrading to 2.9 (or later), you need to re-run the `osetup` command once.
+- After upgrading to 2.9 (or later), you need to re-run the `osetup` command once.
+- After upgrading to 2.10 Hotkey Helper isn't a requirement for the Plugin search anymore, but you need to upgrade to Obsidian 0.13.14+ for the Plugin Search.
 
 Please refer to the [Breaking Changes Documentation](documentation/Breaking%20Changes.md) for more in-detail information and for information on breaking changes when updating from older versions.
 

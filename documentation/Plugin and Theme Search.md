@@ -12,6 +12,13 @@
 <!-- /MarkdownTOC -->
 
 ## Plugins
+
+---
+
+💡 After upgrading to Workflow Version 2.10, the Hotkey Helper isn't a requirement for the plugin search anymore, but you need to upgrade to Obsidian v, 0.13.14+ for the Plugin Search to work.
+
+---
+
 **`op`: Combined Search of community `p`lugins and community themes.**
 - Press `↵` to open the plugin in Obsidian's Community Plugin Browser.
 	- Use `⌘ + ↵` to open the plugin's GitHub repository instead.
@@ -26,8 +33,6 @@
 - The thousand separator used with the download numbers can be set in the [workflow configuration](Workflow%20Configuration.md#Plugin-and-Theme-Search) (`thousand_seperator`).
 
 💡 To open local plugin folders and access settings of beta plugins, use the [Settings & Local Plugin Search](Settings%20and%20Local%20Plugin%20Search.md).
-
-💡 Note that prior to Obsidian version 0.13+, you need the [Hotkey Helper Plugin](https://github.com/pjeby/hotkey-helper) to open a plugin in the community browser.
 
 ## Themes
 **`op`: Combined Search of community `p`lugins and community themes.**
