@@ -59,7 +59,7 @@ echo ""
 # Update Changelog
 # --------------------
 echo "- "$(date +"%Y-%m-%d")"	release $nextVersion" > ./Changelog.md
-git log --pretty=format:"- %ad%x09%s" --date=short | grep -Ev "minor$" | grep -Ev "typos?$" | grep -v "refactoring" | grep -v "Update README.md" | grep -v "Add files via upload" | grep -Ev "\tDelete" | grep -Ev "\tUpdate.*\.md" | sed -E "s/\t\+ //g" >> ./Changelog.md
+git log --pretty=format:"- %ad%x09%s" --date=short | grep -Ev "minor$" | grep -Ev "typos?$" | grep -v "refactoring" | grep -v "Add files via upload" | grep -Ev "\tDelete" | grep -Ev "\tUpdate.*\.md" | sed -E "s/\t\+ //g" >> ./Changelog.md
 
 # --------------------
 # git push
