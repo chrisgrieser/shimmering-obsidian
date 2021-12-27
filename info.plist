@@ -9737,11 +9737,7 @@ Credits
 -------
 Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (rl). https://chris-grieser.de/
 
-----------------------------------------------------------------
-
-⚠️⚠️ BREAKING CHANGE! ⚠️⚠️
-============================
-After updating to version 2.9+, you need to re-run `osetup` once.</string>
+----------------------------------------------------------------</string>
 	<key>uidata</key>
 	<dict>
 		<key>01DCEAE6-93DC-452F-86C2-6694ED7CB436</key>
@@ -12331,9 +12327,9 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 		<key>use_quickadd</key>
 		<string>false</string>
 		<key>vault_name_ENC</key>
-		<string>Vault</string>
+		<string>Main%20Vault</string>
 		<key>vault_path</key>
-		<string>/Users/chrisgrieser/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vault</string>
+		<string>~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Main Vault</string>
 		<key>workspace_to_spellcheck</key>
 		<string></string>
 	</dict>
@@ -12344,8 +12340,8 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 		<string>discord_ready_links</string>
 		<string>use_quickadd</string>
 		<string>vault_name_ENC</string>
-		<string>h_lvl_ignore</string>
 		<string>workspace_to_spellcheck</string>
+		<string>h_lvl_ignore</string>
 		<string>svg_size</string>
 		<string>template_note_path</string>
 		<string>vault_path</string>

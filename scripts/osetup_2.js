@@ -3,7 +3,8 @@
 function run (argv) {
 	ObjC.import("stdlib");
 	
-	const vaultPath = argv.join("");
+	const vaultPath = argv.join("")
+		.replace (/\/Users\/[^/]*/, "~"); // un-resolve home path
 	const vaultName = vaultPath.split("/").pop();
 
 	Application("com.runningwithcrayons.Alfred").setConfiguration ("vault_path", {
