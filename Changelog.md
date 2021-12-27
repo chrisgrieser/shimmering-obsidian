@@ -1,3 +1,6 @@
+- 2021-12-27	release 2.10.3
+- 2021-12-27	osetup and ov now set insert '~' into the vualt path for easier syncing
+- 2021-12-27	improved changelog creation
 - 2021-12-27	updated trobuleshooting info
 - 2021-12-24	add info on changed plugin search requirement to docs
 - 2021-12-23	release 2.10.2
