@@ -1,3 +1,4 @@
+- 2021-12-27	release 
 - 2021-12-27	release 2.10.3
 - 2021-12-27	osetup and ov now set insert '~' into the vualt path for easier syncing
 - 2021-12-27	improved changelog creation
@@ -7,16 +8,16 @@
 - 2021-12-23	fixes for debugging function
 - 2021-12-23	added link to Alfred themes
 - 2021-12-23	release 2.10.1
-- 2021-12-23hotfix for plugin search in Obsidian 0.13.14+
+- 2021-12-23	hotfix for plugin search in Obsidian 0.13.14+
 - 2021-12-22	release 2.10.0
 - 2021-12-22	updated for 0.13.14; 'op' search now opens and copies plugin URI; dropped hotkey helper as requirement
 - 2021-12-19	release 2.9.16
 - 2021-12-19	hotfix plugin search
 - 2021-12-19	release 2.9.15
 - 2021-12-19	hotfix plugin search
-- 2021-12-19added icons to some tag searches
+- 2021-12-19	added icons to some tag searches
 - 2021-12-19	release 2.9.14
-- 2021-12-19drop Hotkey Helper as Requirement for Obsidian v. 0.13+
+- 2021-12-19	drop Hotkey Helper as Requirement for Obsidian v. 0.13+
 - 2021-12-19	remove debugging vault + more reliabel detection of local Obsidian version
 - 2021-12-14	release 2.9.13
 - 2021-12-14	hotfix workflow not working when not debugging ლ(ಠ_ಠლ)╯
@@ -26,21 +27,21 @@
 - 2021-12-14	release 2.9.11
 - 2021-12-14	address #39
 - 2021-12-13	release 2.9.10
-- 2021-12-13added new settings tab of backlinks core plugin to `o,` settings search (thanks @kometenstaub)
+- 2021-12-13	added new settings tab of backlinks core plugin to `o,` settings search (thanks @kometenstaub)
 - 2021-12-13	release 2.9.9
-- 2021-12-13new command 'odebug' for debugging purposes
+- 2021-12-13	new command 'odebug' for debugging purposes
 - 2021-12-12	release 2.9.8
 - 2021-12-12	potential fixes for #25 and #38; trying to write variables to the file system instead of the unreliable jxa variable reading
 - 2021-12-12	added info on live preview
 - 2021-12-12	added info on Peek als alternative to almarkdown
 - 2021-12-11	go back to top links and minor stuff
 - 2021-12-09	release 2.9.7
-- 2021-12-09improved matching for plugin and theme search
+- 2021-12-09	improved matching for plugin and theme search
 - 2021-12-07	deprecation info
 - 2021-12-07	release 2.9.6
 - 2021-12-07	fix copy id
 - 2021-12-07	release 2.9.5
-- 2021-12-07plugin id can be in op search can now be copied
+- 2021-12-07	plugin id can be in op search can now be copied
 - 2021-12-07	release 2.9.4
 - 2021-12-07	svg
 - 2021-12-07	fix for osvg
@@ -49,26 +50,26 @@
 - 2021-12-07	'on' now sends a relative path (fix #36)
 - 2021-12-07	better git pull for 'o,' search
 - 2021-12-06	release 2.9.2
-- 2021-12-06prevented failure of osetup when having a non-selected vault in the foreground while using osetup
+- 2021-12-06	prevented failure of osetup when having a non-selected vault in the foreground while using osetup
 - 2021-12-06	breaking change infos
-- 2021-12-06minor improvements to 'osvg'
+- 2021-12-06	minor improvements to 'osvg'
 - 2021-12-06	readme update with breaking chage
 - 2021-12-06	minor improvements to svg-to-data-uri.sh
 - 2021-12-05	release 2.9.1
 - 2021-12-05	release 2.9
-- 2021-12-05prepared multi-vault-support (⚠️ Breaking Change) and fixed #34
+- 2021-12-05	prepared multi-vault-support (⚠️ Breaking Change) and fixed #34
 - 2021-12-05	breaking changes docs + vault-name-implementation
 - 2021-12-05	updated info in ql markdown
 - 2021-12-05	qlmarkdown
 - 2021-12-04	release 2.8.2
-- 2021-12-04fixed display of headings in documentation search
+- 2021-12-04	fixed display of headings in documentation search
 - 2021-12-04	release 2.8.1
-- 2021-12-04icons being developed will be indicated by a ⚙️ emoji
+- 2021-12-04	icons being developed will be indicated by a ⚙️ emoji
 - 2021-12-04	improve issue templates
-- 2021-12-04git pull for vaults (ov ➞ fn + return)
+- 2021-12-04	git pull for vaults (ov ➞ fn + return)
 - 2021-12-04	release 2.8
 - 2021-12-04	fix css readme
-- 2021-12-04SVG to Data URI Conversion
+- 2021-12-04	SVG to Data URI Conversion
 - 2021-12-03	release 2.7.6
 - 2021-12-03	eslint + better info for disables plugins in settings search
 - 2021-12-03	release 2.7.5
@@ -80,25 +81,25 @@
 - 2021-11-30	release 2.7.4
 - 2021-11-30	minor fix for spellcheck toggling
 - 2021-11-30	release 2.7.3
-- 2021-11-30`ctrl + return` now also copies the plugin ID for the `op`search
+- 2021-11-30	`ctrl + return` now also copies the plugin ID for the `op`search
 - 2021-11-30	release 2.7.2
 - 2021-11-30	fixed typo for workspace switching
 - 2021-11-30	release 2.7.1
-- 2021-11-30Visual improvements to the Workspace Switcher
+- 2021-11-30	Visual improvements to the Workspace Switcher
 - 2021-11-29	release 2.7
 - 2021-11-29	update readme
-- 2021-11-29New Feature: Image screenshots into the vault (issue #11)
+- 2021-11-29	New Feature: Image screenshots into the vault (issue #11)
 - 2021-11-29	release 2.6.3
 - 2021-11-29	release 2.6.2
 - 2021-11-29	fixed link to changelog
 - 2021-11-29	release 2.6.1
-- 2021-11-29`discord_ready_links` now also applies to issue search and documentation search
+- 2021-11-29	`discord_ready_links` now also applies to issue search and documentation search
 - 2021-11-29	release 2.6
-- 2021-11-29new configuration `discord_ready_link` that makes link copied by the plugin and theme search (`alt + return`) ready for pasting into discord without auto-preview (thanks @kometenstaub for the idea)
+- 2021-11-29	new configuration `discord_ready_link` that makes link copied by the plugin and theme search (`alt + return`) ready for pasting into discord without auto-preview (thanks @kometenstaub for the idea)
 - 2021-11-28	update readme
 - 2021-11-27	typos in docs
 - 2021-11-27	release 2.5
-- 2021-11-27appending to a note via `fn + return` now accepts either clipboard or manual content. Use workflow configuration `input_append`.
+- 2021-11-27	appending to a note via `fn + return` now accepts either clipboard or manual content. Use workflow configuration `input_append`.
 - 2021-11-27	appending to a note via `fn + return` now accepts either clipboard or manual content. Use workflow configuration `input_append`.
 - 2021-11-27	update readme
 - 2021-11-26	eslinting + readme fixes
