@@ -1,4 +1,5 @@
-- 2021-12-27	release 
+- 2021-12-28	release 2.11.0
+- 2021-12-28	new command `ogit` to open the github commit history of current file
 - 2021-12-27	release 2.10.3
 - 2021-12-27	osetup and ov now set insert '~' into the vualt path for easier syncing
 - 2021-12-27	improved changelog creation
