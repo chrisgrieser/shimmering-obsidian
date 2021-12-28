@@ -47,6 +47,7 @@ Please refer to the [Breaking Changes Documentation](documentation/Breaking%20Ch
 - Create new Notes (based on Template or via QuickAdd)
 - Move Note to a different folder
 - Daily Notes
+- 🆕 Open Commit History of Note (if vault is a git repository)
 
 ➡️ [Documentation of Note-related Features](documentation/Note-related%20Features.md)
 
