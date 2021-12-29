@@ -1,3 +1,5 @@
+- 2021-12-29	release 2.11.1
+- 2021-12-29	ogit now fetches the correct branch name instead of assuming its name is 'branch'
 - 2021-12-28	release 2.11.0
 - 2021-12-28	new command `ogit` to open the github commit history of current file
 - 2021-12-27	release 2.10.3
