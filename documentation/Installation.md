@@ -44,11 +44,16 @@ brew install --cask qlmarkdown
 ```
 
 ### QLMarkdown or Peek?
-[QLmarkdown](https://github.com/sbarex/QLMarkdown) and [Peek](https://apps.apple.com/app/peek-quick-look-extension/id1554235898) both enable previewing of Markdown documents. Peek works with a wide range of other file types than Markdown, but costs around 5€. QLMarkdown is free, but only works for Markdown and requires some minor small setup:
+[QLmarkdown](https://github.com/sbarex/QLMarkdown) and [Peek](https://apps.apple.com/app/peek-quick-look-extension/id1554235898) both enable previewing of Markdown documents. Peek works with a wide range of other file types than Markdown, but costs around 5€. QLMarkdown is free, but only works for Markdown and requires some minor small setup.
+
+<details>
+	
 - The app `QLmarkdown.app` must be started at least once. You may need to right-click the app and select `open`, to be able be able to allow macOS to trust the app.
 - To enable proper display of YAML headers, you need to enable the respective setting in the Advanced Options of QLMarkdown:
 
 <img width="654" alt="Screenshot 2021-12-05 01 49 11" src="https://user-images.githubusercontent.com/73286100/144729141-72d8cd41-8e45-43e0-a11a-ce98ba97c2ac.png">
+	
+</details>
 
 [^1]: _Shimmering Obsidian_ can only control one vault at a time. However, you can switch between the vaults that you want to control with the [Vault Switcher](Vault%20Switcher.md).
 
