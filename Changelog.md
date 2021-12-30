@@ -1,3 +1,5 @@
+- 2021-12-30	release 2.12.0
+- 2021-12-30	'of' now also allows to select and browse a forum category (or copy the link to it)
 - 2021-12-29	release 2.11.1
 - 2021-12-29	ogit now fetches the correct branch name instead of assuming its name is 'branch'
 - 2021-12-28	release 2.11.0
