@@ -1,3 +1,5 @@
+- 2021-12-30	release 2.12.1
+- 2021-12-30	remove 'ogit' since the functionality is now provided in a much better way by the COpy Publish URL plugin
 - 2021-12-30	release 2.12.0
 - 2021-12-30	'of' now also allows to select and browse a forum category (or copy the link to it)
 - 2021-12-29	release 2.11.1
