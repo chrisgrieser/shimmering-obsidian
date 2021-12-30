@@ -394,6 +394,29 @@
 				<false/>
 			</dict>
 		</array>
+		<key>2EA7E709-7E6B-43B3-8B44-080685EFA44A</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>D0041722-6FE5-480D-B443-FC3F8C71CD53</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>36C2F914-A376-41B7-96DC-75DFB35B6ADF</string>
+				<key>modifiers</key>
+				<integer>524288</integer>
+				<key>modifiersubtext</key>
+				<string>⌥: Copy Link to Forum Category</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>2F50F145-46B1-4151-9DB4-61DB6A767DAB</key>
 		<array>
 			<dict>
@@ -436,7 +459,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>902431F8-34D6-476A-8917-EFF85864F369</string>
+				<string>5C1918E9-6508-4076-8D79-716B47ACFC20</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -528,6 +551,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>1E497866-1199-4947-BC1A-AC23ADDD6C82</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>36C2F914-A376-41B7-96DC-75DFB35B6ADF</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>2F50F145-46B1-4151-9DB4-61DB6A767DAB</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -2933,21 +2969,21 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>E487972E-5605-4FE5-9C82-DFA2E3C33792</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
 				<string>2F50F145-46B1-4151-9DB4-61DB6A767DAB</string>
 				<key>modifiers</key>
 				<integer>524288</integer>
 				<key>modifiersubtext</key>
 				<string>⌥: Copy Link</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>E487972E-5605-4FE5-9C82-DFA2E3C33792</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -7594,6 +7630,25 @@ echo "$backup"</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>{query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>2B7C353A-135A-4544-90E0-A7E70067FB5D</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>openwith</key>
 				<string></string>
 				<key>sourcefile</key>
@@ -7624,25 +7679,6 @@ echo "$backup"</string>
 			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
 			<string>9FF8D4E6-7A5E-4736-9976-17C280BC574A</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>browser</key>
-				<string></string>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string>{query}</string>
-				<key>utf8</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
-			<key>uid</key>
-			<string>2B7C353A-135A-4544-90E0-A7E70067FB5D</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -7760,25 +7796,6 @@ echo "$backup"</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>externaltriggerid</key>
-				<string>update-obsidian-workflow</string>
-				<key>passinputasargument</key>
-				<true/>
-				<key>passvariables</key>
-				<true/>
-				<key>workflowbundleid</key>
-				<string>self</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.callexternaltrigger</string>
-			<key>uid</key>
-			<string>902431F8-34D6-476A-8917-EFF85864F369</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>browser</key>
 				<string></string>
 				<key>spaces</key>
@@ -7824,65 +7841,81 @@ echo "$backup"</string>
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
-				<string></string>
+				<string>https://forum.obsidian.md/c/{query}</string>
 				<key>utf8</key>
 				<true/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.openurl</string>
 			<key>uid</key>
-			<string>E487972E-5605-4FE5-9C82-DFA2E3C33792</string>
+			<string>D0041722-6FE5-480D-B443-FC3F8C71CD53</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>alfredfiltersresults</key>
-				<true/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>2</integer>
-				<key>argumenttreatemptyqueryasnil</key>
-				<true/>
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
 				<integer>1</integer>
-				<key>escaping</key>
-				<integer>0</integer>
+				<key>fixedorder</key>
+				<false/>
+				<key>items</key>
+				<string>[{"title":"🟣 Announcements","arg":"announcements\/13","subtitle":"Official announcements."},{"title":"🟢 Help","arg":"get-help\/19","subtitle":"Get help from fellow Obsidian users."},{"title":"🔴 Bug Reports","arg":"bug-reports\/7","subtitle":"Report bugs so that we can squash them. Please try searching for duplicates before posting."},{"title":"🟢 Feature Requests","arg":"feature-requests\/8","subtitle":"Suggest features to be added to core Obsidian. For third party plugin ideas, post under “Plugins ideas”. Please try searching for duplicates before posting."},{"title":"🔵 Share &amp; Showcase","arg":"share-showcase\/9","subtitle":"Showcase your custom CSS, workflows, and nifty hacks."},{"title":"🟣 Plugin Ideas","arg":"plugins\/10","subtitle":"Share plugin ideas and talk about what interfaces are needed."},{"title":"🟠 Knowledge Management","arg":"knowledge-management\/6","subtitle":"Talk about PKM methodologies."},{"title":"🟢 Developers &amp; API","arg":"developers-api\/14","subtitle":"Talk about the upcoming plugin interface and technical stuff while working with Obsidian. For plugin ideas, please post under “Plugin ideas”."},{"title":"🔴 Mobile","arg":"mobile\/18","subtitle":"Let us know the bugs and requests you have with the mobile app."},{"title":"🔵 Meta","arg":"meta\/16","subtitle":"Meta topics about Obsidian or the forum."},{"title":"🟢 FAQ","arg":"faq\/15","subtitle":"Read answers to FAQs here. To suggest a topic, please post under “Obsidian”."},{"title":"⚪️ Feature Archive","arg":"feature-request-archive\/11","subtitle":"Implemented features."},{"title":"⚪️ Bug Graveyard","arg":"bug-graveyard\/12","subtitle":"Rest in peace, Obsidian bugs, please do not come back and haunt us. (Regression bugs suck!)"},{"title":"⚪️ Resolved Help","arg":"resolved-help\/17","subtitle":"If you still need help with something, comment on it and @moderators so we can move it back to “Help” for you."}]</string>
 				<key>keyword</key>
-				<string>oh</string>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
+				<string>of</string>
 				<key>runningsubtext</key>
-				<string>Loading...</string>
-				<key>script</key>
-				<string>cat ./data/documentation-search-cache.json</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string>obsidian-documentation.js</string>
+				<string></string>
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
-				<string>Search Obsidian Documentation...</string>
-				<key>type</key>
-				<integer>5</integer>
+				<string>Browse the Obsidian Forum</string>
 				<key>withspace</key>
 				<true/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
+			<string>alfred.workflow.input.listfilter</string>
 			<key>uid</key>
-			<string>DD45D94E-9E2C-4477-9E37-66338FDCF4D0</string>
+			<string>2EA7E709-7E6B-43B3-8B44-080685EFA44A</string>
 			<key>version</key>
-			<integer>3</integer>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>externaltriggerid</key>
+				<string>update-obsidian-workflow</string>
+				<key>passinputasargument</key>
+				<true/>
+				<key>passvariables</key>
+				<true/>
+				<key>workflowbundleid</key>
+				<string>self</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>902431F8-34D6-476A-8917-EFF85864F369</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>https://forum.obsidian.md/c/{query}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>36C2F914-A376-41B7-96DC-75DFB35B6ADF</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -7974,6 +8007,93 @@ echo "$backup"</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>alfredfiltersresults</key>
+				<true/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>2</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>oh</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Loading...</string>
+				<key>script</key>
+				<string>cat ./data/documentation-search-cache.json</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>obsidian-documentation.js</string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Search Obsidian Documentation...</string>
+				<key>type</key>
+				<integer>5</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>DD45D94E-9E2C-4477-9E37-66338FDCF4D0</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string></string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>E487972E-5605-4FE5-9C82-DFA2E3C33792</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>{query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>71E0BF31-47DE-49AF-AA5F-FD4E20F5491E</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argumenttype</key>
 				<integer>2</integer>
 				<key>keyword</key>
@@ -8014,25 +8134,6 @@ echo "$backup"</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>browser</key>
-				<string></string>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string>{query}</string>
-				<key>utf8</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
-			<key>uid</key>
-			<string>71E0BF31-47DE-49AF-AA5F-FD4E20F5491E</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>lastpathcomponent</key>
 				<false/>
 				<key>onlyshowifquerypopulated</key>
@@ -8050,6 +8151,31 @@ echo "$backup"</string>
 			<string>099D27EE-A12C-4248-B4EC-C46C34F5415E</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>open "obsidian://advanced-uri?commandid=metadata-extractor%253Awrite-metadata-json"
+open "obsidian://advanced-uri?commandid=metadata-extractor%253Awrite-tags-json"
+open "obsidian://advanced-uri?commandid=metadata-extractor%253Awrite-allExceptMd-json"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>5</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>EC424B98-D702-4608-B1EA-07AF49C56048</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -8126,31 +8252,6 @@ echo "$backup"</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>open "obsidian://advanced-uri?commandid=metadata-extractor%253Awrite-metadata-json"
-open "obsidian://advanced-uri?commandid=metadata-extractor%253Awrite-tags-json"
-open "obsidian://advanced-uri?commandid=metadata-extractor%253Awrite-allExceptMd-json"</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>5</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>EC424B98-D702-4608-B1EA-07AF49C56048</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
@@ -8201,6 +8302,29 @@ open "obsidian://advanced-uri?commandid=metadata-extractor%253Awrite-allExceptMd
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>scripts/re-index-documentation.js</string>
+				<key>type</key>
+				<integer>8</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>CBAE02F7-62CC-4974-96C0-841453D73B48</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>adduuid</key>
 				<false/>
 				<key>allowemptyfiles</key>
@@ -8224,29 +8348,6 @@ open "obsidian://advanced-uri?commandid=metadata-extractor%253Awrite-allExceptMd
 			<string>5E2BFA74-9185-4C41-82B0-274EB3C261BD</string>
 			<key>version</key>
 			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>script</key>
-				<string></string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string>scripts/re-index-documentation.js</string>
-				<key>type</key>
-				<integer>8</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>CBAE02F7-62CC-4974-96C0-841453D73B48</string>
-			<key>version</key>
-			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -9983,9 +10084,9 @@ Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (r
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>770</integer>
+			<integer>865</integer>
 			<key>ypos</key>
-			<integer>5640</integer>
+			<integer>5670</integer>
 		</dict>
 		<key>0BBE0C0E-D057-4A44-B000-02727F0AEDE5</key>
 		<dict>
@@ -10095,7 +10196,7 @@ Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (r
 			<key>xpos</key>
 			<integer>185</integer>
 			<key>ypos</key>
-			<integer>4700</integer>
+			<integer>4600</integer>
 		</dict>
 		<key>1E26935C-F1F3-4C69-AEFA-3A0D9D18291F</key>
 		<dict>
@@ -10200,7 +10301,7 @@ Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (r
 			<key>xpos</key>
 			<integer>400</integer>
 			<key>ypos</key>
-			<integer>4275</integer>
+			<integer>4175</integer>
 		</dict>
 		<key>2A4E4AA6-EBA8-4645-ADEC-62CA21AC7D9C</key>
 		<dict>
@@ -10225,9 +10326,9 @@ Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (r
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>335</integer>
+			<integer>600</integer>
 			<key>ypos</key>
-			<integer>4870</integer>
+			<integer>4695</integer>
 		</dict>
 		<key>2C1D63BF-6BDE-49E3-880C-A23FE845879F</key>
 		<dict>
@@ -10238,6 +10339,17 @@ Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (r
 			<key>ypos</key>
 			<integer>2030</integer>
 		</dict>
+		<key>2EA7E709-7E6B-43B3-8B44-080685EFA44A</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>note</key>
+			<string>Forum Catgories</string>
+			<key>xpos</key>
+			<integer>20</integer>
+			<key>ypos</key>
+			<integer>5065</integer>
+		</dict>
 		<key>2F50F145-46B1-4151-9DB4-61DB6A767DAB</key>
 		<dict>
 			<key>colorindex</key>
@@ -10245,9 +10357,9 @@ Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (r
 			<key>note</key>
 			<string>Discord Ready</string>
 			<key>xpos</key>
-			<integer>195</integer>
+			<integer>235</integer>
 			<key>ypos</key>
-			<integer>5400</integer>
+			<integer>5275</integer>
 		</dict>
 		<key>2FB281A9-8BFA-4836-A2A9-73A46C3DE6DD</key>
 		<dict>
@@ -10303,7 +10415,7 @@ Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (r
 			<key>xpos</key>
 			<integer>175</integer>
 			<key>ypos</key>
-			<integer>5190</integer>
+			<integer>4950</integer>
 		</dict>
 		<key>3374CD2F-3B5A-4267-B71E-862533887D36</key>
 		<dict>
@@ -10343,6 +10455,15 @@ Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (r
 			<key>ypos</key>
 			<integer>2360</integer>
 		</dict>
+		<key>36C2F914-A376-41B7-96DC-75DFB35B6ADF</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>xpos</key>
+			<integer>190</integer>
+			<key>ypos</key>
+			<integer>5165</integer>
+		</dict>
 		<key>378CFF0C-FF5A-40C2-BE7F-587887FA84F7</key>
 		<dict>
 			<key>colorindex</key>
@@ -10350,7 +10471,7 @@ Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (r
 			<key>xpos</key>
 			<integer>185</integer>
 			<key>ypos</key>
-			<integer>4560</integer>
+			<integer>4460</integer>
 		</dict>
 		<key>37DCDAA4-FF65-40C6-8942-52C641A1DD0A</key>
 		<dict>
@@ -10359,7 +10480,7 @@ Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (r
 			<key>xpos</key>
 			<integer>20</integer>
 			<key>ypos</key>
-			<integer>4990</integer>
+			<integer>4835</integer>
 		</dict>
 		<key>37EC9932-F455-4BBC-BA2B-AF780E3851F3</key>
 		<dict>
@@ -10421,7 +10542,7 @@ Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (r
 			<key>xpos</key>
 			<integer>20</integer>
 			<key>ypos</key>
-			<integer>4560</integer>
+			<integer>4460</integer>
 		</dict>
 		<key>3FDC367F-3E6F-4DAD-B146-E80044D686E8</key>
 		<dict>
@@ -10474,7 +10595,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>xpos</key>
 			<integer>185</integer>
 			<key>ypos</key>
-			<integer>4275</integer>
+			<integer>4175</integer>
 		</dict>
 		<key>4357CED9-9613-4872-AFBA-58629EB27D48</key>
 		<dict>
@@ -10485,7 +10606,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>xpos</key>
 			<integer>20</integer>
 			<key>ypos</key>
-			<integer>4425</integer>
+			<integer>4325</integer>
 		</dict>
 		<key>438AFA68-1629-472A-BAD5-0A1F3DA03359</key>
 		<dict>
@@ -10521,7 +10642,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>xpos</key>
 			<integer>330</integer>
 			<key>ypos</key>
-			<integer>4560</integer>
+			<integer>4460</integer>
 		</dict>
 		<key>477D128E-EEF6-4956-8C44-A6186D7537D0</key>
 		<dict>
@@ -10532,7 +10653,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>xpos</key>
 			<integer>470</integer>
 			<key>ypos</key>
-			<integer>4560</integer>
+			<integer>4460</integer>
 		</dict>
 		<key>47CB6610-109D-41E0-BBFF-BF83FB0FC8CE</key>
 		<dict>
@@ -10711,9 +10832,9 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>490</integer>
+			<integer>540</integer>
 			<key>ypos</key>
-			<integer>5390</integer>
+			<integer>5270</integer>
 		</dict>
 		<key>569B6FA7-2D27-4250-9937-AEC7F8947206</key>
 		<dict>
@@ -10749,9 +10870,9 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>colorindex</key>
 			<integer>6</integer>
 			<key>xpos</key>
-			<integer>950</integer>
+			<integer>945</integer>
 			<key>ypos</key>
-			<integer>4625</integer>
+			<integer>4480</integer>
 		</dict>
 		<key>586CA10A-CD8A-4C01-8388-351A83CC9B09</key>
 		<dict>
@@ -10805,18 +10926,18 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>colorindex</key>
 			<integer>6</integer>
 			<key>xpos</key>
-			<integer>775</integer>
+			<integer>1165</integer>
 			<key>ypos</key>
-			<integer>6510</integer>
+			<integer>6515</integer>
 		</dict>
 		<key>5E2BFA74-9185-4C41-82B0-274EB3C261BD</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>715</integer>
+			<integer>720</integer>
 			<key>ypos</key>
-			<integer>5755</integer>
+			<integer>5795</integer>
 		</dict>
 		<key>5E9B99E6-4356-4DC9-AC52-6B099C4ECBE2</key>
 		<dict>
@@ -10827,7 +10948,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>xpos</key>
 			<integer>20</integer>
 			<key>ypos</key>
-			<integer>4275</integer>
+			<integer>4175</integer>
 		</dict>
 		<key>5EF4465D-1198-4857-BFAD-B843B6339E84</key>
 		<dict>
@@ -10943,9 +11064,9 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<integer>335</integer>
+			<integer>600</integer>
 			<key>ypos</key>
-			<integer>4990</integer>
+			<integer>4815</integer>
 		</dict>
 		<key>6A8372C5-8CF6-4C9F-8313-D09CB265C529</key>
 		<dict>
@@ -11010,9 +11131,9 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>385</integer>
+			<integer>515</integer>
 			<key>ypos</key>
-			<integer>5590</integer>
+			<integer>5560</integer>
 		</dict>
 		<key>72551A9E-43E8-4462-9CB0-D5C419B4AEA2</key>
 		<dict>
@@ -11054,7 +11175,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>xpos</key>
 			<integer>20</integer>
 			<key>ypos</key>
-			<integer>5190</integer>
+			<integer>4950</integer>
 		</dict>
 		<key>75571120-8CAD-415A-8B57-F7BDDE3A629E</key>
 		<dict>
@@ -11070,9 +11191,9 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>190</integer>
+			<integer>355</integer>
 			<key>ypos</key>
-			<integer>4995</integer>
+			<integer>4840</integer>
 		</dict>
 		<key>76BE7619-FDB9-4324-81C7-6570B534A123</key>
 		<dict>
@@ -11081,7 +11202,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>xpos</key>
 			<integer>185</integer>
 			<key>ypos</key>
-			<integer>4425</integer>
+			<integer>4325</integer>
 		</dict>
 		<key>76BEB33A-CAE6-4776-A792-565E25257509</key>
 		<dict>
@@ -11253,7 +11374,7 @@ DOUBLE CLICK THIS to set hotkey</string>
 			<key>xpos</key>
 			<integer>185</integer>
 			<key>ypos</key>
-			<integer>4820</integer>
+			<integer>4720</integer>
 		</dict>
 		<key>88723AC0-4348-4B23-AFD7-FEFE6C532A94</key>
 		<dict>
@@ -11298,7 +11419,7 @@ DOUBLE CLICK THIS to set hotkey</string>
 			<key>note</key>
 			<string>open github remote</string>
 			<key>xpos</key>
-			<integer>360</integer>
+			<integer>435</integer>
 			<key>ypos</key>
 			<integer>630</integer>
 		</dict>
@@ -11363,7 +11484,7 @@ DOUBLE CLICK THIS to set hotkey</string>
 			<key>note</key>
 			<string>get current path</string>
 			<key>xpos</key>
-			<integer>190</integer>
+			<integer>205</integer>
 			<key>ypos</key>
 			<integer>630</integer>
 		</dict>
@@ -11508,7 +11629,7 @@ DOUBLE CLICK THIS to set hotkey</string>
 			<key>xpos</key>
 			<integer>20</integer>
 			<key>ypos</key>
-			<integer>4820</integer>
+			<integer>4720</integer>
 		</dict>
 		<key>A0215838-3769-4AD8-9444-299898E71DBA</key>
 		<dict>
@@ -11780,9 +11901,9 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>860</integer>
+			<integer>865</integer>
 			<key>ypos</key>
-			<integer>5755</integer>
+			<integer>5795</integer>
 		</dict>
 		<key>BB3A12AE-1D70-48E3-852C-24D0C8E27A93</key>
 		<dict>
@@ -11791,16 +11912,16 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<key>xpos</key>
 			<integer>20</integer>
 			<key>ypos</key>
-			<integer>4700</integer>
+			<integer>4600</integer>
 		</dict>
 		<key>BC1D15E5-4E17-4DF7-A961-64E1CCE58594</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>335</integer>
+			<integer>600</integer>
 			<key>ypos</key>
-			<integer>5115</integer>
+			<integer>4940</integer>
 		</dict>
 		<key>BE35B236-05AF-434F-93F0-FC5A62A4F777</key>
 		<dict>
@@ -11871,9 +11992,9 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<integer>265</integer>
+			<integer>305</integer>
 			<key>ypos</key>
-			<integer>5385</integer>
+			<integer>5265</integer>
 		</dict>
 		<key>C5E65176-674E-4553-A255-37A40EB99342</key>
 		<dict>
@@ -11929,7 +12050,7 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<key>xpos</key>
 			<integer>515</integer>
 			<key>ypos</key>
-			<integer>5805</integer>
+			<integer>5795</integer>
 		</dict>
 		<key>CC3D02A0-A1F1-44BF-9043-3C44555F9994</key>
 		<dict>
@@ -11985,7 +12106,7 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<key>xpos</key>
 			<integer>330</integer>
 			<key>ypos</key>
-			<integer>4305</integer>
+			<integer>4205</integer>
 		</dict>
 		<key>CF41BB03-A327-49A6-AD69-3A5F1F6F5A83</key>
 		<dict>
@@ -11995,6 +12116,15 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<integer>445</integer>
 			<key>ypos</key>
 			<integer>6230</integer>
+		</dict>
+		<key>D0041722-6FE5-480D-B443-FC3F8C71CD53</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>xpos</key>
+			<integer>255</integer>
+			<key>ypos</key>
+			<integer>5065</integer>
 		</dict>
 		<key>D0CC42AB-11E5-447A-9C1F-BE2293E03B5B</key>
 		<dict>
@@ -12126,18 +12256,18 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<key>note</key>
 			<string>Documentation Search</string>
 			<key>xpos</key>
-			<integer>20</integer>
+			<integer>15</integer>
 			<key>ypos</key>
-			<integer>5305</integer>
+			<integer>5400</integer>
 		</dict>
 		<key>DD86C0A5-6797-45E0-91CF-BEA8262CCDD1</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>335</integer>
+			<integer>400</integer>
 			<key>ypos</key>
-			<integer>5390</integer>
+			<integer>5270</integer>
 		</dict>
 		<key>DDE15544-E0CA-4DB0-92C0-F7861EE46206</key>
 		<dict>
@@ -12251,9 +12381,9 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>335</integer>
+			<integer>540</integer>
 			<key>ypos</key>
-			<integer>5270</integer>
+			<integer>5400</integer>
 		</dict>
 		<key>E5299CC1-0444-4A26-A030-D3B374CE8E15</key>
 		<dict>
@@ -12373,9 +12503,9 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>385</integer>
+			<integer>515</integer>
 			<key>ypos</key>
-			<integer>5705</integer>
+			<integer>5670</integer>
 		</dict>
 		<key>ECE5DEF0-6F35-4E9B-818C-56057511EE91</key>
 		<dict>
@@ -12431,7 +12561,7 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<key>note</key>
 			<string>screenshot</string>
 			<key>xpos</key>
-			<integer>210</integer>
+			<integer>205</integer>
 			<key>ypos</key>
 			<integer>210</integer>
 		</dict>

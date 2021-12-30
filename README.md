@@ -7,16 +7,16 @@
 
 ## ⚠️ Breaking Changes when upgrading to 2.9+
 - After upgrading to 2.9 (or later), you need to re-run the `osetup` command once.
-- After upgrading to 2.10 Hotkey Helper isn't a requirement for the Plugin search anymore, but you need to upgrade to Obsidian 0.13.14+ for the Plugin Search.
+- After upgrading to 2.10 Hotkey Helper isn't a requirement for the plugin search anymore, but you need to upgrade to Obsidian 0.13.14+ for the Plugin Search.
 
 Please refer to the [Breaking Changes Documentation](documentation/Breaking%20Changes.md) for more in-detail information and for information on breaking changes when updating from older versions.
 
-## Table of Contents
+---
+
 - [Installation and Setup](documentation/Installation.md)
 - [Workflow Configuration](documentation/Workflow%20Configuration.md)
 - [Troubleshooting](documentation/Troubleshooting.md)
 - [Changelog](Changelog.md)
-- [Feature Overview](#Feature-Overview)
 - [Alfred Themes](#Alfred%20Themes)
 - [Credits & Donations](#Credits)
 
@@ -109,8 +109,9 @@ Please refer to the [Breaking Changes Documentation](documentation/Breaking%20Ch
 - Search the Official Obsidian Documentation
 - Simultaneously search the Obsidian Hub
 - Search the Forum
+- Browse Forum Categories
 
-➡️ [Documentation of the Documentation Search](documentation/Documentation%20Search.md)
+➡️ [Documentation of the Documentation & Forum Search](documentation/Documentation%20and%20Forum%20Search.md)
 
 ---
 
