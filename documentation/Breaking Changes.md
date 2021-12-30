@@ -5,6 +5,7 @@
 ## Table of Contents
 <!-- MarkdownTOC -->
 
+- [Version 2.12.1](#version-2121)
 - [Version 2.10](#version-210)
 - [Version 2.9](#version-29)
 - [Version 2.8](#version-28)
@@ -18,6 +19,9 @@
 	- [List of all other Breaking Changes](#list-of-all-other-breaking-changes)
 
 <!-- /MarkdownTOC -->
+
+## Version 2.12.1
+The recently introduced `ogit` command has been removed since the same functionality is now available [via a plugin](https://github.com/kometenstaub/copy-publish-url) in a more efficient manner. 
 
 ## Version 2.10
 Hotkey Helper isn't a requirement for the Plugin search anymore, but you need to upgrade to Obsidian 0.13.14+ for the Plugin Search now.

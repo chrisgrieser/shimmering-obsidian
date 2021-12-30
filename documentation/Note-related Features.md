@@ -8,7 +8,6 @@
 - [Create a new Note](#create-a-new-note)
 - [Daily Notes](#daily-notes)
 - [Move Note](#move-note)
-- [Open GitHub Commit History](#open-github-commit-history)
 
 <!-- /MarkdownTOC -->
 
@@ -35,10 +34,3 @@
 **`om` or `triggered via hotkey`: Move the current note to a different folder in your vault.**
 - This fully replicates the functionality of the `Move File to another folder`.
 - 💡 The reason for this command is that the `Move File to another folder` is only available when the file explorer core plugin is enabled. However, some users of this Alfred workflow (including myself) prefer to fully navigate their vault via Alfred, so that the file explorer isn't really needed anymore — the move command is basically the last thing stopping you from simply deactivating the file explorer plugin.
-
-## Open GitHub Commit History
-**`ogit` or `triggered via hotkey`: Open the GitHub commit history of the current note.**
-- ℹ️ This requires the vault root to be a git directory. The Obsidian Git Plugin is __not__ required for this command.
-- Read the excellent guide [How I Put My Mind Under Version Control](https://medium.com/analytics-vidhya/how-i-put-my-mind-under-version-control-24caea37b8a5) by Bryan Jenks on how to back up your vault on git.
-
-[⬆️ Go Back to Top](#Table-of-Contents)

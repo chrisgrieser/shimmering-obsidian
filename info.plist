@@ -1767,19 +1767,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>8394CC86-7CD3-4D50-82D3-529096653893</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>8F1B7C4D-4763-4072-ACA9-623078794CE7</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>860C2D5F-C032-49DF-812C-2973A0E3F3E8</key>
 		<array>
 			<dict>
@@ -1884,19 +1871,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>8A40D860-19BE-4CBA-A0E3-1C2BA67FBABC</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>9A62F2C8-60F1-4AF0-A436-F2C9BFE99546</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>8C93D170-EDBF-4A3E-BD7D-2DFD23E97AE9</key>
 		<array>
 			<dict>
@@ -1941,19 +1915,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>4EA9A40E-C1AF-4EB5-B118-A36B1F0CE6F7</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>8F1B7C4D-4763-4072-ACA9-623078794CE7</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>8A40D860-19BE-4CBA-A0E3-1C2BA67FBABC</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -2780,19 +2741,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>EBDFE697-8466-45B6-9B43-EB7DC83BB404</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>D294BE97-76B8-4D56-9DE3-E61C6180DC8C</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>8F1B7C4D-4763-4072-ACA9-623078794CE7</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -3953,6 +3901,25 @@ tesseract "$temp_image" stdout -l $ocr_languages 2&gt;&amp;1</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>externaltriggerid</key>
+				<string>update-obsidian-workflow</string>
+				<key>passinputasargument</key>
+				<true/>
+				<key>passvariables</key>
+				<true/>
+				<key>workflowbundleid</key>
+				<string>self</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>9A62F2C8-60F1-4AF0-A436-F2C9BFE99546</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>action</key>
 				<integer>0</integer>
 				<key>argument</key>
@@ -4079,127 +4046,6 @@ tesseract "$temp_image" stdout -l $ocr_languages 2&gt;&amp;1</string>
 			<string>ADD571B0-8240-4430-B70C-07E041CA0063</string>
 			<key>version</key>
 			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>externaltriggerid</key>
-				<string>update-obsidian-workflow</string>
-				<key>passinputasargument</key>
-				<true/>
-				<key>passvariables</key>
-				<true/>
-				<key>workflowbundleid</key>
-				<string>self</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.callexternaltrigger</string>
-			<key>uid</key>
-			<string>9A62F2C8-60F1-4AF0-A436-F2C9BFE99546</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>action</key>
-				<integer>0</integer>
-				<key>argument</key>
-				<integer>1</integer>
-				<key>focusedappvariable</key>
-				<false/>
-				<key>focusedappvariablename</key>
-				<string></string>
-				<key>hotkey</key>
-				<integer>5</integer>
-				<key>hotmod</key>
-				<integer>1966080</integer>
-				<key>hotstring</key>
-				<string>G</string>
-				<key>leftcursor</key>
-				<false/>
-				<key>modsmode</key>
-				<integer>0</integer>
-				<key>relatedApps</key>
-				<array>
-					<string>md.obsidian</string>
-				</array>
-				<key>relatedAppsMode</key>
-				<integer>1</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.hotkey</string>
-			<key>uid</key>
-			<string>8394CC86-7CD3-4D50-82D3-529096653893</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>script</key>
-				<string></string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string>Scripts/get-current-path.sh</string>
-				<key>type</key>
-				<integer>8</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>8F1B7C4D-4763-4072-ACA9-623078794CE7</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>script</key>
-				<string></string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string>scripts/open-github-remote.js</string>
-				<key>type</key>
-				<integer>8</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>8A40D860-19BE-4CBA-A0E3-1C2BA67FBABC</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>keyword</key>
-				<string>ogit</string>
-				<key>subtext</key>
-				<string>at GitHub</string>
-				<key>text</key>
-				<string>Open Commit History of Current Note</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>D294BE97-76B8-4D56-9DE3-E61C6180DC8C</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -10011,7 +9857,10 @@ Credits
 -------
 Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (rl). https://chris-grieser.de/
 
-----------------------------------------------------------------</string>
+----------------------------------------------------------------
+
+ℹ️ Version 2.12.1
+The recently introduced `ogit` command has been removed since the same functionality is now available [via a plugin](https://github.com/kometenstaub/copy-publish-url) in a more efficient manner.</string>
 	<key>uidata</key>
 	<dict>
 		<key>01DCEAE6-93DC-452F-86C2-6694ED7CB436</key>
@@ -11309,19 +11158,6 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>ypos</key>
 			<integer>2470</integer>
 		</dict>
-		<key>8394CC86-7CD3-4D50-82D3-529096653893</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>7</integer>
-			<key>note</key>
-			<string>Open History in Git Remote
-
-DOUBLE CLICK THIS to set hotkey</string>
-			<key>xpos</key>
-			<integer>20</integer>
-			<key>ypos</key>
-			<integer>630</integer>
-		</dict>
 		<key>860C2D5F-C032-49DF-812C-2973A0E3F3E8</key>
 		<dict>
 			<key>colorindex</key>
@@ -11412,17 +11248,6 @@ DOUBLE CLICK THIS to set hotkey</string>
 			<key>ypos</key>
 			<integer>5720</integer>
 		</dict>
-		<key>8A40D860-19BE-4CBA-A0E3-1C2BA67FBABC</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>3</integer>
-			<key>note</key>
-			<string>open github remote</string>
-			<key>xpos</key>
-			<integer>435</integer>
-			<key>ypos</key>
-			<integer>630</integer>
-		</dict>
 		<key>8BC09525-BB68-46E3-A7E2-C0E5C489FF60</key>
 		<dict>
 			<key>colorindex</key>
@@ -11476,17 +11301,6 @@ DOUBLE CLICK THIS to set hotkey</string>
 			<integer>10</integer>
 			<key>ypos</key>
 			<integer>7335</integer>
-		</dict>
-		<key>8F1B7C4D-4763-4072-ACA9-623078794CE7</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>3</integer>
-			<key>note</key>
-			<string>get current path</string>
-			<key>xpos</key>
-			<integer>205</integer>
-			<key>ypos</key>
-			<integer>630</integer>
 		</dict>
 		<key>8F317FDD-5FC0-4097-BC7B-914DB2BDDDA8</key>
 		<dict>
@@ -11567,9 +11381,9 @@ DOUBLE CLICK THIS to set hotkey</string>
 			<key>colorindex</key>
 			<integer>6</integer>
 			<key>xpos</key>
-			<integer>850</integer>
+			<integer>835</integer>
 			<key>ypos</key>
-			<integer>575</integer>
+			<integer>410</integer>
 		</dict>
 		<key>9B3822BB-6392-424B-A166-328A7EBCAF30</key>
 		<dict>
@@ -12152,15 +11966,6 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<integer>330</integer>
 			<key>ypos</key>
 			<integer>1970</integer>
-		</dict>
-		<key>D294BE97-76B8-4D56-9DE3-E61C6180DC8C</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>3</integer>
-			<key>xpos</key>
-			<integer>20</integer>
-			<key>ypos</key>
-			<integer>820</integer>
 		</dict>
 		<key>D3A5EAC3-A2D8-4186-8B20-892495845C0E</key>
 		<dict>
