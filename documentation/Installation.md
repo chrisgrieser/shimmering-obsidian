@@ -28,7 +28,7 @@ These requirements **need to be installed**, since this workflow cannot work wit
 4. _Recommended:_ After installing the workflow, you should configure the settings of this workflow to make use of most of its features. Refer to the [Workflow Configuration](Workflow%20Configuration.md) for further information.
 
 ## Optional Requirements
-These requirements are *only necessary for specific features* of this workflow. If you do not plan to use the respective feature, you can forego installing the requirement for it. It is recommended to install all requirements listed here to be able to use all features of _Shimmering Obsidian_.
+These requirements are only necessary for specific features of this workflow. If you do not plan to use the respective feature, you can forego installing the requirement for it. 
 
 | Name                                                                                                                                         | Type                      | Function                                                                                                     |
 | -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------- | ------------------------------------------------------------------------------------------------------------ |
@@ -44,9 +44,9 @@ brew install --cask qlmarkdown
 ```
 
 ### QLMarkdown or Peek?
-[QLmarkdown](https://github.com/sbarex/QLMarkdown) and [Peek](https://apps.apple.com/app/peek-quick-look-extension/id1554235898) both enable previewing of Markdown documents. Peek works with a wide range of other files than Markdown, but costs around 5€. QLMarkdown is free, but only works for Markdown and requires a small setup:
-- QLMarkdown must be started at least once to be able to run. (You may need to right-click the app and select `open`, to be able be able to allow macOS to trust the app.)
-- To enable proper display of YAML headers, you need to enable the respective setting in the Advanced Options of QLMarkdown.
+[QLmarkdown](https://github.com/sbarex/QLMarkdown) and [Peek](https://apps.apple.com/app/peek-quick-look-extension/id1554235898) both enable previewing of Markdown documents. Peek works with a wide range of other file types than Markdown, but costs around 5€. QLMarkdown is free, but only works for Markdown and requires some minor small setup:
+- The app `QLmarkdown.app` must be started at least once. You may need to right-click the app and select `open`, to be able be able to allow macOS to trust the app.
+- To enable proper display of YAML headers, you need to enable the respective setting in the Advanced Options of QLMarkdown:
 
 <img width="654" alt="Screenshot 2021-12-05 01 49 11" src="https://user-images.githubusercontent.com/73286100/144729141-72d8cd41-8e45-43e0-a11a-ce98ba97c2ac.png">
 

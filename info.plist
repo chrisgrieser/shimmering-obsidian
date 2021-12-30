@@ -11497,7 +11497,7 @@ DOUBLE CLICK THIS to set hotkey</string>
 			<key>note</key>
 			<string>Move to folder...</string>
 			<key>xpos</key>
-			<integer>20</integer>
+			<integer>15</integer>
 			<key>ypos</key>
 			<integer>1175</integer>
 		</dict>
@@ -12535,7 +12535,7 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 		<key>merge_nested_tags</key>
 		<string>false</string>
 		<key>ocr_languages</key>
-		<string>eng+deu</string>
+		<string>eng</string>
 		<key>ocr_prefix</key>
 		<string>{date:yyyy-MM-dd}, {time:HH:mm}</string>
 		<key>open_after_appending</key>
@@ -12566,8 +12566,8 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 		<string>discord_ready_links</string>
 		<string>use_quickadd</string>
 		<string>vault_name_ENC</string>
-		<string>h_lvl_ignore</string>
 		<string>workspace_to_spellcheck</string>
+		<string>h_lvl_ignore</string>
 		<string>svg_size</string>
 		<string>template_note_path</string>
 		<string>vault_path</string>
