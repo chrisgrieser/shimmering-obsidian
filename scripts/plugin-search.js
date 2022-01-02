@@ -40,7 +40,7 @@ pluginJSON.forEach(plugin => {
 	const repo = plugin.repo;
 
 	const githubURL = "https://github.com/" + repo;
-	const pluginURI = "obsidian://show-plugin?id=" + id; //Obsidian version 0.13+
+	const pluginURI = "obsidian://show-plugin?id=" + id; // Obsidian version 0.13+
 	let isDiscordReady, shareURL;
 	if (discordReadyLinks) {
 		shareURL = "<" + pluginURI + ">";

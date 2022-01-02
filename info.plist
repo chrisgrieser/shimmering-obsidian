@@ -323,7 +323,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>DB86D9D0-7003-46C9-B759-68731F160671</string>
+				<string>5E1194F1-12BA-456E-8511-C5708AE07906</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -8962,7 +8962,7 @@ echo | git pull</string>
 				<key>keyword</key>
 				<string>obeta</string>
 				<key>subtext</key>
-				<string>Obsidian42 BRAT</string>
+				<string></string>
 				<key>text</key>
 				<string>❇️ Add Beta Plugin</string>
 				<key>withspace</key>
@@ -9002,7 +9002,7 @@ echo | git pull</string>
 				<key>keyword</key>
 				<string>obeta</string>
 				<key>subtext</key>
-				<string>Obsidian42 BRAT</string>
+				<string></string>
 				<key>text</key>
 				<string>🔁 Update all Beta Plugins</string>
 				<key>withspace</key>
@@ -9037,23 +9037,51 @@ echo | git pull</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
 				<key>argumenttype</key>
-				<integer>2</integer>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>0</integer>
 				<key>keyword</key>
 				<string>obeta</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>scripts/open-beta-repo.js</string>
 				<key>subtext</key>
-				<string>Obsidian42 BRAT</string>
-				<key>text</key>
+				<string></string>
+				<key>title</key>
 				<string>♋️ Open GitHub Repository of Beta Plugin</string>
+				<key>type</key>
+				<integer>8</integer>
 				<key>withspace</key>
-				<false/>
+				<true/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
+			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
 			<string>2A4E4AA6-EBA8-4645-ADEC-62CA21AC7D9C</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -9063,14 +9091,14 @@ echo | git pull</string>
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
-				<string>obsidian://advanced-uri?vault={var:vault_name_ENC}&amp;commandid=obsidian42-brat%253ABRAT-openGitHubRepository</string>
+				<string></string>
 				<key>utf8</key>
 				<true/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.openurl</string>
 			<key>uid</key>
-			<string>DB86D9D0-7003-46C9-B759-68731F160671</string>
+			<string>5E1194F1-12BA-456E-8511-C5708AE07906</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -10009,7 +10037,7 @@ The recently introduced `ogit` command has been removed since the same functiona
 			<key>xpos</key>
 			<integer>175</integer>
 			<key>ypos</key>
-			<integer>7450</integer>
+			<integer>7420</integer>
 		</dict>
 		<key>156DEEC1-0E00-49BA-A920-228BB3A7FBFC</key>
 		<dict>
@@ -10155,11 +10183,13 @@ The recently introduced `ogit` command has been removed since the same functiona
 		<key>2A4E4AA6-EBA8-4645-ADEC-62CA21AC7D9C</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>9</integer>
+			<integer>3</integer>
+			<key>note</key>
+			<string>open beta repo</string>
 			<key>xpos</key>
 			<integer>10</integer>
 			<key>ypos</key>
-			<integer>7565</integer>
+			<integer>7540</integer>
 		</dict>
 		<key>2B55DCB2-3C6A-42EC-A014-095939CB3FAB</key>
 		<dict>
@@ -10616,7 +10646,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>xpos</key>
 			<integer>175</integer>
 			<key>ypos</key>
-			<integer>7335</integer>
+			<integer>7305</integer>
 		</dict>
 		<key>503B3F91-98A0-4357-92F2-A88BD6EDB404</key>
 		<dict>
@@ -10778,6 +10808,15 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<integer>1165</integer>
 			<key>ypos</key>
 			<integer>6515</integer>
+		</dict>
+		<key>5E1194F1-12BA-456E-8511-C5708AE07906</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>xpos</key>
+			<integer>175</integer>
+			<key>ypos</key>
+			<integer>7540</integer>
 		</dict>
 		<key>5E2BFA74-9185-4C41-82B0-274EB3C261BD</key>
 		<dict>
@@ -11300,7 +11339,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>xpos</key>
 			<integer>10</integer>
 			<key>ypos</key>
-			<integer>7335</integer>
+			<integer>7305</integer>
 		</dict>
 		<key>8F317FDD-5FC0-4097-BC7B-914DB2BDDDA8</key>
 		<dict>
@@ -11744,7 +11783,7 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<key>xpos</key>
 			<integer>10</integer>
 			<key>ypos</key>
-			<integer>7450</integer>
+			<integer>7420</integer>
 		</dict>
 		<key>BF2C7CBD-67E0-45CC-8948-E68291FF2B50</key>
 		<dict>
@@ -12024,15 +12063,6 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<integer>1820</integer>
 			<key>ypos</key>
 			<integer>1720</integer>
-		</dict>
-		<key>DB86D9D0-7003-46C9-B759-68731F160671</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>xpos</key>
-			<integer>175</integer>
-			<key>ypos</key>
-			<integer>7565</integer>
 		</dict>
 		<key>DBA6DBFB-3701-4BFC-B72C-406BF62DF384</key>
 		<dict>
@@ -12501,8 +12531,8 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 		<string>discord_ready_links</string>
 		<string>use_quickadd</string>
 		<string>vault_name_ENC</string>
-		<string>workspace_to_spellcheck</string>
 		<string>h_lvl_ignore</string>
+		<string>workspace_to_spellcheck</string>
 		<string>svg_size</string>
 		<string>template_note_path</string>
 		<string>vault_path</string>
