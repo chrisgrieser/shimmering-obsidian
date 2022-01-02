@@ -13,7 +13,7 @@ function readFile (path, encoding) {
 	return ObjC.unwrap(str);
 }
 
-const alfredMatcher = (str) => str.replace (/[-()_.]/g, " ") + " " + str;
+const alfredMatcher = (str) => str.replace (/[-()_.]/g, " ") + " " + str + " ";
 const getEnv = (path) => $.getenv(path).replace(/^~/, app.pathTo("home folder"));
 const bratDataJson = getEnv("vault_path") + "/.obsidian/plugins/obsidian42-brat/data.json";
 const discordReadyLinks = getEnv("discord_ready_links") === "true";
@@ -37,7 +37,7 @@ betaRepos.forEach(repo => {
 	jsonArray.push({
 		"title": name,
 		"subtitle": "by " + author,
-		"match": alfredMatcher (url),
+		"match": alfredMatcher (name) + alfredMatcher (author),
 		"arg": url,
 		"alt": {
 			"arg": shareURL,
