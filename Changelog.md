@@ -1,3 +1,5 @@
+- 2022-01-02	release 2.12.2
+- 2022-01-02	improved obeta for accessing beta plugin repos
 - 2021-12-30	release 2.12.1
 - 2021-12-30	remove 'ogit' since the functionality is now provided in a much better way by the COpy Publish URL plugin
 - 2021-12-30	release 2.12.0
