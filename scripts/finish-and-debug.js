@@ -49,21 +49,21 @@ function run(argv) {
 		log("_");
 		log("-------------------------------");
 		log("Metadata JSONs: " + numberOfJSONS + "/3");
-		if (numberOfJSONS < 3) log("Metadata not found. Please run `osetup` and retry.")
+		if (numberOfJSONS < 3) log("Metadata not found. Please run `osetup` and retry.");
 		log("-------------------------------");
 		log("INSTALLED VERSION");
 		log("macOS: " + macVer);
 		log("Obsidian: " + obsiVer);
 		log("Alfred: " + $.getenv("alfred_version"));
 		log("Workflow: " + $.getenv("alfred_workflow_version"));
-		log("Advanced URI Extractor: " + advancedUriVer);
+		log("Advanced URI Plugin: " + advancedUriVer);
 		log("Metadata Extractor: " + metadataExVer);
 		log("-------------------------------");
 		log("LATEST VERSION");
 		log("Obsidian: " + obsiVerOnline);
 		log("Obsidian (Insider): " + obsiVerBetaOnline);
 		log("Workflow: " + workflowVerOnline);
-		log("Advanced URI Extractor: " + advancedUriVerOnline);
+		log("Advanced URI Plugin: " + advancedUriVerOnline);
 		log("Metadata Extractor: " + metadataExVerOnline);
 		log("-------------------------------");
 	}
