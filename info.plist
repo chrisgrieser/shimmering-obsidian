@@ -12509,8 +12509,6 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 		<string>false</string>
 		<key>screenshot_path</key>
 		<string></string>
-		<key>svg_size</key>
-		<string>1.1em</string>
 		<key>template_note_path</key>
 		<string>~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vault/Meta/Templates/T Basic.md</string>
 		<key>thousand_separator</key>
@@ -12527,13 +12525,12 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 	<key>variablesdontexport</key>
 	<array>
 		<string>backup_destination</string>
-		<string>daily_note_path</string>
+		<string>vault_name_ENC</string>
 		<string>discord_ready_links</string>
 		<string>use_quickadd</string>
-		<string>vault_name_ENC</string>
-		<string>h_lvl_ignore</string>
+		<string>daily_note_path</string>
 		<string>workspace_to_spellcheck</string>
-		<string>svg_size</string>
+		<string>h_lvl_ignore</string>
 		<string>template_note_path</string>
 		<string>vault_path</string>
 	</array>
