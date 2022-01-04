@@ -8004,17 +8004,15 @@ echo "$backup"</string>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
-				<integer>102</integer>
+				<integer>0</integer>
 				<key>script</key>
-				<string>open "obsidian://advanced-uri?commandid=metadata-extractor%253Awrite-metadata-json"
-open "obsidian://advanced-uri?commandid=metadata-extractor%253Awrite-tags-json"
-open "obsidian://advanced-uri?commandid=metadata-extractor%253Awrite-allExceptMd-json"</string>
+				<string></string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string></string>
+				<string>scripts/metadata_refreshing.sh</string>
 				<key>type</key>
-				<integer>5</integer>
+				<integer>8</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
@@ -10823,7 +10821,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>720</integer>
+			<integer>710</integer>
 			<key>ypos</key>
 			<integer>5795</integer>
 		</dict>
