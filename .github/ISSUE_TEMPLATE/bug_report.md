@@ -37,3 +37,4 @@ version information
 **Checklist**
 - [ ] I have [updated to the latest version](https://github.com/chrisgrieser/shimmering-obsidian/releases/latest) of this workflow.
 - [ ] I have read the [Troubleshooting Documentation](https://github.com/chrisgrieser/shimmering-obsidian/blob/main/documentation/Troubleshooting.md).
+- [ ] If the `o ...` main search does not work, I have tried rerunning `osetup` and it still does not work.
