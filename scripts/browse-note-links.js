@@ -19,7 +19,7 @@ function run () { /* exported run */
 		return filePath.split("/").slice(0, -1).join("/");
 	}
 
-	const alfredMatcher = str => " " + str.replace (/[-()_.@]/g, " ") + " " + str + " ";
+	const alfredMatcher = str => " " + str.replace (/[-()_/:.@]/g, " ") + " " + str + " ";
 
 	// Import Data
 	const vaultPath = $.getenv("vault_path").replace(/^~/, app.pathTo("home folder"));
@@ -155,7 +155,7 @@ function run () { /* exported run */
 
 		jsonArray.push({
 			"title": title,
-			"match": "external " + alfredMatcher(title) + " " + url,
+			"match": "external" + alfredMatcher(title) + alfredMatcher(url),
 			"subtitle": url,
 			"uid": url,
 			"arg": url,
