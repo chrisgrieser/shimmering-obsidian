@@ -1,0 +1,48 @@
+name: Bug Report
+description: File a bug report
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: Bug Description
+      description: A clear and concise description of the bug.
+    validations:
+      required: true
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Relevant Screenshot
+      description: If applicable, add screenshots or a screen recording to help explain your problem.
+  - type: textarea
+    id: reproduction-steps
+    attributes:
+      label: To Reproduce
+      description: Steps to reproduce the problem
+      placeholder: |
+        For example:
+        1. Go to '...'
+        2. Click on '...'
+        3. Scroll down to '...'
+  - type: textarea
+    id: debugging-log
+    attributes:
+      label: Debugging Log
+      description: You can get a debugging log by opening the workflow in Alfred preferences and pressing cmd + D. A small window will open up which will log everything happening during the execution of the Workflow. Use the malfunctioning part of the workflow once more, copy the content of the log window, and attach it as text file.
+  - type: textarea
+    id: version-info
+    attributes:
+      label: Version Information
+      description: "Alfred can compile version information of your machine, and Obsidian installation by running `odebug`. Running the command will copy the information to your clipboard, please paste it here as well, as it also helps with debugging."
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Make sure you have done the following
+      options:
+        - label: I have [updated to the latest version](https://github.com/chrisgrieser/shimmering-obsidian/releases/latest) of this workflow.
+          required: true
+        - label: I have read the [Troubleshooting Documentation](https://github.com/chrisgrieser/shimmering-obsidian/blob/main/documentation/Troubleshooting.md).
+          required: true
+        - label: If the `o ...` main search does not work, I have tried rerunning `osetup` and it still does not work.
+          required: true
