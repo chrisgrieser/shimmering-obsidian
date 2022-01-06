@@ -7476,25 +7476,6 @@ echo "$backup"</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>browser</key>
-				<string></string>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string>{query}</string>
-				<key>utf8</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
-			<key>uid</key>
-			<string>2B7C353A-135A-4544-90E0-A7E70067FB5D</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>openwith</key>
 				<string></string>
 				<key>sourcefile</key>
@@ -7531,17 +7512,21 @@ echo "$backup"</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>openwith</key>
+				<key>browser</key>
 				<string></string>
-				<key>sourcefile</key>
-				<string>cheatsheets/Obsidian Default Theme.css</string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>{query}</string>
+				<key>utf8</key>
+				<true/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.openfile</string>
+			<string>alfred.workflow.action.openurl</string>
 			<key>uid</key>
-			<string>69F3C12D-E4FD-4991-91EF-87ACEE65208C</string>
+			<string>2B7C353A-135A-4544-90E0-A7E70067FB5D</string>
 			<key>version</key>
-			<integer>3</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -7553,7 +7538,7 @@ echo "$backup"</string>
 				<key>fixedorder</key>
 				<false/>
 				<key>items</key>
-				<string>[{"title":"Default Colors","arg":"default-colors.pdf","subtitle":""},{"imagefile":"480f3609e44ea0ceed5bd6bc0fb19a7874881127.png","title":"Object Model API","arg":"object-model-api.png","subtitle":""},{"imagefile":"37bbef56f2b94de84c98e87c63fc00ab9008b6ee.png","title":"CSS Classes","arg":"css-classes.png","subtitle":""},{"imagefile":"37bbef56f2b94de84c98e87c63fc00ab9008b6ee.png","title":"All Default CSS Variables","arg":"https:\/\/github.com\/mgmeyers\/obsidian-style-settings\/blob\/main\/obsidian-default-theme.css","subtitle":""},{"imagefile":"480f3609e44ea0ceed5bd6bc0fb19a7874881127.png","title":"API Documentation","arg":"https:\/\/github.com\/obsidianmd\/obsidian-api\/blob\/master\/obsidian.d.ts","subtitle":""},{"imagefile":"37bbef56f2b94de84c98e87c63fc00ab9008b6ee.png","title":"Default Theme.css","arg":"Obsidian Default Theme.css"}]</string>
+				<string>[{"title":"Default Colors","arg":"default-colors.pdf","subtitle":""},{"imagefile":"480f3609e44ea0ceed5bd6bc0fb19a7874881127.png","title":"API Structure (simple)","arg":"object-model-api.png","subtitle":""},{"imagefile":"37bbef56f2b94de84c98e87c63fc00ab9008b6ee.png","title":"CSS Classes","arg":"css-classes.png","subtitle":""},{"imagefile":"37bbef56f2b94de84c98e87c63fc00ab9008b6ee.png","title":"All Default CSS Variables","arg":"https:\/\/github.com\/mgmeyers\/obsidian-style-settings\/blob\/main\/obsidian-default-theme.css","subtitle":""},{"imagefile":"480f3609e44ea0ceed5bd6bc0fb19a7874881127.png","title":"API Documentation","arg":"https:\/\/github.com\/obsidianmd\/obsidian-api\/blob\/master\/obsidian.d.ts","subtitle":""},{"imagefile":"37bbef56f2b94de84c98e87c63fc00ab9008b6ee.png","title":"Default Theme.css","arg":"Obsidian Default Theme.css"},{"imagefile":"480f3609e44ea0ceed5bd6bc0fb19a7874881127.png","title":"API Structure (full)","arg":"https:\/\/i.joethei.space\/obsidian-api.svg"}]</string>
 				<key>keyword</key>
 				<string>oc</string>
 				<key>runningsubtext</key>
@@ -7599,6 +7584,20 @@ echo "$backup"</string>
 						<key>matchmode</key>
 						<integer>0</integer>
 						<key>matchstring</key>
+						<string>API-structure-full.png</string>
+						<key>outputlabel</key>
+						<string>full API structure</string>
+						<key>uid</key>
+						<string>0AE2FD45-8D65-49A2-A337-60B0BA5450FF</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
 						<string>Obsidian Default Theme.css</string>
 						<key>outputlabel</key>
 						<string>default theme</string>
@@ -7619,25 +7618,17 @@ echo "$backup"</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>qlmanage -p  ./cheatsheets/"{query}"</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
+				<key>openwith</key>
 				<string></string>
-				<key>type</key>
-				<integer>5</integer>
+				<key>sourcefile</key>
+				<string>cheatsheets/{query}</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.script</string>
+			<string>alfred.workflow.action.openfile</string>
 			<key>uid</key>
-			<string>BC1D15E5-4E17-4DF7-A961-64E1CCE58594</string>
+			<string>69F3C12D-E4FD-4991-91EF-87ACEE65208C</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -7678,6 +7669,29 @@ echo "$backup"</string>
 			<string>752227A0-68B5-41B9-8A42-CDB80B6EB137</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>qlmanage -p  ./cheatsheets/"{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>5</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>BC1D15E5-4E17-4DF7-A961-64E1CCE58594</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -7730,6 +7744,23 @@ echo "$backup"</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>argument</key>
+				<string>https://forum.obsidian.md/c/{query}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>36C2F914-A376-41B7-96DC-75DFB35B6ADF</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>externaltriggerid</key>
 				<string>update-obsidian-workflow</string>
 				<key>passinputasargument</key>
@@ -7743,23 +7774,6 @@ echo "$backup"</string>
 			<string>alfred.workflow.output.callexternaltrigger</string>
 			<key>uid</key>
 			<string>902431F8-34D6-476A-8917-EFF85864F369</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string>https://forum.obsidian.md/c/{query}</string>
-				<key>passthroughargument</key>
-				<false/>
-				<key>variables</key>
-				<dict/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>36C2F914-A376-41B7-96DC-75DFB35B6ADF</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -10205,7 +10219,7 @@ The recently introduced `ogit` command has been removed since the same functiona
 			<key>xpos</key>
 			<integer>600</integer>
 			<key>ypos</key>
-			<integer>4695</integer>
+			<integer>4730</integer>
 		</dict>
 		<key>2C1D63BF-6BDE-49E3-880C-A23FE845879F</key>
 		<dict>
@@ -10952,7 +10966,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>xpos</key>
 			<integer>600</integer>
 			<key>ypos</key>
-			<integer>4815</integer>
+			<integer>4850</integer>
 		</dict>
 		<key>6A8372C5-8CF6-4C9F-8313-D09CB265C529</key>
 		<dict>
@@ -11353,9 +11367,9 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>colorindex</key>
 			<integer>6</integer>
 			<key>xpos</key>
-			<integer>885</integer>
+			<integer>880</integer>
 			<key>ypos</key>
-			<integer>5125</integer>
+			<integer>5180</integer>
 		</dict>
 		<key>92307BE0-68AE-451F-9850-FE01218229BF</key>
 		<dict>
@@ -11769,10 +11783,12 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 		<dict>
 			<key>colorindex</key>
 			<integer>9</integer>
+			<key>note</key>
+			<string>quicklook</string>
 			<key>xpos</key>
 			<integer>600</integer>
 			<key>ypos</key>
-			<integer>4940</integer>
+			<integer>4980</integer>
 		</dict>
 		<key>BE35B236-05AF-434F-93F0-FC5A62A4F777</key>
 		<dict>
