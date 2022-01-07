@@ -12,9 +12,9 @@
 <img src="https://i.imgur.com/RkKGrLw.gif" alt="Searching the Obsidian Documentation" width=60%>
 
 ## Forum Search
-**`of`: Browse or Search the `f`orum.**
-- Search the official [Obsidian Forum](https://forum.obsidian.md/s).
-- Browse a Forum Category
-	- Use `⌥ + ↵` to copy the link to the category to your clipboard instead. When the [workflow configuration](Workflow%20Configuration.md#Miscellaneous) `discord_ready_links` is set to `true`, the copied link will be surrounded with `<` `>` for more convenient pasting in the Discord Desktop app (disables auto-preview).
+**`of`: Browse or Search the official [Obsidian `f`orum](https://forum.obsidian.md/s).**
+- Search in a category: Select a category and press `↵`. Afterwards, you will be prompted to enter a search query. Confirm with `↵` to open that search in your default browser.
+- Press `⌘ + ↵` to open the forum category in your default browser.
+- Use `⌥ + ↵` to copy the link to the category to your clipboard instead. When the [workflow configuration](Workflow%20Configuration.md#Miscellaneous) `discord_ready_links` is set to `true`, the copied link will be surrounded with `<` `>` for more convenient pasting in the Discord Desktop app (disables auto-preview).
 
 [⬆️ Go Back to Top](#Table-of-Contents)

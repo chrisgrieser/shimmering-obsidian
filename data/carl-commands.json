@@ -3,7 +3,7 @@
    "title": "debug help",
    "arg": "debug help",
    "uid": "debug help",
-   "match": "debug help",
+   "match": "debug help"
 },
 {
    "title": "migration help",
@@ -177,7 +177,13 @@
    "title": "css help",
    "arg": "css help",
    "uid": "css help",
-   "match": "css help",
+   "match": "css help"
+},
+{
+   "title": "sudo rm",
+   "arg": "sudo rm \"one day \" buy milk",
+   "uid": "sudo rm",
+   "match": "sudo rm reminder"
 },
 {
    "title": "discord tricks",
