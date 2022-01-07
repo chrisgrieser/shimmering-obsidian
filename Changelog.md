@@ -1,3 +1,13 @@
+- 2022-01-07	release 2.13.0
+- 2022-01-07	improved forum search, now can search per category
+- 2022-01-06	added another cheatsheet
+- 2022-01-06	documentation-fix issue form
+- 2022-01-06	setup issue forms
+- 2022-01-05	ol and link browsing now matches urls of external URLs, too
+- 2022-01-04	fix metadata manual refreshing for multiple vaults
+- 2022-01-04	update
+- 2022-01-04	improved troubleshooting
+- 2022-01-04	removed setting width/height via osvg
 - 2022-01-02	release 2.12.3
 - 2022-01-02	release 2.12.2
 - 2022-01-02	improved obeta for accessing beta plugin repos
