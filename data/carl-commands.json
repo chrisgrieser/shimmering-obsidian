@@ -181,7 +181,7 @@
 },
 {
    "title": "sudo rm",
-   "arg": "sudo rm \"one day \" buy milk",
+   "arg": "sudo rm \"one day\" buy milk",
    "uid": "sudo rm",
    "match": "sudo rm reminder"
 },
