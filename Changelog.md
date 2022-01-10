@@ -1,3 +1,6 @@
+- 2022-01-10	release 2.13.1
+- 2022-01-10	workaround for https://github.com/pjeby/hotkey-helper/issues/7
+- 2022-01-10	fixed copying URLs obeta
 - 2022-01-07	release 2.13.0
 - 2022-01-07	improved forum search, now can search per category
 - 2022-01-06	added another cheatsheet
