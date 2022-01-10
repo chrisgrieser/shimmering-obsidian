@@ -29,7 +29,11 @@ const themeJSON = onlineJSON("https://raw.githubusercontent.com/obsidianmd/obsid
 const installedPlugins = app.doShellScript("ls -1 \"" + vaultPath + "\"\"/.obsidian/plugins/\"");
 const installedThemes = app.doShellScript("find '" + vaultPath + "/.obsidian/themes/' -name '*.css' ");
 const currentTheme = app.doShellScript("cat \"" + vaultPath + "/.obsidian/appearance.json\" | grep \"cssTheme\" | head -n 1 | cut -d\\\" -f 4"); // eslint-disable-line no-useless-escape
-const appTempPath = app.pathTo("home folder") + "/Library/Application Support/obsidian/";
+let obsiURI = "obsidian://show-plugin?id=";
+
+// workaround for this bug: https://github.com/pjeby/hotkey-helper/issues/7
+const hotkeyHelperInstalled = Application("Finder").exists(Path(vaultPath + "/.obsidian/plugins/hotkey-helper/main.js"));
+if (hotkeyHelperInstalled) obsiURI = "obsidian://goto-plugin?id=";
 
 // add PLUGINS to the JSON
 pluginJSON.forEach(plugin => {
@@ -40,7 +44,7 @@ pluginJSON.forEach(plugin => {
 	const repo = plugin.repo;
 
 	const githubURL = "https://github.com/" + repo;
-	const pluginURI = "obsidian://show-plugin?id=" + id; // Obsidian version 0.13+
+	const pluginURI = obsiURI + id; // Obsidian version 0.13+
 	let isDiscordReady, shareURL;
 	if (discordReadyLinks) {
 		shareURL = "<" + pluginURI + ">";
