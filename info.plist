@@ -112,6 +112,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>0B6B06C2-6914-4603-B703-5F8DA27FD029</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>39E83342-8818-474A-9AC2-27D0A97843EF</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>0C46CBB1-C490-4F62-8CC4-F59D7B1016D6</key>
 		<array>
 			<dict>
@@ -336,6 +349,16 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
+				<string>0B6B06C2-6914-4603-B703-5F8DA27FD029</string>
+				<key>modifiers</key>
+				<integer>524288</integer>
+				<key>modifiersubtext</key>
+				<string>⌥: Copy URL</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
 				<string>5E1194F1-12BA-456E-8511-C5708AE07906</string>
 				<key>modifiers</key>
 				<integer>0</integer>
@@ -399,6 +422,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>A3384012-6E44-47C2-9CB5-8067AEE35F34</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>2D7693A0-3ACD-4A9E-BEFF-44AE2096352B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>290EF84F-6C99-465F-9330-F13E903467FD</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1297,6 +1333,19 @@
 				<integer>131072</integer>
 				<key>modifiersubtext</key>
 				<string>⇧: Browse Links of Note</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>6023C98E-C596-4D3B-B315-5303B6A28445</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>CBAE02F7-62CC-4974-96C0-841453D73B48</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -8228,6 +8277,19 @@ echo "$backup"</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>triggerid</key>
+				<string>re-index-doc-search</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.external</string>
+			<key>uid</key>
+			<string>6023C98E-C596-4D3B-B315-5303B6A28445</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>adduuid</key>
 				<false/>
 				<key>allowemptyfiles</key>
@@ -8994,46 +9056,6 @@ echo | git pull</string>
 				<key>subtext</key>
 				<string></string>
 				<key>text</key>
-				<string>❇️ Add Beta Plugin</string>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>8DF2E925-57ED-4FA4-BADE-4E0E1277C220</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>browser</key>
-				<string></string>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string>obsidian://advanced-uri?vault={var:vault_name_ENC}&amp;commandid=obsidian42-brat%253ABRAT-AddBetaPlugin</string>
-				<key>utf8</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
-			<key>uid</key>
-			<string>4EA9A40E-C1AF-4EB5-B118-A36B1F0CE6F7</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>keyword</key>
-				<string>obeta</string>
-				<key>subtext</key>
-				<string></string>
-				<key>text</key>
 				<string>🔁 Update all Beta Plugins</string>
 				<key>withspace</key>
 				<false/>
@@ -9061,6 +9083,86 @@ echo | git pull</string>
 			<string>alfred.workflow.action.openurl</string>
 			<key>uid</key>
 			<string>152229B2-B1D8-44E8-9EF7-98B39FE56FD4</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>'{query}'</string>
+				<key>title</key>
+				<string>✅ Link copied</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>39E83342-8818-474A-9AC2-27D0A97843EF</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>0B6B06C2-6914-4603-B703-5F8DA27FD029</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>obeta</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>❇️ Add Beta Plugin</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>8DF2E925-57ED-4FA4-BADE-4E0E1277C220</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>obsidian://advanced-uri?vault={var:vault_name_ENC}&amp;commandid=obsidian42-brat%253ABRAT-AddBetaPlugin</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>4EA9A40E-C1AF-4EB5-B118-A36B1F0CE6F7</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -9129,6 +9231,46 @@ echo | git pull</string>
 			<string>alfred.workflow.action.openurl</string>
 			<key>uid</key>
 			<string>5E1194F1-12BA-456E-8511-C5708AE07906</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>obsidian://advanced-uri?vault={var:vault_name_ENC}&amp;&amp;settingid=obsidian42-brat</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>290EF84F-6C99-465F-9330-F13E903467FD</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>obeta</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>⚙️ Manage Beta Plugins</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>2D7693A0-3ACD-4A9E-BEFF-44AE2096352B</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -9991,16 +10133,25 @@ The recently introduced `ogit` command has been removed since the same functiona
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>865</integer>
+			<integer>885</integer>
 			<key>ypos</key>
 			<integer>5670</integer>
+		</dict>
+		<key>0B6B06C2-6914-4603-B703-5F8DA27FD029</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>xpos</key>
+			<integer>175</integer>
+			<key>ypos</key>
+			<integer>7380</integer>
 		</dict>
 		<key>0BBE0C0E-D057-4A44-B000-02727F0AEDE5</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>1</integer>
 			<key>xpos</key>
-			<integer>980</integer>
+			<integer>1010</integer>
 			<key>ypos</key>
 			<integer>6155</integer>
 		</dict>
@@ -10065,9 +10216,9 @@ The recently introduced `ogit` command has been removed since the same functiona
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>175</integer>
+			<integer>630</integer>
 			<key>ypos</key>
-			<integer>7420</integer>
+			<integer>7305</integer>
 		</dict>
 		<key>156DEEC1-0E00-49BA-A920-228BB3A7FBFC</key>
 		<dict>
@@ -10219,6 +10370,15 @@ The recently introduced `ogit` command has been removed since the same functiona
 			<key>ypos</key>
 			<integer>4175</integer>
 		</dict>
+		<key>290EF84F-6C99-465F-9330-F13E903467FD</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>9</integer>
+			<key>xpos</key>
+			<integer>630</integer>
+			<key>ypos</key>
+			<integer>7545</integer>
+		</dict>
 		<key>2A4E4AA6-EBA8-4645-ADEC-62CA21AC7D9C</key>
 		<dict>
 			<key>colorindex</key>
@@ -10256,6 +10416,15 @@ The recently introduced `ogit` command has been removed since the same functiona
 			<integer>1330</integer>
 			<key>ypos</key>
 			<integer>2030</integer>
+		</dict>
+		<key>2D7693A0-3ACD-4A9E-BEFF-44AE2096352B</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>9</integer>
+			<key>xpos</key>
+			<integer>465</integer>
+			<key>ypos</key>
+			<integer>7545</integer>
 		</dict>
 		<key>2EA7E709-7E6B-43B3-8B44-080685EFA44A</key>
 		<dict>
@@ -10408,6 +10577,15 @@ The recently introduced `ogit` command has been removed since the same functiona
 			<integer>20</integer>
 			<key>ypos</key>
 			<integer>8580</integer>
+		</dict>
+		<key>39E83342-8818-474A-9AC2-27D0A97843EF</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>xpos</key>
+			<integer>315</integer>
+			<key>ypos</key>
+			<integer>7380</integer>
 		</dict>
 		<key>3CE4F8D3-5FF3-4687-92F8-A4227B78D8C0</key>
 		<dict>
@@ -10674,9 +10852,9 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>175</integer>
+			<integer>630</integer>
 			<key>ypos</key>
-			<integer>7305</integer>
+			<integer>7420</integer>
 		</dict>
 		<key>503B3F91-98A0-4357-92F2-A88BD6EDB404</key>
 		<dict>
@@ -10797,7 +10975,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>385</integer>
+			<integer>515</integer>
 			<key>ypos</key>
 			<integer>5940</integer>
 		</dict>
@@ -10862,7 +11040,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>710</integer>
+			<integer>730</integer>
 			<key>ypos</key>
 			<integer>5795</integer>
 		</dict>
@@ -10910,6 +11088,15 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>ypos</key>
 			<integer>2335</integer>
 		</dict>
+		<key>6023C98E-C596-4D3B-B315-5303B6A28445</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>6</integer>
+			<key>xpos</key>
+			<integer>300</integer>
+			<key>ypos</key>
+			<integer>5905</integer>
+		</dict>
 		<key>60AA4065-13A9-48FE-ADD4-461B2C7A334C</key>
 		<dict>
 			<key>colorindex</key>
@@ -10933,7 +11120,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>colorindex</key>
 			<integer>1</integer>
 			<key>xpos</key>
-			<integer>710</integer>
+			<integer>740</integer>
 			<key>ypos</key>
 			<integer>6155</integer>
 		</dict>
@@ -11203,7 +11390,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>note</key>
 			<string>restart Obsidian</string>
 			<key>xpos</key>
-			<integer>860</integer>
+			<integer>880</integer>
 			<key>ypos</key>
 			<integer>5920</integer>
 		</dict>
@@ -11358,7 +11545,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>710</integer>
+			<integer>735</integer>
 			<key>ypos</key>
 			<integer>6035</integer>
 		</dict>
@@ -11367,16 +11554,16 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>10</integer>
+			<integer>465</integer>
 			<key>ypos</key>
-			<integer>7305</integer>
+			<integer>7420</integer>
 		</dict>
 		<key>8F317FDD-5FC0-4097-BC7B-914DB2BDDDA8</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>710</integer>
+			<integer>730</integer>
 			<key>ypos</key>
 			<integer>5920</integer>
 		</dict>
@@ -11784,7 +11971,7 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>865</integer>
+			<integer>885</integer>
 			<key>ypos</key>
 			<integer>5795</integer>
 		</dict>
@@ -11813,9 +12000,9 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>10</integer>
+			<integer>465</integer>
 			<key>ypos</key>
-			<integer>7420</integer>
+			<integer>7305</integer>
 		</dict>
 		<key>BF2C7CBD-67E0-45CC-8948-E68291FF2B50</key>
 		<dict>
@@ -12301,7 +12488,7 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<key>note</key>
 			<string>Error Sound</string>
 			<key>xpos</key>
-			<integer>845</integer>
+			<integer>875</integer>
 			<key>ypos</key>
 			<integer>6155</integer>
 		</dict>
