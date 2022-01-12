@@ -1,3 +1,6 @@
+- 2022-01-12	release 2.14.0
+- 2022-01-12	now automatically surroudns copied links with Discord is frontmost app
+- 2022-01-10	remove workaround for hotkey helper since fixed (pjeby/hotkey-helper#7)
 - 2022-01-10	release 2.13.1
 - 2022-01-10	workaround for https://github.com/pjeby/hotkey-helper/issues/7
 - 2022-01-10	fixed copying URLs obeta
