@@ -43,6 +43,7 @@ Refer to the section on [Settings & Local Plugin Search](Settings%20and%20Local%
 **`obeta`: Access `beta`-plugin-related commands.**
 - Add a new plugin to your beta plugins.
 - Open the repository of a beta plugin.
+	- Press `⌥ + ↵` to copy the GitHub repository URL to your clipboard. When Discord is the frontmost app, the copied link will be surrounded with `<` `>` for more convenient pasting in the Discord Desktop app (disables auto-preview).
 - Update all beta plugins.
 - All commands require the [BRAT Plugin](https://github.com/TfTHacker/obsidian42-brat).
 

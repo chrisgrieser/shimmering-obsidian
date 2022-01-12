@@ -16,7 +16,7 @@ function readFile (path, encoding) {
 const alfredMatcher = (str) => str.replace (/[-()_.]/g, " ") + " " + str + " ";
 const getEnv = (path) => $.getenv(path).replace(/^~/, app.pathTo("home folder"));
 const bratDataJson = getEnv("vault_path") + "/.obsidian/plugins/obsidian42-brat/data.json";
-const discordReadyLinks = getEnv("discord_ready_links") === "true";
+const discordReadyLinks = Application("Discord").frontmost();
 
 const jsonArray = [];
 const betaRepos = JSON.parse(readFile(bratDataJson)).pluginList;

@@ -14,7 +14,7 @@ function readFile (path, encoding) {
 }
 const alfredMatcher = (str) => str.replace (/[-()_.]/g, " ") + " " + str + " ";
 const baseURL = "https://forum.obsidian.md/c/";
-const discordReadyLinks = $.getenv("discord_ready_links") === "true";
+const discordReadyLinks = Application("Discord").frontmost();
 
 const jsonArray = [];
 const forumDataJSON =

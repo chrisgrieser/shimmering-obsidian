@@ -22,7 +22,7 @@
 **`op`: Combined Search of community `p`lugins and community themes.**
 - Press `↵` to open the plugin in Obsidian's Community Plugin Browser.
 	- Use `⌘ + ↵` to open the plugin's GitHub repository instead.
-	- Press `⌥ + ↵` to copy the plugin URI (`obsidian://show-plugin?id=...`) to your clipboard. When the [workflow configuration](Workflow%20Configuration.md#Miscellaneous) `discord_ready_links` is set to `true`, the copied link will be surrounded with `<` `>` for more convenient pasting in the Discord Desktop app (disables auto-preview).
+	- Press `⌥ + ↵` to copy the plugin URI (`obsidian://show-plugin?id=...`) to your clipboard. When Discord is the frontmost app, the copied link will be surrounded with `<` `>` for more convenient pasting in the Discord Desktop app (disables auto-preview).
 	- `⇧ + ↵` to display & search the GitHub issues. See [the section below](#-Searching-GitHub-Issues) for more information.
 	- *Holding* `⌃` will display download numbers, author, and plugin ID.[^2] This is useful, when the plugin description is so long, that you cannot see this anymore.
 	- _⚙️ For developers:_ Use `fn + ↵` to clone the GitHub Repository into the folder specified in the [workflow configuration](Workflow%20Configuration.md#Plugin-and-Theme-Search) (`download_folder_path`) via `git clone` (http).
@@ -37,7 +37,7 @@
 ## Themes
 **`op`: Combined Search of community `p`lugins and community themes.**
 - Press `↵`[^3] to open the theme's GitHub Repository. (There are no separate theme pages in Obsidian Theme Browser that can be opened.)
-	- Press `⌥ + ↵` to copy the GitHub repository URL to your clipboard. When the [workflow configuration](Workflow%20Configuration.md#Miscellaneous) `discord_ready_links` is set to `true`, the copied link will be surrounded with `<` `>` for more convenient pasting in the Discord Desktop app (disables auto-preview).
+	- Press `⌥ + ↵` to copy the GitHub repository URL to your clipboard. When Discord is the frontmost app, the copied link will be surrounded with `<` `>` for more convenient pasting in the Discord Desktop app (disables auto-preview).
 	- `⇧ + ↵` to display & search the GitHub issues. See [the section below](#-Searching-GitHub-Issues) for more information.
 	- Use `⇧` or `⌘ + Y` to open a Quick Look Preview of the theme's promo screenshot. Press `⇧` or `⌘ + Y` again to close the preview.
 	- _🎨 For Theme Designers:_ Use `fn + ↵` to download the main .css file of the theme into the folder specified in the [workflow configuration](Workflow%20Configuration.md#Plugin-and-Theme-Search) (`download_folder_path`).

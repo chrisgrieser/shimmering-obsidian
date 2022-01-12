@@ -476,31 +476,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>2F50F145-46B1-4151-9DB4-61DB6A767DAB</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>DD86C0A5-6797-45E0-91CF-BEA8262CCDD1</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>C5CB20E4-266B-4D67-8785-A2B145C68F4B</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>sourceoutputuid</key>
-				<string>AA5E3282-1048-444B-9864-9E850C281AF7</string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>2FB281A9-8BFA-4836-A2A9-73A46C3DE6DD</key>
 		<array>
 			<dict>
@@ -729,6 +704,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>8BCCDAB5-C842-48E7-985D-4D4FD0454360</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>41F765F9-17DD-4FC0-BF28-E7EB61AF55DB</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>DD86C0A5-6797-45E0-91CF-BEA8262CCDD1</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -2613,19 +2601,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>C5CB20E4-266B-4D67-8785-A2B145C68F4B</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>DD86C0A5-6797-45E0-91CF-BEA8262CCDD1</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>C5E65176-674E-4553-A255-37A40EB99342</key>
 		<array>
 			<dict>
@@ -2963,11 +2938,11 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>2F50F145-46B1-4151-9DB4-61DB6A767DAB</string>
+				<string>41F765F9-17DD-4FC0-BF28-E7EB61AF55DB</string>
 				<key>modifiers</key>
-				<integer>524288</integer>
+				<integer>0</integer>
 				<key>modifiersubtext</key>
-				<string>⌥: Copy Link</string>
+				<string></string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -7887,49 +7862,31 @@ echo "$backup"</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argument</key>
-				<string>&lt;{query}&gt;</string>
-				<key>passthroughargument</key>
+				<key>concurrently</key>
 				<false/>
-				<key>variables</key>
-				<dict/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>frontmost=$(osascript -e 'tell application "System Events" to get name of application processes whose frontmost is true and visible is true')
+
+if [[ "$frontmost" == "Discord" ]] ; then
+    echo "is true"
+else
+    echo "is not true"
+fi</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>make-link-discord-ready.sh</string>
+				<key>type</key>
+				<integer>8</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
+			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>C5CB20E4-266B-4D67-8785-A2B145C68F4B</string>
+			<string>41F765F9-17DD-4FC0-BF28-E7EB61AF55DB</string>
 			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>conditions</key>
-				<array>
-					<dict>
-						<key>inputstring</key>
-						<string>{var:discord_ready_links}</string>
-						<key>matchcasesensitive</key>
-						<false/>
-						<key>matchmode</key>
-						<integer>0</integer>
-						<key>matchstring</key>
-						<string>true</string>
-						<key>outputlabel</key>
-						<string>true</string>
-						<key>uid</key>
-						<string>AA5E3282-1048-444B-9864-9E850C281AF7</string>
-					</dict>
-				</array>
-				<key>elselabel</key>
-				<string>false</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.conditional</string>
-			<key>uid</key>
-			<string>2F50F145-46B1-4151-9DB4-61DB6A767DAB</string>
-			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -10437,17 +10394,6 @@ The recently introduced `ogit` command has been removed since the same functiona
 			<key>ypos</key>
 			<integer>5065</integer>
 		</dict>
-		<key>2F50F145-46B1-4151-9DB4-61DB6A767DAB</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>3</integer>
-			<key>note</key>
-			<string>Discord Ready</string>
-			<key>xpos</key>
-			<integer>190</integer>
-			<key>ypos</key>
-			<integer>5315</integer>
-		</dict>
 		<key>2FB281A9-8BFA-4836-A2A9-73A46C3DE6DD</key>
 		<dict>
 			<key>colorindex</key>
@@ -10661,6 +10607,17 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<integer>880</integer>
 			<key>ypos</key>
 			<integer>1480</integer>
+		</dict>
+		<key>41F765F9-17DD-4FC0-BF28-E7EB61AF55DB</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>note</key>
+			<string>make link Discord ready</string>
+			<key>xpos</key>
+			<integer>170</integer>
+			<key>ypos</key>
+			<integer>5270</integer>
 		</dict>
 		<key>42201C8D-D1DE-4EA8-9EC8-7F92FDF17572</key>
 		<dict>
@@ -12059,15 +12016,6 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<key>ypos</key>
 			<integer>950</integer>
 		</dict>
-		<key>C5CB20E4-266B-4D67-8785-A2B145C68F4B</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>3</integer>
-			<key>xpos</key>
-			<integer>265</integer>
-			<key>ypos</key>
-			<integer>5295</integer>
-		</dict>
 		<key>C5E65176-674E-4553-A255-37A40EB99342</key>
 		<dict>
 			<key>colorindex</key>
@@ -12312,7 +12260,7 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<key>xpos</key>
 			<integer>25</integer>
 			<key>ypos</key>
-			<integer>5400</integer>
+			<integer>5445</integer>
 		</dict>
 		<key>DD86C0A5-6797-45E0-91CF-BEA8262CCDD1</key>
 		<dict>
@@ -12437,7 +12385,7 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<key>xpos</key>
 			<integer>540</integer>
 			<key>ypos</key>
-			<integer>5400</integer>
+			<integer>5445</integer>
 		</dict>
 		<key>E5299CC1-0444-4A26-A030-D3B374CE8E15</key>
 		<dict>
@@ -12706,8 +12654,6 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 		<string>~/Library/Mobile Documents/com~apple~CloudDocs/Dokumente/IT Backups/Obsidian Backups</string>
 		<key>daily_note_path</key>
 		<string></string>
-		<key>discord_ready_links</key>
-		<string>true</string>
 		<key>download_folder_path</key>
 		<string>~/Downloads</string>
 		<key>h_lvl_ignore</key>
@@ -12745,11 +12691,10 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 	<array>
 		<string>backup_destination</string>
 		<string>vault_name_ENC</string>
-		<string>discord_ready_links</string>
-		<string>use_quickadd</string>
 		<string>daily_note_path</string>
-		<string>h_lvl_ignore</string>
+		<string>use_quickadd</string>
 		<string>workspace_to_spellcheck</string>
+		<string>h_lvl_ignore</string>
 		<string>template_note_path</string>
 		<string>vault_path</string>
 	</array>

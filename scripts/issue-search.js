@@ -20,7 +20,7 @@ const jsonArray = [];
 
 // get plugin issues
 const repo = $.getenv("repo");
-const discordReadyLinks = $.getenv("discord_ready_links");
+const discordReadyLinks = Application("Discord").frontmost();
 
 const issueAPIURL =
 	"https://api.github.com/repos/" + repo

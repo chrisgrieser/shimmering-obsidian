@@ -19,8 +19,8 @@ function insert1000sep (num) {
 	return numText;
 }
 
+const discordReadyLinks = Application("Discord").frontmost();
 const vaultPath = $.getenv("vault_path").replace(/^~/, app.pathTo("home folder"));
-const discordReadyLinks = $.getenv("discord_ready_links") === "true";
 const jsonArray = [];
 
 const pluginJSON = onlineJSON ("https://raw.githubusercontent.com/obsidianmd/obsidian-releases/master/community-plugins.json");

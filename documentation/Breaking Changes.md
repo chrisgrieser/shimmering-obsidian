@@ -19,7 +19,6 @@
 	- [List of all other Breaking Changes](#list-of-all-other-breaking-changes)
 
 <!-- /MarkdownTOC -->
-
 ## Version 2.12.1
 The recently introduced `ogit` command has been removed since the same functionality is now available [via a plugin](https://github.com/kometenstaub/copy-publish-url) in a more efficient manner. 
 
