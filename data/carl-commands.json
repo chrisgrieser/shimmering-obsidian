@@ -186,6 +186,12 @@
    "match": "sudo rm reminder"
 },
 {
+   "title": "all features of obsidian",
+   "arg": "all features of obsidian",
+   "uid": "all features of obsidian",
+   "match": "all features of obsidian meme"
+},
+{
    "title": "discord tricks",
    "arg": "discord tricks",
    "uid": "discord tricks",

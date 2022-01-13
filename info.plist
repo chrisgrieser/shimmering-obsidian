@@ -2940,9 +2940,9 @@
 				<key>destinationuid</key>
 				<string>41F765F9-17DD-4FC0-BF28-E7EB61AF55DB</string>
 				<key>modifiers</key>
-				<integer>0</integer>
+				<integer>524288</integer>
 				<key>modifiersubtext</key>
-				<string></string>
+				<string>⌥: Copy URL</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -4071,25 +4071,6 @@ tesseract "$temp_image" stdout -l $ocr_languages 2&gt;&amp;1</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>externaltriggerid</key>
-				<string>update-obsidian-workflow</string>
-				<key>passinputasargument</key>
-				<true/>
-				<key>passvariables</key>
-				<true/>
-				<key>workflowbundleid</key>
-				<string>self</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.callexternaltrigger</string>
-			<key>uid</key>
-			<string>8BCCDAB5-C842-48E7-985D-4D4FD0454360</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>action</key>
 				<integer>0</integer>
 				<key>argument</key>
@@ -4280,71 +4261,19 @@ mv "$filepath" "$target_folder"</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>68</integer>
-				<key>script</key>
-				<string>if application "Obsidian" is running then
-	tell application id "com.runningwithcrayons.Alfred" to set configuration "ObRunning" to value "true" in workflow (system attribute "alfred_workflow_bundleid")
-else
-	tell application id "com.runningwithcrayons.Alfred" to set configuration "ObRunning" to value "false" in workflow (system attribute "alfred_workflow_bundleid")
-end if
-
-return "{query}"</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>6</integer>
+				<key>externaltriggerid</key>
+				<string>update-obsidian-workflow</string>
+				<key>passinputasargument</key>
+				<true/>
+				<key>passvariables</key>
+				<true/>
+				<key>workflowbundleid</key>
+				<string>self</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.script</string>
+			<string>alfred.workflow.output.callexternaltrigger</string>
 			<key>uid</key>
-			<string>9B3822BB-6392-424B-A166-328A7EBCAF30</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>script</key>
-				<string>path="{query}";
-
-urlscheme = "obsidian://open?path=" + encodeURIComponent(path);
-
-app = Application.currentApplication();
-app.includeStandardAdditions = true;
-app.openLocation(urlscheme);</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string>scripts/open-note.js</string>
-				<key>type</key>
-				<integer>8</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>76EF97C3-981D-466E-BA90-47D34129BE96</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>triggerid</key>
-				<string>open-in-obsidian</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.external</string>
-			<key>uid</key>
-			<string>503B3F91-98A0-4357-92F2-A88BD6EDB404</string>
+			<string>8BCCDAB5-C842-48E7-985D-4D4FD0454360</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -4460,27 +4389,6 @@ echo -n "$base64encoded"</string>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
 			<string>E001E52F-8242-4F82-872C-35F2D477BBBF</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>matchmode</key>
-				<integer>1</integer>
-				<key>matchstring</key>
-				<string>\n$</string>
-				<key>regexcaseinsensitive</key>
-				<false/>
-				<key>regexmultiline</key>
-				<false/>
-				<key>replacestring</key>
-				<string></string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.replace</string>
-			<key>uid</key>
-			<string>D3A5EAC3-A2D8-4186-8B20-892495845C0E</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -4629,6 +4537,98 @@ echo -n "$base64encoded"</string>
 			<string>E5299CC1-0444-4A26-A030-D3B374CE8E15</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>if application "Obsidian" is running then
+	tell application id "com.runningwithcrayons.Alfred" to set configuration "ObRunning" to value "true" in workflow (system attribute "alfred_workflow_bundleid")
+else
+	tell application id "com.runningwithcrayons.Alfred" to set configuration "ObRunning" to value "false" in workflow (system attribute "alfred_workflow_bundleid")
+end if
+
+return "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>6</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>9B3822BB-6392-424B-A166-328A7EBCAF30</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string>path="{query}";
+
+urlscheme = "obsidian://open?path=" + encodeURIComponent(path);
+
+app = Application.currentApplication();
+app.includeStandardAdditions = true;
+app.openLocation(urlscheme);</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>scripts/open-note.js</string>
+				<key>type</key>
+				<integer>8</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>76EF97C3-981D-466E-BA90-47D34129BE96</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>triggerid</key>
+				<string>open-in-obsidian</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.external</string>
+			<key>uid</key>
+			<string>503B3F91-98A0-4357-92F2-A88BD6EDB404</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>matchmode</key>
+				<integer>1</integer>
+				<key>matchstring</key>
+				<string>\n$</string>
+				<key>regexcaseinsensitive</key>
+				<false/>
+				<key>regexmultiline</key>
+				<false/>
+				<key>replacestring</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.replace</string>
+			<key>uid</key>
+			<string>D3A5EAC3-A2D8-4186-8B20-892495845C0E</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -7877,7 +7877,7 @@ fi</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string>make-link-discord-ready.sh</string>
+				<string>scripts/make-link-discord-ready.sh</string>
 				<key>type</key>
 				<integer>8</integer>
 			</dict>
@@ -10045,7 +10045,7 @@ The recently introduced `ogit` command has been removed since the same functiona
 			<key>xpos</key>
 			<integer>265</integer>
 			<key>ypos</key>
-			<integer>1185</integer>
+			<integer>875</integer>
 		</dict>
 		<key>04211D9D-11BA-4717-82D2-13B2A608E8F5</key>
 		<dict>
@@ -10146,7 +10146,7 @@ The recently introduced `ogit` command has been removed since the same functiona
 			<key>xpos</key>
 			<integer>610</integer>
 			<key>ypos</key>
-			<integer>1345</integer>
+			<integer>1035</integer>
 		</dict>
 		<key>0E7DC543-BCFD-4F7B-864B-C4BBF40DD8BB</key>
 		<dict>
@@ -10421,7 +10421,7 @@ The recently introduced `ogit` command has been removed since the same functiona
 			<key>xpos</key>
 			<integer>185</integer>
 			<key>ypos</key>
-			<integer>1075</integer>
+			<integer>765</integer>
 		</dict>
 		<key>31A86D6E-0757-460B-9840-AC7E2BD728BC</key>
 		<dict>
@@ -10553,7 +10553,7 @@ The recently introduced `ogit` command has been removed since the same functiona
 			<key>xpos</key>
 			<integer>335</integer>
 			<key>ypos</key>
-			<integer>1155</integer>
+			<integer>845</integer>
 		</dict>
 		<key>3E583649-4839-4CB9-B6CC-2F52E2442E86</key>
 		<dict>
@@ -10606,7 +10606,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>xpos</key>
 			<integer>880</integer>
 			<key>ypos</key>
-			<integer>1480</integer>
+			<integer>1170</integer>
 		</dict>
 		<key>41F765F9-17DD-4FC0-BF28-E7EB61AF55DB</key>
 		<dict>
@@ -10802,7 +10802,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>xpos</key>
 			<integer>690</integer>
 			<key>ypos</key>
-			<integer>1155</integer>
+			<integer>845</integer>
 		</dict>
 		<key>4EA9A40E-C1AF-4EB5-B118-A36B1F0CE6F7</key>
 		<dict>
@@ -10954,7 +10954,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>xpos</key>
 			<integer>220</integer>
 			<key>ypos</key>
-			<integer>1480</integer>
+			<integer>1170</integer>
 		</dict>
 		<key>5B3AC1A9-7057-4FF6-B3C7-2F65A76E2826</key>
 		<dict>
@@ -11273,7 +11273,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>xpos</key>
 			<integer>700</integer>
 			<key>ypos</key>
-			<integer>1315</integer>
+			<integer>1005</integer>
 		</dict>
 		<key>76EF97C3-981D-466E-BA90-47D34129BE96</key>
 		<dict>
@@ -11414,7 +11414,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>xpos</key>
 			<integer>355</integer>
 			<key>ypos</key>
-			<integer>1345</integer>
+			<integer>1035</integer>
 		</dict>
 		<key>87F25EEF-FBA4-4F94-AAEF-DBA71CD066AC</key>
 		<dict>
@@ -11647,7 +11647,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>xpos</key>
 			<integer>15</integer>
 			<key>ypos</key>
-			<integer>1175</integer>
+			<integer>865</integer>
 		</dict>
 		<key>9FF8D4E6-7A5E-4736-9976-17C280BC574A</key>
 		<dict>
@@ -11665,7 +11665,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>xpos</key>
 			<integer>880</integer>
 			<key>ypos</key>
-			<integer>1315</integer>
+			<integer>1005</integer>
 		</dict>
 		<key>A170DF0F-C1AD-46DF-9738-FF54AA497695</key>
 		<dict>
@@ -11761,7 +11761,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>xpos</key>
 			<integer>415</integer>
 			<key>ypos</key>
-			<integer>1315</integer>
+			<integer>1005</integer>
 		</dict>
 		<key>AC3931E7-5D73-42C4-8975-1E4B4DB66B69</key>
 		<dict>
@@ -11808,7 +11808,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>xpos</key>
 			<integer>490</integer>
 			<key>ypos</key>
-			<integer>1155</integer>
+			<integer>845</integer>
 		</dict>
 		<key>B0AB019E-6AC5-494E-9F31-F818F9BFEE21</key>
 		<dict>
@@ -12012,9 +12012,9 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 
 DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating in Obsidian)</string>
 			<key>xpos</key>
-			<integer>20</integer>
+			<integer>15</integer>
 			<key>ypos</key>
-			<integer>950</integer>
+			<integer>630</integer>
 		</dict>
 		<key>C5E65176-674E-4553-A255-37A40EB99342</key>
 		<dict>
@@ -12041,7 +12041,7 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<key>xpos</key>
 			<integer>165</integer>
 			<key>ypos</key>
-			<integer>1345</integer>
+			<integer>1035</integer>
 		</dict>
 		<key>C9530BAC-970D-40F4-B79B-8A3D866EAE47</key>
 		<dict>
@@ -12298,7 +12298,7 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<key>xpos</key>
 			<integer>15</integer>
 			<key>ypos</key>
-			<integer>1315</integer>
+			<integer>1005</integer>
 		</dict>
 		<key>E001E52F-8242-4F82-872C-35F2D477BBBF</key>
 		<dict>
@@ -12309,7 +12309,7 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<key>xpos</key>
 			<integer>220</integer>
 			<key>ypos</key>
-			<integer>1315</integer>
+			<integer>1005</integer>
 		</dict>
 		<key>E15968CE-239E-4B7B-9208-C1C2C1D2679D</key>
 		<dict>
@@ -12329,7 +12329,7 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<key>xpos</key>
 			<integer>550</integer>
 			<key>ypos</key>
-			<integer>1345</integer>
+			<integer>1035</integer>
 		</dict>
 		<key>E24806C9-408F-4504-B601-DED0239F88FD</key>
 		<dict>
@@ -12383,7 +12383,7 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>540</integer>
+			<integer>515</integer>
 			<key>ypos</key>
 			<integer>5445</integer>
 		</dict>
@@ -12396,7 +12396,7 @@ DOUBLE CLICK THIS to set hotkey. Suggested Hotkey: cmd + k (after deactivating i
 			<key>xpos</key>
 			<integer>15</integer>
 			<key>ypos</key>
-			<integer>1480</integer>
+			<integer>1170</integer>
 		</dict>
 		<key>E5AF1834-8BDC-4E07-9F39-F8CE62A851B9</key>
 		<dict>
