@@ -46,5 +46,6 @@ Refer to the section on [Settings & Local Plugin Search](Settings%20and%20Local%
 	- Press `⌥ + ↵` to copy the GitHub repository URL to your clipboard. When Discord is the frontmost app, the copied link will be surrounded with `<` `>` for more convenient pasting in the Discord Desktop app (disables auto-preview).
 - Update all beta plugins.
 - All commands require the [BRAT Plugin](https://github.com/TfTHacker/obsidian42-brat).
+- Install a new theme.
 
 [⬆️ Go Back to Top](#Table-of-Contents)

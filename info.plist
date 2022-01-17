@@ -9085,7 +9085,7 @@ echo | git pull</string>
 				<key>subtext</key>
 				<string></string>
 				<key>text</key>
-				<string>🔁 Add a Theme</string>
+				<string>🎨 Add a Theme</string>
 				<key>withspace</key>
 				<false/>
 			</dict>
