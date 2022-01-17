@@ -1172,6 +1172,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>5B11E1F2-FE97-4A4F-8462-44D3571B21F3</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>85FB81E3-166A-4AFB-A0F4-E9ADF2A6DBAB</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>5B3AC1A9-7057-4FF6-B3C7-2F65A76E2826</key>
 		<array>
 			<dict>
@@ -9006,6 +9019,25 @@ echo | git pull</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>obsidian://advanced-uri?vault={var:vault_name_ENC}&amp;commandid=obsidian42-brat%253ABRAT-GrabCommunityTheme</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>85FB81E3-166A-4AFB-A0F4-E9ADF2A6DBAB</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argumenttype</key>
 				<integer>2</integer>
 				<key>keyword</key>
@@ -9040,6 +9072,27 @@ echo | git pull</string>
 			<string>alfred.workflow.action.openurl</string>
 			<key>uid</key>
 			<string>152229B2-B1D8-44E8-9EF7-98B39FE56FD4</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>obeta</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>🔁 Add a Theme</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>5B11E1F2-FE97-4A4F-8462-44D3571B21F3</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -10956,6 +11009,15 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>ypos</key>
 			<integer>1170</integer>
 		</dict>
+		<key>5B11E1F2-FE97-4A4F-8462-44D3571B21F3</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>9</integer>
+			<key>xpos</key>
+			<integer>785</integer>
+			<key>ypos</key>
+			<integer>7305</integer>
+		</dict>
 		<key>5B3AC1A9-7057-4FF6-B3C7-2F65A76E2826</key>
 		<dict>
 			<key>colorindex</key>
@@ -11370,6 +11432,15 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<integer>1880</integer>
 			<key>ypos</key>
 			<integer>2470</integer>
+		</dict>
+		<key>85FB81E3-166A-4AFB-A0F4-E9ADF2A6DBAB</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>9</integer>
+			<key>xpos</key>
+			<integer>950</integer>
+			<key>ypos</key>
+			<integer>7305</integer>
 		</dict>
 		<key>860C2D5F-C032-49DF-812C-2973A0E3F3E8</key>
 		<dict>
