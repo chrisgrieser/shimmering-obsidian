@@ -5,16 +5,11 @@
 
 <img src="https://user-images.githubusercontent.com/73286100/139678407-9ac39baa-5f49-42a0-9622-0fbaf68540b2.gif" alt="Promo Video" width=70%> 
 
-## ⚠️ Breaking Changes when upgrading to 2.9+
-- After upgrading to 2.9 (or later), you need to re-run the `osetup` command once.
-- After upgrading to 2.10 Hotkey Helper isn't a requirement for the plugin search anymore, but you need to upgrade to Obsidian 0.13.14+ for the Plugin Search.
-
-Please refer to the [Breaking Changes Documentation](documentation/Breaking%20Changes.md) for more in-detail information and for information on breaking changes when updating from older versions.
-
 ---
 
-- [Workflow Installation](#Workflow-Installation)
-- [Workflow Configuration](documentation/Workflow%20Configuration.md)
+- [Installation](#Workflow-Installation)
+- [Configuration](documentation/Workflow%20Configuration.md)
+- [Breaking Changes](documentation/Breaking%20Changes.md) (when updating from earlier versions)
 - [Troubleshooting](documentation/Troubleshooting.md)
 - [Changelog](Changelog.md)
 - [Alfred Themes](#Alfred%20Themes)
@@ -150,10 +145,10 @@ Please refer to the [Breaking Changes Documentation](documentation/Breaking%20Ch
 ---
 
 ## Workflow Installation
-0. This workflow requires the [Powerpack for Alfred](https://www.alfredapp.com/powerpack/) (costs around 30€).
+_This workflow requires the [Powerpack for Alfred](https://www.alfredapp.com/powerpack/) (costs around 30€)._
 1. Install the Obsidian plugins [Advanced URI](https://github.com/Vinzent03/obsidian-advanced-uri) & [Metadata Extractor](https://github.com/kometenstaub/metadata-extractor). Enable both plugins.
 2. Download the [latest release at GitHub](https://github.com/chrisgrieser/shimmering-obsidian/releases/latest). Double-click the `.alfredworkflow` file to install it.
-3. Run the Alfred Command `osetup` and select the vault you want to control with _Shimmering Obsidian_.[^1] Obsidian will then restart. (Even if you have only one vault, you need to confirm that one vault once before you can use the workflow. )
+3. Run the Alfred Command `osetup` and select the vault you want to control with _Shimmering Obsidian_. Obsidian will then restart. (Even if you have only one vault, you need to confirm that one vault once before you can use the workflow.)
 4. _Recommended:_ After installing the workflow, you should configure the settings of this workflow to make use of most of its features. Refer to the [Workflow Configuration](documentation/Workflow%20Configuration.md) for further information.
 
 ## Alfred Themes
