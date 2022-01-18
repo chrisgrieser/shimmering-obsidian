@@ -12512,6 +12512,8 @@ DOUBLE CLICK THIS to set hotkey.</string>
 	</dict>
 	<key>variables</key>
 	<dict>
+		<key>ObRunning</key>
+		<string>true</string>
 		<key>auto_update</key>
 		<string>true</string>
 		<key>backup_destination</key>
@@ -12560,10 +12562,11 @@ DOUBLE CLICK THIS to set hotkey.</string>
 		<string>daily_note_path</string>
 		<string>scratchpad_note_path</string>
 		<string>use_quickadd</string>
-		<string>workspace_to_spellcheck</string>
-		<string>h_lvl_ignore</string>
-		<string>template_note_path</string>
 		<string>vault_path</string>
+		<string>h_lvl_ignore</string>
+		<string>ObRunning</string>
+		<string>template_note_path</string>
+		<string>workspace_to_spellcheck</string>
 	</array>
 	<key>version</key>
 	<string>2.15.0</string>
