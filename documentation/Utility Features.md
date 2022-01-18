@@ -5,23 +5,12 @@
 ## Table of Contents
 <!-- MarkdownTOC -->
 
-- [Paste URL into selection](#paste-url-into-selection)
 - [Backup your Vault](#backup-your-vault)
-- [Dual Mode](#dual-mode)
 - [Open Various Folders](#open-various-folders)
 - [Carl](#carl)
 - [Update Plugins & Metadata](#update-plugins--metadata)
 
 <!-- /MarkdownTOC -->
-
-## Paste URL into selection
-⚠️ *Deprecated – this feature will not be further developed and potentially replaced due plugins able to achieve the same thing better.*
-**`Triggered via Hotkey`: Paste URL into selection.**
-- When you have text selected and an URL in your clipboard, this will automatically turn the selected text into a Markdown link with the URL from the clipboard.
-- Suggested keyboard shortcut is something like `cmd + K` 
-- 💡 Turn off respective hotkey in Obsidian to avoid conflicts.
-
- <img src="https://user-images.githubusercontent.com/73286100/133614452-ef3147bf-7cd1-4dad-9b76-880f93fdcdf8.gif" alt="paste url into selection" width=50%>
 
 ## Backup your Vault
 **`obackup`: Create a `backup` of your vault.**
@@ -35,13 +24,6 @@ tell application id "com.runningwithcrayons.Alfred"
 	run trigger "backup-obsidian" in workflow "de.chris-grieser.shimmering-obsidian" with argument ""
 end tell
 ```
-
-## Dual Mode
-**`odual`: Enter [dual] mode.**
-- When the current note is in Editor Mode, this will open a new pane with the current note in Preview Mode. When in Preview Mode, this will open the new pane in Editor Mode. Basically, you will have both View Modes side by side.
-- Note that using the [Force View Mode Plugin](https://github.com/bwydoogh/obsidian-force-view-mode-of-note) may result in the second pane opening in the wrong view.
-- Caveat #1: Opening the new pane as [linked pane](https://help.obsidian.md/Panes/Linked+pane) is not possible right now, [as Obsidian does not expose that function via command palette](https://forum.obsidian.md/t/open-a-note-in-a-new-pane-using-the-command-palette-or-a-keyboard-shortcut/23303). 
-- Caveat #2: When you have more than one pane open, a pane that is *not* the leftmost is active, and the active pane has a different view mode than the leftmost pane, then `odual` will open in the wrong view mode. (Obsidian unfortunately does not expose enough information about the workspace state to ensure correct behavior for this case.)
 
 ## Open Various Folders
 - `o.obsidian`: The hidden `.obsidian` folder located in your vault root will be opened in Finder.
