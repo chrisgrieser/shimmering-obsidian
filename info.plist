@@ -9947,7 +9947,7 @@ Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (r
 			<key>xpos</key>
 			<integer>290</integer>
 			<key>ypos</key>
-			<integer>1185</integer>
+			<integer>1010</integer>
 		</dict>
 		<key>0645AAB4-66F5-4149-A92B-C58A80B649C7</key>
 		<dict>
@@ -10212,7 +10212,7 @@ Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (r
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<integer>430</integer>
+			<integer>415</integer>
 			<key>ypos</key>
 			<integer>2890</integer>
 		</dict>
@@ -10330,7 +10330,7 @@ Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (r
 			<key>xpos</key>
 			<integer>210</integer>
 			<key>ypos</key>
-			<integer>1055</integer>
+			<integer>880</integer>
 		</dict>
 		<key>31A86D6E-0757-460B-9840-AC7E2BD728BC</key>
 		<dict>
@@ -10451,7 +10451,7 @@ Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (r
 			<key>xpos</key>
 			<integer>360</integer>
 			<key>ypos</key>
-			<integer>1155</integer>
+			<integer>980</integer>
 		</dict>
 		<key>3E583649-4839-4CB9-B6CC-2F52E2442E86</key>
 		<dict>
@@ -10484,7 +10484,7 @@ Created by @pseudometa (Discord) aka @pseudo_meta (Twitter) aka Chris Grieser (r
 
 DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>xpos</key>
-			<integer>40</integer>
+			<integer>20</integer>
 			<key>ypos</key>
 			<integer>210</integer>
 		</dict>
@@ -10611,7 +10611,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>note</key>
 			<string>new note</string>
 			<key>xpos</key>
-			<integer>40</integer>
+			<integer>20</integer>
 			<key>ypos</key>
 			<integer>1665</integer>
 		</dict>
@@ -10651,7 +10651,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>note</key>
 			<string>⭐️ search starred files/searches</string>
 			<key>xpos</key>
-			<integer>15</integer>
+			<integer>20</integer>
 			<key>ypos</key>
 			<integer>3405</integer>
 		</dict>
@@ -10691,7 +10691,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>xpos</key>
 			<integer>715</integer>
 			<key>ypos</key>
-			<integer>1155</integer>
+			<integer>980</integer>
 		</dict>
 		<key>4EA9A40E-C1AF-4EB5-B118-A36B1F0CE6F7</key>
 		<dict>
@@ -10937,7 +10937,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>note</key>
 			<string>quicksearch note</string>
 			<key>xpos</key>
-			<integer>15</integer>
+			<integer>20</integer>
 			<key>ypos</key>
 			<integer>2335</integer>
 		</dict>
@@ -11209,7 +11209,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 
 DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>xpos</key>
-			<integer>40</integer>
+			<integer>20</integer>
 			<key>ypos</key>
 			<integer>440</integer>
 		</dict>
@@ -11532,7 +11532,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>note</key>
 			<string>search recent files</string>
 			<key>xpos</key>
-			<integer>15</integer>
+			<integer>20</integer>
 			<key>ypos</key>
 			<integer>3555</integer>
 		</dict>
@@ -11574,9 +11574,9 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>note</key>
 			<string>Move to folder...</string>
 			<key>xpos</key>
-			<integer>40</integer>
+			<integer>20</integer>
 			<key>ypos</key>
-			<integer>1155</integer>
+			<integer>980</integer>
 		</dict>
 		<key>9FF8D4E6-7A5E-4736-9976-17C280BC574A</key>
 		<dict>
@@ -11668,7 +11668,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>note</key>
 			<string>Open today's note</string>
 			<key>xpos</key>
-			<integer>40</integer>
+			<integer>20</integer>
 			<key>ypos</key>
 			<integer>1835</integer>
 		</dict>
@@ -11719,7 +11719,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>xpos</key>
 			<integer>515</integer>
 			<key>ypos</key>
-			<integer>1155</integer>
+			<integer>980</integer>
 		</dict>
 		<key>B0AB019E-6AC5-494E-9F31-F818F9BFEE21</key>
 		<dict>
@@ -11737,7 +11737,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>note</key>
 			<string>OneUpdater (automatic update function)</string>
 			<key>xpos</key>
-			<integer>2070</integer>
+			<integer>1950</integer>
 			<key>ypos</key>
 			<integer>1505</integer>
 		</dict>
@@ -11748,7 +11748,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>note</key>
 			<string>searches documents with tag</string>
 			<key>xpos</key>
-			<integer>520</integer>
+			<integer>495</integer>
 			<key>ypos</key>
 			<integer>2860</integer>
 		</dict>
@@ -11759,7 +11759,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>note</key>
 			<string>Append to today's Daily Note</string>
 			<key>xpos</key>
-			<integer>40</integer>
+			<integer>20</integer>
 			<key>ypos</key>
 			<integer>1970</integer>
 		</dict>
@@ -11790,7 +11790,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 
 DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>xpos</key>
-			<integer>40</integer>
+			<integer>20</integer>
 			<key>ypos</key>
 			<integer>25</integer>
 		</dict>
@@ -11921,9 +11921,9 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 
 DOUBLE CLICK THIS to set hotkey.</string>
 			<key>xpos</key>
-			<integer>40</integer>
+			<integer>20</integer>
 			<key>ypos</key>
-			<integer>960</integer>
+			<integer>785</integer>
 		</dict>
 		<key>C5E65176-674E-4553-A255-37A40EB99342</key>
 		<dict>
@@ -11939,7 +11939,7 @@ DOUBLE CLICK THIS to set hotkey.</string>
 			<key>colorindex</key>
 			<integer>6</integer>
 			<key>xpos</key>
-			<integer>165</integer>
+			<integer>190</integer>
 			<key>ypos</key>
 			<integer>2190</integer>
 		</dict>
@@ -12093,7 +12093,7 @@ DOUBLE CLICK THIS to set hotkey.</string>
 			<key>note</key>
 			<string>search tags</string>
 			<key>xpos</key>
-			<integer>15</integer>
+			<integer>20</integer>
 			<key>ypos</key>
 			<integer>2860</integer>
 		</dict>
@@ -12158,7 +12158,7 @@ DOUBLE CLICK THIS to set hotkey.</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>165</integer>
+			<integer>190</integer>
 			<key>ypos</key>
 			<integer>3355</integer>
 		</dict>
@@ -12169,7 +12169,7 @@ DOUBLE CLICK THIS to set hotkey.</string>
 			<key>note</key>
 			<string>Use Universal Action (Alfred 4.5) to trigger the base64 conversion</string>
 			<key>xpos</key>
-			<integer>40</integer>
+			<integer>20</integer>
 			<key>ypos</key>
 			<integer>1305</integer>
 		</dict>
@@ -12258,7 +12258,7 @@ DOUBLE CLICK THIS to set hotkey.</string>
 			<key>note</key>
 			<string>Convert from clipboard to svg data URI</string>
 			<key>xpos</key>
-			<integer>40</integer>
+			<integer>20</integer>
 			<key>ypos</key>
 			<integer>1470</integer>
 		</dict>
@@ -12407,7 +12407,7 @@ DOUBLE CLICK THIS to set hotkey.</string>
 			<key>note</key>
 			<string>auto_update</string>
 			<key>xpos</key>
-			<integer>1955</integer>
+			<integer>1835</integer>
 			<key>ypos</key>
 			<integer>1525</integer>
 		</dict>
@@ -12418,7 +12418,7 @@ DOUBLE CLICK THIS to set hotkey.</string>
 			<key>note</key>
 			<string>append to Scratchpad</string>
 			<key>xpos</key>
-			<integer>40</integer>
+			<integer>20</integer>
 			<key>ypos</key>
 			<integer>635</integer>
 		</dict>
@@ -12487,7 +12487,7 @@ DOUBLE CLICK THIS to set hotkey.</string>
 			<key>note</key>
 			<string>Browse Links of current Note</string>
 			<key>xpos</key>
-			<integer>15</integer>
+			<integer>20</integer>
 			<key>ypos</key>
 			<integer>3175</integer>
 		</dict>
