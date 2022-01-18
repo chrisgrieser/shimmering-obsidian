@@ -12,7 +12,6 @@
 - If the [Alfred-based Quick Switcher](Alfred-based%20Quick%20Switcher.md)  does not work at all, make sure you haven't changed any of the default settings of the [Metadata-Extractor regarding the location & name of the JSON files](Workflow%20Configuration.md#Metadata-Extractor-Configuration). You can also rerun `osetup` to make sure.
 - If only a newly created or renamed note cannot be found, but can otherwise find all other notes, you need to [use the `oupdate` command to refresh your metadata](Utility%20Features.md#%E2%9C%B4%EF%B8%8F-update-plugins--metadata). You should also consider [increasing the frequency of metadata refreshing](Workflow%20Configuration.md#Metadata-Extractor-Configuration).
 
-
 ## Reporting Bugs
 If you did all of the above and there is still something not working, create an [issue on GitHub](https://github.com/chrisgrieser/shimmering-obsidian/issues). 
 
