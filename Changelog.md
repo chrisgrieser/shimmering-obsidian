@@ -1,3 +1,6 @@
+- 2022-01-18	release 2.14.2
+- 2022-01-18	improved onboarding docs & simplified setup
+- 2022-01-17	new "obeta" command to add a theme
 - 2022-01-13	release 2.14.1
 - 2022-01-13	hotfix for documentation search
 - 2022-01-12	release 2.14.0
