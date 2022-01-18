@@ -2,7 +2,7 @@
 
 ObjC.import("stdlib");
 ObjC.import("Foundation");
-app = Application.currentApplication();
+const app = Application.currentApplication();
 app.includeStandardAdditions = true;
 
 function readFile (path, encoding) {
@@ -22,7 +22,7 @@ for (const hash in vaultList) vaultArray.push(vaultList[hash].path);
 const jsonArray = [];
 vaultArray.forEach(vaultPath => {
 	const vaultName = vaultPath.replace(/.*\//, "");
-	let subtitle = "Control this vault with 'Shimmering Obsidian'";
+	let subtitle = "Control this vault with Alfred";
 	if (vaultArray.length === 1) subtitle = "Confirm with 'return' that this is your vault.";
 
 	jsonArray.push({

@@ -16,6 +16,7 @@ The Alfred-based Quick Switcher is basically an enhanced version of [Obsidian's 
 - [Search Starred Files](#search-starred-files)
 - [Search Recent Files](#search-recent-files)
 - [Recommended Alfred Setting](#recommended-alfred-setting)
+- [QLMarkdown or Peek?](#qlmarkdown-or-peek)
 
 <!-- /MarkdownTOC -->
 
@@ -34,7 +35,7 @@ This keyword searches all your notes, aliases, folders, and headings combined.
 		- When the [workflow configuration](Workflow%20Configuration.md#Alfred-based-Quick-Switcher) `open_after_appending` is set to `true`, to open the note afterwards.
 	- `⌃ + ↵`: Copy the [Obsidian-URI to the selected file](https://help.obsidian.md/Advanced+topics/Using+obsidian+URI#Action+`hook-get-address`).
 	- `⇧ + ↵`: Browse a list of all links of the selected note (outgoing links, backlinks, external links.) See at the [section "Browse Links" below](#browse-links-of-a-note) for further information.
-	- Press `⇧` or `⌘ y` to preview the selected note via macOS' Quick Look feature. Press `⇧` or `⌘ y` again to close the preview.[^1] (This requires [QLMarkdown or Peek](Installation.md#qlmarkdown-or-peek).)
+	- Press `⇧` or `⌘ y` to preview the selected note via macOS' Quick Look feature. Press `⇧` or `⌘ y` again to close the preview. This feature requires [QLMarkdown or Peek](#qlmarkdown-or-peek) being installed.
 - Add `filename` or `title` to your search query, to display only files and no aliases, folders, or headings. For example, `o obsidian filename` will display only notes that have the `obsidian` in their filename.
 - Similarly, you can also filter for starred or recent files by adding `starred` or `recent` to your query.
 - You can add `#tag` to your search query to search only for files with a specific tag, e.g., `o foobar #moc` will only display notes with the name `foobar` that are also tagged with `#moc`.
@@ -92,8 +93,21 @@ Displayed alongside the other search results are all headings in your vault. Sel
 - Up to the 10 most recent files are displayed.
 
 ## Recommended Alfred Setting
-- To avoid accidentally triggering the Quick Look feature, I suggest you turn off activating Quick Look via shift and use `cmd + Y` instead. You can do so with in the Alfred Settings under `Features → Previews`:
+- To avoid accidentally triggering the Quick Look feature, I suggest you turn off activating Quick Look via shift and use `⌘ + Y` instead. You can do so with in the Alfred Settings under `Features → Previews`:
 
 <img src="https://i.imgur.com/hDut8wK.png" alt="" width=60%>
+
+## QLMarkdown or Peek?
+[QLmarkdown](https://github.com/sbarex/QLMarkdown) and [Peek](https://apps.apple.com/app/peek-quick-look-extension/id1554235898) both enable previewing of Markdown documents. Peek works with a wide range of other file types than Markdown, but costs around 5€. QLMarkdown is free, but only works for Markdown and requires some minor small setup.
+
+<details>
+
+- The app `QLmarkdown.app` must be started at least once. You may need to right-click the app and select `open`, to be able be able to allow macOS to trust the app.
+- To enable proper display of YAML headers, you need to enable the respective setting in the Advanced Options of QLMarkdown:
+
+<img width="654" alt="Screenshot 2021-12-05 01 49 11" src="https://user-images.githubusercontent.com/73286100/144729141-72d8cd41-8e45-43e0-a11a-ce98ba97c2ac.png">
+	
+</details>
+
 
 [⬆️ Go Back to Top](#Table-of-Contents)

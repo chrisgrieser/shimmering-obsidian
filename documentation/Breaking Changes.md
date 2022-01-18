@@ -15,8 +15,7 @@
 - [Version 2.1](#version-21)
 - [Version 2.0](#version-20)
 	- [Metadata Extractor Plugin](#metadata-extractor-plugin)
-	- [Metadata Extractor Configuration](#metadata-extractor-configuration)
-	- [List of all other Breaking Changes](#list-of-all-other-breaking-changes)
+	- [Other breaking Changes when updating from v. 1.x to 2.x](#other-breaking-changes-when-updating-from-v-1x-to-2x)
 
 <!-- /MarkdownTOC -->
 ## Version 2.12.1
@@ -50,16 +49,9 @@ After updating to version 2.9+, you need to re-run `osetup` once.
 ### Metadata Extractor Plugin
 ⚠️ __The [Metadata Extractor Plugin](https://github.com/kometenstaub/metadata-extractor) is now a hard requirement that needs to be installed — without it, you will not be able to use this plugin anymore.__ The plugin allows Alfred to access various internal data like tags, aliases, and headings which third-party apps normally would not be able to do. (It also greatly increases the speed of this workflow!)
 
-❗️ After installation, you need to run the `osetup` command once. You are prompted to select the vault you want to control and Obsidian will restart. Then you are ready to go!
+❗️ After installation, you need to run the `osetup` command once. You are prompted to select the vault you want to control and Obsidian will restart. Then you are ready to go.
 
-### Metadata Extractor Configuration
-- **⚠️ Do not change any of the default values how the metadata extractor names its output files and where they are placed — otherwise this workflow won't be able to find them.**
-- The setting _should_ change is the one regarding the automatic refreshing of the metadata files. The higher the frequency, the more accurate the Quick Switcher of this Alfred workflow will become.
-
-<img src="https://i.imgur.com/7YnQJ7K.png" alt="Metadata Extractor Settings" width=70%>
-
-### List of all other Breaking Changes
-*when updating from v. 1.x to 2.x*
+### Other breaking Changes when updating from v. 1.x to 2.x
 - the previous `ot` command to open the current theme has been **removed** to avoid overlap with the new tag search – the command id now called via the `ocss` command.
 - the previous `otrash` command to open the current theme has been renamed to `o.`, to avoid crowding the `ot` keyword. For consistency, and simplicity, `o.obsidian` is now also accessible via `o.`
 - keyword `odefault` replaced with `ocheat`

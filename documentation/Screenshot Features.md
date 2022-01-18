@@ -6,6 +6,7 @@
 <!-- MarkdownTOC -->
 
 - [OCR Screenshots](#ocr-screenshots)
+	- [Requirements](#requirements)
 - [🆕 Image Screenshot](#%F0%9F%86%95-image-screenshot)
 - [Setting up Hotkeys](#setting-up-hotkeys)
 
@@ -23,7 +24,16 @@
 	- 💡 While not very visible, the workflow configuration variables *do* accept multi-line values.
 - For best results, you should set the proper languages to be recognized with the workflow setting `ocr_languages`.
 - When the [workflow configuration](Workflow%20Configuration.md#Screenshot-Features) `open_after_screenshot` is set to `true`, then the note will be opened after taking the screenshot. 💡 Set this to `false` to take OCR screenshots in quick succession without opening Obsidian.
-- 💡 _The first time you use the OCR screenshot feature_, you might need to give Alfred permission to record your screen. You can do so under the macOS system settings (see image below).
+
+### Requirements
+For the OCR Screenshot Feature, you need to install [Tesseract](https://tesseract-ocr.github.io/tessdoc/Installation.html). If you use Homebrew, you can do so with the following two commands:
+
+```bash
+brew install tesseract
+brew install tesseract-lang # for non-English languages
+```
+
+💡 _The first time you use the OCR screenshot feature_, you might need to give Alfred permission to record your screen. You can do so under the macOS system settings (see image below).
 
 <img src="https://user-images.githubusercontent.com/73286100/131231644-a800c0b0-8dc2-4ae9-bd41-c3937741b94a.png" alt="Permissions for OCR Screenshots" width=35%>
 
