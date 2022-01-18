@@ -34,7 +34,7 @@ body:
     id: version-info
     attributes:
       label: Version Information
-      description: "Alfred can compile version information of your machine and of Obsidian by running `odebug`. Running the command will copy the information to your clipboard, please paste it here."
+      description: "Alfred can compile version information of your machine and of Obsidian by running `oversions`. Running the command will copy the information to your clipboard, please paste it here."
   - type: checkboxes
     id: checklist
     attributes:

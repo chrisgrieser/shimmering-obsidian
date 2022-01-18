@@ -6,6 +6,7 @@
 <!-- MarkdownTOC -->
 
 - [Create a new Note](#create-a-new-note)
+- [Scratchpad](#scratchpad)
 - [Daily Notes](#daily-notes)
 - [Move Note](#move-note)
 
@@ -20,6 +21,12 @@
 	- If you are using QuickAdd, this will instead search the QuickAdd options for the argument (e.g., `foobar`).
 - This command also works with Obsidian not running (in which case it will open Obsidian after note creation).
 - ℹ️ The `on` command doesn't display the results in Alfred as opposed to the other commands. SImply press enter to open Quick or the new Note in Obsidian
+
+## Scratchpad
+**🆕 `oo` or `triggered via hotkey`: Append to your Scratchpad Note**
+- Quickly add text to the note set in the [workflow configuration](Workflow%20Configuration.md#Miscellaneous) `scratchpad_note_path`. This command is basically a quick version of the `fn + ↵` mode of the [Alfred-based Quick Switcher](Alfred-based%20Quick%20Switcher.md#search-for-notes).
+- When using `oo`, will append the text entered into Alfred, when triggered via hotkey, will append the current selection.
+- When the [workflow configuration](Workflow%20Configuration.md#Alfred-based-Quick-Switcher) `open_after_appending` is set to `true`, will open the scratchpad afterwards.
 
 ## Daily Notes
 **`od`: Open & Append to today's daily note [settings].**

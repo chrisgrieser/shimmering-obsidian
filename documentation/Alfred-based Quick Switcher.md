@@ -32,7 +32,7 @@ This keyword searches all your notes, aliases, folders, and headings combined.
 	- `⌥ + ↵`: Reveal the file in Finder.
 	- `fn + ↵`: Append the content to the selected note. 
 		- 🆕 Appended content depends on the [workflow configuration](Workflow%20Configuration.md#Alfred-based-Quick-Switcher) `input_append`. Set to `clipboard` will add the clipboard content, while setting it ti `manual` will prompt you for text to append. 
-		- When the [workflow configuration](Workflow%20Configuration.md#Alfred-based-Quick-Switcher) `open_after_appending` is set to `true`, to open the note afterwards.
+		- When the [workflow configuration](Workflow%20Configuration.md#Alfred-based-Quick-Switcher) `open_after_appending` is set to `true`, will open the note afterwards.
 	- `⌃ + ↵`: Copy the [Obsidian-URI to the selected file](https://help.obsidian.md/Advanced+topics/Using+obsidian+URI#Action+`hook-get-address`).
 	- `⇧ + ↵`: Browse a list of all links of the selected note (outgoing links, backlinks, external links.) See at the [section "Browse Links" below](#browse-links-of-a-note) for further information.
 	- Press `⇧` or `⌘ y` to preview the selected note via macOS' Quick Look feature. Press `⇧` or `⌘ y` again to close the preview. This feature requires [QLMarkdown or Peek](#qlmarkdown-or-peek) being installed.

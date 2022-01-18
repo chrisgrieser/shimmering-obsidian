@@ -21,13 +21,12 @@
 *For a full documentation & usage guide, follow the links to the respective subsection.*
 
 ### Powerful Alfred-based Quick Switcher
-- Search Notes
-- Open Notes in new pane, append to notes, copy Markdown links, …
-- Includes Aliases
-- Search Headings (included heading levels configurable)
-- Search Starred Notes
-- Search Recent Notes
-- Browse folders (move to parent folders, create notes in folders)
+- Search for Notes
+	- Includes Aliases
+	- Search Headings (included heading levels configurable)
+	- Search Starred Notes
+	- Search Recent Notes
+- Browse Folders (move to parent folders, create notes in folders)
 - Search Notes via Tags
 - Browse a note's links (outgoing, backlinks, external)
 - Open External Links of a Note (without switching to the document or opening Obsidian)
@@ -42,7 +41,7 @@
 - Create new Notes (based on Template or via QuickAdd)
 - Move Note to a different folder
 - Daily Notes
-- 🆕 Open Commit History of Note (if vault is a git repository)
+- 🆕 Quickly append to a scratchpad note
 
 ➡️ [Documentation of Note-related Features](documentation/Note-related%20Features.md)
 
@@ -59,8 +58,6 @@
 
 ### Utility Features
 - Backup your Vault
-- Paste URL into selection
-- Dual Mode (Edit + Preview)
 - Access various folders like `.obsidian` or `.trash`
 - Update Plugins
 - Carl Auto-Responses 🐢
