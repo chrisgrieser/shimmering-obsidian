@@ -12566,7 +12566,7 @@ DOUBLE CLICK THIS to set hotkey.</string>
 		<string>vault_path</string>
 	</array>
 	<key>version</key>
-	<string>2.14.2</string>
+	<string>2.15.0</string>
 	<key>webaddress</key>
 	<string>https://chris-grieser.de/</string>
 </dict>

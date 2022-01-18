@@ -1,3 +1,6 @@
+- 2022-01-18	release 2.15.0
+- 2022-01-18	added scratchpad functionality (#28)
+- 2022-01-18	removed odual and paste into selection
 - 2022-01-18	release 2.14.2
 - 2022-01-18	improved onboarding docs & simplified setup
 - 2022-01-17	new "obeta" command to add a theme
