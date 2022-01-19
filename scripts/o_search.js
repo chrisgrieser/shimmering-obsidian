@@ -20,7 +20,7 @@ function parentFolder (filePath) {
 }
 function alfredMatcher (str) {
 	return str.replace (/[-()_.]/g, " ") + " " + str;
-}ff
+}
 
 // Import Data
 const vaultPath = $.getenv("vault_path").replace(/^~/, app.pathTo("home folder"));
@@ -61,9 +61,7 @@ if (readFile(starredJSON) !== "") {
 			.filter (item => item.type === "file")
 			.map (item => item.path);
 }
-const recentFiles =
-	JSON.parse(readFile(recentJSON))
-		.lastOpenFiles;
+const recentFiles = JSON.parse(readFile(recentJSON)).lastOpenFiles;
 
 // ignored headings
 const hLVLignore = $.getenv("h_lvl_ignore");
