@@ -20,13 +20,15 @@ function parentFolder (filePath) {
 }
 function alfredMatcher (str) {
 	return str.replace (/[-()_.]/g, " ") + " " + str;
-}
+}ff
 
 // Import Data
 const vaultPath = $.getenv("vault_path").replace(/^~/, app.pathTo("home folder"));
 const metadataJSON = vaultPath + "/.obsidian/plugins/metadata-extractor/metadata.json";
 const starredJSON = vaultPath + "/.obsidian/starred.json";
 const recentJSON = vaultPath + "/.obsidian/workspace";
+const ignoreFolder = $.getenv("search_ignore_folder").replace(/^\/|\/$/, "");
+const jsonArray = [];
 
 // either searches the vault, or a subfolder of the vault
 let currentFolder;
@@ -39,19 +41,18 @@ try {
 	pathToCheck = vaultPath;
 }
 
-
-let folderArray =
-	app.doShellScript("find \"" + pathToCheck + "\" -type d -mindepth 1 -not -path \"*/.*\"")
-		.split("\r");
+// folder search
+let folderArray = app.doShellScript("find \"" + pathToCheck + "\" -type d -mindepth 1 -not -path \"*/.*\"")
+	.split("\r");
 if (folderArray === "") folderArray = [];
+if (ignoreFolder) folderArray = folderArray.filter (fo => !fo.startsWith(vaultPath + "/" + ignoreFolder));
 
+// file search
 let fileArray = JSON.parse (readFile(metadataJSON));
+if (ignoreFolder) fileArray = fileArray.filter (f => !f.relativePath.startsWith(ignoreFolder));
+if (pathToCheck !== vaultPath) fileArray = fileArray.filter (f => f.relativePath.startsWith(currentFolder));
 
-if (pathToCheck !== vaultPath) {
-	fileArray = JSON.parse (readFile(metadataJSON))
-		.filter(f => f.relativePath.startsWith (currentFolder));
-}
-
+// starred & recent files
 let starredFiles = [];
 if (readFile(starredJSON) !== "") {
 	starredFiles =
@@ -64,7 +65,7 @@ const recentFiles =
 	JSON.parse(readFile(recentJSON))
 		.lastOpenFiles;
 
-
+// ignored headings
 const hLVLignore = $.getenv("h_lvl_ignore");
 const headingIgnore = [true];
 for (let i = 1; i < 7; i++) {
@@ -72,8 +73,7 @@ for (let i = 1; i < 7; i++) {
 	else headingIgnore.push (false);
 }
 
-const jsonArray = [];
-
+// files
 fileArray.forEach(file => {
 	const filename = file.fileName;
 	const relativePath = file.relativePath;
@@ -184,6 +184,7 @@ fileArray.forEach(file => {
 	});
 });
 
+// folders
 folderArray.forEach(absolutePath => {
 	const name = absolutePath.split("/").pop();
 	const relativePath = absolutePath.slice(vaultPath.length + 1);

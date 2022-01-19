@@ -11187,7 +11187,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>colorindex</key>
 			<integer>11</integer>
 			<key>xpos</key>
-			<integer>535</integer>
+			<integer>490</integer>
 			<key>ypos</key>
 			<integer>9260</integer>
 		</dict>
@@ -12542,6 +12542,8 @@ DOUBLE CLICK THIS to set hotkey.</string>
 		<string>~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Main Vault/Writing/🦠 Acceleration of Research/✴️ HUB – Corona &amp; Beschleunigung.md</string>
 		<key>screenshot_path</key>
 		<string></string>
+		<key>search_ignore_folder</key>
+		<string>PhD Thesis/PhD Data</string>
 		<key>template_note_path</key>
 		<string>~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vault/Meta/Templates/T Basic.md</string>
 		<key>thousand_separator</key>
@@ -12553,20 +12555,21 @@ DOUBLE CLICK THIS to set hotkey.</string>
 		<key>vault_path</key>
 		<string>~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Main Vault</string>
 		<key>workspace_to_spellcheck</key>
-		<string></string>
+		<string>Longform</string>
 	</dict>
 	<key>variablesdontexport</key>
 	<array>
 		<string>backup_destination</string>
-		<string>vault_name_ENC</string>
+		<string>ObRunning</string>
 		<string>daily_note_path</string>
 		<string>scratchpad_note_path</string>
+		<string>search_ignore_folder</string>
 		<string>use_quickadd</string>
-		<string>vault_path</string>
 		<string>h_lvl_ignore</string>
-		<string>ObRunning</string>
-		<string>template_note_path</string>
+		<string>vault_name_ENC</string>
 		<string>workspace_to_spellcheck</string>
+		<string>template_note_path</string>
+		<string>vault_path</string>
 	</array>
 	<key>version</key>
 	<string>2.15.0</string>

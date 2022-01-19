@@ -8,6 +8,7 @@ The Alfred-based Quick Switcher is basically an enhanced version of [Obsidian's 
 
 - [Main Search](#main-search)
 	- [Search for Notes](#search-for-notes)
+	- [Smart Queries](#smart-queries)
 	- [Search for Aliases](#search-for-aliases)
 	- [Search for Folders](#search-for-folders)
 	- [Search for Headings](#search-for-headings)
@@ -27,15 +28,18 @@ The Alfred-based Quick Switcher is basically an enhanced version of [Obsidian's 
 This keyword searches all your notes, aliases, folders, and headings combined.
 
 ### Search for Notes
-- This works similar to Obsidian's built-in “QuickSwitch” feature, but can be triggered without Obsidian running (in which case it will open Obsidian with the selected note). Press `↵` to open the selected file in Obsidian.
-	- `⌘ + ↵`: Open the file in a new pane.
-	- `⌥ + ↵`: Reveal the file in Finder.
-	- `fn + ↵`: Append the content to the selected note. 
-		- 🆕 Appended content depends on the [workflow configuration](Workflow%20Configuration.md#Alfred-based-Quick-Switcher) `input_append`. Set to `clipboard` will add the clipboard content, while setting it ti `manual` will prompt you for text to append. 
-		- When the [workflow configuration](Workflow%20Configuration.md#Alfred-based-Quick-Switcher) `open_after_appending` is set to `true`, will open the note afterwards.
-	- `⌃ + ↵`: Copy the [Obsidian-URI to the selected file](https://help.obsidian.md/Advanced+topics/Using+obsidian+URI#Action+`hook-get-address`).
-	- `⇧ + ↵`: Browse a list of all links of the selected note (outgoing links, backlinks, external links.) See at the [section "Browse Links" below](#browse-links-of-a-note) for further information.
-	- Press `⇧` or `⌘ y` to preview the selected note via macOS' Quick Look feature. Press `⇧` or `⌘ y` again to close the preview. This feature requires [QLMarkdown or Peek](#qlmarkdown-or-peek) being installed.
+This works similar to Obsidian's built-in “QuickSwitch” feature, but can be triggered without Obsidian running (in which case it will open Obsidian with the selected note). Press `↵` to open the selected file in Obsidian.
+- `⌘ + ↵`: Open the file in a new pane.
+- `⌥ + ↵`: Reveal the file in Finder.
+- `fn + ↵`: Append the content to the selected note. 
+	- 🆕 Appended content depends on the [workflow configuration](Workflow%20Configuration.md#Alfred-based-Quick-Switcher) `input_append`. Set to `clipboard` will add the clipboard content, while setting it ti `manual` will prompt you for text to append. 
+	- When the [workflow configuration](Workflow%20Configuration.md#Alfred-based-Quick-Switcher) `open_after_appending` is set to `true`, will open the note afterwards.
+- `⌃ + ↵`: Copy the [Obsidian-URI to the selected file](https://help.obsidian.md/Advanced+topics/Using+obsidian+URI#Action+`hook-get-address`).
+- `⇧ + ↵`: Browse a list of all links of the selected note (outgoing links, backlinks, external links.) See at the [section "Browse Links" below](#browse-links-of-a-note) for further information.
+- Press `⇧` or `⌘ y` to preview the selected note via macOS' Quick Look feature. Press `⇧` or `⌘ y` again to close the preview. This feature requires [QLMarkdown or Peek](#qlmarkdown-or-peek) being installed.
+- To ignore files in a specific folder (e.g. an archive folder), use the [workflow configuration](Workflow%20Configuration.md#Alfred-based-Quick-Switcher) `search_ignore_folder`.
+
+### Smart Queries
 - Add `filename` or `title` to your search query, to display only files and no aliases, folders, or headings. For example, `o obsidian filename` will display only notes that have the `obsidian` in their filename.
 - Similarly, you can also filter for starred or recent files by adding `starred` or `recent` to your query.
 - You can add `#tag` to your search query to search only for files with a specific tag, e.g., `o foobar #moc` will only display notes with the name `foobar` that are also tagged with `#moc`.

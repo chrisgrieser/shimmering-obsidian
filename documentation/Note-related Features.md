@@ -14,17 +14,16 @@
 
 ## Create a new Note
 **`on`: Create a `n`ew note.**
-- Using the template set in the [workflow configuration](Workflow%20Configuration.md#New-Note-Creation) (`template_note_path`), a new note will be created in your vault root.
-- If you have set the [workflow configuration](Workflow%20Configuration.md#New-Note-Creation) `use_quickadd` to `true`, this command will instead trigger the [QuickAdd Plugin](https://github.com/chhoumann/quickadd).
+- Using the template set in the [workflow configuration](Workflow%20Configuration.md#note-related-features) (`template_note_path`), a new note will be created in your vault root.
+- If you have set the [workflow configuration](Workflow%20Configuration.md#note-related-features) `use_quickadd` to `true`, this command will instead trigger the [QuickAdd Plugin](https://github.com/chhoumann/quickadd).
 - Anything you type after the keyword `on` (e.g., `on foobar`) will be used as argument:
 	- Normally, this will become the filename of the note (e.g., `foobar.md`).
 	- If you are using QuickAdd, this will instead search the QuickAdd options for the argument (e.g., `foobar`).
 - This command also works with Obsidian not running (in which case it will open Obsidian after note creation).
-- ℹ️ The `on` command doesn't display the results in Alfred as opposed to the other commands. SImply press enter to open Quick or the new Note in Obsidian
 
 ## Scratchpad
 **🆕 `oo` or `triggered via hotkey`: Append to your Scratchpad Note**
-- Quickly add text to the note set in the [workflow configuration](Workflow%20Configuration.md#Miscellaneous) `scratchpad_note_path`. This command is basically a quick version of the `fn + ↵` mode of the [Alfred-based Quick Switcher](Alfred-based%20Quick%20Switcher.md#search-for-notes).
+- Quickly add text to the note set in the [workflow configuration](Workflow%20Configuration.md#note-related-features) `scratchpad_note_path`. This command is basically a quick version of the `fn + ↵` mode of the [Alfred-based Quick Switcher](Alfred-based%20Quick%20Switcher.md#search-for-notes).
 - When using `oo`, will append the text entered into Alfred, when triggered via hotkey, will append the current selection.
 - When the [workflow configuration](Workflow%20Configuration.md#Alfred-based-Quick-Switcher) `open_after_appending` is set to `true`, will open the scratchpad afterwards.
 
@@ -35,7 +34,7 @@
 - Use `cmd + ↵` to open your daily note after appending to it.
 - This does *not* require the Daily Notes plugin to be enabled.
 - For now, the daily notes must be exactly in the format `YYYY-MM-DD` for this feature to work.
-- Using the [workflow configuration](Workflow%20Configuration.md#Miscellaneous) `daily_note_path`, you can set the location of your daily notes inside your vault.
+- Using the [workflow configuration](Workflow%20Configuration.md#note-related-features) `daily_note_path`, you can set the location of your daily notes inside your vault.
 
 ## Move Note
 **`om` or `triggered via hotkey`: Move the current note to a different folder in your vault.**

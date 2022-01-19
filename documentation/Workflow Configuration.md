@@ -7,7 +7,7 @@
 
 - [Alfred Environment Variables](#alfred-environment-variables)
 	- [Alfred-based Quick Switcher](#alfred-based-quick-switcher)
-	- [New Note Creation](#new-note-creation)
+	- [Note-related Features](#note-related-features)
 	- [Screenshots Features](#screenshots-features)
 	- [Plugin & Theme Search](#plugin--theme-search)
 	- [Backups](#backups)
@@ -31,10 +31,13 @@ You access the main workflow configuration by clicking the *`[x]`* at the top ri
 - `merge_nested_tags`: When using the `ot` search, merge all [nested tags](https://help.obsidian.md/Plugins/Tag+pane#Nested+tags) to their parent tag, e.g., `#inbox/to-read` and `#inbox/later` would both be subsumed under `#inbox`. Accepts `true` or `false`.
 - `open_after_appending`: When appending to a note (`fn + ↵`), the note will automatically be opened afterwards. Accepts `true` or `false`. This setting also applies to the [Scratchpad](Note-related%20Features.md#Scratchpad) feature. 
 - 🆕 `input_append`: What type of content is used when appending to a note (`fn + ↵`). Accepts `clipboard` or `manual` (= prompting you to enter something).
+- 🆕 `search_ignore_folder`: the vault-*relative* path to a folder which should be excluded when using the main search of Quick Switcher (`o` command). (The other sub-searches like `or` or `os` are not affected.) Leave empty to not exclude any folder.
 
-### New Note Creation
+### Note-related Features
 - `template_note_path`: Template to use when creating new notes with the `on` command or when browsing a folder via [the Alfred-based Quick Switcher](Alfred-based%20Quick%20Switcher.md).
 - `use_quickadd`: Instead of creating a new note based on a template (with the keyword `on`), will trigger the [QuickAdd Plugin](https://github.com/chhoumann/quickadd). Accepted values are `true` and `false`.
+- `scratchpad_note_path`: *absolute* path to your scratchpad note. See [Scratchpad](Note-related%20Features.md#Scratchpad).
+- `daily_note_path`: *absolute* path to the folder where your daily notes are saved. See [Daily Notes](Note-related%20Features.md#Daily%20Notes).
 
 ### Screenshots Features
 - `ocr_languages`: set language codes of Tesseract, e.g., `eng+deu` for English and German. You can find out the code for your language(s) in [this list](https://tesseract-ocr.github.io/tessdoc/Data-Files-in-different-versions.html).
@@ -51,8 +54,6 @@ You access the main workflow configuration by clicking the *`[x]`* at the top ri
 - `max_number_of_bkps`: Maximum number of backups that should be stored at the backup destination folder. When the number is reached, every new backup cause the oldest backup to be deleted. (Decrease this number, when your backup folder becomes too big.)
 
 ### Miscellaneous
-- `scratchpad_note_path`: *absolute* path to your scratchpad note. See [Scratchpad](Note-related%20Features.md#Scratchpad).
-- `daily_note_path`: *absolute* path to the folder where your daily notes are saved. See [Daily Notes](Note-related%20Features.md#Daily%20Notes).
 - `workspace_to_spellcheck`: Name of the Workspace where spellcheck should be turned on. Leave empty to not toggle any spellcheck setting with workspace changes. See [Workspace Switcher](Workspace%20Switcher.md).
 - `auto_update`: Periodically check for updates *of this workflow* and update automatically. Accepts `true` or `false`.
 
