@@ -1,3 +1,4 @@
+- 2022-01-19	release 2.16.1
 - 2022-01-19	release 2.16.0
 - 2022-01-19	new workflow configuration: ignore a folder with the main search ('o...')
 - 2022-01-18	release 2.15.0
