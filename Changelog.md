@@ -1,3 +1,6 @@
+- 2022-01-20	release 2.17.0
+- 2022-01-20	added command to open the scratchpad note
+- 2022-01-20	set location to place new note into
 - 2022-01-19	release 2.16.1
 - 2022-01-19	release 2.16.0
 - 2022-01-19	new workflow configuration: ignore a folder with the main search ('o...')
