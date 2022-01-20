@@ -1,3 +1,6 @@
+- 2022-01-20	release 2.17.1
+- 2022-01-20	capitalize first letter of new note name automatically
+- 2022-01-20	fix copying beta plugin URLs into Discord
 - 2022-01-20	release 2.17.0
 - 2022-01-20	added command to open the scratchpad note
 - 2022-01-20	set location to place new note into
