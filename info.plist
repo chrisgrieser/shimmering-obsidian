@@ -620,6 +620,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>3CC54A98-B297-4BE8-8F53-22C52A7247B6</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>30FE564E-5E90-4F98-87D8-EAEB63CECFB3</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>3D6B2191-4EEE-44DB-9439-CE7F5F71F4C2</key>
 		<array>
 			<dict>
@@ -1318,7 +1331,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>19136158-A016-4A77-B5F5-D719EB8BA22F</string>
+				<string>3CC54A98-B297-4BE8-8F53-22C52A7247B6</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -3982,19 +3995,19 @@ tesseract "$temp_image" stdout -l $ocr_languages 2&gt;&amp;1</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>browser</key>
-				<string></string>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string>obsidian://open?vault={var:vault_name_ENC}&amp;path={var:scratchpad_note_path}</string>
-				<key>utf8</key>
+				<key>externaltriggerid</key>
+				<string>open-in-obsidian</string>
+				<key>passinputasargument</key>
 				<true/>
+				<key>passvariables</key>
+				<true/>
+				<key>workflowbundleid</key>
+				<string>self</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
+			<string>alfred.workflow.output.callexternaltrigger</string>
 			<key>uid</key>
-			<string>19136158-A016-4A77-B5F5-D719EB8BA22F</string>
+			<string>30FE564E-5E90-4F98-87D8-EAEB63CECFB3</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -4016,6 +4029,23 @@ tesseract "$temp_image" stdout -l $ocr_languages 2&gt;&amp;1</string>
 			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
 			<string>60A87101-8D59-46BF-BCAE-A9195D6A034E</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{var:scratchpad_note_path}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>3CC54A98-B297-4BE8-8F53-22C52A7247B6</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -10069,15 +10099,6 @@ Donate:   https://ko-fi.com/pseudometa</string>
 			<key>ypos</key>
 			<integer>4600</integer>
 		</dict>
-		<key>19136158-A016-4A77-B5F5-D719EB8BA22F</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>3</integer>
-			<key>xpos</key>
-			<integer>195</integer>
-			<key>ypos</key>
-			<integer>770</integer>
-		</dict>
 		<key>1E26935C-F1F3-4C69-AEFA-3A0D9D18291F</key>
 		<dict>
 			<key>colorindex</key>
@@ -10279,6 +10300,15 @@ Donate:   https://ko-fi.com/pseudometa</string>
 			<key>ypos</key>
 			<integer>5940</integer>
 		</dict>
+		<key>30FE564E-5E90-4F98-87D8-EAEB63CECFB3</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>6</integer>
+			<key>xpos</key>
+			<integer>255</integer>
+			<key>ypos</key>
+			<integer>770</integer>
+		</dict>
 		<key>31029900-BFEE-41CF-8378-CA04E48FEF9C</key>
 		<dict>
 			<key>colorindex</key>
@@ -10388,6 +10418,15 @@ Donate:   https://ko-fi.com/pseudometa</string>
 			<integer>315</integer>
 			<key>ypos</key>
 			<integer>7380</integer>
+		</dict>
+		<key>3CC54A98-B297-4BE8-8F53-22C52A7247B6</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>xpos</key>
+			<integer>180</integer>
+			<key>ypos</key>
+			<integer>800</integer>
 		</dict>
 		<key>3D6B2191-4EEE-44DB-9439-CE7F5F71F4C2</key>
 		<dict>
