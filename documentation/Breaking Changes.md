@@ -5,6 +5,7 @@
 ## Table of Contents
 <!-- MarkdownTOC -->
 
+- [Version 2.17](#version-217)
 - [Version 2.15](#version-215)
 - [Version 2.12.1](#version-2121)
 - [Version 2.10](#version-210)
@@ -19,6 +20,10 @@
 	- [Other breaking Changes when updating from v. 1.x to 2.x](#other-breaking-changes-when-updating-from-v-1x-to-2x)
 
 <!-- /MarkdownTOC -->
+## Version 2.17
+- `scratchpad_note_path` uses a vault-relative path.
+- `template_note_path`: uses a vault-relative path now.
+
 ## Version 2.15
 - `odual` removed since it's implemented via plugins and Live Preview.
 - Paste into Selection removed, since there is [a plugin that does it better](https://github.com/chrisgrieser/obsidian-smarter-md-hotkeys).

@@ -5,21 +5,20 @@
 ## Table of Contents
 <!-- MarkdownTOC -->
 
-- [Create a new Note](#create-a-new-note)
+- [✴️ Create a new Note](#%E2%9C%B4%EF%B8%8F-create-a-new-note)
 - [Scratchpad](#scratchpad)
 - [Daily Notes](#daily-notes)
 - [Move Note](#move-note)
 
 <!-- /MarkdownTOC -->
 
-## Create a new Note
+## ✴️ Create a new Note
 **`on`: Create a `n`ew note.**
-- Using the template set in the [workflow configuration](Workflow%20Configuration.md#note-related-features) (`template_note_path`), a new note will be created in your vault root.
-- If you have set the [workflow configuration](Workflow%20Configuration.md#note-related-features) `use_quickadd` to `true`, this command will instead trigger the [QuickAdd Plugin](https://github.com/chhoumann/quickadd).
-- Anything you type after the keyword `on` (e.g., `on foobar`) will be used as argument:
-	- Normally, this will become the filename of the note (e.g., `foobar.md`).
-	- If you are using QuickAdd, this will instead search the QuickAdd options for the argument (e.g., `foobar`).
+- __File Name:__ Anything you type after the keyword `on` (e.g., `on foobar`) will become the filename of the new note (e.g., `foobar.md`).
+- __Content:__ The [workflow configuration](Workflow%20Configuration.md#note-related-features) (`template_note_path`) determines the content of the new note.
+- 🆕 __Location:__ The new note will be placed in the folder specific in the [workflow configuration](Workflow%20Configuration.md#note-related-features) `new_note_location`. If the configuration is left empty, it will be placed in your vault root.
 - This command also works with Obsidian not running (in which case it will open Obsidian after note creation).
+- If you have set the [workflow configuration](Workflow%20Configuration.md#note-related-features) `use_quickadd` to `true`, this command will instead trigger the [QuickAdd Plugin](https://github.com/chhoumann/quickadd). Anything you type after the keyword `on` (e.g., `on foobar`) will be passed to search the QuickAdd choices. File Name, Location, and Content will be determined by QuickAdd and not this workflow.
 
 ## Scratchpad
 **🆕 `oo` or `triggered via hotkey`: Append to your Scratchpad Note**

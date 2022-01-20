@@ -34,9 +34,10 @@ You access the main workflow configuration by clicking the *`[x]`* at the top ri
 - 🆕 `search_ignore_folder`: the vault-*relative* path to a folder which should be excluded when using the main search of Quick Switcher (`o` command). (The other sub-searches like `or` or `os` are not affected.) Leave empty to not exclude any folder.
 
 ### Note-related Features
-- `template_note_path`: Template to use when creating new notes with the `on` command or when browsing a folder via [the Alfred-based Quick Switcher](Alfred-based%20Quick%20Switcher.md).
+- `template_note_path`: Vault-relative path to Template to use when creating new notes with the `on` command or when browsing a folder via [the Alfred-based Quick Switcher](Alfred-based%20Quick%20Switcher.md).
+- 🆕 `new_note_location`: Vault-relative path to a folder where new notes created by `on` should be created. Leave empty to create the new note in the vault root.
 - `use_quickadd`: Instead of creating a new note based on a template (with the keyword `on`), will trigger the [QuickAdd Plugin](https://github.com/chhoumann/quickadd). Accepted values are `true` and `false`.
-- `scratchpad_note_path`: *absolute* path to your scratchpad note. See [Scratchpad](Note-related%20Features.md#Scratchpad).
+- `scratchpad_note_path`: Vault-relative path to your scratchpad note. See [Scratchpad](Note-related%20Features.md#Scratchpad).
 - `daily_note_path`: *absolute* path to the folder where your daily notes are saved. See [Daily Notes](Note-related%20Features.md#Daily%20Notes).
 
 ### Screenshots Features
