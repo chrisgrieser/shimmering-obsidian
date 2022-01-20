@@ -14,9 +14,10 @@ function run (argv) {
 	}
 
 	const newNotePath = $.getenv("new_note_location").replace(/^\/|\/$/, "");
-	const fileName = argv.join("");
+	let fileName = argv.join("");
+	fileName = fileName.charAt(0).toUpperCase() + fileName.slice(1); // capitalize
 	const vaultNameEnc = $.getenv("vault_name_ENC");
-	const content = readFile($.getenv("vault_path").replace(/^~/, app.pathTo("home folder")) +  "/" + $.getenv("template_note_path"));
+	const content = readFile($.getenv("vault_path").replace(/^~/, app.pathTo("home folder")) + "/" + $.getenv("template_note_path"));
 
 	const URI = "obsidian://new?vault=" + vaultNameEnc +
 		"&file=" + encodeURIComponent(newNotePath + "/" + fileName) +
