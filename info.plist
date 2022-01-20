@@ -352,7 +352,7 @@
 				<key>modifiers</key>
 				<integer>524288</integer>
 				<key>modifiersubtext</key>
-				<string>⌥: Copy URL</string>
+				<string></string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>

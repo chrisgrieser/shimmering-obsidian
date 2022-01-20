@@ -25,7 +25,7 @@ betaRepos.forEach(repo => {
 
 	const url = "https://github.com/" + repo;
 	const author = repo.split("/")[0];
-	const name = repo.split("/")[1];
+	let name = repo.split("/")[1];
 
 	let isDiscordReady = "";
 	let shareURL = url;
@@ -39,9 +39,11 @@ betaRepos.forEach(repo => {
 		"subtitle": "by " + author,
 		"match": alfredMatcher (name) + alfredMatcher (author),
 		"arg": url,
-		"alt": {
-			"arg": shareURL,
-			"subtitle": "⌥: Copy Link" + isDiscordReady
+		"mods": {
+			"alt": {
+				"arg": shareURL,
+				"subtitle": "⌥: Copy Link" + isDiscordReady
+			}
 		}
 	});
 });
