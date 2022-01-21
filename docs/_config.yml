@@ -1,2 +1,12 @@
 remote_theme: pmarsceill/just-the-docs
 title: Shimmering Obsidian
+
+heading_anchors: true
+search_enabled: true
+
+back_to_top: true
+back_to_top_text: "Back to top"
+
+gh_edit_link: true # show or hide edit this page link
+gh_edit_link_text: "Edit this page on GitHub"
+gh_edit_repository: "https://github.com/chrisgrieser/shimmering-obsidian/"
