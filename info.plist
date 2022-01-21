@@ -3936,10 +3936,10 @@ tesseract "$temp_image" stdout -l $ocr_languages 2&gt;&amp;1</string>
 				<key>argument</key>
 				<string></string>
 				<key>passthroughargument</key>
-				<false/>
+				<true/>
 				<key>variables</key>
 				<dict>
-					<key>query</key>
+					<key>input</key>
 					<string>{query}</string>
 				</dict>
 			</dict>
@@ -3960,7 +3960,7 @@ tesseract "$temp_image" stdout -l $ocr_languages 2&gt;&amp;1</string>
 				<key>removeextension</key>
 				<false/>
 				<key>text</key>
-				<string>'{var:query}'</string>
+				<string>'{var:input}'</string>
 				<key>title</key>
 				<string>✅ Appended to Scratchpad</string>
 			</dict>
