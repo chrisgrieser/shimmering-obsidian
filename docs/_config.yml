@@ -4,6 +4,20 @@ color_scheme: "dark"
 
 search_enabled: true
 
+permalink: pretty
+heading_anchors: true
+
+back_to_top: true
+back_to_top_text: "Back to top"
+
+footer_content: "Copyright &copy; 2017-2020 Patrick Marsceill. Distributed by an <a href=\"https://github.com/pmarsceill/just-the-docs/tree/master/LICENSE.txt\">MIT license.</a>"
+
+gh_edit_link: true # show or hide edit this page link
+gh_edit_link_text: "Edit on GitHub"
+gh_edit_repository: "https://github.com/chrisgrieser/shimmering-obsidian" # the github URL for your repo
+gh_edit_branch: "master" # the branch that your docs is served from
+gh_edit_source: docs # the source that your files originate from
+
 search:
   # Split pages into sections that can be searched individually
   # Supports 1 - 6, default: 2
