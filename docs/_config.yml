@@ -1,4 +1,4 @@
-theme: github-pages-minimal
+theme: jekyll-theme-minimal
 title: Shimmering Obsidian
 sidebar:
   nav: docs
