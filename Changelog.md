@@ -1,3 +1,5 @@
+- 2022-01-21	release 2.17.2
+- 2022-01-21	hotfix for scratchpad (thanks 00dani)
 - 2022-01-20	release 2.17.1
 - 2022-01-20	capitalize first letter of new note name automatically
 - 2022-01-20	fix copying beta plugin URLs into Discord
