@@ -192,6 +192,12 @@
    "match": "all features of obsidian meme"
 },
 {
+   "title": "Change Server Roles",
+   "arg": "https://discord.com/channels/686053708261228577/702717892533157999/830492034807758859",
+   "uid": "server role",
+   "match": "discord server role developer"
+},
+{
    "title": "discord tricks",
    "arg": "discord tricks",
    "uid": "discord tricks",
