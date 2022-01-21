@@ -1,4 +1,6 @@
-[⏪ Go back to the Feature Overview](https://github.com/chrisgrieser/shimmering-obsidian/blob/main/README.md#feature-overview)
+---
+nav_order: 2
+---
 
 # CSS-related Features
 
@@ -47,4 +49,4 @@
 
 <img src="https://i.imgur.com/nVT687p.png" alt="Cheat Sheets" width=30%>
 
-[⬆️ Go Back to Top](#Table-of-Contents)
+

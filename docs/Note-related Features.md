@@ -1,4 +1,6 @@
-[⏪ Go back to the Feature Overview](../README.md#feature-overview)
+---
+nav_order: 2
+---
 
 # Note-related Features
 

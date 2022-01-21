@@ -1,4 +1,6 @@
-[⏪ Go back to the Feature Overview](../README.md#feature-overview)
+---
+nav_order: 2
+---
 
 # Documentation & Forum Search
 
@@ -17,4 +19,4 @@
 - Press `⌘ + ↵` to open the forum category in your default browser.
 - Use `⌥ + ↵` to copy the link to the category to your clipboard instead. When Discord is the frontmost app, the copied link will be surrounded with `<` `>` for more convenient pasting in the Discord Desktop app (disables auto-preview).
 
-[⬆️ Go Back to Top](#Table-of-Contents)
+

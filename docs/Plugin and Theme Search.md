@@ -1,4 +1,6 @@
-[⏪ Go back to the Feature Overview](../README.md#feature-overview)
+---
+nav_order: 2
+---
 
 # Plugin & Theme Search
 
@@ -58,7 +60,7 @@
 <img src="https://user-images.githubusercontent.com/73286100/139559362-747b0c57-c29b-45b5-bc62-4ab53c0718c5.gif" alt="Issue Search" width=60%>
 <img src="https://i.imgur.com/AvavR7n.png" alt="update information" width=60%>
 
-[⬆️ Go Back to Top](#Table-of-Contents)
+
 
 [^1]: Unfortunately, there isn't enough versioning information for themes to do the same for them.
 [^2]: Accessing the settings of an installed plugin via [the plugin search](Plugin%20and%20Theme%20Search.md) (`op`) via `ctrl + ↵` has been disabled in release 2.4.

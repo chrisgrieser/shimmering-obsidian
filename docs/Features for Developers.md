@@ -1,4 +1,6 @@
-[⏪ Go back to the Feature Overview](../README.md#feature-overview)
+---
+nav_order: 2
+---
 
 # Features for Developers
 
@@ -48,4 +50,4 @@ Refer to the section on [Settings & Local Plugin Search](Settings%20and%20Local%
 - All commands require the [BRAT Plugin](https://github.com/TfTHacker/obsidian42-brat).
 - Install a new theme.
 
-[⬆️ Go Back to Top](#Table-of-Contents)
+

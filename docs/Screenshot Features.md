@@ -1,4 +1,6 @@
-[⏪ Go back to the Feature Overview](../README.md#feature-overview)
+---
+nav_order: 2
+---
 
 # Screenshot Features
 
@@ -51,4 +53,4 @@ At the top left of the workflow, there are some sky-blue fields. You need to dou
 
 <img src="https://i.imgur.com/wlpht7f.png" alt="Setting Hotkeys" width=15% height=15%>
 
-[⬆️ Go Back to Top](#Table-of-Contents)
+

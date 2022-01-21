@@ -1,4 +1,6 @@
-[⏪ Go back to the Feature Overview](../README.md#feature-overview)
+---
+nav_order: 2
+---
 
 # Alfred-based Quick Switcher
 The Alfred-based Quick Switcher is basically an enhanced version of [Obsidian's Quick Switcher Core Plugin](https://help.obsidian.md/Plugins/Quick+switcher).
@@ -115,4 +117,4 @@ Displayed alongside the other search results are all headings in your vault. Sel
 </details>
 
 
-[⬆️ Go Back to Top](#Table-of-Contents)
+

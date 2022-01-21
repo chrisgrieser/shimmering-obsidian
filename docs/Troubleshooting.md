@@ -1,4 +1,6 @@
-[⏪ Go back to the Feature Overview](../README.md#feature-overview)
+---
+nav_order: 2
+---
 
 # Troubleshooting
 
@@ -15,4 +17,4 @@
 ## Reporting Bugs
 If you did all of the above and there is still something not working, create an [issue on GitHub](https://github.com/chrisgrieser/shimmering-obsidian/issues/new?assignees=&labels=bug&template=bug_report.yml&title=%5BBug%5D%3A+). 
 
-[⬆️ Go Back to Top](#Table-of-Contents)
+

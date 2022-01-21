@@ -1,4 +1,6 @@
-[⏪ Go back to the Feature Overview](https://github.com/chrisgrieser/shimmering-obsidian/blob/main/README.md#feature-overview)
+---
+nav_order: 2
+---
 
 # Utility Features
 
@@ -45,4 +47,4 @@ end tell
 - Re-index the data for the [Documentation Search](Documentation%20Search.md).
 - Refresh the metadata used for this workflow manually or set an interval to refresh it automatically. See the section on [workflow configuration for more information](Workflow%20Configuration.md#Metadata-Extractor-Configuration)
 
-[⬆️ Go Back to Top](#Table-of-Contents)
+
