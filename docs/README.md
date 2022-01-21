@@ -1,5 +1,3 @@
 # test
 
 fs fslfjslfjsf
-
-<body>bla</body>
