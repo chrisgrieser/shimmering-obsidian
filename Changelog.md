@@ -1,3 +1,5 @@
+- 2022-01-21	release 2.18.0
+- 2022-01-21	new options for adding a prefix when appending to note, scratchpad or daily note (#30, #24)
 - 2022-01-21	release 2.17.2
 - 2022-01-21	hotfix for scratchpad (thanks 00dani)
 - 2022-01-20	release 2.17.1
