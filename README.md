@@ -8,9 +8,9 @@
 ---
 
 - [Installation](#Workflow-Installation)
-- [Configuration](documentation/Workflow%20Configuration.md)
-- [Breaking Changes](documentation/Breaking%20Changes.md) (when updating from earlier versions)
-- [Troubleshooting](documentation/Troubleshooting.md)
+- [Configuration](docs/Workflow%20Configuration.md)
+- [Breaking Changes](docs/Breaking%20Changes.md) (when updating from earlier versions)
+- [Troubleshooting](docs/Troubleshooting.md)
 - [Changelog](Changelog.md)
 - [Alfred Themes](#Alfred%20Themes)
 - [Credits & Donations](#Credits)
@@ -33,7 +33,7 @@
 - Graph Traversal via Alfred
 - Smart Search: A query like `o foobar #moc starred` displays only files named "foobar" with the tag "#moc" that are also starred.
 
-➡️ [Documentation of Quick Switcher Features](documentation/Alfred-based%20Quick%20Switcher.md)
+➡️ [Documentation of Quick Switcher Features](docs/Alfred-based%20Quick%20Switcher.md)
 
 ---
 
@@ -43,7 +43,7 @@
 - Daily Notes
 - 🆕 Quickly append to a scratchpad note
 
-➡️ [Documentation of Note-related Features](documentation/Note-related%20Features.md)
+➡️ [Documentation of Note-related Features](docs/Note-related%20Features.md)
 
 ---
 
@@ -52,7 +52,7 @@
 - 🆕 Image Screenshot
 - 🆕 Both work for screenshots taken in quick succession, e.g. during a live presentation or lecture.
 
-➡️ [Documentation of Screenshot Features](documentation/Screenshot%20Features.md)
+➡️ [Documentation of Screenshot Features](docs/Screenshot%20Features.md)
 
 ---
 
@@ -62,7 +62,7 @@
 - Update Plugins
 - Carl Auto-Responses 🐢
 
-➡️ [Documentation of all Utility Features](documentation/Utility%20Features.md)
+➡️ [Documentation of all Utility Features](docs/Utility%20Features.md)
 
 ---
 
@@ -73,7 +73,7 @@
 - Search & Create GitHub Issues
 - *No annoyed developers! When the installed version is out of date, issue creation is blocked and replaced by a shortcut to update the plugin instead.*
 
-➡️ [Documentation of the Plugin & Theme Search](documentation/Plugin%20and%20Theme%20Search.md)
+➡️ [Documentation of the Plugin & Theme Search](docs/Plugin%20and%20Theme%20Search.md)
 
 ---
 
@@ -83,7 +83,7 @@
 - Manage workspaces
 - Automatically toggle spellchecking when switching to certain workspaces
 
-➡️ [Documentation of the Workspace Switcher](documentation/Workspace%20Switcher.md)
+➡️ [Documentation of the Workspace Switcher](docs/Workspace%20Switcher.md)
 
 ---
 
@@ -93,7 +93,7 @@
 - Open Plugin Settings.
 - Open local plugin folders in `.obsidian/plugins/`
 
-➡️ [Documentation of the Settings Search](documentation/Settings%20and%20Local%20Plugin%20Search.md)
+➡️ [Documentation of the Settings Search](docs/Settings%20and%20Local%20Plugin%20Search.md)
 
 ---
 
@@ -103,7 +103,7 @@
 - Search the Forum
 - Browse Forum Categories
 
-➡️ [Documentation of the Documentation & Forum Search](documentation/Documentation%20and%20Forum%20Search.md)
+➡️ [Documentation of the Documentation & Forum Search](docs/Documentation%20and%20Forum%20Search.md)
 
 ---
 
@@ -111,7 +111,7 @@
 - Switch the Vault controlled by this Alfred workflow.
 - Open vaults in Obsidian, Finder, or the Terminal.
 
-➡️ [Documentation of the Vault Switcher](documentation/Vault%20Switcher.md)
+➡️ [Documentation of the Vault Switcher](docs/Vault%20Switcher.md)
 
 ---
 
@@ -123,7 +123,7 @@
 - Convert a font file base64-encoded CSS
 - 🆕 Convert a SVG to Data URI
 
-➡️ [Documentation of CSS-related Features](documentation/CSS-related%20Features.md)
+➡️ [Documentation of CSS-related Features](docs/CSS-related%20Features.md)
 
 ---
 
@@ -137,7 +137,7 @@
 - Add & Update Beta Plugins via [BRAT](https://github.com/TfTHacker/obsidian42-brat)
 - Quick Access to cheat sheets for Plugin Development, e.g. the Obsidian API
 
-➡️ [Documentation of Features for Developers](documentation/Features%20for%20Developers.md)
+➡️ [Documentation of Features for Developers](docs/Features%20for%20Developers.md)
 
 ---
 
@@ -146,7 +146,7 @@ _This workflow requires the [Powerpack for Alfred](https://www.alfredapp.com/pow
 1. Install the Obsidian plugins [Advanced URI](https://github.com/Vinzent03/obsidian-advanced-uri) & [Metadata Extractor](https://github.com/kometenstaub/metadata-extractor). Enable both plugins.
 2. Download the [latest release at GitHub](https://github.com/chrisgrieser/shimmering-obsidian/releases/latest). Double-click the `.alfredworkflow` file to install it.
 3. Run the Alfred Command `osetup` and select the vault you want to control with _Shimmering Obsidian_. Obsidian will then restart. (Even if you have only one vault, you need to confirm that one vault once before you can use the workflow.)
-4. _Recommended:_ After installing the workflow, you should configure the settings of this workflow to make use of most of its features. Refer to the [Workflow Configuration](documentation/Workflow%20Configuration.md) for further information.
+4. _Recommended:_ After installing the workflow, you should configure the settings of this workflow to make use of most of its features. Refer to the [Workflow Configuration](docs/Workflow%20Configuration.md) for further information.
 
 ## Alfred Themes
 I also designed some [themes for Alfred](https://github.com/chrisgrieser/alfred-themes) you can check out.
