@@ -1,2 +1,4 @@
 theme: github-pages-minimal
 title: Shimmering Obsidian
+sidebar:
+  nav: docs
