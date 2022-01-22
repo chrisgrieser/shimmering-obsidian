@@ -12479,10 +12479,8 @@ DOUBLE CLICK THIS to set hotkey.</string>
 	</dict>
 	<key>variables</key>
 	<dict>
-		<key>ObRunning</key>
-		<string>true</string>
 		<key>append_prefix</key>
-		<string>- [ ]</string>
+		<string>- </string>
 		<key>auto_update</key>
 		<string>true</string>
 		<key>backup_destination</key>
@@ -12538,7 +12536,6 @@ DOUBLE CLICK THIS to set hotkey.</string>
 		<string>use_quickadd</string>
 		<string>h_lvl_ignore</string>
 		<string>vault_name_ENC</string>
-		<string>ObRunning</string>
 		<string>append_prefix</string>
 		<string>scratchpad_note_path</string>
 		<string>vault_path</string>
