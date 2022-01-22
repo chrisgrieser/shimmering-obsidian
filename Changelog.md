@@ -1,3 +1,27 @@
+- 2022-01-22	release 2.18.1
+- 2022-01-22	further improved debugging setup
+- 2022-01-22	added more delays to ensure proper writing of metadata
+- 2022-01-22	added delays to ensure proper writing of metadata
+- 2022-01-22	Update _config.yml
+- 2022-01-21	Update _config.yml
+- 2022-01-21	Update _config.yml
+- 2022-01-21	Update _config.yml
+- 2022-01-21	Update _config.yml
+- 2022-01-21	Update _config.yml
+- 2022-01-21	try kekyll setup
+- 2022-01-21	Create Another Page.md
+- 2022-01-21	Update _config.yml
+- 2022-01-21	Update _config.yml
+- 2022-01-21	Update _config.yml
+- 2022-01-21	Update _config.yml
+- 2022-01-21	Update _config.yml
+- 2022-01-21	Update samplelist.yml
+- 2022-01-21	Set theme jekyll-theme-minimal
+- 2022-01-21	Update _config.yml
+- 2022-01-21	Update _config.yml
+- 2022-01-21	Update Index.html
+- 2022-01-21	Set theme jekyll-theme-slate
+- 2022-01-21	Create Index.md
 - 2022-01-21	release 2.18.0
 - 2022-01-21	new options for adding a prefix when appending to note, scratchpad or daily note (#30, #24)
 - 2022-01-21	release 2.17.2
