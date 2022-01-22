@@ -1,3 +1,6 @@
+- 2022-01-22	release 2.18.2
+- 2022-01-22	improve osetup workflow
+- 2022-01-22	require workflow config variables for bug report
 - 2022-01-22	release 2.18.1
 - 2022-01-22	further improved debugging setup
 - 2022-01-22	added more delays to ensure proper writing of metadata
