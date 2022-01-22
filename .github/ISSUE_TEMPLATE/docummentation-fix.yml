@@ -14,7 +14,6 @@ body:
     id: link-to-docs
     attributes:
       label: Link to the relevant section of the documentation
-      description: Steps to reproduce the problem
       placeholder: "https://github.com/chrisgrieser/shimmering-obsidian/blob/main/documentation/..."
     validations:
       required: true
