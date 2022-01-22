@@ -33,10 +33,17 @@ body:
     validations:
       required: true
   - type: textarea
+    id: workflow-configuration
+    attributes:
+      label: Workflow Configuration
+      description: "Please add a screenshot of all your [workflow environment variables](https://github.com/chrisgrieser/shimmering-obsidian/blob/main/docs/Workflow%20Configuration.md#alfred-environment-variables)."
+    validations:
+      required: true
+  - type: textarea
     id: version-info
     attributes:
-      label: Version Information
-      description: "Please run the command `overisons`; it will copy various version information into your clipboard. Paste the result here."
+      label: Version & System Information
+      description: "Please run the command `oversions` in Alfred. It will copy various version information into your clipboard. Paste the result here."
     validations:
       required: true
   - type: checkboxes
