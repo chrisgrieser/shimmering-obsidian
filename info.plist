@@ -763,6 +763,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>44832B9C-6E8E-49FB-A270-EBC4CC347812</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>0C46CBB1-C490-4F62-8CC4-F59D7B1016D6</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>44ACD8E5-CFE0-4D48-98F9-DD31AFBC7362</key>
 		<array>
 			<dict>
@@ -3401,7 +3414,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>0C46CBB1-C490-4F62-8CC4-F59D7B1016D6</string>
+				<string>44832B9C-6E8E-49FB-A270-EBC4CC347812</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -8963,13 +8976,13 @@ echo | git pull</string>
 				<key>lastpathcomponent</key>
 				<false/>
 				<key>onlyshowifquerypopulated</key>
-				<false/>
+				<true/>
 				<key>removeextension</key>
 				<false/>
 				<key>text</key>
 				<string></string>
 				<key>title</key>
-				<string>🥳 Workflow Setup complete</string>
+				<string>{query}</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.notification</string>
@@ -8990,7 +9003,7 @@ echo | git pull</string>
 				<key>text</key>
 				<string></string>
 				<key>title</key>
-				<string>⏳ Restarting Obsidian...</string>
+				<string>⏳ Restarting Obsidian &amp; Creating Metadata...</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.notification</string>
@@ -9013,6 +9026,29 @@ echo | git pull</string>
 			<string>37EC9932-F455-4BBC-BA2B-AF780E3851F3</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>scripts/osetup-4.js</string>
+				<key>type</key>
+				<integer>8</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>44832B9C-6E8E-49FB-A270-EBC4CC347812</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -9993,7 +10029,7 @@ Donate:   https://ko-fi.com/pseudometa</string>
 			<key>colorindex</key>
 			<integer>11</integer>
 			<key>xpos</key>
-			<integer>930</integer>
+			<integer>1075</integer>
 			<key>ypos</key>
 			<integer>7590</integer>
 		</dict>
@@ -10396,7 +10432,7 @@ Donate:   https://ko-fi.com/pseudometa</string>
 			<key>colorindex</key>
 			<integer>11</integer>
 			<key>xpos</key>
-			<integer>1070</integer>
+			<integer>1215</integer>
 			<key>ypos</key>
 			<integer>7590</integer>
 		</dict>
@@ -10532,6 +10568,17 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<integer>20</integer>
 			<key>ypos</key>
 			<integer>4325</integer>
+		</dict>
+		<key>44832B9C-6E8E-49FB-A270-EBC4CC347812</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>11</integer>
+			<key>note</key>
+			<string>check that all scripts are written</string>
+			<key>xpos</key>
+			<integer>930</integer>
+			<key>ypos</key>
+			<integer>7590</integer>
 		</dict>
 		<key>44ACD8E5-CFE0-4D48-98F9-DD31AFBC7362</key>
 		<dict>

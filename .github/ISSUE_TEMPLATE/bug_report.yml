@@ -30,11 +30,15 @@ body:
     attributes:
       label: Debugging Log
       description: "You can get a debugging log by opening the workflow in Alfred preferences and pressing `cmd + D`. A small window will open up which will log everything happening during the execution of the Workflow. Use the malfunctioning part of the workflow once more, copy the content of the log window, and paste it here."
+    validations:
+      required: true
   - type: textarea
     id: version-info
     attributes:
       label: Version Information
-      description: "Alfred can compile version information of your machine and of Obsidian by running `oversions`. Running the command will copy the information to your clipboard, please paste it here."
+      description: "Please run the command `overisons`; it will copy various version information into your clipboard. Paste the result here."
+    validations:
+      required: true
   - type: checkboxes
     id: checklist
     attributes:
