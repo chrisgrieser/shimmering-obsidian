@@ -767,7 +767,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>0C46CBB1-C490-4F62-8CC4-F59D7B1016D6</string>
+				<string>8C9F828A-D313-4E2E-8428-621E160D07FE</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1976,6 +1976,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>8960BAF4-D71A-4DC1-8382-E3864941AAB6</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>8C9F828A-D313-4E2E-8428-621E160D07FE</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>0C46CBB1-C490-4F62-8CC4-F59D7B1016D6</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -8976,13 +8989,13 @@ echo | git pull</string>
 				<key>lastpathcomponent</key>
 				<false/>
 				<key>onlyshowifquerypopulated</key>
-				<true/>
+				<false/>
 				<key>removeextension</key>
 				<false/>
 				<key>text</key>
-				<string></string>
+				<string>{var:split2}</string>
 				<key>title</key>
-				<string>{query}</string>
+				<string>{var:split1}</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.notification</string>
@@ -9122,6 +9135,23 @@ end tell</string>
 			<string>F0E0AB83-B5CD-4107-A551-32C6AD581502</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>delimiter</key>
+				<string>;;</string>
+				<key>trimarguments</key>
+				<true/>
+				<key>variableprefix</key>
+				<string>split</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.split</string>
+			<key>uid</key>
+			<string>8C9F828A-D313-4E2E-8428-621E160D07FE</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -10029,7 +10059,7 @@ Donate:   https://ko-fi.com/pseudometa</string>
 			<key>colorindex</key>
 			<integer>11</integer>
 			<key>xpos</key>
-			<integer>1075</integer>
+			<integer>1150</integer>
 			<key>ypos</key>
 			<integer>7590</integer>
 		</dict>
@@ -10432,7 +10462,7 @@ Donate:   https://ko-fi.com/pseudometa</string>
 			<key>colorindex</key>
 			<integer>11</integer>
 			<key>xpos</key>
-			<integer>1215</integer>
+			<integer>1290</integer>
 			<key>ypos</key>
 			<integer>7590</integer>
 		</dict>
@@ -10572,7 +10602,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 		<key>44832B9C-6E8E-49FB-A270-EBC4CC347812</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>11</integer>
+			<integer>3</integer>
 			<key>note</key>
 			<string>check that all scripts are written</string>
 			<key>xpos</key>
@@ -11488,6 +11518,15 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<integer>20</integer>
 			<key>ypos</key>
 			<integer>8945</integer>
+		</dict>
+		<key>8C9F828A-D313-4E2E-8428-621E160D07FE</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>xpos</key>
+			<integer>1085</integer>
+			<key>ypos</key>
+			<integer>7620</integer>
 		</dict>
 		<key>8CA441F0-9476-4FEF-8DC9-E8D8C19EC431</key>
 		<dict>
