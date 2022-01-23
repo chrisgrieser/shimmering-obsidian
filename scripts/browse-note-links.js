@@ -55,11 +55,12 @@ function run () {
 
 	// get starred and recent files
 	let starredFiles = [];
-	if (readFile(starredJSON) !== "")
-	{starredFiles = JSON.parse(readFile(starredJSON))
-		.items
-		.filter (item => item.type === "file")
-		.map (item => item.path);}
+	if (readFile(starredJSON) !== "") {
+		starredFiles = JSON.parse(readFile(starredJSON))
+			.items
+			.filter (item => item.type === "file")
+			.map (item => item.path);
+	}
 
 	const recentFiles = JSON.parse(readFile(recentJSON)).lastOpenFiles;
 
@@ -72,12 +73,12 @@ function run () {
 			mdlink.split("](")[1].slice(0, -1)
 		]);
 	}
-	else	externalLinkList = [];
+	else externalLinkList = [];
 
 
 	// guard clause if no links of any sort (should only occur with "ol" command though)
 	// -----------------------------------------------------
-	if (!bothLinksList && !externalLinkList) {
+	if (!bothLinksList.length && !externalLinkList.length) {
 		jsonArray.push({
 			"title": "No links recognized in the file.",
 			"subtitle": "Press [Esc] to abort."
