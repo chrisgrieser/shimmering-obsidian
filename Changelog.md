@@ -1,3 +1,5 @@
+- 2022-01-23	release 2.18.4
+- 2022-01-23	improved link existence check, possibly solving #49
 - 2022-01-23	release 2.18.3
 - 2022-01-23	type '!oversion' in any text field to get Obsidian verison info
 - 2022-01-22	release 2.18.2
