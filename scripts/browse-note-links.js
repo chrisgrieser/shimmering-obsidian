@@ -30,6 +30,7 @@ function run () {
 
 	// create input note JSON
 	const inputPath = readFile($.getenv("alfred_workflow_data") + "/buffer_inputPath");
+	console.log(inputPath);
 
 	const metaJSON = JSON.parse(readFile(metadataJSON));
 	const inputNoteJSON = metaJSON.filter(n => n.relativePath.includes(inputPath))[0];
