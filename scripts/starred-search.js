@@ -47,9 +47,9 @@ const starredSearches = JSON.parse(readFile(starredJSON))
 
 
 fileArray.forEach(file => {
-
 	const filename = file.fileName;
 	const relativePath = file.relativePath;
+	const absolutePath = vaultPath + "/" + relativePath;
 
 	// icon & type dependent actions
 	let iconpath = "icons/note.png";
@@ -66,13 +66,8 @@ fileArray.forEach(file => {
 	if (filename.toLowerCase().includes("moc")) emoji += "🗺 ";
 
 	// check link existence of file
-	let hasLinks = false;
-	if (file.links) hasLinks = (file.links.some(l => l.relativePath)); // no relativePath = unresolved link
-	else if (file.backlinks) hasLinks = true;
-	else {
-		const noteContent = readFile(vaultPath + "/" + relativePath);
-		hasLinks = /\[.*?\]\(.+?\)/.test(noteContent);
-	}
+	let hasLinks = Boolean (file.links?.some(l => l.relativePath) || file.backlinks ); // no relativePath => unresolved link
+	if (!hasLinks) hasLinks = /\[.*?\]\(.+?\)/.test(readFile(absolutePath)); // readFile only executed when no other links found for performance
 	let linksSubtitle = "⛔️ Note without Outgoing Links or Backlinks";
 	if (hasLinks) linksSubtitle = "⇧: Browse Links in Note";
 

@@ -33,7 +33,6 @@ if (readFile(starredJSON) !== "") { starredFiles = JSON.parse(readFile(starredJS
 	.map (s => s.path);
 }
 
-
 const recentFiles = JSON.parse(readFile(recentJSON)).lastOpenFiles;
 
 // filter the metadataJSON for the items w/ relativePaths of tagged files
@@ -56,8 +55,9 @@ else fileArray = fileArray.filter(j => j.tags.includes(selectedTag));
 fileArray.forEach(file => {
 	const filename = file.fileName;
 	const relativePath = file.relativePath;
+	const absolutePath = vaultPath + "/" + relativePath;
 
-	// >> icon & emojis
+	// icon & emojis
 	let iconpath = "icons/note.png";
 	let emoji = "";
 	let additionalMatcher = "";
@@ -77,13 +77,8 @@ fileArray.forEach(file => {
 	if (filename.includes("MoC")) emoji += "🗺 ";
 
 	// check link existence of file
-	let hasLinks = false;
-	if (file.links) hasLinks = (file.links.some(l => l.relativePath)); // no relativePath = unresolved link
-	else if (file.backlinks) hasLinks = true;
-	else {
-		const noteContent = readFile(vaultPath + "/" + relativePath);
-		hasLinks = /\[.*?\]\(.+?\)/.test(noteContent);
-	}
+	let hasLinks = Boolean (file.links?.some(l => l.relativePath) || file.backlinks ); // no relativePath => unresolved link
+	if (!hasLinks) hasLinks = /\[.*?\]\(.+?\)/.test(readFile(absolutePath)); // readFile only executed when no other links found for performance
 	let linksSubtitle = "⛔️ Note without Outgoing Links or Backlinks";
 	if (hasLinks) linksSubtitle = "⇧: Browse Links in Note";
 
