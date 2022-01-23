@@ -906,19 +906,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>4B513ADE-CD1D-43BE-A8A3-30B7B5B51FC4</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>788AC8B6-7511-4FF8-A6E5-FD2FDF9C1448</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>4C840008-B2DF-415E-9109-A7D1F6470E0B</key>
 		<array>
 			<dict>
@@ -1191,7 +1178,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>4B513ADE-CD1D-43BE-A8A3-30B7B5B51FC4</string>
+				<string>7B78C507-3B21-4885-AE64-891BCC97B808</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1319,6 +1306,16 @@
 				<integer>262144</integer>
 				<key>modifiersubtext</key>
 				<string>⌃: Copy Markdown Link</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>4E9123ED-5489-48F1-8B38-15FC5DE9486C</string>
+				<key>modifiers</key>
+				<integer>131072</integer>
+				<key>modifiersubtext</key>
+				<string></string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -1750,19 +1747,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>788AC8B6-7511-4FF8-A6E5-FD2FDF9C1448</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>D3A85314-C314-49E8-BA70-08DD01FC2E21</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>7954C22E-D0FB-4539-87D1-D62DF328DBB2</key>
 		<array>
 			<dict>
@@ -1794,6 +1778,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>27BE592C-7FFD-4F99-8501-204EB94A4138</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>7B78C507-3B21-4885-AE64-891BCC97B808</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>D3A85314-C314-49E8-BA70-08DD01FC2E21</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -5925,6 +5922,29 @@ cat "$vault_path"/"$template_note_path"</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>echo -n "[shift + return] " &gt;&gt; "$alfred_workflow_data"/buffer_log</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>5</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>4E9123ED-5489-48F1-8B38-15FC5DE9486C</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>externaltriggerid</key>
 				<string>browser-folder-loop</string>
 				<key>passinputasargument</key>
@@ -6069,29 +6089,25 @@ cat "$vault_path"/"$template_note_path"</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>adduuid</key>
+				<key>concurrently</key>
 				<false/>
-				<key>allowemptyfiles</key>
-				<true/>
-				<key>createintermediatefolders</key>
-				<true/>
-				<key>filename</key>
-				<string>buffer_selectedTag</string>
-				<key>filetext</key>
-				<string>{query}</string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>relativepathmode</key>
+				<key>escaping</key>
 				<integer>0</integer>
-				<key>type</key>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
 				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>scripts/ot-helper.sh</string>
+				<key>type</key>
+				<integer>8</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.output.writefile</string>
+			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
 			<string>EAD7CCC4-5ACE-4068-829A-EB0C62FCA3ED</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -6326,46 +6342,25 @@ cat "$vault_path"/"$template_note_path"</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>adduuid</key>
+				<key>concurrently</key>
 				<false/>
-				<key>allowemptyfiles</key>
-				<true/>
-				<key>createintermediatefolders</key>
-				<true/>
-				<key>filename</key>
-				<string>buffer_inputPath</string>
-				<key>filetext</key>
-				<string>{query}</string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>relativepathmode</key>
+				<key>escaping</key>
 				<integer>0</integer>
-				<key>type</key>
-				<integer>1</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.writefile</string>
-			<key>uid</key>
-			<string>4B513ADE-CD1D-43BE-A8A3-30B7B5B51FC4</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
+				<key>script</key>
 				<string></string>
-				<key>passthroughargument</key>
-				<false/>
-				<key>variables</key>
-				<dict/>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>scripts/ol-helper.sh</string>
+				<key>type</key>
+				<integer>8</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
+			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>788AC8B6-7511-4FF8-A6E5-FD2FDF9C1448</string>
+			<string>7B78C507-3B21-4885-AE64-891BCC97B808</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -10792,17 +10787,6 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>ypos</key>
 			<integer>1890</integer>
 		</dict>
-		<key>4B513ADE-CD1D-43BE-A8A3-30B7B5B51FC4</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>3</integer>
-			<key>note</key>
-			<string>write input_path to buffer</string>
-			<key>xpos</key>
-			<integer>1335</integer>
-			<key>ypos</key>
-			<integer>3105</integer>
-		</dict>
 		<key>4C840008-B2DF-415E-9109-A7D1F6470E0B</key>
 		<dict>
 			<key>colorindex</key>
@@ -10860,6 +10844,17 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<integer>715</integer>
 			<key>ypos</key>
 			<integer>1145</integer>
+		</dict>
+		<key>4E9123ED-5489-48F1-8B38-15FC5DE9486C</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>11</integer>
+			<key>note</key>
+			<string>bufferlog</string>
+			<key>xpos</key>
+			<integer>265</integer>
+			<key>ypos</key>
+			<integer>2600</integer>
 		</dict>
 		<key>4EA9A40E-C1AF-4EB5-B118-A36B1F0CE6F7</key>
 		<dict>
@@ -10998,7 +10993,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>colorindex</key>
 			<integer>6</integer>
 			<key>xpos</key>
-			<integer>1140</integer>
+			<integer>1205</integer>
 			<key>ypos</key>
 			<integer>3105</integer>
 		</dict>
@@ -11352,15 +11347,6 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>ypos</key>
 			<integer>1295</integer>
 		</dict>
-		<key>788AC8B6-7511-4FF8-A6E5-FD2FDF9C1448</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>3</integer>
-			<key>xpos</key>
-			<integer>1495</integer>
-			<key>ypos</key>
-			<integer>3135</integer>
-		</dict>
 		<key>790294D7-A772-49AD-A601-1049B4C5DF31</key>
 		<dict>
 			<key>colorindex</key>
@@ -11402,6 +11388,15 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<integer>20</integer>
 			<key>ypos</key>
 			<integer>440</integer>
+		</dict>
+		<key>7B78C507-3B21-4885-AE64-891BCC97B808</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>9</integer>
+			<key>xpos</key>
+			<integer>1385</integer>
+			<key>ypos</key>
+			<integer>3105</integer>
 		</dict>
 		<key>7BA55F56-BE3A-483A-9CA6-CEE173CF2357</key>
 		<dict>
