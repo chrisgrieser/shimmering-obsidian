@@ -1,3 +1,6 @@
+- 2022-01-23	release 2.18.6
+- 2022-01-23	added buffer logging capabilities
+- 2022-01-23	added debugging capability
 - 2022-01-23	release 2.18.5
 - 2022-01-23	fix 'ol' for empty documents
 - 2022-01-23	release 2.18.4
