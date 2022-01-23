@@ -29,7 +29,7 @@ body:
     id: debugging-log
     attributes:
       label: Debugging Log
-      description: "You can get a debugging log by opening the workflow in Alfred preferences and pressing `cmd + D`. A small window will open up which will log everything happening during the execution of the Workflow. Use the malfunctioning part of the workflow once more, copy the content of the log window, and paste it here."
+      description: "You can get a debugging log by opening the workflow in Alfred preferences and pressing `cmd + D`. A small window will open up which will log everything happening during the execution of the Workflow. Use the malfunctioning part of the workflow once more, copy the content of the log window, and paste it here. If the debugging log is long, please attach it as file instead of pasting everything in here."
     validations:
       required: true
   - type: textarea
@@ -44,6 +44,7 @@ body:
     attributes:
       label: Version & System Information
       description: "Please run the command `oversions` in Alfred. It will copy various version information into your clipboard. Paste the result here."
+      render: text
     validations:
       required: true
   - type: checkboxes
