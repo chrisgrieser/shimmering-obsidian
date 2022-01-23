@@ -672,11 +672,37 @@
 				<false/>
 			</dict>
 		</array>
+		<key>3FCAE1DB-7425-474D-85A3-82E7DCFE3EE9</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>3FF6F6D0-DD1B-489E-A7BC-FDC84334800C</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>3FDC367F-3E6F-4DAD-B146-E80044D686E8</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>EFED0DE3-D836-408A-A4AE-2E363E5A7F38</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>3FF6F6D0-DD1B-489E-A7BC-FDC84334800C</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>8A37AB81-98FD-433D-B6E0-380D7463F0FA</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -9897,7 +9923,7 @@ echo | git pull</string>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>keyword</key>
-				<string>oversions</string>
+				<string>oinfo</string>
 				<key>subtext</key>
 				<string>Used for debugging 🪲</string>
 				<key>text</key>
@@ -9937,6 +9963,66 @@ Application('com.runningwithcrayons.Alfred').removeConfiguration('ObRunning', {
 			<string>7EBAA02C-F8A5-48BB-97DA-28E128D766A3</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>echo "macOS "`sw_vers -productVersion`
+echo -n "Obsidian ""$(ls ~"/Library/Application Support/obsidian/"*".asar" | egrep -o "\d+\.\d+\.\d+\.asar" | sed "s/\.asar//")"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>scripts/oversion.sh</string>
+				<key>type</key>
+				<integer>8</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>3FF6F6D0-DD1B-489E-A7BC-FDC84334800C</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>keyword</key>
+				<string>!oversion</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.snippet</string>
+			<key>uid</key>
+			<string>3FCAE1DB-7425-474D-85A3-82E7DCFE3EE9</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>8A37AB81-98FD-433D-B6E0-380D7463F0FA</string>
+			<key>version</key>
+			<integer>3</integer>
 		</dict>
 	</array>
 	<key>readme</key>
@@ -10526,6 +10612,15 @@ Donate:   https://ko-fi.com/pseudometa</string>
 			<key>ypos</key>
 			<integer>4460</integer>
 		</dict>
+		<key>3FCAE1DB-7425-474D-85A3-82E7DCFE3EE9</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>11</integer>
+			<key>xpos</key>
+			<integer>20</integer>
+			<key>ypos</key>
+			<integer>9440</integer>
+		</dict>
 		<key>3FDC367F-3E6F-4DAD-B146-E80044D686E8</key>
 		<dict>
 			<key>colorindex</key>
@@ -10538,6 +10633,17 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<integer>20</integer>
 			<key>ypos</key>
 			<integer>210</integer>
+		</dict>
+		<key>3FF6F6D0-DD1B-489E-A7BC-FDC84334800C</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>11</integer>
+			<key>note</key>
+			<string>copy version info</string>
+			<key>xpos</key>
+			<integer>180</integer>
+			<key>ypos</key>
+			<integer>9440</integer>
 		</dict>
 		<key>40158B5B-4DBC-4FD4-AC40-4976E27C3792</key>
 		<dict>
@@ -11491,6 +11597,15 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<integer>25</integer>
 			<key>ypos</key>
 			<integer>5720</integer>
+		</dict>
+		<key>8A37AB81-98FD-433D-B6E0-380D7463F0FA</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>11</integer>
+			<key>xpos</key>
+			<integer>335</integer>
+			<key>ypos</key>
+			<integer>9440</integer>
 		</dict>
 		<key>8BC09525-BB68-46E3-A7E2-C0E5C489FF60</key>
 		<dict>
@@ -12565,6 +12680,8 @@ DOUBLE CLICK THIS to set hotkey.</string>
 	</dict>
 	<key>variables</key>
 	<dict>
+		<key>ObRunning</key>
+		<string>true</string>
 		<key>append_prefix</key>
 		<string>- </string>
 		<key>auto_update</key>
@@ -12623,9 +12740,10 @@ DOUBLE CLICK THIS to set hotkey.</string>
 		<string>h_lvl_ignore</string>
 		<string>vault_name_ENC</string>
 		<string>append_prefix</string>
-		<string>scratchpad_note_path</string>
 		<string>vault_path</string>
+		<string>scratchpad_note_path</string>
 		<string>daily_note_append_prefix</string>
+		<string>ObRunning</string>
 		<string>new_note_location</string>
 		<string>search_ignore_folder</string>
 		<string>backup_destination</string>

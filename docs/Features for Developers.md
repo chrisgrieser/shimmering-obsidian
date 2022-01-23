@@ -12,6 +12,7 @@ nav_order: 2
 - [Local plugins](#local-plugins)
 - [Vault-related features](#vault-related-features)
 - [Beta Plugins](#beta-plugins)
+- [Obsidian Version Information](#obsidian-version-information)
 
 <!-- /MarkdownTOC -->
 
@@ -50,4 +51,5 @@ Refer to the section on [Settings & Local Plugin Search](Settings%20and%20Local%
 - All commands require the [BRAT Plugin](https://github.com/TfTHacker/obsidian42-brat).
 - Install a new theme.
 
-
+## Obsidian Version Information
+Type `!oversion` in any text field, and Alfred will output your current Mac and Obsidian version. Useful for people frequently creating bug reports.

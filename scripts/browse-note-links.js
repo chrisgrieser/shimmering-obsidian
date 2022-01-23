@@ -1,6 +1,6 @@
 #!/usr/bin/env osascript -l JavaScript
 
-function run () { /* exported run */
+function run () {
 	ObjC.import("stdlib");
 	ObjC.import("Foundation");
 	const app = Application.currentApplication();
