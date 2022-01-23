@@ -1,3 +1,5 @@
+- 2022-01-23	release 2.18.3
+- 2022-01-23	type '!oversion' in any text field to get Obsidian verison info
 - 2022-01-22	release 2.18.2
 - 2022-01-22	improve osetup workflow
 - 2022-01-22	require workflow config variables for bug report
