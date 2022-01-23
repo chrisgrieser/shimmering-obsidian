@@ -1,3 +1,5 @@
+- 2022-01-23	release 2.18.5
+- 2022-01-23	fix 'ol' for empty documents
 - 2022-01-23	release 2.18.4
 - 2022-01-23	improved link existence check, possibly solving #49
 - 2022-01-23	release 2.18.3
