@@ -1,6 +1,9 @@
+- 2022-01-24	release 2.19.1
+- 2022-01-24	Merge pull request #51 from MartijnDB/wrong-url-daily-note
 - 2022-01-24	release 2.19.0
 - 2022-01-24	update docs
 - 2022-01-24	ocr refactored + implemented #50
+- 2022-01-24	Fixed wrong links (obsidian:///) for daily notes
 - 2022-01-23	release 2.18.6
 - 2022-01-23	added buffer logging capabilities
 - 2022-01-23	added debugging capability
