@@ -47,8 +47,11 @@ You access the main workflow configuration by clicking the *`[x]`* at the top ri
 ### Screenshots Features
 - `ocr_languages`: set language codes of Tesseract, e.g., `eng+deu` for English and German. You can find out the code for your language(s) in [this list](https://tesseract-ocr.github.io/tessdoc/Data-Files-in-different-versions.html).
 - `ocr_prefix`: Set the prefix for OCR Screenshots. Does accept dynamic content like the current date or time when you use [Alfred's Placeholder Syntax](https://www.alfredapp.com/help/workflows/advanced/placeholders/#date-time). Note that while not easy to see, `ocr_prefix` can have multi-line values.
-- `open_after_screenshot`: When doing an OCR screenshot or an image screenshot, will open the note afterwards. Accepts `true` or `false`.
-- `screenshot_path`: *Absolute* path to the folder where the screenshots should be saved to. Must be a folder in your vault to be embedded correctly. When empty, will save them the images to `{vault-path}/screenshots/`.
+- `open_after_screenshot`: When doing an OCR screenshot or an image screenshot, will open the note afterwards. Accepts `true` or `false`. 
+- `ocr_screenshot_file`: *Absolute* path to the *file* where the text resulting from the OCR should be saved to. When empty, will save/append the text to the file `{vault-path}/OCR-Screenshots.md`. 
+- `screenshot_path`: *Absolute* path to the *folder* where the image screenshots should be saved to. When empty, will save them the images to `{vault-path}/screenshots/`. 
+
+💡 "Absolute path" means you can also store it outside the vault when also turning off `open_after_screenshot`. (Images won't be embedded (`![[]]`) correctly then, though.)
 
 ### Plugin & Theme Search
 - `thousand_seperator`: The thousand separator to use when download numbers are displayed, e.g., `.` or `,`.
