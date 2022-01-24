@@ -21,19 +21,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>0275E14E-066A-4CB2-A470-AEF211E56318</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>B5F538F8-D47B-47E8-A7C8-5C9C149A58CC</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>02AB8A09-81D7-4103-A3B5-CF9EDD2C06A7</key>
 		<array>
 			<dict>
@@ -280,6 +267,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>23310407-0757-4547-AC30-83A9AF365D9D</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>B5F538F8-D47B-47E8-A7C8-5C9C149A58CC</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>24262C18-419C-4D91-8673-4C0BB27F31DA</key>
 		<array>
 			<dict>
@@ -297,7 +297,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>0275E14E-066A-4CB2-A470-AEF211E56318</string>
+				<string>23310407-0757-4547-AC30-83A9AF365D9D</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1268,7 +1268,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>E15968CE-239E-4B7B-9208-C1C2C1D2679D</string>
+				<string>260919C7-A9E6-4442-AEF6-E62D271910BF</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1445,6 +1445,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>AC3931E7-5D73-42C4-8975-1E4B4DB66B69</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>661004F2-B1DF-4A0B-860D-62B0756649E4</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>5F6CE94A-26BF-4826-8A67-2E02353646DB</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -2502,7 +2515,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>5F6CE94A-26BF-4826-8A67-2E02353646DB</string>
+				<string>661004F2-B1DF-4A0B-860D-62B0756649E4</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -3006,19 +3019,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>E15968CE-239E-4B7B-9208-C1C2C1D2679D</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>E5AF1834-8BDC-4E07-9F39-F8CE62A851B9</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>E1CCF08A-004B-47A3-93AA-151CF2EB7236</key>
 		<array>
 			<dict>
@@ -3166,19 +3166,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>5B0C16ED-7757-4376-AB67-2B080E4AAC86</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>E5AF1834-8BDC-4E07-9F39-F8CE62A851B9</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>F6614DF6-BDC8-4C8D-93E7-855B687D5220</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -3459,19 +3446,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>F6614DF6-BDC8-4C8D-93E7-855B687D5220</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>260919C7-A9E6-4442-AEF6-E62D271910BF</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>F8A28B5B-0774-406B-BD27-E4F0C69FD6A2</key>
 		<array>
 			<dict>
@@ -3585,6 +3559,29 @@ tesseract "$temp_image" stdout -l $ocr_languages 2&gt;&amp;1</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>scripts/absolute-to-relative-path.js</string>
+				<key>type</key>
+				<integer>8</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>23310407-0757-4547-AC30-83A9AF365D9D</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>lastpathcomponent</key>
 				<false/>
 				<key>onlyshowifquerypopulated</key>
@@ -3606,39 +3603,8 @@ tesseract "$temp_image" stdout -l $ocr_languages 2&gt;&amp;1</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>adduuid</key>
-				<false/>
-				<key>allowemptyfiles</key>
-				<false/>
-				<key>createintermediatefolders</key>
-				<true/>
-				<key>filename</key>
-				<string>{var:vault_path}/OCR-Screenshot.md</string>
-				<key>filetext</key>
-				<string>{var:ocr_prefix}
-
----
-{query}
-</string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>relativepathmode</key>
-				<integer>0</integer>
-				<key>type</key>
-				<integer>2</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.writefile</string>
-			<key>uid</key>
-			<string>F6614DF6-BDC8-4C8D-93E7-855B687D5220</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argument</key>
-				<string>OCR-Screenshot.md</string>
+				<string>{var:ocr_prefix}</string>
 				<key>passthroughargument</key>
 				<false/>
 				<key>variables</key>
@@ -3647,51 +3613,9 @@ tesseract "$temp_image" stdout -l $ocr_languages 2&gt;&amp;1</string>
 			<key>type</key>
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
-			<string>0275E14E-066A-4CB2-A470-AEF211E56318</string>
+			<string>661004F2-B1DF-4A0B-860D-62B0756649E4</string>
 			<key>version</key>
 			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>matchmode</key>
-				<integer>1</integer>
-				<key>matchstring</key>
-				<string>Warning: Invalid resolution 0 dpi. Using 70 instead.</string>
-				<key>regexcaseinsensitive</key>
-				<false/>
-				<key>regexmultiline</key>
-				<false/>
-				<key>replacestring</key>
-				<string> </string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.replace</string>
-			<key>uid</key>
-			<string>E15968CE-239E-4B7B-9208-C1C2C1D2679D</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>matchmode</key>
-				<integer>1</integer>
-				<key>matchstring</key>
-				<string>Estimating resolution as .*</string>
-				<key>regexcaseinsensitive</key>
-				<false/>
-				<key>regexmultiline</key>
-				<false/>
-				<key>replacestring</key>
-				<string> </string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.replace</string>
-			<key>uid</key>
-			<string>E5AF1834-8BDC-4E07-9F39-F8CE62A851B9</string>
-			<key>version</key>
-			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -10054,15 +9978,6 @@ Donate:   https://ko-fi.com/pseudometa</string>
 			<key>ypos</key>
 			<integer>3175</integer>
 		</dict>
-		<key>0275E14E-066A-4CB2-A470-AEF211E56318</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>xpos</key>
-			<integer>890</integer>
-			<key>ypos</key>
-			<integer>55</integer>
-		</dict>
 		<key>02AB8A09-81D7-4103-A3B5-CF9EDD2C06A7</key>
 		<dict>
 			<key>colorindex</key>
@@ -10214,7 +10129,7 @@ Donate:   https://ko-fi.com/pseudometa</string>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<integer>280</integer>
+			<integer>350</integer>
 			<key>ypos</key>
 			<integer>400</integer>
 		</dict>
@@ -10303,6 +10218,17 @@ Donate:   https://ko-fi.com/pseudometa</string>
 			<key>ypos</key>
 			<integer>5095</integer>
 		</dict>
+		<key>23310407-0757-4547-AC30-83A9AF365D9D</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>note</key>
+			<string>absolute to relative path</string>
+			<key>xpos</key>
+			<integer>585</integer>
+			<key>ypos</key>
+			<integer>25</integer>
+		</dict>
 		<key>24262C18-419C-4D91-8673-4C0BB27F31DA</key>
 		<dict>
 			<key>colorindex</key>
@@ -10326,7 +10252,7 @@ Donate:   https://ko-fi.com/pseudometa</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>750</integer>
+			<integer>420</integer>
 			<key>ypos</key>
 			<integer>25</integer>
 		</dict>
@@ -11085,11 +11011,11 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 		<key>5F6CE94A-26BF-4826-8A67-2E02353646DB</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>9</integer>
+			<integer>3</integer>
 			<key>note</key>
 			<string>screenshot + OCR</string>
 			<key>xpos</key>
-			<integer>225</integer>
+			<integer>270</integer>
 			<key>ypos</key>
 			<integer>25</integer>
 		</dict>
@@ -11190,6 +11116,18 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<integer>1900</integer>
 			<key>ypos</key>
 			<integer>3165</integer>
+		</dict>
+		<key>661004F2-B1DF-4A0B-860D-62B0756649E4</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>note</key>
+			<string>ocr_prefix
+(for date resolution)</string>
+			<key>xpos</key>
+			<integer>185</integer>
+			<key>ypos</key>
+			<integer>55</integer>
 		</dict>
 		<key>6636C45E-04AC-482C-AC17-1F837BA5E9F8</key>
 		<dict>
@@ -11421,7 +11359,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<integer>750</integer>
+			<integer>435</integer>
 			<key>ypos</key>
 			<integer>210</integer>
 		</dict>
@@ -11920,7 +11858,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<integer>890</integer>
+			<integer>575</integer>
 			<key>ypos</key>
 			<integer>240</integer>
 		</dict>
@@ -11961,10 +11899,12 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 		<dict>
 			<key>colorindex</key>
 			<integer>3</integer>
+			<key>note</key>
+			<string>open after</string>
 			<key>xpos</key>
-			<integer>980</integer>
+			<integer>785</integer>
 			<key>ypos</key>
-			<integer>130</integer>
+			<integer>125</integer>
 		</dict>
 		<key>B61CBDAF-02B6-4FC2-B752-103E23E72E56</key>
 		<dict>
@@ -12312,9 +12252,9 @@ DOUBLE CLICK THIS to set hotkey.</string>
 			<key>colorindex</key>
 			<integer>6</integer>
 			<key>xpos</key>
-			<integer>1095</integer>
+			<integer>810</integer>
 			<key>ypos</key>
-			<integer>330</integer>
+			<integer>340</integer>
 		</dict>
 		<key>DF5B66BD-78AD-45F3-B6B5-8E81957741FC</key>
 		<dict>
@@ -12346,17 +12286,6 @@ DOUBLE CLICK THIS to set hotkey.</string>
 			<integer>245</integer>
 			<key>ypos</key>
 			<integer>1305</integer>
-		</dict>
-		<key>E15968CE-239E-4B7B-9208-C1C2C1D2679D</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>note</key>
-			<string>If you are using an external monitor</string>
-			<key>xpos</key>
-			<integer>400</integer>
-			<key>ypos</key>
-			<integer>55</integer>
 		</dict>
 		<key>E1CCF08A-004B-47A3-93AA-151CF2EB7236</key>
 		<dict>
@@ -12424,17 +12353,6 @@ DOUBLE CLICK THIS to set hotkey.</string>
 			<integer>20</integer>
 			<key>ypos</key>
 			<integer>1470</integer>
-		</dict>
-		<key>E5AF1834-8BDC-4E07-9F39-F8CE62A851B9</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>note</key>
-			<string>If you are using an external monitor</string>
-			<key>xpos</key>
-			<integer>495</integer>
-			<key>ypos</key>
-			<integer>55</integer>
 		</dict>
 		<key>E5C2C637-CB7C-4C29-8829-6DD7F2901728</key>
 		<dict>
@@ -12610,7 +12528,7 @@ DOUBLE CLICK THIS to set hotkey.</string>
 			<key>note</key>
 			<string>screenshot</string>
 			<key>xpos</key>
-			<integer>225</integer>
+			<integer>270</integer>
 			<key>ypos</key>
 			<integer>210</integer>
 		</dict>
@@ -12633,15 +12551,6 @@ DOUBLE CLICK THIS to set hotkey.</string>
 			<integer>765</integer>
 			<key>ypos</key>
 			<integer>2730</integer>
-		</dict>
-		<key>F6614DF6-BDC8-4C8D-93E7-855B687D5220</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>xpos</key>
-			<integer>610</integer>
-			<key>ypos</key>
-			<integer>25</integer>
 		</dict>
 		<key>F8A28B5B-0774-406B-BD27-E4F0C69FD6A2</key>
 		<dict>
@@ -12703,6 +12612,8 @@ DOUBLE CLICK THIS to set hotkey.</string>
 		<string>eng</string>
 		<key>ocr_prefix</key>
 		<string>{date:yyyy-MM-dd}, {time:HH:mm}</string>
+		<key>ocr_screenshot_file</key>
+		<string></string>
 		<key>open_after_appending</key>
 		<string>false</string>
 		<key>open_after_screenshot</key>
@@ -12734,11 +12645,11 @@ DOUBLE CLICK THIS to set hotkey.</string>
 		<string>use_quickadd</string>
 		<string>h_lvl_ignore</string>
 		<string>vault_name_ENC</string>
-		<string>append_prefix</string>
-		<string>vault_path</string>
-		<string>scratchpad_note_path</string>
-		<string>daily_note_append_prefix</string>
 		<string>ObRunning</string>
+		<string>append_prefix</string>
+		<string>scratchpad_note_path</string>
+		<string>vault_path</string>
+		<string>daily_note_append_prefix</string>
 		<string>new_note_location</string>
 		<string>search_ignore_folder</string>
 		<string>backup_destination</string>

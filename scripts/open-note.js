@@ -4,8 +4,9 @@ function run (argv) {
 	ObjC.import("stdlib");
 
 	// import variables
-	const relativePath = argv.join("").split("#")[0];
-	const heading = argv.join("").split("#")[1];
+	const input = argv.join("").trim();
+	const relativePath = input.split("#")[0];
+	const heading = input.split("#")[1];
 	const vaultNameENC = $.getenv("vault_name_ENC");
 
 	let urlScheme = "obsidian://";
