@@ -4969,7 +4969,7 @@ set parameter to do shell script "echo " &amp; quoted form of (system attribute 
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
-				<string>obsidian:///{var:daily_note_path}/{query}.md</string>
+				<string>obsidian://{var:daily_note_path}/{query}.md</string>
 				<key>utf8</key>
 				<true/>
 			</dict>
@@ -5177,7 +5177,7 @@ return hook;
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
-				<string>obsidian:///{query}</string>
+				<string>obsidian://{query}</string>
 				<key>utf8</key>
 				<true/>
 			</dict>
