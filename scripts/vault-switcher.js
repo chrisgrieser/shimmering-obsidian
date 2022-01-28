@@ -2,7 +2,7 @@
 
 ObjC.import("stdlib");
 ObjC.import("Foundation");
-app = Application.currentApplication();
+const app = Application.currentApplication();
 app.includeStandardAdditions = true;
 
 function readFile (path, encoding) {
@@ -13,9 +13,8 @@ function readFile (path, encoding) {
 	return ObjC.unwrap(str);
 }
 
-const homepath = app.pathTo("home folder");
-const currentVault = $.getenv("vault_path").replace(/^~/, homepath);
-const vaultListJson = homepath + "/Library/Application Support/obsidian/obsidian.json";
+const currentVault = $.getenv("vault_path").replace(/^~/, app.pathTo("home folder"));
+const vaultListJson = app.pathTo("home folder") + "/Library/Application Support/obsidian/obsidian.json";
 
 // get vault paths
 const vaultList = JSON.parse(readFile(vaultListJson)).vaults;
@@ -30,6 +29,8 @@ vaultArray.forEach(vaultPath => {
 	// visual: icons & shorter path
 	let currentIcon = "";
 	if (currentVault === vaultPath) currentIcon = "✅ ";
+	if (vaultName.toLowerCase().includes("development")) currentIcon = "⚙️ ";
+	if (vaultName === "Obsidian Help") currentIcon = "🆘 ";
 	const shortPath = vaultPath.replace (/\/Users\/[^/]*/, "~");
 
 	jsonArray.push({
