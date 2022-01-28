@@ -1,3 +1,6 @@
+- 2022-01-28	release 2.19.2
+- 2022-01-28	fix #55 (thx @00dani)
+- 2022-01-28	improved recognition of current file
 - 2022-01-24	release 2.19.1
 - 2022-01-24	Merge pull request #51 from MartijnDB/wrong-url-daily-note
 - 2022-01-24	release 2.19.0
