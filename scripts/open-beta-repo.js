@@ -13,10 +13,18 @@ function readFile (path, encoding) {
 	return ObjC.unwrap(str);
 }
 
+function SafeApplication(appId) {
+	try {
+		return Application(appId);
+	} catch (e) {
+		return null;
+	}
+}
+const discordReadyLinks = ["Discord", "Discord PTB", "Discord Canary"]
+	.some(discordApp => SafeApplication(discordApp)?.frontmost());
 const alfredMatcher = (str) => str.replace (/[-()_.]/g, " ") + " " + str + " ";
 const getEnv = (path) => $.getenv(path).replace(/^~/, app.pathTo("home folder"));
 const bratDataJson = getEnv("vault_path") + "/.obsidian/plugins/obsidian42-brat/data.json";
-const discordReadyLinks = Application("Discord").frontmost();
 
 const jsonArray = [];
 const betaRepos = JSON.parse(readFile(bratDataJson)).pluginList;

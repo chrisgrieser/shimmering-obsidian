@@ -19,7 +19,16 @@ function insert1000sep (num) {
 	return numText;
 }
 
-const discordReadyLinks = Application("Discord").frontmost();
+function SafeApplication(appId) {
+	try {
+		return Application(appId);
+	} catch (e) {
+		return null;
+	}
+}
+const discordReadyLinks = ["Discord", "Discord PTB", "Discord Canary"]
+	.some(discordApp => SafeApplication(discordApp)?.frontmost());
+
 const vaultPath = $.getenv("vault_path").replace(/^~/, app.pathTo("home folder"));
 const jsonArray = [];
 

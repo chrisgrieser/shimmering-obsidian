@@ -12,9 +12,17 @@ function readFile (path, encoding) {
 	const str = $.NSString.alloc.initWithDataEncoding(data, encoding);
 	return ObjC.unwrap(str);
 }
+function SafeApplication(appId) {
+	try {
+		return Application(appId);
+	} catch (e) {
+		return null;
+	}
+}
+const discordReadyLinks = ["Discord", "Discord PTB", "Discord Canary"]
+	.some(discordApp => SafeApplication(discordApp)?.frontmost());
 const alfredMatcher = (str) => str.replace (/[-()_.]/g, " ") + " " + str + " ";
 const baseURL = "https://forum.obsidian.md/c/";
-const discordReadyLinks = Application("Discord").frontmost();
 
 const jsonArray = [];
 const forumDataJSON =

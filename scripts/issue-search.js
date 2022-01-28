@@ -16,12 +16,19 @@ function alfredMatcher (str) {
 	return " " + str.replace (/[-()_.]/g, " ") + " " + str + " ";
 }
 
+function SafeApplication(appId) {
+	try {
+		return Application(appId);
+	} catch (e) {
+		return null;
+	}
+}
+const discordReadyLinks = ["Discord", "Discord PTB", "Discord Canary"]
+	.some(discordApp => SafeApplication(discordApp)?.frontmost());
 const jsonArray = [];
+const repo = $.getenv("repo");
 
 // get plugin issues
-const repo = $.getenv("repo");
-const discordReadyLinks = Application("Discord").frontmost();
-
 const issueAPIURL =
 	"https://api.github.com/repos/" + repo
 	+ "/issues?state=all"
