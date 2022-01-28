@@ -8,19 +8,6 @@
 	<string>App-Enhance</string>
 	<key>connections</key>
 	<dict>
-		<key>01DCEAE6-93DC-452F-86C2-6694ED7CB436</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>D90C57E0-D5DB-46B0-BE60-68A3838E35FC</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>02AB8A09-81D7-4103-A3B5-CF9EDD2C06A7</key>
 		<array>
 			<dict>
@@ -637,7 +624,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>AF194963-CC28-4A3D-8EFA-616B21079843</string>
+				<string>7375AAC0-5260-4E7F-85CE-441605BCE3B5</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1311,16 +1298,6 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>4E9123ED-5489-48F1-8B38-15FC5DE9486C</string>
-				<key>modifiers</key>
-				<integer>131072</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
 				<string>52C6C47D-3998-4DF9-B9A4-04E586CC8380</string>
 				<key>modifiers</key>
 				<integer>524288</integer>
@@ -1676,6 +1653,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>92A31C69-A00D-4696-8552-B6092758941D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>7375AAC0-5260-4E7F-85CE-441605BCE3B5</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>AF194963-CC28-4A3D-8EFA-616B21079843</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -2231,6 +2221,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>25FCBA58-5263-4F11-B222-4978632AF5B9</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>A2D6E56D-5D44-4167-B710-EABF9F1FFF0A</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>D80CA78B-B320-4895-AECD-874B584EB863</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -2893,11 +2896,11 @@
 				<false/>
 			</dict>
 		</array>
-		<key>D8E684A4-8F7E-4F08-8C7A-AC3B4ACCAFD0</key>
+		<key>D80CA78B-B320-4895-AECD-874B584EB863</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>06632743-0C08-41BC-B058-146CDF2C11F8</string>
+				<string>7D288B7C-5CB7-4A0E-B99D-3A2D9186DEC5</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -2906,11 +2909,11 @@
 				<false/>
 			</dict>
 		</array>
-		<key>D90C57E0-D5DB-46B0-BE60-68A3838E35FC</key>
+		<key>D8E684A4-8F7E-4F08-8C7A-AC3B4ACCAFD0</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>7D288B7C-5CB7-4A0E-B99D-3A2D9186DEC5</string>
+				<string>06632743-0C08-41BC-B058-146CDF2C11F8</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -3450,7 +3453,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>01DCEAE6-93DC-452F-86C2-6694ED7CB436</string>
+				<string>A2D6E56D-5D44-4167-B710-EABF9F1FFF0A</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -4107,7 +4110,7 @@ tesseract "$temp_image" stdout -l $ocr_languages 2&gt;&amp;1</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string>Scripts/get-current-path.sh</string>
+				<string>scripts/get-current-path.js</string>
 				<key>type</key>
 				<integer>8</integer>
 			</dict>
@@ -4211,6 +4214,27 @@ mv "$filepath" "$target_folder"</string>
 			<string>02AB8A09-81D7-4103-A3B5-CF9EDD2C06A7</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>matchmode</key>
+				<integer>1</integer>
+				<key>matchstring</key>
+				<string>\n$</string>
+				<key>regexcaseinsensitive</key>
+				<false/>
+				<key>regexmultiline</key>
+				<false/>
+				<key>replacestring</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.replace</string>
+			<key>uid</key>
+			<string>7375AAC0-5260-4E7F-85CE-441605BCE3B5</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -5846,29 +5870,6 @@ cat "$vault_path"/"$template_note_path"</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>echo -n "[shift + return] " &gt;&gt; "$alfred_workflow_data"/buffer_log</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>5</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>4E9123ED-5489-48F1-8B38-15FC5DE9486C</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>externaltriggerid</key>
 				<string>browser-folder-loop</string>
 				<key>passinputasargument</key>
@@ -6359,6 +6360,29 @@ cat "$vault_path"/"$template_note_path"</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>scripts/get-current-path.js</string>
+				<key>type</key>
+				<integer>8</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>A2D6E56D-5D44-4167-B710-EABF9F1FFF0A</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>keyword</key>
@@ -6380,29 +6404,6 @@ cat "$vault_path"/"$template_note_path"</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>script</key>
-				<string></string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string>scripts/get-current-path.sh</string>
-				<key>type</key>
-				<integer>8</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>01DCEAE6-93DC-452F-86C2-6694ED7CB436</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>matchmode</key>
 				<integer>1</integer>
 				<key>matchstring</key>
@@ -6417,7 +6418,7 @@ cat "$vault_path"/"$template_note_path"</string>
 			<key>type</key>
 			<string>alfred.workflow.utility.replace</string>
 			<key>uid</key>
-			<string>D90C57E0-D5DB-46B0-BE60-68A3838E35FC</string>
+			<string>D80CA78B-B320-4895-AECD-874B584EB863</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -9969,21 +9970,12 @@ Twitter:  @pseudo_meta
 Donate:   https://ko-fi.com/pseudometa</string>
 	<key>uidata</key>
 	<dict>
-		<key>01DCEAE6-93DC-452F-86C2-6694ED7CB436</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>xpos</key>
-			<integer>195</integer>
-			<key>ypos</key>
-			<integer>3175</integer>
-		</dict>
 		<key>02AB8A09-81D7-4103-A3B5-CF9EDD2C06A7</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>290</integer>
+			<integer>240</integer>
 			<key>ypos</key>
 			<integer>1175</integer>
 		</dict>
@@ -10507,7 +10499,7 @@ Donate:   https://ko-fi.com/pseudometa</string>
 			<key>note</key>
 			<string>get current path</string>
 			<key>xpos</key>
-			<integer>360</integer>
+			<integer>315</integer>
 			<key>ypos</key>
 			<integer>1145</integer>
 		</dict>
@@ -10770,17 +10762,6 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<integer>715</integer>
 			<key>ypos</key>
 			<integer>1145</integer>
-		</dict>
-		<key>4E9123ED-5489-48F1-8B38-15FC5DE9486C</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>11</integer>
-			<key>note</key>
-			<string>bufferlog</string>
-			<key>xpos</key>
-			<integer>265</integer>
-			<key>ypos</key>
-			<integer>2600</integer>
 		</dict>
 		<key>4EA9A40E-C1AF-4EB5-B118-A36B1F0CE6F7</key>
 		<dict>
@@ -11238,6 +11219,15 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>ypos</key>
 			<integer>2805</integer>
 		</dict>
+		<key>7375AAC0-5260-4E7F-85CE-441605BCE3B5</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>9</integer>
+			<key>xpos</key>
+			<integer>470</integer>
+			<key>ypos</key>
+			<integer>1175</integer>
+		</dict>
 		<key>75571120-8CAD-415A-8B57-F7BDDE3A629E</key>
 		<dict>
 			<key>colorindex</key>
@@ -11331,6 +11321,8 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 		<dict>
 			<key>colorindex</key>
 			<integer>9</integer>
+			<key>note</key>
+			<string>ol helper</string>
 			<key>xpos</key>
 			<integer>1385</integer>
 			<key>ypos</key>
@@ -11737,6 +11729,17 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>ypos</key>
 			<integer>8700</integer>
 		</dict>
+		<key>A2D6E56D-5D44-4167-B710-EABF9F1FFF0A</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>9</integer>
+			<key>note</key>
+			<string>get current path</string>
+			<key>xpos</key>
+			<integer>190</integer>
+			<key>ypos</key>
+			<integer>3175</integer>
+		</dict>
 		<key>A2EE3352-E242-48DC-8C16-5B7EC51E4003</key>
 		<dict>
 			<key>colorindex</key>
@@ -11849,7 +11852,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>note</key>
 			<string>move</string>
 			<key>xpos</key>
-			<integer>515</integer>
+			<integer>540</integer>
 			<key>ypos</key>
 			<integer>1145</integer>
 		</dict>
@@ -12200,6 +12203,15 @@ DOUBLE CLICK THIS to set hotkey.</string>
 			<key>ypos</key>
 			<integer>2860</integer>
 		</dict>
+		<key>D80CA78B-B320-4895-AECD-874B584EB863</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>9</integer>
+			<key>xpos</key>
+			<integer>345</integer>
+			<key>ypos</key>
+			<integer>3205</integer>
+		</dict>
 		<key>D8E684A4-8F7E-4F08-8C7A-AC3B4ACCAFD0</key>
 		<dict>
 			<key>colorindex</key>
@@ -12208,15 +12220,6 @@ DOUBLE CLICK THIS to set hotkey.</string>
 			<integer>200</integer>
 			<key>ypos</key>
 			<integer>2045</integer>
-		</dict>
-		<key>D90C57E0-D5DB-46B0-BE60-68A3838E35FC</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>xpos</key>
-			<integer>400</integer>
-			<key>ypos</key>
-			<integer>3205</integer>
 		</dict>
 		<key>DBA6DBFB-3701-4BFC-B72C-406BF62DF384</key>
 		<dict>
@@ -12591,7 +12594,7 @@ DOUBLE CLICK THIS to set hotkey.</string>
 		<key>auto_update</key>
 		<string>true</string>
 		<key>backup_destination</key>
-		<string>~/Library/Mobile Documents/com~apple~CloudDocs/Dokumente/IT Backups/Obsidian Backups</string>
+		<string>~/Library/Mobile Documents/com~apple~CloudDocs/Dotfolder/Backups/Obsidian Backups/</string>
 		<key>daily_note_append_prefix</key>
 		<string></string>
 		<key>daily_note_path</key>
@@ -12645,11 +12648,11 @@ DOUBLE CLICK THIS to set hotkey.</string>
 		<string>use_quickadd</string>
 		<string>h_lvl_ignore</string>
 		<string>vault_name_ENC</string>
-		<string>ObRunning</string>
 		<string>append_prefix</string>
-		<string>scratchpad_note_path</string>
 		<string>vault_path</string>
+		<string>scratchpad_note_path</string>
 		<string>daily_note_append_prefix</string>
+		<string>ObRunning</string>
 		<string>new_note_location</string>
 		<string>search_ignore_folder</string>
 		<string>backup_destination</string>
