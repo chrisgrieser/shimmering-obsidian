@@ -30,6 +30,7 @@ const discordReadyLinks = ["Discord", "Discord PTB", "Discord Canary"]
 	.some(discordApp => SafeApplication(discordApp)?.frontmost());
 
 const vaultPath = $.getenv("vault_path").replace(/^~/, app.pathTo("home folder"));
+const vaultNameENC = $.getenv("vault_name_ENC").replace(/^~/, app.pathTo("home folder"));
 const jsonArray = [];
 
 const pluginJSON = onlineJSON ("https://raw.githubusercontent.com/obsidianmd/obsidian-releases/master/community-plugins.json");
@@ -39,6 +40,8 @@ const installedPlugins = app.doShellScript("ls -1 \"" + vaultPath + "\"\"/.obsid
 const installedThemes = app.doShellScript("find '" + vaultPath + "/.obsidian/themes/' -name '*.css' ");
 const currentTheme = app.doShellScript("cat \"" + vaultPath + "/.obsidian/appearance.json\" | grep \"cssTheme\" | head -n 1 | cut -d\\\" -f 4"); // eslint-disable-line no-useless-escape
 const obsiURI = "obsidian://show-plugin?id=";
+const obsiOpenURL = "obsidian://show-plugin?vault=" + vaultNameENC + "&id=";
+const themeBrowserURI = "obsidian://advanced-uri?vault=" + vaultNameENC + "&settingid=theme-browser";
 
 // add PLUGINS to the JSON
 pluginJSON.forEach(plugin => {
@@ -49,10 +52,10 @@ pluginJSON.forEach(plugin => {
 	const repo = plugin.repo;
 
 	const githubURL = "https://github.com/" + repo;
-	const pluginURI = obsiURI + id; // Obsidian version 0.13+
+	const openURI = obsiOpenURL + id;
 	let isDiscordReady, shareURL;
 	if (discordReadyLinks) {
-		shareURL = "<" + pluginURI + ">";
+		shareURL = "<" + obsiURI + id + ">";
 		isDiscordReady = " (discord ready)";
 	} else {
 		shareURL = githubURL;
@@ -78,7 +81,7 @@ pluginJSON.forEach(plugin => {
 	jsonArray.push({
 		"title": name + installedIcon,
 		"subtitle": description + " — by " + author + downloadsStr,
-		"arg": pluginURI,
+		"arg": openURI,
 		"match":	"plugin " + URImatcher + alfredMatcher (name) + alfredMatcher (author) + alfredMatcher (id) + alfredMatcher (description),
 		"mods": {
 			"cmd": { "arg": githubURL },
@@ -133,7 +136,7 @@ themeJSON.forEach(theme => {
 		"title": name + installedIcon,
 		"subtitle": modes + "  by " + author,
 		"match": "theme" + alfredMatcher(author) + alfredMatcher(name),
-		"arg": githubURL,
+		"arg": themeBrowserURI,
 		"quicklookurl": screenshotURL,
 		"icon": { "path": "icons/css.png" },
 		"mods": {
