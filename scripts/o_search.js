@@ -190,6 +190,7 @@ folderArray.forEach(absolutePath => {
 		"uid": relativePath,
 		"icon": { "path": "icons/folder.png" },
 		"mods": {
+			"alt": { "subtitle": "⌥: Open Folder in Finder" },
 			"cmd": {
 				"valid": false,
 				"subtitle": "⛔️ Cannot open folders",

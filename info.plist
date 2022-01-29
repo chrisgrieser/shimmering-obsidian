@@ -698,19 +698,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>40158B5B-4DBC-4FD4-AC40-4976E27C3792</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>75571120-8CAD-415A-8B57-F7BDDE3A629E</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>41A0A259-DF50-4204-9B32-07FEC782F6D9</key>
 		<array>
 			<dict>
@@ -1405,6 +1392,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>65A519DF-2E95-46AA-BD21-64E5ECE9759D</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>75571120-8CAD-415A-8B57-F7BDDE3A629E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>65F857FA-3AC7-4FF7-8F59-083ADF0CDADE</key>
 		<array>
 			<dict>
@@ -1806,7 +1806,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>40158B5B-4DBC-4FD4-AC40-4976E27C3792</string>
+				<string>65A519DF-2E95-46AA-BD21-64E5ECE9759D</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -5624,19 +5624,6 @@ return "{query}"</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>path</key>
-				<string>{var:vault_path}/{query}</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.revealfile</string>
-			<key>uid</key>
-			<string>40158B5B-4DBC-4FD4-AC40-4976E27C3792</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>triggerid</key>
 				<string>reveal-in-finder</string>
 			</dict>
@@ -5646,6 +5633,29 @@ return "{query}"</string>
 			<string>7BA55F56-BE3A-483A-9CA6-CEE173CF2357</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>scripts/reveal-or-open.sh</string>
+				<key>type</key>
+				<integer>8</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>65A519DF-2E95-46AA-BD21-64E5ECE9759D</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -10558,15 +10568,6 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>ypos</key>
 			<integer>9440</integer>
 		</dict>
-		<key>40158B5B-4DBC-4FD4-AC40-4976E27C3792</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>xpos</key>
-			<integer>1500</integer>
-			<key>ypos</key>
-			<integer>2390</integer>
-		</dict>
 		<key>41A0A259-DF50-4204-9B32-07FEC782F6D9</key>
 		<dict>
 			<key>colorindex</key>
@@ -11087,6 +11088,17 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>ypos</key>
 			<integer>1810</integer>
 		</dict>
+		<key>65A519DF-2E95-46AA-BD21-64E5ECE9759D</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>note</key>
+			<string>reveal file, open folder</string>
+			<key>xpos</key>
+			<integer>1505</integer>
+			<key>ypos</key>
+			<integer>2390</integer>
+		</dict>
 		<key>65F857FA-3AC7-4FF7-8F59-083ADF0CDADE</key>
 		<dict>
 			<key>colorindex</key>
@@ -11351,7 +11363,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<integer>435</integer>
+			<integer>420</integer>
 			<key>ypos</key>
 			<integer>210</integer>
 		</dict>
