@@ -19,7 +19,7 @@ nav_order: 2
 ## OCR Screenshots
 **`Triggered via Hotkey`: Take an OCR Screenshot.**
 - Similar to the default Mac Hotkey `⌘ ⇧ + 4`, you will be able to select part of your screen for a screenshot. However, instead of saving a screenshot, a new note will be created which contains the OCRed content of the selection.
-- The *absolute* path set in the [workflow configuration](Workflow%20Configuration.md#Screenshot-Features) `ocr_screenshot_file` determines where the the text resulting from the OCR  will be saved to. When empty, will save the text to the file `{vault-path}/OCR-Screenshots.md`. If the file already exists, any subsequent OCR screenshots will instead append to the note. 
+- The *absolute* path set in the [workflow configuration](Workflow%20Configuration.md#Screenshot-Features) `ocr_screenshot_file` determines where the the text resulting from the OCR  will be saved to. When empty, will save the text to the file `{vault-path}/OCR-Screenshots.md`. If the file already exists, any subsequent OCR screenshots will instead append to the note.
 - You can change the prefix to OCR screenshots by changing the [workflow configuration](Workflow%20Configuration.md#Screenshot-Features) `ocr_prefix`.
 	- Use a different date format by following [Alfred's Placeholder-Syntax](https://www.alfredapp.com/help/workflows/advanced/placeholders/#date-time).
 	- You can leave `ocr_prefix` empty or insert any other fixed value (e.g., a YAML-Header).

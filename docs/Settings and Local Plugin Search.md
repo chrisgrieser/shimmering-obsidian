@@ -21,8 +21,6 @@ nav_order: 2
 - 💡 `o,` refers to the `⌘ ,` shortcut used to open the settings.
 - For other plugin-related features, see also the [Plugin & Theme Search](Plugin%20and%20Theme%20Search.md).
 
-
-
 [^1]: Thanks to @Vinzent03 for enabling this feature.
 [^2]: You can [change the default terminal in the Alfred Settings](https://www.alfredapp.com/help/features/terminal/).
 [^3]: Alfred checks for the existence of a `.git` subfolder in the plugin folder.

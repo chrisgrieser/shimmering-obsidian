@@ -31,7 +31,7 @@ You access the main workflow configuration by clicking the *`[x]`* at the top ri
 ### Alfred-based Quick Switcher
 - `h_Ivl_ignore`: Heading levels that should be ignored in the Quick Switcher (`o` command). `h1 h6` will ignore h1 and h6, so only h2, h3, h4, and h5 show up in the Quick Switcher. `h4 h5 h6` will only show h1, h2 and h3 in the Quick Switcher. Enter `h1 h2 h3 h4 h5 h6` to ignore all headings in the Quick Switcher.
 - `merge_nested_tags`: When using the `ot` search, merge all [nested tags](https://help.obsidian.md/Plugins/Tag+pane#Nested+tags) to their parent tag, e.g., `#inbox/to-read` and `#inbox/later` would both be subsumed under `#inbox`. Accepts `true` or `false`.
-- `open_after_appending`: When appending to a note (`fn + ↵`), the note will automatically be opened afterwards. Accepts `true` or `false`. This setting also applies to the [Scratchpad](Note-related%20Features.md#Scratchpad) feature. 
+- `open_after_appending`: When appending to a note (`fn + ↵`), the note will automatically be opened afterwards. Accepts `true` or `false`. This setting also applies to the [Scratchpad](Note-related%20Features.md#Scratchpad) feature.
 - 🆕 `input_append`: What type of content is used when appending to a note (`fn + ↵`). Accepts `clipboard` or `manual` (= prompting you to enter something).
 - 🆕 `search_ignore_folder`: the vault-*relative* path to a folder which should be excluded when using the main search of Quick Switcher (`o` command). (The other sub-searches like `or` or `os` are not affected.) Leave empty to not exclude any folder.
 
@@ -47,9 +47,9 @@ You access the main workflow configuration by clicking the *`[x]`* at the top ri
 ### Screenshots Features
 - `ocr_languages`: set language codes of Tesseract, e.g., `eng+deu` for English and German. You can find out the code for your language(s) in [this list](https://tesseract-ocr.github.io/tessdoc/Data-Files-in-different-versions.html).
 - `ocr_prefix`: Set the prefix for OCR Screenshots. Does accept dynamic content like the current date or time when you use [Alfred's Placeholder Syntax](https://www.alfredapp.com/help/workflows/advanced/placeholders/#date-time). Note that while not easy to see, `ocr_prefix` can have multi-line values.
-- `open_after_screenshot`: When doing an OCR screenshot or an image screenshot, will open the note afterwards. Accepts `true` or `false`. 
-- `ocr_screenshot_file`: *Absolute* path to the *file* where the text resulting from the OCR should be saved to. When empty, will save/append the text to the file `{vault-path}/OCR-Screenshots.md`. 
-- `screenshot_path`: *Absolute* path to the *folder* where the image screenshots should be saved to. When empty, will save them the images to `{vault-path}/screenshots/`. 
+- `open_after_screenshot`: When doing an OCR screenshot or an image screenshot, will open the note afterwards. Accepts `true` or `false`.
+- `ocr_screenshot_file`: *Absolute* path to the *file* where the text resulting from the OCR should be saved to. When empty, will save/append the text to the file `{vault-path}/OCR-Screenshots.md`.
+- `screenshot_path`: *Absolute* path to the *folder* where the image screenshots should be saved to. When empty, will save them the images to `{vault-path}/screenshots/`.
 
 💡 "Absolute path" means you can also store it outside the vault when also turning off `open_after_screenshot`. (Images won't be embedded (`![[]]`) correctly then, though.)
 
@@ -66,7 +66,7 @@ You access the main workflow configuration by clicking the *`[x]`* at the top ri
 - `auto_update`: Periodically check for updates *of this workflow* and update automatically. Accepts `true` or `false`.
 
 ### Internal
-These variables are only here for internal and debugging reasons, you do not need to (and normally shouldn't) change them. 
+These variables are only here for internal and debugging reasons, you do not need to (and normally shouldn't) change them.
 
 - `vault_path`: The *absolute* path to your obsidian vault.
 - `vault_name_ENC`: The encoded name of you vault.

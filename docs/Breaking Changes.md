@@ -31,7 +31,7 @@ nav_order: 2
 - Paste into Selection removed, since there is [a plugin that does it better](https://github.com/chrisgrieser/obsidian-smarter-md-hotkeys).
 
 ## Version 2.12.1
-The recently introduced `ogit` command has been removed since the same functionality is now available [via a plugin](https://github.com/kometenstaub/copy-publish-url) in a more efficient manner. 
+The recently introduced `ogit` command has been removed since the same functionality is now available [via a plugin](https://github.com/kometenstaub/copy-publish-url) in a more efficient manner.
 
 ## Version 2.10
 Hotkey Helper isn't a requirement for the Plugin search anymore, but you need to upgrade to Obsidian 0.13.14+ for the Plugin Search now.
@@ -41,7 +41,7 @@ After updating to version 2.9+, you need to re-run `osetup` once.
 
 ## Version 2.8
 - Converting a font file to base64 will prompt for the format and copy to the clipboard instead of saving to the snippet folder.
-- Workflow configuration `fontformat` dropped, as base64 conversion will prompt for it. 
+- Workflow configuration `fontformat` dropped, as base64 conversion will prompt for it.
 
 ## Version 2.4.2
 - `ocheat` command abbreviated to `oc`.

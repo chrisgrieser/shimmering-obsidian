@@ -52,15 +52,13 @@ nav_order: 2
 ## Searching GitHub Issues
 **Triggered by pressing `⇧ + ↵` on a plugin or theme. Will display a list of its GitHub issues.**
 - The list will display the open/closed status, author, and number of comments. The list of issues can be searched like any Alfred Search.
-- You can also choose to create a new issue, pre-populated as Feature Request or Bug Report. 
+- You can also choose to create a new issue, pre-populated as Feature Request or Bug Report.
 - Use `⌥ + ↵` on an issue to copy the issue URL to the clipboard.
 - 💡 To avoid unnecessary issues, the creation of new issues is *disabled* when the local version of the plugin is outdated. Instead, you will be provided with a quick shortcut to update the plugin 🙂
 - ℹ️ Due to restrictions of the GitHub API, only the most recent 100 issues can be displayed.
 
 <img src="https://user-images.githubusercontent.com/73286100/139559362-747b0c57-c29b-45b5-bc62-4ab53c0718c5.gif" alt="Issue Search" width=60%>
 <img src="https://i.imgur.com/AvavR7n.png" alt="update information" width=60%>
-
-
 
 [^1]: Unfortunately, there isn't enough versioning information for themes to do the same for them.
 [^2]: Accessing the settings of an installed plugin via [the plugin search](Plugin%20and%20Theme%20Search.md) (`op`) via `ctrl + ↵` has been disabled in release 2.4.

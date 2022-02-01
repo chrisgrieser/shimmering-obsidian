@@ -1,3 +1,9 @@
+- 2022-02-01	release 2.19.3
+- 2022-02-01	include .trash properly in backup
+- 2022-02-01	fix for backup creation
+- 2022-01-29	theme search opens theme browser & plugin search opens plugins in right vault
+- 2022-01-29	alt + return on a folder now opens the folder instead of revealing it
+- 2022-01-28	icons for common vault names in vault switcher
 - 2022-01-28	release 2.19.2
 - 2022-01-28	fix #55 (thx @00dani)
 - 2022-01-28	improved recognition of current file

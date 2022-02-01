@@ -33,8 +33,8 @@ This keyword searches all your notes, aliases, folders, and headings combined.
 This works similar to Obsidian's built-in “QuickSwitch” feature, but can be triggered without Obsidian running (in which case it will open Obsidian with the selected note). Press `↵` to open the selected file in Obsidian.
 - `⌘ + ↵`: Open the file in a new pane.
 - `⌥ + ↵`: Reveal the file in Finder.
-- `fn + ↵`: Append the content to the selected note. 
-	- Appended content depends on the [workflow configuration](Workflow%20Configuration.md#Alfred-based-Quick-Switcher) `input_append`. Set to `clipboard` will add the clipboard content, while setting it ti `manual` will prompt you for text to append. 
+- `fn + ↵`: Append the content to the selected note.
+	- Appended content depends on the [workflow configuration](Workflow%20Configuration.md#Alfred-based-Quick-Switcher) `input_append`. Set to `clipboard` will add the clipboard content, while setting it ti `manual` will prompt you for text to append.
 	- When the [workflow configuration](Workflow%20Configuration.md#Alfred-based-Quick-Switcher) `open_after_appending` is set to `true`, will open the note afterwards.
 	- The text set in the [workflow configuration](Workflow%20Configuration.md#Alfred-based-Quick-Switcher) `append_prefix` will be inserted in front of the input text. (💡 Using `- [ ]` enables you to add cards to a Kanban Note.)
 - `⌃ + ↵`: Copy the [Obsidian-URI to the selected file](https://help.obsidian.md/Advanced+topics/Using+obsidian+URI#Action+`hook-get-address`).
@@ -113,8 +113,5 @@ Displayed alongside the other search results are all headings in your vault. Sel
 - To enable proper display of YAML headers, you need to enable the respective setting in the Advanced Options of QLMarkdown:
 
 <img width="654" alt="Screenshot 2021-12-05 01 49 11" src="https://user-images.githubusercontent.com/73286100/144729141-72d8cd41-8e45-43e0-a11a-ce98ba97c2ac.png">
-	
+
 </details>
-
-
-

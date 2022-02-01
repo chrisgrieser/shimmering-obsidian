@@ -18,5 +18,3 @@ nav_order: 2
 - Search in a category: Select a category and press `↵`. Afterwards, you will be prompted to enter a search query. Confirm with `↵` to open that search in your default browser.
 - Press `⌘ + ↵` to open the forum category in your default browser.
 - Use `⌥ + ↵` to copy the link to the category to your clipboard instead. When Discord is the frontmost app, the copied link will be surrounded with `<` `>` for more convenient pasting in the Discord Desktop app (disables auto-preview).
-
-

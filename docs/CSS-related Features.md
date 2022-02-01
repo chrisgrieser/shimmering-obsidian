@@ -30,7 +30,7 @@ nav_order: 2
 ## Quick SVG Data URI Conversion
 **🆕 `osvg`: Convert convert the `svg` in your clipboard to Data URI.**
 - [Explainer why converting SVGs is useful](https://css-tricks.com/lodge/svg/09-svg-data-uris/).
-- Takes the .svg files in you clipboard, converts it to a SVG Data URI, and copies it wrapped in CSS into your clipboard. 
+- Takes the .svg files in you clipboard, converts it to a SVG Data URI, and copies it wrapped in CSS into your clipboard.
 - You can use <https://icon-sets.iconify.design/> to browse for icons as SVG.
 - ❗️ This command requires [`mini-svg-data-uri`](https://www.npmjs.com/package/mini-svg-data-uri), which you can easily install via `npm -g install mini-svg-data-uri`.
 

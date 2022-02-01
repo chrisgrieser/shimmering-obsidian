@@ -37,7 +37,7 @@ end tell
 - Open local plugin folders with the [Plugin Settings Search](Settings%20Search.md).
 
 ## Carl
-**`ocarl`: Search `carl` auto-responses. 🐢 **
+**`ocarl`: Search `carl` auto-responses. 🐢**
 - Search and paste auto-responses from the beloved Discord Bot of the [Obsidian Discord Server](https://discord.gg/veuWUTm).
 
 ## Update Plugins & Metadata
@@ -46,5 +46,3 @@ end tell
 - Update your Beta Plugins (installed via [the BRAT Plugin](https://github.com/TfTHacker/obsidian42-brat))
 - Re-index the data for the [Documentation Search](Documentation%20Search.md).
 - Refresh the metadata used for this workflow manually or set an interval to refresh it automatically. See the section on [workflow configuration for more information](Workflow%20Configuration.md#Metadata-Extractor-Configuration)
-
-
