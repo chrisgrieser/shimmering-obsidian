@@ -47,6 +47,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>070C2887-CF44-4021-BD84-60828BA44388</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>5B0C16ED-7757-4376-AB67-2B080E4AAC86</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>07C4D3F5-5CBC-4BAF-9004-B506BEF11C23</key>
 		<array>
 			<dict>
@@ -3164,19 +3177,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>E5299CC1-0444-4A26-A030-D3B374CE8E15</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>5B0C16ED-7757-4376-AB67-2B080E4AAC86</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>E5C2C637-CB7C-4C29-8829-6DD7F2901728</key>
 		<array>
 			<dict>
@@ -4590,21 +4590,17 @@ echo -n "$base64encoded"</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argumenttype</key>
-				<integer>1</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
 				<key>keyword</key>
-				<string>osvg</string>
-				<key>subtext</key>
-				<string>to SVG Data URI</string>
-				<key>text</key>
-				<string>Convert SVG in Clipboard</string>
-				<key>withspace</key>
-				<true/>
+				<string>!osvg</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
+			<string>alfred.workflow.trigger.snippet</string>
 			<key>uid</key>
-			<string>E5299CC1-0444-4A26-A030-D3B374CE8E15</string>
+			<string>070C2887-CF44-4021-BD84-60828BA44388</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -10007,6 +10003,17 @@ Donate:   https://ko-fi.com/pseudometa</string>
 			<key>ypos</key>
 			<integer>2000</integer>
 		</dict>
+		<key>070C2887-CF44-4021-BD84-60828BA44388</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>note</key>
+			<string>Convert from clipboard to svg data URI</string>
+			<key>xpos</key>
+			<integer>25</integer>
+			<key>ypos</key>
+			<integer>1470</integer>
+		</dict>
 		<key>07C4D3F5-5CBC-4BAF-9004-B506BEF11C23</key>
 		<dict>
 			<key>colorindex</key>
@@ -12357,17 +12364,6 @@ DOUBLE CLICK THIS to set hotkey.</string>
 			<integer>515</integer>
 			<key>ypos</key>
 			<integer>5445</integer>
-		</dict>
-		<key>E5299CC1-0444-4A26-A030-D3B374CE8E15</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>note</key>
-			<string>Convert from clipboard to svg data URI</string>
-			<key>xpos</key>
-			<integer>20</integer>
-			<key>ypos</key>
-			<integer>1470</integer>
 		</dict>
 		<key>E5C2C637-CB7C-4C29-8829-6DD7F2901728</key>
 		<dict>

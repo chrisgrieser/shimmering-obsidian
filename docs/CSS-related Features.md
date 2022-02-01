@@ -28,7 +28,8 @@ nav_order: 2
 <img src="https://user-images.githubusercontent.com/73286100/131255059-1a56d6e7-8c2f-4ff0-b20d-247702bb7925.gif" alt="Theme Search" width=60%>
 
 ## Quick SVG Data URI Conversion
-**🆕 `osvg`: Convert convert the `svg` in your clipboard to Data URI.**
+**Snippet Trigger: `!osvg`**
+- Type `!osvg` into any text field to convert the svg in your clipboard to data URI and paste it.
 - [Explainer why converting SVGs is useful](https://css-tricks.com/lodge/svg/09-svg-data-uris/).
 - Takes the .svg files in you clipboard, converts it to a SVG Data URI, and copies it wrapped in CSS into your clipboard.
 - You can use <https://icon-sets.iconify.design/> to browse for icons as SVG.

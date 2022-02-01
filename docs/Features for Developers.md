@@ -52,4 +52,5 @@ Refer to the section on [Settings & Local Plugin Search](Settings%20and%20Local%
 - Install a new theme.
 
 ## Obsidian Version Information
+**Snippet Trigger: `!oversion`**
 Type `!oversion` in any text field, and Alfred will output your current Mac and Obsidian version. Useful for people frequently creating bug reports.
