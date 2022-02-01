@@ -1,3 +1,6 @@
+- 2022-02-01	release 2.20.0
+- 2022-02-01	new feature: scratchpad feature now able to add content below a specific heading.
+- 2022-02-01	scratchpad now has independent appending prefix
 - 2022-02-01	release 2.19.3
 - 2022-02-01	include .trash properly in backup
 - 2022-02-01	fix for backup creation
