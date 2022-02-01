@@ -16,9 +16,9 @@ itemCount=`ls "$vault" | wc -l`
 cd $vault
 
 if [[ $itemCount > 0 ]] ; then
-	zip -r --quiet $backup ./* ./.obsidian/* ./.trash/*
+	zip -r --quiet "$backup" ./* ./.obsidian/* ./.trash/*
 else
-	zip -r --quiet $backup ./* ./.obsidian/*
+	zip -r --quiet "$backup" ./* ./.obsidian/*
 fi
 
 # restrict number of backups
