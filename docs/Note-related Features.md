@@ -7,14 +7,14 @@ nav_order: 2
 ## Table of Contents
 <!-- MarkdownTOC -->
 
-- [✴️ Create a new Note](#%E2%9C%B4%EF%B8%8F-create-a-new-note)
+- [Create a new Note](#create-a-new-note)
 - [Scratchpad](#scratchpad)
 - [Daily Notes](#daily-notes)
 - [Move Note](#move-note)
 
 <!-- /MarkdownTOC -->
 
-## ✴️ Create a new Note
+## Create a new Note
 **`on`: Create a `n`ew note.**
 - __File Name:__ Anything you type after the keyword `on` (e.g., `on foobar`) will become the filename of the new note (e.g., `foobar.md`).
 - __Content:__ The [workflow configuration](Workflow%20Configuration.md#note-related-features) (`template_note_path`) determines the content of the new note.
@@ -24,12 +24,13 @@ nav_order: 2
 
 ## Scratchpad
 **🆕 `oo` or `triggered via hotkey`: Append to your Scratchpad Note**
-- Quickly add text to the note set in the [workflow configuration](Workflow%20Configuration.md#note-related-features) `scratchpad_note_path`. This command is basically a quick version of the `fn + ↵` mode of the [Alfred-based Quick Switcher](Alfred-based%20Quick%20Switcher.md#search-for-notes).
-- When using `oo foobar`, will append `foobar` to the note.
-- When triggered via hotkey, will append the current selection.
+- Quickly add text to the note set in the [workflow configuration](Workflow%20Configuration.md#note-related-features) `scratchpad_note_path`. (This command is basically a quicker version of the `fn + ↵` mode of the [Alfred-based Quick Switcher](Alfred-based%20Quick%20Switcher.md#search-for-notes).)
+	- When using `oo foobar`, will append `foobar` to the note.
+	- When triggered via hotkey, will append the current selection.
+	- 🆕 When you append `#foobar` to `scratchpad_note_path` (e.g. `Inbox/Scratchpad-Note#Thoughts`), the text will be added below the heading "foobar" located in that note.
 - The text set in the [workflow configuration](Workflow%20Configuration.md#Alfred-based-Quick-Switcher) `scratchpad_append_prefix` will be inserted in front of the input text.
-	- 💡 Using `- [ ]` enables you to add cards to a Kanban Note.
 - If the [workflow configuration](Workflow%20Configuration.md#Alfred-based-Quick-Switcher) `open_after_appending` is set to `true`, will open the scratchpad afterwards.
+- 💡 Using `- [ ]` as prefix and inserting below a specific heading enables you to add cards to a Kanban Board.
 
 ## Daily Notes
 **`od`: Open & Append to today's daily note [settings].**

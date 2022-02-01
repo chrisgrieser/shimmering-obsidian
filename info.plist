@@ -429,19 +429,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>2D09BF1C-A0ED-4BF8-AEB2-2E612327FB9C</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>700D9220-5D9E-4BBB-840B-30272519C910</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>2D7693A0-3ACD-4A9E-BEFF-44AE2096352B</key>
 		<array>
 			<dict>
@@ -820,6 +807,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>477D128E-EEF6-4956-8C44-A6186D7537D0</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>475C216C-4A37-4F50-91DE-B1FE3666684F</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>700D9220-5D9E-4BBB-840B-30272519C910</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -3479,7 +3479,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>2D09BF1C-A0ED-4BF8-AEB2-2E612327FB9C</string>
+				<string>475C216C-4A37-4F50-91DE-B1FE3666684F</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -3852,29 +3852,25 @@ tesseract "$temp_image" stdout -l $ocr_languages 2&gt;&amp;1</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>adduuid</key>
+				<key>concurrently</key>
 				<false/>
-				<key>allowemptyfiles</key>
-				<true/>
-				<key>createintermediatefolders</key>
-				<true/>
-				<key>filename</key>
-				<string>{var:vault_path}/{var:scratchpad_note_path}</string>
-				<key>filetext</key>
-				<string>{var:scratchpad_append_prefix}{query}</string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>relativepathmode</key>
+				<key>escaping</key>
 				<integer>0</integer>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>scripts/append-to-scratchpad.js</string>
 				<key>type</key>
-				<integer>2</integer>
+				<integer>8</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.output.writefile</string>
+			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>2D09BF1C-A0ED-4BF8-AEB2-2E612327FB9C</string>
+			<string>475C216C-4A37-4F50-91DE-B1FE3666684F</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -10006,7 +10002,7 @@ Donate:   https://ko-fi.com/pseudometa</string>
 		<key>070C2887-CF44-4021-BD84-60828BA44388</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>note</key>
 			<string>Convert from clipboard to svg data URI</string>
 			<key>xpos</key>
@@ -10044,7 +10040,7 @@ Donate:   https://ko-fi.com/pseudometa</string>
 		<key>0B6B06C2-6914-4603-B703-5F8DA27FD029</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>xpos</key>
 			<integer>175</integer>
 			<key>ypos</key>
@@ -10080,7 +10076,7 @@ Donate:   https://ko-fi.com/pseudometa</string>
 		<key>0D36A181-34F8-492E-A565-C022DA3B34E6</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>6</integer>
+			<integer>9</integer>
 			<key>xpos</key>
 			<integer>640</integer>
 			<key>ypos</key>
@@ -10098,7 +10094,7 @@ Donate:   https://ko-fi.com/pseudometa</string>
 		<key>0E7DC543-BCFD-4F7B-864B-C4BBF40DD8BB</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>note</key>
 			<string>opens in default Terminal</string>
 			<key>xpos</key>
@@ -10136,7 +10132,7 @@ Donate:   https://ko-fi.com/pseudometa</string>
 		<key>164B20C3-4277-490E-9EB2-DCE923784B89</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>xpos</key>
 			<integer>350</integer>
 			<key>ypos</key>
@@ -10221,7 +10217,7 @@ Donate:   https://ko-fi.com/pseudometa</string>
 		<key>22701FEF-BDAC-42A0-8FF9-38D158FC5BB8</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>xpos</key>
 			<integer>220</integer>
 			<key>ypos</key>
@@ -10230,7 +10226,7 @@ Donate:   https://ko-fi.com/pseudometa</string>
 		<key>23310407-0757-4547-AC30-83A9AF365D9D</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>note</key>
 			<string>absolute to relative path</string>
 			<key>xpos</key>
@@ -10268,7 +10264,7 @@ Donate:   https://ko-fi.com/pseudometa</string>
 		<key>2724E000-1F5E-46CC-B5E6-B26B7467592B</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>xpos</key>
 			<integer>415</integer>
 			<key>ypos</key>
@@ -10277,7 +10273,7 @@ Donate:   https://ko-fi.com/pseudometa</string>
 		<key>27BE592C-7FFD-4F99-8501-204EB94A4138</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>note</key>
 			<string>selection</string>
 			<key>xpos</key>
@@ -10297,7 +10293,7 @@ Donate:   https://ko-fi.com/pseudometa</string>
 		<key>2A4E4AA6-EBA8-4645-ADEC-62CA21AC7D9C</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>note</key>
 			<string>open beta repo</string>
 			<key>xpos</key>
@@ -10332,15 +10328,6 @@ Donate:   https://ko-fi.com/pseudometa</string>
 			<key>ypos</key>
 			<integer>2030</integer>
 		</dict>
-		<key>2D09BF1C-A0ED-4BF8-AEB2-2E612327FB9C</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>3</integer>
-			<key>xpos</key>
-			<integer>350</integer>
-			<key>ypos</key>
-			<integer>525</integer>
-		</dict>
 		<key>2D7693A0-3ACD-4A9E-BEFF-44AE2096352B</key>
 		<dict>
 			<key>colorindex</key>
@@ -10353,7 +10340,7 @@ Donate:   https://ko-fi.com/pseudometa</string>
 		<key>2EA7E709-7E6B-43B3-8B44-080685EFA44A</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>note</key>
 			<string>Forum Catgories</string>
 			<key>xpos</key>
@@ -10364,7 +10351,7 @@ Donate:   https://ko-fi.com/pseudometa</string>
 		<key>2FB281A9-8BFA-4836-A2A9-73A46C3DE6DD</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>note</key>
 			<string>set vault</string>
 			<key>xpos</key>
@@ -10402,7 +10389,7 @@ Donate:   https://ko-fi.com/pseudometa</string>
 		<key>31A86D6E-0757-460B-9840-AC7E2BD728BC</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>xpos</key>
 			<integer>470</integer>
 			<key>ypos</key>
@@ -10420,7 +10407,7 @@ Donate:   https://ko-fi.com/pseudometa</string>
 		<key>31FACF27-F01E-47F6-9D6A-B0C1A07CE8E5</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>xpos</key>
 			<integer>455</integer>
 			<key>ypos</key>
@@ -10429,7 +10416,7 @@ Donate:   https://ko-fi.com/pseudometa</string>
 		<key>3374CD2F-3B5A-4267-B71E-862533887D36</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>note</key>
 			<string>opens in default Terminal</string>
 			<key>xpos</key>
@@ -10449,7 +10436,7 @@ Donate:   https://ko-fi.com/pseudometa</string>
 		<key>34BBC261-A060-4D58-BB81-26428117292E</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>xpos</key>
 			<integer>185</integer>
 			<key>ypos</key>
@@ -10494,7 +10481,7 @@ Donate:   https://ko-fi.com/pseudometa</string>
 		<key>39E83342-8818-474A-9AC2-27D0A97843EF</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>xpos</key>
 			<integer>315</integer>
 			<key>ypos</key>
@@ -10596,7 +10583,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 		<key>41F765F9-17DD-4FC0-BF28-E7EB61AF55DB</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>note</key>
 			<string>make link Discord ready</string>
 			<key>xpos</key>
@@ -10607,7 +10594,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 		<key>42201C8D-D1DE-4EA8-9EC8-7F92FDF17572</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>note</key>
 			<string>git pull</string>
 			<key>xpos</key>
@@ -10629,7 +10616,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 		<key>44832B9C-6E8E-49FB-A270-EBC4CC347812</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>11</integer>
 			<key>note</key>
 			<string>check that all scripts are written</string>
 			<key>xpos</key>
@@ -10649,7 +10636,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 		<key>4666F95D-B06C-48CD-8FA2-9A795FAF23D7</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>xpos</key>
 			<integer>390</integer>
 			<key>ypos</key>
@@ -10663,6 +10650,15 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<integer>330</integer>
 			<key>ypos</key>
 			<integer>4460</integer>
+		</dict>
+		<key>475C216C-4A37-4F50-91DE-B1FE3666684F</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>xpos</key>
+			<integer>350</integer>
+			<key>ypos</key>
+			<integer>525</integer>
 		</dict>
 		<key>477D128E-EEF6-4956-8C44-A6186D7537D0</key>
 		<dict>
@@ -10687,7 +10683,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 		<key>48992F43-A163-41CB-9AD0-ED130267D058</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>xpos</key>
 			<integer>240</integer>
 			<key>ypos</key>
@@ -10754,7 +10750,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 		<key>4DFA3143-56A4-4661-8DF9-4103FFA7D703</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>note</key>
 			<string>input</string>
 			<key>xpos</key>
@@ -10850,7 +10846,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 		<key>54A4C37B-CFDB-4E66-94D5-C3F3EF58BA44</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>xpos</key>
 			<integer>255</integer>
 			<key>ypos</key>
@@ -10859,7 +10855,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 		<key>560E177F-C4A4-432D-A640-5A15B7048CB8</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>xpos</key>
 			<integer>540</integer>
 			<key>ypos</key>
@@ -10868,7 +10864,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 		<key>569B6FA7-2D27-4250-9937-AEC7F8947206</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>xpos</key>
 			<integer>170</integer>
 			<key>ypos</key>
@@ -10953,7 +10949,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 		<key>5BB5222F-DF30-4BC4-9A10-9CC6B1EFA4E4</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>xpos</key>
 			<integer>290</integer>
 			<key>ypos</key>
@@ -10971,7 +10967,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 		<key>5E1194F1-12BA-456E-8511-C5708AE07906</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>xpos</key>
 			<integer>175</integer>
 			<key>ypos</key>
@@ -11000,7 +10996,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 		<key>5F6CE94A-26BF-4826-8A67-2E02353646DB</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>note</key>
 			<string>screenshot + OCR</string>
 			<key>xpos</key>
@@ -11031,7 +11027,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 		<key>60A87101-8D59-46BF-BCAE-A9195D6A034E</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>note</key>
 			<string>open to Scratchpad</string>
 			<key>xpos</key>
@@ -11069,7 +11065,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 		<key>624851C6-4CE8-40FF-939A-6A2905B80486</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>note</key>
 			<string>git pull</string>
 			<key>xpos</key>
@@ -11080,7 +11076,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 		<key>624B592C-7815-4AE9-84DA-8EB7AD964966</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>xpos</key>
 			<integer>630</integer>
 			<key>ypos</key>
@@ -11098,7 +11094,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 		<key>65A519DF-2E95-46AA-BD21-64E5ECE9759D</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>note</key>
 			<string>reveal file, open folder</string>
 			<key>xpos</key>
@@ -11120,7 +11116,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 		<key>661004F2-B1DF-4A0B-860D-62B0756649E4</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>note</key>
 			<string>ocr_prefix
 (for date resolution)</string>
@@ -11150,7 +11146,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 		<key>69F3C12D-E4FD-4991-91EF-87ACEE65208C</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>xpos</key>
 			<integer>600</integer>
 			<key>ypos</key>
@@ -11170,7 +11166,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 		<key>6B3A98B8-CA8A-4745-AA31-24F1A7C7BF86</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>xpos</key>
 			<integer>390</integer>
 			<key>ypos</key>
@@ -11190,7 +11186,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 		<key>700D9220-5D9E-4BBB-840B-30272519C910</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>note</key>
 			<string>open after</string>
 			<key>xpos</key>
@@ -11201,7 +11197,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 		<key>7107BFB2-1A6A-434E-9E32-F01F75AF1CF6</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>xpos</key>
 			<integer>470</integer>
 			<key>ypos</key>
@@ -11219,7 +11215,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 		<key>72551A9E-43E8-4462-9CB0-D5C419B4AEA2</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>note</key>
 			<string>search settings</string>
 			<key>xpos</key>
@@ -11250,7 +11246,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 		<key>75571120-8CAD-415A-8B57-F7BDDE3A629E</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>6</integer>
+			<integer>9</integer>
 			<key>xpos</key>
 			<integer>1685</integer>
 			<key>ypos</key>
@@ -11315,7 +11311,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 		<key>7A1E8A69-D52C-47C5-9661-38702F6BDEC9</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>note</key>
 			<string>new note</string>
 			<key>xpos</key>
@@ -11368,7 +11364,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 		<key>7D41FE04-6811-49B4-BEA5-840327EEAD51</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>xpos</key>
 			<integer>420</integer>
 			<key>ypos</key>
@@ -11500,7 +11496,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 		<key>88723AC0-4348-4B23-AFD7-FEFE6C532A94</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>xpos</key>
 			<integer>1755</integer>
 			<key>ypos</key>
@@ -11527,7 +11523,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 		<key>89E2FCF0-5A14-4078-8D1F-C0FCAC339F63</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>xpos</key>
 			<integer>240</integer>
 			<key>ypos</key>
@@ -11536,7 +11532,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 		<key>8A0787B6-CC86-4694-BB26-C626130438BE</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>xpos</key>
 			<integer>25</integer>
 			<key>ypos</key>
@@ -11581,7 +11577,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 		<key>8C9F828A-D313-4E2E-8428-621E160D07FE</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>11</integer>
 			<key>xpos</key>
 			<integer>1085</integer>
 			<key>ypos</key>
@@ -11653,7 +11649,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 		<key>92A627E0-B9B0-4D58-A5C1-78438EC4573B</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>xpos</key>
 			<integer>295</integer>
 			<key>ypos</key>
@@ -11762,7 +11758,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 		<key>A2EE3352-E242-48DC-8C16-5B7EC51E4003</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>xpos</key>
 			<integer>535</integer>
 			<key>ypos</key>
@@ -11782,7 +11778,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 		<key>A33900E9-EB4A-4AFE-8AA8-05503A501496</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>xpos</key>
 			<integer>240</integer>
 			<key>ypos</key>
@@ -11800,7 +11796,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 		<key>A5BA80AA-D2FF-43BC-AE70-4C34D0BB4E20</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>xpos</key>
 			<integer>1530</integer>
 			<key>ypos</key>
@@ -11829,7 +11825,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 		<key>A8D6D21C-0A25-4DAC-A516-F8F3DDF5F93E</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>xpos</key>
 			<integer>25</integer>
 			<key>ypos</key>
@@ -11878,7 +11874,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 		<key>B0AB019E-6AC5-494E-9F31-F818F9BFEE21</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>xpos</key>
 			<integer>575</integer>
 			<key>ypos</key>
@@ -11920,7 +11916,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 		<key>B5F538F8-D47B-47E8-A7C8-5C9C149A58CC</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>note</key>
 			<string>open after</string>
 			<key>xpos</key>
@@ -12009,7 +12005,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 		<key>BF2C7CBD-67E0-45CC-8948-E68291FF2B50</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>xpos</key>
 			<integer>255</integer>
 			<key>ypos</key>
@@ -12158,7 +12154,7 @@ DOUBLE CLICK THIS to set hotkey.</string>
 		<key>CF41BB03-A327-49A6-AD69-3A5F1F6F5A83</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>xpos</key>
 			<integer>445</integer>
 			<key>ypos</key>
@@ -12167,7 +12163,7 @@ DOUBLE CLICK THIS to set hotkey.</string>
 		<key>D0041722-6FE5-480D-B443-FC3F8C71CD53</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>xpos</key>
 			<integer>210</integer>
 			<key>ypos</key>
@@ -12243,7 +12239,7 @@ DOUBLE CLICK THIS to set hotkey.</string>
 		<key>DBA6DBFB-3701-4BFC-B72C-406BF62DF384</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>xpos</key>
 			<integer>1720</integer>
 			<key>ypos</key>
@@ -12263,7 +12259,7 @@ DOUBLE CLICK THIS to set hotkey.</string>
 		<key>DD86C0A5-6797-45E0-91CF-BEA8262CCDD1</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>xpos</key>
 			<integer>400</integer>
 			<key>ypos</key>
@@ -12321,7 +12317,7 @@ DOUBLE CLICK THIS to set hotkey.</string>
 		<key>E24806C9-408F-4504-B601-DED0239F88FD</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>note</key>
 			<string>Vault Switcher</string>
 			<key>xpos</key>
@@ -12417,7 +12413,7 @@ DOUBLE CLICK THIS to set hotkey.</string>
 		<key>E7ADA43C-52CF-46FD-AC9E-79616731DDA9</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>xpos</key>
 			<integer>660</integer>
 			<key>ypos</key>
@@ -12455,7 +12451,7 @@ DOUBLE CLICK THIS to set hotkey.</string>
 		<key>EAD7CCC4-5ACE-4068-829A-EB0C62FCA3ED</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>note</key>
 			<string>write input_path to buffer</string>
 			<key>xpos</key>
@@ -12486,7 +12482,7 @@ DOUBLE CLICK THIS to set hotkey.</string>
 		<key>ECE5DEF0-6F35-4E9B-818C-56057511EE91</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>xpos</key>
 			<integer>400</integer>
 			<key>ypos</key>
@@ -12506,7 +12502,7 @@ DOUBLE CLICK THIS to set hotkey.</string>
 		<key>EE4720A7-4048-4A92-B0AA-8F811AE57C1E</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>note</key>
 			<string>append to Scratchpad</string>
 			<key>xpos</key>
@@ -12535,7 +12531,7 @@ DOUBLE CLICK THIS to set hotkey.</string>
 		<key>EFED0DE3-D836-408A-A4AE-2E363E5A7F38</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>note</key>
 			<string>screenshot</string>
 			<key>xpos</key>
@@ -12586,7 +12582,7 @@ DOUBLE CLICK THIS to set hotkey.</string>
 		<key>FD18D249-0CD1-44B4-B974-B31B499DD2EB</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>xpos</key>
 			<integer>280</integer>
 			<key>ypos</key>
@@ -12632,7 +12628,7 @@ DOUBLE CLICK THIS to set hotkey.</string>
 		<key>scratchpad_append_prefix</key>
 		<string>- [ ] </string>
 		<key>scratchpad_note_path</key>
-		<string>Writing/🦠 Acceleration of Research/✴️ HUB – Corona &amp; Beschleunigung.md</string>
+		<string>Writing/🦠 Acceleration of Research/Acco Kanban#Scratchpad</string>
 		<key>screenshot_path</key>
 		<string></string>
 		<key>search_ignore_folder</key>
