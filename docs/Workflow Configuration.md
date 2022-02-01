@@ -39,8 +39,9 @@ You access the main workflow configuration by clicking the *`[x]`* at the top ri
 - `template_note_path`: Vault-relative path to Template to use when creating new notes with the `on` command or when browsing a folder via [the Alfred-based Quick Switcher](Alfred-based%20Quick%20Switcher.md).
 - 🆕 `new_note_location`: Vault-relative path to a folder where new notes created by `on` should be created. Leave empty to create the new note in the vault root.
 - `use_quickadd`: Instead of creating a new note based on a template (with the keyword `on`), will trigger the [QuickAdd Plugin](https://github.com/chhoumann/quickadd). Accepted values are `true` and `false`.
-- `scratchpad_note_path`: Vault-relative path to your scratchpad note. See [Scratchpad](Note-related%20Features.md#Scratchpad).
-- `append_prefix`: String to insert before content appended to the Scratchpad (`oo`) or via the Alfred-based Quick-Switcher (`fn + ↵`). Does accept dynamic content like the current date or time when you use [Alfred's Placeholder Syntax](https://www.alfredapp.com/help/workflows/advanced/placeholders/#date-time).
+- `scratchpad_note_path`: Vault-relative path to your [Scratchpad](Note-related%20Features.md#Scratchpad).
+- `append_prefix`: String to insert before content appended to the [Scratchpad](Note-related%20Features.md#Scratchpad). Does accept dynamic content like the current date or time when you use [Alfred's Placeholder Syntax](https://www.alfredapp.com/help/workflows/advanced/placeholders/#date-time).
+- `append_prefix`: String to insert before content appended to a note via the Alfred-based Quick-Switcher (`fn + ↵`). Does accept dynamic content like the current date or time when you use [Alfred's Placeholder Syntax](https://www.alfredapp.com/help/workflows/advanced/placeholders/#date-time).
 - `daily_note_path`: *absolute* path to the folder where your daily notes are saved. See [Daily Notes](Note-related%20Features.md#Daily%20Notes).
 - `daily_note_append_prefix`: String to insert before content appended to the daily note (`od`). Does accept dynamic content like the current date or time when you use [Alfred's Placeholder Syntax](https://www.alfredapp.com/help/workflows/advanced/placeholders/#date-time).
 

@@ -3861,7 +3861,7 @@ tesseract "$temp_image" stdout -l $ocr_languages 2&gt;&amp;1</string>
 				<key>filename</key>
 				<string>{var:vault_path}/{var:scratchpad_note_path}</string>
 				<key>filetext</key>
-				<string>{var:append_prefix}{query}</string>
+				<string>{var:scratchpad_append_prefix}{query}</string>
 				<key>ignoredynamicplaceholders</key>
 				<false/>
 				<key>relativepathmode</key>
@@ -12629,6 +12629,8 @@ DOUBLE CLICK THIS to set hotkey.</string>
 		<string>false</string>
 		<key>open_after_screenshot</key>
 		<string>false</string>
+		<key>scratchpad_append_prefix</key>
+		<string>- [ ] </string>
 		<key>scratchpad_note_path</key>
 		<string>Writing/🦠 Acceleration of Research/✴️ HUB – Corona &amp; Beschleunigung.md</string>
 		<key>screenshot_path</key>
@@ -12656,11 +12658,11 @@ DOUBLE CLICK THIS to set hotkey.</string>
 		<string>use_quickadd</string>
 		<string>h_lvl_ignore</string>
 		<string>vault_name_ENC</string>
-		<string>append_prefix</string>
-		<string>vault_path</string>
-		<string>scratchpad_note_path</string>
-		<string>daily_note_append_prefix</string>
 		<string>ObRunning</string>
+		<string>append_prefix</string>
+		<string>scratchpad_note_path</string>
+		<string>vault_path</string>
+		<string>daily_note_append_prefix</string>
 		<string>new_note_location</string>
 		<string>search_ignore_folder</string>
 		<string>backup_destination</string>

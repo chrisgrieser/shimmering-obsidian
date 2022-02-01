@@ -25,9 +25,9 @@ nav_order: 2
 ## Scratchpad
 **🆕 `oo` or `triggered via hotkey`: Append to your Scratchpad Note**
 - Quickly add text to the note set in the [workflow configuration](Workflow%20Configuration.md#note-related-features) `scratchpad_note_path`. This command is basically a quick version of the `fn + ↵` mode of the [Alfred-based Quick Switcher](Alfred-based%20Quick%20Switcher.md#search-for-notes).
-- When using `oo`, will append the text entered into Alfred.
+- When using `oo foobar`, will append `foobar` to the note.
 - When triggered via hotkey, will append the current selection.
-- The text set in the [workflow configuration](Workflow%20Configuration.md#Alfred-based-Quick-Switcher) `append_prefix` will be inserted in front of the input text.
+- The text set in the [workflow configuration](Workflow%20Configuration.md#Alfred-based-Quick-Switcher) `scratchpad_append_prefix` will be inserted in front of the input text.
 	- 💡 Using `- [ ]` enables you to add cards to a Kanban Note.
 - If the [workflow configuration](Workflow%20Configuration.md#Alfred-based-Quick-Switcher) `open_after_appending` is set to `true`, will open the scratchpad afterwards.
 
