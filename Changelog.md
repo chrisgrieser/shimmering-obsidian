@@ -1,3 +1,5 @@
+- 2022-02-02	release 2.20.1
+- 2022-02-02	fix #54
 - 2022-02-01	release 2.20.0
 - 2022-02-01	new feature: scratchpad feature now able to add content below a specific heading.
 - 2022-02-01	scratchpad now has independent appending prefix
