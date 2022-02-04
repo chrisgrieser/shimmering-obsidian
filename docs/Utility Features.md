@@ -27,6 +27,12 @@ tell application id "com.runningwithcrayons.Alfred"
 end tell
 ```
 
+---
+
+⚠️ Please be aware that this is a very simplistic backup solution. While I personally did not have any problems with the backups, this workflow comes without any warranties in case of corrupted backups, as stated in [the license](https://github.com/chrisgrieser/shimmering-obsidian/blob/main/LICENSE). If you need 100% safety, please use professional backup solutions.
+
+---
+
 ## Open Various Folders
 - `o.obsidian`: The hidden `.obsidian` folder located in your vault root will be opened in Finder.
 - `o.trash`: Open the hidden [`.trash` folder](https://help.obsidian.md/Advanced+topics/Deleting+files) located in your vault root will be opened in Finder. (Note that you have to select `Move to Obsidian trash` in the Obsidian settings under the `Files & Links` tab before deleted files can be found here.)
