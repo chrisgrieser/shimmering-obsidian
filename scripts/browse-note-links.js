@@ -21,6 +21,17 @@ function run () {
 
 	const alfredMatcher = str => " " + str.replace (/[-()_/:.@]/g, " ") + " " + str + " ";
 
+	function SafeApplication(appId) {
+		try {
+			return Application(appId);
+		} catch (e) {
+			return null;
+		}
+	}
+
+	const discordReadyLinks = ["Discord", "Discord PTB", "Discord Canary"]
+		.some(discordApp => SafeApplication(discordApp)?.frontmost());
+
 	// Import Data
 	const vaultPath = $.getenv("vault_path").replace(/^~/, app.pathTo("home folder"));
 	const metadataJSON = vaultPath + "/.obsidian/plugins/metadata-extractor/metadata.json";
@@ -148,8 +159,17 @@ function run () {
 	// add external Links to Script-Filter JSON
 	externalLinkList.forEach(link => {
 		const title = link[0];
-		const url = link[1];
+		let url = link[1];
 		const invalidSubtitle = "⛔️ Cannot do that with external link.";
+
+		// URLs discord ready
+		let isDiscordReady, shareURL;
+		if (discordReadyLinks) {
+			url = "<" + url + ">";
+			isDiscordReady = " (discord ready)";
+		} else {
+			isDiscordReady = "";
+		}
 
 		jsonArray.push({
 			"title": title,
@@ -175,7 +195,7 @@ function run () {
 					"valid": false,
 					"subtitle": invalidSubtitle,
 				},
-				"alt": { "subtitle": "⌥: Copy URL" },
+				"alt": { "subtitle": "⌥: Copy URL" + isDiscordReady },
 			},
 		});
 	});
