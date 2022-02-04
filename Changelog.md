@@ -1,3 +1,6 @@
+- 2022-02-04	release 2.20.3
+- 2022-02-04	Merge pull request #56 from christyray/obackup-fix
+- 2022-02-04	Change condition to check files in .trash
 - 2022-02-04	release 2.20.2
 - 2022-02-04	external links copied from ol-search or o-search with shift+return is now also made discord ready
 - 2022-02-02	release 2.20.1
