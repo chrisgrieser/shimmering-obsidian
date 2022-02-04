@@ -3,7 +3,6 @@ nav_order: 2
 ---
 
 # Vault Switcher
-*🆕 version 2.3*
 
 **`ov`: Open `V`aults in Obsidian, Finder, or the Terminal**
 - Select a Vault and press `↵` to open it in Obsidian.
