@@ -13,7 +13,7 @@ cd "$vault"
 mkdir "$vault"/.trash
 
 itemCount=$(ls "$vault"/.trash | wc -l)
-if [[ "$itemCount" != "0" ]] ; then
+if (( ${itemCount} != 0 )) ; then
 	zip -r --quiet "$backup" ./* ./.obsidian/* ./.trash/*
 else
 	zip -r --quiet "$backup" ./* ./.obsidian/*
