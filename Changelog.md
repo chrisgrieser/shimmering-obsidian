@@ -1,3 +1,6 @@
+- 2022-02-04	release 2.20.4
+- 2022-02-04	added info on backup non-warranty for potential legal reasons
+- 2022-02-04	recreate keyword fields ( https://github.com/chrisgrieser/shimmering-obsidian/issues/55#issuecomment-1030300312 )
 - 2022-02-04	release 2.20.3
 - 2022-02-04	Merge pull request #56 from christyray/obackup-fix
 - 2022-02-04	Change condition to check files in .trash
