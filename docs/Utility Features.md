@@ -29,7 +29,7 @@ end tell
 
 ---
 
-⚠️ Please be aware that this is a very simplistic backup solution. While I personally did not have any problems with the backups, this workflow comes without any warranties in case of corrupted backups, as stated in [the license](https://github.com/chrisgrieser/shimmering-obsidian/blob/main/LICENSE). If you need 100% safety, please use professional backup solutions.
+⚠️ Please be aware that this is a very simplistic backup solution. While I personally did not have any problems with the backups, this workflow comes without any warranties in case of corrupted backups, as stated in [the license](https://github.com/chrisgrieser/shimmering-obsidian/blob/main/LICENSE). If you want 100% safety, please use professional backup solutions.
 
 ---
 
