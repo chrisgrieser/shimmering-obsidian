@@ -802,6 +802,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>46A5196E-D0B3-4D06-95AB-93FDA30C175D</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>CD6ADFC6-4DE3-4083-ABD6-A35719BEF5A3</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>4752E9C9-D878-4C0E-AC6A-F39740E2BF8A</key>
 		<array>
 			<dict>
@@ -1353,19 +1366,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>60AA4065-13A9-48FE-ADD4-461B2C7A334C</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>CD6ADFC6-4DE3-4083-ABD6-A35719BEF5A3</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>60DC73A1-43D8-4B35-9A21-5C476D863A73</key>
 		<array>
 			<dict>
@@ -1880,19 +1880,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>8470509E-0C7E-40E8-8E83-503C00F625FF</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>7EBAA02C-F8A5-48BB-97DA-28E128D766A3</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>860C2D5F-C032-49DF-812C-2973A0E3F3E8</key>
 		<array>
 			<dict>
@@ -2080,6 +2067,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>80F4A804-DF34-4A90-8659-0BFF41513417</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>90B9D6E4-3DA5-43AE-9517-49A1B96BD0A2</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>7EBAA02C-F8A5-48BB-97DA-28E128D766A3</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -9104,6 +9104,29 @@ end tell</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>tell application id "com.runningwithcrayons.Alfred" to set configuration "vault_path" to value "{query}" in workflow (system attribute "alfred_workflow_bundleid")</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>scripts/osetup_2.js</string>
+				<key>type</key>
+				<integer>8</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>CD6ADFC6-4DE3-4083-ABD6-A35719BEF5A3</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>alfredfiltersresults</key>
 				<true/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -9127,7 +9150,7 @@ end tell</string>
 				<key>queuemode</key>
 				<integer>1</integer>
 				<key>runningsubtext</key>
-				<string></string>
+				<string>loading...</string>
 				<key>script</key>
 				<string></string>
 				<key>scriptargtype</key>
@@ -9146,32 +9169,9 @@ end tell</string>
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>60AA4065-13A9-48FE-ADD4-461B2C7A334C</string>
+			<string>46A5196E-D0B3-4D06-95AB-93FDA30C175D</string>
 			<key>version</key>
 			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>68</integer>
-				<key>script</key>
-				<string>tell application id "com.runningwithcrayons.Alfred" to set configuration "vault_path" to value "{query}" in workflow (system attribute "alfred_workflow_bundleid")</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string>scripts/osetup_2.js</string>
-				<key>type</key>
-				<integer>8</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>CD6ADFC6-4DE3-4083-ABD6-A35719BEF5A3</string>
-			<key>version</key>
-			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -9856,7 +9856,7 @@ echo | git pull</string>
 			<key>type</key>
 			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
-			<string>8470509E-0C7E-40E8-8E83-503C00F625FF</string>
+			<string>90B9D6E4-3DA5-43AE-9517-49A1B96BD0A2</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -10237,7 +10237,7 @@ Donate:   https://ko-fi.com/pseudometa</string>
 		<key>24262C18-419C-4D91-8673-4C0BB27F31DA</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>9</integer>
+			<integer>3</integer>
 			<key>xpos</key>
 			<integer>465</integer>
 			<key>ypos</key>
@@ -10642,6 +10642,15 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>ypos</key>
 			<integer>7040</integer>
 		</dict>
+		<key>46A5196E-D0B3-4D06-95AB-93FDA30C175D</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>xpos</key>
+			<integer>15</integer>
+			<key>ypos</key>
+			<integer>7685</integer>
+		</dict>
 		<key>4752E9C9-D878-4C0E-AC6A-F39740E2BF8A</key>
 		<dict>
 			<key>colorindex</key>
@@ -11035,15 +11044,6 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>ypos</key>
 			<integer>770</integer>
 		</dict>
-		<key>60AA4065-13A9-48FE-ADD4-461B2C7A334C</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>11</integer>
-			<key>xpos</key>
-			<integer>10</integer>
-			<key>ypos</key>
-			<integer>7685</integer>
-		</dict>
 		<key>60DC73A1-43D8-4B35-9A21-5C476D863A73</key>
 		<dict>
 			<key>colorindex</key>
@@ -11421,15 +11421,6 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>ypos</key>
 			<integer>2470</integer>
 		</dict>
-		<key>8470509E-0C7E-40E8-8E83-503C00F625FF</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>11</integer>
-			<key>xpos</key>
-			<integer>15</integer>
-			<key>ypos</key>
-			<integer>9260</integer>
-		</dict>
 		<key>85FB81E3-166A-4AFB-A0F4-E9ADF2A6DBAB</key>
 		<dict>
 			<key>colorindex</key>
@@ -11627,6 +11618,15 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<integer>880</integer>
 			<key>ypos</key>
 			<integer>5180</integer>
+		</dict>
+		<key>90B9D6E4-3DA5-43AE-9517-49A1B96BD0A2</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>xpos</key>
+			<integer>20</integer>
+			<key>ypos</key>
+			<integer>9260</integer>
 		</dict>
 		<key>92307BE0-68AE-451F-9850-FE01218229BF</key>
 		<dict>
