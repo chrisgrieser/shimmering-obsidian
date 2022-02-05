@@ -59,6 +59,6 @@ Type `!oversion` in any text field, and Alfred will output your current Mac and 
 ## Browse Obsidian via Terminal
 Do want to navigate your vault from within the Terminal? [Have a look.](https://gist.github.com/chrisgrieser/4e4d21d701f70b0eef5e25496583e38e)
 
-![Vault Navigation in the Terminal](images/terminal-vault-navigation/.png)
+![Vault Navigation in the Terminal](images/terminal-vault-navigation.png)
 
 (Thanks to `@jack of some trades`.)
