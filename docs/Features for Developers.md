@@ -13,6 +13,7 @@ nav_order: 2
 - [Vault-related features](#vault-related-features)
 - [Beta Plugins](#beta-plugins)
 - [Obsidian Version Information](#obsidian-version-information)
+- [Browse Obsidian via Terminal](#browse-obsidian-via-terminal)
 
 <!-- /MarkdownTOC -->
 
@@ -54,3 +55,10 @@ Refer to the section on [Settings & Local Plugin Search](Settings%20and%20Local%
 ## Obsidian Version Information
 **Snippet Trigger: `!oversion`**
 Type `!oversion` in any text field, and Alfred will output your current Mac and Obsidian version. Useful for people frequently creating bug reports.
+
+## Browse Obsidian via Terminal
+Do want to navigate your vault from within the Terminal? [Have a look.](https://gist.github.com/chrisgrieser/4e4d21d701f70b0eef5e25496583e38e)
+
+![Vault Navigation in the Terminal](images/terminal-vault-navigation/.png)
+
+(Thanks to `@jack of some trades`.)
