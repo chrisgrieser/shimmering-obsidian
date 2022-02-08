@@ -1,3 +1,6 @@
+- 2022-02-08	release 2.20.5
+- 2022-02-08	fix encoding issues when appending to a heading with scratchpad command
+- 2022-02-05	added info on navigating vault via Terminal
 - 2022-02-04	release 2.20.4
 - 2022-02-04	added info on backup non-warranty for potential legal reasons
 - 2022-02-04	recreate keyword fields ( https://github.com/chrisgrieser/shimmering-obsidian/issues/55#issuecomment-1030300312 )

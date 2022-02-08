@@ -12667,7 +12667,7 @@ DOUBLE CLICK THIS to set hotkey.</string>
 		<string>backup_destination</string>
 	</array>
 	<key>version</key>
-	<string>2.20.4</string>
+	<string>2.20.5</string>
 	<key>webaddress</key>
 	<string>https://chris-grieser.de/</string>
 </dict>
