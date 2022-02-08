@@ -5,7 +5,6 @@ nav_order: 2
 <img src="https://user-images.githubusercontent.com/73286100/142665796-c588ec37-97b2-446a-841c-e19a92ecaa22.gif" alt="Screen Recording 2021-11-19 at 18 21 21" width=60%>
 
 # Settings & Local Plugin Search
-*Introduced in version 2.1*
 
 **`o,`: Search and directly open specific setting tabs.[^1]**
 - The search includes Obsidian main settings, quick access to the plugin and theme browser, as well as settings for plugins. Press `↵` to open the respective setting *directly*.
