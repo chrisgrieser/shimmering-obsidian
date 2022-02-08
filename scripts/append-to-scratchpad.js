@@ -16,20 +16,10 @@ function run (argv) {
 	}
 
 	function writeToFile(text, file, overwriteExistingContent) {
-		try {
-			const openedFile = app.openForAccess(Path(file.toString()), { writePermission: true });
-			if (overwriteExistingContent) app.setEof(openedFile, { to: 0 });
-			app.write(text, { to: openedFile, startingAt: app.getEof(openedFile) });
-			app.closeAccess(openedFile);
-			return true;
-		}
-		catch (error) {
-			try { app.closeAccess(file) }
-			catch (error_) {console.log(`Couldn't close file: ${error_}`) }
-			return false;
-		}
+		let writingType = ">";
+		if (!overwriteExistingContent) writingType += ">";
+		app.doShellScript ("echo \"" + text + "\" "+ writingType + " \"" + file + "\"");
 	}
-
 
 	let heading = "";
 	let scratchpadRelPath = $.getenv("scratchpad_note_path");
@@ -47,6 +37,7 @@ function run (argv) {
 
 	const toAppend = $.getenv("scratchpad_append_prefix") + argv.join("");
 
+	console.log(scratchpadAbsPath);
 	if (scratchpadHasHeading) {
 		const scratchpadLines = readFile(scratchpadAbsPath).split("\n");
 		const scratchpadLinesTemp = scratchpadLines

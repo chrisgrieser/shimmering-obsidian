@@ -9952,23 +9952,26 @@ echo -n "Obsidian ""$(ls ~"/Library/Application Support/obsidian/"*".asar" | egr
 -------------
 https://github.com/chrisgrieser/shimmering-obsidian/blob/main/README.md
 
-
 Changelog
 ---------
 https://github.com/chrisgrieser/shimmering-obsidian/blob/main/Changelog.md
-
 
 Breaking Changes
 ----------------
 https://github.com/chrisgrieser/shimmering-obsidian/blob/main/documentation/Breaking%20Changes.md
 
+Navigate Obsidan via the Terminal
+---------------------------------
+https://gist.github.com/chrisgrieser/4e4d21d701f70b0eef5e25496583e38e
 
-Credits
+Contact
 -------
 Discord:  pseudometa#9546
 Academic: https://chris-grieser.de/
+ResGate:  https://www.researchgate.net/profile/Christopher-Grieser
 GitHub:   https://github.com/chrisgrieser/
 Twitter:  @pseudo_meta
+LinkedIn: https://www.linkedin.com/in/christopher-grieser-ba693b17a/
 Donate:   https://ko-fi.com/pseudometa</string>
 	<key>uidata</key>
 	<dict>
