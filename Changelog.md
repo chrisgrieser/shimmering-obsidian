@@ -1,3 +1,5 @@
+- 2022-02-12	release 2.21.1
+- 2022-02-12	update readme
 - 2022-02-12	release 2.21.0
 - 2022-02-12	also use o search as fallback search for Alfred
 - 2022-02-08	release 2.20.5
