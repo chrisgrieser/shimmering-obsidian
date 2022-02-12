@@ -86,4 +86,4 @@ You can change the default terminal used by this workflow [in the Alfred Setting
 
 ## Metadata Extractor Plugin Configuration
 - **⚠️ Do not change any of the default values how the metadata extractor names its output files and where they are placed — otherwise this workflow won't be able to find them.**
-- The _only_ setting you can change is the one regarding the automatic refreshing of the metadata files. The higher the frequency, the more accurate the Quick Switcher of this Alfred workflow will become. You can also use `oupdate → Set Metadata Update Frequency` to change this setting via Alfred.
+- The *only* setting you can change is the one regarding the automatic refreshing of the metadata files. The higher the frequency, the more accurate the Quick Switcher of this Alfred workflow will become. You can also use `oupdate → Set Metadata Update Frequency` to change this setting via Alfred.

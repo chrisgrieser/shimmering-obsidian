@@ -27,8 +27,8 @@ nav_order: 2
 	- Press `⌥ + ↵` to copy the plugin URI (`obsidian://show-plugin?id=...`) to your clipboard. When Discord is the frontmost app, the copied link will be surrounded with `<` `>` for more convenient pasting in the Discord Desktop app (disables auto-preview).
 	- `⇧ + ↵` to display & search the GitHub issues. See [the section below](#-Searching-GitHub-Issues) for more information.
 	- *Holding* `⌃` will display download numbers, author, and plugin ID.[^2] This is useful, when the plugin description is so long, that you cannot see this anymore.
-	- _⚙️ For developers:_ Use `fn + ↵` to clone the GitHub Repository into the folder specified in the [workflow configuration](Workflow%20Configuration.md#Plugin-and-Theme-Search) (`download_folder_path`) via `git clone` (http).
-	- _⚙️ For developers:_ *Pressing* `⌃ + ↵` will copy the plugin ID to the clipboard.
+	- *⚙️ For developers:* Use `fn + ↵` to clone the GitHub Repository into the folder specified in the [workflow configuration](Workflow%20Configuration.md#Plugin-and-Theme-Search) (`download_folder_path`) via `git clone` (http).
+	- *⚙️ For developers:* *Pressing* `⌃ + ↵` will copy the plugin ID to the clipboard.
 - Only plugins officially included in the community plugins are displayed — plugins solely available via GitHub or still in review are not shown.
 - Add `plugin` to the search query to only display themes, e.g., use `op focus plugin` as search query to only display *plugins* with the term `focus`.
 - The `op` search will also consider the name of the plugin's author, meaning the query `op JaneDoe` will return all plugins (and themes) authored by the user `JaneDoe`.
@@ -42,7 +42,7 @@ nav_order: 2
 	- Press `⌥ + ↵` to copy the GitHub repository URL to your clipboard. When Discord is the frontmost app, the copied link will be surrounded with `<` `>` for more convenient pasting in the Discord Desktop app (disables auto-preview).
 	- `⇧ + ↵` to display & search the GitHub issues. See [the section below](#-Searching-GitHub-Issues) for more information.
 	- Use `⇧` or `⌘ + Y` to open a Quick Look Preview of the theme's promo screenshot. Press `⇧` or `⌘ + Y` again to close the preview.
-	- _🎨 For Theme Designers:_ Use `fn + ↵` to download the main .css file of the theme into the folder specified in the [workflow configuration](Workflow%20Configuration.md#Plugin-and-Theme-Search) (`download_folder_path`).
+	- *🎨 For Theme Designers:* Use `fn + ↵` to download the main .css file of the theme into the folder specified in the [workflow configuration](Workflow%20Configuration.md#Plugin-and-Theme-Search) (`download_folder_path`).
 - Only themes officially included in the community themes are displayed — themes solely available via GitHub or still in review are not shown.
 - Add `theme` to the search query to only display themes, e.g., use `op focus theme` as search query to only display *themes* with the term `focus`.
 - The `op` search will also consider the name of the theme's author, meaning the query `op JaneDoe` will return all themes (and plugins) authored by the user `JaneDoe`.

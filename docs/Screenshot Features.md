@@ -35,7 +35,7 @@ brew install tesseract
 brew install tesseract-lang # for non-English languages
 ```
 
-💡 _The first time you use the OCR or image screenshot feature_, you might need to give Alfred permission to record your screen. You can do so under the macOS system settings (see image below).
+💡 *The first time you use the OCR or image screenshot feature*, you might need to give Alfred permission to record your screen. You can do so under the macOS system settings (see image below).
 
 <img src="https://user-images.githubusercontent.com/73286100/131231644-a800c0b0-8dc2-4ae9-bd41-c3937741b94a.png" alt="Permissions for OCR Screenshots" width=35%>
 

@@ -16,9 +16,9 @@ nav_order: 2
 
 ## Create a new Note
 **`on`: Create a `n`ew note.**
-- __File Name:__ Anything you type after the keyword `on` (e.g., `on foobar`) will become the filename of the new note (e.g., `foobar.md`).
-- __Content:__ The [workflow configuration](Workflow%20Configuration.md#note-related-features) (`template_note_path`) determines the content of the new note.
-- 🆕 __Location:__ The new note will be placed in the folder specific in the [workflow configuration](Workflow%20Configuration.md#note-related-features) `new_note_location`. If the configuration is left empty, it will be placed in your vault root.
+- **File Name:** Anything you type after the keyword `on` (e.g., `on foobar`) will become the filename of the new note (e.g., `foobar.md`).
+- **Content:** The [workflow configuration](Workflow%20Configuration.md#note-related-features) (`template_note_path`) determines the content of the new note.
+- 🆕 **Location:** The new note will be placed in the folder specific in the [workflow configuration](Workflow%20Configuration.md#note-related-features) `new_note_location`. If the configuration is left empty, it will be placed in your vault root.
 - This command also works with Obsidian not running (in which case it will open Obsidian after note creation).
 - If you have set the [workflow configuration](Workflow%20Configuration.md#note-related-features) `use_quickadd` to `true`, this command will instead trigger the [QuickAdd Plugin](https://github.com/chhoumann/quickadd). Anything you type after the keyword `on` (e.g., `on foobar`) will be passed to search the QuickAdd choices. File Name, Location, and Content will be determined by QuickAdd and not this workflow.
 

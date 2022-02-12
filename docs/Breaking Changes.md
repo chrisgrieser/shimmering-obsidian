@@ -69,7 +69,7 @@ After updating to version 2.9+, you need to re-run `osetup` once.
 ❗️ After installation, you need to run the `osetup` command once. You are prompted to select the vault you want to control and Obsidian will restart. Then you are ready to go.
 
 ### Other breaking Changes when updating from v. 1.x to 2.x
-- the previous `ot` command to open the current theme has been **removed** to avoid overlap with the new tag search – the command id now called via the `ocss` command.
+- the previous `ot` command to open the current theme has been __removed__ to avoid overlap with the new tag search – the command id now called via the `ocss` command.
 - the previous `otrash` command to open the current theme has been renamed to `o.`, to avoid crowding the `ot` keyword. For consistency, and simplicity, `o.obsidian` is now also accessible via `o.`
 - keyword `odefault` replaced with `ocheat`
 - forum search renamed to `of` because `oh` became too crowded

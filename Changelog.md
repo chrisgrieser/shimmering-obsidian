@@ -1,3 +1,5 @@
+- 2022-02-12	release 2.21.0
+- 2022-02-12	also use o search as fallback search for Alfred
 - 2022-02-08	release 2.20.5
 - 2022-02-08	fix encoding issues when appending to a heading with scratchpad command
 - 2022-02-05	added info on navigating vault via Terminal

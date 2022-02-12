@@ -10,7 +10,7 @@ nav_order: 2
 - The search includes Obsidian main settings, quick access to the plugin and theme browser, as well as settings for plugins. Press `↵` to open the respective setting *directly*.
 - The search smartly matches also the content of the respective settings tabs, e.g. the query `o, readable line` will show the Editor Settings, since the "Readable line length" option can be found there.
 - `⌥ + ↵` will open the local plugin folder in `.obsidian/plugins/` in Finder.
-- _⚙️ For developers:_
+- *⚙️ For developers:*
 	- `⌘ + ↵` will open browse the local plugin folder in your default Terminal.[^2]
 	- `⌃ + ↵` copies the plugin's id. (Hold `⌃` to see the plugin's id.)
 	- `fn + ↵` runs `git pull` in the plugin's directory.
