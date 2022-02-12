@@ -10,7 +10,6 @@ nav_order: 2
 - [Open & Create your CSS Files](#open--create-your-css-files)
 - [Theme Search](#theme-search)
 - [Quick SVG Data URI Conversion](#quick-svg-data-uri-conversion)
-- [For Theme Designers: Quick Font File Conversion](#for-theme-designers-quick-font-file-conversion)
 - [For Theme Designers: Cheat Sheets](#for-theme-designers-cheat-sheets)
 
 <!-- /MarkdownTOC -->
@@ -36,13 +35,6 @@ nav_order: 2
 - ❗️ This command requires [`mini-svg-data-uri`](https://www.npmjs.com/package/mini-svg-data-uri), which you can easily install via `npm -g install mini-svg-data-uri`.
 
 ![SVG to Data URI Conversion](https://user-images.githubusercontent.com/73286100/144687883-102e4e1b-6227-4b56-afce-416ca0b08b80.gif)
-
-## For Theme Designers: Quick Font File Conversion
-**`Triggered via Universal Action`: Convert a font file to CSS with base64.**
-- This will take the selected font file (e.g., `.tff` or `.woff`), convert them into base64, prompt you for the correct format, and copies base64-encoded font wrapped in CSS into your clipboard.
-- See the Alfred Documentation on how to use [Universal Actions](https://www.alfredapp.com/universal-actions/).
-
-<img src="https://i.imgur.com/q0vKXzT.gif" alt="Conversion of CSS via universal command" width=60%>
 
 ## For Theme Designers: Cheat Sheets
 **`oc`: Quickly Access Various Cheat Sheets for designing themes in Obsidian.**

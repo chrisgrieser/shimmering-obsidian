@@ -7,6 +7,7 @@ nav_order: 2
 ## Table of Contents
 <!-- MarkdownTOC -->
 
+- [Version 2.21.1](#version-2211)
 - [Version 2.20](#version-220)
 - [Version 2.17](#version-217)
 - [Version 2.15](#version-215)
@@ -23,6 +24,9 @@ nav_order: 2
 	- [Other breaking Changes when updating from v. 1.x to 2.x](#other-breaking-changes-when-updating-from-v-1x-to-2x)
 
 <!-- /MarkdownTOC -->
+## Version 2.21.1
+- Removed Quick Font File Conversion, since [Transfonter](https://transfonter.org/) provides better options for it.
+
 ## Version 2.20
 - command `osvg` switched to snippet trigger `!osvg` (type `!osvg` into any text field).
 - [Scratchpad](Note-related%20Features.md#Scratchpad) now has the independent appending prefix `scratchpad_append_prefix`.

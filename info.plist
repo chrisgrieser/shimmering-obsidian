@@ -137,19 +137,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>0E50A3A3-8D61-48DF-964A-854927545A4A</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>76BEB33A-CAE6-4776-A792-565E25257509</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>0E7DC543-BCFD-4F7B-864B-C4BBF40DD8BB</key>
 		<array>
 			<dict>
@@ -1750,19 +1737,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>76BEB33A-CAE6-4776-A792-565E25257509</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>A0215838-3769-4AD8-9444-299898E71DBA</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>76EF97C3-981D-466E-BA90-47D34129BE96</key>
 		<array>
 			<dict>
@@ -1911,19 +1885,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>64249F79-8A34-461C-A40E-9BC13FD3D4B4</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>87D648B1-066F-4D31-9215-70F290E8083A</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>ABAE5888-8D73-4B5D-A1B5-7A38049CC2A5</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -2229,19 +2190,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>A0215838-3769-4AD8-9444-299898E71DBA</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>8BCCDAB5-C842-48E7-985D-4D4FD0454360</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>A170DF0F-C1AD-46DF-9738-FF54AA497695</key>
 		<array>
 			<dict>
@@ -2364,19 +2312,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>569B6FA7-2D27-4250-9937-AEC7F8947206</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>ABAE5888-8D73-4B5D-A1B5-7A38049CC2A5</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>E1CCF08A-004B-47A3-93AA-151CF2EB7236</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -2719,19 +2654,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>C66650E3-CAD7-4141-912D-2C6E02BAA9F9</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>E001E52F-8242-4F82-872C-35F2D477BBBF</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>C9530BAC-970D-40F4-B79B-8A3D866EAE47</key>
 		<array>
 			<dict>
@@ -3014,45 +2936,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>16A2C5C4-4D7B-4854-96CF-E21ADE3A612F</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>DFEBE352-DF83-4B38-BBC5-A2B2FC8A6281</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>C66650E3-CAD7-4141-912D-2C6E02BAA9F9</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>E001E52F-8242-4F82-872C-35F2D477BBBF</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>87D648B1-066F-4D31-9215-70F290E8083A</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>E1CCF08A-004B-47A3-93AA-151CF2EB7236</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>0E50A3A3-8D61-48DF-964A-854927545A4A</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -4338,121 +4221,6 @@ app.openLocation(urlscheme);</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>acceptsmulti</key>
-				<integer>0</integer>
-				<key>filetypes</key>
-				<array>
-					<string>dyn.ah62d4rv4ge80n55y</string>
-					<string>dyn.ah62d4rv4ge81s55gq2</string>
-					<string>dyn.ah62d4rv4ge81s55gq23a</string>
-					<string>public.opentype-font</string>
-					<string>public.truetype-collection-font</string>
-					<string>public.truetype-ttf-font</string>
-				</array>
-				<key>name</key>
-				<string>Convert Font to Base64</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.action</string>
-			<key>uid</key>
-			<string>DFEBE352-DF83-4B38-BBC5-A2B2FC8A6281</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>autopaste</key>
-				<false/>
-				<key>clipboardtext</key>
-				<string>@font-face {
-	font-family: "{query}";
-	font-display: swap;
-	src:
-		url("data:font/{var:format};charset=utf-8;base64,{var:base64}")
-		format("{var:format}");
-}
-</string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>transient</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>76BEB33A-CAE6-4776-A792-565E25257509</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>subtext</key>
-				<string>e.g. 'woff2' or 'TrueType'</string>
-				<key>text</key>
-				<string>Format: '{query}'</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>ABAE5888-8D73-4B5D-A1B5-7A38049CC2A5</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<true/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string>copied to the clipboard</string>
-				<key>title</key>
-				<string>✅ Font converted to base64</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>A0215838-3769-4AD8-9444-299898E71DBA</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>base64encoded=`base64 "{query}" | sed -E 's/^$//g'`
-
-echo -n "$base64encoded"</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>5</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>E001E52F-8242-4F82-872C-35F2D477BBBF</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>matchmode</key>
 				<integer>1</integer>
 				<key>matchstring</key>
@@ -4470,87 +4238,6 @@ echo -n "$base64encoded"</string>
 			<string>D3A5EAC3-A2D8-4186-8B20-892495845C0E</string>
 			<key>version</key>
 			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string></string>
-				<key>passthroughargument</key>
-				<false/>
-				<key>variables</key>
-				<dict>
-					<key>base64</key>
-					<string>{query}</string>
-				</dict>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>87D648B1-066F-4D31-9215-70F290E8083A</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>matchmode</key>
-				<integer>1</integer>
-				<key>matchstring</key>
-				<string>.*?([^\/]*)\.\w+$</string>
-				<key>regexcaseinsensitive</key>
-				<false/>
-				<key>regexmultiline</key>
-				<false/>
-				<key>replacestring</key>
-				<string>$1</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.replace</string>
-			<key>uid</key>
-			<string>0E50A3A3-8D61-48DF-964A-854927545A4A</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string>{query}</string>
-				<key>passthroughargument</key>
-				<true/>
-				<key>variables</key>
-				<dict>
-					<key>filepath</key>
-					<string>{query}</string>
-				</dict>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>C66650E3-CAD7-4141-912D-2C6E02BAA9F9</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string>{var:filepath}</string>
-				<key>passthroughargument</key>
-				<false/>
-				<key>variables</key>
-				<dict>
-					<key>format</key>
-					<string>{query}</string>
-				</dict>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>E1CCF08A-004B-47A3-93AA-151CF2EB7236</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -10111,15 +9798,6 @@ Donate:   https://ko-fi.com/pseudometa</string>
 			<key>ypos</key>
 			<integer>6955</integer>
 		</dict>
-		<key>0E50A3A3-8D61-48DF-964A-854927545A4A</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>xpos</key>
-			<integer>635</integer>
-			<key>ypos</key>
-			<integer>1335</integer>
-		</dict>
 		<key>0E7DC543-BCFD-4F7B-864B-C4BBF40DD8BB</key>
 		<dict>
 			<key>colorindex</key>
@@ -11308,15 +10986,6 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>ypos</key>
 			<integer>4325</integer>
 		</dict>
-		<key>76BEB33A-CAE6-4776-A792-565E25257509</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>xpos</key>
-			<integer>725</integer>
-			<key>ypos</key>
-			<integer>1305</integer>
-		</dict>
 		<key>76EF97C3-981D-466E-BA90-47D34129BE96</key>
 		<dict>
 			<key>colorindex</key>
@@ -11503,15 +11172,6 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<integer>625</integer>
 			<key>ypos</key>
 			<integer>2045</integer>
-		</dict>
-		<key>87D648B1-066F-4D31-9215-70F290E8083A</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>xpos</key>
-			<integer>380</integer>
-			<key>ypos</key>
-			<integer>1335</integer>
 		</dict>
 		<key>87F25EEF-FBA4-4F94-AAEF-DBA71CD066AC</key>
 		<dict>
@@ -11764,15 +11424,6 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>ypos</key>
 			<integer>4720</integer>
 		</dict>
-		<key>A0215838-3769-4AD8-9444-299898E71DBA</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>xpos</key>
-			<integer>905</integer>
-			<key>ypos</key>
-			<integer>1305</integer>
-		</dict>
 		<key>A170DF0F-C1AD-46DF-9738-FF54AA497695</key>
 		<dict>
 			<key>colorindex</key>
@@ -11868,17 +11519,6 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<integer>25</integer>
 			<key>ypos</key>
 			<integer>5580</integer>
-		</dict>
-		<key>ABAE5888-8D73-4B5D-A1B5-7A38049CC2A5</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>note</key>
-			<string>font format</string>
-			<key>xpos</key>
-			<integer>440</integer>
-			<key>ypos</key>
-			<integer>1305</integer>
 		</dict>
 		<key>AC3931E7-5D73-42C4-8975-1E4B4DB66B69</key>
 		<dict>
@@ -12113,15 +11753,6 @@ DOUBLE CLICK THIS to set hotkey.</string>
 			<key>ypos</key>
 			<integer>2565</integer>
 		</dict>
-		<key>C66650E3-CAD7-4141-912D-2C6E02BAA9F9</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>xpos</key>
-			<integer>190</integer>
-			<key>ypos</key>
-			<integer>1335</integer>
-		</dict>
 		<key>C9530BAC-970D-40F4-B79B-8A3D866EAE47</key>
 		<dict>
 			<key>colorindex</key>
@@ -12320,37 +11951,6 @@ DOUBLE CLICK THIS to set hotkey.</string>
 			<integer>190</integer>
 			<key>ypos</key>
 			<integer>3355</integer>
-		</dict>
-		<key>DFEBE352-DF83-4B38-BBC5-A2B2FC8A6281</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>note</key>
-			<string>Use Universal Action (Alfred 4.5) to trigger the base64 conversion</string>
-			<key>xpos</key>
-			<integer>20</integer>
-			<key>ypos</key>
-			<integer>1305</integer>
-		</dict>
-		<key>E001E52F-8242-4F82-872C-35F2D477BBBF</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>note</key>
-			<string>base64 encoding</string>
-			<key>xpos</key>
-			<integer>245</integer>
-			<key>ypos</key>
-			<integer>1305</integer>
-		</dict>
-		<key>E1CCF08A-004B-47A3-93AA-151CF2EB7236</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>xpos</key>
-			<integer>575</integer>
-			<key>ypos</key>
-			<integer>1335</integer>
 		</dict>
 		<key>E24806C9-408F-4504-B601-DED0239F88FD</key>
 		<dict>
