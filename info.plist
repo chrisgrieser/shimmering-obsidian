@@ -553,6 +553,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>341089EA-5936-4C81-ADE8-ECF290EA808D</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>5FECA0A1-6B1F-419D-8159-77F3A96C540F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>34BBC261-A060-4D58-BB81-26428117292E</key>
 		<array>
 			<dict>
@@ -5404,19 +5417,6 @@ return "{query}"</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>triggerid</key>
-				<string>browser-folder-loop</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.external</string>
-			<key>uid</key>
-			<string>C60C1880-E166-4304-A913-7E307B365032</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>conditions</key>
 				<array>
 					<dict>
@@ -5826,6 +5826,32 @@ cat "$vault_path"/"$template_note_path"</string>
 			<string>alfred.workflow.trigger.external</string>
 			<key>uid</key>
 			<string>E2A349EC-FD2E-4562-A58E-8D47A46956F6</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>triggerid</key>
+				<string>browser-folder-loop</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.external</string>
+			<key>uid</key>
+			<string>C60C1880-E166-4304-A913-7E307B365032</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>text</key>
+				<string>Search Vault: '{query}'</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.fallback</string>
+			<key>uid</key>
+			<string>341089EA-5936-4C81-ADE8-ECF290EA808D</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -10436,6 +10462,15 @@ Donate:   https://ko-fi.com/pseudometa</string>
 			<key>ypos</key>
 			<integer>3805</integer>
 		</dict>
+		<key>341089EA-5936-4C81-ADE8-ECF290EA808D</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>2</integer>
+			<key>xpos</key>
+			<integer>25</integer>
+			<key>ypos</key>
+			<integer>2565</integer>
+		</dict>
 		<key>34BBC261-A060-4D58-BB81-26428117292E</key>
 		<dict>
 			<key>colorindex</key>
@@ -11023,7 +11058,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>note</key>
 			<string>quicksearch note</string>
 			<key>xpos</key>
-			<integer>20</integer>
+			<integer>45</integer>
 			<key>ypos</key>
 			<integer>2335</integer>
 		</dict>
@@ -12076,7 +12111,7 @@ DOUBLE CLICK THIS to set hotkey.</string>
 			<key>xpos</key>
 			<integer>190</integer>
 			<key>ypos</key>
-			<integer>2190</integer>
+			<integer>2565</integer>
 		</dict>
 		<key>C66650E3-CAD7-4141-912D-2C6E02BAA9F9</key>
 		<dict>

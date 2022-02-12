@@ -18,8 +18,10 @@ The Alfred-based Quick Switcher is basically an enhanced version of [Obsidian's 
 - [Search Notes via their Tags](#search-notes-via-their-tags)
 - [Search Starred Files](#search-starred-files)
 - [Search Recent Files](#search-recent-files)
-- [Recommended Alfred Setting](#recommended-alfred-setting)
-- [QLMarkdown or Peek?](#qlmarkdown-or-peek)
+- [Vault Search as Alfred Fallback](#vault-search-as-alfred-fallback)
+- [Previewing Notes via Quicklook](#previewing-notes-via-quicklook)
+	- [Hotkey Setting](#hotkey-setting)
+	- [QLMarkdown or Peek?](#qlmarkdown-or-peek)
 
 <!-- /MarkdownTOC -->
 
@@ -54,7 +56,7 @@ This command also looks for **aliases**, when they are [defined in the YAML-Head
 
 ### Search for Folders
 When **selecting a folder**, you will **“browse”** the selected folder – this means that you are now searching only for files and folders inside that folder.
-- When browsing a folder, you also have the ⌥ion to create a new note _in that folder_. Will use the template note defined in the [workflow configuration](Workflow%20Configuration.md#New-Note-Creation) `template_note_path`.
+- When browsing a folder, you also have the ⌥ion to create a new note *in that folder*. Will use the template note defined in the [workflow configuration](Workflow%20Configuration.md#New-Note-Creation) `template_note_path`.
 - Furthermore, you can go up and browse the *parent* folder of the current folder. Basically, you can fully navigate the folder structure of your vault via Alfred.
 - Add `folder` to your search query, to only display folders, e.g., `o foobar folder` will only display *folder* that have `foobar` in their name.
 - When you are browsing inside a folder, use the query `..` or the `new` to quickly access the item for going up to the parent folder or creating a new note in that folder, respectively.
@@ -99,12 +101,20 @@ Displayed alongside the other search results are all headings in your vault. Sel
 - Displays recent files that can be actioned on exactly the same way as the search with `o`, i.e., all the modifiers (`⌘/⌃/⌥/fn/⇧ + ↵`) apply the same way.
 - Up to the 10 most recent files are displayed.
 
-## Recommended Alfred Setting
+## Vault Search as Alfred Fallback
+The main search (`o`) can also be used as [Fallback Search for Alfred](https://www.alfredapp.com/help/features/default-results/fallback-searches/), basically a search that shows up when any Alfred search has no result.
+
+![fallback search](images/fallback-search.png)
+
+## Previewing Notes via Quicklook
+
+### Hotkey Setting
+
 - To avoid accidentally triggering the Quick Look feature, I suggest you turn off activating Quick Look via shift and use `⌘ + Y` instead. You can do so with in the Alfred Settings under `Features → Previews`:
 
 <img src="https://i.imgur.com/hDut8wK.png" alt="" width=60%>
 
-## QLMarkdown or Peek?
+### QLMarkdown or Peek?
 [QLmarkdown](https://github.com/sbarex/QLMarkdown) and [Peek](https://apps.apple.com/app/peek-quick-look-extension/id1554235898) both enable previewing of Markdown documents. Peek works with a wide range of other file types than Markdown, but costs around 5€. QLMarkdown is free, but only works for Markdown and requires some minor small setup.
 
 <details>
