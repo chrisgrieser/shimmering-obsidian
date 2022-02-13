@@ -24,16 +24,23 @@ const discordReadyLinks = ["Discord", "Discord PTB", "Discord Canary"]
 	.some(discordApp => SafeApplication(discordApp)?.frontmost());
 const alfredMatcher = (str) => str.replace (/[-()_.]/g, " ") + " " + str + " ";
 const getEnv = (path) => $.getenv(path).replace(/^~/, app.pathTo("home folder"));
-const bratDataJson = getEnv("vault_path") + "/.obsidian/plugins/obsidian42-brat/data.json";
+const pluginFolder = getEnv("vault_path") + "/.obsidian/plugins/";
 
 const jsonArray = [];
-const betaRepos = JSON.parse(readFile(bratDataJson)).pluginList;
+const betaRepos = JSON.parse(readFile(pluginFolder + "obsidian42-brat/data.json")).pluginList;
+const betaManifests = betaRepos
+	.map (repo => {
+		const id = repo.split("/")[1];
+		const author = repo.split("/")[0];
+		const fallback = { name: id, author: author, repo: repo };
 
-betaRepos.forEach(repo => {
+		const manifest = readFile(pluginFolder + id + "/manifest.json");
+		if (!manifest) return fallback;
+		return JSON.parse(manifest);
+	});
 
-	const url = "https://github.com/" + repo;
-	const author = repo.split("/")[0];
-	let name = repo.split("/")[1];
+betaManifests.forEach(manifest => {
+	const url = "https://github.com/" + manifest.repo;
 
 	let isDiscordReady = "";
 	let shareURL = url;
@@ -43,10 +50,10 @@ betaRepos.forEach(repo => {
 	}
 
 	jsonArray.push({
-		"title": name,
-		"subtitle": "by " + author,
-		"match": alfredMatcher (name) + alfredMatcher (author),
-		"arg": url,
+		"title": manifest.name,
+		"subtitle": "by " + manifest.author,
+		"match": alfredMatcher (manifest.name) + alfredMatcher (manifest.author),
+		"arg": "https://github.com/" + manifest.repo,
 		"mods": {
 			"alt": {
 				"arg": shareURL,
