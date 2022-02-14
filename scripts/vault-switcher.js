@@ -19,9 +19,9 @@ const vaultListJson = app.pathTo("home folder") + "/Library/Application Support/
 // get vault paths
 const vaultList = JSON.parse(readFile(vaultListJson)).vaults;
 const vaultArray = [];
+const jsonArray = [];
 for (const hash in vaultList) vaultArray.push(vaultList[hash].path);
 
-	const jsonArray = [];
 vaultArray.forEach(vaultPath => {
 	const vaultName = vaultPath.replace(/.*\//, "");
 	const vaultURI = "obsidian://open?vault=" + encodeURIComponent(vaultName);
