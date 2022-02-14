@@ -21,7 +21,7 @@ const vaultList = JSON.parse(readFile(vaultListJson)).vaults;
 const vaultArray = [];
 for (const hash in vaultList) vaultArray.push(vaultList[hash].path);
 
-const jsonArray = [];
+	const jsonArray = [];
 vaultArray.forEach(vaultPath => {
 	const vaultName = vaultPath.replace(/.*\//, "");
 	const vaultURI = "obsidian://open?vault=" + encodeURIComponent(vaultName);
@@ -52,9 +52,18 @@ jsonArray.push({
 	"arg": "obsidian://advanced-uri?commandid=app%253Aopen-vault",
 	"icon": { "path": "icons/settings.png" },
 	"mods": {
-		"alt": { "valid": false },
-		"cmd": { "valid": false },
-		"shift": { "valid": false }
+		"alt": {
+			"valid": false,
+			"subtitle": "⛔️",
+		},
+		"cmd": {
+			"valid": false,
+			"subtitle": "⛔️",
+		},
+		"shift": {
+			"valid": false,
+			"subtitle": "⛔️",
+		},
 	}
 });
 
