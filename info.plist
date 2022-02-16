@@ -1052,7 +1052,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>9B3822BB-6392-424B-A166-328A7EBCAF30</string>
+				<string>76EF97C3-981D-466E-BA90-47D34129BE96</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -2151,19 +2151,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>9B3822BB-6392-424B-A166-328A7EBCAF30</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>D3A5EAC3-A2D8-4186-8B20-892495845C0E</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>9FE47B9B-DF8D-4062-805C-AD0B98B1C902</key>
 		<array>
 			<dict>
@@ -2737,19 +2724,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>EBDFE697-8466-45B6-9B43-EB7DC83BB404</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>D3A5EAC3-A2D8-4186-8B20-892495845C0E</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>76EF97C3-981D-466E-BA90-47D34129BE96</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -4153,35 +4127,6 @@ mv "$filepath" "$target_folder"</string>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
-				<integer>68</integer>
-				<key>script</key>
-				<string>if application "Obsidian" is running then
-	tell application id "com.runningwithcrayons.Alfred" to set configuration "ObRunning" to value "true" in workflow (system attribute "alfred_workflow_bundleid")
-else
-	tell application id "com.runningwithcrayons.Alfred" to set configuration "ObRunning" to value "false" in workflow (system attribute "alfred_workflow_bundleid")
-end if
-
-return "{query}"</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>6</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>9B3822BB-6392-424B-A166-328A7EBCAF30</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
 				<integer>0</integer>
 				<key>script</key>
 				<string>path="{query}";
@@ -4217,27 +4162,6 @@ app.openLocation(urlscheme);</string>
 			<string>503B3F91-98A0-4357-92F2-A88BD6EDB404</string>
 			<key>version</key>
 			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>matchmode</key>
-				<integer>1</integer>
-				<key>matchstring</key>
-				<string>\n$</string>
-				<key>regexcaseinsensitive</key>
-				<false/>
-				<key>regexmultiline</key>
-				<false/>
-				<key>replacestring</key>
-				<string></string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.replace</string>
-			<key>uid</key>
-			<string>D3A5EAC3-A2D8-4186-8B20-892495845C0E</string>
-			<key>version</key>
-			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -10993,7 +10917,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>note</key>
 			<string>open note / heading</string>
 			<key>xpos</key>
-			<integer>1680</integer>
+			<integer>1510</integer>
 			<key>ypos</key>
 			<integer>1295</integer>
 		</dict>
@@ -11373,17 +11297,6 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>ypos</key>
 			<integer>3555</integer>
 		</dict>
-		<key>9B3822BB-6392-424B-A166-328A7EBCAF30</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>6</integer>
-			<key>note</key>
-			<string>check whether Obsidian is running</string>
-			<key>xpos</key>
-			<integer>1485</integer>
-			<key>ypos</key>
-			<integer>1295</integer>
-		</dict>
 		<key>9DA49FEA-E8E8-41DF-9645-53CC395531A2</key>
 		<dict>
 			<key>colorindex</key>
@@ -11565,7 +11478,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>note</key>
 			<string>OneUpdater (automatic update function)</string>
 			<key>xpos</key>
-			<integer>1950</integer>
+			<integer>1780</integer>
 			<key>ypos</key>
 			<integer>1505</integer>
 		</dict>
@@ -11856,15 +11769,6 @@ DOUBLE CLICK THIS to set hotkey.</string>
 			<key>ypos</key>
 			<integer>1970</integer>
 		</dict>
-		<key>D3A5EAC3-A2D8-4186-8B20-892495845C0E</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>6</integer>
-			<key>xpos</key>
-			<integer>1620</integer>
-			<key>ypos</key>
-			<integer>1325</integer>
-		</dict>
 		<key>D3A85314-C314-49E8-BA70-08DD01FC2E21</key>
 		<dict>
 			<key>colorindex</key>
@@ -12133,7 +12037,7 @@ DOUBLE CLICK THIS to set hotkey.</string>
 			<key>note</key>
 			<string>auto_update</string>
 			<key>xpos</key>
-			<integer>1835</integer>
+			<integer>1665</integer>
 			<key>ypos</key>
 			<integer>1525</integer>
 		</dict>
@@ -12229,8 +12133,6 @@ DOUBLE CLICK THIS to set hotkey.</string>
 	</dict>
 	<key>variables</key>
 	<dict>
-		<key>ObRunning</key>
-		<string>true</string>
 		<key>append_prefix</key>
 		<string>- </string>
 		<key>auto_update</key>
@@ -12292,10 +12194,9 @@ DOUBLE CLICK THIS to set hotkey.</string>
 		<string>use_quickadd</string>
 		<string>h_lvl_ignore</string>
 		<string>vault_name_ENC</string>
-		<string>ObRunning</string>
 		<string>append_prefix</string>
-		<string>scratchpad_note_path</string>
 		<string>vault_path</string>
+		<string>scratchpad_note_path</string>
 		<string>daily_note_append_prefix</string>
 		<string>new_note_location</string>
 		<string>search_ignore_folder</string>
