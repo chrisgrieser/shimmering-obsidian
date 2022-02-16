@@ -4624,7 +4624,7 @@ set parameter to do shell script "echo " &amp; quoted form of (system attribute 
 			<key>config</key>
 			<dict>
 				<key>argumenttype</key>
-				<integer>1</integer>
+				<integer>2</integer>
 				<key>keyword</key>
 				<string>od</string>
 				<key>subtext</key>
@@ -4632,7 +4632,7 @@ set parameter to do shell script "echo " &amp; quoted form of (system attribute 
 				<key>text</key>
 				<string>Open Today's note</string>
 				<key>withspace</key>
-				<true/>
+				<false/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.input.keyword</string>
