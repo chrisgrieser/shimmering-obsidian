@@ -3381,11 +3381,11 @@
 				<key>focusedappvariablename</key>
 				<string></string>
 				<key>hotkey</key>
-				<integer>0</integer>
+				<integer>25</integer>
 				<key>hotmod</key>
-				<integer>0</integer>
+				<integer>1179648</integer>
 				<key>hotstring</key>
-				<string></string>
+				<string>9</string>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -11474,7 +11474,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 		<key>B0B1C61B-93A6-492E-BD07-2F06FB73F410</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>6</integer>
+			<integer>11</integer>
 			<key>note</key>
 			<string>OneUpdater (automatic update function)</string>
 			<key>xpos</key>

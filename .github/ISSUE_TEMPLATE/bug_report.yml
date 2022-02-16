@@ -37,7 +37,7 @@ body:
     id: workflow-configuration
     attributes:
       label: Workflow Configuration
-      description: "Please add a screenshot of all your [workflow environment variables](https://github.com/chrisgrieser/shimmering-obsidian/blob/main/docs/Workflow%20Configuration.md#alfred-environment-variables)."
+      description: "Please add a screenshot of all your [workflow environment variables](https://github.com/chrisgrieser/shimmering-obsidian/blob/main/docs/Workflow%20Configuration.md#alfred-environment-variables). Even if you haven't changed any configuration, please attach them anyway."
     validations:
       required: true
   - type: textarea
@@ -57,5 +57,5 @@ body:
           required: true
         - label: I have read the [Troubleshooting Documentation](https://github.com/chrisgrieser/shimmering-obsidian/blob/main/documentation/Troubleshooting.md).
           required: true
-        - label: If the `o ...` main search does not work, I have tried rerunning `osetup` and it still does not work.
+        - label: If the `o...` main search does not work, I have tried rerunning `osetup` and it still does not work.
           required: true
