@@ -1,3 +1,7 @@
+- 2022-02-16	release 2.21.2
+- 2022-02-16	implement #58
+- 2022-02-14	nicer formatting for vault switcher
+- 2022-02-13	minor improvements to 'obeta'
 - 2022-02-12	release 2.21.1
 - 2022-02-12	update readme
 - 2022-02-12	release 2.21.0
