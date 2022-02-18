@@ -18,6 +18,7 @@ function run (argv) {
 	function writeToFile(text, file, overwriteExistingContent) {
 		let writingType = ">";
 		if (!overwriteExistingContent) writingType += ">";
+		text = text.replaceAll("\"", "\\\"");
 		app.doShellScript ("echo \"" + text + "\" "+ writingType + " \"" + file + "\"");
 	}
 
@@ -37,7 +38,6 @@ function run (argv) {
 
 	const toAppend = $.getenv("scratchpad_append_prefix") + argv.join("");
 
-	console.log(scratchpadAbsPath);
 	if (scratchpadHasHeading) {
 		const scratchpadLines = readFile(scratchpadAbsPath).split("\n");
 		const scratchpadLinesTemp = scratchpadLines
