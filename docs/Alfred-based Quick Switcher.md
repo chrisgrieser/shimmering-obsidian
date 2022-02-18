@@ -88,7 +88,7 @@ Displayed alongside the other search results are all headings in your vault. Sel
 	- Select a tag with `↵` to display & search all notes with that tag.
 	- In the subsequent list of your notes, all the modifiers (`⌘/⌃/⌥/fn/⇧ + ↵`) apply the same way as they do with the `o` search.
 	- Press `⌘ + ↵` instead to open Obsidian's search pane and search for the tag there.
-- If [workflow configuration](/Workflow%20Configuration.md#Alfred-based-Quick-Switcher) `merge_nested_tags` is set to `true`, all nested tags are subsumed under their parent tag, e.g., `#inbox/toread` will be displayed under the `#inbox` tag. When set to `false`, all nested tags are displayed separately.
+- If [workflow configuration](Workflow%20Configuration.md#Alfred-based-Quick-Switcher) `merge_nested_tags` is set to `true`, all nested tags are subsumed under their parent tag, e.g., `#inbox/toread` will be displayed under the `#inbox` tag. When set to `false`, all nested tags are displayed separately.
 
 ## Search Starred Files
 **`os`: Search `s`tarred Files and Searches**

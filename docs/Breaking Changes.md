@@ -63,7 +63,7 @@ After updating to version 2.9+, you need to re-run `osetup` once.
 - removed `ofreq` for simplification, still available via `oupdate → Set Metadata Update Frequency`
 
 ## Version 2.1
-- removed `osettings` command – improved version now available via the command `o,`. See [Settings-Search](Settings%20Search.md).
+- removed `osettings` command – improved version now available via the command `o,`. See [Settings-Search](Settings%20and%20Local%20Plugin%20Search.md).
 
 ## Version 2.0
 

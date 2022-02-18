@@ -40,7 +40,7 @@ end tell
 - `oplugin`: The plugin folder in `.obsidian` folder will be opened in Finder.
 - `ocss`: Open the `themes` and `snippets` folder. (Along with your installed themes and snippets.)
 - Open your vault root with the [Vault Switcher](Vault%20Switcher.md).
-- Open local plugin folders with the [Plugin Settings Search](Settings%20Search.md).
+- Open local plugin folders with the [Plugin Settings Search](Settings%20and%20Local%20Plugin%20Search.md).
 
 ## Carl
 **`ocarl`: Search `carl` auto-responses. 🐢**
@@ -50,5 +50,5 @@ end tell
 **`oupdate`: Update Plugins and Metadata used by this workflow**
 - Update your Community Plugins
 - Update your Beta Plugins (installed via [the BRAT Plugin](https://github.com/TfTHacker/obsidian42-brat))
-- Re-index the data for the [Documentation Search](Documentation%20Search.md).
+- Re-index the data for the [Documentation Search](Documentation%20and%20Forum%20Search.md).
 - Refresh the metadata used for this workflow manually or set an interval to refresh it automatically. See the section on [workflow configuration for more information](Workflow%20Configuration.md#Metadata-Extractor-Configuration)
