@@ -1,3 +1,7 @@
+- 2022-02-18	release 2.21.3
+- 2022-02-18	fix quotation marks not written properly when appending to heading
+- 2022-02-18	added markdown-link-check
+- 2022-02-16	remove obsolete Obrunning Variable
 - 2022-02-16	release 2.21.2
 - 2022-02-16	implement #58
 - 2022-02-14	nicer formatting for vault switcher
