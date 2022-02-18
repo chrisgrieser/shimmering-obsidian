@@ -24,8 +24,8 @@ plutil -replace version -string "$nextVersion" info.plist
 cd "$(dirname "$0")" || exit
 markdownlint --fix ./README.md
 markdownlint --fix docs/*.md
-markmarkdown-link-check -q ./README.md
-markmarkdown-link-check -q docs/*.md
+markdown-link-check -q ./README.md
+find docs -name \*.md -print0 | xargs -0 -n1 markdown-link-check
 
 # -----------------------
 # clean info.plist
