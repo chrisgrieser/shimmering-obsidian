@@ -29,14 +29,16 @@ const pluginFolder = getEnv("vault_path") + "/.obsidian/plugins/";
 const jsonArray = [];
 const betaRepos = JSON.parse(readFile(pluginFolder + "obsidian42-brat/data.json")).pluginList;
 const betaManifests = betaRepos
-	.map (repo => {
-		const id = repo.split("/")[1];
-		const author = repo.split("/")[0];
-		const fallback = { name: id, author: author, repo: repo };
+	.map (repoID => {
+		const id = repoID.split("/")[1];
+		const author = repoID.split("/")[0];
+		const fallback = { name: id, author: author };
 
 		const manifest = readFile(pluginFolder + id + "/manifest.json");
 		if (!manifest) return fallback;
-		return JSON.parse(manifest);
+		const manifestJSON = JSON.parse(manifest);
+		manifestJSON.repo = repoID;
+		return manifestJSON;
 	});
 
 betaManifests.forEach(manifest => {
@@ -53,7 +55,7 @@ betaManifests.forEach(manifest => {
 		"title": manifest.name,
 		"subtitle": "by " + manifest.author,
 		"match": alfredMatcher (manifest.name) + alfredMatcher (manifest.author),
-		"arg": "https://github.com/" + manifest.repo,
+		"arg": url,
 		"mods": {
 			"alt": {
 				"arg": shareURL,
