@@ -168,6 +168,8 @@ In my day job, I am a sociologist studying the social mechanisms underlying the 
 - [ResearchGate](https://www.researchgate.net/profile/Christopher-Grieser)
 - [LinkedIn](https://www.linkedin.com/in/christopher-grieser-ba693b17a/) <!-- markdown-link-check-disable-line -->
 
+*Note that for questions, bug reports, or feature requests for this workflow, it's better if you open an [GitHub issue](https://github.com/chrisgrieser/shimmering-obsidian/issues), since it is better suited for technical support.*
+
 ### 🙏 Donations
 - [PayPal](https://www.paypal.com/paypalme/ChrisGrieser)
 - [Ko-Fi](https://ko-fi.com/pseudometa) <!-- markdown-link-check-disable-line -->
