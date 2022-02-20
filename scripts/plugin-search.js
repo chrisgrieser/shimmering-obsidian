@@ -141,13 +141,11 @@ themeJSON.forEach(theme => {
 		"icon": { "path": "icons/css.png" },
 		"mods": {
 			"shift": { "arg": repo },
+			"cmd":{ "arg": githubURL },
+			"fn": { "arg": cssURL },
 			"alt": {
 				"arg": shareURL,
 				"subtitle": "⌥: Copy GitHub Link" + isDiscordReady
-			},
-			"fn": {
-				"arg": cssURL,
-				"subtitle": "fn: Download Theme CSS",
 			},
 			"ctrl":{
 				"valid": false,

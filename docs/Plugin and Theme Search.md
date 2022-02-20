@@ -38,7 +38,8 @@ nav_order: 2
 
 ## Themes
 **`op`: Combined Search of community `p`lugins and community themes.**
-- Press `↵`[^3] to open the theme's GitHub Repository. (There are no separate theme pages in Obsidian Theme Browser that can be opened.)
+- Press `↵` to open the theme browser. (There are no separate theme pages in Obsidian Theme Browser that can be opened.)
+	- Use `⌘ + ↵` to open the theme's GitHub repository instead.
 	- Press `⌥ + ↵` to copy the GitHub repository URL to your clipboard. When Discord is the frontmost app, the copied link will be surrounded with `<` `>` for more convenient pasting in the Discord Desktop app (disables auto-preview).
 	- `⇧ + ↵` to display & search the GitHub issues. See [the section below](#-Searching-GitHub-Issues) for more information.
 	- Use `⇧` or `⌘ + Y` to open a Quick Look Preview of the theme's promo screenshot. Press `⇧` or `⌘ + Y` again to close the preview.
@@ -62,4 +63,3 @@ nav_order: 2
 
 [^1]: Unfortunately, there isn't enough versioning information for themes to do the same for them.
 [^2]: Accessing the settings of an installed plugin via [the plugin search](Plugin%20and%20Theme%20Search.md) (`op`) via `ctrl + ↵` has been disabled in release 2.4.
-[^3]: For consistency with the plugin search, this also works with `⌘ + ↵`.
