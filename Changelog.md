@@ -1,3 +1,7 @@
+- 2022-02-20	release 2.21.4
+- 2022-02-20	selecting themes with cmd+enter opens their Github, like with plugins
+- 2022-02-19	fix for github urls opened by obeta
+- 2022-02-18	fixed dead links via markdown-link-check
 - 2022-02-18	release 2.21.3
 - 2022-02-18	fix quotation marks not written properly when appending to heading
 - 2022-02-18	added markdown-link-check
