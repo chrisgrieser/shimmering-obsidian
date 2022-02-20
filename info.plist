@@ -9570,7 +9570,9 @@ echo -n "Obsidian ""$(ls ~"/Library/Application Support/obsidian/"*".asar" | egr
 				<key>autopaste</key>
 				<true/>
 				<key>clipboardtext</key>
-				<string>{query}</string>
+				<string>```
+{query}
+```</string>
 				<key>ignoredynamicplaceholders</key>
 				<false/>
 				<key>transient</key>
