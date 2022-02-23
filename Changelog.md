@@ -1,3 +1,6 @@
+- 2022-02-23	release 2.21.5
+- 2022-02-23	oinfo: fallback when .asar is missing (#60)
+- 2022-02-20	!oversion expands as code block now
 - 2022-02-20	release 2.21.4
 - 2022-02-20	selecting themes with cmd+enter opens their Github, like with plugins
 - 2022-02-19	fix for github urls opened by obeta
