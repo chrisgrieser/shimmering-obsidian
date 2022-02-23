@@ -55,7 +55,7 @@ pluginJSON.forEach(plugin => {
 	const openURI = obsiOpenURL + id;
 	let isDiscordReady, shareURL;
 	if (discordReadyLinks) {
-		shareURL = "<" + obsiURI + id + ">";
+		shareURL = "*" + name + "* <" + obsiURI + id + ">";
 		isDiscordReady = " (discord ready)";
 	} else {
 		shareURL = githubURL;
