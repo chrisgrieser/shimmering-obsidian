@@ -22,7 +22,12 @@ function run() {
 	function log (str) { output += str + "\n" }
 
 	const appTempPath = app.pathTo("home folder") + "/Library/Application Support/obsidian/";
-	const obsiVer = app.doShellScript("cd '" + appTempPath + "'; ls *.asar | grep -Eo '(\\d|\\.)*'").slice (0, -1);
+	let obsiVer;
+	try {
+		obsiVer = app.doShellScript("cd '" + appTempPath + "'; ls *.asar | grep -Eo '(\\d|\\.)*'").slice (0, -1);
+	} catch {
+		obsiVer = ".asar file missing";
+	}
 	const macVer = app.doShellScript("sw_vers -productVersion");
 	const advancedUriVer = JSON.parse(readFile(vaultPath + "/.obsidian/plugins/obsidian-advanced-uri/manifest.json")).version;
 	const metadataExVer = JSON.parse(readFile(vaultPath + "/.obsidian/plugins/metadata-extractor/manifest.json")).version;
