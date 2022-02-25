@@ -202,5 +202,11 @@
    "arg": "discord tricks",
    "uid": "discord tricks",
    "match": "discord tricks"
+},
+{
+   "title": "Plugin Security Info",
+   "arg": "plugin security help",
+   "uid": "plugin security help",
+   "match": "plugin security info"
 }
 ]}
