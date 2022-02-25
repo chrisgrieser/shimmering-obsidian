@@ -1,6 +1,6 @@
 #!/usr/bin/env osascript -l JavaScript
 ObjC.import("stdlib");
-app = Application.currentApplication();
+const app = Application.currentApplication();
 app.includeStandardAdditions = true;
 
 function onlineJSON (url) {
@@ -22,7 +22,7 @@ const communityDocsURL = "https://publish.obsidian.md/hub/";
 const communityDocsJSON = onlineJSON("https://api.github.com/repos/obsidian-community/obsidian-hub/git/trees/main?recursive=1");
 
 
-// > OFFICIAL DOCS
+// < OFFICIAL DOCS
 // --------------------------------
 const officialDocs =	officialDocsJSON
 	.tree
@@ -46,20 +46,19 @@ officialDocs.forEach(item => {
 	});
 });
 
-// > HEADINGS of Official Docs
+// < HEADINGS of Official Docs
 // --------------------------------
-
 const documentationHeaders = [];
 officialDocs.forEach(doc => {
 	const docURL = rawGitHubURL + encodeURI(doc.path);
 	const docHeaders = app.doShellScript("curl -sL '" + docURL + "' | grep -E '^#' | cut -d ' ' -f 2-").split("\r");
 
 	// add header to search hits
-	if (docHeaders[0] !== "")
+	if (docHeaders[0] !== "") {
 		docHeaders.forEach(headerName => {
 			documentationHeaders.push (doc.path + "#" + headerName);
 		});
-
+	}
 });
 
 documentationHeaders.forEach(header => {
@@ -77,12 +76,13 @@ documentationHeaders.forEach(header => {
 });
 
 
-// > COMMUNITY DOCS
+// < COMMUNITY DOCS
 //-----------------------------------
 const communityDocs =
 	communityDocsJSON
 		.tree
-		.filter ( item => item.path.slice(-3) === ".md" );
+		.filter (item => item.path.slice(-3) === ".md" )
+		.filter (item => !item.path.startsWith(".github/"));
 
 communityDocs.forEach(item => {
 	const area = item.path.split("/").slice(1, -1).join("/");
@@ -98,6 +98,5 @@ communityDocs.forEach(item => {
 		"arg": url
 	});
 });
-
 
 JSON.stringify({ items: jsonArray });

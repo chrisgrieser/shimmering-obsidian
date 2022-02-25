@@ -3234,18 +3234,6 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>71E0BF31-47DE-49AF-AA5F-FD4E20F5491E</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>sourceoutputuid</key>
-				<string>CB7F055A-B969-4E39-AD4B-7D8D4F4399FB</string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
 				<string>EC424B98-D702-4608-B1EA-07AF49C56048</string>
 				<key>modifiers</key>
 				<integer>0</integer>
@@ -7256,25 +7244,6 @@ fi</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>browser</key>
-				<string></string>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string>{query}</string>
-				<key>utf8</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
-			<key>uid</key>
-			<string>71E0BF31-47DE-49AF-AA5F-FD4E20F5491E</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argumenttype</key>
 				<integer>2</integer>
 				<key>keyword</key>
@@ -7367,20 +7336,6 @@ fi</string>
 						<key>matchcasesensitive</key>
 						<false/>
 						<key>matchmode</key>
-						<integer>4</integer>
-						<key>matchstring</key>
-						<string>^obsidian:*</string>
-						<key>outputlabel</key>
-						<string>URI</string>
-						<key>uid</key>
-						<string>CB7F055A-B969-4E39-AD4B-7D8D4F4399FB</string>
-					</dict>
-					<dict>
-						<key>inputstring</key>
-						<string></string>
-						<key>matchcasesensitive</key>
-						<false/>
-						<key>matchmode</key>
 						<integer>0</integer>
 						<key>matchstring</key>
 						<string>manual_metadata</string>
@@ -7438,7 +7393,7 @@ fi</string>
 				<key>fixedorder</key>
 				<false/>
 				<key>items</key>
-				<string>[{"imagefile":"480f3609e44ea0ceed5bd6bc0fb19a7874881127.png","title":"🅱️ Update Beta Plugins","arg":"obsidian:\/\/advanced-uri?vault={var:vault_name_ENC}&amp;commandid=obsidian42-brat%253ABRAT-checkForUpdatesAndUpdate","subtitle":"requires BRAT Plugin"},{"title":"📓 Re-index Documentation Search","arg":"documentations","subtitle":""},{"title":"🔁 Manually Refresh Metadata","arg":"manual_metadata","subtitle":""},{"title":"🕑 Set Metadata Update Frequency","arg":"metadata_frequency","subtitle":"will restart Obsidian afterwards"}]</string>
+				<string>[{"title":"📓 Re-index Documentation Search","arg":"documentations","subtitle":""},{"title":"🔁 Manually Refresh Metadata","arg":"manual_metadata","subtitle":""},{"title":"🕑 Set Metadata Update Frequency","arg":"metadata_frequency","subtitle":"will restart Obsidian afterwards"}]</string>
 				<key>keyword</key>
 				<string>oupdate</string>
 				<key>runningsubtext</key>
@@ -7446,7 +7401,7 @@ fi</string>
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
-				<string>🔁 Update Plugins &amp; Workflow Functions</string>
+				<string>🔁 Update Workflow Functions</string>
 				<key>withspace</key>
 				<true/>
 			</dict>
@@ -10845,15 +10800,6 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>ypos</key>
 			<integer>7840</integer>
 		</dict>
-		<key>71E0BF31-47DE-49AF-AA5F-FD4E20F5491E</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>xpos</key>
-			<integer>515</integer>
-			<key>ypos</key>
-			<integer>5560</integer>
-		</dict>
 		<key>72551A9E-43E8-4462-9CB0-D5C419B4AEA2</key>
 		<dict>
 			<key>colorindex</key>
@@ -12070,7 +12016,7 @@ DOUBLE CLICK THIS to set hotkey.</string>
 			<key>xpos</key>
 			<integer>175</integer>
 			<key>ypos</key>
-			<integer>5695</integer>
+			<integer>5710</integer>
 		</dict>
 		<key>EFED0DE3-D836-408A-A4AE-2E363E5A7F38</key>
 		<dict>
