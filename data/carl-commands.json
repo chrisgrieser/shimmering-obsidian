@@ -123,7 +123,7 @@
    "title": "get roles",
    "arg": "get roles",
    "uid": "get roles",
-   "match": "get roles"
+   "match": "get roles announcement developer"
 },
 {
    "title": "sync help",
@@ -192,12 +192,6 @@
    "match": "all features of obsidian meme"
 },
 {
-   "title": "Change Server Roles",
-   "arg": "https://discord.com/channels/686053708261228577/702717892533157999/830492034807758859",
-   "uid": "server role",
-   "match": "discord server role developer"
-},
-{
    "title": "discord tricks",
    "arg": "discord tricks",
    "uid": "discord tricks",
@@ -208,5 +202,11 @@
    "arg": "plugin security help",
    "uid": "plugin security help",
    "match": "plugin security info"
+},
+{
+   "title": "'Dev for Hire' role",
+   "arg": "https://discord.com/channels/686053708261228577/840286264964022302/860627666100551721",
+   "uid": "dev for hire",
+   "match": "developer dev for hire role"
 }
 ]}
