@@ -25,6 +25,7 @@ nav_order: 2
 tell application id "com.runningwithcrayons.Alfred"
 	run trigger "backup-obsidian" in workflow "de.chris-grieser.shimmering-obsidian" with argument ""
 end tell
+# pass 'no sound' as argument to turn off backup confirmation sound
 ```
 
 ---

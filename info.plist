@@ -1754,7 +1754,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>F8FA8843-EC3D-45BB-AD77-1F99F2E82DD8</string>
+				<string>7EC2835E-B407-4A6D-9104-B7BFDDF811B9</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1846,6 +1846,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>E5C2C637-CB7C-4C29-8829-6DD7F2901728</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>7EC2835E-B407-4A6D-9104-B7BFDDF811B9</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>F8FA8843-EC3D-45BB-AD77-1F99F2E82DD8</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -2272,7 +2285,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>1E26935C-F1F3-4C69-AEFA-3A0D9D18291F</string>
+				<string>D58F4E6C-BAA2-47E7-91E4-7B2C52FF0D2A</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -2814,6 +2827,19 @@
 				<integer>1048576</integer>
 				<key>modifiersubtext</key>
 				<string>⌘: Search for Tag in Obsidian</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>D58F4E6C-BAA2-47E7-91E4-7B2C52FF0D2A</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>1E26935C-F1F3-4C69-AEFA-3A0D9D18291F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -6435,6 +6461,26 @@ JSON.stringify({ 'items': jsonArray });
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>mode</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>D58F4E6C-BAA2-47E7-91E4-7B2C52FF0D2A</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>keyword</key>
@@ -6566,6 +6612,36 @@ echo "$backup"</string>
 			<string>alfred.workflow.output.playsound</string>
 			<key>uid</key>
 			<string>F8FA8843-EC3D-45BB-AD77-1F99F2E82DD8</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:mode}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>no sound</string>
+						<key>outputlabel</key>
+						<string>no</string>
+						<key>uid</key>
+						<string>FEA7E4E2-00DD-487A-B6A4-1A72E14035C4</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>yes</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>7EC2835E-B407-4A6D-9104-B7BFDDF811B9</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -10969,6 +11045,17 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>ypos</key>
 			<integer>9260</integer>
 		</dict>
+		<key>7EC2835E-B407-4A6D-9104-B7BFDDF811B9</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>note</key>
+			<string>sound</string>
+			<key>xpos</key>
+			<integer>750</integer>
+			<key>ypos</key>
+			<integer>4205</integer>
+		</dict>
 		<key>80F4A804-DF34-4A90-8659-0BFF41513417</key>
 		<dict>
 			<key>colorindex</key>
@@ -11739,6 +11826,15 @@ DOUBLE CLICK THIS to set hotkey.</string>
 			<key>ypos</key>
 			<integer>2860</integer>
 		</dict>
+		<key>D58F4E6C-BAA2-47E7-91E4-7B2C52FF0D2A</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>xpos</key>
+			<integer>170</integer>
+			<key>ypos</key>
+			<integer>3980</integer>
+		</dict>
 		<key>D80CA78B-B320-4895-AECD-874B584EB863</key>
 		<dict>
 			<key>colorindex</key>
@@ -12065,7 +12161,7 @@ DOUBLE CLICK THIS to set hotkey.</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>740</integer>
+			<integer>820</integer>
 			<key>ypos</key>
 			<integer>4185</integer>
 		</dict>
