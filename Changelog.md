@@ -1,3 +1,4 @@
+- 2022-03-01	release 2.21.7
 - 2022-03-01	release 2.21.6
 - 2022-03-01	switch to new Obsidian.md URLs for sharing plugin links
 - 2022-02-26	updated carl commands
