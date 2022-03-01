@@ -39,7 +39,6 @@ const themeJSON = onlineJSON("https://raw.githubusercontent.com/obsidianmd/obsid
 const installedPlugins = app.doShellScript("ls -1 \"" + vaultPath + "\"\"/.obsidian/plugins/\"");
 const installedThemes = app.doShellScript("find '" + vaultPath + "/.obsidian/themes/' -name '*.css' ");
 const currentTheme = app.doShellScript("cat \"" + vaultPath + "/.obsidian/appearance.json\" | grep \"cssTheme\" | head -n 1 | cut -d\\\" -f 4"); // eslint-disable-line no-useless-escape
-const obsiURI = "obsidian://show-plugin?id=";
 const obsiOpenURL = "obsidian://show-plugin?vault=" + vaultNameENC + "&id=";
 const themeBrowserURI = "obsidian://advanced-uri?vault=" + vaultNameENC + "&settingid=theme-browser";
 
@@ -55,7 +54,7 @@ pluginJSON.forEach(plugin => {
 	const openURI = obsiOpenURL + id;
 	let isDiscordReady, shareURL;
 	if (discordReadyLinks) {
-		shareURL = "*" + name + "* <" + obsiURI + id + ">";
+		shareURL = "*" + name + "* <https://obsidian.md/plugins?id=" + id + ">";
 		isDiscordReady = " (discord ready)";
 	} else {
 		shareURL = githubURL;
