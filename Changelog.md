@@ -1,3 +1,9 @@
+- 2022-03-01	release 2.21.6
+- 2022-03-01	switch to new Obsidian.md URLs for sharing plugin links
+- 2022-02-26	updated carl commands
+- 2022-02-25	update documentation search cache
+- 2022-02-25	minor fixes to documentation search
+- 2022-02-23	add plugin-name to sharing discord ready plugin links
 - 2022-02-23	release 2.21.5
 - 2022-02-23	oinfo: fallback when .asar is missing (#60)
 - 2022-02-20	!oversion expands as code block now
