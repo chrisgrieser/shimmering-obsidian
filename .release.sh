@@ -26,6 +26,7 @@ markdownlint --fix ./README.md
 markdownlint --fix docs/*.md
 markdown-link-check -q ./README.md
 find docs -name \*.md -print0 | xargs -0 -n1 markdown-link-check -q
+echo ""
 
 # -----------------------
 # clean info.plist
