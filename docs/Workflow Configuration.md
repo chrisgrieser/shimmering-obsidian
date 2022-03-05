@@ -25,7 +25,9 @@ nav_order: 2
 <img src="https://i.imgur.com/7YnQJ7K.png" alt="Metadata Extractor Settings" width=70%>
 
 ## Alfred Environment Variables
-You access the main workflow configuration by clicking the *`[x]`* at the top right of the workflow.
+You access the main workflow configuration by clicking the *`[x]`* at the top right of the workflow.  
+(Tutorial: [How to set Environment Variables in Alfred](https://www.alfredapp.com/help/workflows/advanced/variables/#environment))
+
 <img src="https://i.imgur.com/swm7AaC.png" alt="Settings of this Workflow" width=40% height=40%>
 
 ### Alfred-based Quick Switcher
