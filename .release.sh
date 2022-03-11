@@ -50,7 +50,7 @@ echo "Removed $exclusionNo variables flagged as 'no export' removed from 'info.p
 # -----------------------
 
 # remove any potentially existing leftover workflow file
-mv -fv /.*.alfredworkflow ~/.trash
+mv -fv ./*.alfredworkflow ~/.trash
 
 # zip
 workflowName=$(plutil -extract name xml1 -o - info.plist | sed -n 4p | cut -d">" -f2 | cut -d"<" -f1)

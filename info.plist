@@ -3395,11 +3395,11 @@
 				<key>focusedappvariablename</key>
 				<string></string>
 				<key>hotkey</key>
-				<integer>25</integer>
+				<integer>0</integer>
 				<key>hotmod</key>
-				<integer>1179648</integer>
+				<integer>0</integer>
 				<key>hotstring</key>
-				<string>9</string>
+				<string></string>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -5457,19 +5457,6 @@ cat "$vault_path"/"$template_note_path"</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>triggerid</key>
-				<string>browser-folder-loop</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.external</string>
-			<key>uid</key>
-			<string>C60C1880-E166-4304-A913-7E307B365032</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>text</key>
 				<string>Search Vault: '{query}'</string>
 			</dict>
@@ -5555,6 +5542,19 @@ cat "$vault_path"/"$template_note_path"</string>
 			<string>alfred.workflow.output.callexternaltrigger</string>
 			<key>uid</key>
 			<string>52C6C47D-3998-4DF9-B9A4-04E586CC8380</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>triggerid</key>
+				<string>browser-folder-loop</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.external</string>
+			<key>uid</key>
+			<string>C60C1880-E166-4304-A913-7E307B365032</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -10102,7 +10102,7 @@ Donate:   https://ko-fi.com/pseudometa</string>
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>xpos</key>
-			<integer>25</integer>
+			<integer>40</integer>
 			<key>ypos</key>
 			<integer>2565</integer>
 		</dict>
@@ -10702,9 +10702,9 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>colorindex</key>
 			<integer>6</integer>
 			<key>xpos</key>
-			<integer>300</integer>
+			<integer>25</integer>
 			<key>ypos</key>
-			<integer>5905</integer>
+			<integer>5890</integer>
 		</dict>
 		<key>60A87101-8D59-46BF-BCAE-A9195D6A034E</key>
 		<dict>
@@ -11697,9 +11697,9 @@ DOUBLE CLICK THIS to set hotkey.</string>
 			<key>colorindex</key>
 			<integer>6</integer>
 			<key>xpos</key>
-			<integer>190</integer>
+			<integer>195</integer>
 			<key>ypos</key>
-			<integer>2565</integer>
+			<integer>2660</integer>
 		</dict>
 		<key>C9530BAC-970D-40F4-B79B-8A3D866EAE47</key>
 		<dict>
