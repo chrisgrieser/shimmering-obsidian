@@ -158,21 +158,28 @@ I also designed some [themes for Alfred](https://github.com/chrisgrieser/alfred-
 - Also thanks to [@Vinzent03](https://github.com/Vinzent03) for his invaluable [Advanced URI plugin](https://github.com/Vinzent03/obsidian-advanced-uri), which enables Alfred to control various aspects of Obsidian.
 - Main icon by [Jack Liu](https://www.reddit.com/user/jackliu1219), with some additional icons from [Freepik](https://www.freepik.com/).
 
-### About Me
+## About the Developer
 In my day job, I am a sociologist studying the social mechanisms underlying the digital economy. For my PhD project, I investigate the governance of the app economy and how software ecosystems manage the tension between innovation and compatibility. If you are interested in this subject, feel free to get in touch!
 
+<!-- markdown-link-check-disable -->
+
+### Profiles
 - [Academic Website](https://chris-grieser.de/)
+- [ResearchGate](https://www.researchgate.net/profile/Christopher-Grieser)
+- [Discord](https://discordapp.com/users/462774483044794368/)
 - [GitHub](https://github.com/chrisgrieser/)
 - [Twitter](https://twitter.com/pseudo_meta)
-- [Discord](https://discordapp.com/users/462774483044794368/)
-- [ResearchGate](https://www.researchgate.net/profile/Christopher-Grieser)
-- [LinkedIn](https://www.linkedin.com/in/christopher-grieser-ba693b17a/) <!-- markdown-link-check-disable-line -->
+- [LinkedIn](https://www.linkedin.com/in/christopher-grieser-ba693b17a/)
+
+### Donate
+- [PayPal](https://www.paypal.com/PayPalme/ChrisGrieser)
+- [Ko-Fi](https://ko-fi.com/pseudometa)
 
 *Note that for questions, bug reports, or feature requests for this workflow, it's better if you open an [GitHub issue](https://github.com/chrisgrieser/shimmering-obsidian/issues), since it is better suited for technical support.*
 
 ### 🙏 Donations
 - [PayPal](https://www.paypal.com/paypalme/ChrisGrieser)
-- [Ko-Fi](https://ko-fi.com/pseudometa) <!-- markdown-link-check-disable-line -->
+- [Ko-Fi](https://ko-fi.com/pseudometa)
 
 ---
 
