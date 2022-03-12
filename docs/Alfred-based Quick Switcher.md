@@ -21,7 +21,7 @@ The Alfred-based Quick Switcher is basically an enhanced version of [Obsidian's 
 - [Vault Search as Alfred Fallback](#vault-search-as-alfred-fallback)
 - [Previewing Notes via Quicklook](#previewing-notes-via-quicklook)
 	- [Hotkey Setting](#hotkey-setting)
-	- [QLMarkdown or Peek?](#qlmarkdown-or-peek)
+	- [QLMarkdown or Peek](#qlmarkdown-or-peek)
 
 <!-- /MarkdownTOC -->
 
@@ -114,7 +114,7 @@ The main search (`o`) can also be used as [Fallback Search for Alfred](https://w
 
 <img src="https://i.imgur.com/hDut8wK.png" alt="" width=60%>
 
-### QLMarkdown or Peek?
+### QLMarkdown or Peek
 [QLmarkdown](https://github.com/sbarex/QLMarkdown) and [Peek](https://apps.apple.com/app/peek-quick-look-extension/id1554235898) both enable previewing of Markdown documents. Peek works with a wide range of other file types than Markdown, but costs around 5€. QLMarkdown is free, but only works for Markdown and requires some minor small setup.
 
 <details>
