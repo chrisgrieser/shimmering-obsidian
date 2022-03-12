@@ -151,12 +151,11 @@
 ## Alfred Themes
 I also designed some [themes for Alfred](https://github.com/chrisgrieser/alfred-themes) you can check out.
 
-## Credits
-
-### Thanks
+## Credits & Thanks
 - Big shout-out to @koala for developing the [metadata extractor plugin](https://github.com/kometenstaub/metadata-extractor), for which this workflow is right now the main client.
 - Also thanks to [@Vinzent03](https://github.com/Vinzent03) for his invaluable [Advanced URI plugin](https://github.com/Vinzent03/obsidian-advanced-uri), which enables Alfred to control various aspects of Obsidian.
-- Main icon by [Jack Liu](https://www.reddit.com/user/jackliu1219), with some additional icons from [Freepik](https://www.freepik.com/).
+- Main icon by [Jack Liu](https://www.reddit.com/user/jackliu1219).
+- <a href="https://www.flaticon.com/authors/freepik">Other icons created by Freepik - Flaticon</a>
 
 ## About the Developer
 In my day job, I am a sociologist studying the social mechanisms underlying the digital economy. For my PhD project, I investigate the governance of the app economy and how software ecosystems manage the tension between innovation and compatibility. If you are interested in this subject, feel free to get in touch!
