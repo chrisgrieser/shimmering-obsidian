@@ -1,3 +1,6 @@
+- 2022-03-14	release 2.21.8
+- 2022-03-14	fix for obeta
+- 2022-03-12	add icon credits
 - 2022-03-01	release 2.21.7
 - 2022-03-01	release 2.21.6
 - 2022-03-01	switch to new Obsidian.md URLs for sharing plugin links
