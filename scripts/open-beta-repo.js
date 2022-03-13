@@ -23,46 +23,47 @@ function SafeApplication(appId) {
 const discordReadyLinks = ["Discord", "Discord PTB", "Discord Canary"]
 	.some(discordApp => SafeApplication(discordApp)?.frontmost());
 const alfredMatcher = (str) => str.replace (/[-()_.]/g, " ") + " " + str + " ";
-const getEnv = (path) => $.getenv(path).replace(/^~/, app.pathTo("home folder"));
-const pluginFolder = getEnv("vault_path") + "/.obsidian/plugins/";
+const pluginFolder = $.getenv("vault_path").replace(/^~/, app.pathTo("home folder")) + "/.obsidian/plugins/";
 
-const jsonArray = [];
 const betaRepos = JSON.parse(readFile(pluginFolder + "obsidian42-brat/data.json")).pluginList;
 const betaManifests = betaRepos
 	.map (repoID => {
 		const id = repoID.split("/")[1];
-		const author = repoID.split("/")[0];
-		const fallback = { name: id, author: author };
+		let author;
+		let name;
 
 		const manifest = readFile(pluginFolder + id + "/manifest.json");
-		if (!manifest) return fallback;
-		const manifestJSON = JSON.parse(manifest);
-		manifestJSON.repo = repoID;
-		return manifestJSON;
-	});
-
-betaManifests.forEach(manifest => {
-	const url = "https://github.com/" + manifest.repo;
-
-	let isDiscordReady = "";
-	let shareURL = url;
-	if (discordReadyLinks) {
-		shareURL = "<" + url + ">";
-		isDiscordReady = " (discord-ready)";
-	}
-
-	jsonArray.push({
-		"title": manifest.name,
-		"subtitle": "by " + manifest.author,
-		"match": alfredMatcher (manifest.name) + alfredMatcher (manifest.author),
-		"arg": url,
-		"mods": {
-			"alt": {
-				"arg": shareURL,
-				"subtitle": "⌥: Copy Link" + isDiscordReady
-			}
+		if (manifest) {
+			const manifestParsed = JSON.parse(manifest);
+			author = manifestParsed.author;
+			name = manifestParsed.name;
+		} else {
+			name = id;
+			author = repoID.split("/")[0];
 		}
-	});
+
+		// in case of missing manifest
+		const url = "https://github.com/" + repoID;
+
+		let isDiscordReady = "";
+		let shareURL = url;
+		if (discordReadyLinks) {
+			shareURL = "<" + url + ">";
+			isDiscordReady = " (discord-ready)";
+		}
+
+		return {
+			"title": name,
+			"subtitle": "by " + author,
+			"match": alfredMatcher (name) + alfredMatcher (author),
+			"arg": url,
+			"mods": {
+				"alt": {
+					"arg": shareURL,
+					"subtitle": "⌥: Copy Link" + isDiscordReady
+				}
+			}
+		};
 });
 
-JSON.stringify({ items: jsonArray });
+JSON.stringify({ items: betaManifests });
