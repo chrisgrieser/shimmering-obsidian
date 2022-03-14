@@ -31,6 +31,8 @@ body:
       label: Debugging Log
       description: "You can get a debugging log by opening the workflow in Alfred preferences and pressing `cmd + D`. A small window will open up which will log everything happening during the execution of the Workflow. Use the malfunctioning part of the workflow once more, copy the content of the log window, and paste it here. If the debugging log is long, please attach it as file instead of pasting everything in here."
       render: Text
+      placeholder: |
+        If the log is long, you can truncate the realy long `Shimmering Obsidian[Script Filter]` line.
     validations:
       required: true
   - type: textarea
