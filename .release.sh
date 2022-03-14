@@ -35,6 +35,7 @@ cd "$(dirname "$0")" || exit 1
 eslint --fix ./*/*.js
 eslint --fix ./*.js
 markdownlint --fix ./README.md
+markdownlint --fix ./docs/*.md
 markdown-link-check -q ./README.md
 
 # markdownlint --fix docs/*.md

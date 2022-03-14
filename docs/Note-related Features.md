@@ -9,7 +9,7 @@ nav_order: 2
 
 - [Create a new Note](#create-a-new-note)
 - [Scratchpad](#scratchpad)
-- [Daily Notes](#daily-notes)
+- [Daily Notes \(deprecated\)](#daily-notes-deprecated)
 - [Move Note](#move-note)
 
 <!-- /MarkdownTOC -->
@@ -32,7 +32,7 @@ nav_order: 2
 - If the [workflow configuration](Workflow%20Configuration.md#Alfred-based-Quick-Switcher) `open_after_appending` is set to `true`, will open the scratchpad afterwards.
 - 💡 Using `- [ ]` as prefix and inserting below a specific heading enables you to add cards to a Kanban Board.
 
-## Daily Notes
+## Daily Notes (deprecated)
 **`od`: Open & Append to today's daily note [settings].**
 - Either open today's daily note or append to today's daily note.
 - This feature works without Obsidian running, since when appending, your daily note will not be opened.
@@ -41,6 +41,8 @@ nav_order: 2
 - For now, the daily notes must be exactly in the format `YYYY-MM-DD` for this feature to work.
 - Using the [workflow configuration](Workflow%20Configuration.md#note-related-features) `daily_note_path`, you can set the location of your daily notes inside your vault.
 - The text set in the [workflow configuration](Workflow%20Configuration.md#Alfred-based-Quick-Switcher) `daily_note_append_prefix` will be inserted in front of the input text.
+
+ℹ️ *Since I do not use daily notes myself, I find it hard to maintain continuously improve this the daily note feature, which is why I am deprecating this. I encourage you to check out the [Alfred workflow for Obsidian by hauselin](https://github.com/hauselin/obsidian-alfred), which focuses on daily notes and complements this workflow quite nicely.*
 
 ## Move Note
 **`om` or `triggered via hotkey`: Move the current note to a different folder in your vault.**
