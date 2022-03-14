@@ -16,7 +16,7 @@
 nextVersion="$*"
 currentVersion=$(plutil -extract version xml1 -o - info.plist | sed -n 4p | cut -d">" -f2 | cut -d"<" -f1)
 echo "current version: $currentVersion"
-echo -n "next version: "
+echo -n "   next version: "
 if [[ -z "$nextVersion" ]]; then
 	read -r nextVersion
 else
@@ -32,7 +32,7 @@ plutil -replace version -string "$nextVersion" info.plist
 
 # Lint
 cd "$(dirname "$0")" || exit 1
-eslint --fix ./*/*.js
+# eslint --fix ./*/*.js
 eslint --fix ./*.js
 markdownlint --fix ./README.md
 markdownlint --fix ./docs/*.md
