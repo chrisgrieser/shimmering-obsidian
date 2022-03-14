@@ -20,6 +20,8 @@ body:
     attributes:
       label: Checklist
       options:
+        - label: 'Feature Requests regarding daily notes unfortunately will not be implemented, since I do not use daily notes myself and there are [other Alfred workflows that do focus on daily notes already](https://github.com/hauselin/obsidian-alfred).'
+          required: true
         - label: The feature would be useful to more users than just me.
           required: true
         - label: I have checked the [feature overview](https://github.com/chrisgrieser/shimmering-obsidian#feature-overview) and the feature doesn't already exist.
