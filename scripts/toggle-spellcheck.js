@@ -1,8 +1,8 @@
 #!/usr/bin/env osascript -l JavaScript
 
-function run (argv){
-	ObjC.import('stdlib');
-	ObjC.import('Foundation');
+function run (argv) {
+	ObjC.import("stdlib");
+	ObjC.import("Foundation");
 	app = Application.currentApplication();
 	app.includeStandardAdditions = true;
 
@@ -27,12 +27,12 @@ function run (argv){
 	if (workspaceToSpellcheck === "") return;
 
 	// get current spellcheck status
-	const vaultPath = $.getenv("vault_path").replace(/^~/, app.pathTo('home folder'));
-	const turnSpellCheckOn = (workspaceName === workspaceToSpellcheck);
-	const currentSpellCheck = JSON.parse(readFile(vaultPath + '/.obsidian/app.json')).spellcheck === "true";
+	const vaultPath = $.getenv("vault_path").replace(/^~/, app.pathTo("home folder"));
+	const turnSpellCheckOn = workspaceName === workspaceToSpellcheck;
+	const currentSpellCheck = JSON.parse(readFile(vaultPath + "/.obsidian/app.json")).spellcheck === "true";
 
 	// toggle if change is needed
-	if (turnSpellCheckOn !== currentSpellCheck) {
-		app.openLocation("obsidian://advanced-uri?vault=" + $.getenv("vault_name_ENC") + "&commandid=editor%253Atoggle-spellcheck",);
-	}
+	if (turnSpellCheckOn !== currentSpellCheck) 
+		app.openLocation("obsidian://advanced-uri?vault=" + $.getenv("vault_name_ENC") + "&commandid=editor%253Atoggle-spellcheck");
+	
 }

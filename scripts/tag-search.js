@@ -44,9 +44,9 @@ if (mergeNestedTags) {
 			const mergeIndex = mergedTags.indexOf(existing[0]);
 			mergedTags[mergeIndex].tagCount += item.tagCount;
 			mergedTags[mergeIndex].merged = true;
-		} else {
+		} else 
 			mergedTags.push(item);
-		}
+		
 	});
 	tagsArray = mergedTags;
 }

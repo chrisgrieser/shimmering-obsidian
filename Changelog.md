@@ -1,3 +1,8 @@
+- 2022-03-15	release 2.21.9
+- 2022-03-15	potentially adress #62
+- 2022-03-14	add deprecation info regarding daily notes to issue form
+- 2022-03-14	add deprecation info for od command to Readme
+- 2022-03-14	improved release workflow
 - 2022-03-14	release 2.21.8
 - 2022-03-14	fix for obeta
 - 2022-03-12	add icon credits

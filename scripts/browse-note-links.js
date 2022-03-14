@@ -167,9 +167,9 @@ function run () {
 		if (discordReadyLinks) {
 			url = "<" + url + ">";
 			isDiscordReady = " (discord ready)";
-		} else {
+		} else 
 			isDiscordReady = "";
-		}
+		
 
 		jsonArray.push({
 			"title": title,

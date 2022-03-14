@@ -64,6 +64,6 @@ const betaManifests = betaRepos
 				}
 			}
 		};
-});
+	});
 
 JSON.stringify({ items: betaManifests });
