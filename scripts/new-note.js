@@ -13,19 +13,30 @@ function run (argv) {
 		return ObjC.unwrap(str);
 	}
 
-	const newNotePath = $.getenv("new_note_location").replace(/^\/|\/$/, "");
 	let fileName = argv.join("");
-	fileName = fileName.charAt(0).toUpperCase() + fileName.slice(1); // capitalize
-	const vaultNameEnc = $.getenv("vault_name_ENC");
-	const content = readFile($.getenv("vault_path").replace(/^~/, app.pathTo("home folder")) + "/" + $.getenv("template_note_path"));
+	if (!fileName) fileName = "Untitled";
+	fileName = fileName
+		.replace (/[\\/:]/g, "") // remove illegal charcters
+		.charAt(0).toUpperCase() + fileName.slice(1); // capitalize
 
-	const URI = "obsidian://new?vault=" + vaultNameEnc +
-		"&file=" + encodeURIComponent(newNotePath + "/" + fileName) +
-		"&content=" + encodeURIComponent(content);
+	const newNotePath = ($.getenv("new_note_location") + "/" + fileName)
+		.replaceAll ("//", "/");
 
-	app.openLocation(URI);
+	let URI = "obsidian://new?" +
+			"vault=" + $.getenv("vault_name_ENC") +
+			"&file=" + encodeURIComponent(newNotePath);
 
-	// pass for opening
-	const relativePath = newNotePath + "/" + fileName + ".md";
-	return relativePath;
+	// Template
+	const templateRelPath = $.getenv("template_note_path");
+	if (templateRelPath) {
+		const templateAbsPath = $.getenv("vault_path").replace(/^~/, app.pathTo("home folder"))
+			+ "/" + templateRelPath;
+		const newNoteContent = readFile(templateAbsPath);
+		URI += "&content=" + encodeURIComponent(newNoteContent);
+		console.log("absolute template path:" + templateAbsPath);
+	}
+
+	console.log("URI: " + URI);
+
+	app.openLocation(URI); // also opens the note
 }

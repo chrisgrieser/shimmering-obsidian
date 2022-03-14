@@ -1035,19 +1035,6 @@
 		</array>
 		<key>4EA9A40E-C1AF-4EB5-B118-A36B1F0CE6F7</key>
 		<array/>
-		<key>501D3FAF-049A-4692-89AC-2FB9F1D2FF96</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>7A1E8A69-D52C-47C5-9661-38702F6BDEC9</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>503B3F91-98A0-4357-92F2-A88BD6EDB404</key>
 		<array>
 			<dict>
@@ -1104,7 +1091,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>501D3FAF-049A-4692-89AC-2FB9F1D2FF96</string>
+				<string>7A1E8A69-D52C-47C5-9661-38702F6BDEC9</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -4399,23 +4386,6 @@ set parameter to do shell script "echo " &amp; quoted form of (system attribute 
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
 			<string>7A1E8A69-D52C-47C5-9661-38702F6BDEC9</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>matchmode</key>
-				<integer>2</integer>
-				<key>matchstring</key>
-				<string></string>
-				<key>replacestring</key>
-				<string>Untitled</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.replace</string>
-			<key>uid</key>
-			<string>501D3FAF-049A-4692-89AC-2FB9F1D2FF96</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -10243,9 +10213,9 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>530</integer>
+			<integer>400</integer>
 			<key>ypos</key>
-			<integer>1740</integer>
+			<integer>1720</integer>
 		</dict>
 		<key>41F765F9-17DD-4FC0-BF28-E7EB61AF55DB</key>
 		<dict>
@@ -10451,15 +10421,6 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<integer>630</integer>
 			<key>ypos</key>
 			<integer>7420</integer>
-		</dict>
-		<key>501D3FAF-049A-4692-89AC-2FB9F1D2FF96</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>xpos</key>
-			<integer>355</integer>
-			<key>ypos</key>
-			<integer>1650</integer>
 		</dict>
 		<key>503B3F91-98A0-4357-92F2-A88BD6EDB404</key>
 		<dict>
@@ -10964,9 +10925,9 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>note</key>
 			<string>new note</string>
 			<key>xpos</key>
-			<integer>530</integer>
+			<integer>400</integer>
 			<key>ypos</key>
-			<integer>1610</integer>
+			<integer>1590</integer>
 		</dict>
 		<key>7AFD378A-10C5-4D6A-A49E-54EC1266414F</key>
 		<dict>
@@ -11149,9 +11110,9 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>435</integer>
+			<integer>335</integer>
 			<key>ypos</key>
-			<integer>1770</integer>
+			<integer>1750</integer>
 		</dict>
 		<key>8960BAF4-D71A-4DC1-8382-E3864941AAB6</key>
 		<dict>
@@ -12212,7 +12173,7 @@ DOUBLE CLICK THIS to set hotkey.</string>
 		<key>search_ignore_folder</key>
 		<string>PhD Thesis/PhD Data</string>
 		<key>template_note_path</key>
-		<string>Meta/Templater/T Basic.md</string>
+		<string></string>
 		<key>thousand_separator</key>
 		<string>.</string>
 		<key>use_quickadd</key>
@@ -12226,19 +12187,18 @@ DOUBLE CLICK THIS to set hotkey.</string>
 	</dict>
 	<key>variablesdontexport</key>
 	<array>
-		<string>workspace_to_spellcheck</string>
-		<string>template_note_path</string>
+		<string>backup_destination</string>
 		<string>daily_note_path</string>
+		<string>vault_name_ENC</string>
+		<string>scratchpad_note_path</string>
+		<string>search_ignore_folder</string>
 		<string>use_quickadd</string>
 		<string>h_lvl_ignore</string>
-		<string>vault_name_ENC</string>
-		<string>append_prefix</string>
 		<string>vault_path</string>
-		<string>scratchpad_note_path</string>
-		<string>daily_note_append_prefix</string>
+		<string>append_prefix</string>
+		<string>workspace_to_spellcheck</string>
 		<string>new_note_location</string>
-		<string>search_ignore_folder</string>
-		<string>backup_destination</string>
+		<string>daily_note_append_prefix</string>
 	</array>
 	<key>version</key>
 	<string>2.21.8</string>
