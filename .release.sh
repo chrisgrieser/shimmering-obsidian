@@ -61,7 +61,7 @@ echo "Removed $exclusionNo variables flagged as 'no export' removed from 'info.p
 # compile .alfredworkflow
 # -----------------------
 
-# remove any potentially existing leftover workflow file
+# remove workflow file from previous release
 rm -fv ./*.alfredworkflow
 
 # zip
