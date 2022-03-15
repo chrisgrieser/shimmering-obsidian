@@ -33,7 +33,7 @@ plutil -replace version -string "$nextVersion" info.plist
 # Lint
 cd "$(dirname "$0")" || exit 1
 # TODO: lint some older files
-eslint . --config ~"/Library/Mobile Documents/com~apple~CloudDocs/Dotfolder/Configs/.eslintrc.json" --fix # needs explicit reference to config file: https://eslint.org/docs/user-guide/migrating-to-7.0.0#-runtime-deprecation-warnings-for-eslintrc-config-files
+eslint . --fix --config ~"/Library/Mobile Documents/com~apple~CloudDocs/Dotfolder/Configs/.eslintrc.json"
 markdownlint --fix ./README.md
 markdownlint --fix ./docs/*.md
 markdown-link-check -q ./README.md
