@@ -160,16 +160,22 @@ function run () {
 	externalLinkList.forEach(link => {
 		const title = link[0];
 		let url = link[1];
-		const invalidSubtitle = "⛔️ Cannot do that with external link.";
 
 		// URLs discord ready
-		let isDiscordReady, shareURL;
+		let isDiscordReady;
+		let shareURL;
 		if (discordReadyLinks) {
-			url = "<" + url + ">";
+			shareURL = "<" + url + ">";
 			isDiscordReady = " (discord ready)";
-		} else 
+		} else {
 			isDiscordReady = "";
-		
+			shareURL = url;
+		}
+
+		const modifierInvalid = {
+			"valid": false,
+			"subtitle": "⛔️ Cannot do that with external link."
+		};
 
 		jsonArray.push({
 			"title": title,
@@ -179,23 +185,14 @@ function run () {
 			"arg": url,
 			"icon": { "path": "icons/external_link.png" },
 			"mods": {
-				"shift": {
-					"valid": false,
-					"subtitle": invalidSubtitle,
+				"shift": modifierInvalid,
+				"fn": modifierInvalid,
+				"cmd": modifierInvalid,
+				"ctrl": modifierInvalid,
+				"alt": {
+					"arg": shareURL,
+					"subtitle": "⌥: Copy URL" + isDiscordReady
 				},
-				"fn": {
-					"valid": false,
-					"subtitle": invalidSubtitle,
-				},
-				"cmd": {
-					"valid": false,
-					"subtitle": invalidSubtitle,
-				},
-				"ctrl": {
-					"valid": false,
-					"subtitle": invalidSubtitle,
-				},
-				"alt": { "subtitle": "⌥: Copy URL" + isDiscordReady },
 			},
 		});
 	});
