@@ -10648,7 +10648,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>note</key>
 			<string>quicksearch note</string>
 			<key>xpos</key>
-			<integer>45</integer>
+			<integer>40</integer>
 			<key>ypos</key>
 			<integer>2335</integer>
 		</dict>
@@ -11343,7 +11343,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>note</key>
 			<string>get current path</string>
 			<key>xpos</key>
-			<integer>190</integer>
+			<integer>170</integer>
 			<key>ypos</key>
 			<integer>3175</integer>
 		</dict>
@@ -11795,7 +11795,7 @@ DOUBLE CLICK THIS to set hotkey.</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>345</integer>
+			<integer>315</integer>
 			<key>ypos</key>
 			<integer>3205</integer>
 		</dict>

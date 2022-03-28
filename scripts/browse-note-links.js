@@ -1,10 +1,13 @@
 #!/usr/bin/env osascript -l JavaScript
 
 function run () {
+
 	ObjC.import("stdlib");
 	ObjC.import("Foundation");
 	const app = Application.currentApplication();
 	app.includeStandardAdditions = true;
+	const externalLinkRegex = /\[[^\]]*\]\([^)]+\)/g;
+	const singleExternalLinkRegex = /\[[^\]]*\]\([^)]+\)/;
 
 	function readFile (path, encoding) {
 		if (!encoding) encoding = $.NSUTF8StringEncoding;
@@ -39,6 +42,8 @@ function run () {
 	const recentJSON = vaultPath + "/.obsidian/workspace";
 	const jsonArray = [];
 
+	// ---------------------------
+
 	// create input note JSON
 	const inputPath = readFile($.getenv("alfred_workflow_data") + "/buffer_inputPath");
 	console.log(inputPath);
@@ -63,7 +68,7 @@ function run () {
 			.map(item => item.relativePath);
 		bothLinksList.push (...backlinkList);
 	}
-	bothLinksList = [...new Set(bothLinksList)];
+	bothLinksList = [...new Set(bothLinksList)]; // only unique items
 
 	// get starred and recent files
 	let starredFiles = [];
@@ -78,7 +83,7 @@ function run () {
 
 	// get external links
 	let externalLinkList = readFile(vaultPath + "/" + inputPath)
-		.match (/\[.*?\]\(.+?\)/g);
+		.match (externalLinkRegex);
 	if (externalLinkList) {
 		externalLinkList = externalLinkList.map (mdlink => [
 			mdlink.split("](")[0].slice(1),
@@ -111,7 +116,7 @@ function run () {
 
 		// check link existence of file
 		let hasLinks = Boolean (file.links?.some(l => l.relativePath) || file.backlinks ); // no relativePath => unresolved link
-		if (!hasLinks) hasLinks = /\[.*?\]\(.+?\)/.test(readFile(absolutePath)); // readFile only executed when no other links found for performance
+		if (!hasLinks) hasLinks = singleExternalLinkRegex.test(readFile(absolutePath)); // readFile only executed when no other links found for performance
 		let linksSubtitle = "⛔️ Note without Outgoing Links or Backlinks";
 		if (hasLinks) linksSubtitle = "⇧: Browse Links in Note";
 
@@ -159,7 +164,7 @@ function run () {
 	// add external Links to Script-Filter JSON
 	externalLinkList.forEach(link => {
 		const title = link[0];
-		let url = link[1];
+		const url = link[1];
 
 		// URLs discord ready
 		let isDiscordReady;
@@ -197,6 +202,5 @@ function run () {
 		});
 	});
 
-
-	return JSON.stringify({ items: jsonArray });
+	return JSON.stringify({ items: jsonArray }); // JXA direct return not possible becuase of guard clause above
 }

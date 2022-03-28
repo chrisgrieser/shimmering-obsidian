@@ -3,6 +3,7 @@
 ObjC.import("stdlib");
 const app = Application.currentApplication();
 app.includeStandardAdditions = true;
+const externalLinkRegex = /\[[^\]]*\]\([^)]+\)/;
 
 function parentFolder (filePath) {
 	if (!filePath.includes("/")) return "/";
@@ -58,7 +59,7 @@ fileArray.forEach(file => {
 	if (recentFiles.includes(relativePath)) {
 		emoji += "🕑 ";
 		additionalMatcher += "recent ";
-	}	
+	}
 	if (filename.toLowerCase().includes("kanban"))	iconpath = "icons/kanban.png";
 	if (filename.toLowerCase().includes("to do")) emoji += "☑️ ";
 	if (filename.toLowerCase().includes("template")) emoji += "📄 ";
@@ -67,7 +68,7 @@ fileArray.forEach(file => {
 
 	// check link existence of file
 	let hasLinks = Boolean (file.links?.some(l => l.relativePath) || file.backlinks ); // no relativePath => unresolved link
-	if (!hasLinks) hasLinks = /\[.*?\]\(.+?\)/.test(readFile(absolutePath)); // readFile only executed when no other links found for performance
+	if (!hasLinks) hasLinks = externalLinkRegex.test(readFile(absolutePath)); // readFile only executed when no other links found for performance
 	let linksSubtitle = "⛔️ Note without Outgoing Links or Backlinks";
 	if (hasLinks) linksSubtitle = "⇧: Browse Links in Note";
 
