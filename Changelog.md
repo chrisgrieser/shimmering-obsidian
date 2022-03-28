@@ -1,3 +1,7 @@
+- 2022-03-28	release 2.21.10
+- 2022-03-28	fix #67
+- 2022-03-25	removed Obsidian default css cheatsheet since not maintainable
+- 2022-03-20	fix link browsing when Discord is frontmost app
 - 2022-03-15	release 2.21.9
 - 2022-03-15	potentially adress #62
 - 2022-03-14	add deprecation info regarding daily notes to issue form
