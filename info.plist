@@ -12201,7 +12201,7 @@ DOUBLE CLICK THIS to set hotkey.</string>
 		<string>daily_note_append_prefix</string>
 	</array>
 	<key>version</key>
-	<string>2.21.10</string>
+	<string>2.21.11</string>
 	<key>webaddress</key>
 	<string>https://chris-grieser.de/</string>
 </dict>

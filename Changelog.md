@@ -1,3 +1,6 @@
+- 2022-03-29	release 2.21.11
+- 2022-03-29	Merge pull request #68 from teake/teake-append-to-scratchpad
+- 2022-03-29	Update append-to-scratchpad.js
 - 2022-03-28	release 2.21.10
 - 2022-03-28	fix #67
 - 2022-03-25	removed Obsidian default css cheatsheet since not maintainable

@@ -16,22 +16,22 @@ function run (argv) {
 	}
 
 	function writeToFile(text, file) {
-		let str = $.NSString.alloc.initWithUTF8String(text);
+		const str = $.NSString.alloc.initWithUTF8String(text);
 		str.writeToFileAtomicallyEncodingError(file, true, $.NSUTF8StringEncoding, null);
 	}
 
 	function isHeading(line) {
-		return /^#+ /.test(line)
+		return /^#+ /.test(line);
 	}
 
 	function isEmpty(line) {
-		return /^\s*$/.test(line)
+		return /^\s*$/.test(line);
 	}
 
 	function ensureEmptyLineAt(lines, lineNo) {
-		if (lineNo >= lines.length  || !isEmpty(lines[lineNo])) {
+		if (lineNo >= lines.length || !isEmpty(lines[lineNo])) 
 			lines.splice(lineNo, 0, "");
-		}
+		
 	}
 
 	let heading = "";
@@ -57,18 +57,18 @@ function run (argv) {
 			.map (line => line = line.replace(/^#+ /gm, ""));
 		const headingLineNo = scratchpadLinesTemp.indexOf(heading);
 		if (headingLineNo > -1) {
-			let lastNonEmptyLineNo = -1
+			let lastNonEmptyLineNo = -1;
 			for (let i = headingLineNo + 1; i < scratchpadLines.length; i++) {
-				let line = scratchpadLines[i]
-				if (isHeading(line)) {
+				const line = scratchpadLines[i];
+				if (isHeading(line)) 
 					break;
-				} else if (!isEmpty(line)) {
+				 else if (!isEmpty(line)) 
 					lastNonEmptyLineNo = i;
-				}
+				
 			}
-			if (lastNonEmptyLineNo > 0) {
+			if (lastNonEmptyLineNo > 0) 
 				scratchpadLines.splice(lastNonEmptyLineNo + 1, 0, toAppend);
-			} else {
+			 else {
 				ensureEmptyLineAt(scratchpadLines, headingLineNo + 1);
 				scratchpadLines.splice(headingLineNo + 2, 0, toAppend);
 				ensureEmptyLineAt(scratchpadLines, headingLineNo + 3);
