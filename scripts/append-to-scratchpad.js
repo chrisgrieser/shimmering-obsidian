@@ -15,11 +15,23 @@ function run (argv) {
 		return ObjC.unwrap(str);
 	}
 
-	function writeToFile(text, file, overwriteExistingContent) {
-		let writingType = ">";
-		if (!overwriteExistingContent) writingType += ">";
-		text = text.replaceAll("\"", "\\\"");
-		app.doShellScript ("echo \"" + text + "\" "+ writingType + " \"" + file + "\"");
+	function writeToFile(text, file) {
+		let str = $.NSString.alloc.initWithUTF8String(text);
+		str.writeToFileAtomicallyEncodingError(file, true, $.NSUTF8StringEncoding, null);
+	}
+
+	function isHeading(line) {
+		return /^#+ /.test(line)
+	}
+
+	function isEmpty(line) {
+		return /^\s*$/.test(line)
+	}
+
+	function ensureEmptyLineAt(lines, lineNo) {
+		if (lineNo >= lines.length  || !isEmpty(lines[lineNo])) {
+			lines.splice(lineNo, 0, "");
+		}
 	}
 
 	let heading = "";
@@ -37,24 +49,38 @@ function run (argv) {
 	if (scratchpadAbsPath.slice(-3) !== ".md") scratchpadAbsPath += ".md";
 
 	const toAppend = $.getenv("scratchpad_append_prefix") + argv.join("");
+	const scratchpadContent = readFile(scratchpadAbsPath);
 
 	if (scratchpadHasHeading) {
-		const scratchpadLines = readFile(scratchpadAbsPath).split("\n");
+		const scratchpadLines = scratchpadContent.split("\n");
 		const scratchpadLinesTemp = scratchpadLines
 			.map (line => line = line.replace(/^#+ /gm, ""));
 		const headingLineNo = scratchpadLinesTemp.indexOf(heading);
 		if (headingLineNo > -1) {
-			scratchpadLines.splice(headingLineNo + 1, 0, toAppend);
+			let lastNonEmptyLineNo = -1
+			for (let i = headingLineNo + 1; i < scratchpadLines.length; i++) {
+				let line = scratchpadLines[i]
+				if (isHeading(line)) {
+					break;
+				} else if (!isEmpty(line)) {
+					lastNonEmptyLineNo = i;
+				}
+			}
+			if (lastNonEmptyLineNo > 0) {
+				scratchpadLines.splice(lastNonEmptyLineNo + 1, 0, toAppend);
+			} else {
+				ensureEmptyLineAt(scratchpadLines, headingLineNo + 1);
+				scratchpadLines.splice(headingLineNo + 2, 0, toAppend);
+				ensureEmptyLineAt(scratchpadLines, headingLineNo + 3);
+			}
 			writeToFile(scratchpadLines.join("\n"), scratchpadAbsPath, true);
 		} else {
 			console.log ("Heading not found in file. Appending to the file instead. ");
-			writeToFile(toAppend, scratchpadAbsPath, false);
+			writeToFile(scratchpadContent + "\n" + toAppend, scratchpadAbsPath);
 		}
 	}
-	else writeToFile(toAppend, scratchpadAbsPath, false);
+	else writeToFile(scratchpadContent + "\n" + toAppend, scratchpadAbsPath);
 
 	// return for opening function
 	return scratchpadRelPath;
 }
-
-
