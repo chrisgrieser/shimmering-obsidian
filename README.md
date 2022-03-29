@@ -41,7 +41,7 @@
 - Create new Notes (based on Template or via QuickAdd)
 - Move Note to a different folder
 - Daily Notes
-- 🆕 Quickly append to a scratchpad note
+- Quickly append to a scratchpad note
 
 ➡️ [Documentation of Note-related Features](docs/Note-related%20Features.md)
 
@@ -49,8 +49,8 @@
 
 ### Screenshot Features
 - OCR Screenshots
-- 🆕 Image Screenshot
-- 🆕 Both work for screenshots taken in quick succession, e.g. during a live presentation or lecture.
+- Image Screenshot
+- Both work for screenshots taken in quick succession, e.g. during a live presentation or lecture.
 
 ➡️ [Documentation of Screenshot Features](docs/Screenshot%20Features.md)
 
@@ -79,7 +79,7 @@
 
 ### Workspace Switcher
 - Quickly switch workspaces
-- 🆕 Save Workspaces
+- Save Workspaces
 - Manage workspaces
 - Automatically toggle spellchecking when switching to certain workspaces
 
@@ -107,7 +107,7 @@
 
 ---
 
-### 🆕 Vault Switcher
+### Vault Switcher
 - Switch the Vault controlled by this Alfred workflow.
 - Open vaults in Obsidian, Finder, or the Terminal.
 
@@ -121,7 +121,7 @@
 - Quick Access to cheat sheets for theme development, e.g. default variables
 - Download a theme's CSS file via Theme Search
 - Convert a font file base64-encoded CSS
-- 🆕 Convert a SVG to Data URI
+- Convert a SVG to Data URI
 
 ➡️ [Documentation of CSS-related Features](docs/CSS-related%20Features.md)
 
@@ -130,10 +130,10 @@
 ### Features for Developers
 - Quickly open various development-related folders
 - Open a local plugin's folder in Finder or the Terminal
-- 🆕 Quick Copy of a plugin's ID
+- Quick Copy of a plugin's ID
 - `git clone` a plugin repository via the Plugin Search
-- 🆕 `git pull` a local plugin repository via the Plugin Search
-- 🆕 Open the Vault's root in the default Terminal or in Finder
+- `git pull` a local plugin repository via the Plugin Search
+- Open the Vault's root in the default Terminal or in Finder
 - Add & Update Beta Plugins via [BRAT](https://github.com/TfTHacker/obsidian42-brat)
 - Quick Access to cheat sheets for Plugin Development, e.g. the Obsidian API
 
@@ -175,10 +175,6 @@ In my day job, I am a sociologist studying the social mechanisms underlying the 
 - [Ko-Fi](https://ko-fi.com/pseudometa)
 
 *Note that for questions, bug reports, or feature requests for this workflow, it's better if you open an [GitHub issue](https://github.com/chrisgrieser/shimmering-obsidian/issues), since it is better suited for technical support.*
-
-### 🙏 Donations
-- [PayPal](https://www.paypal.com/paypalme/ChrisGrieser)
-- [Ko-Fi](https://ko-fi.com/pseudometa)
 
 ---
 
