@@ -20,24 +20,19 @@ function run (argv) {
 		str.writeToFileAtomicallyEncodingError(file, true, $.NSUTF8StringEncoding, null);
 	}
 
-	function isHeading(line) {
-		return /^#+ /.test(line);
-	}
-
-	function isEmpty(line) {
-		return /^\s*$/.test(line);
-	}
+	const isHeading = line => /^#+ /.test(line);
+	const isEmpty = line => /^\s*$/.test(line);
 
 	function ensureEmptyLineAt(lines, lineNo) {
-		if (lineNo >= lines.length || !isEmpty(lines[lineNo])) 
-			lines.splice(lineNo, 0, "");
-		
+		if (lineNo >= lines.length || !isEmpty(lines[lineNo])) lines.splice(lineNo, 0, "");
 	}
+
+	// ---------------------------------------------
 
 	let heading = "";
 	let scratchpadRelPath = $.getenv("scratchpad_note_path");
-	const scratchpadHasHeading = /#[^ ][^/]*$/.test(scratchpadRelPath);
-	if (scratchpadHasHeading) {
+	const scratchpadPathHasHeading = /#[^ ][^/]*$/.test(scratchpadRelPath);
+	if (scratchpadPathHasHeading) {
 		const tempArr = scratchpadRelPath.split("#");
 		heading = tempArr.pop();
 		scratchpadRelPath = tempArr.join("");
@@ -51,7 +46,9 @@ function run (argv) {
 	const toAppend = $.getenv("scratchpad_append_prefix") + argv.join("");
 	const scratchpadContent = readFile(scratchpadAbsPath);
 
-	if (scratchpadHasHeading) {
+	// ---------------------------------------------
+
+	if (scratchpadPathHasHeading) {
 		const scratchpadLines = scratchpadContent.split("\n");
 		const scratchpadLinesTemp = scratchpadLines
 			.map (line => line = line.replace(/^#+ /gm, ""));
@@ -60,15 +57,12 @@ function run (argv) {
 			let lastNonEmptyLineNo = -1;
 			for (let i = headingLineNo + 1; i < scratchpadLines.length; i++) {
 				const line = scratchpadLines[i];
-				if (isHeading(line)) 
-					break;
-				 else if (!isEmpty(line)) 
-					lastNonEmptyLineNo = i;
-				
+				if (isHeading(line)) break;
+				else if (!isEmpty(line)) lastNonEmptyLineNo = i;
+
 			}
-			if (lastNonEmptyLineNo > 0) 
-				scratchpadLines.splice(lastNonEmptyLineNo + 1, 0, toAppend);
-			 else {
+			if (lastNonEmptyLineNo > 0) scratchpadLines.splice(lastNonEmptyLineNo + 1, 0, toAppend);
+			else {
 				ensureEmptyLineAt(scratchpadLines, headingLineNo + 1);
 				scratchpadLines.splice(headingLineNo + 2, 0, toAppend);
 				ensureEmptyLineAt(scratchpadLines, headingLineNo + 3);
