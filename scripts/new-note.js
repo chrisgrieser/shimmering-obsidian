@@ -29,8 +29,9 @@ function run (argv) {
 	// Template
 	const templateRelPath = $.getenv("template_note_path");
 	if (templateRelPath) {
-		const templateAbsPath = $.getenv("vault_path").replace(/^~/, app.pathTo("home folder"))
+		let templateAbsPath = $.getenv("vault_path").replace(/^~/, app.pathTo("home folder"))
 			+ "/" + templateRelPath;
+		if (!templateAbsPath.endsWith(".md")) templateAbsPath += ".md";
 		const newNoteContent = readFile(templateAbsPath);
 		URI += "&content=" + encodeURIComponent(newNoteContent);
 		console.log("absolute template path:" + templateAbsPath);

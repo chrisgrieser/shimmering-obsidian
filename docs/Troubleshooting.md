@@ -9,6 +9,7 @@ nav_order: 2
 - Update to the [latest version of the workflow](https://github.com/chrisgrieser/shimmering-obsidian/releases/latest), chances are the problem has already been fixed.
 - Read the [Breaking Changes Documentation](Breaking%20Changes.md) to make sure the unexpected behavior is not a breaking change.
 - If you are using *Shimmering Obsidian* with a second vault, remember that you have to install the required plugins in the new vault as well, and then run `osetup` in the new vault, too.
+- In the [workflow configuration](#Workflow%20COnfiguration), you have to set the path to a *file* and not to the location of a file, e.g. `template_note_path` must be set to `templates/zettel.md`
 
 ## Alfred-based Quick Switcher (`o ...` search )
 - If the [Alfred-based Quick Switcher](Alfred-based%20Quick%20Switcher.md)  does not work at all, make sure you haven't changed any of the default settings of the [Metadata-Extractor regarding the location & name of the JSON files](Workflow%20Configuration.md#Metadata-Extractor-Configuration). You can also rerun `osetup` to make sure.
