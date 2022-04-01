@@ -17,7 +17,7 @@ nav_order: 2
 ## Create a new Note
 **`on`: Create a `n`ew note.**
 - **File Name:** Anything you type after the keyword `on` (e.g., `on foobar`) will become the filename of the new note (e.g., `foobar.md`).
-- **Content:** You can select a template note to use for the new note with the [workflow configuration](Workflow%20Configuration.md#note-related-features) `template_note_path`.
+- **Content:** You can select a template note to use for the new note with the [workflow configuration](Workflow%20Configuration.md#note-related-features) `template_note_path`. Be aware that the template will be ignored when you use Folder Templates from the [Templater plugin](https://obsidian.md/plugins?id=templater-obsidian).
 - 🆕 **Location:** The new note will be placed in the folder specific in the [workflow configuration](Workflow%20Configuration.md#note-related-features) `new_note_location`. If the configuration is left empty, it will be placed in your vault root.
 - This command also works when Obsidian is not running (in which case it will open Obsidian after note creation).
 - If you have set the [workflow configuration](Workflow%20Configuration.md#note-related-features) `use_quickadd` to `true`, this command will instead trigger the [QuickAdd Plugin](https://github.com/chhoumann/quickadd). Anything you type after the keyword `on` (e.g., `on foobar`) will be passed to search the QuickAdd choices. File Name, Location, and Content will be determined by QuickAdd and not this workflow.
