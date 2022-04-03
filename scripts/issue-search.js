@@ -100,10 +100,9 @@ issueJSON.forEach(issue => {
 	let state = "";
 	if (issue.state === "open") state += "🟢 ";
 	else state += "🟣 ";
-	if (title.toLowerCase().includes("request")) state += "🙏 ";
+	if (title.toLowerCase().includes("request") || title.includes("FR")) state += "🙏 ";
 	if (title.toLowerCase().includes("suggestion")) state += "💡 ";
 	if (title.toLowerCase().includes("bug")) state += "🪲 ";
-	if (title.toLowerCase().includes("warning")) state += "⚠️ ";
 	if (title.includes("?")) state += "❓ ";
 	let comments = "";
 	if (issue.comments !== "0") comments = "   💬 " + issue.comments;
