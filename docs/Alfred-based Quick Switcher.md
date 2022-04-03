@@ -29,7 +29,7 @@ The Alfred-based Quick Switcher is basically an enhanced version of [Obsidian's 
 
 ## Main Search
 **`o`: Open files in your vault.**
-This keyword searches all your notes, aliases, folders, and headings combined.
+This keyword searches all your notes, and displays the matching filenames, titles, aliases, folders, and headings.
 
 ### Search for Notes
 This works similar to Obsidian's built-in “QuickSwitch” feature, but can be triggered without Obsidian running (in which case it will open Obsidian with the selected note). Press `↵` to open the selected file in Obsidian.
@@ -44,10 +44,13 @@ This works similar to Obsidian's built-in “QuickSwitch” feature, but can be 
 - Press `⇧` or `⌘ y` to preview the selected note via macOS' Quick Look feature. Press `⇧` or `⌘ y` again to close the preview. This feature requires [QLMarkdown or Peek](#qlmarkdown-or-peek) being installed.
 - To ignore files in a specific folder (e.g. an archive folder), use the [workflow configuration](Workflow%20Configuration.md#Alfred-based-Quick-Switcher) `search_ignore_folder`.
 
-### Smart Queries
-- Add `filename` or `title` to your search query, to display only files and no aliases, folders, or headings. For example, `o obsidian filename` will display only notes that have the `obsidian` in their filename.
-- Similarly, you can also filter for starred or recent files by adding `starred` or `recent` to your query.
-- You can add `#tag` to your search query to search only for files with a specific tag, e.g., `o foobar #moc` will only display notes with the name `foobar` that are also tagged with `#moc`.
+### Query Filtering
+You can add the following keywords to your search query to filter the searching results:
+- `file`: Only display files and no headers, aliases, folders, or headings. For example, `o obsidian file` will display only notes that have the `obsidian` in their filename.
+- `title`: Only display notes that have the matching titles defined in their front matter.
+- `name`: Filter for both filenames and the titles.
+- `starred` or `recent`: Filter for starred or recent files.
+- `#tag`: Search only for files with a specific tag, e.g., `o foobar #moc` will only display notes with the name `foobar` that are also tagged with `#moc`.
 
 ### Search for Aliases
 This command also looks for **aliases**, when they are [defined in the YAML-Header](https://help.obsidian.md/How+to/Add+aliases+to+note#Set+aliases).

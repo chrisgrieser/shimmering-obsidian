@@ -75,6 +75,7 @@ for (let i = 1; i < 7; i++) {
 // files
 fileArray.forEach(file => {
 	const filename = file.fileName;
+	const title = file.frontmatter?.title ?? '';
 	const relativePath = file.relativePath;
 	const absolutePath = vaultPath + "/" + relativePath;
 
@@ -93,11 +94,10 @@ fileArray.forEach(file => {
 		emoji += "🕑 ";
 		additionalMatcher += "recent ";
 	}
-	if (filename.toLowerCase().includes("kanban"))	iconpath = "icons/kanban.png";
-	if (filename.toLowerCase().includes("to do")) emoji += "☑️ ";
-	if (filename.toLowerCase().includes("template")) emoji += "📄 ";
-	if (filename.toLowerCase().includes("inbox")) emoji += "📥 ";
-	if (filename.toLowerCase().includes("moc")) emoji += "🗺 ";
+	if ("".concat(filename, " ", title).toLowerCase().includes("to do")) emoji += "☑️ ";
+	if ("".concat(filename, " ", title).toLowerCase().includes("template")) emoji += "📄 ";
+	if ("".concat(filename, " ", title).toLowerCase().includes("inbox")) emoji += "📥 ";
+	if ("".concat(filename, " ", title).toLowerCase().includes("moc")) emoji += "🗺 ";
 
 	// check link existence of file
 	let hasLinks = Boolean (file.links?.some(l => l.relativePath) || file.backlinks ); // no relativePath => unresolved link
@@ -108,7 +108,7 @@ fileArray.forEach(file => {
 	// Notes (file names)
 	jsonArray.push({
 		"title": emoji + filename,
-		"match": alfredMatcher(filename) + tagMatcher + " filename name title",
+		"match": alfredMatcher(filename) + tagMatcher + " file name",
 		"subtitle": "▸ " + parentFolder(relativePath),
 		"arg": relativePath,
 		"quicklookurl": absolutePath,
@@ -122,6 +122,26 @@ fileArray.forEach(file => {
 			}
 		}
 	});
+
+	// Titles defined in front matter
+	if (title && title !== filename) {
+		jsonArray.push({
+			"title": emoji + "«" + title + "»",
+			"match": alfredMatcher(title) + tagMatcher + " title name",
+			"subtitle": "▸ " + parentFolder(relativePath),
+			"arg": relativePath,
+			"quicklookurl": absolutePath,
+			"type": "file:skipcheck",
+			"uid": title + "_" + relativePath,
+			"icon": { "path": iconpath },
+			"mods": {
+				"shift": {
+					"valid": hasLinks,
+					"subtitle": linksSubtitle
+				}
+			}
+		});
+	}
 
 	// Aliases
 	if (file.aliases) {
