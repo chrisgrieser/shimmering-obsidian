@@ -13,7 +13,7 @@ function readFile (path, encoding) {
 }
 
 function alfredMatcher (str) {
-	return " " + str.replace (/[-()_.]/g, " ") + " " + str + " ";
+	return str.replace (/[-()_.]/g, " ") + " " + str;
 }
 
 function SafeApplication(appId) {
@@ -116,10 +116,17 @@ issueJSON.forEach(issue => {
 		isDiscordReady = "";
 	}
 
+	const issueMatcher = [
+		issue.state,
+		alfredMatcher(title),
+		alfredMatcher(issueCreator),
+		"#" + issue.number
+	].join(" ");
+
 	jsonArray.push({
 		"title": state + title,
-		"match": issue.state + alfredMatcher (title) + alfredMatcher (issueCreator),
-		"subtitle": "#" + issue.number + " by " + issueCreator	+ comments,
+		"match": issueMatcher,
+		"subtitle": "#" + issue.number + " by " + issueCreator + comments,
 		"arg": issue.html_url,
 		"mods": {
 			"alt": {

@@ -52,7 +52,8 @@ nav_order: 2
 
 ## Searching GitHub Issues
 **Triggered by pressing `⇧ + ↵` on a plugin or theme. Will display a list of its GitHub issues.**
-- The list will display the open/closed status, author, and number of comments. The list of issues can be searched like any Alfred Search.
+- The list will display the open/closed status, author, and number of comments. 
+- You can search for issue title, state ("closed" / "open") or author. You can also search for an issue number by prepending `#`, e.g. `#42`.
 - You can also choose to create a new issue, pre-populated as Feature Request or Bug Report.
 - Use `⌥ + ↵` on an issue to copy the issue URL to the clipboard.
 - 💡 To avoid unnecessary issues, the creation of new issues is *disabled* when the local version of the plugin is outdated. Instead, you will be provided with a quick shortcut to update the plugin 🙂
