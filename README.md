@@ -9,11 +9,12 @@
 
 - [Installation](#Workflow-Installation)
 - [Configuration](docs/Workflow%20Configuration.md)
-- [Breaking Changes](docs/Breaking%20Changes.md) (when updating from earlier versions)
+- [Breaking Changes](docs/Breaking%20Changes.md)
 - [Troubleshooting](docs/Troubleshooting.md)
 - [Changelog](Changelog.md)
-- [Alfred Themes](#Alfred%20Themes)
-- [Credits & Donations](#Credits)
+- [Alfred Themes](#Alfred-Themes)
+- [Credits & Donations](#Credits--Donations)
+- [About the Developer](#about-the-developer)
 
 ---
 
