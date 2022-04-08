@@ -1737,6 +1737,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>78C0338F-6739-48E7-86A8-936FBE9163CE</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>B61A7417-054B-434D-9C37-529A8A594F3E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>7954C22E-D0FB-4539-87D1-D62DF328DBB2</key>
 		<array>
 			<dict>
@@ -2445,6 +2458,19 @@
 				<string></string>
 				<key>sourceoutputuid</key>
 				<string>93FCF25A-0E95-47FA-80F3-3576D0557001</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>B61A7417-054B-434D-9C37-529A8A594F3E</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>7A1E8A69-D52C-47C5-9661-38702F6BDEC9</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -4167,27 +4193,6 @@ app.openLocation(urlscheme);</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<false/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string>copied to the clipboard</string>
-				<key>title</key>
-				<string>✅ SVG converted to Data URI</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>41A0A259-DF50-4204-9B32-07FEC782F6D9</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -4224,6 +4229,58 @@ app.openLocation(urlscheme);</string>
 			<string>070C2887-CF44-4021-BD84-60828BA44388</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>copied to the clipboard</string>
+				<key>title</key>
+				<string>✅ SVG converted to Data URI</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>41A0A259-DF50-4204-9B32-07FEC782F6D9</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>1</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>31</integer>
+				<key>hotmod</key>
+				<integer>1835008</integer>
+				<key>hotstring</key>
+				<string>O</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>78C0338F-6739-48E7-86A8-936FBE9163CE</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -4356,6 +4413,28 @@ fi</string>
 			<string>alfred.workflow.utility.conditional</string>
 			<key>uid</key>
 			<string>EDD0CFEF-63C0-4BD0-8E9E-4BD5B43D92DD</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>Untitled</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>new_note_with_selection</key>
+					<string>true</string>
+					<key>selected_text</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>B61A7417-054B-434D-9C37-529A8A594F3E</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -6799,7 +6878,7 @@ echo "$backup"</string>
 				<key>subtext</key>
 				<string></string>
 				<key>text</key>
-				<string>Open CSS Snippet Folder</string>
+				<string>📂 Open CSS Snippet Folder</string>
 				<key>withspace</key>
 				<true/>
 			</dict>
@@ -6850,7 +6929,7 @@ echo "$backup"</string>
 				<key>subtext</key>
 				<string></string>
 				<key>text</key>
-				<string>Open CSS Themes Folder</string>
+				<string>📂 Open CSS Themes Folder</string>
 				<key>withspace</key>
 				<true/>
 			</dict>
@@ -9635,9 +9714,9 @@ https://ko-fi.com/pseudometa</string>
 			<key>note</key>
 			<string>Convert from clipboard to svg data URI</string>
 			<key>xpos</key>
-			<integer>25</integer>
+			<integer>20</integer>
 			<key>ypos</key>
-			<integer>1470</integer>
+			<integer>1340</integer>
 		</dict>
 		<key>07C4D3F5-5CBC-4BAF-9004-B506BEF11C23</key>
 		<dict>
@@ -10196,9 +10275,9 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>905</integer>
+			<integer>900</integer>
 			<key>ypos</key>
-			<integer>1470</integer>
+			<integer>1350</integer>
 		</dict>
 		<key>41EC4120-8D84-4617-9706-00B017180D8B</key>
 		<dict>
@@ -10562,9 +10641,9 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>note</key>
 			<string>svg converting</string>
 			<key>xpos</key>
-			<integer>245</integer>
+			<integer>240</integer>
 			<key>ypos</key>
-			<integer>1470</integer>
+			<integer>1340</integer>
 		</dict>
 		<key>5B11E1F2-FE97-4A4F-8462-44D3571B21F3</key>
 		<dict>
@@ -10891,6 +10970,19 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<integer>1510</integer>
 			<key>ypos</key>
 			<integer>1295</integer>
+		</dict>
+		<key>78C0338F-6739-48E7-86A8-936FBE9163CE</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>7</integer>
+			<key>note</key>
+			<string>Create new Note from selected Text
+
+DOUOBLE CLICK THIS to set hotkey.</string>
+			<key>xpos</key>
+			<integer>20</integer>
+			<key>ypos</key>
+			<integer>1490</integer>
 		</dict>
 		<key>790294D7-A772-49AD-A601-1049B4C5DF31</key>
 		<dict>
@@ -11496,6 +11588,15 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<integer>785</integer>
 			<key>ypos</key>
 			<integer>125</integer>
+		</dict>
+		<key>B61A7417-054B-434D-9C37-529A8A594F3E</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>xpos</key>
+			<integer>220</integer>
+			<key>ypos</key>
+			<integer>1560</integer>
 		</dict>
 		<key>B61CBDAF-02B6-4FC2-B752-103E23E72E56</key>
 		<dict>

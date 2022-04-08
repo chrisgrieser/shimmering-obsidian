@@ -15,25 +15,26 @@ nav_order: 2
 <!-- /MarkdownTOC -->
 
 ## Create a new Note
-**`on`: Create a `n`ew note.**
-- **File Name:** Anything you type after the keyword `on` (e.g., `on foobar`) will become the filename of the new note (e.g., `foobar.md`). (Note that the [Filename Heading Sync Plugin](https://obsidian.md/plugins?id=obsidian-filename-heading-sync) may interfere with this.)
-- **Content:** You can select a template note to use for the new note with the [workflow configuration](Workflow%20Configuration.md#note-related-features) `template_note_path`. Be aware that the template will be ignored when you use Folder Templates from the [Templater plugin](https://obsidian.md/plugins?id=templater-obsidian).
-- 🆕 **Location:** The new note will be placed in the folder specific in the [workflow configuration](Workflow%20Configuration.md#note-related-features) `new_note_location`. If the configuration is left empty, it will be placed in your vault root.
+__`on` or `triggered via hotkey`: Create a `n`ew note.__
+- __File Name:__ Anything you type after the keyword `on` (e.g., `on foobar`) will become the filename of the new note (e.g., `foobar.md`). (Note that the [Filename Heading Sync Plugin](https://obsidian.md/plugins?id=obsidian-filename-heading-sync) may interfere with this.)
+- __Content:__ You can select a template note to use for the new note with the [workflow configuration](Workflow%20Configuration.md#note-related-features) `template_note_path`. Be aware that the template will be ignored when you use Folder Templates from the [Templater plugin](https://obsidian.md/plugins?id=templater-obsidian).
+- __Location:__ The new note will be placed in the folder specific in the [workflow configuration](Workflow%20Configuration.md#note-related-features) `new_note_location`. If the configuration is left empty, it will be placed in your vault root.
 - This command also works when Obsidian is not running (in which case it will open Obsidian after note creation).
+- When triggered via __hotkey__, will append the current selection.
 - If you have set the [workflow configuration](Workflow%20Configuration.md#note-related-features) `use_quickadd` to `true`, this command will instead trigger the [QuickAdd Plugin](https://github.com/chhoumann/quickadd). Anything you type after the keyword `on` (e.g., `on foobar`) will be passed to search the QuickAdd choices. File Name, Location, and Content will be determined by QuickAdd and not this workflow.
 
 ## Scratchpad
-**🆕 `oo` or `triggered via hotkey`: Append to your Scratchpad Note**
+__`oo` or `triggered via hotkey`: Append to your Scratchpad Note__
 - Quickly add text to the note set in the [workflow configuration](Workflow%20Configuration.md#note-related-features) `scratchpad_note_path`. (This command is basically a quicker version of the `fn + ↵` mode of the [Alfred-based Quick Switcher](Alfred-based%20Quick%20Switcher.md#search-for-notes).)
 	- When using `oo foobar`, will append `foobar` to the note.
-	- When triggered via hotkey, will append the current selection.
-	- 🆕 When you append `#foobar` to `scratchpad_note_path` (e.g. `Inbox/Scratchpad-Note#Thoughts`), the text will be added below the heading "foobar" located in that note.
+	- When triggered via __hotkey__, will append the current selection.
+	- When you append `#foobar` to `scratchpad_note_path` (e.g. `Inbox/Scratchpad-Note#Thoughts`), the text will be added below the heading "foobar" located in that note.
 - The text set in the [workflow configuration](Workflow%20Configuration.md#Alfred-based-Quick-Switcher) `scratchpad_append_prefix` will be inserted in front of the input text.
 - If the [workflow configuration](Workflow%20Configuration.md#Alfred-based-Quick-Switcher) `open_after_appending` is set to `true`, will open the scratchpad afterwards.
 - 💡 Using `- [ ]` as prefix and inserting below a specific heading enables you to add cards to a Kanban Board.
 
 ## Daily Notes (deprecated)
-**`od`: Open & Append to today's daily note [settings].**
+__`od`: Open & Append to today's daily note [settings].__
 - Either open today's daily note or append to today's daily note.
 - This feature works without Obsidian running, since when appending, your daily note will not be opened.
 - Use `cmd + ↵` to open your daily note after appending to it.
@@ -45,6 +46,6 @@ nav_order: 2
 ℹ️ *Since I do not use daily notes myself, I find it hard to maintain continuously improve this the daily note feature, which is why I am deprecating this. I encourage you to check out the [Alfred workflow for Obsidian by hauselin](https://github.com/hauselin/obsidian-alfred), which focuses on daily notes and complements this workflow quite nicely.*
 
 ## Move Note
-**`om` or `triggered via hotkey`: Move the current note to a different folder in your vault.**
+__`om` or `triggered via hotkey`: Move the current note to a different folder in your vault.__
 - This fully replicates the functionality of the `Move File to another folder`.
 - 💡 The reason for this command is that the `Move File to another folder` is only available when the file explorer core plugin is enabled. However, some users of this Alfred workflow (including myself) prefer to fully navigate their vault via Alfred, so that the file explorer isn't really needed anymore — the move command is basically the last thing stopping you from simply deactivating the file explorer plugin.

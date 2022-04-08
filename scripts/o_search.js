@@ -17,7 +17,10 @@ function readFile (path, encoding) {
 
 function parentFolder (filePath) {
 	if (!filePath.includes("/")) return "/";
-	return filePath.split("/").slice(0, -1).join("/");
+	return filePath
+		.split("/")
+		.slice(0, -1)
+		.join("/");
 }
 function alfredMatcher (str) {
 	return str.replace (/[-()_.]/g, " ") + " " + str;
