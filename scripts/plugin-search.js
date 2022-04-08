@@ -45,7 +45,9 @@ const themeBrowserURI = "obsidian://advanced-uri?vault=" + vaultNameENC + "&sett
 pluginJSON.forEach(plugin => {
 	const id = plugin.id;
 	const name = plugin.name;
-	const description = plugin.description.replaceAll ("\\\"", "'"); // to deal with escaped '"' in descriptions
+	const description = plugin.description
+		.replaceAll ("\\\"", "'") // to deal with escaped '"' in descriptions
+		.replace (/\. *$/, ""); // trailing dot in description looks weird with the styling done here later in the item subtitle
 	const author = plugin.author;
 	const repo = plugin.repo;
 
