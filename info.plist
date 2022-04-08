@@ -1034,7 +1034,18 @@
 			</dict>
 		</array>
 		<key>4EA9A40E-C1AF-4EB5-B118-A36B1F0CE6F7</key>
-		<array/>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>EE7158C8-34EC-417B-A3DF-6232B33D06C1</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>503B3F91-98A0-4357-92F2-A88BD6EDB404</key>
 		<array>
 			<dict>
@@ -8409,6 +8420,27 @@ echo | git pull</string>
 				<key>subtext</key>
 				<string></string>
 				<key>text</key>
+				<string>🎨 Add a Theme</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>5B11E1F2-FE97-4A4F-8462-44D3571B21F3</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>obeta</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
 				<string>🔁 Update all Beta Plugins</string>
 				<key>withspace</key>
 				<false/>
@@ -8436,27 +8468,6 @@ echo | git pull</string>
 			<string>alfred.workflow.action.openurl</string>
 			<key>uid</key>
 			<string>152229B2-B1D8-44E8-9EF7-98B39FE56FD4</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>keyword</key>
-				<string>obeta</string>
-				<key>subtext</key>
-				<string></string>
-				<key>text</key>
-				<string>🎨 Add a Theme</string>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>5B11E1F2-FE97-4A4F-8462-44D3571B21F3</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -8529,25 +8540,6 @@ echo | git pull</string>
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
-				<string>obsidian://advanced-uri?vault={var:vault_name_ENC}&amp;commandid=obsidian42-brat%253ABRAT-AddBetaPlugin</string>
-				<key>utf8</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
-			<key>uid</key>
-			<string>4EA9A40E-C1AF-4EB5-B118-A36B1F0CE6F7</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>browser</key>
-				<string></string>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
 				<string>obsidian://advanced-uri?vault={var:vault_name_ENC}&amp;&amp;settingid=obsidian42-brat</string>
 				<key>utf8</key>
 				<true/>
@@ -8577,6 +8569,44 @@ echo | git pull</string>
 			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
 			<string>2D7693A0-3ACD-4A9E-BEFF-44AE2096352B</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>obsidian://advanced-uri?vault={var:vault_name_ENC}&amp;settingid=community-plugins</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>EE7158C8-34EC-417B-A3DF-6232B33D06C1</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>obsidian://advanced-uri?vault={var:vault_name_ENC}&amp;commandid=obsidian42-brat%253ABRAT-AddBetaPlugin</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>4EA9A40E-C1AF-4EB5-B118-A36B1F0CE6F7</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -9985,9 +10015,9 @@ https://ko-fi.com/pseudometa</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>950</integer>
+			<integer>1085</integer>
 			<key>ypos</key>
-			<integer>7425</integer>
+			<integer>7420</integer>
 		</dict>
 		<key>2A4E4AA6-EBA8-4645-ADEC-62CA21AC7D9C</key>
 		<dict>
@@ -10032,9 +10062,9 @@ https://ko-fi.com/pseudometa</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>785</integer>
+			<integer>920</integer>
 			<key>ypos</key>
-			<integer>7425</integer>
+			<integer>7420</integer>
 		</dict>
 		<key>2EA7E709-7E6B-43B3-8B44-080685EFA44A</key>
 		<dict>
@@ -10650,9 +10680,9 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>785</integer>
+			<integer>920</integer>
 			<key>ypos</key>
-			<integer>7305</integer>
+			<integer>7300</integer>
 		</dict>
 		<key>5BB5222F-DF30-4BC4-9A10-9CC6B1EFA4E4</key>
 		<dict>
@@ -11131,9 +11161,9 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>950</integer>
+			<integer>1085</integer>
 			<key>ypos</key>
-			<integer>7305</integer>
+			<integer>7300</integer>
 		</dict>
 		<key>860C2D5F-C032-49DF-812C-2973A0E3F3E8</key>
 		<dict>
@@ -12143,6 +12173,15 @@ DOUBLE CLICK THIS to set hotkey.</string>
 			<integer>20</integer>
 			<key>ypos</key>
 			<integer>635</integer>
+		</dict>
+		<key>EE7158C8-34EC-417B-A3DF-6232B33D06C1</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>xpos</key>
+			<integer>775</integer>
+			<key>ypos</key>
+			<integer>7420</integer>
 		</dict>
 		<key>EEC26A00-2E86-4743-8879-AB2FD3D614ED</key>
 		<dict>
