@@ -7,7 +7,8 @@ app.includeStandardAdditions = true;
 
 function parentFolder (filePath) {
 	if (!filePath.includes("/")) return "/";
-	return filePath.split("/").slice(0, -1).join("/");
+	return filePath.split("/").slice(0, -1)
+		.join("/");
 }
 const alfredMatcher = str => " " + str.replace (/[-()_.@]/g, " ") + " " + str + " ";
 

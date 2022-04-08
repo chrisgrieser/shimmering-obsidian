@@ -1,3 +1,6 @@
+- 2022-04-08	release 2.22.0
+- 2022-04-08	new note via hotkey will use selected text as note content
+- 2022-04-03	improvements to GitHub issue search
 - 2022-03-29	release 2.21.11
 - 2022-03-29	Merge pull request #68 from teake/teake-append-to-scratchpad
 - 2022-03-29	Update append-to-scratchpad.js

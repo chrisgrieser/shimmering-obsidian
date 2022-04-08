@@ -8,7 +8,8 @@ function run (argv) {
 	// import variables
 	const relativePath = argv.join("").split("#")[0];
 	const heading = argv.join("").split("#")[1];
-	const vault_name = $.getenv("vault_path").split("/").pop();
+	const vault_name = $.getenv("vault_path").split("/")
+		.pop();
 	let title = relativePath.split("/").pop();
 
 	let url_scheme = "obsidian://";

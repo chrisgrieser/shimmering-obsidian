@@ -33,9 +33,11 @@ const officialDocs =	officialDocsJSON
 	);
 
 officialDocs.forEach(item => {
-	const area = item.path.split("/").slice(1, -1).join("/");
+	const area = item.path.split("/").slice(1, -1)
+		.join("/");
 	const url = officialDocsURL + item.path.slice(3, -3).replaceAll (" ", "+");
-	const title = item.path.split("/").pop().slice(0, -3);
+	const title = item.path.split("/").pop()
+		.slice(0, -3);
 
 	jsonArray.push({
 		"title": title,
@@ -63,7 +65,9 @@ officialDocs.forEach(doc => {
 
 documentationHeaders.forEach(header => {
 	const headerName = header.split("#")[1];
-	const area = header.split("#").slice(0, -1).join().slice(3, -3);
+	const area = header.split("#").slice(0, -1)
+		.join()
+		.slice(3, -3);
 	const url = officialDocsURL + header.slice(3).replaceAll(" ", "+");
 
 	jsonArray.push({
@@ -85,9 +89,11 @@ const communityDocs =
 		.filter (item => !item.path.startsWith(".github/"));
 
 communityDocs.forEach(item => {
-	const area = item.path.split("/").slice(1, -1).join("/");
+	const area = item.path.split("/").slice(1, -1)
+		.join("/");
 	const url = communityDocsURL + item.path.replaceAll (" ", "+");
-	const title = item.path.split("/").pop().slice(0, -3);
+	const title = item.path.split("/").pop()
+		.slice(0, -3);
 
 	jsonArray.push({
 		"title": title,
