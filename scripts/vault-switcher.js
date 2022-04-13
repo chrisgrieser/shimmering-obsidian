@@ -31,6 +31,7 @@ vaultArray.forEach(vaultPath => {
 	if (currentVault === vaultPath) currentIcon = "✅ ";
 	if (vaultName.toLowerCase().includes("development")) currentIcon = "⚙️ ";
 	if (vaultName === "Obsidian Help") currentIcon = "🆘 ";
+	if (vaultName === "Obsidian Sandbox") currentIcon = "🏖 ";
 	const shortPath = vaultPath
 		.replace (/\/Users\/[^/]*/, "~")
 		.slice (0, -(vaultName.length + 1));
