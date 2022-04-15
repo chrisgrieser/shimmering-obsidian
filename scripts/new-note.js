@@ -23,8 +23,8 @@ function run (argv) {
 
 	let fileName = argv.join("");
 	if (!fileName) fileName = "Untitled";
-	fileName = fileName
-		.replace (/[\\/:]/g, "") // remove illegal charcters
+	(fileName = fileName
+		.replace (/[\\/:]/g, "")) // remove illegal charcters
 		.charAt(0).toUpperCase() + fileName.slice(1); // eslint-disable-line newline-per-chained-call
 
 	const newNotePath = ($.getenv("new_note_location") + "/" + fileName)
