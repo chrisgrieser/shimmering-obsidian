@@ -2,7 +2,7 @@
 
 function run (argv) {
 	ObjC.import("stdlib");
-	app = Application.currentApplication();
+	const app = Application.currentApplication();
 	app.includeStandardAdditions = true;
 	const vaultPath = $.getenv("vault_path").replace(/^~/, app.pathTo("home folder"));
 

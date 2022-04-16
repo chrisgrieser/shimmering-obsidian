@@ -3,15 +3,15 @@
 function run (argv) {
 	ObjC.import("stdlib");
 	ObjC.import("Foundation");
-	app = Application.currentApplication();
+	const app = Application.currentApplication();
 	app.includeStandardAdditions = true;
 
 	function readFile (path, encoding) {
-	    if (!encoding) encoding = $.NSUTF8StringEncoding;
-	    const fm = $.NSFileManager.defaultManager;
-	    const data = fm.contentsAtPath(path);
-	    const str = $.NSString.alloc.initWithDataEncoding(data, encoding);
-	    return ObjC.unwrap(str);
+		if (!encoding) encoding = $.NSUTF8StringEncoding;
+		const fm = $.NSFileManager.defaultManager;
+		const data = fm.contentsAtPath(path);
+		const str = $.NSString.alloc.initWithDataEncoding(data, encoding);
+		return ObjC.unwrap(str);
 	}
 
 	// get target spellcheck status
@@ -32,7 +32,7 @@ function run (argv) {
 	const currentSpellCheck = JSON.parse(readFile(vaultPath + "/.obsidian/app.json")).spellcheck === "true";
 
 	// toggle if change is needed
-	if (turnSpellCheckOn !== currentSpellCheck) 
+	if (turnSpellCheckOn !== currentSpellCheck)
 		app.openLocation("obsidian://advanced-uri?vault=" + $.getenv("vault_name_ENC") + "&commandid=editor%253Atoggle-spellcheck");
-	
+
 }

@@ -2,11 +2,11 @@
 
 ObjC.import("stdlib");
 ObjC.import("Foundation");
-app = Application.currentApplication();
+const app = Application.currentApplication();
 app.includeStandardAdditions = true;
 
 function alfredMatcher (str) {
-	return str.replace (/[-\(\)_\.]/g, " ") + " " + str;
+	return str.replace (/[-()_.]/g, " ") + " " + str;
 }
 function parentFolder (filePath) {
 	if (!filePath.includes("/")) return "/";
@@ -15,17 +15,17 @@ function parentFolder (filePath) {
 }
 
 const homepath = app.pathTo("home folder");
-const vault_path = $.getenv("vault_path").replace(/^~/, homepath);
+const vaultPath = $.getenv("vaultPath").replace(/^~/, homepath);
 const jsonArray = [];
 
-let folder_array =
-	app.doShellScript('find "' + vault_path + '" -type d -not -path "*/\.*"')
+let folderArray =
+	app.doShellScript('find "' + vaultPath + '" -type d -not -path "*/\\.*"')
 		.split("\r");
-if (folder_array == "") folder_array = [];
+if (!folderArray) folderArray = [];
 
-folder_array.forEach(absolutePath => {
+folderArray.forEach(absolutePath => {
 	const name = absolutePath.split("/").pop();
-	const relativePath = absolutePath.slice(vault_path.length + 1);
+	const relativePath = absolutePath.slice(vaultPath.length + 1);
 
 	jsonArray.push({
 		"title": name,
