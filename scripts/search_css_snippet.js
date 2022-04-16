@@ -25,20 +25,20 @@ themeArr.forEach(themeFilePath => {
 	}
 	jsonArray.push ({
 		"title": currentIcon + filename,
-		"arg": themePath,
+		"arg": themeFilePath,
 		"subtitle": subtitlePrefix + "theme",
 		"type":"file:skipcheck",
-		"uid": themePath,
+		"uid": themeFilePath,
 	});
 });
 snippetArr.forEach(snippetFilePath => {
 	const filename = snippetFilePath.replace(/.*\/(.*)\..+/, "$1");
 	jsonArray.push ({
 		"title": filename,
-		"arg": snippetPath,
+		"arg": snippetFilePath,
 		"subtitle": "snippet",
 		"type":"file:skipcheck",
-		"uid": snippetPath,
+		"uid": snippetFilePath,
 	});
 });
 
