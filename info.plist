@@ -12281,7 +12281,7 @@ DOUBLE CLICK THIS to set hotkey.</string>
 		<key>input_append</key>
 		<string>clipboard</string>
 		<key>max_number_of_bkps</key>
-		<string>25</string>
+		<string>15</string>
 		<key>merge_nested_tags</key>
 		<string>false</string>
 		<key>new_note_location</key>
