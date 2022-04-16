@@ -1,3 +1,7 @@
+- 2022-04-16	release 2.22.1
+- 2022-04-16	Merge pull request #70 from biorz/patch-1
+- 2022-04-16	docs update
+- 2022-04-15	fix: to remove illegal characters
 - 2022-04-08	release 2.22.0
 - 2022-04-08	new note via hotkey will use selected text as note content
 - 2022-04-03	improvements to GitHub issue search
