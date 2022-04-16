@@ -1,3 +1,4 @@
+- 2022-04-16	release 2.22.3
 - 2022-04-16	release 2.22.2
 - 2022-04-16	fix all eslint errors and warnings on all files
 - 2022-04-16	release 2.22.1
