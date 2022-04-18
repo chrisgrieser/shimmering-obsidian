@@ -208,5 +208,11 @@
    "arg": "https://discord.com/channels/686053708261228577/840286264964022302/860627666100551721",
    "uid": "dev for hire",
    "match": "developer dev for hire role"
+},
+{
+   "title": "Star Stats",
+   "arg": "!star stats @pseudometa",
+   "uid": "Star Stats",
+   "match": "star starboard starred statistics stats"
 }
 ]}
