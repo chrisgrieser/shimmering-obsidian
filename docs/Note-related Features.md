@@ -10,7 +10,6 @@ nav_order: 2
 - [Create a new Note](#create-a-new-note)
 - [Scratchpad](#scratchpad)
 - [Daily Notes \(deprecated\)](#daily-notes-deprecated)
-- [Move Note](#move-note)
 
 <!-- /MarkdownTOC -->
 
@@ -44,8 +43,3 @@ __`od`: Open & Append to today's daily note [settings].__
 - The text set in the [workflow configuration](Workflow%20Configuration.md#Alfred-based-Quick-Switcher) `daily_note_append_prefix` will be inserted in front of the input text.
 
 ℹ️ *Since I do not use daily notes myself, I find it hard to maintain continuously improve this the daily note feature, which is why I am deprecating this. I encourage you to check out the [Alfred workflow for Obsidian by hauselin](https://github.com/hauselin/obsidian-alfred), which focuses on daily notes and complements this workflow quite nicely.*
-
-## Move Note
-__`om` or `triggered via hotkey`: Move the current note to a different folder in your vault.__
-- This fully replicates the functionality of the `Move File to another folder`.
-- 💡 The reason for this command is that the `Move File to another folder` is only available when the file explorer core plugin is enabled. However, some users of this Alfred workflow (including myself) prefer to fully navigate their vault via Alfred, so that the file explorer isn't really needed anymore — the move command is basically the last thing stopping you from simply deactivating the file explorer plugin.
