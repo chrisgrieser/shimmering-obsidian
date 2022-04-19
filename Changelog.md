@@ -1,3 +1,8 @@
+- 2022-04-19	release 2.22.4
+- 2022-04-19	remove om comment (#72)
+- 2022-04-18	minor readability improvements
+- 2022-04-18	appending to scratchpad now requires argument
+- 2022-04-17	changed obeta behavior
 - 2022-04-16	release 2.22.3
 - 2022-04-16	release 2.22.2
 - 2022-04-16	fix all eslint errors and warnings on all files
