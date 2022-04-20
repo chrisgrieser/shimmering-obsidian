@@ -52,7 +52,7 @@ function run() {
 	log("INSTALLED VERSION");
 	log("macOS: " + macVer);
 	log("Alfred: " + $.getenv("alfred_version"));
-	log("\n");
+	log("");
 	log("Obsidian: " + obsiVer);
 	log("This Workflow: " + $.getenv("alfred_workflow_version"));
 	log("Advanced URI Plugin: " + advancedUriVer);
