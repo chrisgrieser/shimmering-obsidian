@@ -1,6 +1,7 @@
 #!/bin/zsh
 
 input="$*"
+mkdir -p "$alfred_workflow_data"
 cd "$alfred_workflow_data"
 
 # write buffer
