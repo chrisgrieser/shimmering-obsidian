@@ -1,3 +1,5 @@
+- 2022-04-20	release 2.22.5
+- 2022-04-20	fix #73
 - 2022-04-19	release 2.22.4
 - 2022-04-19	remove om comment (#72)
 - 2022-04-18	minor readability improvements
