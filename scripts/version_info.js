@@ -59,7 +59,7 @@ function run() {
 	log("Metadata Extractor: " + metadataExVer);
 	log("-------------------------------");
 	log("LATEST VERSION");
-	log(`Obsidian: ${obsiVerOnline}(Insider: ${obsiVerBetaOnline})`);
+	log(`Obsidian: ${obsiVerOnline} (Insider: ${obsiVerBetaOnline})`);
 	log("This Workflow: " + workflowVerOnline);
 	log("Advanced URI Plugin: " + advancedUriVerOnline);
 	log("Metadata Extractor: " + metadataExVerOnline);
