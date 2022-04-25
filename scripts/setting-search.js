@@ -108,10 +108,13 @@ installedPlugins.forEach(pluginFolder => {
 		settingSubtitle = "";
 	}
 
+	let titleEmoji = "";
+	if (manifest.name === "Style Settings") titleEmoji += "🎨 ";
+
 	const URI = URIstart + "&settingid="+ manifest.id;
 
 	jsonArray.push({
-		"title": manifest.name + devIcon,
+		"title": titleEmoji + manifest.name + devIcon,
 		"uid": manifest.id,
 		"subtitle": settingSubtitle,
 		"arg": URI,
