@@ -16,7 +16,7 @@ nav_order: 2
 ## Create a new Note
 __`on` or `triggered via hotkey`: Create a `n`ew note.__
 - __File Name:__ Anything you type after the keyword `on` (e.g., `on foobar`) will become the filename of the new note (e.g., `foobar.md`). (Note that the [Filename Heading Sync Plugin](https://obsidian.md/plugins?id=obsidian-filename-heading-sync) may interfere with this.)
-- __Content:__ You can select a template note to use for the new note with the [workflow configuration](Workflow%20Configuration.md#note-related-features) `template_note_path`. Be aware that the template will be ignored when you use Folder Templates from the [Templater plugin](https://obsidian.md/plugins?id=templater-obsidian).
+- __Content:__ You can select a template note to use for the new note with the [workflow configuration](Workflow%20Configuration.md#note-related-features) `template_note_path`. Be aware that the template will be ignored when you use Folder Templates from the [Templater plugin](https://obsidian.md/plugins?id=templater-obsidian). Any `{{title}}` placeholders in the template will be replaced with the name of the file.
 - __Location:__ The new note will be placed in the folder specific in the [workflow configuration](Workflow%20Configuration.md#note-related-features) `new_note_location`. If the configuration is left empty, it will be placed in your vault root.
 - This command also works when Obsidian is not running (in which case it will open Obsidian after note creation).
 - When triggered via __hotkey__, will append the current selection.
