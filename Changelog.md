@@ -1,3 +1,9 @@
+- 2022-04-26	release 2.22.6
+- 2022-04-26	Merge pull request #74 from teake/teake-new-note-template-title-expand
+- 2022-04-26	Add {{title}} placeholder expansion for new note to docs
+- 2022-04-26	Expand {{title}} for new notes created from templates
+- 2022-04-24	minor fixes for od
+- 2022-04-21	opening note will also close settings window
 - 2022-04-20	release 2.22.5
 - 2022-04-20	fix #73
 - 2022-04-19	release 2.22.4
