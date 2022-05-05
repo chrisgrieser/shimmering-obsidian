@@ -9330,8 +9330,8 @@ echo | git pull</string>
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>~"/Library/Mobile Documents/iCloud~md~obsidian/Documents/Main Vault/Daily Notes/"Documentation
--------------
+	<string>README
+------
 https://github.com/chrisgrieser/shimmering-obsidian/blob/main/README.md
 
 Changelog
@@ -9339,7 +9339,7 @@ Changelog
 https://github.com/chrisgrieser/shimmering-obsidian/blob/main/Changelog.md
 
 Donate
--------
+------
 https://ko-fi.com/pseudometa</string>
 	<key>uidata</key>
 	<dict>
