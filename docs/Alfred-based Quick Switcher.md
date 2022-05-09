@@ -8,6 +8,7 @@ The Alfred-based Quick Switcher is basically an enhanced version of [Obsidian's 
 ## Table of Contents
 <!-- MarkdownTOC -->
 
+- [How the Search works](#how-the-search-works)
 - [Main Search](#main-search)
 	- [Search for Notes](#search-for-notes)
 	- [Smart Queries](#smart-queries)
@@ -26,6 +27,9 @@ The Alfred-based Quick Switcher is basically an enhanced version of [Obsidian's 
 <!-- /MarkdownTOC -->
 
 <img src="https://user-images.githubusercontent.com/73286100/139678407-9ac39baa-5f49-42a0-9622-0fbaf68540b2.gif" alt="promo video" width=70%>
+
+## How the Search works
+All the search features listed here do not *directly* search your vault, but rather use the metadata created by the [Metadata Extractor Plugin](https://obsidian.md/plugins?id=metadata-extractor) on a regular bases. By default, this happens every 30 minutes, meaning recently created notes, recently renamed notes, or recent tag changes are not picked up at once. You can change the meta data refresh rate via the Metadata Extractor Plugin's settings or refresh them manually via `oupdate → Manually Refresh Metadata`.
 
 ## Main Search
 **`o`: Open files in your vault.**
