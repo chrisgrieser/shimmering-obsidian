@@ -5,7 +5,6 @@
 
 # Requirements
 # - markdownlint
-# - markdown-link-check
 # - eslint
 
 # -----------------------
@@ -36,7 +35,6 @@ cd "$(dirname "$0")" || exit 1
 eslint . --fix --config ~"/Library/Mobile Documents/com~apple~CloudDocs/Dotfolder/Configs/.eslintrc.json"
 markdownlint --fix ./README.md
 markdownlint --fix ./docs/*.md
-markdown-link-check -q ./README.md
 
 echo ""
 
