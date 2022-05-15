@@ -11735,7 +11735,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 		<string>daily_note_append_prefix</string>
 	</array>
 	<key>version</key>
-	<string>2.22.6</string>
+	<string>2.22.7</string>
 	<key>webaddress</key>
 	<string>https://chris-grieser.de/</string>
 </dict>

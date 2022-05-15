@@ -1,3 +1,7 @@
+- 2022-05-15	release 2.22.7
+- 2022-05-05	minor fixes in the workflow description
+- 2022-05-05	documentation search update
+- 2022-05-02	documentation search update
 - 2022-04-26	release 2.22.6
 - 2022-04-26	Merge pull request #74 from teake/teake-new-note-template-title-expand
 - 2022-04-26	Add {{title}} placeholder expansion for new note to docs
