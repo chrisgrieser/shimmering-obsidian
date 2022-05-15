@@ -7,6 +7,7 @@ nav_order: 2
 ## Table of Contents
 <!-- MarkdownTOC -->
 
+- [Version 2.22.5](#version-2225)
 - [Version 2.22.4](#version-2224)
 - [Version 2.21.1](#version-2211)
 - [Version 2.20](#version-220)
@@ -25,6 +26,9 @@ nav_order: 2
 	- [Other breaking Changes when updating from v. 1.x to 2.x](#other-breaking-changes-when-updating-from-v-1x-to-2x)
 
 <!-- /MarkdownTOC -->
+## Version 2.22.5
+- Remove "Quick SVG Data URI Conversion" (nobody except me used it, so removing it makes the docs a bit shorter...)
+
 ## Version 2.22.4
 - Remove `om` feature, since barely used and since plugins can do this more reliably (e.g. preserving wikilinks.)
 

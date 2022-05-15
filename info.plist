@@ -34,19 +34,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>070C2887-CF44-4021-BD84-60828BA44388</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>5B0C16ED-7757-4376-AB67-2B080E4AAC86</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>07C4D3F5-5CBC-4BAF-9004-B506BEF11C23</key>
 		<array>
 			<dict>
@@ -659,19 +646,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>41A0A259-DF50-4204-9B32-07FEC782F6D9</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>64249F79-8A34-461C-A40E-9BC13FD3D4B4</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>41EC4120-8D84-4617-9706-00B017180D8B</key>
 		<array>
 			<dict>
@@ -1114,19 +1088,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>7B78C507-3B21-4885-AE64-891BCC97B808</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>5B0C16ED-7757-4376-AB67-2B080E4AAC86</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>41A0A259-DF50-4204-9B32-07FEC782F6D9</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -4691,67 +4652,6 @@ cat "$vault_path"/"$template_note_path"</string>
 			<string>alfred.workflow.output.writefile</string>
 			<key>uid</key>
 			<string>860C2D5F-C032-49DF-812C-2973A0E3F3E8</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<false/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string>copied to the clipboard</string>
-				<key>title</key>
-				<string>✅ SVG converted to Data URI</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>41A0A259-DF50-4204-9B32-07FEC782F6D9</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>script</key>
-				<string></string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string>scripts/svg-to-data-uri.sh</string>
-				<key>type</key>
-				<integer>8</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>5B0C16ED-7757-4376-AB67-2B080E4AAC86</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>focusedappvariable</key>
-				<false/>
-				<key>focusedappvariablename</key>
-				<string></string>
-				<key>keyword</key>
-				<string>!osvg</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.snippet</string>
-			<key>uid</key>
-			<string>070C2887-CF44-4021-BD84-60828BA44388</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -9361,17 +9261,6 @@ https://ko-fi.com/pseudometa</string>
 			<key>ypos</key>
 			<integer>1605</integer>
 		</dict>
-		<key>070C2887-CF44-4021-BD84-60828BA44388</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>note</key>
-			<string>Convert from clipboard to svg data URI</string>
-			<key>xpos</key>
-			<integer>25</integer>
-			<key>ypos</key>
-			<integer>1295</integer>
-		</dict>
 		<key>07C4D3F5-5CBC-4BAF-9004-B506BEF11C23</key>
 		<dict>
 			<key>colorindex</key>
@@ -9904,15 +9793,6 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>ypos</key>
 			<integer>2670</integer>
 		</dict>
-		<key>41A0A259-DF50-4204-9B32-07FEC782F6D9</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>xpos</key>
-			<integer>400</integer>
-			<key>ypos</key>
-			<integer>1295</integer>
-		</dict>
 		<key>41EC4120-8D84-4617-9706-00B017180D8B</key>
 		<dict>
 			<key>colorindex</key>
@@ -10258,17 +10138,6 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<integer>2325</integer>
 			<key>ypos</key>
 			<integer>2285</integer>
-		</dict>
-		<key>5B0C16ED-7757-4376-AB67-2B080E4AAC86</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>note</key>
-			<string>svg converting</string>
-			<key>xpos</key>
-			<integer>245</integer>
-			<key>ypos</key>
-			<integer>1295</integer>
 		</dict>
 		<key>5B11E1F2-FE97-4A4F-8462-44D3571B21F3</key>
 		<dict>

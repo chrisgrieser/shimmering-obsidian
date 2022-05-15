@@ -9,7 +9,6 @@ nav_order: 2
 
 - [Open & Create your CSS Files](#open--create-your-css-files)
 - [Theme Search](#theme-search)
-- [Quick SVG Data URI Conversion](#quick-svg-data-uri-conversion)
 - [For Theme Designers: Cheat Sheets](#for-theme-designers-cheat-sheets)
 
 <!-- /MarkdownTOC -->
@@ -25,16 +24,6 @@ nav_order: 2
 - Useful for 🎨 theme designers will be the `fn + return` command to quickly download any theme's CSS.
 
 <img src="https://user-images.githubusercontent.com/73286100/131255059-1a56d6e7-8c2f-4ff0-b20d-247702bb7925.gif" alt="Theme Search" width=60%>
-
-## Quick SVG Data URI Conversion
-**Snippet Trigger: `!osvg`**
-- Type `!osvg` into any text field to convert the svg in your clipboard to data URI and paste it.
-- [Explainer why converting SVGs is useful](https://css-tricks.com/lodge/svg/09-svg-data-uris/).
-- Takes the .svg files in you clipboard, converts it to a SVG Data URI, and copies it wrapped in CSS into your clipboard.
-- You can use <https://icon-sets.iconify.design/> to browse for icons as SVG.
-- ❗️ This command requires [`mini-svg-data-uri`](https://www.npmjs.com/package/mini-svg-data-uri), which you can easily install via `npm -g install mini-svg-data-uri`.
-
-![SVG to Data URI Conversion](https://user-images.githubusercontent.com/73286100/144687883-102e4e1b-6227-4b56-afce-416ca0b08b80.gif)
 
 ## For Theme Designers: Cheat Sheets
 **`oc`: Quickly Access Various Cheat Sheets for designing themes in Obsidian.**
