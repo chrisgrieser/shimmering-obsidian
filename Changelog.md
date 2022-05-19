@@ -1,3 +1,8 @@
+- 2022-05-19	release 2.22.8
+- 2022-05-19	update documentation search cache
+- 2022-05-19	Merge pull request #80 from teake/teake-cursor-lastline
+- 2022-05-19	Replace quotes
+- 2022-05-19	Set cursor on last line of newly created note
 - 2022-05-15	release 2.22.7
 - 2022-05-05	minor fixes in the workflow description
 - 2022-05-05	documentation search update
