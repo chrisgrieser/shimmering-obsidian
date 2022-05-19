@@ -30,9 +30,11 @@ function run (argv) {
 	const newNotePath = ($.getenv("new_note_location") + "/" + fileName)
 		.replaceAll ("//", "/");
 
-	let URI = "obsidian://new?" +
+	let URI = "obsidian://advanced-uri?" +
 		"vault=" + $.getenv("vault_name_ENC") +
-		"&file=" + encodeURIComponent(newNotePath);
+		"&filepath=" + encodeURIComponent(newNotePath) +
+		"&mode=new" +
+		"&line=999999999999999";
 
 	// Content
 	let newNoteContent = "";
@@ -41,13 +43,13 @@ function run (argv) {
 		let templateAbsPath = $.getenv("vault_path").replace(/^~/, app.pathTo("home folder"))
 			+ "/" + templateRelPath;
 		if (!templateAbsPath.endsWith(".md")) templateAbsPath += ".md";
-		newNoteContent += readFile(templateAbsPath).replace("{{title}}", fileName);
+		newNoteContent += readFile(templateAbsPath).replace('{{title}}', fileName);
 		console.log("absolute template path:" + templateAbsPath);
 	}
 
 	if (selectedText) newNoteContent += selectedText;
 
-	URI += "&content=" + encodeURIComponent(newNoteContent);
+	URI += "&data=" + encodeURIComponent(newNoteContent);
 	console.log("URI: " + URI);
 	app.openLocation(URI);
 }
