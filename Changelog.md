@@ -1,3 +1,5 @@
+- 2022-05-25	release 2.22.9
+- 2022-05-25	fix spellcheck toggling when changing workspaces
 - 2022-05-19	release 2.22.8
 - 2022-05-19	update documentation search cache
 - 2022-05-19	Merge pull request #80 from teake/teake-cursor-lastline
