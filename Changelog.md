@@ -1,3 +1,5 @@
+- 2022-06-03	release 2.23.0
+- 2022-06-03	new: quick workspace switcher
 - 2022-05-25	release 2.22.10
 - 2022-05-25	release 2.22.9
 - 2022-05-25	fix spellcheck toggling when changing workspaces
