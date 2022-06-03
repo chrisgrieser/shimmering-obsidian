@@ -9,3 +9,8 @@
 - Unsurprisingly, this workflow requires the [Workspaces Core Plugin](https://help.obsidian.md/Plugins/Workspaces) to be enabled.
 
 <img src="https://user-images.githubusercontent.com/73286100/133615940-a56731e5-6b60-4d28-b877-7ea48d10225e.gif" alt="workspace" width=60%>
+
+**Triggered via Hotkey: Quick Workspace Switcher**
+- Use the [workflow configuration](Workflow%20Configuration.md) `workspace_1`, `workspace_2`, and `workspace_3` to select hotkeys.
+- [Define the hotkeys you wish to use.](Workflow%20Configuration.md#setting-up-the-hotkeys)
+- The hotkeys will automatically switch to the workspace. Note that the current workspace is not saved and that the hotkeys only work in Obsidian itself. 

@@ -79,7 +79,7 @@
 ---
 
 ### Workspace Switcher
-- Quickly switch workspaces
+- Quickly switch workspaces, either via Switcher Modal or Hotkeys (🆕)
 - Save Workspaces
 - Manage workspaces
 - Automatically toggle spellchecking when switching to certain workspaces
