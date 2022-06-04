@@ -8784,7 +8784,7 @@ echo | git pull</string>
 				<key>subtext</key>
 				<string></string>
 				<key>text</key>
-				<string>🎨 Add a Theme</string>
+				<string>🎨 Add a Beta Theme</string>
 				<key>withspace</key>
 				<false/>
 			</dict>
@@ -9804,7 +9804,7 @@ https://ko-fi.com/pseudometa</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>1090</integer>
+			<integer>950</integer>
 			<key>ypos</key>
 			<integer>7035</integer>
 		</dict>
@@ -9862,7 +9862,7 @@ https://ko-fi.com/pseudometa</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>925</integer>
+			<integer>785</integer>
 			<key>ypos</key>
 			<integer>7035</integer>
 		</dict>
@@ -10400,7 +10400,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>925</integer>
+			<integer>785</integer>
 			<key>ypos</key>
 			<integer>6915</integer>
 		</dict>
@@ -10872,7 +10872,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>1090</integer>
+			<integer>950</integer>
 			<key>ypos</key>
 			<integer>6915</integer>
 		</dict>
