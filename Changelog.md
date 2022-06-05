@@ -1,3 +1,5 @@
+- 2022-06-06	release 2.24.1
+- 2022-06-06	fix #82
 - 2022-06-05	release 2.24.0
 - 2022-06-05	search respects files excluded in Obsi settings
 - 2022-06-03	release 2.23.0
