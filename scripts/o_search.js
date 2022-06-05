@@ -68,7 +68,7 @@ console.log(excludeFilter);
 let folderArray = app.doShellScript(`find "${pathToCheck}" -type d -mindepth 1 -not -path "*/.*"`)
 	.split("\r"); // returns *absolute* paths
 if (folderArray === "") folderArray = [];
-if (excludeFilter.length) {
+if (excludeFilter?.length) {
 	folderArray = folderArray.filter (folder => {
 
 		let include = true;
@@ -91,7 +91,7 @@ if (excludeFilter.length) {
 
 // file search
 let fileArray = JSON.parse (readFile(metadataJSON));
-if (excludeFilter.length) {
+if (excludeFilter?.length) {
 	fileArray = fileArray.filter(file => {
 		let include = true;
 		excludeFilter.forEach(filter => {
