@@ -31,7 +31,7 @@ const vaultPath = $.getenv("vault_path").replace(/^~/, app.pathTo("home folder")
 const metadataJSON = vaultPath + "/.obsidian/plugins/metadata-extractor/metadata.json";
 const starredJSON = vaultPath + "/.obsidian/starred.json";
 const recentJSON = vaultPath + "/.obsidian/workspace";
-const ignoreFolder = $.getenv("search_ignore_folder").replace(/^\/|\/$/, "");
+const excludeFilterJSON = vaultPath + "/.obsidian/app.json";
 const jsonArray = [];
 
 // either searches the vault, or a subfolder of the vault
@@ -45,18 +45,8 @@ try {
 	pathToCheck = vaultPath;
 }
 
-// folder search
-let folderArray = app.doShellScript("find \"" + pathToCheck + "\" -type d -mindepth 1 -not -path \"*/.*\"")
-	.split("\r");
-if (folderArray === "") folderArray = [];
-if (ignoreFolder) folderArray = folderArray.filter (fo => !fo.startsWith(vaultPath + "/" + ignoreFolder));
-
-// file search
-let fileArray = JSON.parse (readFile(metadataJSON));
-if (ignoreFolder) fileArray = fileArray.filter (f => !f.relativePath.startsWith(ignoreFolder));
-if (pathToCheck !== vaultPath) fileArray = fileArray.filter (f => f.relativePath.startsWith(currentFolder));
-
 // starred & recent files
+const recentFiles = JSON.parse(readFile(recentJSON)).lastOpenFiles;
 let starredFiles = [];
 if (readFile(starredJSON) !== "") {
 	starredFiles =
@@ -65,7 +55,61 @@ if (readFile(starredJSON) !== "") {
 			.filter (item => item.type === "file")
 			.map (item => item.path);
 }
-const recentFiles = JSON.parse(readFile(recentJSON)).lastOpenFiles;
+
+// Excluded Files
+const excludeFilter = JSON.parse(readFile(excludeFilterJSON)).userIgnoreFilters;
+console.log(excludeFilter);
+
+// ---------------------------------
+// Excluded Files & Ignored Headings
+// ---------------------------------
+
+// folder search
+let folderArray = app.doShellScript(`find "${pathToCheck}" -type d -mindepth 1 -not -path "*/.*"`)
+	.split("\r"); // returns *absolute* paths
+if (folderArray === "") folderArray = [];
+if (excludeFilter.length) {
+	folderArray = folderArray.filter (folder => {
+
+		let include = true;
+		folder += "/";
+
+		excludeFilter.forEach(filter => {
+
+			const isRegexFilter = filter.startsWith("/");
+			// TODO: investigate properly how regex filter works in Obsidian to
+			// properly replicate the behavior
+
+			const relPath = folder.slice(vaultPath.length + 1);
+			if (isRegexFilter && relPath.includes(filter)) include = false;
+			if (!isRegexFilter && relPath.startsWith(filter)) include = false;
+
+		});
+		return include;
+	});
+}
+
+// file search
+let fileArray = JSON.parse (readFile(metadataJSON));
+if (excludeFilter.length) {
+	fileArray = fileArray.filter(file => {
+		let include = true;
+		excludeFilter.forEach(filter => {
+
+			const isRegexFilter = filter.startsWith("/");
+			// TODO: investigate properly how regex filter works in Obsidian to
+			// properly replicate the behavior
+
+			const relPath = file.relativePath;
+			if (isRegexFilter && relPath.includes(filter)) include = false;
+			if (!isRegexFilter && relPath.startsWith(filter)) include = false;
+
+		});
+		return include;
+	});
+}
+if (pathToCheck !== vaultPath)
+	fileArray = fileArray.filter (f => f.relativePath.startsWith(currentFolder));
 
 // ignored headings
 const hLVLignore = $.getenv("h_lvl_ignore");
@@ -75,7 +119,11 @@ for (let i = 1; i < 7; i++) {
 	else headingIgnore.push (false);
 }
 
-// files
+// -------------------------------
+// Construction of JSON for Alfred
+// -------------------------------
+
+// FILES
 fileArray.forEach(file => {
 	const filename = file.fileName;
 	const relativePath = file.relativePath;
@@ -180,7 +228,7 @@ fileArray.forEach(file => {
 	});
 });
 
-// folders
+// FOLDERS
 folderArray.forEach(absolutePath => {
 	const name = absolutePath.split("/").pop();
 	const relativePath = absolutePath.slice(vaultPath.length + 1);

@@ -12031,8 +12031,6 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 		<string>Writing/Acceleration of Research/Acco Kanban#Scratchpad</string>
 		<key>screenshot_path</key>
 		<string></string>
-		<key>search_ignore_folder</key>
-		<string>PhD Thesis/PhD Data/Articles</string>
 		<key>template_note_path</key>
 		<string></string>
 		<key>thousand_separator</key>
@@ -12064,10 +12062,9 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 		<string>vault_path</string>
 		<string>scratchpad_note_path</string>
 		<string>workspace_2</string>
-		<string>daily_note_append_prefix</string>
 		<string>workspace_3</string>
+		<string>daily_note_append_prefix</string>
 		<string>new_note_location</string>
-		<string>search_ignore_folder</string>
 		<string>backup_destination</string>
 	</array>
 	<key>version</key>

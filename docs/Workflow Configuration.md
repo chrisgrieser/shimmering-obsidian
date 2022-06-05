@@ -34,15 +34,14 @@ You access the main workflow configuration by clicking the *`[x]`* at the top ri
 - `h_Ivl_ignore`: Heading levels that should be ignored in the Quick Switcher (`o` command). `h1 h6` will ignore h1 and h6, so only h2, h3, h4, and h5 show up in the Quick Switcher. `h4 h5 h6` will only show h1, h2 and h3 in the Quick Switcher. Enter `h1 h2 h3 h4 h5 h6` to ignore all headings in the Quick Switcher.
 - `merge_nested_tags`: When using the `ot` search, merge all [nested tags](https://help.obsidian.md/Plugins/Tag+pane#Nested+tags) to their parent tag, e.g., `#inbox/to-read` and `#inbox/later` would both be subsumed under `#inbox`. Accepts `true` or `false`.
 - `open_after_appending`: When appending to a note (`fn + ↵`), the note will automatically be opened afterwards. Accepts `true` or `false`. This setting also applies to the [Scratchpad](Note-related%20Features.md#Scratchpad) feature.
-- 🆕 `input_append`: What type of content is used when appending to a note (`fn + ↵`). Accepts `clipboard` or `manual` (= prompting you to enter something).
-- 🆕 `search_ignore_folder`: the vault-*relative* path to a folder which should be excluded when using the main search of Quick Switcher (`o` command). (The other sub-searches like `or` or `os` are not affected.) Leave empty to not exclude any folder.
+- `input_append`: What type of content is used when appending to a note (`fn + ↵`). Accepts `clipboard` or `manual` (= prompting you to enter something).
 
 ### Note-related Features
 - `template_note_path`: vault-relative path to the template note to use when creating new notes with the `on` command or when browsing a folder via [the Alfred-based Quick Switcher](Alfred-based%20Quick%20Switcher.md). Be aware that the template will be ignored when you use Folder Templates from the [Templater plugin](https://obsidian.md/plugins?id=templater-obsidian).
-- 🆕 `new_note_location`: vault-relative path to a folder where new notes created by `on` should be created. Leave empty to create the new note in the vault root.
+- `new_note_location`: vault-relative path to a folder where new notes created by `on` should be created. Leave empty to create the new note in the vault root.
 - `use_quickadd`: Instead of creating a new note based on a template (with the keyword `on`), will trigger the [QuickAdd Plugin](https://github.com/chhoumann/quickadd). Accepted values are `true` and `false`.
 - `scratchpad_note_path`: vault-relative path to your [Scratchpad](Note-related%20Features.md#Scratchpad). 	
-	- 🆕 When you append `#foobar` to `scratchpad_note_path` (e.g. `Inbox/Scratchpad-Note#Thoughts`), the text will be added below the heading "foobar" located in that note.
+	- When you append `#foobar` to `scratchpad_note_path` (e.g. `Inbox/Scratchpad-Note#Thoughts`), the text will be added below the heading "foobar" located in that note.
 - `scratchpad_append_prefix`: String to insert before content appended to the [Scratchpad](Note-related%20Features.md#Scratchpad). Does accept dynamic content like the current date or time when you use [Alfred's Placeholder Syntax](https://www.alfredapp.com/help/workflows/advanced/placeholders/#date-time).
 - `append_prefix`: String to insert before content appended to a note via the Alfred-based Quick-Switcher (`fn + ↵`). Does accept dynamic content like the current date or time when you use [Alfred's Placeholder Syntax](https://www.alfredapp.com/help/workflows/advanced/placeholders/#date-time).
 - `daily_note_path`: *absolute* path to the folder where your daily notes are saved. See [Daily Notes](Note-related%20Features.md#Daily%20Notes).
