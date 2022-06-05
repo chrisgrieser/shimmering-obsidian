@@ -115,8 +115,8 @@ if (pathToCheck !== vaultPath)
 const hLVLignore = $.getenv("h_lvl_ignore");
 const headingIgnore = [true];
 for (let i = 1; i < 7; i++) {
-	if (hLVLignore.includes (i.toString())) headingIgnore.push (true);
-	else headingIgnore.push (false);
+	if (hLVLignore.includes(i.toString())) headingIgnore.push (true);
+	else headingIgnore.push(false);
 }
 
 // -------------------------------
