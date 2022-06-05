@@ -1,3 +1,5 @@
+- 2022-06-05	release 2.24.0
+- 2022-06-05	search respects files excluded in Obsi settings
 - 2022-06-03	release 2.23.0
 - 2022-06-03	new: quick workspace switcher
 - 2022-05-25	release 2.22.10
