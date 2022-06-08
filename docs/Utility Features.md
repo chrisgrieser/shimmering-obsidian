@@ -9,7 +9,6 @@ nav_order: 2
 
 - [Backup your Vault](#backup-your-vault)
 - [Open Various Folders](#open-various-folders)
-- [Carl](#carl)
 - [Update Plugins & Metadata](#update-plugins--metadata)
 
 <!-- /MarkdownTOC -->
@@ -42,10 +41,6 @@ end tell
 - `ocss`: Open the `themes` and `snippets` folder. (Along with your installed themes and snippets.)
 - Open your vault root with the [Vault Switcher](Vault%20Switcher.md).
 - Open local plugin folders with the [Plugin Settings Search](Settings%20and%20Local%20Plugin%20Search.md).
-
-## Carl
-**`ocarl`: Search `carl` auto-responses. 🐢**
-- Search and paste auto-responses from the beloved Discord Bot of the [Obsidian Discord Server](https://discord.gg/veuWUTm).
 
 ## Update Plugins & Metadata
 **`oupdate`: Update Plugins and Metadata used by this workflow**

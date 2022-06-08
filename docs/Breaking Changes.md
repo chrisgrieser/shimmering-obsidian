@@ -7,6 +7,7 @@ nav_order: 2
 ## Table of Contents
 <!-- MarkdownTOC -->
 
+- [Version 2.24.1](#version-2241)
 - [Version 2.24.0](#version-2240)
 - [Version 2.22.7](#version-2227)
 - [Version 2.22.4](#version-2224)
@@ -27,6 +28,9 @@ nav_order: 2
 	- [Other breaking Changes when updating from v. 1.x to 2.x](#other-breaking-changes-when-updating-from-v-1x-to-2x)
 
 <!-- /MarkdownTOC -->
+## Version 2.24.1
+- removed `ocarl` since nobody uses it
+
 ## Version 2.24.0
 - `search_ignore_folder` setting removed, instead will respect the `Excluded Files` setting from Obsidian (settings → Files & Links → Excluded Files).
 

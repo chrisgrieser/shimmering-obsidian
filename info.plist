@@ -1818,19 +1818,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>8960BAF4-D71A-4DC1-8382-E3864941AAB6</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>25FCBA58-5263-4F11-B222-4978632AF5B9</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>89E2FCF0-5A14-4078-8D1F-C0FCAC339F63</key>
 		<array>
 			<dict>
@@ -1849,19 +1836,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>EF69BC31-CD56-49CC-9172-A3EE6940DDD3</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>8C93D170-EDBF-4A3E-BD7D-2DFD23E97AE9</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>8960BAF4-D71A-4DC1-8382-E3864941AAB6</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -9423,74 +9397,6 @@ echo | git pull</string>
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>alfredfiltersresults</key>
-				<true/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttreatemptyqueryasnil</key>
-				<true/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>keyword</key>
-				<string>ocarl</string>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
-				<key>runningsubtext</key>
-				<string></string>
-				<key>script</key>
-				<string>cat ./data/carl-commands.json</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>subtext</key>
-				<string></string>
-				<key>title</key>
-				<string>Carl Auto-Reponses</string>
-				<key>type</key>
-				<integer>0</integer>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>8C93D170-EDBF-4A3E-BD7D-2DFD23E97AE9</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>autopaste</key>
-				<true/>
-				<key>clipboardtext</key>
-				<string>{query}</string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>transient</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>8960BAF4-D71A-4DC1-8382-E3864941AAB6</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
 	</array>
 	<key>readme</key>
 	<string>README
@@ -10939,15 +10845,6 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>ypos</key>
 			<integer>1205</integer>
 		</dict>
-		<key>8960BAF4-D71A-4DC1-8382-E3864941AAB6</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>xpos</key>
-			<integer>200</integer>
-			<key>ypos</key>
-			<integer>8560</integer>
-		</dict>
 		<key>89E2FCF0-5A14-4078-8D1F-C0FCAC339F63</key>
 		<dict>
 			<key>colorindex</key>
@@ -10983,15 +10880,6 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<integer>2050</integer>
 			<key>ypos</key>
 			<integer>1400</integer>
-		</dict>
-		<key>8C93D170-EDBF-4A3E-BD7D-2DFD23E97AE9</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>xpos</key>
-			<integer>25</integer>
-			<key>ypos</key>
-			<integer>8560</integer>
 		</dict>
 		<key>8C9F828A-D313-4E2E-8428-621E160D07FE</key>
 		<dict>
