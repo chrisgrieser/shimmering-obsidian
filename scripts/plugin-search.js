@@ -73,11 +73,11 @@ pluginJSON.forEach(plugin => {
 	const repo = plugin.repo;
 
 	const githubURL = "https://github.com/" + repo;
-	const openURI = "obsidian://show-plugin?vault=" + vaultNameENC + "&id=" + id;
+	const openURI = `obsidian://show-plugin?vault=${vaultNameENC}&id=${id}`;
 	let isDiscordReady;
 	let shareURL;
 	if (discordReadyLinks) {
-		shareURL = "*" + name + "* <https://obsidian.md/plugins?id=" + id + ">";
+		shareURL = `*${name}* <https://obsidian.md/plugins?id=${id}>`;
 		isDiscordReady = " (discord ready)";
 	} else {
 		shareURL = "https://obsidian.md/plugins?id=" + id;
@@ -117,10 +117,10 @@ pluginJSON.forEach(plugin => {
 				"subtitle": "⌥: Copy Link" + isDiscordReady
 			},
 			"fn": { "arg": githubURL },
-			"shift": { "arg": repo + ";" + id + ";" + name },
+			"shift": { "arg": `${repo};${id};${name}` },
 			"ctrl": {
 				"arg": id,
-				"subtitle": "by " + author + "   " + downloadsStr + "       ID: " + id + " (⌃: Copy ID)"
+				"subtitle": `by ${author}   ${downloadsStr}       ID: ${id} (⌃: Copy ID)`
 			},
 		}
 	});
