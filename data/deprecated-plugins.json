@@ -4,7 +4,8 @@
 		"hover-external-link",
 		"code-block-copy",
 		"obsidian-code-copy",
-		"macOS-keyboard-nav-obsidian"
+		"macOS-keyboard-nav-obsidian",
+		"cm-editor-syntax-highlight-obsidian"
 	],
 	"dysfunct": [
 		"obsidian-vale"
