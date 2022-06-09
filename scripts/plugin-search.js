@@ -19,6 +19,14 @@ function insert1000sep (num) {
 	return numText;
 }
 
+function readFile (path, encoding) {
+	if (!encoding) encoding = $.NSUTF8StringEncoding;
+	const fm = $.NSFileManager.defaultManager;
+	const data = fm.contentsAtPath(path);
+	const str = $.NSString.alloc.initWithDataEncoding(data, encoding);
+	return ObjC.unwrap(str);
+}
+
 function SafeApplication(appId) {
 	try {
 		return Application(appId);
@@ -33,13 +41,26 @@ const vaultPath = $.getenv("vault_path").replace(/^~/, app.pathTo("home folder")
 const vaultNameENC = $.getenv("vault_name_ENC").replace(/^~/, app.pathTo("home folder"));
 const jsonArray = [];
 
+//------------------------------------------------------------------------------
+
 const pluginJSON = onlineJSON ("https://raw.githubusercontent.com/obsidianmd/obsidian-releases/master/community-plugins.json");
 const downloadsJSON = onlineJSON ("https://raw.githubusercontent.com/obsidianmd/obsidian-releases/master/community-plugin-stats.json");
-const themeJSON = onlineJSON("https://raw.githubusercontent.com/obsidianmd/obsidian-releases/master/community-css-themes.json");
 const installedPlugins = app.doShellScript("ls -1 \"" + vaultPath + "\"\"/.obsidian/plugins/\"");
+
+const themeJSON = onlineJSON("https://raw.githubusercontent.com/obsidianmd/obsidian-releases/master/community-css-themes.json");
 const installedThemes = app.doShellScript("find '" + vaultPath + "/.obsidian/themes/' -name '*.css' ");
 const currentTheme = app.doShellScript("cat \"" + vaultPath + "/.obsidian/appearance.json\" | grep \"cssTheme\" | head -n 1 | cut -d\\\" -f 4"); // eslint-disable-line no-useless-escape
 const themeBrowserURI = "obsidian://advanced-uri?vault=" + vaultNameENC + "&settingid=theme-browser";
+
+const deprecatedJSON = JSON.parse(readFile("./data/deprecated-plugins.json"));
+const deprecatedPlugins = [
+	...deprecatedJSON.sherlocked,
+	...deprecatedJSON.dysfunct,
+	...deprecatedJSON.deprecated
+];
+
+//------------------------------------------------------------------------------
+
 
 // add PLUGINS to the JSON
 pluginJSON.forEach(plugin => {
@@ -70,9 +91,14 @@ pluginJSON.forEach(plugin => {
 		downloadsStr = "  ↓ " + insert1000sep(downloads);
 	}
 
-	// check whether already installed
-	let installedIcon = "";
-	if (installedPlugins.includes(id)) installedIcon = " ✅";
+	// check whether already installed / deprecated
+	let icons = "";
+	let subtitleIcons = "";
+	if (installedPlugins.includes(id)) icons += " ✅";
+	if (deprecatedPlugins.includes(id)) {
+		icons += " ⚠️";
+		subtitleIcons = "deprecated – ";
+	}
 
 	// Better matching for some plugins
 	let URImatcher = "";
@@ -80,8 +106,8 @@ pluginJSON.forEach(plugin => {
 
 	// create json for Alfred
 	jsonArray.push({
-		"title": name + installedIcon,
-		"subtitle": description + " — by " + author + downloadsStr,
+		"title": name + icons,
+		"subtitle": subtitleIcons + description + " — by " + author + downloadsStr,
 		"arg": openURI,
 		"match":	"plugin " + URImatcher + alfredMatcher (name) + alfredMatcher (author) + alfredMatcher (id) + alfredMatcher (description),
 		"mods": {

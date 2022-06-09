@@ -11894,7 +11894,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 		<key>download_folder_path</key>
 		<string>~/Downloads</string>
 		<key>h_lvl_ignore</key>
-		<string>h1 h3 h4 h5 h6</string>
+		<string>h1 h2 h3 h4 h5 h6</string>
 		<key>input_append</key>
 		<string>clipboard</string>
 		<key>max_number_of_bkps</key>
