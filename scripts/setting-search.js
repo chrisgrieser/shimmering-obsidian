@@ -13,6 +13,8 @@ function readFile (path, encoding) {
 	return ObjC.unwrap(str);
 }
 
+//------------------------------------------------------------------------------
+
 const vaultPath = $.getenv("vault_path").replace(/^~/, app.pathTo("home folder"));
 const URIstart = "obsidian://advanced-uri?vault=" + $.getenv("vault_name_ENC");
 const jsonArray = [];
@@ -24,6 +26,15 @@ const enabledComPlugins = JSON.parse(readFile(vaultPath + "/.obsidian/community-
 
 const corePluginsWithSettings = JSON.parse(readFile("./data/core-plugins-with-settings-database.json"));
 const enabledCorePlugins = JSON.parse(readFile(vaultPath + "/.obsidian/core-plugins.json"));
+
+const deprecatedJSON = JSON.parse(readFile("./data/deprecated-plugins.json"));
+const deprecatedPlugins = [
+	...deprecatedJSON.sherlocked,
+	...deprecatedJSON.dysfunct,
+	...deprecatedJSON.deprecated
+];
+
+//------------------------------------------------------------------------------
 
 enabledCorePlugins.forEach(pluginID => {
 	const hasSettings =
@@ -90,17 +101,6 @@ installedPlugins.forEach(pluginFolder => {
 		};
 	}
 
-	const finderApp = Application("Finder");
-	const isDeveloped = finderApp.exists(Path(pluginFolderPath + "/.git"));
-	let devIcon, devSubtitle;
-	if (isDeveloped) {
-		devIcon = " ⚙️";
-		devSubtitle = "fn: git pull";
-	} else {
-		devIcon = "";
-		devSubtitle = "No '.git' folder found.";
-	}
-
 	let pluginEnabled = false;
 	let settingSubtitle = "🛑 disabled";
 	if (enabledComPlugins.includes(manifest.id)) {
@@ -108,15 +108,27 @@ installedPlugins.forEach(pluginFolder => {
 		settingSubtitle = "";
 	}
 
-	let titleEmoji = "";
-	if (manifest.name === "Style Settings") titleEmoji += "🎨 ";
+	let icons = "";
+	let subtitleIcons = "";
+	if (deprecatedPlugins.includes(manifest.id)) {
+		icons += "⚠️ ";
+		subtitleIcons = "deprecated – ";
+	}
+	if (manifest.name === "Style Settings") icons += " 🎨";
+
+	const isDeveloped = Application("Finder").exists(Path(pluginFolderPath + "/.git"));
+	let devSubtitle = "No '.git' folder found.";
+	if (isDeveloped) {
+		icons += " ⚙️";
+		devSubtitle = "fn: git pull";
+	}
 
 	const URI = URIstart + "&settingid="+ manifest.id;
 
 	jsonArray.push({
-		"title": titleEmoji + manifest.name + devIcon,
+		"title": manifest.name + icons,
 		"uid": manifest.id,
-		"subtitle": settingSubtitle,
+		"subtitle": subtitleIcons + settingSubtitle,
 		"arg": URI,
 		"icon": { "path": "icons/plugin.png" },
 		"valid": pluginEnabled,
