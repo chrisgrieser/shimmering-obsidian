@@ -1,3 +1,7 @@
+- 2022-06-09	release 2.24.2
+- 2022-06-09	indicate deprecated plugins for local search
+- 2022-06-09	indicate deprecated plugins
+- 2022-06-08	remove ocarl feature
 - 2022-06-06	release 2.24.1
 - 2022-06-06	fix #82
 - 2022-06-05	release 2.24.0
