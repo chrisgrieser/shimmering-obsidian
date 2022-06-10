@@ -7,7 +7,7 @@
    {
       "title": "Files & Links",
       "id": "file",
-      "match": "files links wikilinks trash path attachments"
+      "match": "files links wikilinks trash path attachments excluded ignored"
    },
    {
       "title": "Hotkeys",
