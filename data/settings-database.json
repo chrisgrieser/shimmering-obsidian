@@ -22,7 +22,7 @@
    {
       "title": "About",
       "id": "about",
-      "match": "about version update help"
+      "match": "about version update help license insider"
    },
    {
       "title": "Account",
