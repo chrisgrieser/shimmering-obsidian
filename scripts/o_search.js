@@ -66,11 +66,11 @@ console.log(excludeFilter);
 
 // folder search
 let folderArray = app.doShellScript(`find "${pathToCheck}" -type d -mindepth 1 -not -path "*/.*"`)
-	.split("\r"); // returns *absolute* paths
+	.split("\r") // returns *absolute* paths
+
 if (folderArray === "") folderArray = [];
 if (excludeFilter?.length) {
 	folderArray = folderArray.filter (folder => {
-
 		let include = true;
 		folder += "/";
 
@@ -90,7 +90,7 @@ if (excludeFilter?.length) {
 }
 
 // file search
-let fileArray = JSON.parse (readFile(metadataJSON));
+let fileArray = JSON.parse (readFile(metadataJSON)); // returns file objects
 if (excludeFilter?.length) {
 	fileArray = fileArray.filter(file => {
 		let include = true;
@@ -232,6 +232,7 @@ fileArray.forEach(file => {
 folderArray.forEach(absolutePath => {
 	const name = absolutePath.split("/").pop();
 	const relativePath = absolutePath.slice(vaultPath.length + 1);
+	if (!name) return; // root on 2 level deep folder search
 
 	jsonArray.push({
 		"title": name,

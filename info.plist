@@ -4228,11 +4228,11 @@ return "{query}"</string>
 				<key>focusedappvariablename</key>
 				<string></string>
 				<key>hotkey</key>
-				<integer>31</integer>
+				<integer>0</integer>
 				<key>hotmod</key>
-				<integer>1835008</integer>
+				<integer>0</integer>
 				<key>hotstring</key>
-				<string>O</string>
+				<string></string>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -4671,7 +4671,7 @@ set parameter to do shell script "echo " &amp; quoted form of (system attribute 
 				<key>hotkey</key>
 				<integer>18</integer>
 				<key>hotmod</key>
-				<integer>1966080</integer>
+				<integer>917504</integer>
 				<key>hotstring</key>
 				<string>1</string>
 				<key>leftcursor</key>
@@ -4871,7 +4871,7 @@ cat "$vault_path"/"$template_note_path"</string>
 				<key>hotkey</key>
 				<integer>19</integer>
 				<key>hotmod</key>
-				<integer>1966080</integer>
+				<integer>917504</integer>
 				<key>hotstring</key>
 				<string>2</string>
 				<key>leftcursor</key>
@@ -5051,7 +5051,7 @@ cat "$vault_path"/"$template_note_path"</string>
 				<key>hotkey</key>
 				<integer>20</integer>
 				<key>hotmod</key>
-				<integer>1966080</integer>
+				<integer>917504</integer>
 				<key>hotstring</key>
 				<string>3</string>
 				<key>leftcursor</key>
