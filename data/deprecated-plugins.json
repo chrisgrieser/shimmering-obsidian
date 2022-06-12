@@ -5,7 +5,8 @@
 		"code-block-copy",
 		"obsidian-code-copy",
 		"macOS-keyboard-nav-obsidian",
-		"cm-editor-syntax-highlight-obsidian"
+		"cm-editor-syntax-highlight-obsidian",
+		"obsidian-system-dark-mode"
 	],
 	"dysfunct": [
 		"obsidian-vale"
