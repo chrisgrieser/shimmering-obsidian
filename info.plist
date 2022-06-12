@@ -1961,6 +1961,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>9888408F-4081-4003-8D82-85FF20EB8138</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>0E7DC543-BCFD-4F7B-864B-C4BBF40DD8BB</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>99CFB472-ADBD-4D50-9A4E-70BCE3B09355</key>
 		<array>
 			<dict>
@@ -2902,6 +2915,16 @@
 				<integer>1048576</integer>
 				<key>modifiersubtext</key>
 				<string>⌘: Open Root in Terminal</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>9888408F-4081-4003-8D82-85FF20EB8138</string>
+				<key>modifiers</key>
+				<integer>262144</integer>
+				<key>modifiersubtext</key>
+				<string>⌃: Open Root in Terminal</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -9235,6 +9258,14 @@ echo | git pull</string>
 			<integer>1</integer>
 		</dict>
 		<dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.junction</string>
+			<key>uid</key>
+			<string>9888408F-4081-4003-8D82-85FF20EB8138</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
 			<key>config</key>
 			<dict>
 				<key>openwith</key>
@@ -10988,6 +11019,15 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<integer>2595</integer>
 			<key>ypos</key>
 			<integer>820</integer>
+		</dict>
+		<key>9888408F-4081-4003-8D82-85FF20EB8138</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>xpos</key>
+			<integer>160</integer>
+			<key>ypos</key>
+			<integer>7855</integer>
 		</dict>
 		<key>99CFB472-ADBD-4D50-9A4E-70BCE3B09355</key>
 		<dict>

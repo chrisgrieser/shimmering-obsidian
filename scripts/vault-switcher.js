@@ -43,6 +43,7 @@ vaultArray.forEach(vaultPath => {
 		"mods": {
 			"alt": { "arg": vaultPath },
 			"cmd": { "arg": vaultPath },
+			"ctrl": { "arg": vaultPath },
 			"shift": { "arg": vaultPath },
 			"fn": { "arg": vaultPath },
 		}
@@ -60,6 +61,10 @@ jsonArray.push({
 			"subtitle": "⛔️",
 		},
 		"cmd": {
+			"valid": false,
+			"subtitle": "⛔️",
+		},
+		"ctrl": {
 			"valid": false,
 			"subtitle": "⛔️",
 		},
