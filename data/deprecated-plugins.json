@@ -6,7 +6,8 @@
 		"obsidian-code-copy",
 		"macOS-keyboard-nav-obsidian",
 		"cm-editor-syntax-highlight-obsidian",
-		"obsidian-system-dark-mode"
+		"obsidian-system-dark-mode",
+		"open-note-to-window-title"
 	],
 	"dysfunct": [
 		"obsidian-vale"
