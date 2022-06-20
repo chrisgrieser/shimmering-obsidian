@@ -66,7 +66,7 @@ console.log(excludeFilter);
 
 // folder search
 let folderArray = app.doShellScript(`find "${pathToCheck}" -type d -mindepth 1 -not -path "*/.*"`)
-	.split("\r") // returns *absolute* paths
+	.split("\r"); // returns *absolute* paths
 
 if (folderArray === "") folderArray = [];
 if (excludeFilter?.length) {
