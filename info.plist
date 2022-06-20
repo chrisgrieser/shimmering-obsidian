@@ -21,19 +21,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>06632743-0C08-41BC-B058-146CDF2C11F8</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>D28DF759-C300-4F54-A228-97AC41E07C27</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>07C4D3F5-5CBC-4BAF-9004-B506BEF11C23</key>
 		<array>
 			<dict>
@@ -2298,7 +2285,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>06632743-0C08-41BC-B058-146CDF2C11F8</string>
+				<string>D28DF759-C300-4F54-A228-97AC41E07C27</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -2770,7 +2757,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>06632743-0C08-41BC-B058-146CDF2C11F8</string>
+				<string>D28DF759-C300-4F54-A228-97AC41E07C27</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -5499,9 +5486,9 @@ cat "$vault_path"/"$template_note_path"</string>
 				<key>createintermediatefolders</key>
 				<true/>
 				<key>filename</key>
-				<string>{var:daily_note_path}/{query}.md</string>
+				<string>{var:daily_note_path}/{date:yyyy-MM-dd}.md</string>
 				<key>filetext</key>
-				<string>{var:daily_note_append_prefix}{var:content}</string>
+				<string>{var:daily_note_append_prefix}{query}</string>
 				<key>ignoredynamicplaceholders</key>
 				<false/>
 				<key>relativepathmode</key>
@@ -5571,29 +5558,9 @@ cat "$vault_path"/"$template_note_path"</string>
 			<key>config</key>
 			<dict>
 				<key>argument</key>
-				<string>{date:yyyy-MM-dd}</string>
+				<string></string>
 				<key>passthroughargument</key>
-				<false/>
-				<key>variables</key>
-				<dict>
-					<key>content</key>
-					<string>{query}</string>
-				</dict>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>06632743-0C08-41BC-B058-146CDF2C11F8</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string>{date:yyyy-MM-dd}</string>
-				<key>passthroughargument</key>
-				<false/>
+				<true/>
 				<key>variables</key>
 				<dict>
 					<key>open</key>
@@ -9452,15 +9419,6 @@ https://ko-fi.com/pseudometa</string>
 			<key>ypos</key>
 			<integer>680</integer>
 		</dict>
-		<key>06632743-0C08-41BC-B058-146CDF2C11F8</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>xpos</key>
-			<integer>300</integer>
-			<key>ypos</key>
-			<integer>1965</integer>
-		</dict>
 		<key>07C4D3F5-5CBC-4BAF-9004-B506BEF11C23</key>
 		<dict>
 			<key>colorindex</key>
@@ -11573,7 +11531,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>220</integer>
+			<integer>240</integer>
 			<key>ypos</key>
 			<integer>2010</integer>
 		</dict>
