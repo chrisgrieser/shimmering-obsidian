@@ -1,3 +1,5 @@
+- 2022-06-28	release 2.25.0
+- 2022-06-28	readme update for Alfred 5
 - 2022-06-20	release 2.24.3
 - 2022-06-20	fix #79
 - 2022-06-09	release 2.24.2
