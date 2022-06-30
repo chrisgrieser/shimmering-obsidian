@@ -1147,7 +1147,7 @@
 				<key>modifiersubtext</key>
 				<string></string>
 				<key>vitoclose</key>
-				<false/>
+				<true/>
 			</dict>
 			<dict>
 				<key>destinationuid</key>
@@ -1586,6 +1586,16 @@
 		</array>
 		<key>76EF97C3-981D-466E-BA90-47D34129BE96</key>
 		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>EFF86C73-648C-4149-8A4C-AE21C797808B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
 			<dict>
 				<key>destinationuid</key>
 				<string>EDD0CFEF-63C0-4BD0-8E9E-4BD5B43D92DD</string>
@@ -3477,6 +3487,14 @@ app.openLocation(urlscheme);</string>
 			<string>alfred.workflow.trigger.external</string>
 			<key>uid</key>
 			<string>503B3F91-98A0-4357-92F2-A88BD6EDB404</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.hidealfred</string>
+			<key>uid</key>
+			<string>EFF86C73-648C-4149-8A4C-AE21C797808B</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -11049,7 +11067,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>note</key>
 			<string>Open in Obsidian</string>
 			<key>xpos</key>
-			<real>450</real>
+			<real>455</real>
 			<key>ypos</key>
 			<real>2790</real>
 		</dict>
@@ -11852,6 +11870,15 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<real>270</real>
 			<key>ypos</key>
 			<real>210</real>
+		</dict>
+		<key>EFF86C73-648C-4149-8A4C-AE21C797808B</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>xpos</key>
+			<real>1845</real>
+			<key>ypos</key>
+			<real>115</real>
 		</dict>
 		<key>F0E0AB83-B5CD-4107-A551-32C6AD581502</key>
 		<dict>
