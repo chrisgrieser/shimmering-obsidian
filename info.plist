@@ -1265,6 +1265,29 @@
 				<false/>
 			</dict>
 		</array>
+		<key>643CDD16-1447-426E-B6BF-9E4375F3D684</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>9475705F-31E2-4553-A05B-A6FCA919E4E6</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>D3E8EE70-EB5F-4B58-B533-0A177A30C472</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>65A519DF-2E95-46AA-BD21-64E5ECE9759D</key>
 		<array>
 			<dict>
@@ -1946,18 +1969,7 @@
 			</dict>
 		</array>
 		<key>9475705F-31E2-4553-A05B-A6FCA919E4E6</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>D3E8EE70-EB5F-4B58-B533-0A177A30C472</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
+		<array/>
 		<key>9888408F-4081-4003-8D82-85FF20EB8138</key>
 		<array>
 			<dict>
@@ -2181,7 +2193,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>9475705F-31E2-4553-A05B-A6FCA919E4E6</string>
+				<string>643CDD16-1447-426E-B6BF-9E4375F3D684</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -2499,7 +2511,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>9475705F-31E2-4553-A05B-A6FCA919E4E6</string>
+				<string>643CDD16-1447-426E-B6BF-9E4375F3D684</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -3266,7 +3278,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>9475705F-31E2-4553-A05B-A6FCA919E4E6</string>
+				<string>643CDD16-1447-426E-B6BF-9E4375F3D684</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -4976,6 +4988,23 @@ cat "$vault_path"/"$template_note_path"</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>9475705F-31E2-4553-A05B-A6FCA919E4E6</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>externaltriggerid</key>
 				<string>browser-folder-loop</string>
 				<key>passinputasargument</key>
@@ -5016,46 +5045,6 @@ cat "$vault_path"/"$template_note_path"</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>browser</key>
-				<string></string>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string></string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
-			<key>uid</key>
-			<string>9475705F-31E2-4553-A05B-A6FCA919E4E6</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>script</key>
-				<string></string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string>scripts/toggle-spellcheck.js</string>
-				<key>type</key>
-				<integer>8</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>D3E8EE70-EB5F-4B58-B533-0A177A30C472</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>externaltriggerid</key>
 				<string>update-obsidian-workflow</string>
 				<key>passinputasargument</key>
@@ -5086,6 +5075,37 @@ cat "$vault_path"/"$template_note_path"</string>
 			<string>alfred.workflow.action.openurl</string>
 			<key>uid</key>
 			<string>E9DC149E-4E9C-4ACB-9248-87905B116565</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>scripts/toggle-spellcheck.js</string>
+				<key>type</key>
+				<integer>8</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>D3E8EE70-EB5F-4B58-B533-0A177A30C472</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.junction</string>
+			<key>uid</key>
+			<string>643CDD16-1447-426E-B6BF-9E4375F3D684</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -10488,6 +10508,15 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>ypos</key>
 			<real>1465</real>
 		</dict>
+		<key>643CDD16-1447-426E-B6BF-9E4375F3D684</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>xpos</key>
+			<real>425</real>
+			<key>ypos</key>
+			<real>1525</real>
+		</dict>
 		<key>65A519DF-2E95-46AA-BD21-64E5ECE9759D</key>
 		<dict>
 			<key>colorindex</key>
@@ -11018,9 +11047,9 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<real>445</real>
+			<real>575</real>
 			<key>ypos</key>
-			<real>1440</real>
+			<real>1395</real>
 		</dict>
 		<key>978E9BA4-99C1-4B74-A991-6E9345C7A20D</key>
 		<dict>
@@ -11546,9 +11575,9 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>note</key>
 			<string>toggle spellcheck, if Workspace set as Spellcheck Workspace</string>
 			<key>xpos</key>
-			<real>660</real>
+			<real>575</real>
 			<key>ypos</key>
-			<real>1440</real>
+			<real>1515</real>
 		</dict>
 		<key>D508118D-D946-434E-93B0-471D6FE85B18</key>
 		<dict>
