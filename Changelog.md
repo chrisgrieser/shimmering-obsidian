@@ -1,3 +1,4 @@
+- 2022-07-01	release 2.26.2
 - 2022-07-01	release 2.26.1
 - 2022-07-01	fix spellcheck toggling with ow for Alfred 5
 - 2022-07-01	release 2.26.0
