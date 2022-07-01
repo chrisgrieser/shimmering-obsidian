@@ -34,6 +34,17 @@ const recentJSON = vaultPath + "/.obsidian/workspace";
 const excludeFilterJSON = vaultPath + "/.obsidian/app.json";
 const jsonArray = [];
 
+// Supercharged Icons File
+let superchargedIconFileExists = false;
+const superchargedIconFile = $.getenv("supercharged_icon_file").replace(/^~/, app.pathTo("home folder"));
+if (superchargedIconFile) superchargedIconFileExists = Application("Finder").exists(Path(superchargedIconFile));
+let superchargedIconList;
+if (superchargedIconFileExists) {
+	superchargedIconList = readFile(superchargedIconFile)
+		.split("\n")
+		.filter(l => l.length !== 0);
+}
+
 // either searches the vault, or a subfolder of the vault
 let currentFolder;
 let pathToCheck;
@@ -145,10 +156,15 @@ fileArray.forEach(file => {
 		additionalMatcher += "recent ";
 	}
 	if (filename.toLowerCase().includes("kanban"))	iconpath = "icons/kanban.png";
-	if (filename.toLowerCase().includes("to do")) emoji += "☑️ ";
-	if (filename.toLowerCase().includes("template")) emoji += "📄 ";
-	if (filename.toLowerCase().includes("inbox")) emoji += "📥 ";
-	if (filename.toLowerCase().includes("moc")) emoji += "🗺 ";
+
+	let superchargedIcon = "";
+	if (superchargedIconFileExists && file.tags) {
+		superchargedIconList.forEach(pair => {
+			const tag = pair.split(",")[0].toLowerCase().replaceAll("#", "");
+			const icon = pair.split(",")[1];
+			if (file.tags.includes(tag)) superchargedIcon = icon;
+		});
+	}
 
 	// check link existence of file
 	let hasLinks = Boolean (file.links?.some(l => l.relativePath) || file.backlinks ); // no relativePath => unresolved link
@@ -158,7 +174,7 @@ fileArray.forEach(file => {
 
 	// Notes (file names)
 	jsonArray.push({
-		"title": emoji + filename,
+		"title": emoji + superchargedIcon + " " + filename,
 		"match": alfredMatcher(filename) + tagMatcher + " filename name title",
 		"subtitle": "▸ " + parentFolder(relativePath),
 		"arg": relativePath,
@@ -178,7 +194,7 @@ fileArray.forEach(file => {
 	if (file.aliases) {
 		file.aliases.forEach(alias => {
 			jsonArray.push({
-				"title": alias,
+				"title": superchargedIcon + " " + alias,
 				"match": additionalMatcher + "alias " + alfredMatcher(alias),
 				"subtitle": "↪ " + filename,
 				"arg": relativePath,

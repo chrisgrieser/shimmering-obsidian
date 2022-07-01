@@ -21,6 +21,17 @@ const tagsJSON = vaultPath + "/.obsidian/plugins/metadata-extractor/tags.json";
 const mergeNestedTags = $.getenv("merge_nested_tags") === "true" || false;
 const jsonArray = [];
 
+// Supercharged Icons File
+let superchargedIconFileExists = false;
+const superchargedIconFile = $.getenv("supercharged_icon_file").replace(/^~/, app.pathTo("home folder"));
+if (superchargedIconFile) superchargedIconFileExists = Application("Finder").exists(Path(superchargedIconFile));
+let superchargedIconList;
+if (superchargedIconFileExists) {
+	superchargedIconList = readFile(superchargedIconFile)
+		.split("\n")
+		.filter(l => l.length !== 0);
+}
+
 // eslint-disable-next-line no-var, vars-on-top
 var tagsArray = JSON.parse (readFile(tagsJSON))
 	.map (function(t) {
@@ -44,9 +55,9 @@ if (mergeNestedTags) {
 			const mergeIndex = mergedTags.indexOf(existing[0]);
 			mergedTags[mergeIndex].tagCount += item.tagCount;
 			mergedTags[mergeIndex].merged = true;
-		} else 
+		} else
 			mergedTags.push(item);
-		
+
 	});
 	tagsArray = mergedTags;
 }
@@ -65,15 +76,17 @@ tagsArray.forEach(tagData => {
 	}
 	if (tagName.includes ("/")) extraMatcher += " nested child";
 
-	let prefixIcon = "";
-	if (tagName === "seedling") prefixIcon = "🌱 ";
-	if (tagName === "moc") prefixIcon = "🗺 ";
-	if (tagName === "evergreen") prefixIcon = "🌲 ";
-	if (tagName === "inbox") prefixIcon = "📥 ";
-	if (tagName === "urgent") prefixIcon = "⚠️ ";
+	let superchargedIcon = "";
+	if (superchargedIconFileExists) {
+		superchargedIconList.forEach(pair => {
+			const tag = pair.split(",")[0].toLowerCase().replaceAll("#", "");
+			const icon = pair.split(",")[1];
+			if (tagName === tag) superchargedIcon = icon;
+		});
+	}
 
 	jsonArray.push({
-		"title": prefixIcon + "#" + tagName,
+		"title": superchargedIcon + " #" + tagName,
 		"subtitle": tagData.tagCount + "x" + mergeInfo,
 		"match": alfredMatcher (tagName) + " #" + alfredMatcher (tagName) + extraMatcher,
 		"uid": tagName,

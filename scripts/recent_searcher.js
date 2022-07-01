@@ -28,6 +28,17 @@ const starredJSON = vaultPath + "/.obsidian/starred.json";
 const recentJSON = vaultPath + "/.obsidian/workspace";
 const jsonArray = [];
 
+// Supercharged Icons File
+let superchargedIconFileExists = false;
+const superchargedIconFile = $.getenv("supercharged_icon_file").replace(/^~/, app.pathTo("home folder"));
+if (superchargedIconFile) superchargedIconFileExists = Application("Finder").exists(Path(superchargedIconFile));
+let superchargedIconList;
+if (superchargedIconFileExists) {
+	superchargedIconList = readFile(superchargedIconFile)
+		.split("\n")
+		.filter(l => l.length !== 0);
+}
+
 let starredFiles = [];
 if (readFile(starredJSON) !== "") {
 	starredFiles = JSON.parse(readFile(starredJSON))
@@ -56,10 +67,15 @@ fileArray.forEach(file => {
 		additionalMatcher += "starred ";
 	}
 	if (filename.toLowerCase().includes("kanban"))	iconpath = "icons/kanban.png";
-	if (filename.toLowerCase().includes("to do")) emoji += "☑️ ";
-	if (filename.toLowerCase().includes("template")) emoji += "📄 ";
-	if (filename.toLowerCase().includes("inbox")) emoji += "📥 ";
-	if (filename.toLowerCase().includes("moc")) emoji += "🗺 ";
+
+	let superchargedIcon = "";
+	if (superchargedIconFileExists && file.tags) {
+		superchargedIconList.forEach(pair => {
+			const tag = pair.split(",")[0].toLowerCase().replaceAll("#", "");
+			const icon = pair.split(",")[1];
+			if (file.tags.includes(tag)) superchargedIcon = icon;
+		});
+	}
 
 	// check link existence of file
 	let hasLinks = Boolean (file.links?.some(l => l.relativePath) || file.backlinks ); // no relativePath => unresolved link
@@ -69,7 +85,7 @@ fileArray.forEach(file => {
 
 	// push result
 	jsonArray.push({
-		"title": emoji + filename,
+		"title": emoji + superchargedIcon + " " + filename,
 		"match": additionalMatcher + alfredMatcher(filename),
 		"subtitle": "▸ " + parentFolder(relativePath),
 		"arg": relativePath,

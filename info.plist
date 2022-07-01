@@ -1369,7 +1369,7 @@
 				<key>modifiersubtext</key>
 				<string>⇧: Search GitHub Issues</string>
 				<key>vitoclose</key>
-				<false/>
+				<true/>
 			</dict>
 			<dict>
 				<key>destinationuid</key>
@@ -10024,7 +10024,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>note</key>
 			<string>make link Discord ready</string>
 			<key>xpos</key>
-			<real>175</real>
+			<real>190</real>
 			<key>ypos</key>
 			<real>4885</real>
 		</dict>
@@ -12001,6 +12001,8 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 		<string>Writing/Acceleration of Research/Acco Kanban#Scratchpad</string>
 		<key>screenshot_path</key>
 		<string></string>
+		<key>supercharged_icon_file</key>
+		<string>~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Main Vault/Meta/supercharged-icons.csv</string>
 		<key>template_note_path</key>
 		<string></string>
 		<key>thousand_separator</key>
@@ -12032,9 +12034,10 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 		<string>vault_path</string>
 		<string>scratchpad_note_path</string>
 		<string>workspace_2</string>
-		<string>workspace_3</string>
 		<string>daily_note_append_prefix</string>
+		<string>supercharged_icon_file</string>
 		<string>new_note_location</string>
+		<string>workspace_3</string>
 		<string>backup_destination</string>
 	</array>
 	<key>version</key>
