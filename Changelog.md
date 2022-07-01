@@ -1,3 +1,6 @@
+- 2022-07-01	release 2.26.0
+- 2022-07-01	emulate supercharged links for the o-searches
+- 2022-06-30	fix for Alfred compatibility mode
 - 2022-06-28	release 2.25.0
 - 2022-06-28	readme update for Alfred 5
 - 2022-06-20	release 2.24.3

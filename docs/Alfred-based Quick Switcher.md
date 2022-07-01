@@ -107,8 +107,8 @@ Displayed alongside the other search results are all headings in your vault. Sel
 - Up to the 10 most recent files are displayed.
 
 ## Supercharged Links
-You can prepend icons to the results of any search based on the notes' tags, similar to the [Supercharged Links Plugin](https://obsidian.md/plugins?id=supercharged-links-obsidian). 
-- To do so, you have to add the *absolute* path to a `.csv` file to the workflow configuration `supercharged_icon_file`. 
+You can prepend icons to the results of any search based on the notes' tags, similar to the [Supercharged Links Plugin](https://obsidian.md/plugins?id=supercharged-links-obsidian).
+- To do so, you have to add the *absolute* path to a `.csv` file to the workflow configuration `supercharged_icon_file`.
 - Every line of the file should represent a pair of tag and emoji to be assigned, separated by `,`, for example:
 
 	```csv
