@@ -11546,7 +11546,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>note</key>
 			<string>toggle spellcheck, if Workspace set as Spellcheck Workspace</string>
 			<key>xpos</key>
-			<real>590</real>
+			<real>660</real>
 			<key>ypos</key>
 			<real>1440</real>
 		</dict>

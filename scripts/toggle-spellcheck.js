@@ -15,7 +15,9 @@ function run (argv) {
 	}
 
 	// get target spellcheck status
-	const urlscheme = argv.join("");
+	const urlscheme = argv.join("")
+		.replace(/.*"(.*)".*/s, "$1"); // fix for Alfred 5
+
 	const workspaceName = decodeURIComponent(urlscheme.split("=")[2]);
 
 	const workspaceToSpellcheck = $.getenv("workspace_to_spellcheck");
