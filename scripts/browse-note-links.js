@@ -151,7 +151,7 @@ function run () {
 			superchargedIconList.forEach(pair => {
 				const tag = pair.split(",")[0].toLowerCase().replaceAll("#", "");
 				const icon = pair.split(",")[1];
-				if (file.tags.includes(tag)) superchargedIcon = icon;
+				if (file.tags.includes(tag)) superchargedIcon = icon + " ";
 			});
 		}
 
@@ -161,7 +161,7 @@ function run () {
 		if (backlinkList.includes (relativePath)) linkIcon += "⬅️ ";
 
 		jsonArray.push({
-			"title": linkIcon + emoji + superchargedIcon + " " + filename,
+			"title": linkIcon + emoji + superchargedIcon + filename,
 			"match": additionalMatcher + alfredMatcher(filename),
 			"subtitle": "▸ " + parentFolder(relativePath),
 			"type": "file:skipcheck",

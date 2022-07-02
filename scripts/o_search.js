@@ -162,7 +162,7 @@ fileArray.forEach(file => {
 		superchargedIconList.forEach(pair => {
 			const tag = pair.split(",")[0].toLowerCase().replaceAll("#", "");
 			const icon = pair.split(",")[1];
-			if (file.tags.includes(tag)) superchargedIcon = icon;
+			if (file.tags.includes(tag)) superchargedIcon = icon + " ";
 		});
 	}
 
@@ -174,7 +174,7 @@ fileArray.forEach(file => {
 
 	// Notes (file names)
 	jsonArray.push({
-		"title": emoji + superchargedIcon + " " + filename,
+		"title": emoji + superchargedIcon + filename,
 		"match": alfredMatcher(filename) + tagMatcher + " filename name title",
 		"subtitle": "▸ " + parentFolder(relativePath),
 		"arg": relativePath,

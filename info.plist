@@ -1410,7 +1410,7 @@
 				<key>modifiers</key>
 				<integer>524288</integer>
 				<key>modifiersubtext</key>
-				<string>⌥: Copy GitHub Link</string>
+				<string>⌥: Copy Link</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -8605,21 +8605,6 @@ tell application "Obsidian" to activate</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>openwith</key>
-				<string></string>
-				<key>sourcefile</key>
-				<string>{query}</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openfile</string>
-			<key>uid</key>
-			<string>48992F43-A163-41CB-9AD0-ED130267D058</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>alfredfiltersresults</key>
 				<true/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -8663,6 +8648,21 @@ tell application "Obsidian" to activate</string>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
 			<string>72551A9E-43E8-4462-9CB0-D5C419B4AEA2</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>openwith</key>
+				<string></string>
+				<key>sourcefile</key>
+				<string>{query}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openfile</string>
+			<key>uid</key>
+			<string>48992F43-A163-41CB-9AD0-ED130267D058</string>
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
@@ -9497,9 +9497,9 @@ An Alfred Workflow with dozens of features for controlling Obsidian.
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<real>650</real>
+			<real>620</real>
 			<key>ypos</key>
-			<real>6375</real>
+			<real>6370</real>
 		</dict>
 		<key>08322EF6-E1E3-48DA-86F5-9C61C812529F</key>
 		<dict>
@@ -9910,7 +9910,7 @@ An Alfred Workflow with dozens of features for controlling Obsidian.
 			<key>xpos</key>
 			<real>245</real>
 			<key>ypos</key>
-			<real>6505</real>
+			<real>6540</real>
 		</dict>
 		<key>3390E0CB-CE17-4CEB-848D-14C5547A6936</key>
 		<dict>
@@ -10097,7 +10097,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>xpos</key>
 			<real>395</real>
 			<key>ypos</key>
-			<real>6655</real>
+			<real>6670</real>
 		</dict>
 		<key>46A5196E-D0B3-4D06-95AB-93FDA30C175D</key>
 		<dict>
@@ -10153,7 +10153,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>xpos</key>
 			<real>245</real>
 			<key>ypos</key>
-			<real>6390</real>
+			<real>6425</real>
 		</dict>
 		<key>4B2FBAC0-BF9C-46B5-82A3-423036076906</key>
 		<dict>
@@ -10251,9 +10251,9 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<real>800</real>
+			<real>780</real>
 			<key>ypos</key>
-			<real>6375</real>
+			<real>6370</real>
 		</dict>
 		<key>507B53E2-BBE0-4CD6-81F0-570EA461C871</key>
 		<dict>
@@ -10923,7 +10923,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>xpos</key>
 			<real>245</real>
 			<key>ypos</key>
-			<real>6655</real>
+			<real>6670</real>
 		</dict>
 		<key>8A0787B6-CC86-4694-BB26-C626130438BE</key>
 		<dict>
@@ -11156,7 +11156,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>xpos</key>
 			<real>245</real>
 			<key>ypos</key>
-			<real>6280</real>
+			<real>6315</real>
 		</dict>
 		<key>A3E485FC-C939-4776-8000-396EB2F3CC64</key>
 		<dict>
