@@ -166,6 +166,9 @@ fileArray.forEach(file => {
 		});
 	}
 
+	let seedlingEmoji = "";
+	if (file.tags?.includes("seedling")) seedlingEmoji = " 🌱";
+
 	// check link existence of file
 	let hasLinks = Boolean (file.links?.some(l => l.relativePath) || file.backlinks ); // no relativePath => unresolved link
 	if (!hasLinks) hasLinks = externalLinkRegex.test(readFile(absolutePath)); // readFile only executed when no other links found for performance
@@ -174,7 +177,7 @@ fileArray.forEach(file => {
 
 	// Notes (file names)
 	jsonArray.push({
-		"title": emoji + superchargedIcon + filename,
+		"title": emoji + superchargedIcon + filename + seedlingEmoji,
 		"match": alfredMatcher(filename) + tagMatcher + " filename name title",
 		"subtitle": "▸ " + parentFolder(relativePath),
 		"arg": relativePath,
