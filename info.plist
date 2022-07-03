@@ -540,19 +540,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>37DCDAA4-FF65-40C6-8942-52C641A1DD0A</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>7683FF60-6516-43F6-B54D-D4B8553D8680</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>37EC9932-F455-4BBC-BA2B-AF780E3851F3</key>
 		<array/>
 		<key>38F17F8F-FBE5-422F-B926-A8AFD40D5A4C</key>
@@ -1557,43 +1544,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>7683FF60-6516-43F6-B54D-D4B8553D8680</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>2B7C353A-135A-4544-90E0-A7E70067FB5D</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>sourceoutputuid</key>
-				<string>5DE57E23-2DD3-4F5F-9A41-C50AB0628381</string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>69F3C12D-E4FD-4991-91EF-87ACEE65208C</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>sourceoutputuid</key>
-				<string>E67972A4-7919-4C4B-8FAB-91AE33B7D77F</string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>BC1D15E5-4E17-4DF7-A961-64E1CCE58594</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>76BE7619-FDB9-4324-81C7-6570B534A123</key>
 		<array>
 			<dict>
@@ -2411,19 +2361,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>18CEC3E9-303B-43A2-812F-579FCD8F1F9A</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>BC1D15E5-4E17-4DF7-A961-64E1CCE58594</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>902431F8-34D6-476A-8917-EFF85864F369</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -7333,129 +7270,6 @@ echo "$backup"</string>
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
-				<string>{query}</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
-			<key>uid</key>
-			<string>2B7C353A-135A-4544-90E0-A7E70067FB5D</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>conditions</key>
-				<array>
-					<dict>
-						<key>inputstring</key>
-						<string></string>
-						<key>matchcasesensitive</key>
-						<false/>
-						<key>matchmode</key>
-						<integer>4</integer>
-						<key>matchstring</key>
-						<string>http.*</string>
-						<key>outputlabel</key>
-						<string>url</string>
-						<key>uid</key>
-						<string>5DE57E23-2DD3-4F5F-9A41-C50AB0628381</string>
-					</dict>
-					<dict>
-						<key>inputstring</key>
-						<string></string>
-						<key>matchcasesensitive</key>
-						<false/>
-						<key>matchmode</key>
-						<integer>0</integer>
-						<key>matchstring</key>
-						<string>API-structure-full.png</string>
-						<key>outputlabel</key>
-						<string>full API structure</string>
-						<key>uid</key>
-						<string>0AE2FD45-8D65-49A2-A337-60B0BA5450FF</string>
-					</dict>
-					<dict>
-						<key>inputstring</key>
-						<string></string>
-						<key>matchcasesensitive</key>
-						<false/>
-						<key>matchmode</key>
-						<integer>0</integer>
-						<key>matchstring</key>
-						<string>Obsidian Default Theme.css</string>
-						<key>outputlabel</key>
-						<string>default theme</string>
-						<key>uid</key>
-						<string>E67972A4-7919-4C4B-8FAB-91AE33B7D77F</string>
-					</dict>
-				</array>
-				<key>elselabel</key>
-				<string>other</string>
-				<key>hideelse</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.conditional</string>
-			<key>uid</key>
-			<string>7683FF60-6516-43F6-B54D-D4B8553D8680</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>fixedorder</key>
-				<false/>
-				<key>items</key>
-				<string>[{"title":"Default Colors","arg":"default-colors.pdf","subtitle":""},{"imagefile":"480f3609e44ea0ceed5bd6bc0fb19a7874881127.png","title":"API Structure (simple)","arg":"object-model-api.png","subtitle":""},{"imagefile":"37bbef56f2b94de84c98e87c63fc00ab9008b6ee.png","title":"CSS Classes","arg":"css-classes.png","subtitle":""},{"imagefile":"37bbef56f2b94de84c98e87c63fc00ab9008b6ee.png","title":"All Default CSS Variables","arg":"https:\/\/github.com\/mgmeyers\/obsidian-style-settings\/blob\/main\/obsidian-default-theme.css","subtitle":""},{"imagefile":"480f3609e44ea0ceed5bd6bc0fb19a7874881127.png","title":"📓 API Documentation","arg":"https:\/\/github.com\/obsidianmd\/obsidian-api\/blob\/master\/obsidian.d.ts","subtitle":""},{"imagefile":"480f3609e44ea0ceed5bd6bc0fb19a7874881127.png","title":"API Structure (full)","arg":"https:\/\/i.joethei.space\/obsidian-api.svg"}]</string>
-				<key>keyword</key>
-				<string>oc</string>
-				<key>matchmode</key>
-				<integer>0</integer>
-				<key>runningsubtext</key>
-				<string></string>
-				<key>subtext</key>
-				<string>for Developers &amp; Theme Designers</string>
-				<key>title</key>
-				<string>Display Obsidian Cheat Sheets</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.listfilter</string>
-			<key>uid</key>
-			<string>37DCDAA4-FF65-40C6-8942-52C641A1DD0A</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>openwith</key>
-				<string></string>
-				<key>sourcefile</key>
-				<string>cheatsheets/{query}</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openfile</string>
-			<key>uid</key>
-			<string>69F3C12D-E4FD-4991-91EF-87ACEE65208C</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>browser</key>
-				<string></string>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
 				<string>https://forum.obsidian.md/c/{query}</string>
 			</dict>
 			<key>type</key>
@@ -7464,29 +7278,6 @@ echo "$backup"</string>
 			<string>D0041722-6FE5-480D-B443-FC3F8C71CD53</string>
 			<key>version</key>
 			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>qlmanage -p  ./cheatsheets/"{query}"</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>5</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>BC1D15E5-4E17-4DF7-A961-64E1CCE58594</string>
-			<key>version</key>
-			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -9707,7 +9498,7 @@ An Alfred Workflow with dozens of features for controlling Obsidian.
 			<key>xpos</key>
 			<real>225</real>
 			<key>ypos</key>
-			<real>4710</real>
+			<real>4745</real>
 		</dict>
 		<key>23310407-0757-4547-AC30-83A9AF365D9D</key>
 		<dict>
@@ -9807,15 +9598,6 @@ An Alfred Workflow with dozens of features for controlling Obsidian.
 			<key>ypos</key>
 			<real>1335</real>
 		</dict>
-		<key>2B7C353A-135A-4544-90E0-A7E70067FB5D</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>xpos</key>
-			<real>605</real>
-			<key>ypos</key>
-			<real>4345</real>
-		</dict>
 		<key>2C1D63BF-6BDE-49E3-880C-A23FE845879F</key>
 		<dict>
 			<key>colorindex</key>
@@ -9843,7 +9625,7 @@ An Alfred Workflow with dozens of features for controlling Obsidian.
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>4680</real>
+			<real>4715</real>
 		</dict>
 		<key>2FB281A9-8BFA-4836-A2A9-73A46C3DE6DD</key>
 		<dict>
@@ -9899,7 +9681,7 @@ An Alfred Workflow with dozens of features for controlling Obsidian.
 			<key>xpos</key>
 			<real>460</real>
 			<key>ypos</key>
-			<real>4680</real>
+			<real>4715</real>
 		</dict>
 		<key>3374CD2F-3B5A-4267-B71E-862533887D36</key>
 		<dict>
@@ -9938,15 +9720,6 @@ An Alfred Workflow with dozens of features for controlling Obsidian.
 			<real>190</real>
 			<key>ypos</key>
 			<real>4075</real>
-		</dict>
-		<key>37DCDAA4-FF65-40C6-8942-52C641A1DD0A</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>xpos</key>
-			<real>30</real>
-			<key>ypos</key>
-			<real>4450</real>
 		</dict>
 		<key>37EC9932-F455-4BBC-BA2B-AF780E3851F3</key>
 		<dict>
@@ -10379,7 +10152,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>xpos</key>
 			<real>295</real>
 			<key>ypos</key>
-			<real>4680</real>
+			<real>4715</real>
 		</dict>
 		<key>5C1918E9-6508-4076-8D79-716B47ACFC20</key>
 		<dict>
@@ -10569,15 +10342,6 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>ypos</key>
 			<real>6110</real>
 		</dict>
-		<key>69F3C12D-E4FD-4991-91EF-87ACEE65208C</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>xpos</key>
-			<real>605</real>
-			<key>ypos</key>
-			<real>4465</real>
-		</dict>
 		<key>6A8AE7C9-2FE9-45DD-8CCC-69B6146E26F7</key>
 		<dict>
 			<key>colorindex</key>
@@ -10659,15 +10423,6 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<real>1855</real>
 			<key>ypos</key>
 			<real>1180</real>
-		</dict>
-		<key>7683FF60-6516-43F6-B54D-D4B8553D8680</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>xpos</key>
-			<real>360</real>
-			<key>ypos</key>
-			<real>4440</real>
 		</dict>
 		<key>76BE7619-FDB9-4324-81C7-6570B534A123</key>
 		<dict>
@@ -11354,17 +11109,6 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>ypos</key>
 			<real>4215</real>
 		</dict>
-		<key>BC1D15E5-4E17-4DF7-A961-64E1CCE58594</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>note</key>
-			<string>quicklook</string>
-			<key>xpos</key>
-			<real>605</real>
-			<key>ypos</key>
-			<real>4595</real>
-		</dict>
 		<key>BE35B236-05AF-434F-93F0-FC5A62A4F777</key>
 		<dict>
 			<key>colorindex</key>
@@ -11537,7 +11281,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>xpos</key>
 			<real>215</real>
 			<key>ypos</key>
-			<real>4550</real>
+			<real>4585</real>
 		</dict>
 		<key>D0CCD3E2-0D47-441C-A6E2-76DCCF2188CF</key>
 		<dict>
@@ -12070,7 +11814,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 		<string>backup_destination</string>
 	</array>
 	<key>version</key>
-	<string>2.26.3</string>
+	<string>2.26.4</string>
 	<key>webaddress</key>
 	<string>https://chris-grieser.de/</string>
 </dict>

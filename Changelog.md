@@ -1,3 +1,5 @@
+- 2022-07-03	release 2.26.4
+- 2022-07-03	seedling emoji
 - 2022-07-02	release 2.26.3
 - 2022-07-01	release 2.26.2
 - 2022-07-01	release 2.26.1

@@ -9,7 +9,6 @@ nav_order: 2
 
 - [Open & Create your CSS Files](#open--create-your-css-files)
 - [Theme Search](#theme-search)
-- [For Theme Designers: Cheat Sheets](#for-theme-designers-cheat-sheets)
 
 <!-- /MarkdownTOC -->
 
@@ -24,9 +23,3 @@ nav_order: 2
 - Useful for 🎨 theme designers will be the `fn + return` command to quickly download any theme's CSS.
 
 <img src="https://user-images.githubusercontent.com/73286100/131255059-1a56d6e7-8c2f-4ff0-b20d-247702bb7925.gif" alt="Theme Search" width=60%>
-
-## For Theme Designers: Cheat Sheets
-**`oc`: Quickly Access Various Cheat Sheets for designing themes in Obsidian.**
-- The cheatsheets will be opened via the macOS Quick Look feature, so you can simply close them by pressing `space`.
-
-<img src="https://i.imgur.com/nVT687p.png" alt="Cheat Sheets" width=30%>

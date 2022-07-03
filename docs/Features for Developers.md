@@ -7,7 +7,6 @@ nav_order: 2
 <!-- MarkdownTOC -->
 
 - [Plugin Search](#plugin-search)
-- [Cheatsheets](#cheatsheets)
 - [Open various folders related to development](#open-various-folders-related-to-development)
 - [Local plugins](#local-plugins)
 - [Vault-related features](#vault-related-features)
@@ -24,12 +23,6 @@ nav_order: 2
 - `⌃ + ↵` to see and copy plugin IDs
 
 <img src="https://user-images.githubusercontent.com/73286100/139559362-747b0c57-c29b-45b5-bc62-4ab53c0718c5.gif" alt="Issue Search" width=60%>
-
-## Cheatsheets
-**`o`: Quickly Access Various `C`heatsheets for developing plugins and designing themes in Obsidian.**
-- The cheatsheets will be opened via the macOS Quick Look feature, so you can simply close them by pressing `space`.
-
-<img src="https://i.imgur.com/nVT687p.png" alt="Cheatsheets" width=20%>
 
 ## Open various folders related to development
 - Refer to the section on [Quick Access to hidden folders](Utility%20Features.md#Open-Various-Folders) for further information.
@@ -54,7 +47,9 @@ Refer to the section on [Settings & Local Plugin Search](Settings%20and%20Local%
 
 ## Obsidian Version Information
 **Snippet Trigger: `!oversion`**
-Type `!oversion` in any text field, and Alfred will output your current Mac and Obsidian version. Useful for people frequently creating bug reports.
+Type `!oversion` in any text field, and Alfred will output your current Mac and Obsidian version. Useful for people frequently creating bug reports. (Note that Alfred snippet triggers need to be activated.)
+
+---
 
 ## Browse Obsidian via Terminal
 Do want to navigate your vault from within the Terminal? [Have a look.](https://gist.github.com/chrisgrieser/4e4d21d701f70b0eef5e25496583e38e)
