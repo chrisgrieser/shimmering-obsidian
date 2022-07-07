@@ -1,3 +1,4 @@
+- 2022-07-07	release 2.26.6
 - 2022-07-07	release 2.26.5
 - 2022-07-07	fix appending content to daily notes (od) #83
 - 2022-07-03	release 2.26.4
