@@ -33,6 +33,7 @@
 - Open External Links of a Note (without switching to the document or opening Obsidian)
 - Graph Traversal via Alfred
 - Smart Search: A query like `o foobar #moc starred` displays only files named "foobar" with the tag "#moc" that are also starred.
+- Visual Search: Add Icons to your tags based on their tags, similar to the [Supercharged Links](https://obsidian.md/plugins?id=supercharged-links-obsidian) Plugin.
 
 ➡️ [Documentation of Quick Switcher Features](docs/Alfred-based%20Quick%20Switcher.md)
 
@@ -40,7 +41,6 @@
 
 ### Note-related Features
 - Create new Notes (based on Template or via QuickAdd)
-- Move Note to a different folder
 - Daily Notes
 - Quickly append to a scratchpad note
 
@@ -60,8 +60,7 @@
 ### Utility Features
 - Backup your Vault
 - Access various folders like `.obsidian` or `.trash`
-- Update Plugins
-- Carl Auto-Responses 🐢
+- Update Plugins (including BETA Plugins)
 
 ➡️ [Documentation of all Utility Features](docs/Utility%20Features.md)
 
@@ -79,7 +78,7 @@
 ---
 
 ### Workspace Switcher
-- Quickly switch workspaces, either via Switcher Modal or Hotkeys (🆕)
+- Quickly switch workspaces, either via Switcher Modal or Hotkeys
 - Save Workspaces
 - Manage workspaces
 - Automatically toggle spellchecking when switching to certain workspaces
@@ -119,10 +118,7 @@
 ### CSS-related Features
 - Access themes & CSS Snippets via Alfred
 - Create new Snippets from Clipboard content
-- Quick Access to cheat sheets for theme development, e.g. default variables
 - Download a theme's CSS file via Theme Search
-- Convert a font file base64-encoded CSS
-- Convert a SVG to Data URI
 
 ➡️ [Documentation of CSS-related Features](docs/CSS-related%20Features.md)
 
@@ -136,7 +132,6 @@
 - `git pull` a local plugin repository via the Plugin Search
 - Open the Vault's root in the default Terminal or in Finder
 - Add & Update Beta Plugins via [BRAT](https://github.com/TfTHacker/obsidian42-brat)
-- Quick Access to cheat sheets for Plugin Development, e.g. the Obsidian API
 
 ➡️ [Documentation of Features for Developers](docs/Features%20for%20Developers.md)
 
