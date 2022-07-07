@@ -501,6 +501,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>321154FA-0C7A-4114-B710-68940A797644</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>D28DF759-C300-4F54-A228-97AC41E07C27</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>3374CD2F-3B5A-4267-B71E-862533887D36</key>
 		<array>
 			<dict>
@@ -781,6 +794,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>0D36A181-34F8-492E-A565-C022DA3B34E6</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>4A80A124-53AB-44FB-83C7-C5BCFF96DAD5</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>CBAE02F7-62CC-4974-96C0-841453D73B48</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1191,7 +1217,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>CBAE02F7-62CC-4974-96C0-841453D73B48</string>
+				<string>4A80A124-53AB-44FB-83C7-C5BCFF96DAD5</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -2130,7 +2156,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>569B6FA7-2D27-4250-9937-AEC7F8947206</string>
+				<string>59F6D45C-8613-4D9A-9D10-F66F46506215</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -2257,7 +2283,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>D28DF759-C300-4F54-A228-97AC41E07C27</string>
+				<string>321154FA-0C7A-4114-B710-68940A797644</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -2716,7 +2742,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>D28DF759-C300-4F54-A228-97AC41E07C27</string>
+				<string>321154FA-0C7A-4114-B710-68940A797644</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -5489,7 +5515,7 @@ cat "$vault_path"/"$template_note_path"</string>
 				<key>createintermediatefolders</key>
 				<true/>
 				<key>filename</key>
-				<string>{var:daily_note_path}/{date:yyyy-MM-dd}.md</string>
+				<string>{var:daily_note_path}/{query}.md</string>
 				<key>filetext</key>
 				<string>{var:daily_note_append_prefix}{query}</string>
 				<key>ignoredynamicplaceholders</key>
@@ -5556,6 +5582,26 @@ cat "$vault_path"/"$template_note_path"</string>
 			<string>alfred.workflow.utility.conditional</string>
 			<key>uid</key>
 			<string>EBDFE697-8466-45B6-9B43-EB7DC83BB404</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{date:yyyy-MM-dd}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>content</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>321154FA-0C7A-4114-B710-68940A797644</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -7546,7 +7592,7 @@ fi</string>
 				<key>keyword</key>
 				<string>oupdate</string>
 				<key>subtext</key>
-				<string></string>
+				<string>and Beta Plugins, if BRAT is installed</string>
 				<key>text</key>
 				<string>⚙️ Update all Plugins</string>
 				<key>withspace</key>
@@ -7562,19 +7608,26 @@ fi</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>browser</key>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>open "obsidian://advanced-uri?vault=$vault_name_ENC&amp;commandid=obsidian42-brat%253ABRAT-checkForUpdatesAndUpdate"
+open "obsidian://advanced-uri?vault=$vault_name_ENC&amp;updateplugins=true"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
 				<string></string>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string>obsidian://advanced-uri?vault={var:vault_name_ENC}&amp;updateplugins=true</string>
+				<key>type</key>
+				<integer>5</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
+			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>569B6FA7-2D27-4250-9937-AEC7F8947206</string>
+			<string>59F6D45C-8613-4D9A-9D10-F66F46506215</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -7826,6 +7879,26 @@ fi</string>
 			<string>alfred.workflow.trigger.external</string>
 			<key>uid</key>
 			<string>6023C98E-C596-4D3B-B315-5303B6A28445</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>mode</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>4A80A124-53AB-44FB-83C7-C5BCFF96DAD5</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -9683,6 +9756,15 @@ An Alfred Workflow with dozens of features for controlling Obsidian.
 			<key>ypos</key>
 			<real>4715</real>
 		</dict>
+		<key>321154FA-0C7A-4114-B710-68940A797644</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>9</integer>
+			<key>xpos</key>
+			<real>285</real>
+			<key>ypos</key>
+			<real>1965</real>
+		</dict>
 		<key>3374CD2F-3B5A-4267-B71E-862533887D36</key>
 		<dict>
 			<key>colorindex</key>
@@ -9928,6 +10010,15 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>ypos</key>
 			<real>6425</real>
 		</dict>
+		<key>4A80A124-53AB-44FB-83C7-C5BCFF96DAD5</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>xpos</key>
+			<real>175</real>
+			<key>ypos</key>
+			<real>5535</real>
+		</dict>
 		<key>4B2FBAC0-BF9C-46B5-82A3-423036076906</key>
 		<dict>
 			<key>colorindex</key>
@@ -10082,15 +10173,6 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>ypos</key>
 			<real>4885</real>
 		</dict>
-		<key>569B6FA7-2D27-4250-9937-AEC7F8947206</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>xpos</key>
-			<real>175</real>
-			<key>ypos</key>
-			<real>5195</real>
-		</dict>
 		<key>57322297-1206-4FF2-99BA-FD0E76398989</key>
 		<dict>
 			<key>colorindex</key>
@@ -10126,6 +10208,15 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<real>520</real>
 			<key>ypos</key>
 			<real>5555</real>
+		</dict>
+		<key>59F6D45C-8613-4D9A-9D10-F66F46506215</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>xpos</key>
+			<real>185</real>
+			<key>ypos</key>
+			<real>5195</real>
 		</dict>
 		<key>5A09F715-0609-4CD9-A1B8-B7677229F80B</key>
 		<dict>
@@ -10955,6 +11046,8 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 		<dict>
 			<key>colorindex</key>
 			<integer>9</integer>
+			<key>note</key>
+			<string>update all plugins</string>
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
@@ -11357,9 +11450,9 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<real>240</real>
+			<real>210</real>
 			<key>ypos</key>
-			<real>2010</real>
+			<real>2005</real>
 		</dict>
 		<key>DAE91752-D8FE-4DFF-BC2E-4A3DBD0BD1F6</key>
 		<dict>
