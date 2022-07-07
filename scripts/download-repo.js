@@ -8,7 +8,9 @@ function run (argv) {
 	// import variables
 	const githubURL = argv.join("");
 	const homepath = app.pathTo("home folder");
-	const downloadFolderPath = $.getenv("download_folder_path").replace(/^~/, homepath);
+	let downloadFolderPath = $.getenv("download_folder_path");
+	if (!downloadFolderPath) downloadFolderPath = "~/Downloads";
+	downloadFolderPath = downloadFolderPath.replace(/^~/, homepath);
 
 	// in case it's a theme
 	if (githubURL.slice(-4) === ".css") {

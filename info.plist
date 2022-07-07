@@ -11840,7 +11840,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 		<key>daily_note_path</key>
 		<string>/Users/chrisgrieser/Library/Mobile Documents/iCloud~md~obsidian/Documents/Main Vault/Daily Notes/</string>
 		<key>download_folder_path</key>
-		<string>~/Downloads</string>
+		<string>~/Library/Mobile Documents/com~apple~CloudDocs/File Hub/</string>
 		<key>h_lvl_ignore</key>
 		<string>h1 h2 h3 h4 h5 h6</string>
 		<key>input_append</key>
@@ -11899,10 +11899,11 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 		<string>append_prefix</string>
 		<string>vault_path</string>
 		<string>scratchpad_note_path</string>
-		<string>workspace_2</string>
+		<string>download_folder_path</string>
 		<string>daily_note_append_prefix</string>
 		<string>supercharged_icon_file</string>
 		<string>new_note_location</string>
+		<string>workspace_2</string>
 		<string>workspace_3</string>
 		<string>backup_destination</string>
 	</array>
