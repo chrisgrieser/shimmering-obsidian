@@ -5517,7 +5517,7 @@ cat "$vault_path"/"$template_note_path"</string>
 				<key>filename</key>
 				<string>{var:daily_note_path}/{query}.md</string>
 				<key>filetext</key>
-				<string>{var:daily_note_append_prefix}{query}</string>
+				<string>{var:daily_note_append_prefix}{var:content}</string>
 				<key>ignoredynamicplaceholders</key>
 				<false/>
 				<key>relativepathmode</key>
