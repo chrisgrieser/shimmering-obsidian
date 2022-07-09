@@ -44,10 +44,14 @@ function run() {
 		.name;
 
 	const numberOfJSONS = app.doShellScript("ls '" + vaultPath + "/.obsidian/plugins/metadata-extractor/' | grep \".json\" | grep -v \"manifest\" | grep -v \"^data\" | wc -l | tr -d \" \"");
+	const metadataJSON = vaultPath + "/.obsidian/plugins/metadata-extractor/metadata.json";
+	let metadataStrLen = readFile(metadataJSON)?.length;
+	if (!metadataStrLen) metadataStrLen = "error reading metadata.";
 
 	log("-------------------------------");
 	log("Metadata JSONs: " + numberOfJSONS + "/3");
 	if (numberOfJSONS < 3) log("Metadata not found. Please run `osetup` and retry.");
+	log ("Metadata String Length: " + metadataStrLen);
 	log("-------------------------------");
 	log("INSTALLED VERSION");
 	log("macOS: " + macVer);
