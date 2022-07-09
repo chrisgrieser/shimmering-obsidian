@@ -1,3 +1,8 @@
+- 2022-07-10	release 2.26.8
+- 2022-07-10	improved creation of debugging info ("oinfo")
+- 2022-07-10	another potential fix for #85
+- 2022-07-10	potential fix for #85
+- 2022-07-10	fix link in bug reporting form
 - 2022-07-08	release 2.26.7
 - 2022-07-08	fix for od
 - 2022-07-07	release 2.26.6
