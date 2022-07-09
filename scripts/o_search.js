@@ -55,6 +55,7 @@ try {
 } catch (error) {
 	pathToCheck = vaultPath;
 }
+console.log("path to check: " + pathToCheck);
 
 // starred & recent files
 const recentFiles = JSON.parse(readFile(recentJSON)).lastOpenFiles;
@@ -69,7 +70,7 @@ if (readFile(starredJSON) !== "") {
 
 // Excluded Files
 const excludeFilter = JSON.parse(readFile(excludeFilterJSON)).userIgnoreFilters;
-console.log(excludeFilter);
+console.log("excluded files: " + excludeFilter);
 
 // ---------------------------------
 // Excluded Files & Ignored Headings
@@ -79,8 +80,7 @@ console.log(excludeFilter);
 let folderArray = app.doShellScript(`find "${pathToCheck}" -type d -mindepth 1 -not -path "*/.*"`)
 	.split("\r"); // returns *absolute* paths
 
-if (folderArray === "") folderArray = [];
-if (excludeFilter?.length) {
+if (excludeFilter?.length && folderArray?.length) {
 	folderArray = folderArray.filter (folder => {
 		let include = true;
 		folder += "/";
@@ -122,7 +122,7 @@ if (excludeFilter?.length) {
 if (pathToCheck !== vaultPath)
 	fileArray = fileArray.filter (f => f.relativePath.startsWith(currentFolder));
 
-// ignored headings
+// parse ignored headings setting
 const hLVLignore = $.getenv("h_lvl_ignore");
 const headingIgnore = [true];
 for (let i = 1; i < 7; i++) {
