@@ -79,6 +79,7 @@ console.log("excluded files: " + excludeFilter);
 // folder search
 let folderArray = app.doShellScript(`find "${pathToCheck}" -type d -mindepth 1 -not -path "*/.*"`)
 	.split("\r"); // returns *absolute* paths
+if (!folderArray) folderArray = [];
 
 if (excludeFilter?.length && folderArray?.length) {
 	folderArray = folderArray.filter (folder => {
@@ -197,7 +198,7 @@ fileArray.forEach(file => {
 	if (file.aliases) {
 		file.aliases.forEach(alias => {
 			jsonArray.push({
-				"title": superchargedIcon + " " + alias,
+				"title": superchargedIcon + alias,
 				"match": additionalMatcher + "alias " + alfredMatcher(alias),
 				"subtitle": "↪ " + filename,
 				"arg": relativePath,
