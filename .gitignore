@@ -1,9 +1,2 @@
 # Mac
 .DS_Store
-
-# Alfred
-List Filter Images/
-!/icon.png
-
-# "/*" affects only images in the root directory
-/*.png
