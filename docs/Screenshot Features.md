@@ -24,7 +24,7 @@ nav_order: 2
 	- Use a different date format by following [Alfred's Placeholder-Syntax](https://www.alfredapp.com/help/workflows/advanced/placeholders/#date-time).
 	- You can leave `ocr_prefix` empty or insert any other fixed value (e.g., a YAML-Header).
 	- 💡 While not very visible, the workflow configuration variables *do* accept multi-line values.
-- For best results, you should set the proper languages to be recognized with the workflow setting `ocr_languages`.
+- For best results, you should set the proper languages to be recognized with the workflow setting `ocr_languages`, e.g. `eng+deu` for English and German. You can find out the code for your language(s) in [this list](https://tesseract-ocr.github.io/tessdoc/Data-Files-in-different-versions.html).
 - When the [workflow configuration](Workflow%20Configuration.md#Screenshot-Features) `open_after_screenshot` is set to `true`, then the note will be opened after taking the screenshot. 💡 Set this to `false` to take OCR screenshots in quick succession without opening Obsidian, e.g., during a live lecture or presentation.
 
 ### Requirements
