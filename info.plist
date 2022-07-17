@@ -1470,7 +1470,7 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>624B592C-7815-4AE9-84DA-8EB7AD964966</string>
+				<string>C9AB9048-51F7-4C7D-8F24-A30DBAA367F6</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -2514,6 +2514,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>C066249A-3C9E-424F-8919-CA805A3D3C31</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>C9AB9048-51F7-4C7D-8F24-A30DBAA367F6</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>624B592C-7815-4AE9-84DA-8EB7AD964966</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -3793,11 +3806,11 @@ fi</string>
 				<key>focusedappvariablename</key>
 				<string></string>
 				<key>hotkey</key>
-				<integer>31</integer>
+				<integer>1</integer>
 				<key>hotmod</key>
 				<integer>1966080</integer>
 				<key>hotstring</key>
-				<string>O</string>
+				<string>S</string>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -3922,27 +3935,6 @@ fi</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<false/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string>'{var:input}'</string>
-				<key>title</key>
-				<string>✅ Appended to Scratchpad</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>624B592C-7815-4AE9-84DA-8EB7AD964966</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argumenttype</key>
 				<integer>0</integer>
 				<key>keyword</key>
@@ -3958,6 +3950,47 @@ fi</string>
 			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
 			<string>EE4720A7-4048-4A92-B0AA-8F811AE57C1E</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<true/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<true/>
+				<key>text</key>
+				<string>'{var:input}'</string>
+				<key>title</key>
+				<string>✅ Appended to '{query}'</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>624B592C-7815-4AE9-84DA-8EB7AD964966</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{var:scratchpad_note_path}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>input</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>C9AB9048-51F7-4C7D-8F24-A30DBAA367F6</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -10427,9 +10460,9 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<real>630</real>
+			<real>670</real>
 			<key>ypos</key>
-			<real>620</real>
+			<real>635</real>
 		</dict>
 		<key>64249F79-8A34-461C-A40E-9BC13FD3D4B4</key>
 		<dict>
@@ -11365,6 +11398,15 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<real>755</real>
 			<key>ypos</key>
 			<real>2275</real>
+		</dict>
+		<key>C9AB9048-51F7-4C7D-8F24-A30DBAA367F6</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>xpos</key>
+			<real>595</real>
+			<key>ypos</key>
+			<real>665</real>
 		</dict>
 		<key>CBAE02F7-62CC-4974-96C0-841453D73B48</key>
 		<dict>
