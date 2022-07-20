@@ -3957,11 +3957,11 @@ fi</string>
 			<key>config</key>
 			<dict>
 				<key>lastpathcomponent</key>
-				<true/>
+				<false/>
 				<key>onlyshowifquerypopulated</key>
 				<false/>
 				<key>removeextension</key>
-				<true/>
+				<false/>
 				<key>text</key>
 				<string>'{var:input}'</string>
 				<key>title</key>
@@ -3982,10 +3982,7 @@ fi</string>
 				<key>passthroughargument</key>
 				<false/>
 				<key>variables</key>
-				<dict>
-					<key>input</key>
-					<string>{query}</string>
-				</dict>
+				<dict/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.utility.argument</string>
