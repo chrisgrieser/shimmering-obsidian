@@ -2,21 +2,13 @@
 
 function run () {
 	ObjC.import("stdlib");
-	ObjC.import("Foundation");
 	const app = Application.currentApplication();
 	app.includeStandardAdditions = true;
 
-	function readFile (path, encoding) {
-		if (!encoding) encoding = $.NSUTF8StringEncoding;
-		const fm = $.NSFileManager.defaultManager;
-		const data = fm.contentsAtPath(path);
-		const str = $.NSString.alloc.initWithDataEncoding(data, encoding);
-		return ObjC.unwrap(str);
-	}
+	const vaultNameEnc = $.getenv("vault_name_ENC");
 
-	const vaultPath = $.getenv("vault_path").replace(/^~/, app.pathTo("home folder"));
-	const activeFile = JSON.parse(readFile(vaultPath + "/.obsidian/workspace"))
-		.lastOpenFiles[0];
-
+	app.openLocation(`obsidian://advanced-uri?${vaultNameEnc}&commandid=workspace%253Acopy-path`);
+	delay(0.1);
+	const activeFile = app.theClipboard();
 	return activeFile;
 }
