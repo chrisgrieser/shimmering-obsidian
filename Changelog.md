@@ -1,3 +1,7 @@
+- 2022-07-24	release 2.26.9
+- 2022-07-24	fix reading of current path
+- 2022-07-15	rm user configration since conflict with env vars
+- 2022-07-11	also sync images
 - 2022-07-10	release 2.26.8
 - 2022-07-10	improved creation of debugging info ("oinfo")
 - 2022-07-10	another potential fix for #85
