@@ -527,6 +527,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>3375D306-A5E5-433F-9624-ECB93A8F9539</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>0884C587-3452-45CA-94B3-6C10D113D381</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>341089EA-5936-4C81-ADE8-ECF290EA808D</key>
 		<array>
 			<dict>
@@ -6406,6 +6419,8 @@ end tell</string>
 			<dict>
 				<key>delimiter</key>
 				<string>;;</string>
+				<key>discardemptyarguments</key>
+				<false/>
 				<key>outputas</key>
 				<integer>0</integer>
 				<key>trimarguments</key>
@@ -7359,6 +7374,76 @@ echo "$backup"</string>
 			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
 			<string>9FF8D4E6-7A5E-4736-9976-17C280BC574A</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<true/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>opd</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>loading...</string>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>scripts/obsi-marcus-doc-search.js</string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Obsidian Plugin Docs</string>
+				<key>type</key>
+				<integer>8</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>3375D306-A5E5-433F-9624-ECB93A8F9539</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>skipqueryencode</key>
+				<false/>
+				<key>skipvarencode</key>
+				<false/>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>0884C587-3452-45CA-94B3-6C10D113D381</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -8399,6 +8484,8 @@ tell application "Obsidian" to activate</string>
 			<dict>
 				<key>delimiter</key>
 				<string>;</string>
+				<key>discardemptyarguments</key>
+				<false/>
 				<key>outputas</key>
 				<integer>0</integer>
 				<key>trimarguments</key>
@@ -9472,6 +9559,15 @@ An Alfred Workflow with dozens of features for controlling Obsidian.
 			<key>ypos</key>
 			<real>2955</real>
 		</dict>
+		<key>0884C587-3452-45CA-94B3-6C10D113D381</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>xpos</key>
+			<real>215</real>
+			<key>ypos</key>
+			<real>4465</real>
+		</dict>
 		<key>099D27EE-A12C-4248-B4EC-C46C34F5415E</key>
 		<dict>
 			<key>colorindex</key>
@@ -9873,6 +9969,17 @@ An Alfred Workflow with dozens of features for controlling Obsidian.
 			<real>245</real>
 			<key>ypos</key>
 			<real>6540</real>
+		</dict>
+		<key>3375D306-A5E5-433F-9624-ECB93A8F9539</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>note</key>
+			<string>search docs</string>
+			<key>xpos</key>
+			<real>30</real>
+			<key>ypos</key>
+			<real>4465</real>
 		</dict>
 		<key>3390E0CB-CE17-4CEB-848D-14C5547A6936</key>
 		<dict>

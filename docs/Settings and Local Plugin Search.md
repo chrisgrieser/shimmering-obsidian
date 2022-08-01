@@ -1,7 +1,3 @@
----
-nav_order: 2
----
-
 <img src="https://user-images.githubusercontent.com/73286100/142665796-c588ec37-97b2-446a-841c-e19a92ecaa22.gif" alt="Screen Recording 2021-11-19 at 18 21 21" width=60%>
 
 # Settings & Local Plugin Search

@@ -1,7 +1,3 @@
----
-nav_order: 2
----
-
 # Alfred-based Quick Switcher
 The Alfred-based Quick Switcher is basically an enhanced version of [Obsidian's Quick Switcher Core Plugin](https://help.obsidian.md/Plugins/Quick+switcher).
 

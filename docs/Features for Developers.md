@@ -1,11 +1,8 @@
----
-nav_order: 2
----
-
 # Features for Developers
 
 <!-- MarkdownTOC -->
 
+- [Plugin Development Documentation Search](#plugin-development-documentation-search)
 - [Plugin Search](#plugin-search)
 - [Open various folders related to development](#open-various-folders-related-to-development)
 - [Local plugins](#local-plugins)
@@ -15,6 +12,11 @@ nav_order: 2
 - [Browse Obsidian via Terminal](#browse-obsidian-via-terminal)
 
 <!-- /MarkdownTOC -->
+
+## Plugin Development Documentation Search
+Searches the *unofficial* [plugin development documentation by Marcus Olsson](https://marcus.se.net/obsidian-plugin-docs/).
+
+![](images/plugin-docs-search-demo.gif)
 
 ## Plugin Search
 ➡️ Refer to the [Plugin & Theme Search](Plugin%20and%20Theme%20Search.md#Plugins) for the Information on the theme search capabilities. Particularly useful for plugin developers should be:
@@ -57,3 +59,4 @@ Do want to navigate your vault from within the Terminal? [Have a look.](https://
 ![Vault Navigation in the Terminal](images/terminal-vault-navigation.png)
 
 (Thanks to `@jack of some trades`.)
+[plugin-docs-search-demo.gif]: 

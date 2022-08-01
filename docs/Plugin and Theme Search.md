@@ -1,7 +1,3 @@
----
-nav_order: 2
----
-
 # Plugin & Theme Search
 
 ## Table of Contents

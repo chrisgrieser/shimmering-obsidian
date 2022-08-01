@@ -1,7 +1,3 @@
----
-nav_order: 2
----
-
 # Note-related Features
 
 ## Table of Contents

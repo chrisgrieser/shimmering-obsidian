@@ -1,7 +1,3 @@
----
-nav_order: 2
----
-
 # Screenshot Features
 
 ## Table of Contents

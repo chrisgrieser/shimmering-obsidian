@@ -1,7 +1,3 @@
----
-nav_order: 2
----
-
 # Utility Features
 
 ## Table of Contents

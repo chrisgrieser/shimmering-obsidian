@@ -1,7 +1,3 @@
----
-nav_order: 2
----
-
 # Documentation & Forum Search
 
 ## Documentation & Hub

@@ -1,7 +1,3 @@
----
-nav_order: 2
----
-
 # Vault Switcher
 
 **`ov`: Open `V`aults in Obsidian, Finder, or the Terminal**
