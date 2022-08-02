@@ -15,7 +15,7 @@ The Alfred-based Quick Switcher is basically an enhanced version of [Obsidian's 
 - [Search Notes via their Tags](#search-notes-via-their-tags)
 - [Search Starred Files](#search-starred-files)
 - [Search Recent Files](#search-recent-files)
-- [Supercharged Links](#supercharged-links)
+- [Supercharged Icon](#supercharged-icon)
 - [Vault Search as Alfred Fallback](#vault-search-as-alfred-fallback)
 - [Previewing Notes via Quicklook](#previewing-notes-via-quicklook)
 	- [Hotkey Setting](#hotkey-setting)
@@ -102,15 +102,26 @@ Displayed alongside the other search results are all headings in your vault. Sel
 - Displays recent files that can be actioned on exactly the same way as the search with `o`, i.e., all the modifiers (`⌘/⌃/⌥/fn/⇧ + ↵`) apply the same way.
 - Up to the 10 most recent files are displayed.
 
-## Supercharged Links
+## Supercharged Icon
 You can prepend icons to the results of any search based on the notes' tags, similar to the [Supercharged Links Plugin](https://obsidian.md/plugins?id=supercharged-links-obsidian).
-- To do so, you have to add the *absolute* path to a `.csv` file to the workflow configuration `supercharged_icon_file`.
-- Every line of the file should represent a pair of tag and emoji to be assigned, separated by `,`, for example:
+- To do so, you have to add the *absolute* path of a file containing your emojis to the workflow configuration `supercharged_icon_file`.
+- Every line of the file should represent a pair of tag and emoji to be assigned, separated by `,`. Use `,,` so that the emoji gets appended instead of prepended.
+- Example:
 
 	```csv
 	coding,💻
 	person,👤
 	pkm,🧠
+	seedling,,🌱
+	```
+
+	...will result in:
+
+	```text
+	💻 Filename1
+	👤 Filename2
+	🧠 Filename3
+	Filename4 🌱
 	```
 
 - Leave the field `supercharged_icon_file` to not use any icons.

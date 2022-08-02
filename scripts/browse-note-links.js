@@ -147,11 +147,14 @@ function run () {
 		if (filename.toLowerCase().includes("kanban"))	iconpath = "icons/kanban.png";
 
 		let superchargedIcon = "";
+		let superchargedIcon2 = "";
 		if (superchargedIconFileExists && file.tags) {
 			superchargedIconList.forEach(pair => {
 				const tag = pair.split(",")[0].toLowerCase().replaceAll("#", "");
 				const icon = pair.split(",")[1];
-				if (file.tags.includes(tag)) superchargedIcon = icon + " ";
+				const icon2 = pair.split(",")[2];
+				if (file.tags.includes(tag) && icon) superchargedIcon = icon + " ";
+				else if (file.tags.includes(tag) && icon2) superchargedIcon2 = " " + icon2;
 			});
 		}
 
@@ -161,7 +164,7 @@ function run () {
 		if (backlinkList.includes (relativePath)) linkIcon += "⬅️ ";
 
 		jsonArray.push({
-			"title": linkIcon + emoji + superchargedIcon + filename,
+			"title": linkIcon + emoji + superchargedIcon + filename + superchargedIcon2,
 			"match": additionalMatcher + alfredMatcher(filename),
 			"subtitle": "▸ " + parentFolder(relativePath),
 			"type": "file:skipcheck",

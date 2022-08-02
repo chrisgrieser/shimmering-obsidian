@@ -77,16 +77,19 @@ tagsArray.forEach(tagData => {
 	if (tagName.includes ("/")) extraMatcher += " nested child";
 
 	let superchargedIcon = "";
+	let superchargedIcon2 = "";
 	if (superchargedIconFileExists) {
 		superchargedIconList.forEach(pair => {
 			const tag = pair.split(",")[0].toLowerCase().replaceAll("#", "");
 			const icon = pair.split(",")[1];
-			if (tagName === tag) superchargedIcon = icon;
+			const icon2 = pair.split(",")[2];
+			if (tagName === tag && icon) superchargedIcon = icon + " ";
+			else if (tagName === tag && icon2) superchargedIcon2 = " " + icon2;
 		});
 	}
 
 	jsonArray.push({
-		"title": superchargedIcon + " #" + tagName,
+		"title": superchargedIcon + "#" + tagName + superchargedIcon2,
 		"subtitle": tagData.tagCount + "x" + mergeInfo,
 		"match": alfredMatcher (tagName) + " #" + alfredMatcher (tagName) + extraMatcher,
 		"uid": tagName,

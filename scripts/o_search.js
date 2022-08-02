@@ -55,7 +55,6 @@ try {
 } catch (error) {
 	pathToCheck = vaultPath;
 }
-console.log("path to check: " + pathToCheck);
 
 // starred & recent files
 const recentFiles = JSON.parse(readFile(recentJSON)).lastOpenFiles;
@@ -159,16 +158,16 @@ fileArray.forEach(file => {
 	if (filename.toLowerCase().includes("kanban"))	iconpath = "icons/kanban.png";
 
 	let superchargedIcon = "";
+	let superchargedIcon2 = "";
 	if (superchargedIconFileExists && file.tags) {
 		superchargedIconList.forEach(pair => {
 			const tag = pair.split(",")[0].toLowerCase().replaceAll("#", "");
 			const icon = pair.split(",")[1];
-			if (file.tags.includes(tag)) superchargedIcon = icon + " ";
+			const icon2 = pair.split(",")[2];
+			if (file.tags.includes(tag) && icon) superchargedIcon = icon + " ";
+			else if (file.tags.includes(tag) && icon2) superchargedIcon2 = " " + icon2;
 		});
 	}
-
-	let seedlingEmoji = "";
-	if (file.tags?.includes("seedling")) seedlingEmoji = " 🌱";
 
 	// check link existence of file
 	let hasLinks = Boolean (file.links?.some(l => l.relativePath) || file.backlinks ); // no relativePath => unresolved link
@@ -178,7 +177,7 @@ fileArray.forEach(file => {
 
 	// Notes (file names)
 	jsonArray.push({
-		"title": emoji + superchargedIcon + filename + seedlingEmoji,
+		"title": emoji + superchargedIcon + filename + superchargedIcon2,
 		"match": alfredMatcher(filename) + tagMatcher + " filename name title",
 		"subtitle": "▸ " + parentFolder(relativePath),
 		"arg": relativePath,
@@ -198,7 +197,7 @@ fileArray.forEach(file => {
 	if (file.aliases) {
 		file.aliases.forEach(alias => {
 			jsonArray.push({
-				"title": superchargedIcon + alias,
+				"title": superchargedIcon + alias + superchargedIcon2,
 				"match": additionalMatcher + "alias " + alfredMatcher(alias),
 				"subtitle": "↪ " + filename,
 				"arg": relativePath,
