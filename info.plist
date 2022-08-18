@@ -12072,7 +12072,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 		<key>vault_name_ENC</key>
 		<string>Main%20Vault</string>
 		<key>vault_path</key>
-		<string>~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Main Vault</string>
+		<string>~/Main Vault</string>
 		<key>workspace_1</key>
 		<string>Default</string>
 		<key>workspace_2</key>
