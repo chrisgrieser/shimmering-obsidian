@@ -1,27 +1,20 @@
 #!/bin/zsh
 timestamp=$(date '+%Y-%m-%d_%H-%M')
-resolved_bkp_dest="${backup_destination/#\~/$HOME}"
-backup="$resolved_bkp_dest""/Obsidian-Backup_""$timestamp"".zip"
-vault="${vault_path/#\~/$HOME}"
+backup_destination="${backup_destination/#\~/$HOME}"
+backup="$backup_destination/Obsidian-Backup_$timestamp.zip"
+vault_path="${vault_path/#\~/$HOME}"
 
 # directory change necessary to avoid zipping root folder https://unix.stackexchange.com/questions/245856/zip-a-file-without-including-the-parent-directory
-# "*" only matches non-hidden files, therefore adding them manually.
-# several stackexchange-solutions for changing *" to match hidden files
-# do not work or create character-encoding issues, therefore explicitly
-# naming them.
-cd "$vault"
-mkdir "$vault"/.trash
-
-itemCount=$(ls "$vault"/.trash | wc -l)
-if (( ${itemCount} != 0 )) ; then
-	zip -r --quiet "$backup" ./* ./.obsidian/* ./.trash/*
-else
-	zip -r --quiet "$backup" ./* ./.obsidian/*
-fi
+# "./.*" matches all hidden files, including `.git`, which inflates the backup size,
+# therefore explicitly naming the three hidden files that should be backuped
+mkdir -p "$backup_destination"
+cd "$vault_path"
+zip -r --quiet "$backup" ./* ./.{trash,obsidian,gitignore}
 
 # restrict number of backups
 actual_number=$((max_number_of_bkps + 1))
-cd $resolved_bkp_dest
+cd "$backup_destination"
 ls -t | tail -n +$actual_number | tr '\n' '\0' | xargs -0 rm
 
+# for notification
 echo "$backup"
