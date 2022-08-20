@@ -5,10 +5,11 @@
 - Update to the [latest version of the workflow](https://github.com/chrisgrieser/shimmering-obsidian/releases/latest), chances are the problem has already been fixed.
 - Read the [Breaking Changes Documentation](Breaking%20Changes.md) to make sure the unexpected behavior is not a breaking change.
 - If you are using *Shimmering Obsidian* with a second vault, remember that you have to install the required plugins in the new vault as well, and then run `osetup` in the new vault, too.
-- In the [workflow configuration](#Workflow%20COnfiguration), you have to set the path to a *file* and not to the location of a file, e.g. `template_note_path` must be set to `templates/zettel.md`
+- In the [workflow configuration](Workflow%20Configuration.md), you have to set the path to a *file* and not to the location of a file, e.g. `template_note_path` must be set to `templates/zettel.md`.
+- If you are using Alfred's [Compatibility Mode](https://www.alfredapp.com/help/appearance/#options), you will not be able to get "discord-ready" links (i.e., URLs enclosed in `<>`). The detection of Discord being the frontmost app is not possible in Compatibility Mode, so you might [consider switching to Standard Mode](https://www.alfredapp.com/help/appearance/#options).
 
 ## Alfred-based Quick Switcher (`o ...` search )
-- If the [Alfred-based Quick Switcher](Alfred-based%20Quick%20Switcher.md)  does not work at all, make sure you haven't changed any of the default settings of the [Metadata-Extractor regarding the location & name of the JSON files](Workflow%20Configuration.md#Metadata-Extractor-Configuration). You can also rerun `osetup` to make sure.
+- If the [Alfred-based Quick Switcher](Alfred-based%20Quick%20Switcher.md) does not work at all, make sure you haven't changed any of the default settings of the [Metadata-Extractor regarding the location & name of the JSON files](Workflow%20Configuration.md#Metadata-Extractor-Configuration). You can also rerun `osetup` to make sure.
 - If notes in general can be found, but not recently created or renamed notes, you need to [use the `oupdate` command to refresh your metadata](Utility%20Features.md#%E2%9C%B4%EF%B8%8F-update-plugins--metadata). You should also consider [increasing the frequency of metadata refreshing](Workflow%20Configuration.md#Metadata-Extractor-Configuration).
 
 ## Reporting Bugs
