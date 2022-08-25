@@ -12,7 +12,8 @@
 		"obsidian-budget-wysiwyg"
 	],
 	"dysfunct": [
-		"obsidian-vale"
+		"obsidian-vale",
+		"improved-obsidian-vimcursor"
 	],
 	"deprecated": [
 		"obsidian-prettify"
