@@ -390,6 +390,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>2BB4DFA9-6E15-4EE5-8E69-7E1AE14AA2EC</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>A5ADC808-2010-447C-9B0A-B4C14C3801EB</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>2C1D63BF-6BDE-49E3-880C-A23FE845879F</key>
 		<array>
 			<dict>
@@ -529,6 +542,16 @@
 		</array>
 		<key>3375D306-A5E5-433F-9624-ECB93A8F9539</key>
 		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>2BB4DFA9-6E15-4EE5-8E69-7E1AE14AA2EC</string>
+				<key>modifiers</key>
+				<integer>524288</integer>
+				<key>modifiersubtext</key>
+				<string>⌥: Copy URL</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
 			<dict>
 				<key>destinationuid</key>
 				<string>0884C587-3452-45CA-94B3-6C10D113D381</string>
@@ -7390,6 +7413,46 @@ echo "$backup"</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>2BB4DFA9-6E15-4EE5-8E69-7E1AE14AA2EC</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>✅ URL copied</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>A5ADC808-2010-447C-9B0A-B4C14C3801EB</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>alfredfiltersresults</key>
 				<true/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -9595,9 +9658,9 @@ An Alfred Workflow with dozens of features for controlling Obsidian.
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<real>215</real>
+			<real>375</real>
 			<key>ypos</key>
-			<real>4465</real>
+			<real>4560</real>
 		</dict>
 		<key>099D27EE-A12C-4248-B4EC-C46C34F5415E</key>
 		<dict>
@@ -9906,6 +9969,15 @@ An Alfred Workflow with dozens of features for controlling Obsidian.
 			<real>1870</real>
 			<key>ypos</key>
 			<real>1335</real>
+		</dict>
+		<key>2BB4DFA9-6E15-4EE5-8E69-7E1AE14AA2EC</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>xpos</key>
+			<real>375</real>
+			<key>ypos</key>
+			<real>4435</real>
 		</dict>
 		<key>2C1D63BF-6BDE-49E3-880C-A23FE845879F</key>
 		<dict>
@@ -11260,6 +11332,15 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>ypos</key>
 			<real>5680</real>
 		</dict>
+		<key>A5ADC808-2010-447C-9B0A-B4C14C3801EB</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>xpos</key>
+			<real>515</real>
+			<key>ypos</key>
+			<real>4435</real>
+		</dict>
 		<key>A5BA80AA-D2FF-43BC-AE70-4C34D0BB4E20</key>
 		<dict>
 			<key>colorindex</key>
@@ -11628,9 +11709,9 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<real>215</real>
+			<real>200</real>
 			<key>ypos</key>
-			<real>4585</real>
+			<real>4605</real>
 		</dict>
 		<key>D0CCD3E2-0D47-441C-A6E2-76DCCF2188CF</key>
 		<dict>
