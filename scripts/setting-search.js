@@ -100,22 +100,25 @@ installedPlugins.forEach(pluginFolder => {
 			"name": pluginFolder.replaceAll ("-", " ")
 		};
 	}
+	const name = manifest.name;
+	const pluginID = manifest.id;
+	const URI = `${URIstart}&settingid=${pluginID}`;
 
-	let pluginEnabled = false;
-	let settingSubtitle = "🛑 disabled";
-	if (enabledComPlugins.includes(manifest.id)) {
-		pluginEnabled = true;
-		settingSubtitle = "";
-	}
+	// toggling
+	const pluginEnabled = enabledComPlugins.includes(pluginID);
+	const settingSubtitle = pluginEnabled ? "" : "🟥 disabled";
+	const toggleSubtitle = pluginEnabled ? "⇧: 🟥 disable" : "⇧: 🟢 enable";
+	const toggleMode = pluginEnabled ? "disable-plugin" : "enable-plugin";
+	const toggleURI = `${URIstart}&${toggleMode}=${pluginID}`;
 
+	// icons
 	let icons = "";
 	let subtitleIcons = "";
-	if (deprecatedPlugins.includes(manifest.id)) {
+	if (deprecatedPlugins.includes(pluginID)) {
 		icons += "⚠️ ";
 		subtitleIcons = "deprecated – ";
 	}
-	if (manifest.name === "Style Settings") icons += " 🎨";
-
+	if (name === "Style Settings") icons += " 🎨";
 	const isDeveloped = Application("Finder").exists(Path(pluginFolderPath + "/.git"));
 	let devSubtitle = "No '.git' folder found.";
 	if (isDeveloped) {
@@ -123,11 +126,9 @@ installedPlugins.forEach(pluginFolder => {
 		devSubtitle = "fn: git pull";
 	}
 
-	const URI = URIstart + "&settingid="+ manifest.id;
-
 	jsonArray.push({
-		"title": manifest.name + icons,
-		"uid": manifest.id,
+		"title":name + icons,
+		"uid": pluginID,
 		"subtitle": subtitleIcons + settingSubtitle,
 		"arg": URI,
 		"icon": { "path": "icons/plugin.png" },
@@ -140,9 +141,14 @@ installedPlugins.forEach(pluginFolder => {
 				"valid": isDeveloped,
 				"subtitle": devSubtitle,
 			},
+			"shift": {
+				"arg": toggleURI,
+				"valid": pluginEnabled,
+				"subtitle": toggleSubtitle,
+			},
 			"ctrl": {
-				"arg": manifest.id,
-				"subtitle": "⌃: Copy plugin ID '" + manifest.id + "'",
+				"arg": pluginID,
+				"subtitle": `⌃: Copy plugin ID '${pluginID}'`,
 			}
 		}
 	});

@@ -1557,6 +1557,16 @@
 				<key>vitoclose</key>
 				<false/>
 			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>11CD2255-4E07-4648-8E5C-A59346A63EC0</string>
+				<key>modifiers</key>
+				<integer>131072</integer>
+				<key>modifiersubtext</key>
+				<string>⇧: toggle plugin</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
 		</array>
 		<key>72AACC40-46A8-4203-9BD5-B16971C30181</key>
 		<array>
@@ -8836,6 +8846,67 @@ echo | git pull</string>
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>11CD2255-4E07-4648-8E5C-A59346A63EC0</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>'{query}'</string>
+				<key>title</key>
+				<string>✅ Link copied</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>39E83342-8818-474A-9AC2-27D0A97843EF</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>0B6B06C2-6914-4603-B703-5F8DA27FD029</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>skipqueryencode</key>
+				<false/>
+				<key>skipvarencode</key>
+				<false/>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
 				<string>obsidian://advanced-uri?vault={var:vault_name_ENC}&amp;commandid=obsidian42-brat%253ABRAT-GrabCommunityTheme</string>
 			</dict>
 			<key>type</key>
@@ -8911,40 +8982,49 @@ echo | git pull</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
+				<key>alfredfiltersresults</key>
 				<true/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string>'{query}'</string>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>2</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>obeta</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>scripts/open-beta-repo.js</string>
+				<key>subtext</key>
+				<string></string>
 				<key>title</key>
-				<string>✅ Link copied</string>
+				<string>♋️ Open GitHub Repository of Beta Plugin</string>
+				<key>type</key>
+				<integer>8</integer>
+				<key>withspace</key>
+				<true/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
+			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>39E83342-8818-474A-9AC2-27D0A97843EF</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>autopaste</key>
-				<false/>
-				<key>clipboardtext</key>
-				<string>{query}</string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>transient</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>0B6B06C2-6914-4603-B703-5F8DA27FD029</string>
+			<string>2A4E4AA6-EBA8-4645-ADEC-62CA21AC7D9C</string>
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
@@ -9023,63 +9103,14 @@ echo | git pull</string>
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
-				<string>obsidian://advanced-uri?vault={var:vault_name_ENC}&amp;commandid=obsidian42-brat%253ABRAT-AddBetaPlugin</string>
+				<string></string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.openurl</string>
 			<key>uid</key>
-			<string>4EA9A40E-C1AF-4EB5-B118-A36B1F0CE6F7</string>
+			<string>5E1194F1-12BA-456E-8511-C5708AE07906</string>
 			<key>version</key>
 			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>alfredfiltersresults</key>
-				<true/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>2</integer>
-				<key>argumenttreatemptyqueryasnil</key>
-				<true/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>keyword</key>
-				<string>obeta</string>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
-				<key>runningsubtext</key>
-				<string></string>
-				<key>script</key>
-				<string></string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string>scripts/open-beta-repo.js</string>
-				<key>subtext</key>
-				<string></string>
-				<key>title</key>
-				<string>♋️ Open GitHub Repository of Beta Plugin</string>
-				<key>type</key>
-				<integer>8</integer>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>2A4E4AA6-EBA8-4645-ADEC-62CA21AC7D9C</string>
-			<key>version</key>
-			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -9093,12 +9124,12 @@ echo | git pull</string>
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
-				<string></string>
+				<string>obsidian://advanced-uri?vault={var:vault_name_ENC}&amp;commandid=obsidian42-brat%253ABRAT-AddBetaPlugin</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.openurl</string>
 			<key>uid</key>
-			<string>5E1194F1-12BA-456E-8511-C5708AE07906</string>
+			<string>4EA9A40E-C1AF-4EB5-B118-A36B1F0CE6F7</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -9584,7 +9615,7 @@ An Alfred Workflow with dozens of features for controlling Obsidian.
 			<key>xpos</key>
 			<real>180</real>
 			<key>ypos</key>
-			<real>6995</real>
+			<real>7085</real>
 		</dict>
 		<key>0BBE0C0E-D057-4A44-B000-02727F0AEDE5</key>
 		<dict>
@@ -9664,6 +9695,17 @@ An Alfred Workflow with dozens of features for controlling Obsidian.
 			<key>ypos</key>
 			<real>5975</real>
 		</dict>
+		<key>11CD2255-4E07-4648-8E5C-A59346A63EC0</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>note</key>
+			<string>enable/disable plugin</string>
+			<key>xpos</key>
+			<real>245</real>
+			<key>ypos</key>
+			<real>6920</real>
+		</dict>
 		<key>152229B2-B1D8-44E8-9EF7-98B39FE56FD4</key>
 		<dict>
 			<key>colorindex</key>
@@ -9671,7 +9713,7 @@ An Alfred Workflow with dozens of features for controlling Obsidian.
 			<key>xpos</key>
 			<real>635</real>
 			<key>ypos</key>
-			<real>6920</real>
+			<real>7100</real>
 		</dict>
 		<key>156DEEC1-0E00-49BA-A920-228BB3A7FBFC</key>
 		<dict>
@@ -9832,7 +9874,7 @@ An Alfred Workflow with dozens of features for controlling Obsidian.
 			<key>xpos</key>
 			<real>950</real>
 			<key>ypos</key>
-			<real>7035</real>
+			<real>7215</real>
 		</dict>
 		<key>2A4E4AA6-EBA8-4645-ADEC-62CA21AC7D9C</key>
 		<dict>
@@ -9843,7 +9885,7 @@ An Alfred Workflow with dozens of features for controlling Obsidian.
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>7155</real>
+			<real>7215</real>
 		</dict>
 		<key>2B47640E-17AF-4D14-8F85-245407544D8E</key>
 		<dict>
@@ -9881,7 +9923,7 @@ An Alfred Workflow with dozens of features for controlling Obsidian.
 			<key>xpos</key>
 			<real>785</real>
 			<key>ypos</key>
-			<real>7035</real>
+			<real>7215</real>
 		</dict>
 		<key>2EA7E709-7E6B-43B3-8B44-080685EFA44A</key>
 		<dict>
@@ -10033,7 +10075,7 @@ An Alfred Workflow with dozens of features for controlling Obsidian.
 			<key>xpos</key>
 			<real>320</real>
 			<key>ypos</key>
-			<real>6995</real>
+			<real>7085</real>
 		</dict>
 		<key>3CC54A98-B297-4BE8-8F53-22C52A7247B6</key>
 		<dict>
@@ -10300,7 +10342,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>xpos</key>
 			<real>635</real>
 			<key>ypos</key>
-			<real>7035</real>
+			<real>7215</real>
 		</dict>
 		<key>503B3F91-98A0-4357-92F2-A88BD6EDB404</key>
 		<dict>
@@ -10439,7 +10481,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>xpos</key>
 			<real>785</real>
 			<key>ypos</key>
-			<real>6915</real>
+			<real>7095</real>
 		</dict>
 		<key>5BB5222F-DF30-4BC4-9A10-9CC6B1EFA4E4</key>
 		<dict>
@@ -10466,7 +10508,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>xpos</key>
 			<real>180</real>
 			<key>ypos</key>
-			<real>7155</real>
+			<real>7215</real>
 		</dict>
 		<key>5E2BFA74-9185-4C41-82B0-274EB3C261BD</key>
 		<dict>
@@ -10694,7 +10736,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>note</key>
-			<string>search settings</string>
+			<string>search settings and installed plugins</string>
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
@@ -10902,7 +10944,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>xpos</key>
 			<real>950</real>
 			<key>ypos</key>
-			<real>6915</real>
+			<real>7095</real>
 		</dict>
 		<key>860C2D5F-C032-49DF-812C-2973A0E3F3E8</key>
 		<dict>
@@ -11037,7 +11079,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>xpos</key>
 			<real>470</real>
 			<key>ypos</key>
-			<real>7035</real>
+			<real>7215</real>
 		</dict>
 		<key>8F317FDD-5FC0-4097-BC7B-914DB2BDDDA8</key>
 		<dict>
@@ -11414,7 +11456,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>xpos</key>
 			<real>470</real>
 			<key>ypos</key>
-			<real>6920</real>
+			<real>7100</real>
 		</dict>
 		<key>BF2C7CBD-67E0-45CC-8948-E68291FF2B50</key>
 		<dict>
