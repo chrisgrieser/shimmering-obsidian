@@ -9411,7 +9411,7 @@ echo | git pull</string>
 			<key>config</key>
 			<dict>
 				<key>openwith</key>
-				<string>/System/Library/CoreServices/Finder.app</string>
+				<string></string>
 				<key>sourcefile</key>
 				<string></string>
 			</dict>
