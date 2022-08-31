@@ -22,12 +22,7 @@
    {
       "title": "About",
       "id": "about",
-      "match": "about version update help license insider"
-   },
-   {
-      "title": "Account",
-      "id": "account",
-      "match": "account sync publish mail login password email"
+      "match": "about version update help license insider account"
    },
    {
       "title": "Core Plugins",
