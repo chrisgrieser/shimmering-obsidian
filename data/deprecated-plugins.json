@@ -9,7 +9,9 @@
 		"obsidian-system-dark-mode",
 		"open-note-to-window-title",
 		"image-window",
-		"obsidian-budget-wysiwyg"
+		"obsidian-budget-wysiwyg",
+		"obsidian-tabs",
+		"sliding-panes-obsidian"
 	],
 	"dysfunct": [
 		"obsidian-vale",
