@@ -11,10 +11,12 @@
 		"image-window",
 		"obsidian-budget-wysiwyg",
 		"obsidian-tabs",
+		"obsidian-embedded-note-titles",
 		"sliding-panes-obsidian"
 	],
 	"dysfunct": [
 		"obsidian-vale",
+		"obsidian-cursor-location-plugin",
 		"improved-obsidian-vimcursor"
 	],
 	"deprecated": [
