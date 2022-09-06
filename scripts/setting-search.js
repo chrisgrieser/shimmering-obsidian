@@ -143,7 +143,7 @@ installedPlugins.forEach(pluginFolder => {
 			},
 			"shift": {
 				"arg": toggleURI,
-				"valid": pluginEnabled,
+				"valid": true,
 				"subtitle": toggleSubtitle,
 			},
 			"ctrl": {
