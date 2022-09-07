@@ -22,16 +22,16 @@ function parentFolder (filePath) {
 		.slice(0, -1)
 		.join("/");
 }
-function alfredMatcher (str) {
-	return str.replace (/[-()_.]/g, " ") + " " + str;
-}
+const alfredMatcher = (str) => str.replace (/[-()_.]/g, " ") + " " + str;
+const fileExists = (filePath) => Application("Finder").exists(Path(filePath));
 
 // Import Data
 const vaultPath = $.getenv("vault_path").replace(/^~/, app.pathTo("home folder"));
 const metadataJSON = vaultPath + "/.obsidian/plugins/metadata-extractor/metadata.json";
 const starredJSON = vaultPath + "/.obsidian/starred.json";
-const recentJSON = vaultPath + "/.obsidian/workspace";
 const excludeFilterJSON = vaultPath + "/.obsidian/app.json";
+let recentJSON = vaultPath + "/.obsidian/workspace";
+if (!fileExists(recentJSON)) recentJSON += ".json"; // Obsidian 0.16 uses workspace.json → https://discord.com/channels/686053708261228577/716028884885307432/1013906018578743478
 const jsonArray = [];
 
 // Supercharged Icons File
