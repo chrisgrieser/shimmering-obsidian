@@ -59,4 +59,4 @@ Do want to navigate your vault from within the Terminal? [Have a look.](https://
 ![Vault Navigation in the Terminal](images/terminal-vault-navigation.png)
 
 (Thanks to `@jack of some trades`.)
-[plugin-docs-search-demo.gif]: 
+[plugin-docs-search-demo.gif]:

@@ -1,3 +1,9 @@
+- 2022-09-08	release 2.27.0
+- 2022-09-07	fix for Obsidian 0.16
+- 2022-08-28	plugins can be enabled/disabled, thx @Vinzent03
+- 2022-08-18	refactored backup shell script
+- 2022-08-02	option to append supercharged icons
+- 2022-08-01	'odp': search obsidian plugin docs
 - 2022-07-24	release 2.26.9
 - 2022-07-24	fix reading of current path
 - 2022-07-15	rm user configration since conflict with env vars
