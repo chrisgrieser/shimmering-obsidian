@@ -2,9 +2,7 @@
 
 # ALFRED WORKFLOW RELEASE
 # -----------------------
-
 # Requirements
-# - markdownlint
 # - eslint
 
 # -----------------------
@@ -33,8 +31,6 @@ plutil -replace version -string "$nextVersion" info.plist
 cd "$(dirname "$0")" || exit 1
 # TODO: lint some older files
 eslint . --fix
-markdownlint --fix ./README.md
-markdownlint --fix ./docs/*.md
 
 echo ""
 
