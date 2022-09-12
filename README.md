@@ -60,7 +60,7 @@
 ### Utility Features
 - Backup your Vault
 - Access various folders like `.obsidian` or `.trash`
-- Update Plugins (including BETA Plugins)
+- Update Plugins (including Beta Plugins installed via BRAT)
 
 ➡️ [Documentation of all Utility Features](docs/Utility%20Features.md)
 
