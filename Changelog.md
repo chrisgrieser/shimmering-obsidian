@@ -1,3 +1,5 @@
+- 2022-09-12	release 2.27.1
+- 2022-09-12	fix other searches for Obsidian 0.16
 - 2022-09-08	release 2.27.0
 - 2022-09-07	fix for Obsidian 0.16
 - 2022-08-28	plugins can be enabled/disabled, thx @Vinzent03
