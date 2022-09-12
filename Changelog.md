@@ -1,3 +1,4 @@
+- 2022-09-12	release 2.27.3
 - 2022-09-12	release 2.27.2
 - 2022-09-12	update docs search
 - 2022-09-12	remove markdownlint from release script
