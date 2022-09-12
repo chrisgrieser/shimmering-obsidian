@@ -88,19 +88,20 @@
 ---
 
 ### Settings & Local Plugin Search
-- Search & quickly open specific Settings Tabs, the Theme Browser, or the Community Browser.
-- Quickly update all plugins.
-- Open Plugin Settings.
+- Search & quickly open specific Settings Tabs, the Theme Browser, or the Community Browser
+- Quickly update all plugins
+- Open Plugin Settings
 - Open local plugin folders in `.obsidian/plugins/`
+- Enable/Disable plugin
 
 ➡️ [Documentation of the Settings Search](docs/Settings%20and%20Local%20Plugin%20Search.md)
 
 ---
 
 ### Documentation Search
-- Search the Official Obsidian Documentation
-- Simultaneously search the Obsidian Hub
-- Search the Forum
+- Search the [Official Obsidian Documentation](https://help.obsidian.md/Obsidian/Index)
+- Simultaneously search the [Obsidian Hub](https://publish.obsidian.md/hub/00+-+Start+here)
+- Search the [Obsidian Forum](https://forum.obsidian.md/)
 - Browse Forum Categories
 
 ➡️ [Documentation of the Documentation & Forum Search](docs/Documentation%20and%20Forum%20Search.md)
@@ -132,6 +133,7 @@
 - `git pull` a local plugin repository via the Plugin Search
 - Open the Vault's root in the default Terminal or in Finder
 - Add & Update Beta Plugins via [BRAT](https://github.com/TfTHacker/obsidian42-brat)
+- 🆕 Search the [inofficial plugin docs](https://marcus.se.net/obsidian-plugin-docs/)
 
 ➡️ [Documentation of Features for Developers](docs/Features%20for%20Developers.md)
 
