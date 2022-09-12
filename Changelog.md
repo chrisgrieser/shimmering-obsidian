@@ -1,3 +1,6 @@
+- 2022-09-12	release 2.27.2
+- 2022-09-12	update docs search
+- 2022-09-12	remove markdownlint from release script
 - 2022-09-12	release 2.27.1
 - 2022-09-12	fix other searches for Obsidian 0.16
 - 2022-09-08	release 2.27.0
