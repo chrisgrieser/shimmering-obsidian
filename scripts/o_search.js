@@ -25,6 +25,8 @@ function parentFolder (filePath) {
 const alfredMatcher = (str) => str.replace (/[-()_.]/g, " ") + " " + str;
 const fileExists = (filePath) => Application("Finder").exists(Path(filePath));
 
+//------------------------------------------------------------------------------
+
 // Import Data
 const vaultPath = $.getenv("vault_path").replace(/^~/, app.pathTo("home folder"));
 const metadataJSON = vaultPath + "/.obsidian/plugins/metadata-extractor/metadata.json";
