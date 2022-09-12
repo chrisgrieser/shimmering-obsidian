@@ -41,7 +41,7 @@
 
 ### Note-related Features
 - Create new Notes (based on Template or via QuickAdd)
-- Daily Notes
+- Daily Notes (deprecated)
 - Quickly append to a scratchpad note
 
 ➡️ [Documentation of Note-related Features](docs/Note-related%20Features.md)
@@ -92,7 +92,7 @@
 - Quickly update all plugins
 - Open Plugin Settings
 - Open local plugin folders in `.obsidian/plugins/`
-- Enable/Disable plugin
+- Enable/Disable plugins
 
 ➡️ [Documentation of the Settings Search](docs/Settings%20and%20Local%20Plugin%20Search.md)
 
