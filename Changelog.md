@@ -1,3 +1,7 @@
+- 2022-09-13	release 2.27.7
+- 2022-09-13	last version for Alfred 4
+- 2022-09-13	update release automation for Alfred 5
+- 2022-09-13	different icon
 - 2022-09-13	release 2.27.6
 - 2022-09-13	Merge pull request #95 from mazurov/patch-1
 - 2022-09-13	Fix bug for the Obsidian < 0.16
