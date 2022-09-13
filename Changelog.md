@@ -1,3 +1,6 @@
+- 2022-09-13	release 2.27.5
+- 2022-09-13	Merge pull request #95 from mazurov/patch-1
+- 2022-09-13	Fix bug for the Obsidian < 0.16
 - 2022-09-12	release 2.27.4
 - 2022-09-12	release 2.27.3
 - 2022-09-12	release 2.27.2
