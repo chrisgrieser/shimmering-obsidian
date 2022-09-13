@@ -14,7 +14,7 @@ function insert1000sep (num) {
 	let numText = String(num);
 	if (num >= 10000) {numText =
 		numText.slice(0, -3) +
-		$.getenv("thousand_separator") +
+		"." +
 		numText.slice (-3);}
 	return numText;
 }
@@ -116,7 +116,6 @@ pluginJSON.forEach(plugin => {
 				"arg": shareURL,
 				"subtitle": "⌥: Copy Link" + isDiscordReady
 			},
-			"fn": { "arg": githubURL },
 			"shift": { "arg": `${repo};${id};${name}` },
 			"ctrl": {
 				"arg": id,
@@ -138,7 +137,6 @@ themeJSON.forEach(theme => {
 	const githubURL = "https://github.com/" + repo;
 	const rawGitHub = "https://raw.githubusercontent.com/" + repo + "/" + branch + "/";
 	const screenshotURL = rawGitHub + theme.screenshot;
-	const cssURL = rawGitHub + "obsidian.css";
 
 	let isDiscordReady, shareURL;
 	if (discordReadyLinks) {
@@ -169,7 +167,6 @@ themeJSON.forEach(theme => {
 		"mods": {
 			"shift": { "arg": repo },
 			"cmd":{ "arg": githubURL },
-			"fn": { "arg": cssURL },
 			"alt": {
 				"arg": shareURL,
 				"subtitle": "⌥: Copy GitHub Link" + isDiscordReady

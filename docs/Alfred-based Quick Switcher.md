@@ -1,29 +1,30 @@
 # Alfred-based Quick Switcher
+
 The Alfred-based Quick Switcher is basically an enhanced version of [Obsidian's Quick Switcher Core Plugin](https://help.obsidian.md/Plugins/Quick+switcher).
 
-## Table of Contents
-<!-- MarkdownTOC -->
-
-- [How the Search works](#how-the-search-works)
-- [Main Search](#main-search)
-	- [Search for Notes](#search-for-notes)
-	- [Smart Queries](#smart-queries)
-	- [Search for Aliases](#search-for-aliases)
-	- [Search for Folders](#search-for-folders)
-	- [Search for Headings](#search-for-headings)
-- [Browse Links of a Note](#browse-links-of-a-note)
-- [Search Notes via their Tags](#search-notes-via-their-tags)
-- [Search Starred Files](#search-starred-files)
-- [Search Recent Files](#search-recent-files)
-- [Supercharged Icon](#supercharged-icon)
-- [Vault Search as Alfred Fallback](#vault-search-as-alfred-fallback)
-- [Previewing Notes via Quicklook](#previewing-notes-via-quicklook)
-	- [Hotkey Setting](#hotkey-setting)
-	- [QLMarkdown or Peek](#qlmarkdown-or-peek)
-
-<!-- /MarkdownTOC -->
-
 <img src="https://user-images.githubusercontent.com/73286100/139678407-9ac39baa-5f49-42a0-9622-0fbaf68540b2.gif" alt="promo video" width=70%>
+
+## Table of Contents
+<!--toc:start-->
+- [Alfred-based Quick Switcher](#alfred-based-quick-switcher)
+  - [Table of Contents](#table-of-contents)
+  - [How the Search works](#how-the-search-works)
+  - [Main Search](#main-search)
+    - [Search for Notes](#search-for-notes)
+    - [Smart Queries](#smart-queries)
+    - [Search for Aliases](#search-for-aliases)
+    - [Search for Folders](#search-for-folders)
+    - [Search for Headings](#search-for-headings)
+  - [Browse Links of a Note](#browse-links-of-a-note)
+  - [Search Notes via their Tags](#search-notes-via-their-tags)
+  - [Search Starred Files](#search-starred-files)
+  - [Search Recent Files](#search-recent-files)
+  - [Supercharged Icon](#supercharged-icon)
+  - [Vault Search as Alfred Fallback](#vault-search-as-alfred-fallback)
+  - [Previewing Notes via Quicklook](#previewing-notes-via-quicklook)
+    - [Hotkey Setting](#hotkey-setting)
+    - [QLMarkdown or Peek](#qlmarkdown-or-peek)
+<!--toc:end-->
 
 ## How the Search works
 All the search features listed here do not *directly* search your vault, but rather use the metadata created by the [Metadata Extractor Plugin](https://obsidian.md/plugins?id=metadata-extractor) on a regular bases. By default, this happens every 30 minutes, meaning recently created notes, recently renamed notes, or recent tag changes are not picked up at once. You can change the meta data refresh rate via the Metadata Extractor Plugin's settings or refresh them manually via `oupdate → Manually Refresh Metadata`.
@@ -37,13 +38,11 @@ This works similar to Obsidian's built-in “QuickSwitch” feature, but can be 
 - `⌘ + ↵`: Open the file in a new pane.
 - `⌥ + ↵`: Reveal the file in Finder.
 - `fn + ↵`: Append the content to the selected note.
-	- Appended content depends on the [workflow configuration](Workflow%20Configuration.md#Alfred-based-Quick-Switcher) `input_append`. Set to `clipboard` will add the clipboard content, while setting it ti `manual` will prompt you for text to append.
-	- When the [workflow configuration](Workflow%20Configuration.md#Alfred-based-Quick-Switcher) `open_after_appending` is set to `true`, will open the note afterwards.
-	- The text set in the [workflow configuration](Workflow%20Configuration.md#Alfred-based-Quick-Switcher) `append_prefix` will be inserted in front of the input text. (💡 Using `- [ ]` enables you to add cards to a Kanban Note.)
 - `⌃ + ↵`: Copy the [Obsidian-URI to the selected file](https://help.obsidian.md/Advanced+topics/Using+obsidian+URI#Action+`hook-get-address`).
 - `⇧ + ↵`: Browse a list of all links of the selected note (outgoing links, backlinks, external links.) See at the [section "Browse Links" below](#browse-links-of-a-note) for further information.
 - Press `⇧` or `⌘ y` to preview the selected note via macOS' Quick Look feature. Press `⇧` or `⌘ y` again to close the preview. This feature requires [QLMarkdown or Peek](#qlmarkdown-or-peek) being installed.
-- 🆕 The `o`-search will respect the `Excluded Files` setting from Obsidian and ignore files and folders added there.
+- 💡 The `o`-search will respect the `Excluded Files` setting from Obsidian and ignore files and folders added there. (Regex-Filters do not work properly though.)
+- ℹ️ There are various settings for appending and opening notes which can be found in the workflow configuration.
 
 ### Smart Queries
 - Add `filename` or `title` to your search query, to display only files and no aliases, folders, or headings. For example, `o obsidian filename` will display only notes that have the `obsidian` in their filename.
@@ -67,7 +66,7 @@ Displayed alongside the other search results are all headings in your vault. Sel
 - `⌃ + ↵`: Will copy the [Obsidian-URI to the selected file](https://help.obsidian.md/Advanced+topics/Using+obsidian+URI#Action+%60hook-get-address%60).
 - Add `heading` to your search query, to only display headings, e.g., `o foobar heading` will only display *headings* that include `foobar`.
 - Add `h1`, `h2`, … to your search query, to only display headings of a certain level, e.g., `o obsidian h2` will only display *level 2 headings* that include `obsidian`.
-- Use the [workflow configuration](Workflow%20Configuration.md#Alfred-based-Quick-Switcher)`h_Ivl_ignore` to completely ignore certain heading levels.
+- You can ignore certain (or all) heading levels with the respective workflow configuration.
 - 💡 **Recommendation**: Add more heading levels to `h_lvl_ignore` if your search results become too crowded.
 
 ## Browse Links of a Note
@@ -89,7 +88,7 @@ Displayed alongside the other search results are all headings in your vault. Sel
 	- Select a tag with `↵` to display & search all notes with that tag.
 	- In the subsequent list of your notes, all the modifiers (`⌘/⌃/⌥/fn/⇧ + ↵`) apply the same way as they do with the `o` search.
 	- Press `⌘ + ↵` instead to open Obsidian's search pane and search for the tag there.
-- If [workflow configuration](Workflow%20Configuration.md#Alfred-based-Quick-Switcher) `merge_nested_tags` is set to `true`, all nested tags are subsumed under their parent tag, e.g., `#inbox/toread` will be displayed under the `#inbox` tag. When set to `false`, all nested tags are displayed separately.
+-  Use the workflow configuration to set whether nested tags should be merged with their parent or not.
 
 ## Search Starred Files
 **`os`: Search `s`tarred Files and Searches**
@@ -102,9 +101,9 @@ Displayed alongside the other search results are all headings in your vault. Sel
 - Displays recent files that can be actioned on exactly the same way as the search with `o`, i.e., all the modifiers (`⌘/⌃/⌥/fn/⇧ + ↵`) apply the same way.
 - Up to the 10 most recent files are displayed.
 
-## Supercharged Icon
-You can prepend icons to the results of any search based on the notes' tags, similar to the [Supercharged Links Plugin](https://obsidian.md/plugins?id=supercharged-links-obsidian).
-- To do so, you have to add the *absolute* path of a file containing your emojis to the workflow configuration `supercharged_icon_file`.
+## Supercharged Icons
+You can prepend/append icons to the results of any search based on the notes' tags, similar to the [Supercharged Links Plugin](https://obsidian.md/plugins?id=supercharged-links-obsidian).
+- To do so, you have to add a file containing your emojis to the workflow configuration `Supercharged Icons`.
 - Every line of the file should represent a pair of tag and emoji to be assigned, separated by `,`. Use `,,` so that the emoji gets appended instead of prepended.
 - Example:
 
@@ -124,8 +123,6 @@ You can prepend icons to the results of any search based on the notes' tags, sim
 	Filename4 🌱
 	```
 
-- Leave the field `supercharged_icon_file` to not use any icons.
-
 ## Vault Search as Alfred Fallback
 The main search (`o`) can also be used as [Fallback Search for Alfred](https://www.alfredapp.com/help/features/default-results/fallback-searches/), basically a search that shows up when any Alfred search has no result.
 
@@ -134,13 +131,12 @@ The main search (`o`) can also be used as [Fallback Search for Alfred](https://w
 ## Previewing Notes via Quicklook
 
 ### Hotkey Setting
-
 - To avoid accidentally triggering the Quick Look feature, I suggest you turn off activating Quick Look via shift and use `⌘ + Y` instead. You can do so with in the Alfred Settings under `Features → Previews`:
 
 <img src="https://i.imgur.com/hDut8wK.png" alt="" width=60%>
 
 ### QLMarkdown or Peek
-[QLmarkdown](https://github.com/sbarex/QLMarkdown) and [Peek](https://apps.apple.com/app/peek-quick-look-extension/id1554235898) both enable previewing of Markdown documents. Peek works with a wide range of other file types than Markdown, but costs around 5€. QLMarkdown is free, but only works for Markdown and requires some minor small setup.
+[QLmarkdown](https://github.com/sbarex/QLMarkdown) and [Peek](https://apps.apple.com/app/peek-quick-look-extension/id1554235898) both enable previewing of Markdown documents. Peek works with a wide range of other file types than Markdown, but costs around 5€. QLMarkdown is free, but only works for Markdown and requires some minor setup.
 
 <details>
 

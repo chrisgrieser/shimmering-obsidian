@@ -5,7 +5,6 @@
 - [Plugin Development Documentation Search](#plugin-development-documentation-search)
 - [Plugin Search](#plugin-search)
 - [Open various folders related to development](#open-various-folders-related-to-development)
-- [Local plugins](#local-plugins)
 - [Vault-related features](#vault-related-features)
 - [Beta Plugins](#beta-plugins)
 - [Obsidian Version Information](#obsidian-version-information)
@@ -14,7 +13,8 @@
 <!-- /MarkdownTOC -->
 
 ## Plugin Development Documentation Search
-Searches the *unofficial* [plugin development documentation by Marcus Olsson](https://marcus.se.net/obsidian-plugin-docs/).
+**`opd`: `O`bsidian `P`lugin `D`evelopment Search**
+Searches the unofficial [plugin development documentation by Marcus Olsson](https://marcus.se.net/obsidian-plugin-docs/).
 
 ![](images/plugin-docs-search-demo.gif)
 
@@ -30,11 +30,6 @@ Searches the *unofficial* [plugin development documentation by Marcus Olsson](ht
 - Refer to the section on [Quick Access to hidden folders](Utility%20Features.md#Open-Various-Folders) for further information.
 - To quickly open local plugin folders in `.obsidian/plugins/`, use to the [Settings & Local Plugin Search](Settings%20and%20Local%20Plugin%20Search.md).
 
-## Local plugins
-Refer to the section on [Settings & Local Plugin Search](Settings%20and%20Local%20Plugin%20Search.md) for further information on how to:
-- Open local Folders in Finder or the Terminal.
-- Run `git pull` in a local repository.
-
 ## Vault-related features
 ➡️ Refer to the documentation of the [Vault Switcher](Vault%20Switcher.md) for information on how to switch vaults quickly and open the the vault root in Finder or the Terminal.
 
@@ -45,7 +40,7 @@ Refer to the section on [Settings & Local Plugin Search](Settings%20and%20Local%
 	- Press `⌥ + ↵` to copy the GitHub repository URL to your clipboard. When Discord is the frontmost app, the copied link will be surrounded with `<` `>` for more convenient pasting in the Discord Desktop app (disables auto-preview).
 - Update all beta plugins.
 - All commands require the [BRAT Plugin](https://github.com/TfTHacker/obsidian42-brat).
-- Install a new theme.
+- Install a new BETA theme.
 
 ## Obsidian Version Information
 **Snippet Trigger: `!oversion`**
@@ -54,7 +49,7 @@ Type `!oversion` in any text field, and Alfred will output your current Mac and 
 ---
 
 ## Browse Obsidian via Terminal
-Do want to navigate your vault from within the Terminal? [Have a look.](https://gist.github.com/chrisgrieser/4e4d21d701f70b0eef5e25496583e38e)
+Do want to navigate your vault from within the Terminal? [Have a look here.](https://gist.github.com/chrisgrieser/4e4d21d701f70b0eef5e25496583e38e)
 
 ![Vault Navigation in the Terminal](images/terminal-vault-navigation.png)
 

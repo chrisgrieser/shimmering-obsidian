@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>append_prefix</key>
+	<string>- </string>
+	<key>backup_destination</key>
+	<string>~/Library/Mobile Documents/com~apple~CloudDocs/Dotfolder/Backups/Obsidian Backups</string>
+	<key>input_append</key>
+	<string>clipboard</string>
+	<key>merge_nested_tags</key>
+	<true/>
+	<key>new_note_location</key>
+	<string>Knowledge Base</string>
+	<key>ocr_languages</key>
+	<string>eng+deu</string>
+	<key>open_after_appending</key>
+	<false/>
+	<key>scratchpad_note_path</key>
+	<string>Writing/Acceleration of Research/Acco Kanban.md#Scratchpad</string>
+	<key>supercharged_icon_file</key>
+	<string>~/Main Vault/Meta/supercharged-icons.md</string>
+	<key>template_note_path</key>
+	<string>/Meta/Tempalter/T Basic.md</string>
+	<key>workspace_1</key>
+	<string>Default</string>
+	<key>workspace_2</key>
+	<string>Writing</string>
+	<key>workspace_to_spellcheck</key>
+	<string>Writing</string>
+</dict>
+</plist>

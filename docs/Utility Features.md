@@ -25,7 +25,7 @@ end tell
 
 ---
 
-⚠️ Please be aware that this is a very simplistic backup solution. While I personally did not have any problems with the backups, this workflow comes without any warranties in case of corrupted backups, as stated in [the license](https://github.com/chrisgrieser/shimmering-obsidian/blob/main/LICENSE). If you want 100% safety, please use professional backup solutions.
+⚠️ Please be aware that this is a very simplistic backup solution. While I personally did not have any problems with the backups, this workflow comes without any warranties in case of corrupted/broken backups, as stated in [the license](https://github.com/chrisgrieser/shimmering-obsidian/blob/main/LICENSE). If you want 100% safety, please use professional backup solutions.
 
 ---
 
@@ -40,7 +40,6 @@ end tell
 
 ## Update Plugins & Metadata
 **`oupdate`: Update Plugins and Metadata used by this workflow**
-- Update your Community Plugins
-- Update your Beta Plugins (installed via [the BRAT Plugin](https://github.com/TfTHacker/obsidian42-brat))
-- Re-index the data for the [Documentation Search](Documentation%20and%20Forum%20Search.md).
-- Refresh the metadata used for this workflow manually or set an interval to refresh it automatically. See the section on [workflow configuration for more information](Workflow%20Configuration.md#Metadata-Extractor-Configuration)
+- Update your Community Plugins (and Beta plugins installed via [the BRAT Plugin](https://github.com/TfTHacker/obsidian42-brat)).
+- Re-index the data for the [Documentation Search](Documentation%20and%20Forum%20Search.md). 
+- Refresh the metadata used for this workflow manually.

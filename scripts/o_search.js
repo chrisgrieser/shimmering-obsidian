@@ -81,7 +81,6 @@ console.log("excluded files: " + excludeFilter);
 let folderArray = app.doShellScript(`find "${pathToCheck}" -type d -mindepth 1 -not -path "*/.*"`)
 	.split("\r"); // returns *absolute* paths
 if (!folderArray) folderArray = [];
-
 if (excludeFilter?.length && folderArray?.length) {
 	folderArray = folderArray.filter (folder => {
 		let include = true;
@@ -121,8 +120,7 @@ if (excludeFilter?.length) {
 		return include;
 	});
 }
-if (pathToCheck !== vaultPath)
-	fileArray = fileArray.filter (f => f.relativePath.startsWith(currentFolder));
+if (pathToCheck !== vaultPath) fileArray = fileArray.filter (f => f.relativePath.startsWith(currentFolder));
 
 // parse ignored headings setting
 const hLVLignore = $.getenv("h_lvl_ignore");
