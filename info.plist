@@ -11284,7 +11284,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 				<string></string>
 			</dict>
 			<key>description</key>
-			<string>Open Note after screenshot or OCR screenshot. (💡 Disable this to take OCR screenshots in quick succession without opening Obsidian.)</string>
+			<string>Open Note after screenshot or OCR screenshot. (Disable this to be able to take OCR screenshots in quick succession without opening Obsidian.)</string>
 			<key>label</key>
 			<string>Open Note after (OCR-)Screenshot</string>
 			<key>type</key>
