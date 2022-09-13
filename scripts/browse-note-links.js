@@ -44,7 +44,7 @@ function run () {
 	const metadataJSON = vaultPath + "/.obsidian/plugins/metadata-extractor/metadata.json";
 	const starredJSON = vaultPath + "/.obsidian/starred.json";
 	let recentJSON = vaultPath + "/.obsidian/workspace.json";
-	if (!fileExists(recentJSON)) recentJSON = recentJSON.slice(-5); // Obsidian 0.16 uses workspace.json → https://discord.com/channels/686053708261228577/716028884885307432/1013906018578743478
+	if (!fileExists(recentJSON)) recentJSON = recentJSON.slice(0, -5); // Obsidian 0.16 uses workspace.json → https://discord.com/channels/686053708261228577/716028884885307432/1013906018578743478
 	const jsonArray = [];
 
 	// Supercharged Icons File
