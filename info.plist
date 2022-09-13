@@ -11487,7 +11487,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 		<string>vault_path</string>
 	</array>
 	<key>version</key>
-	<string>2.27.7</string>
+	<string>3.0.0</string>
 	<key>webaddress</key>
 	<string>https://chris-grieser.de/</string>
 </dict>

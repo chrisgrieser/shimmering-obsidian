@@ -1,3 +1,5 @@
+- 2022-09-13	release 3.0.0
+- 2022-09-13	migrate to Alfred 5 settings
 - 2022-09-13	release 2.27.7
 - 2022-09-13	last version for Alfred 4
 - 2022-09-13	update release automation for Alfred 5
