@@ -8706,7 +8706,7 @@ echo | git pull</string>
 An Alfred Workflow with dozens of features for controlling Obsidian.
 
 ## ⚠️ First Upgrade to Version 3 ⚠️
-Version 3 of this workflow uses the new Alfred 5 User Configuration. If you first update to version 3+ from an older version, you have to **DISABLE the checkbox "Migrate my workflow customizations"** and configure your workflow again to the left again. This is due to Alfred 5 using a different form of configuration in the background.
+Version 3 of this workflow uses the new Alfred 5 User Configuration. If you first update to version 3+ from an older version, you have to **DISABLE the checkbox "Migrate my workflow customizations"** and configure your workflow again with the settings to the left. This is due to Alfred 5 using a different form of configuration in the background.
 
 *If you missed to disable the checkbox, you can simply download the latest release from GitHub again install the `.alfredworkflow` and disable the checkbox this time.*
 
