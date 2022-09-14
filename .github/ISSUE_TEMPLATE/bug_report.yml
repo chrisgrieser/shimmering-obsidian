@@ -57,15 +57,6 @@ body:
     validations:
       required: true
   - type: checkboxes
-    id: workspace-data
-    attributes:
-      label: "Workspace Data: Does any of these files exist? `{vault-path}/.obsidian/workspace` or `{vault-path/.obsidian/workspace.json}`"
-      options:
-        - label: The file `workspace` exists
-          required: false
-        - label: "The file `workspace.json` (**not**: `workspaces.json`) exists"
-          required: false
-  - type: checkboxes
     id: checklist
     attributes:
       label: Make sure you have done the following
