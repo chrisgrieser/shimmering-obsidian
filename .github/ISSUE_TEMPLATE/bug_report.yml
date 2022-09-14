@@ -35,10 +35,17 @@ body:
     validations:
       required: true
   - type: textarea
-    id: workflow-configuration
+    id: workflow-configuration-1
     attributes:
-      label: Workflow Configuration
+      label: Workflow Configuration 1
       description: "Attach your workflow configuration file `prefs.plist`. You can find it by right-clicking the workflow in the Alfred settings, and then opening it in Finder."
+    validations:
+      required: true
+  - type: textarea
+    id: workflow-configuration-2
+    attributes:
+      label: Workflow Configuration 2
+      description: "Attach a screenshot of the Alfred environment variables. [You can see the environment variables here.](https://user-images.githubusercontent.com/73286100/190274824-ff8e2653-e359-4640-bf01-981ce9d78a0c.png)"
     validations:
       required: true
   - type: textarea
@@ -58,7 +65,7 @@ body:
           required: true
         - label: I have read the [Troubleshooting Documentation](https://github.com/chrisgrieser/shimmering-obsidian/blob/main/docs/Troubleshooting.md).
           required: true
-        - label: If the `o...` main search does not work, I have tried rerunning `osetup` and it still does not work.
+        - label: If the `o…` main search does not work, I have tried rerunning `osetup` and it still does not work.
           required: true
         - label: If I updated to version 3+ for the first time, I have disabled migrating workflow cutomizations. (If you haven't, you can simply re-download and install the latest release from GitHub and uncheck `Migrate my workflow customizations`.)
           required: true
