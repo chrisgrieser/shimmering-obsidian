@@ -20,9 +20,6 @@ else
 	echo "$nextVersion"
 fi
 
-# Close Alfred Prefs to avoid conflicts
-osascript -e 'tell application "Alfred Preferences" to if it is running then quit'
-
 # insert new version number
 plutil -replace version -string "$nextVersion" info.plist
 
@@ -39,15 +36,14 @@ echo ""
 # bkp info.plist
 cp -v info.plist info-original.plist
 
-# list of all variables to be excluded
-excludedVars=$(plutil -extract variablesdontexport json -o - info.plist | tr -d "[]\"" | tr "," "\n")
+# remove variables flagged as "no export" from info.plist
+if plutil -extract variablesdontexport json -o - info.plist &> /dev/null ; then
+	excludedVars=$(plutil -extract variablesdontexport json -o - info.plist | tr -d "[]\"" | tr "," "\n")
+	echo "$excludedVars" | tr "\n" "\0" | xargs -0 -I {} plutil -replace variables.{} -string "" info.plist
 
-# remove from info.plist
-echo "$excludedVars" | tr "\n" "\0" | xargs -0 -I {} plutil -replace variables.{} -string "" info.plist
-
-# report excluded number
-exclusionNo=$(echo "$excludedVars" | wc -l | tr -d " ")
-echo "Removed $exclusionNo variables flagged as 'no export' removed from 'info.plist'."
+	exclusionNo=$(echo "$excludedVars" | wc -l | tr -d " ")
+	echo "Removed $exclusionNo variables flagged as 'no export' removed from 'info.plist'."
+fi
 
 # -----------------------
 # compile .alfredworkflow
