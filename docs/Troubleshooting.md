@@ -4,6 +4,7 @@
 - Make sure both, the `Metadata Extractor` and the `Advanced URI` plugin, are installed and enabled.
 - Update to the [latest version of the workflow](https://github.com/chrisgrieser/shimmering-obsidian/releases/latest), chances are the problem has already been fixed.
 - If you are using *Shimmering Obsidian* with a second vault, remember that you have to install the required plugins in the new vault as well, and then run `osetup` in the new vault, too.
+- The workflow currently only works if you did not rename your Obsidian configuration folder (i.e., it is still `.obsidian`). See [issue #92](https://github.com/chrisgrieser/shimmering-obsidian/issues/92).
 
 ## Alfred-based Quick Switcher (`o ...` search )
 - If the [Alfred-based Quick Switcher](Alfred-based%20Quick%20Switcher.md) does not work at all, make sure you haven't changed any of the default settings of the [Metadata-Extractor regarding the location & name of the JSON files](Workflow%20Configuration.md#Metadata-Extractor-Configuration). You can also rerun `osetup` to make sure.
