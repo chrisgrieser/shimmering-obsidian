@@ -52,7 +52,7 @@ body:
     id: version-info
     attributes:
       label: Version & System Information
-      description: "Please run the command `oinfo` in Alfred. It will copy various version information into your clipboard. Paste the result here. ([If the command `oinfo` itself also does not work, follow these instructions here.](https://github.com/chrisgrieser/shimmering-obsidian/issues/98#issuecomment-1247370074))"
+      description: "Please run the command `oinfo` in Alfred. It will copy various version information into your clipboard. Paste the result here. (If the command `oinfo` itself also does not work, follow [these instructions here.](https://github.com/chrisgrieser/shimmering-obsidian/issues/98#issuecomment-1247370074))"
       render: Text
     validations:
       required: true
