@@ -1,3 +1,6 @@
+- 2022-09-15	release 3.0.6
+- 2022-09-15	improved debugging information 2
+- 2022-09-15	improved debugging information
 - 2022-09-14	release 3.0.5
 - 2022-09-14	release 3.0.4
 - 2022-09-14	release 3.0.3
