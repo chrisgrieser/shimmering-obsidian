@@ -1,6 +1,9 @@
 # Shimmering Obsidian 🎩
 *An Alfred Workflow with dozens of features for [Obsidian](https://obsidian.md/)*.
 
+> **Note**
+> [Version 2.27](https://github.com/chrisgrieser/shimmering-obsidian/releases/tag/2.27.7) is the last version compatible with Alfred 4. All future versions of this workflow will require Alfred 5.
+
 ![](https://img.shields.io/github/downloads/chrisgrieser/shimmering-obsidian/total?label=Downloads&style=plastic) ![](https://img.shields.io/github/v/release/chrisgrieser/shimmering-obsidian?label=Latest%20Release&style=plastic) [![](https://img.shields.io/badge/changelog-click%20here-FFE800?style=plastic)](Changelog.md)
 
 <img src="https://user-images.githubusercontent.com/73286100/139678407-9ac39baa-5f49-42a0-9622-0fbaf68540b2.gif" alt="Promo Video" width=70%>
