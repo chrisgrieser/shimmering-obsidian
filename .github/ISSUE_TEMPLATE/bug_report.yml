@@ -60,5 +60,5 @@ body:
           required: true
         - label: If the `o...` main search does not work, I have tried rerunning `osetup` and it still does not work.
           required: true
-        - label: If I updated from version 2.27.x to 2.28+, I have properly checked out the new information in the workflow configuration and also tried restarting Alfred.
+        - label: If I updated to version 3+ for the first time, I have disabled migrating workflow cutomizations. (If you haven't, you can simply re-download and install the latest release from GitHub and uncheck `Migrate my workflow customizations`.)
           required: true

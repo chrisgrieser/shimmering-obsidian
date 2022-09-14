@@ -8705,7 +8705,12 @@ echo | git pull</string>
 	<string># Shimmering Obsidian
 An Alfred Workflow with dozens of features for controlling Obsidian.
 
-## ⚠️ First Upgrade to Version 3 ⚠️Version 3 of this workflow uses the new Alfred 5 User Configuration. If you first update to version 3+ from an older version, you have to **DISABLE the checkbox "Migrate my workflow customizations"** and configure your workflow again to the left again. This is due to Alfred 5 using a different form of configuration in the background.*If you missed to disable the checkbox, you can simply download the latest release from GitHub again install the `.alfredworkflow` and disable the checkbox this time.*
+## ⚠️ First Upgrade to Version 3 ⚠️
+Version 3 of this workflow uses the new Alfred 5 User Configuration. If you first update to version 3+ from an older version, you have to **DISABLE the checkbox "Migrate my workflow customizations"** and configure your workflow again to the left again. This is due to Alfred 5 using a different form of configuration in the background.
+
+*If you missed to disable the checkbox, you can simply download the latest release from GitHub again install the `.alfredworkflow` and disable the checkbox this time.*
+
+ℹ️ The Daily Notes Features (`od`) have been removed since I simply do not have the time to maintain them and since there already is [another Alfred workflow which focusses on Daily Notes](https://github.com/hauselin/obsidian-alfred).
 
 ## Info
 - [README](https://github.com/chrisgrieser/shimmering-obsidian/blob/main/README.md)
@@ -8719,7 +8724,6 @@ An Alfred Workflow with dozens of features for controlling Obsidian.
 ## Workflow Configuration
 - Some features require additional configuration to the right. You can get further information on those features at the respective sections of the [documentation](https://github.com/chrisgrieser/shimmering-obsidian/blob/main/README.md).
 - To configure the Hotkeys, double-click [sky-blue fields](https://i.imgur.com/wlpht7f.png) at the top left of the workflow window. 
-- You can change the default terminal used by this workflow [in the Alfred Settings](https://www.alfredapp.com/help/features/terminal/).
 
 ## Created by
 [Chris Grieser](https://chris-grieser.de/)
