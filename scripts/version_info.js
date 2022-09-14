@@ -13,6 +13,9 @@ function run() {
 		return ObjC.unwrap(str);
 	}
 	const onlineJSON = url => JSON.parse(app.doShellScript("curl -sL '" + url + "'"));
+	const fileExists = (filePath) => Application("Finder").exists(Path(filePath));
+
+	//---------------------------------------------------------------------------
 
 	// input parameters
 	const vaultPath = $.getenv("vault_path").replace(/^~/, app.pathTo("home folder"));
@@ -24,7 +27,9 @@ function run() {
 	const appTempPath = app.pathTo("home folder") + "/Library/Application Support/obsidian/";
 	let obsiVer;
 	try {
-		obsiVer = app.doShellScript("cd '" + appTempPath + "'; ls *.asar | grep -Eo '(\\d|\\.)*'").slice (0, -1);
+		obsiVer = app.doShellScript("cd '" + appTempPath + "'; ls *.asar | grep -Eo '(\\d|\\.)*'")
+			.slice (0, -1)
+			.replaceAll("\n", ";"); // multiple .asars for alpha testers
 	} catch {
 		obsiVer = ".asar file missing";
 	}
@@ -43,6 +48,9 @@ function run() {
 	const workflowVerOnline = onlineJSON("https://api.github.com/repos/chrisgrieser/shimmering-obsidian/tags")[0]
 		.name;
 
+	const workspaceData15 = fileExists(vaultPath + "/.obsidian/workspace");
+	const workspaceData16 = fileExists(vaultPath + "/.obsidian/workspace.json");
+
 	const numberOfJSONS = app.doShellScript("ls '" + vaultPath + "/.obsidian/plugins/metadata-extractor/' | grep \".json\" | grep -v \"manifest\" | grep -v \"^data\" | wc -l | tr -d \" \"");
 	const metadataJSON = vaultPath + "/.obsidian/plugins/metadata-extractor/metadata.json";
 	let metadataStrLen = readFile(metadataJSON)?.length;
@@ -51,7 +59,12 @@ function run() {
 	log("-------------------------------");
 	log("Metadata JSONs: " + numberOfJSONS + "/3");
 	if (numberOfJSONS < 3) log("Metadata not found. Please run `osetup` and retry.");
-	log ("Metadata String Length: " + metadataStrLen);
+	log("Metadata String Length: " + metadataStrLen);
+	log("-------------------------------");
+	log("WORKSPACE DATA");
+	if (workspaceData15) log("'workspace' exists");
+	if (workspaceData16) log("'workspace.json' exists");
+	if (! workspaceData15 || workspaceData16) log("none exists");
 	log("-------------------------------");
 	log("INSTALLED VERSION");
 	log("macOS: " + macVer);
