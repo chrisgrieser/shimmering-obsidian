@@ -9987,7 +9987,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>colorindex</key>
 			<integer>11</integer>
 			<key>note</key>
-			<string>remove temporary variables &amp; log verison info for debugging</string>
+			<string>log verison info for debugging</string>
 			<key>xpos</key>
 			<real>1610</real>
 			<key>ypos</key>
