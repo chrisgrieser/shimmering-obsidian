@@ -19,6 +19,7 @@ function run() {
 
 	// input parameters
 	const vaultPath = $.getenv("vault_path").replace(/^~/, app.pathTo("home folder"));
+	const vaultNameEnc = $.getenv("vault_name_ENC");
 	let output = "";
 
 	// either logs to console or returns for clipboard
@@ -64,7 +65,7 @@ function run() {
 	log("WORKSPACE DATA");
 	if (workspaceData15) log("'workspace' exists");
 	if (workspaceData16) log("'workspace.json' exists");
-	if (! workspaceData15 || workspaceData16) log("none exists");
+	if (!workspaceData15 && !workspaceData16) log("none exists");
 	log("-------------------------------");
 	log("INSTALLED VERSION");
 	log("macOS: " + macVer);
@@ -80,6 +81,10 @@ function run() {
 	log("This Workflow: " + workflowVerOnline);
 	log("Advanced URI Plugin: " + advancedUriVerOnline);
 	log("Metadata Extractor: " + metadataExVerOnline);
+	log("-------------------------------");
+	log("INTERNAL WORKFLOW CONFIGURATION");
+	log("Vault Path: " + vaultPath);
+	log("Vault Name (encoded): " + vaultNameEnc);
 	log("-------------------------------");
 
 	// remove config
