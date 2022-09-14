@@ -1,3 +1,4 @@
+- 2022-09-14	release 3.0.2
 - 2022-09-14	release 3.0.1
 - 2022-09-14	add info to _not_ migrate Alfred 4 settings
 - 2022-09-13	added demo of all settings
