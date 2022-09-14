@@ -1,3 +1,6 @@
+- 2022-09-14	release 3.0.1
+- 2022-09-14	add info to _not_ migrate Alfred 4 settings
+- 2022-09-13	added demo of all settings
 - 2022-09-13	release 3.0.0
 - 2022-09-13	migrate to Alfred 5 settings
 - 2022-09-13	release 2.27.7
