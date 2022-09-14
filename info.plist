@@ -8705,7 +8705,7 @@ echo | git pull</string>
 	<string># Shimmering Obsidian
 An Alfred Workflow with dozens of features for controlling Obsidian.
 
-ℹ️ From version 3 forward, this workflow will use Alfred 5's workflow configuration to the left. (When first upgrading to version 3, your workflow configuration might have been reset.)
+## ⚠️ First Upgrade to Version 3 ⚠️Version 3 of this workflow uses the new Alfred 5 User Configuration. If you first update to version 3+ from an older version, you have to **DISABLE the checkbox `Migrate my workflow customizations`** and configure your workflow again to the left again. This is due to Alfred 5 using a different form of configuration in the background.*If you missed to disable the checkbox, you can simply download the latest release from GitHub again install the `.alfredworkflow` and disable the checkbox this time.*
 
 ## Info
 - [README](https://github.com/chrisgrieser/shimmering-obsidian/blob/main/README.md)
