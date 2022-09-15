@@ -116,7 +116,7 @@ installedPlugins.forEach(pluginFolder => {
 	let subtitleIcons = "";
 	if (deprecatedPlugins.includes(pluginID)) {
 		icons += "⚠️ ";
-		subtitleIcons = "deprecated – ";
+		subtitleIcons = "deprecated";
 	}
 	if (name === "Style Settings") icons += " 🎨";
 	const isDeveloped = Application("Finder").exists(Path(pluginFolderPath + "/.git"));
