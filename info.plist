@@ -11102,7 +11102,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 				<key>required</key>
 				<false/>
 				<key>trim</key>
-				<true/>
+				<false/>
 			</dict>
 			<key>description</key>
 			<string>String to insert before content appended to a note via the Alfred-based Quick-Switchers (`fn + ↵`). Does accept dynamic content like the current date or time when you use Alfred's Placeholder Syntax. See: https://www.alfredapp.com/help/workflows/advanced/placeholders/#date-time</string>
