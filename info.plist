@@ -3933,7 +3933,7 @@ return hook;
 				<key>script</key>
 				<string>tell application "Obsidian" to open location "obsidian://advanced-uri?commandid=workspace%253Anew-tab"
 
-delay 0.1 # delay for detault new tab plugin
+delay 0.2 # delay for detault new tab plugin
 
 return "{query}"</string>
 				<key>scriptargtype</key>
