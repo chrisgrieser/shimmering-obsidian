@@ -28,6 +28,8 @@
 	<string>Default</string>
 	<key>workspace_2</key>
 	<string>Writing</string>
+	<key>workspace_3</key>
+	<string>Temp</string>
 	<key>workspace_to_spellcheck</key>
 	<string>Writing</string>
 </dict>
