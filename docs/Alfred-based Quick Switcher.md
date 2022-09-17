@@ -35,7 +35,7 @@ This keyword searches all your notes, aliases, folders, and headings combined.
 
 ### Search for Notes
 This works similar to Obsidian's built-in “QuickSwitch” feature, but can be triggered without Obsidian running (in which case it will open Obsidian with the selected note). Press `↵` to open the selected file in Obsidian.
-- `⌘ + ↵`: Open the file in a new pane.
+- `⌘ + ↵`: Open the file in a new tab (requires Obsidian 0.16).
 - `⌥ + ↵`: Reveal the file in Finder.
 - `fn + ↵`: Append the content to the selected note.
 - `⌃ + ↵`: Copy the [Obsidian-URI to the selected file](https://help.obsidian.md/Advanced+topics/Using+obsidian+URI#Action+`hook-get-address`).
