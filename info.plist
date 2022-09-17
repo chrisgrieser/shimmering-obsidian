@@ -578,6 +578,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>392642B8-A259-495D-A715-AD6FE5DBE992</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>59F6D45C-8613-4D9A-9D10-F66F46506215</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>3CC54A98-B297-4BE8-8F53-22C52A7247B6</key>
 		<array>
 			<dict>
@@ -2901,18 +2914,6 @@
 				<string></string>
 				<key>sourceoutputuid</key>
 				<string>FE2D6144-AE23-4EF8-B290-E03922D68DA1</string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>59F6D45C-8613-4D9A-9D10-F66F46506215</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>sourceoutputuid</key>
-				<string>01F4973B-5C98-4501-8132-CCDC40AE7FE4</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -7260,7 +7261,7 @@ fi</string>
 				<key>fixedorder</key>
 				<false/>
 				<key>items</key>
-				<string>[{"title":"📓 Re-index Documentation Search","arg":"documentations","subtitle":""},{"title":"🔁 Manually Refresh Metadata","arg":"manual_metadata","subtitle":""},{"title":"⚙️ Update all Plugins","subtitle":"and Beta Plugins, if BRAT is installed"}]</string>
+				<string>[{"title":"📓 Re-index Documentation Search","arg":"documentations","subtitle":""},{"title":"🔁 Manually Refresh Metadata","arg":"manual_metadata","subtitle":""}]</string>
 				<key>keyword</key>
 				<string>oupdate</string>
 				<key>matchmode</key>
@@ -7313,20 +7314,6 @@ fi</string>
 						<string>documentations</string>
 						<key>uid</key>
 						<string>FE2D6144-AE23-4EF8-B290-E03922D68DA1</string>
-					</dict>
-					<dict>
-						<key>inputstring</key>
-						<string></string>
-						<key>matchcasesensitive</key>
-						<false/>
-						<key>matchmode</key>
-						<integer>0</integer>
-						<key>matchstring</key>
-						<string>update_plugins</string>
-						<key>outputlabel</key>
-						<string>update_plugins</string>
-						<key>uid</key>
-						<string>01F4973B-5C98-4501-8132-CCDC40AE7FE4</string>
 					</dict>
 				</array>
 				<key>elselabel</key>
@@ -7503,6 +7490,27 @@ open "obsidian://advanced-uri?vault=$vault_name_ENC&amp;updateplugins=true"</str
 			<string>59F6D45C-8613-4D9A-9D10-F66F46506215</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>keyword</key>
+				<string>oupdate</string>
+				<key>subtext</key>
+				<string>and Beta Plugins, if BRAT is installed</string>
+				<key>text</key>
+				<string>⚙️ Update all Plugins</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>392642B8-A259-495D-A715-AD6FE5DBE992</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -9226,6 +9234,15 @@ Version 3 of this workflow uses the new Alfred 5 User Configuration. If you firs
 			<key>ypos</key>
 			<real>8585</real>
 		</dict>
+		<key>392642B8-A259-495D-A715-AD6FE5DBE992</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>xpos</key>
+			<real>30</real>
+			<key>ypos</key>
+			<real>5600</real>
+		</dict>
 		<key>39E83342-8818-474A-9AC2-27D0A97843EF</key>
 		<dict>
 			<key>colorindex</key>
@@ -9590,7 +9607,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<real>335</real>
+			<real>220</real>
 			<key>ypos</key>
 			<real>5600</real>
 		</dict>
@@ -10107,7 +10124,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>5320</real>
+			<real>5310</real>
 		</dict>
 		<key>8BC09525-BB68-46E3-A7E2-C0E5C489FF60</key>
 		<dict>
