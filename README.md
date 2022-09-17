@@ -34,6 +34,7 @@
 - Graph Traversal via Alfred
 - Smart Search: A query like `o foobar #moc starred` displays only files named "foobar" with the tag "#moc" that are also starred.
 - Visual Search: Add Icons to your tags based on their tags, similar to the [Supercharged Links](https://obsidian.md/plugins?id=supercharged-links-obsidian) Plugin.
+- …
 
 ➡️ [Documentation of Quick Switcher Features](docs/Alfred-based%20Quick%20Switcher.md)
 
@@ -41,7 +42,6 @@
 
 ### Note-related Features
 - Create new Notes (based on Template or via QuickAdd)
-- Daily Notes (deprecated)
 - Quickly append to a scratchpad note
 
 ➡️ [Documentation of Note-related Features](docs/Note-related%20Features.md)
@@ -71,16 +71,16 @@
 - Open in Obsidian or GitHub
 - Access Plugin Settings
 - Search & Create GitHub Issues
-- *No annoyed developers! When the installed version is out of date, issue creation is blocked and replaced by a shortcut to update the plugin instead.*
 
 ➡️ [Documentation of the Plugin & Theme Search](docs/Plugin%20and%20Theme%20Search.md)
 
 ---
 
 ### Workspace Switcher
-- Quickly switch workspaces, either via Switcher Modal or Hotkeys
+- Quickly switch (load) workspaces
+- works with via Switcher Modal or Hotkeys
 - Save Workspaces
-- Manage workspaces
+- Manage Workspaces
 - Automatically toggle spellchecking when switching to certain workspaces
 
 ➡️ [Documentation of the Workspace Switcher](docs/Workspace%20Switcher.md)
@@ -117,9 +117,8 @@
 ---
 
 ### CSS-related Features
-- Access themes & CSS Snippets via Alfred
-- Create new Snippets from Clipboard content
-- Download a theme's CSS file via Theme Search
+- Quickly access themes & CSS Snippets
+- Create new snippets from the clipboard
 
 ➡️ [Documentation of CSS-related Features](docs/CSS-related%20Features.md)
 
@@ -129,11 +128,9 @@
 - Quickly open various development-related folders
 - Open a local plugin's folder in Finder or the Terminal
 - Quick Copy of a plugin's ID
-- `git clone` a plugin repository via the Plugin Search
-- `git pull` a local plugin repository via the Plugin Search
 - Open the Vault's root in the default Terminal or in Finder
 - Add & Update Beta Plugins via [BRAT](https://github.com/TfTHacker/obsidian42-brat)
-- 🆕 Search the [inofficial plugin docs](https://marcus.se.net/obsidian-plugin-docs/)
+- Search the [inofficial plugin docs](https://marcus.se.net/obsidian-plugin-docs/)
 
 ➡️ [Documentation of Features for Developers](docs/Features%20for%20Developers.md)
 
