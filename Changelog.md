@@ -1,3 +1,7 @@
+- 2022-09-17	release 3.0.7
+- 2022-09-17	fix for oupdate
+- 2022-09-17	fix description for appending (fn+return)
+- 2022-09-15	refactor
 - 2022-09-15	release 3.0.6
 - 2022-09-15	improved debugging information 2
 - 2022-09-15	improved debugging information
