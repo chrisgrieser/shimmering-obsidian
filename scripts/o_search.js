@@ -241,7 +241,8 @@ fileArray.forEach(file => {
 					"subtitle": linksSubtitle,
 					"arg": relativePath
 				},
-				"alt": { "arg": relativePath }
+				"alt": { "arg": relativePath },
+				"fn": { "valid": false }
 			}
 		});
 	});
