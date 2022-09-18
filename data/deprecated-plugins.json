@@ -20,6 +20,7 @@
 	"dysfunct": [
 		"obsidian-vale",
 		"obsidian-cursor-location-plugin",
+		"obsidian-text-expander",
 		"improved-obsidian-vimcursor"
 	],
 	"deprecated": [
