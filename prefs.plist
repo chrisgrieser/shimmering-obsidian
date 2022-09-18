@@ -27,10 +27,10 @@
 	<key>workspace_1</key>
 	<string>Default</string>
 	<key>workspace_2</key>
-	<string>Writing</string>
+	<string>Longform</string>
 	<key>workspace_3</key>
 	<string>Temp</string>
 	<key>workspace_to_spellcheck</key>
-	<string>Writing</string>
+	<string>Longform</string>
 </dict>
 </plist>
