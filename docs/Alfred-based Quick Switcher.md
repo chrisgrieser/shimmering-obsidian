@@ -100,12 +100,9 @@ Displayed alongside the other search results are all headings in your vault. Sel
 
 ## Search for Attachments
 **`oa`: `a`ttachment Search**
-- Searches exclusively for attachments (i.e., non-Markdown files) in your vault. `↵` will open the selected file in Obsidian, if [Obsidian is able to open them](https://help.obsidian.md/Advanced+topics/Accepted+file+formats). Otherwise, they will be opened in your system's default app for the respective file type. The modifiers `⌘ ⌥ ⌃` apply the same way as in the other searches:
-	- `⌘ + ↵`: Open the file in a new tab (requires Obsidian 0.16).
-	- `⌥ + ↵`: Reveal the file in Finder.
-	- `⌃ + ↵`: Copy the [Obsidian-URI to the selected file](https://help.obsidian.md/Advanced+topics/Using+obsidian+URI#Action+`hook-get-address`).
-- The `fn` modifier, however, works differently:
-	- `fn + ↵`: Open the file in system's default app, regardless whether Obsidian can open the file or not.
+- Searches exclusively for attachments (i.e., non-Markdown files) in your vault. `↵` will open the selected file in Obsidian, if [Obsidian is able to open them](https://help.obsidian.md/Advanced+topics/Accepted+file+formats). Otherwise, they will be opened in your system's default app for the respective file type. 
+- The modifiers `⌘/⌃/⌥ + ↵` and the previewing (`⇧` or `⌘y`) work the same way as with the main `o` search.
+- The `fn + ↵` however, works differently; it opens the file in system's default app, *regardless* whether Obsidian can open the file or not.
 
 ## Extra Features
 
