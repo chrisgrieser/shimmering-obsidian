@@ -1,3 +1,5 @@
+- 2022-09-18	release 3.1.0
+- 2022-09-18	new: attachment search via keyword 'oa'
 - 2022-09-17	release 3.0.7
 - 2022-09-17	fix for oupdate
 - 2022-09-17	fix description for appending (fn+return)
