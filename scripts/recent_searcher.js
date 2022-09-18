@@ -5,7 +5,6 @@ const app = Application.currentApplication();
 app.includeStandardAdditions = true;
 const externalLinkRegex = /\[[^\]]*\]\([^)]+\)/;
 
-// Functions
 function parentFolder (filePath) {
 	if (!filePath.includes("/")) return "/";
 	return filePath.split("/").slice(0, -1)
@@ -52,7 +51,7 @@ if (readFile(starredJSON) !== "") {
 
 const recentFiles = JSON.parse(readFile(recentJSON)).lastOpenFiles;
 
-// filter the metadataJSON for the items w/ relativePaths of starred files
+// filter the metadataJSON for the items w/ relativePaths of recent files
 const fileArray = JSON.parse(readFile(metadataJSON))
 	.filter(item => recentFiles.includes(item.relativePath));
 

@@ -31,6 +31,7 @@
 - Search Notes via Tags
 - Browse a note's links (outgoing, backlinks, external)
 - Open External Links of a Note (without switching to the document or opening Obsidian)
+- Search exclusively for attachments (non-markdown files) in your vault
 - Graph Traversal via Alfred
 - Smart Search: A query like `o foobar #moc starred` displays only files named "foobar" with the tag "#moc" that are also starred.
 - Visual Search: Add Icons to your tags based on their tags, similar to the [Supercharged Links](https://obsidian.md/plugins?id=supercharged-links-obsidian) Plugin.
