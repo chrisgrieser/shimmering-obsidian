@@ -1,3 +1,5 @@
+- 2022-09-19	release 3.1.1
+- 2022-09-19	fix checkbox variables
 - 2022-09-18	release 3.1.0
 - 2022-09-18	new: attachment search via keyword 'oa'
 - 2022-09-17	release 3.0.7
