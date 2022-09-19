@@ -18,7 +18,7 @@ function alfredMatcher (str) {
 
 const vaultPath = $.getenv("vault_path").replace(/^~/, app.pathTo("home folder"));
 const tagsJSON = vaultPath + "/.obsidian/plugins/metadata-extractor/tags.json";
-const mergeNestedTags = $.getenv("merge_nested_tags") === "1" || false;
+const mergeNestedTags = $.getenv("merge_nested_tags") === "1";
 const jsonArray = [];
 
 // Supercharged Icons File
