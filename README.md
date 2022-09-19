@@ -3,7 +3,7 @@
 
 > **Note**  
 > [Version 2.27](https://github.com/chrisgrieser/shimmering-obsidian/releases/tag/2.27.7) is the last version compatible with Alfred 4. All future versions of this workflow will require Alfred 5.
-> 
+
 > **Warning**  
 > The initial version 3 had a bug preventing auto-updating. Please [manually download 3.1.1 or newer](https://github.com/chrisgrieser/shimmering-obsidian/releases) to receive auto-updates.
 
