@@ -3246,7 +3246,7 @@ app.openLocation(urlscheme);</string>
 						<key>matchmode</key>
 						<integer>0</integer>
 						<key>matchstring</key>
-						<string>true</string>
+						<string>1</string>
 						<key>outputlabel</key>
 						<string>true</string>
 						<key>uid</key>
@@ -3514,7 +3514,7 @@ fi</string>
 						<key>matchmode</key>
 						<integer>0</integer>
 						<key>matchstring</key>
-						<string>true</string>
+						<string>1</string>
 						<key>outputlabel</key>
 						<string>true</string>
 						<key>uid</key>
@@ -4159,7 +4159,7 @@ return "{query}"</string>
 						<key>matchmode</key>
 						<integer>0</integer>
 						<key>matchstring</key>
-						<string>true</string>
+						<string>1</string>
 						<key>outputlabel</key>
 						<string>true</string>
 						<key>uid</key>
@@ -4367,9 +4367,9 @@ set parameter to do shell script "echo " &amp; quoted form of (system attribute 
 						<key>matchcasesensitive</key>
 						<false/>
 						<key>matchmode</key>
-						<integer>1</integer>
+						<integer>0</integer>
 						<key>matchstring</key>
-						<string>true</string>
+						<string>0</string>
 						<key>outputlabel</key>
 						<string>Normal Note</string>
 						<key>uid</key>
@@ -11430,7 +11430,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 				<string>Use QuickAdd</string>
 			</dict>
 			<key>description</key>
-			<string>Instead of creating a new note based on a template (with the keyword `on`), will trigger the QuickAdd Plugin.</string>
+			<string>Instead of creating a new note based on a template, will trigger the QuickAdd Plugin. Then inputs the query as parameter to QuickAdd.</string>
 			<key>label</key>
 			<string></string>
 			<key>type</key>

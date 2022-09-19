@@ -16,8 +16,6 @@
 	<string>Knowledge Base</string>
 	<key>ocr_languages</key>
 	<string>eng+deu</string>
-	<key>open_after_appending</key>
-	<false/>
 	<key>scratchpad_note_path</key>
 	<string>Writing/Acceleration of Research/Acco Kanban.md#Scratchpad</string>
 	<key>supercharged_icon_file</key>
