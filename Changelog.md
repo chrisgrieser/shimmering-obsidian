@@ -1,3 +1,5 @@
+- 2022-10-02	release 3.1.2
+- 2022-10-02	no more notice when opening note
 - 2022-09-19	release 3.1.1
 - 2022-09-19	fix checkbox variables
 - 2022-09-18	release 3.1.0
