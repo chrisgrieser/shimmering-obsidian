@@ -1,3 +1,5 @@
+- 2022-10-17	release 3.1.3
+- 2022-10-17	fix #75
 - 2022-10-02	release 3.1.2
 - 2022-10-02	no more notice when opening note
 - 2022-09-19	release 3.1.1
