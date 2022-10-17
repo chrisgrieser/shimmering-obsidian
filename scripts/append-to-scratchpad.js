@@ -43,7 +43,7 @@ function run (argv) {
 		+ "/" + scratchpadRelPath;
 	if (scratchpadAbsPath.slice(-3) !== ".md") scratchpadAbsPath += ".md";
 
-	const toAppend = $.getenv("scratchpad_append_prefix") + argv.join("");
+	const toAppend = argv.join("");
 	const scratchpadContent = readFile(scratchpadAbsPath);
 
 	// ---------------------------------------------

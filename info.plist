@@ -3695,13 +3695,13 @@ fi</string>
 			<key>config</key>
 			<dict>
 				<key>argument</key>
-				<string></string>
+				<string>{var:scratchpad_append_prefix}{query}</string>
 				<key>passthroughargument</key>
-				<true/>
+				<false/>
 				<key>variables</key>
 				<dict>
 					<key>input</key>
-					<string>{query}</string>
+					<string>{var:scratchpad_append_prefix}{query}</string>
 				</dict>
 			</dict>
 			<key>type</key>
@@ -11264,7 +11264,9 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 		<key>FD18D249-0CD1-44B4-B974-B31B499DD2EB</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>9</integer>
+			<integer>3</integer>
+			<key>note</key>
+			<string>add append-prefix</string>
 			<key>xpos</key>
 			<real>280</real>
 			<key>ypos</key>
