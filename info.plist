@@ -11337,6 +11337,8 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>default</key>
+				<string>manual</string>
 				<key>pairs</key>
 				<array>
 					<array>
@@ -11447,6 +11449,8 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 				<string></string>
 				<key>filtermode</key>
 				<integer>2</integer>
+				<key>placeholder</key>
+				<string></string>
 				<key>required</key>
 				<false/>
 			</dict>
@@ -11569,6 +11573,8 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 				<string></string>
 				<key>filtermode</key>
 				<integer>2</integer>
+				<key>placeholder</key>
+				<string></string>
 				<key>required</key>
 				<false/>
 			</dict>
@@ -11588,6 +11594,8 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 				<string></string>
 				<key>filtermode</key>
 				<integer>0</integer>
+				<key>placeholder</key>
+				<string></string>
 				<key>required</key>
 				<false/>
 			</dict>
@@ -11607,6 +11615,8 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 				<string>~/Documents</string>
 				<key>filtermode</key>
 				<integer>1</integer>
+				<key>placeholder</key>
+				<string></string>
 				<key>required</key>
 				<true/>
 			</dict>
