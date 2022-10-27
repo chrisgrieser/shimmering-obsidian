@@ -13,3 +13,7 @@
 - Useful for 🎨 theme designers will be the `fn ↵` command to quickly download any theme's CSS.
 
 <img src="https://user-images.githubusercontent.com/73286100/131255059-1a56d6e7-8c2f-4ff0-b20d-247702bb7925.gif" alt="Theme Search" width=60%>
+
+## Quick Element Picker
+**Triggered via Hotkey: Open Console & Activate Element Picker**
+Saves only a keypress, but hey, it saves a keypress.

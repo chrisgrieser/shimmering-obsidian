@@ -42,6 +42,10 @@ Searches the unofficial [plugin development documentation by Marcus Olsson](http
 - All commands require the [BRAT Plugin](https://github.com/TfTHacker/obsidian42-brat).
 - Install a new BETA theme.
 
+## Quick Element Picker
+**Triggered via Hotkey: Open Console & Activate Element Picker**
+Saves only a keypress, but hey, it saves a keypress.
+
 ## Obsidian Version Information
 **Snippet Trigger: `!oversion`**
 Type `!oversion` in any text field, and Alfred will output your current Mac and Obsidian version. Useful for people frequently creating bug reports. (Note that Alfred snippet triggers need to be activated.)

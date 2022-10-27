@@ -1983,6 +1983,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>9FF165E8-1EE8-463E-83FE-885E071A200F</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>E4A544CF-8ADF-4C42-A06F-AC379CC66B7B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>9FF8D4E6-7A5E-4736-9976-17C280BC574A</key>
 		<array>
 			<dict>
@@ -5096,6 +5109,64 @@ cat "$vault_path"/"$template_note_path"</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>79</integer>
+				<key>hotmod</key>
+				<integer>8650752</integer>
+				<key>hotstring</key>
+				<string>F18</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedApps</key>
+				<array>
+					<string>md.obsidian</string>
+				</array>
+				<key>relatedAppsMode</key>
+				<integer>1</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>9FF165E8-1EE8-463E-83FE-885E071A200F</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>tell application "System Events"	keystroke "i" using {command down, option down}	delay 0.4	keystroke "c" using {command down, shift down}end tell</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>6</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>E4A544CF-8ADF-4C42-A06F-AC379CC66B7B</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>alfredfiltersresults</key>
 				<true/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -5200,55 +5271,6 @@ cat "$vault_path"/"$template_note_path"</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>alfredfiltersresults</key>
-				<true/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>2</integer>
-				<key>argumenttreatemptyqueryasnil</key>
-				<true/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>keyword</key>
-				<string>o</string>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
-				<key>runningsubtext</key>
-				<string></string>
-				<key>script</key>
-				<string></string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string>scripts/o_search.js</string>
-				<key>subtext</key>
-				<string></string>
-				<key>title</key>
-				<string>Search Obsidian Vault</string>
-				<key>type</key>
-				<integer>8</integer>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>5FECA0A1-6B1F-419D-8159-77F3A96C540F</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>lastpathcomponent</key>
 				<false/>
 				<key>onlyshowifquerypopulated</key>
@@ -5340,6 +5362,55 @@ cat "$vault_path"/"$template_note_path"</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>alfredfiltersresults</key>
+				<true/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>2</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>o</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>scripts/o_search.js</string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Search Obsidian Vault</string>
+				<key>type</key>
+				<integer>8</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>5FECA0A1-6B1F-419D-8159-77F3A96C540F</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>externaltriggerid</key>
 				<string>reveal-in-finder</string>
 				<key>passinputasargument</key>
@@ -5378,34 +5449,6 @@ cat "$vault_path"/"$template_note_path"</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>availableviaurlhandler</key>
-				<false/>
-				<key>triggerid</key>
-				<string>browser-folder-loop</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.external</string>
-			<key>uid</key>
-			<string>C60C1880-E166-4304-A913-7E307B365032</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>text</key>
-				<string>Search Vault: '{query}'</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.fallback</string>
-			<key>uid</key>
-			<string>341089EA-5936-4C81-ADE8-ECF290EA808D</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>externaltriggerid</key>
 				<string>open-in-new-pane</string>
 				<key>passinputasargument</key>
@@ -5438,6 +5481,34 @@ cat "$vault_path"/"$template_note_path"</string>
 			<string>alfred.workflow.output.callexternaltrigger</string>
 			<key>uid</key>
 			<string>F117FF8C-E6E5-4B0E-9FCE-DDB0A6476CAB</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>availableviaurlhandler</key>
+				<false/>
+				<key>triggerid</key>
+				<string>browser-folder-loop</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.external</string>
+			<key>uid</key>
+			<string>C60C1880-E166-4304-A913-7E307B365032</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>text</key>
+				<string>Search Vault: '{query}'</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.fallback</string>
+			<key>uid</key>
+			<string>341089EA-5936-4C81-ADE8-ECF290EA808D</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -9396,9 +9467,9 @@ Version 3 of this workflow uses the new Alfred 5 User Configuration. If you firs
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>xpos</key>
-			<real>30</real>
+			<real>35</real>
 			<key>ypos</key>
-			<real>2125</real>
+			<real>2230</real>
 		</dict>
 		<key>378CFF0C-FF5A-40C2-BE7F-587887FA84F7</key>
 		<dict>
@@ -9887,9 +9958,9 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>note</key>
 			<string>quicksearch note</string>
 			<key>xpos</key>
-			<real>75</real>
+			<real>80</real>
 			<key>ypos</key>
-			<real>1895</real>
+			<real>2000</real>
 		</dict>
 		<key>60A87101-8D59-46BF-BCAE-A9195D6A034E</key>
 		<dict>
@@ -10467,6 +10538,19 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>ypos</key>
 			<real>2505</real>
 		</dict>
+		<key>9FF165E8-1EE8-463E-83FE-885E071A200F</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>note</key>
+			<string>Quick Element Picker
+
+DOUBLE CLICK to set hotkey</string>
+			<key>xpos</key>
+			<real>30</real>
+			<key>ypos</key>
+			<real>1810</real>
+		</dict>
 		<key>9FF8D4E6-7A5E-4736-9976-17C280BC574A</key>
 		<dict>
 			<key>colorindex</key>
@@ -10793,9 +10877,9 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>colorindex</key>
 			<integer>6</integer>
 			<key>xpos</key>
-			<real>200</real>
+			<real>205</real>
 			<key>ypos</key>
-			<real>2120</real>
+			<real>2225</real>
 		</dict>
 		<key>C9530BAC-970D-40F4-B79B-8A3D866EAE47</key>
 		<dict>
@@ -11039,6 +11123,15 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<real>520</real>
 			<key>ypos</key>
 			<real>5060</real>
+		</dict>
+		<key>E4A544CF-8ADF-4C42-A06F-AC379CC66B7B</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>xpos</key>
+			<real>245</real>
+			<key>ypos</key>
+			<real>1810</real>
 		</dict>
 		<key>E5C2C637-CB7C-4C29-8829-6DD7F2901728</key>
 		<dict>
