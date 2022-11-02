@@ -15,7 +15,8 @@
 		"obsidian-collapse-all-plugin",
 		"obsidian-native-scrollbars",
 		"obsidian-show-file-path",
-		"sliding-panes-obsidian"
+		"sliding-panes-obsidian",
+		"obsidian-codemirror-options"
 	],
 	"dysfunct": [
 		"obsidian-vale",
@@ -27,5 +28,3 @@
 		"obsidian-prettify"
 	]
 }
-
-
