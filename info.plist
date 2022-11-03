@@ -818,6 +818,16 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
+				<string>CA4E2034-4495-477F-B3EC-CCCFE06FF886</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string>⌘: Create Note in new Tab</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
 				<string>51FAE362-91BE-49DB-8099-B14DBA7B9536</string>
 				<key>modifiers</key>
 				<integer>0</integer>
@@ -2454,6 +2464,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>624B592C-7815-4AE9-84DA-8EB7AD964966</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>CA4E2034-4495-477F-B3EC-CCCFE06FF886</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>7A1E8A69-D52C-47C5-9661-38702F6BDEC9</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -4139,6 +4162,28 @@ return "{query}"</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>argument</key>
+				<string>Untitled</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>new_note_with_selection</key>
+					<string>true</string>
+					<key>selected_text</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>B61A7417-054B-434D-9C37-529A8A594F3E</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -4203,28 +4248,6 @@ return "{query}"</string>
 			<string>alfred.workflow.trigger.external</string>
 			<key>uid</key>
 			<string>507B53E2-BBE0-4CD6-81F0-570EA461C871</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string>Untitled</string>
-				<key>passthroughargument</key>
-				<false/>
-				<key>variables</key>
-				<dict>
-					<key>new_note_with_selection</key>
-					<string>true</string>
-					<key>selected_text</key>
-					<string>{query}</string>
-				</dict>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>B61A7417-054B-434D-9C37-529A8A594F3E</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -4309,6 +4332,26 @@ set parameter to do shell script "echo " &amp; quoted form of (system attribute 
 			<string>7A1E8A69-D52C-47C5-9661-38702F6BDEC9</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<true/>
+				<key>variables</key>
+				<dict>
+					<key>create_in_new_tab</key>
+					<string>true</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>CA4E2034-4495-477F-B3EC-CCCFE06FF886</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -4404,36 +4447,6 @@ set parameter to do shell script "echo " &amp; quoted form of (system attribute 
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>68</integer>
-				<key>script</key>
-				<string>if application "Obsidian" is not running then
-	tell application "Obsidian" to activate
-	delay 1.2
-end if
-
-tell application "Obsidian" to open location "obsidian://advanced-uri?commandid=quickadd%253ArunQuickAdd"
-
-set parameter to do shell script "echo " &amp; quoted form of (system attribute "parameter") &amp; " | iconv -f UTF-8-MAC -t MACROMAN"</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string>scripts/quickadd-trigger.applescript</string>
-				<key>type</key>
-				<integer>8</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>41EC4120-8D84-4617-9706-00B017180D8B</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>availableviaurlhandler</key>
 				<false/>
 				<key>triggerid</key>
@@ -4485,26 +4498,6 @@ set parameter to do shell script "echo " &amp; quoted form of (system attribute 
 			<string>alfred.workflow.output.callexternaltrigger</string>
 			<key>uid</key>
 			<string>75571120-8CAD-415A-8B57-F7BDDE3A629E</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string>{query}</string>
-				<key>passthroughargument</key>
-				<true/>
-				<key>variables</key>
-				<dict>
-					<key>parameter</key>
-					<string>{query}</string>
-				</dict>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>893ACA70-8B0A-4005-AA28-58686CB6425A</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -4594,6 +4587,56 @@ cat "$vault_path"/"$template_note_path"</string>
 			<string>alfred.workflow.output.writefile</string>
 			<key>uid</key>
 			<string>860C2D5F-C032-49DF-812C-2973A0E3F3E8</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>if application "Obsidian" is not running then
+	tell application "Obsidian" to activate
+	delay 1.2
+end if
+
+tell application "Obsidian" to open location "obsidian://advanced-uri?commandid=quickadd%253ArunQuickAdd"
+
+set parameter to do shell script "echo " &amp; quoted form of (system attribute "parameter") &amp; " | iconv -f UTF-8-MAC -t MACROMAN"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>scripts/quickadd-trigger.applescript</string>
+				<key>type</key>
+				<integer>8</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>41EC4120-8D84-4617-9706-00B017180D8B</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{query}</string>
+				<key>passthroughargument</key>
+				<true/>
+				<key>variables</key>
+				<dict>
+					<key>parameter</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>893ACA70-8B0A-4005-AA28-58686CB6425A</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -9554,9 +9597,9 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<real>405</real>
+			<real>400</real>
 			<key>ypos</key>
-			<real>1175</real>
+			<real>1265</real>
 		</dict>
 		<key>41F765F9-17DD-4FC0-BF28-E7EB61AF55DB</key>
 		<dict>
@@ -10203,7 +10246,7 @@ DOUOBLE CLICK THIS to set hotkey.</string>
 			<key>note</key>
 			<string>new note</string>
 			<key>xpos</key>
-			<real>405</real>
+			<real>415</real>
 			<key>ypos</key>
 			<real>1045</real>
 		</dict>
@@ -10368,9 +10411,9 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<real>340</real>
+			<real>335</real>
 			<key>ypos</key>
-			<real>1205</real>
+			<real>1295</real>
 		</dict>
 		<key>89E2FCF0-5A14-4078-8D1F-C0FCAC339F63</key>
 		<dict>
@@ -10723,9 +10766,9 @@ DOUBLE CLICK to set hotkey</string>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<real>225</real>
+			<real>185</real>
 			<key>ypos</key>
-			<real>1000</real>
+			<real>960</real>
 		</dict>
 		<key>B61CBDAF-02B6-4FC2-B752-103E23E72E56</key>
 		<dict>
@@ -10907,6 +10950,17 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<real>595</real>
 			<key>ypos</key>
 			<real>665</real>
+		</dict>
+		<key>CA4E2034-4495-477F-B3EC-CCCFE06FF886</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>note</key>
+			<string>create in new tab</string>
+			<key>xpos</key>
+			<real>230</real>
+			<key>ypos</key>
+			<real>1075</real>
 		</dict>
 		<key>CBAE02F7-62CC-4974-96C0-841453D73B48</key>
 		<dict>
@@ -11849,6 +11903,10 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 	</array>
 	<key>variables</key>
 	<dict>
+		<key>create_in_new_tab</key>
+		<string></string>
+		<key>selected_text</key>
+		<string></string>
 		<key>vault_name_ENC</key>
 		<string>Main%20Vault</string>
 		<key>vault_path</key>
