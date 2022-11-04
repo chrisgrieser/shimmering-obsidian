@@ -4,22 +4,24 @@ ObjC.import("stdlib");
 const app = Application.currentApplication();
 app.includeStandardAdditions = true;
 
-function alfredMatcher (str) {
-	return " " + str.replace (/[-()_.@]/g, " ") + " " + str + " ";
+function alfredMatcher(str) {
+	return " " + str.replace(/[-()_.@]/g, " ") + " " + str + " ";
 }
-function onlineJSON (url) {
-	return JSON.parse (app.doShellScript("curl -s \"" + url + "\""));
+function onlineJSON(url) {
+	return JSON.parse(app.doShellScript("curl -s \"" + url + "\""));
 }
-function insert1000sep (num) {
+function insert1000sep(num) {
 	let numText = String(num);
-	if (num >= 10000) {numText =
+	if (num >= 10000) {
+		numText =
 		numText.slice(0, -3) +
 		"." +
-		numText.slice (-3);}
+		numText.slice(-3);
+	}
 	return numText;
 }
 
-function readFile (path, encoding) {
+function readFile(path, encoding) {
 	if (!encoding) encoding = $.NSUTF8StringEncoding;
 	const fm = $.NSFileManager.defaultManager;
 	const data = fm.contentsAtPath(path);
@@ -43,8 +45,8 @@ const jsonArray = [];
 
 //------------------------------------------------------------------------------
 
-const pluginJSON = onlineJSON ("https://raw.githubusercontent.com/obsidianmd/obsidian-releases/master/community-plugins.json");
-const downloadsJSON = onlineJSON ("https://raw.githubusercontent.com/obsidianmd/obsidian-releases/master/community-plugin-stats.json");
+const pluginJSON = onlineJSON("https://raw.githubusercontent.com/obsidianmd/obsidian-releases/master/community-plugins.json");
+const downloadsJSON = onlineJSON("https://raw.githubusercontent.com/obsidianmd/obsidian-releases/master/community-plugin-stats.json");
 const installedPlugins = app.doShellScript("ls -1 \"" + vaultPath + "\"\"/.obsidian/plugins/\"")
 	.split("\r");
 
@@ -78,7 +80,7 @@ pluginJSON.forEach(plugin => {
 	let isDiscordReady;
 	let shareURL;
 	if (discordReadyLinks) {
-		shareURL = `*${name}* <https://obsidian.md/plugins?id=${id}>`;
+		shareURL = `__${name}__: *${description}* – <https://obsidian.md/plugins?id=${id}>`;
 		isDiscordReady = " (discord ready)";
 	} else {
 		shareURL = "https://obsidian.md/plugins?id=" + id;
@@ -110,7 +112,7 @@ pluginJSON.forEach(plugin => {
 		"title": name + icons,
 		"subtitle": subtitleIcons + description + " — by " + author + downloadsStr,
 		"arg": openURI,
-		"match":	"plugin " + URImatcher + alfredMatcher (name) + alfredMatcher (author) + alfredMatcher (id) + alfredMatcher (description),
+		"match": "plugin " + URImatcher + alfredMatcher(name) + alfredMatcher(author) + alfredMatcher(id) + alfredMatcher(description),
 		"mods": {
 			"cmd": { "arg": githubURL },
 			"alt": {
@@ -167,12 +169,12 @@ themeJSON.forEach(theme => {
 		"icon": { "path": "icons/css.png" },
 		"mods": {
 			"shift": { "arg": repo },
-			"cmd":{ "arg": githubURL },
+			"cmd": { "arg": githubURL },
 			"alt": {
 				"arg": shareURL,
 				"subtitle": "⌥: Copy GitHub Link" + isDiscordReady
 			},
-			"ctrl":{
+			"ctrl": {
 				"valid": false,
 				"subtitle": "⛔️ Theme Download numbers not supported yet.",
 			},
