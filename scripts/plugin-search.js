@@ -14,9 +14,9 @@ function insert1000sep(num) {
 	let numText = String(num);
 	if (num >= 10000) {
 		numText =
-		numText.slice(0, -3) +
-		"." +
-		numText.slice(-3);
+			numText.slice(0, -3) +
+			"." +
+			numText.slice(-3);
 	}
 	return numText;
 }
@@ -70,8 +70,8 @@ pluginJSON.forEach(plugin => {
 	const id = plugin.id;
 	const name = plugin.name;
 	const description = plugin.description
-		.replaceAll ("\\\"", "'") // to deal with escaped '"' in descriptions
-		.replace (/\. *$/, ""); // trailing dot in description looks weird with the styling done here later in the item subtitle
+		.replaceAll("\\\"", "'") // to deal with escaped '"' in descriptions
+		.replace(/\. *$/, ""); // trailing dot in description looks weird with the styling done here later in the item subtitle
 	const author = plugin.author;
 	const repo = plugin.repo;
 
@@ -80,7 +80,7 @@ pluginJSON.forEach(plugin => {
 	let isDiscordReady;
 	let shareURL;
 	if (discordReadyLinks) {
-		shareURL = `__${name}__: *${description}* – <https://obsidian.md/plugins?id=${id}>`;
+		shareURL = `> **${name}**: ${description}\n> <https://obsidian.md/plugins?id=${id}>`;
 		isDiscordReady = " (discord ready)";
 	} else {
 		shareURL = "https://obsidian.md/plugins?id=" + id;
