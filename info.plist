@@ -11803,27 +11803,6 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 				<key>default</key>
 				<string></string>
 				<key>placeholder</key>
-				<string>Writing</string>
-				<key>required</key>
-				<false/>
-				<key>trim</key>
-				<true/>
-			</dict>
-			<key>description</key>
-			<string>Name of the Workspace where spellcheck should be turned on when switching to it with the workspace switcher `ow`. Leave empty to not toggle any spellcheck setting with workspace changes.</string>
-			<key>label</key>
-			<string>Workspace to Spellcheck</string>
-			<key>type</key>
-			<string>textfield</string>
-			<key>variable</key>
-			<string>workspace_to_spellcheck</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>default</key>
-				<string></string>
-				<key>placeholder</key>
 				<string></string>
 				<key>required</key>
 				<false/>
@@ -11880,6 +11859,27 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<string>textfield</string>
 			<key>variable</key>
 			<string>workspace_3</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string></string>
+				<key>placeholder</key>
+				<string>comma-separated list</string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>Names of the Workspace where spellcheck should be turned on when switching to it with the workspace switcher `ow`. Separate multiple workspaces with Commas. Leave empty to not toggle any spellcheck setting with workspace changes.</string>
+			<key>label</key>
+			<string>Workspace(s) to Spellcheck</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>workspace_to_spellcheck</string>
 		</dict>
 		<dict>
 			<key>config</key>

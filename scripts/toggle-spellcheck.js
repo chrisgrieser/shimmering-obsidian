@@ -19,17 +19,20 @@ function run (argv) {
 
 	const workspaceName = decodeURIComponent(urlscheme.split("=")[2]);
 
-	const workspaceToSpellcheck = $.getenv("workspace_to_spellcheck");
+	if ($.getenv("spellcheck-workspace") === "") return;
+
+	const workspacesToSpellcheck = $.getenv("workspace_to_spellcheck")
+		.split(",")
+		.map(workspace => workspace.trim());
 
 	// abort and do nothing when workspaces are managed, spellcheck toggled, or no spellcheck-workspace defined
 	if (urlscheme.endsWith("workspaces%253Aopen-modal")) return;
 	if (urlscheme.endsWith("editor%253Atoggle-spellcheck")) return;
 	if (urlscheme.endsWith("saveworkspace=true")) return;
-	if (workspaceToSpellcheck === "") return;
 
 	// get current spellcheck status
 	const vaultPath = $.getenv("vault_path").replace(/^~/, app.pathTo("home folder"));
-	const turnSpellCheckOn = workspaceName === workspaceToSpellcheck;
+	const turnSpellCheckOn = workspacesToSpellcheck.includes(workspaceName);
 	const currentSpellCheck = JSON.parse(readFile(vaultPath + "/.obsidian/app.json")).spellcheck;
 
 	// toggle if change is needed
