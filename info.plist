@@ -11873,9 +11873,9 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 				<true/>
 			</dict>
 			<key>description</key>
-			<string>Names of the Workspace where spellcheck should be turned on when switching to it with the workspace switcher `ow`. Separate multiple workspaces with Commas. Leave empty to not toggle any spellcheck setting with workspace changes.</string>
+			<string>Name of the workspace(s) where spellcheck should be turned on when switching to it with the workspace switcher `ow`. Separate multiple workspaces with commas. Leave empty to not toggle any spellcheck setting with workspace changes.</string>
 			<key>label</key>
-			<string>Workspace(s) to Spellcheck</string>
+			<string>Workspace(s) to spellcheck</string>
 			<key>type</key>
 			<string>textfield</string>
 			<key>variable</key>
