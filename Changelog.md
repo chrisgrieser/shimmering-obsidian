@@ -1,3 +1,5 @@
+- 2022-11-04	release 3.2.2
+- 2022-11-04	allow for multiple workspaces to be spellchecked
 - 2022-11-04	release 3.2.1
 - 2022-11-03	release 3.2.0
 - 2022-11-03	use `on` with cmd+return to create in new tab
