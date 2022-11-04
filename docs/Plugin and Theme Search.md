@@ -2,19 +2,17 @@
 
 ## Table of Contents
 <!--toc:start-->
-- [Plugin & Theme Search](#plugin-theme-search)
-  - [Table of Contents](#table-of-contents)
-  - [Plugins](#plugins)
-  - [Themes](#themes)
-  - [Searching GitHub Issues](#searching-github-issues)
+- [Plugins](#plugins)
+- [Themes](#themes)
+- [Searching GitHub Issues](#searching-github-issues)
 <!--toc:end-->
 
 ## Plugins
 **`op`: Combined Search of community `p`lugins and community themes.**
 - Press `↵` to open the plugin in Obsidian's Community Plugin Browser.
 	- Use `⌘ + ↵` to open the plugin's GitHub repository instead.
-	- Press `⌥ + ↵` to copy the plugin URI (`obsidian://show-plugin?id=...`) to your clipboard. When Discord is the frontmost app, the copied link will be surrounded with `<` `>` for more convenient pasting in the Discord Desktop app (disables auto-preview). (This does not work with Alfred's Compatibility Mode.)
-	- `⇧ + ↵` to display & search the GitHub issues. See [the section below](#-Searching-GitHub-Issues) for more information.
+	- Press `⌥ + ↵` to copy the plugin URI (`obsidian://show-plugin?id=…`) to your clipboard. When Discord is the frontmost app, the copied link will be surrounded with `<` `>` for more convenient pasting in the Discord Desktop app (disables auto-preview). (This does not work with Alfred's Compatibility Mode.)
+	- `⇧ + ↵` to display & search the GitHub issues. See [the section below](#searching-github-issues) for more information.
 	- *Holding* `⌃` will display download numbers, author, and plugin ID. This is useful, when the plugin description is so long, that you cannot see this anymore.
 	- *⚙️ For developers:* *Pressing* `⌃ + ↵` will copy the plugin ID to the clipboard.
 - Only plugins officially included in the community plugins are displayed — plugins solely available via GitHub or still in review are not shown.
@@ -28,7 +26,7 @@
 - Press `↵` to open the theme browser. (There are no separate theme pages in Obsidian Theme Browser that can be opened.)
 	- Use `⌘ + ↵` to open the theme's GitHub repository instead.
 	- Press `⌥ + ↵` to copy the GitHub repository URL to your clipboard. When Discord is the frontmost app, the copied link will be surrounded with `<` `>` for more convenient pasting in the Discord Desktop app (disables auto-preview).
-	- `⇧ + ↵` to display & search the GitHub issues. See [the section below](#-Searching-GitHub-Issues) for more information.
+	- `⇧ + ↵` to display & search the GitHub issues. See [the section below](#searching-github-issues) for more information.
 	- Use `⇧` or `⌘ + Y` to open a Quick Look Preview of the theme's promo screenshot. Press `⇧` or `⌘ + Y` again to close the preview.
 - Only themes officially included in the community themes are displayed — themes solely available via GitHub or still in review are not shown.
 - Add `theme` to the search query to only display themes, e.g., use `op focus theme` as search query to only display *themes* with the term `focus`.
@@ -47,4 +45,3 @@
 
 <img src="https://user-images.githubusercontent.com/73286100/139559362-747b0c57-c29b-45b5-bc62-4ab53c0718c5.gif" alt="Issue Search" width=60%>
 <img src="https://i.imgur.com/AvavR7n.png" alt="update information" width=60%>
-
