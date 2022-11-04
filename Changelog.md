@@ -1,3 +1,4 @@
+- 2022-11-04	release 3.2.1
 - 2022-11-03	release 3.2.0
 - 2022-11-03	use `on` with cmd+return to create in new tab
 - 2022-10-27	feat: quick element picker hotkey
