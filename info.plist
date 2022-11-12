@@ -11914,8 +11914,10 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 	</dict>
 	<key>variablesdontexport</key>
 	<array>
-		<string>vault_name_ENC</string>
 		<string>vault_path</string>
+		<string>create_in_new_tab</string>
+		<string>vault_name_ENC</string>
+		<string>selected_text</string>
 	</array>
 	<key>version</key>
 	<string>3.2.2</string>
