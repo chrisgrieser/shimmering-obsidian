@@ -80,7 +80,7 @@ pluginJSON.forEach(plugin => {
 	let isDiscordReady;
 	let shareURL;
 	if (discordReadyLinks) {
-		shareURL = `> **${name}**: ${description} – <https://obsidian.md/plugins?id=${id}>`;
+		shareURL = `> **${name}**: ${description} <https://obsidian.md/plugins?id=${id}>`;
 		isDiscordReady = " (discord ready)";
 	} else {
 		shareURL = "https://obsidian.md/plugins?id=" + id;
