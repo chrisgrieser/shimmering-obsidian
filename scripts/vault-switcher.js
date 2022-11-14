@@ -13,6 +13,8 @@ function readFile (path, encoding) {
 	return ObjC.unwrap(str);
 }
 
+//──────────────────────────────────────────────────────────────────────────────
+
 const currentVault = $.getenv("vault_path").replace(/^~/, app.pathTo("home folder"));
 const vaultListJson = app.pathTo("home folder") + "/Library/Application Support/obsidian/obsidian.json";
 
@@ -22,6 +24,8 @@ const vaultArray = [];
 const jsonArray = [];
 for (const hash in vaultList) vaultArray.push(vaultList[hash].path);
 
+//──────────────────────────────────────────────────────────────────────────────
+
 vaultArray.forEach(vaultPath => {
 	const vaultName = vaultPath.replace(/.*\//, "");
 	const vaultURI = "obsidian://open?vault=" + encodeURIComponent(vaultName);
@@ -29,9 +33,8 @@ vaultArray.forEach(vaultPath => {
 	// visual: icons & shorter path
 	let currentIcon = "";
 	if (currentVault === vaultPath) currentIcon = "✅ ";
-	if (vaultName.toLowerCase().includes("development")) currentIcon = "⚙️ ";
-	if (vaultName === "Obsidian Help") currentIcon = "🆘 ";
-	if (vaultName === "Obsidian Sandbox") currentIcon = "🏖 ";
+	if (vaultName.toLowerCase().includes("development")) currentIcon += "⚙️ ";
+	if (vaultName === "Obsidian Sandbox") currentIcon += "🏖 ";
 	const shortPath = vaultPath
 		.replace (/\/Users\/[^/]*/, "~")
 		.slice (0, -(vaultName.length + 1));

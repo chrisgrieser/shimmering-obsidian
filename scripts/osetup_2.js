@@ -10,7 +10,7 @@ function run (argv) {
 		const str = $.NSString.alloc.initWithDataEncoding(data, encoding);
 		return ObjC.unwrap(str);
 	}
-	
+
 	const vaultPath = argv.join("");
 	const vaultName = vaultPath.split("/").pop();
 
@@ -34,4 +34,3 @@ function run (argv) {
 
 	return errorMsg;
 }
-

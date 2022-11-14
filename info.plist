@@ -8,6 +8,19 @@
 	<string>App-Enhance</string>
 	<key>connections</key>
 	<dict>
+		<key>03D4FDF8-2991-4C26-B8D3-14EE389B8822</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>42744528-B755-4953-ADD5-05947D2FBFBF</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>0645AAB4-66F5-4149-A92B-C58A80B649C7</key>
 		<array>
 			<dict>
@@ -453,7 +466,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>ECE5DEF0-6F35-4E9B-818C-56057511EE91</string>
+				<string>FFC9BC93-DD73-4F52-A69B-7FF4E6490EC1</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1654,6 +1667,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>85EAFB9C-A3C0-4BE8-9C10-BD61272812C6</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>2FB281A9-8BFA-4836-A2A9-73A46C3DE6DD</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>860C2D5F-C032-49DF-812C-2973A0E3F3E8</key>
 		<array>
 			<dict>
@@ -2675,7 +2701,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>2FB281A9-8BFA-4836-A2A9-73A46C3DE6DD</string>
+				<string>85EAFB9C-A3C0-4BE8-9C10-BD61272812C6</string>
 				<key>modifiers</key>
 				<integer>131072</integer>
 				<key>modifiersubtext</key>
@@ -2877,19 +2903,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>ECE5DEF0-6F35-4E9B-818C-56057511EE91</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>7107BFB2-1A6A-434E-9E32-F01F75AF1CF6</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>EE4720A7-4048-4A92-B0AA-8F811AE57C1E</key>
 		<array>
 			<dict>
@@ -3003,6 +3016,31 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>FFC9BC93-DD73-4F52-A69B-7FF4E6490EC1</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>03D4FDF8-2991-4C26-B8D3-14EE389B8822</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>7107BFB2-1A6A-434E-9E32-F01F75AF1CF6</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>2AE2E6A9-0B8D-4985-82C0-3A8C7CF82036</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -8374,6 +8412,52 @@ echo | git pull</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>alignment</key>
+				<integer>0</integer>
+				<key>backgroundcolor</key>
+				<string></string>
+				<key>fadespeed</key>
+				<integer>0</integer>
+				<key>fillmode</key>
+				<integer>0</integer>
+				<key>font</key>
+				<string></string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>largetypetext</key>
+				<string>⚠️ The vault located at '{var:changed_vault}' cannot be controlled:
+
+{query}</string>
+				<key>textcolor</key>
+				<string></string>
+				<key>wrapat</key>
+				<integer>50</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.largetype</string>
+			<key>uid</key>
+			<string>03D4FDF8-2991-4C26-B8D3-14EE389B8822</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>soundname</key>
+				<string>Basso</string>
+				<key>systemsound</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.playsound</string>
+			<key>uid</key>
+			<string>42744528-B755-4953-ADD5-05947D2FBFBF</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>browser</key>
 				<string></string>
 				<key>skipqueryencode</key>
@@ -8418,14 +8502,46 @@ echo | git pull</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>4</integer>
+						<key>matchstring</key>
+						<string>^\n$</string>
+						<key>outputlabel</key>
+						<string>success</string>
+						<key>uid</key>
+						<string>2AE2E6A9-0B8D-4985-82C0-3A8C7CF82036</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>plugin missing</string>
+				<key>hideelse</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>FFC9BC93-DD73-4F52-A69B-7FF4E6490EC1</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>lastpathcomponent</key>
-				<true/>
+				<false/>
 				<key>onlyshowifquerypopulated</key>
 				<true/>
 				<key>removeextension</key>
 				<false/>
 				<key>text</key>
-				<string>'{query}'</string>
+				<string>'{var:changed_vault}'</string>
 				<key>title</key>
 				<string>✅ Vault for this workflow changed</string>
 			</dict>
@@ -8440,16 +8556,19 @@ echo | git pull</string>
 			<key>config</key>
 			<dict>
 				<key>argument</key>
-				<string>{var:vault_path}</string>
+				<string></string>
 				<key>passthroughargument</key>
-				<false/>
+				<true/>
 				<key>variables</key>
-				<dict/>
+				<dict>
+					<key>changed_vault</key>
+					<string>{query}</string>
+				</dict>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
-			<string>ECE5DEF0-6F35-4E9B-818C-56057511EE91</string>
+			<string>85EAFB9C-A3C0-4BE8-9C10-BD61272812C6</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -8465,27 +8584,6 @@ echo | git pull</string>
 			<string>alfred.workflow.output.playsound</string>
 			<key>uid</key>
 			<string>E7ADA43C-52CF-46FD-AC9E-79616731DDA9</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<true/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string>{query}</string>
-				<key>title</key>
-				<string>✅ git pull</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>31A86D6E-0757-460B-9840-AC7E2BD728BC</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -8513,6 +8611,27 @@ echo | git pull</string>
 			<string>624851C6-4CE8-40FF-939A-6A2905B80486</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>✅ git pull</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>31A86D6E-0757-460B-9840-AC7E2BD728BC</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -8841,6 +8960,15 @@ Version 3 of this workflow uses the new Alfred 5 User Configuration. If you firs
 [Ko-Fi](https://ko-fi.com/pseudometa)</string>
 	<key>uidata</key>
 	<dict>
+		<key>03D4FDF8-2991-4C26-B8D3-14EE389B8822</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>1</integer>
+			<key>xpos</key>
+			<real>555</real>
+			<key>ypos</key>
+			<real>7700</real>
+		</dict>
 		<key>0645AAB4-66F5-4149-A92B-C58A80B649C7</key>
 		<dict>
 			<key>colorindex</key>
@@ -9208,7 +9336,7 @@ Version 3 of this workflow uses the new Alfred 5 User Configuration. If you firs
 		<key>2FB281A9-8BFA-4836-A2A9-73A46C3DE6DD</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>9</integer>
+			<integer>3</integer>
 			<key>note</key>
 			<string>set vault</string>
 			<key>xpos</key>
@@ -9239,9 +9367,9 @@ Version 3 of this workflow uses the new Alfred 5 User Configuration. If you firs
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<real>465</real>
+			<real>555</real>
 			<key>ypos</key>
-			<real>7945</real>
+			<real>7970</real>
 		</dict>
 		<key>31F21F7E-7450-444B-B9FC-D46650DF6F17</key>
 		<dict>
@@ -9389,6 +9517,15 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<real>245</real>
 			<key>ypos</key>
 			<real>6780</real>
+		</dict>
+		<key>42744528-B755-4953-ADD5-05947D2FBFBF</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>1</integer>
+			<key>xpos</key>
+			<real>700</real>
+			<key>ypos</key>
+			<real>7700</real>
 		</dict>
 		<key>4357CED9-9613-4872-AFBA-58629EB27D48</key>
 		<dict>
@@ -9898,11 +10035,11 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 		<key>7107BFB2-1A6A-434E-9E32-F01F75AF1CF6</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>9</integer>
+			<integer>3</integer>
 			<key>xpos</key>
-			<real>465</real>
+			<real>555</real>
 			<key>ypos</key>
-			<real>7815</real>
+			<real>7840</real>
 		</dict>
 		<key>72551A9E-43E8-4462-9CB0-D5C419B4AEA2</key>
 		<dict>
@@ -10098,6 +10235,15 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<real>2050</real>
 			<key>ypos</key>
 			<real>1260</real>
+		</dict>
+		<key>85EAFB9C-A3C0-4BE8-9C10-BD61272812C6</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>xpos</key>
+			<real>185</real>
+			<key>ypos</key>
+			<real>7845</real>
 		</dict>
 		<key>85FB81E3-166A-4AFB-A0F4-E9ADF2A6DBAB</key>
 		<dict>
@@ -10948,9 +11094,9 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<real>655</real>
+			<real>695</real>
 			<key>ypos</key>
-			<real>7880</real>
+			<real>7905</real>
 		</dict>
 		<key>E7DAD30E-15A3-46BE-8534-7F5ABE826FC6</key>
 		<dict>
@@ -11018,15 +11164,6 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<real>520</real>
 			<key>ypos</key>
 			<real>5285</real>
-		</dict>
-		<key>ECE5DEF0-6F35-4E9B-818C-56057511EE91</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>xpos</key>
-			<real>395</real>
-			<key>ypos</key>
-			<real>7845</real>
 		</dict>
 		<key>EE4720A7-4048-4A92-B0AA-8F811AE57C1E</key>
 		<dict>
@@ -11143,6 +11280,15 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<real>825</real>
 			<key>ypos</key>
 			<real>3800</real>
+		</dict>
+		<key>FFC9BC93-DD73-4F52-A69B-7FF4E6490EC1</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>xpos</key>
+			<real>395</real>
+			<key>ypos</key>
+			<real>7835</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
