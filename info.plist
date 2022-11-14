@@ -550,19 +550,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>378CFF0C-FF5A-40C2-BE7F-587887FA84F7</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>4752E9C9-D878-4C0E-AC6A-F39740E2BF8A</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>37EC9932-F455-4BBC-BA2B-AF780E3851F3</key>
 		<array/>
 		<key>38F17F8F-FBE5-422F-B926-A8AFD40D5A4C</key>
@@ -596,19 +583,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>30FE564E-5E90-4F98-87D8-EAEB63CECFB3</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>3F97414B-D2C1-42AC-A7AF-0683EA133B48</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>378CFF0C-FF5A-40C2-BE7F-587887FA84F7</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -734,37 +708,11 @@
 				<false/>
 			</dict>
 		</array>
-		<key>4752E9C9-D878-4C0E-AC6A-F39740E2BF8A</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>477D128E-EEF6-4956-8C44-A6186D7537D0</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>475C216C-4A37-4F50-91DE-B1FE3666684F</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>700D9220-5D9E-4BBB-840B-30272519C910</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>477D128E-EEF6-4956-8C44-A6186D7537D0</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>57CACB5D-8848-4706-9B61-3C0AFDA26C17</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -6942,92 +6890,6 @@ echo "$backup"</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>adduuid</key>
-				<false/>
-				<key>allowemptyfiles</key>
-				<true/>
-				<key>createintermediatefolders</key>
-				<false/>
-				<key>filename</key>
-				<string>{var:vault_path}/.obsidian/snippets/{query}.css</string>
-				<key>filetext</key>
-				<string>/* {query} */
-
-{clipboard}</string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>relativepathmode</key>
-				<integer>0</integer>
-				<key>type</key>
-				<integer>2</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.writefile</string>
-			<key>uid</key>
-			<string>378CFF0C-FF5A-40C2-BE7F-587887FA84F7</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>keyword</key>
-				<string>ocss</string>
-				<key>subtext</key>
-				<string>with clipboard content</string>
-				<key>text</key>
-				<string>🆕 New Snippet: '{query}'</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>3F97414B-D2C1-42AC-A7AF-0683EA133B48</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>browser</key>
-				<string></string>
-				<key>skipqueryencode</key>
-				<false/>
-				<key>skipvarencode</key>
-				<false/>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string>obsidian://advanced-uri?vault={var:vault_name_ENC}&amp;settingid=appearance</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
-			<key>uid</key>
-			<string>477D128E-EEF6-4956-8C44-A6186D7537D0</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>openwith</key>
-				<string></string>
-				<key>sourcefile</key>
-				<string></string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openfile</string>
-			<key>uid</key>
-			<string>4752E9C9-D878-4C0E-AC6A-F39740E2BF8A</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>externaltriggerid</key>
 				<string>update-obsidian-workflow</string>
 				<key>passinputasargument</key>
@@ -9514,15 +9376,6 @@ Version 3 of this workflow uses the new Alfred 5 User Configuration. If you firs
 			<key>ypos</key>
 			<real>2230</real>
 		</dict>
-		<key>378CFF0C-FF5A-40C2-BE7F-587887FA84F7</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>xpos</key>
-			<real>190</real>
-			<key>ypos</key>
-			<real>4075</real>
-		</dict>
 		<key>37EC9932-F455-4BBC-BA2B-AF780E3851F3</key>
 		<dict>
 			<key>colorindex</key>
@@ -9567,17 +9420,6 @@ Version 3 of this workflow uses the new Alfred 5 User Configuration. If you firs
 			<real>180</real>
 			<key>ypos</key>
 			<real>800</real>
-		</dict>
-		<key>3F97414B-D2C1-42AC-A7AF-0683EA133B48</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>note</key>
-			<string>New CSS Snippet</string>
-			<key>xpos</key>
-			<real>30</real>
-			<key>ypos</key>
-			<real>4075</real>
 		</dict>
 		<key>3FDC367F-3E6F-4DAD-B146-E80044D686E8</key>
 		<dict>
@@ -9672,15 +9514,6 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>ypos</key>
 			<real>2935</real>
 		</dict>
-		<key>4752E9C9-D878-4C0E-AC6A-F39740E2BF8A</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>xpos</key>
-			<real>335</real>
-			<key>ypos</key>
-			<real>4075</real>
-		</dict>
 		<key>475C216C-4A37-4F50-91DE-B1FE3666684F</key>
 		<dict>
 			<key>colorindex</key>
@@ -9689,17 +9522,6 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<real>350</real>
 			<key>ypos</key>
 			<real>525</real>
-		</dict>
-		<key>477D128E-EEF6-4956-8C44-A6186D7537D0</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>note</key>
-			<string>Opens settings for more convenient activating of css snippet</string>
-			<key>xpos</key>
-			<real>475</real>
-			<key>ypos</key>
-			<real>4075</real>
 		</dict>
 		<key>47CB6610-109D-41E0-BBFF-BF83FB0FC8CE</key>
 		<dict>
