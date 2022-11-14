@@ -3679,7 +3679,7 @@ fi</string>
 				<key>removeextension</key>
 				<false/>
 				<key>text</key>
-				<string>'{var:input}'</string>
+				<string>'{var:scratchpad_append_prefix}{var:input}'</string>
 				<key>title</key>
 				<string>✅ Appended to '{var:scratchpad_note_path}'</string>
 			</dict>
@@ -11198,7 +11198,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 				<string></string>
 			</dict>
 			<key>description</key>
-			<string>When appending to a note (`fn + ↵`), the note will automatically be opened afterwards. Also applies to the Scratchpath feature.</string>
+			<string>When appending to a note (`fn + ↵`), the note will automatically be opened afterwards. Also applies to the Scratchpad feature.</string>
 			<key>label</key>
 			<string>Open Note after Appending</string>
 			<key>type</key>
