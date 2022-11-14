@@ -283,7 +283,7 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>FD18D249-0CD1-44B4-B974-B31B499DD2EB</string>
+				<string>EA58397D-673F-4DA6-B773-D16D6053ED61</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1365,7 +1365,7 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>C9AB9048-51F7-4C7D-8F24-A30DBAA367F6</string>
+				<string>624B592C-7815-4AE9-84DA-8EB7AD964966</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -2258,7 +2258,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>DAE91752-D8FE-4DFF-BC2E-4A3DBD0BD1F6</string>
+				<string>2FD866C2-DDB1-4C2D-A420-3A580FBC60D2</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -2399,19 +2399,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>C066249A-3C9E-424F-8919-CA805A3D3C31</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>C9AB9048-51F7-4C7D-8F24-A30DBAA367F6</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>624B592C-7815-4AE9-84DA-8EB7AD964966</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -2602,19 +2589,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>7D288B7C-5CB7-4A0E-B99D-3A2D9186DEC5</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>DAE91752-D8FE-4DFF-BC2E-4A3DBD0BD1F6</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>2FD866C2-DDB1-4C2D-A420-3A580FBC60D2</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -2864,6 +2838,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>EA58397D-673F-4DA6-B773-D16D6053ED61</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>475C216C-4A37-4F50-91DE-B1FE3666684F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>EAD7CCC4-5ACE-4068-829A-EB0C62FCA3ED</key>
 		<array>
 			<dict>
@@ -2907,7 +2894,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>FD18D249-0CD1-44B4-B974-B31B499DD2EB</string>
+				<string>EA58397D-673F-4DA6-B773-D16D6053ED61</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -3012,19 +2999,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>57CACB5D-8848-4706-9B61-3C0AFDA26C17</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>FD18D249-0CD1-44B4-B974-B31B499DD2EB</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>475C216C-4A37-4F50-91DE-B1FE3666684F</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -3656,7 +3630,7 @@ fi</string>
 						<key>matchmode</key>
 						<integer>0</integer>
 						<key>matchstring</key>
-						<string>true</string>
+						<string>1</string>
 						<key>outputlabel</key>
 						<string>true</string>
 						<key>uid</key>
@@ -3679,40 +3653,19 @@ fi</string>
 			<key>config</key>
 			<dict>
 				<key>argument</key>
-				<string>{var:scratchpad_append_prefix}{query}</string>
+				<string></string>
 				<key>passthroughargument</key>
-				<false/>
+				<true/>
 				<key>variables</key>
 				<dict>
 					<key>input</key>
-					<string>{var:scratchpad_append_prefix}{query}</string>
+					<string>{query}</string>
 				</dict>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
-			<string>FD18D249-0CD1-44B4-B974-B31B499DD2EB</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>keyword</key>
-				<string>oo</string>
-				<key>subtext</key>
-				<string>'{query}'</string>
-				<key>text</key>
-				<string>Append to Scratchpad</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>EE4720A7-4048-4A92-B0AA-8F811AE57C1E</string>
+			<string>EA58397D-673F-4DA6-B773-D16D6053ED61</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -3722,13 +3675,13 @@ fi</string>
 				<key>lastpathcomponent</key>
 				<false/>
 				<key>onlyshowifquerypopulated</key>
-				<false/>
+				<true/>
 				<key>removeextension</key>
 				<false/>
 				<key>text</key>
 				<string>'{var:input}'</string>
 				<key>title</key>
-				<string>✅ Appended to '{query}'</string>
+				<string>✅ Appended to '{var:scratchpad_note_path}'</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.notification</string>
@@ -3740,17 +3693,21 @@ fi</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argument</key>
-				<string>{var:scratchpad_note_path}</string>
-				<key>passthroughargument</key>
-				<false/>
-				<key>variables</key>
-				<dict/>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>oo</string>
+				<key>subtext</key>
+				<string>'{var:scratchpad_append_prefix}{query}'</string>
+				<key>text</key>
+				<string>Append to Scratchpad</string>
+				<key>withspace</key>
+				<true/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
+			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
-			<string>C9AB9048-51F7-4C7D-8F24-A30DBAA367F6</string>
+			<string>EE4720A7-4048-4A92-B0AA-8F811AE57C1E</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -7571,38 +7528,6 @@ fi</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>conditions</key>
-				<array>
-					<dict>
-						<key>inputstring</key>
-						<string>{var:mode}</string>
-						<key>matchcasesensitive</key>
-						<false/>
-						<key>matchmode</key>
-						<integer>0</integer>
-						<key>matchstring</key>
-						<string>no sound</string>
-						<key>outputlabel</key>
-						<string>no</string>
-						<key>uid</key>
-						<string>FEA7E4E2-00DD-487A-B6A4-1A72E14035C4</string>
-					</dict>
-				</array>
-				<key>elselabel</key>
-				<string>yes</string>
-				<key>hideelse</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.conditional</string>
-			<key>uid</key>
-			<string>DAE91752-D8FE-4DFF-BC2E-4A3DBD0BD1F6</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>lastpathcomponent</key>
 				<false/>
 				<key>onlyshowifquerypopulated</key>
@@ -9000,7 +8925,7 @@ Version 3 of this workflow uses the new Alfred 5 User Configuration. If you firs
 		<key>0D4E8328-70EB-4B78-9879-93DEBEE99412</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>note</key>
 			<string>trasnform to advanced URI</string>
 			<key>xpos</key>
@@ -9158,7 +9083,7 @@ Version 3 of this workflow uses the new Alfred 5 User Configuration. If you firs
 		<key>24262C18-419C-4D91-8673-4C0BB27F31DA</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>xpos</key>
 			<real>470</real>
 			<key>ypos</key>
@@ -9415,7 +9340,7 @@ Version 3 of this workflow uses the new Alfred 5 User Configuration. If you firs
 		<key>3CC54A98-B297-4BE8-8F53-22C52A7247B6</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>xpos</key>
 			<real>180</real>
 			<key>ypos</key>
@@ -9854,9 +9779,9 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<real>670</real>
+			<real>625</real>
 			<key>ypos</key>
-			<real>635</real>
+			<real>605</real>
 		</dict>
 		<key>64249F79-8A34-461C-A40E-9BC13FD3D4B4</key>
 		<dict>
@@ -9870,7 +9795,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 		<key>643CDD16-1447-426E-B6BF-9E4375F3D684</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>xpos</key>
 			<real>425</real>
 			<key>ypos</key>
@@ -10146,7 +10071,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 		<key>7EC2835E-B407-4A6D-9104-B7BFDDF811B9</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>note</key>
 			<string>sound</string>
 			<key>xpos</key>
@@ -10366,7 +10291,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 		<key>9888408F-4081-4003-8D82-85FF20EB8138</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>xpos</key>
 			<real>160</real>
 			<key>ypos</key>
@@ -10586,7 +10511,7 @@ DOUBLE CLICK to set hotkey</string>
 		<key>B61A7417-054B-434D-9C37-529A8A594F3E</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>xpos</key>
 			<real>185</real>
 			<key>ypos</key>
@@ -10722,7 +10647,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 		<key>C13CEBC9-226C-42DC-A2AA-77690DB36934</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>xpos</key>
 			<real>375</real>
 			<key>ypos</key>
@@ -10763,15 +10688,6 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<real>755</real>
 			<key>ypos</key>
 			<real>1990</real>
-		</dict>
-		<key>C9AB9048-51F7-4C7D-8F24-A30DBAA367F6</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>3</integer>
-			<key>xpos</key>
-			<real>595</real>
-			<key>ypos</key>
-			<real>665</real>
 		</dict>
 		<key>CA4E2034-4495-477F-B3EC-CCCFE06FF886</key>
 		<dict>
@@ -10903,17 +10819,6 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<real>305</real>
 			<key>ypos</key>
 			<real>2605</real>
-		</dict>
-		<key>DAE91752-D8FE-4DFF-BC2E-4A3DBD0BD1F6</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>3</integer>
-			<key>note</key>
-			<string>sound</string>
-			<key>xpos</key>
-			<real>1066</real>
-			<key>ypos</key>
-			<real>5480</real>
 		</dict>
 		<key>DBA6DBFB-3701-4BFC-B72C-406BF62DF384</key>
 		<dict>
@@ -11085,6 +10990,15 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>ypos</key>
 			<real>1465</real>
 		</dict>
+		<key>EA58397D-673F-4DA6-B773-D16D6053ED61</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>xpos</key>
+			<real>260</real>
+			<key>ypos</key>
+			<real>555</real>
+		</dict>
 		<key>EAD7CCC4-5ACE-4068-829A-EB0C62FCA3ED</key>
 		<dict>
 			<key>colorindex</key>
@@ -11229,17 +11143,6 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<real>825</real>
 			<key>ypos</key>
 			<real>3800</real>
-		</dict>
-		<key>FD18D249-0CD1-44B4-B974-B31B499DD2EB</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>3</integer>
-			<key>note</key>
-			<string>add append-prefix</string>
-			<key>xpos</key>
-			<real>280</real>
-			<key>ypos</key>
-			<real>555</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
@@ -11466,7 +11369,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 				<false/>
 			</dict>
 			<key>description</key>
-			<string>String to insert before content appended to the Scratchpad. Does accept dynamic content like the current date or time when you use Alfred's Placeholder Syntax. See: https://www.alfredapp.com/help/workflows/advanced/placeholders/#date-time</string>
+			<string>String to insert before content appended to the Scratchpad.</string>
 			<key>label</key>
 			<string>Scratchpad Append Prefix</string>
 			<key>type</key>
@@ -11738,8 +11641,8 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 	<array>
 		<string>vault_path</string>
 		<string>create_in_new_tab</string>
-		<string>vault_name_ENC</string>
 		<string>selected_text</string>
+		<string>vault_name_ENC</string>
 	</array>
 	<key>version</key>
 	<string>3.2.2</string>

@@ -1,11 +1,11 @@
 #!/usr/bin/env osascript -l JavaScript
-function run (argv) {
+function run(argv) {
 	ObjC.import("stdlib");
 
 	const obsiRunningAlready = Application("Obsidian").running();
 
 	// import variables
-	const input = argv.join("").trim();
+	const input = argv.join("").trim(); // trim to remove trailing \n
 	const relativePath = input.split("#")[0];
 	const heading = input.split("#")[1];
 	const vaultNameENC = $.getenv("vault_name_ENC");
@@ -16,7 +16,7 @@ function run (argv) {
 
 	const app = Application.currentApplication();
 	app.includeStandardAdditions = true;
-	app.openLocation (urlScheme);
+	app.openLocation(urlScheme);
 
 	// press 'Esc' to leave settings menu
 	if (obsiRunningAlready) Application("System Events").keyCode(53); // eslint-disable-line no-magic-numbers
