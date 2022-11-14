@@ -72,6 +72,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>0884C587-3452-45CA-94B3-6C10D113D381</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>57CACB5D-8848-4706-9B61-3C0AFDA26C17</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>099D27EE-A12C-4248-B4EC-C46C34F5415E</key>
 		<array>
 			<dict>
@@ -155,19 +168,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>4D7CE883-A32F-45EC-BC4A-106918BD64AF</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>18CEC3E9-303B-43A2-812F-579FCD8F1F9A</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>57CACB5D-8848-4706-9B61-3C0AFDA26C17</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1693,19 +1693,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>87F25EEF-FBA4-4F94-AAEF-DBA71CD066AC</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>57CACB5D-8848-4706-9B61-3C0AFDA26C17</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>88723AC0-4348-4B23-AFD7-FEFE6C532A94</key>
 		<array>
 			<dict>
@@ -1972,19 +1959,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>E4A544CF-8ADF-4C42-A06F-AC379CC66B7B</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>9FF8D4E6-7A5E-4736-9976-17C280BC574A</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>87F25EEF-FBA4-4F94-AAEF-DBA71CD066AC</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -2285,19 +2259,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>2FD866C2-DDB1-4C2D-A420-3A580FBC60D2</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>BB3A12AE-1D70-48E3-852C-24D0C8E27A93</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>18CEC3E9-303B-43A2-812F-579FCD8F1F9A</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -6904,78 +6865,6 @@ echo "$backup"</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>keyword</key>
-				<string>ocss</string>
-				<key>subtext</key>
-				<string></string>
-				<key>text</key>
-				<string>📂 Open CSS Snippet Folder</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>BB3A12AE-1D70-48E3-852C-24D0C8E27A93</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>openwith</key>
-				<string></string>
-				<key>sourcefile</key>
-				<string>{var:vault_path}/.obsidian/snippets</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openfile</string>
-			<key>uid</key>
-			<string>18CEC3E9-303B-43A2-812F-579FCD8F1F9A</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>openwith</key>
-				<string></string>
-				<key>sourcefile</key>
-				<string>{var:vault_path}/.obsidian/themes</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openfile</string>
-			<key>uid</key>
-			<string>87F25EEF-FBA4-4F94-AAEF-DBA71CD066AC</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>keyword</key>
-				<string>ocss</string>
-				<key>subtext</key>
-				<string></string>
-				<key>text</key>
-				<string>📂 Open CSS Themes Folder</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>9FF8D4E6-7A5E-4736-9976-17C280BC574A</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>autopaste</key>
 				<false/>
 				<key>clipboardtext</key>
@@ -8967,7 +8856,7 @@ Version 3 of this workflow uses the new Alfred 5 User Configuration. If you firs
 			<key>xpos</key>
 			<real>555</real>
 			<key>ypos</key>
-			<real>7700</real>
+			<real>7245</real>
 		</dict>
 		<key>0645AAB4-66F5-4149-A92B-C58A80B649C7</key>
 		<dict>
@@ -8985,7 +8874,7 @@ Version 3 of this workflow uses the new Alfred 5 User Configuration. If you firs
 			<key>xpos</key>
 			<real>610</real>
 			<key>ypos</key>
-			<real>6240</real>
+			<real>5785</real>
 		</dict>
 		<key>08322EF6-E1E3-48DA-86F5-9C61C812529F</key>
 		<dict>
@@ -9001,9 +8890,9 @@ Version 3 of this workflow uses the new Alfred 5 User Configuration. If you firs
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<real>375</real>
+			<real>215</real>
 			<key>ypos</key>
-			<real>4560</real>
+			<real>4225</real>
 		</dict>
 		<key>099D27EE-A12C-4248-B4EC-C46C34F5415E</key>
 		<dict>
@@ -9012,7 +8901,7 @@ Version 3 of this workflow uses the new Alfred 5 User Configuration. If you firs
 			<key>xpos</key>
 			<real>890</real>
 			<key>ypos</key>
-			<real>5285</real>
+			<real>4910</real>
 		</dict>
 		<key>0B6B06C2-6914-4603-B703-5F8DA27FD029</key>
 		<dict>
@@ -9021,7 +8910,7 @@ Version 3 of this workflow uses the new Alfred 5 User Configuration. If you firs
 			<key>xpos</key>
 			<real>200</real>
 			<key>ypos</key>
-			<real>7085</real>
+			<real>6630</real>
 		</dict>
 		<key>0C46CBB1-C490-4F62-8CC4-F59D7B1016D6</key>
 		<dict>
@@ -9048,7 +8937,7 @@ Version 3 of this workflow uses the new Alfred 5 User Configuration. If you firs
 			<key>xpos</key>
 			<real>645</real>
 			<key>ypos</key>
-			<real>6570</real>
+			<real>6115</real>
 		</dict>
 		<key>0D4E8328-70EB-4B78-9879-93DEBEE99412</key>
 		<dict>
@@ -9081,7 +8970,7 @@ Version 3 of this workflow uses the new Alfred 5 User Configuration. If you firs
 			<key>xpos</key>
 			<real>250</real>
 			<key>ypos</key>
-			<real>8295</real>
+			<real>7840</real>
 		</dict>
 		<key>0F72D532-AAE1-48A3-85FC-A819F196DC3E</key>
 		<dict>
@@ -9090,7 +8979,7 @@ Version 3 of this workflow uses the new Alfred 5 User Configuration. If you firs
 			<key>xpos</key>
 			<real>310</real>
 			<key>ypos</key>
-			<real>5975</real>
+			<real>5520</real>
 		</dict>
 		<key>11CD2255-4E07-4648-8E5C-A59346A63EC0</key>
 		<dict>
@@ -9101,7 +8990,7 @@ Version 3 of this workflow uses the new Alfred 5 User Configuration. If you firs
 			<key>xpos</key>
 			<real>245</real>
 			<key>ypos</key>
-			<real>6920</real>
+			<real>6465</real>
 		</dict>
 		<key>152229B2-B1D8-44E8-9EF7-98B39FE56FD4</key>
 		<dict>
@@ -9110,7 +8999,7 @@ Version 3 of this workflow uses the new Alfred 5 User Configuration. If you firs
 			<key>xpos</key>
 			<real>195</real>
 			<key>ypos</key>
-			<real>7585</real>
+			<real>7130</real>
 		</dict>
 		<key>164B20C3-4277-490E-9EB2-DCE923784B89</key>
 		<dict>
@@ -9138,15 +9027,6 @@ Version 3 of this workflow uses the new Alfred 5 User Configuration. If you firs
 			<real>460</real>
 			<key>ypos</key>
 			<real>2975</real>
-		</dict>
-		<key>18CEC3E9-303B-43A2-812F-579FCD8F1F9A</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>xpos</key>
-			<real>190</real>
-			<key>ypos</key>
-			<real>4215</real>
 		</dict>
 		<key>1E26935C-F1F3-4C69-AEFA-3A0D9D18291F</key>
 		<dict>
@@ -9195,7 +9075,7 @@ Version 3 of this workflow uses the new Alfred 5 User Configuration. If you firs
 			<key>xpos</key>
 			<real>225</real>
 			<key>ypos</key>
-			<real>4745</real>
+			<real>4435</real>
 		</dict>
 		<key>23310407-0757-4547-AC30-83A9AF365D9D</key>
 		<dict>
@@ -9224,7 +9104,7 @@ Version 3 of this workflow uses the new Alfred 5 User Configuration. If you firs
 			<key>xpos</key>
 			<real>640</real>
 			<key>ypos</key>
-			<real>8680</real>
+			<real>8225</real>
 		</dict>
 		<key>260919C7-A9E6-4442-AEF6-E62D271910BF</key>
 		<dict>
@@ -9262,7 +9142,7 @@ Version 3 of this workflow uses the new Alfred 5 User Configuration. If you firs
 			<key>xpos</key>
 			<real>200</real>
 			<key>ypos</key>
-			<real>7465</real>
+			<real>7010</real>
 		</dict>
 		<key>2A4E4AA6-EBA8-4645-ADEC-62CA21AC7D9C</key>
 		<dict>
@@ -9273,7 +9153,7 @@ Version 3 of this workflow uses the new Alfred 5 User Configuration. If you firs
 			<key>xpos</key>
 			<real>35</real>
 			<key>ypos</key>
-			<real>7215</real>
+			<real>6760</real>
 		</dict>
 		<key>2B47640E-17AF-4D14-8F85-245407544D8E</key>
 		<dict>
@@ -9300,9 +9180,9 @@ Version 3 of this workflow uses the new Alfred 5 User Configuration. If you firs
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<real>375</real>
+			<real>215</real>
 			<key>ypos</key>
-			<real>4435</real>
+			<real>4100</real>
 		</dict>
 		<key>2C1D63BF-6BDE-49E3-880C-A23FE845879F</key>
 		<dict>
@@ -9320,7 +9200,7 @@ Version 3 of this workflow uses the new Alfred 5 User Configuration. If you firs
 			<key>xpos</key>
 			<real>35</real>
 			<key>ypos</key>
-			<real>7465</real>
+			<real>7010</real>
 		</dict>
 		<key>2EA7E709-7E6B-43B3-8B44-080685EFA44A</key>
 		<dict>
@@ -9331,7 +9211,7 @@ Version 3 of this workflow uses the new Alfred 5 User Configuration. If you firs
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>4715</real>
+			<real>4405</real>
 		</dict>
 		<key>2FB281A9-8BFA-4836-A2A9-73A46C3DE6DD</key>
 		<dict>
@@ -9342,7 +9222,7 @@ Version 3 of this workflow uses the new Alfred 5 User Configuration. If you firs
 			<key>xpos</key>
 			<real>250</real>
 			<key>ypos</key>
-			<real>7815</real>
+			<real>7360</real>
 		</dict>
 		<key>2FD866C2-DDB1-4C2D-A420-3A580FBC60D2</key>
 		<dict>
@@ -9351,7 +9231,7 @@ Version 3 of this workflow uses the new Alfred 5 User Configuration. If you firs
 			<key>xpos</key>
 			<real>1240</real>
 			<key>ypos</key>
-			<real>5555</real>
+			<real>5180</real>
 		</dict>
 		<key>30FE564E-5E90-4F98-87D8-EAEB63CECFB3</key>
 		<dict>
@@ -9369,7 +9249,7 @@ Version 3 of this workflow uses the new Alfred 5 User Configuration. If you firs
 			<key>xpos</key>
 			<real>555</real>
 			<key>ypos</key>
-			<real>7970</real>
+			<real>7515</real>
 		</dict>
 		<key>31F21F7E-7450-444B-B9FC-D46650DF6F17</key>
 		<dict>
@@ -9387,7 +9267,7 @@ Version 3 of this workflow uses the new Alfred 5 User Configuration. If you firs
 			<key>xpos</key>
 			<real>460</real>
 			<key>ypos</key>
-			<real>4715</real>
+			<real>4405</real>
 		</dict>
 		<key>3374CD2F-3B5A-4267-B71E-862533887D36</key>
 		<dict>
@@ -9398,7 +9278,7 @@ Version 3 of this workflow uses the new Alfred 5 User Configuration. If you firs
 			<key>xpos</key>
 			<real>245</real>
 			<key>ypos</key>
-			<real>6540</real>
+			<real>6085</real>
 		</dict>
 		<key>3375D306-A5E5-433F-9624-ECB93A8F9539</key>
 		<dict>
@@ -9409,7 +9289,7 @@ Version 3 of this workflow uses the new Alfred 5 User Configuration. If you firs
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>4465</real>
+			<real>4145</real>
 		</dict>
 		<key>3390E0CB-CE17-4CEB-848D-14C5547A6936</key>
 		<dict>
@@ -9445,7 +9325,7 @@ Version 3 of this workflow uses the new Alfred 5 User Configuration. If you firs
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>8585</real>
+			<real>8130</real>
 		</dict>
 		<key>392642B8-A259-495D-A715-AD6FE5DBE992</key>
 		<dict>
@@ -9454,7 +9334,7 @@ Version 3 of this workflow uses the new Alfred 5 User Configuration. If you firs
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>5600</real>
+			<real>5225</real>
 		</dict>
 		<key>39E83342-8818-474A-9AC2-27D0A97843EF</key>
 		<dict>
@@ -9463,7 +9343,7 @@ Version 3 of this workflow uses the new Alfred 5 User Configuration. If you firs
 			<key>xpos</key>
 			<real>340</real>
 			<key>ypos</key>
-			<real>7085</real>
+			<real>6630</real>
 		</dict>
 		<key>3CC54A98-B297-4BE8-8F53-22C52A7247B6</key>
 		<dict>
@@ -9505,7 +9385,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>xpos</key>
 			<real>190</real>
 			<key>ypos</key>
-			<real>4885</real>
+			<real>4575</real>
 		</dict>
 		<key>42201C8D-D1DE-4EA8-9EC8-7F92FDF17572</key>
 		<dict>
@@ -9516,7 +9396,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>xpos</key>
 			<real>245</real>
 			<key>ypos</key>
-			<real>6780</real>
+			<real>6325</real>
 		</dict>
 		<key>42744528-B755-4953-ADD5-05947D2FBFBF</key>
 		<dict>
@@ -9525,7 +9405,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>xpos</key>
 			<real>700</real>
 			<key>ypos</key>
-			<real>7700</real>
+			<real>7245</real>
 		</dict>
 		<key>4357CED9-9613-4872-AFBA-58629EB27D48</key>
 		<dict>
@@ -9556,7 +9436,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>8825</real>
+			<real>8370</real>
 		</dict>
 		<key>4666F95D-B06C-48CD-8FA2-9A795FAF23D7</key>
 		<dict>
@@ -9565,7 +9445,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>xpos</key>
 			<real>395</real>
 			<key>ypos</key>
-			<real>6670</real>
+			<real>6215</real>
 		</dict>
 		<key>46A5196E-D0B3-4D06-95AB-93FDA30C175D</key>
 		<dict>
@@ -9592,7 +9472,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>xpos</key>
 			<real>200</real>
 			<key>ypos</key>
-			<real>8825</real>
+			<real>8370</real>
 		</dict>
 		<key>48992F43-A163-41CB-9AD0-ED130267D058</key>
 		<dict>
@@ -9601,7 +9481,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>xpos</key>
 			<real>245</real>
 			<key>ypos</key>
-			<real>6425</real>
+			<real>5970</real>
 		</dict>
 		<key>4920FD05-4820-4CA1-A792-3A785A3BA6C8</key>
 		<dict>
@@ -9668,7 +9548,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>xpos</key>
 			<real>665</real>
 			<key>ypos</key>
-			<real>5940</real>
+			<real>5485</real>
 		</dict>
 		<key>4DFA3143-56A4-4661-8DF9-4103FFA7D703</key>
 		<dict>
@@ -9688,7 +9568,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>xpos</key>
 			<real>195</real>
 			<key>ypos</key>
-			<real>7700</real>
+			<real>7245</real>
 		</dict>
 		<key>503B3F91-98A0-4357-92F2-A88BD6EDB404</key>
 		<dict>
@@ -9710,7 +9590,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>xpos</key>
 			<real>770</real>
 			<key>ypos</key>
-			<real>6240</real>
+			<real>5785</real>
 		</dict>
 		<key>507B53E2-BBE0-4CD6-81F0-570EA461C871</key>
 		<dict>
@@ -9746,7 +9626,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>xpos</key>
 			<real>250</real>
 			<key>ypos</key>
-			<real>8185</real>
+			<real>7730</real>
 		</dict>
 		<key>560E177F-C4A4-432D-A640-5A15B7048CB8</key>
 		<dict>
@@ -9755,7 +9635,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>xpos</key>
 			<real>545</real>
 			<key>ypos</key>
-			<real>4885</real>
+			<real>4575</real>
 		</dict>
 		<key>57322297-1206-4FF2-99BA-FD0E76398989</key>
 		<dict>
@@ -9771,9 +9651,9 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>colorindex</key>
 			<integer>6</integer>
 			<key>xpos</key>
-			<real>950</real>
+			<real>1015</real>
 			<key>ypos</key>
-			<real>4095</real>
+			<real>3945</real>
 		</dict>
 		<key>586CA10A-CD8A-4C01-8388-351A83CC9B09</key>
 		<dict>
@@ -9791,7 +9671,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>xpos</key>
 			<real>520</real>
 			<key>ypos</key>
-			<real>5555</real>
+			<real>5180</real>
 		</dict>
 		<key>59F6D45C-8613-4D9A-9D10-F66F46506215</key>
 		<dict>
@@ -9800,7 +9680,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>xpos</key>
 			<real>220</real>
 			<key>ypos</key>
-			<real>5600</real>
+			<real>5225</real>
 		</dict>
 		<key>5A09F715-0609-4CD9-A1B8-B7677229F80B</key>
 		<dict>
@@ -9818,7 +9698,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>xpos</key>
 			<real>35</real>
 			<key>ypos</key>
-			<real>7345</real>
+			<real>6890</real>
 		</dict>
 		<key>5BB5222F-DF30-4BC4-9A10-9CC6B1EFA4E4</key>
 		<dict>
@@ -9827,7 +9707,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>xpos</key>
 			<real>295</real>
 			<key>ypos</key>
-			<real>4715</real>
+			<real>4405</real>
 		</dict>
 		<key>5C1918E9-6508-4076-8D79-716B47ACFC20</key>
 		<dict>
@@ -9836,7 +9716,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>xpos</key>
 			<real>1170</real>
 			<key>ypos</key>
-			<real>6130</real>
+			<real>5675</real>
 		</dict>
 		<key>5E1194F1-12BA-456E-8511-C5708AE07906</key>
 		<dict>
@@ -9845,7 +9725,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>xpos</key>
 			<real>200</real>
 			<key>ypos</key>
-			<real>7215</real>
+			<real>6760</real>
 		</dict>
 		<key>5E2BFA74-9185-4C41-82B0-274EB3C261BD</key>
 		<dict>
@@ -9854,7 +9734,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>xpos</key>
 			<real>735</real>
 			<key>ypos</key>
-			<real>5410</real>
+			<real>5035</real>
 		</dict>
 		<key>5EF4465D-1198-4857-BFAD-B843B6339E84</key>
 		<dict>
@@ -9909,7 +9789,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>xpos</key>
 			<real>250</real>
 			<key>ypos</key>
-			<real>7945</real>
+			<real>7490</real>
 		</dict>
 		<key>624B592C-7815-4AE9-84DA-8EB7AD964966</key>
 		<dict>
@@ -9988,7 +9868,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>xpos</key>
 			<real>320</real>
 			<key>ypos</key>
-			<real>6110</real>
+			<real>5655</real>
 		</dict>
 		<key>6A8AE7C9-2FE9-45DD-8CCC-69B6146E26F7</key>
 		<dict>
@@ -9999,7 +9879,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>6080</real>
+			<real>5625</real>
 		</dict>
 		<key>6B3A98B8-CA8A-4745-AA31-24F1A7C7BF86</key>
 		<dict>
@@ -10008,7 +9888,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>xpos</key>
 			<real>395</real>
 			<key>ypos</key>
-			<real>6780</real>
+			<real>6325</real>
 		</dict>
 		<key>6EB09DCF-CB1C-42D8-9CFF-90E7EAF28FBA</key>
 		<dict>
@@ -10039,7 +9919,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>xpos</key>
 			<real>555</real>
 			<key>ypos</key>
-			<real>7840</real>
+			<real>7385</real>
 		</dict>
 		<key>72551A9E-43E8-4462-9CB0-D5C419B4AEA2</key>
 		<dict>
@@ -10050,7 +9930,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>6390</real>
+			<real>5935</real>
 		</dict>
 		<key>72AACC40-46A8-4203-9BD5-B16971C30181</key>
 		<dict>
@@ -10243,7 +10123,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>xpos</key>
 			<real>185</real>
 			<key>ypos</key>
-			<real>7845</real>
+			<real>7390</real>
 		</dict>
 		<key>85FB81E3-166A-4AFB-A0F4-E9ADF2A6DBAB</key>
 		<dict>
@@ -10252,7 +10132,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>xpos</key>
 			<real>200</real>
 			<key>ypos</key>
-			<real>7345</real>
+			<real>6890</real>
 		</dict>
 		<key>860C2D5F-C032-49DF-812C-2973A0E3F3E8</key>
 		<dict>
@@ -10279,16 +10159,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>xpos</key>
 			<real>875</real>
 			<key>ypos</key>
-			<real>8025</real>
-		</dict>
-		<key>87F25EEF-FBA4-4F94-AAEF-DBA71CD066AC</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>xpos</key>
-			<real>190</real>
-			<key>ypos</key>
-			<real>4335</real>
+			<real>7570</real>
 		</dict>
 		<key>88723AC0-4348-4B23-AFD7-FEFE6C532A94</key>
 		<dict>
@@ -10315,7 +10186,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>xpos</key>
 			<real>245</real>
 			<key>ypos</key>
-			<real>6670</real>
+			<real>6215</real>
 		</dict>
 		<key>8A0787B6-CC86-4694-BB26-C626130438BE</key>
 		<dict>
@@ -10324,7 +10195,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>5310</real>
+			<real>4935</real>
 		</dict>
 		<key>8BC09525-BB68-46E3-A7E2-C0E5C489FF60</key>
 		<dict>
@@ -10351,7 +10222,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>8705</real>
+			<real>8250</real>
 		</dict>
 		<key>8DD30BCA-F11D-415E-8DFA-F40BD34857F9</key>
 		<dict>
@@ -10369,7 +10240,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>7700</real>
+			<real>7245</real>
 		</dict>
 		<key>902431F8-34D6-476A-8917-EFF85864F369</key>
 		<dict>
@@ -10378,7 +10249,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>xpos</key>
 			<real>885</real>
 			<key>ypos</key>
-			<real>4795</real>
+			<real>4485</real>
 		</dict>
 		<key>90B9D6E4-3DA5-43AE-9517-49A1B96BD0A2</key>
 		<dict>
@@ -10414,7 +10285,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>xpos</key>
 			<real>300</real>
 			<key>ypos</key>
-			<real>5845</real>
+			<real>5390</real>
 		</dict>
 		<key>9475705F-31E2-4553-A05B-A6FCA919E4E6</key>
 		<dict>
@@ -10441,7 +10312,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>xpos</key>
 			<real>160</real>
 			<key>ypos</key>
-			<real>8325</real>
+			<real>7870</real>
 		</dict>
 		<key>99CFB472-ADBD-4D50-9A4E-70BCE3B09355</key>
 		<dict>
@@ -10487,15 +10358,6 @@ DOUBLE CLICK to set hotkey</string>
 			<key>ypos</key>
 			<real>1810</real>
 		</dict>
-		<key>9FF8D4E6-7A5E-4736-9976-17C280BC574A</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>xpos</key>
-			<real>30</real>
-			<key>ypos</key>
-			<real>4335</real>
-		</dict>
 		<key>A170DF0F-C1AD-46DF-9738-FF54AA497695</key>
 		<dict>
 			<key>colorindex</key>
@@ -10503,7 +10365,7 @@ DOUBLE CLICK to set hotkey</string>
 			<key>xpos</key>
 			<real>200</real>
 			<key>ypos</key>
-			<real>8705</real>
+			<real>8250</real>
 		</dict>
 		<key>A19798F1-4D8F-4DF9-B8C7-CE52542C5806</key>
 		<dict>
@@ -10534,7 +10396,7 @@ DOUBLE CLICK to set hotkey</string>
 			<key>xpos</key>
 			<real>540</real>
 			<key>ypos</key>
-			<real>6780</real>
+			<real>6325</real>
 		</dict>
 		<key>A3384012-6E44-47C2-9CB5-8067AEE35F34</key>
 		<dict>
@@ -10554,16 +10416,16 @@ DOUBLE CLICK to set hotkey</string>
 			<key>xpos</key>
 			<real>245</real>
 			<key>ypos</key>
-			<real>6315</real>
+			<real>5860</real>
 		</dict>
 		<key>A5ADC808-2010-447C-9B0A-B4C14C3801EB</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<real>515</real>
+			<real>355</real>
 			<key>ypos</key>
-			<real>4435</real>
+			<real>4100</real>
 		</dict>
 		<key>A5BA80AA-D2FF-43BC-AE70-4C34D0BB4E20</key>
 		<dict>
@@ -10610,7 +10472,7 @@ DOUBLE CLICK to set hotkey</string>
 			<key>xpos</key>
 			<real>200</real>
 			<key>ypos</key>
-			<real>8465</real>
+			<real>8010</real>
 		</dict>
 		<key>B0AB019E-6AC5-494E-9F31-F818F9BFEE21</key>
 		<dict>
@@ -10692,7 +10554,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>xpos</key>
 			<real>200</real>
 			<key>ypos</key>
-			<real>8585</real>
+			<real>8130</real>
 		</dict>
 		<key>B7C53241-E63D-4D66-8A15-57B0DD1C72AC</key>
 		<dict>
@@ -10728,16 +10590,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>xpos</key>
 			<real>890</real>
 			<key>ypos</key>
-			<real>5410</real>
-		</dict>
-		<key>BB3A12AE-1D70-48E3-852C-24D0C8E27A93</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>xpos</key>
-			<real>30</real>
-			<key>ypos</key>
-			<real>4215</real>
+			<real>5035</real>
 		</dict>
 		<key>BE35B236-05AF-434F-93F0-FC5A62A4F777</key>
 		<dict>
@@ -10746,7 +10599,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>7585</real>
+			<real>7130</real>
 		</dict>
 		<key>BF2C7CBD-67E0-45CC-8948-E68291FF2B50</key>
 		<dict>
@@ -10755,7 +10608,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>xpos</key>
 			<real>250</real>
 			<key>ypos</key>
-			<real>8075</real>
+			<real>7620</real>
 		</dict>
 		<key>BF450A0C-67CF-4B13-8B0D-D94298462DE7</key>
 		<dict>
@@ -10788,7 +10641,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>xpos</key>
 			<real>450</real>
 			<key>ypos</key>
-			<real>6080</real>
+			<real>5625</real>
 		</dict>
 		<key>C13CEBC9-226C-42DC-A2AA-77690DB36934</key>
 		<dict>
@@ -10824,7 +10677,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>xpos</key>
 			<real>380</real>
 			<key>ypos</key>
-			<real>6110</real>
+			<real>5655</real>
 		</dict>
 		<key>C9A73A09-3030-4283-9C89-2EE7C36BE059</key>
 		<dict>
@@ -10855,7 +10708,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>xpos</key>
 			<real>520</real>
 			<key>ypos</key>
-			<real>5410</real>
+			<real>5035</real>
 		</dict>
 		<key>CBDB1022-D4BB-4453-8989-E27F3BDA12B6</key>
 		<dict>
@@ -10904,16 +10757,16 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>xpos</key>
 			<real>450</real>
 			<key>ypos</key>
-			<real>5845</real>
+			<real>5390</real>
 		</dict>
 		<key>D0041722-6FE5-480D-B443-FC3F8C71CD53</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<real>200</real>
+			<real>455</real>
 			<key>ypos</key>
-			<real>4605</real>
+			<real>4280</real>
 		</dict>
 		<key>D3A85314-C314-49E8-BA70-08DD01FC2E21</key>
 		<dict>
@@ -10984,7 +10837,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>5060</real>
+			<real>4750</real>
 		</dict>
 		<key>DD86C0A5-6797-45E0-91CF-BEA8262CCDD1</key>
 		<dict>
@@ -10993,7 +10846,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>xpos</key>
 			<real>405</real>
 			<key>ypos</key>
-			<real>4885</real>
+			<real>4575</real>
 		</dict>
 		<key>DDE15544-E0CA-4DB0-92C0-F7861EE46206</key>
 		<dict>
@@ -11022,7 +10875,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>8005</real>
+			<real>7550</real>
 		</dict>
 		<key>E2A349EC-FD2E-4562-A58E-8D47A46956F6</key>
 		<dict>
@@ -11049,7 +10902,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>xpos</key>
 			<real>520</real>
 			<key>ypos</key>
-			<real>5060</real>
+			<real>4750</real>
 		</dict>
 		<key>E4A544CF-8ADF-4C42-A06F-AC379CC66B7B</key>
 		<dict>
@@ -11096,7 +10949,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>xpos</key>
 			<real>695</real>
 			<key>ypos</key>
-			<real>7905</real>
+			<real>7450</real>
 		</dict>
 		<key>E7DAD30E-15A3-46BE-8534-7F5ABE826FC6</key>
 		<dict>
@@ -11116,7 +10969,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>8465</real>
+			<real>8010</real>
 		</dict>
 		<key>E98B2FB0-60FA-4F2F-9159-6B774AD0277E</key>
 		<dict>
@@ -11163,7 +11016,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>xpos</key>
 			<real>520</real>
 			<key>ypos</key>
-			<real>5285</real>
+			<real>4910</real>
 		</dict>
 		<key>EE4720A7-4048-4A92-B0AA-8F811AE57C1E</key>
 		<dict>
@@ -11192,7 +11045,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>xpos</key>
 			<real>180</real>
 			<key>ypos</key>
-			<real>5325</real>
+			<real>4950</real>
 		</dict>
 		<key>EFE0C492-DFD2-4B30-85A5-C36E50F63B7E</key>
 		<dict>
@@ -11257,9 +11110,9 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<real>280</real>
+			<real>220</real>
 			<key>ypos</key>
-			<real>3220</real>
+			<real>3215</real>
 		</dict>
 		<key>F8A28B5B-0774-406B-BD27-E4F0C69FD6A2</key>
 		<dict>
@@ -11288,7 +11141,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>xpos</key>
 			<real>395</real>
 			<key>ypos</key>
-			<real>7835</real>
+			<real>7380</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
