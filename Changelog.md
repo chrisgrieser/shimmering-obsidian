@@ -1,3 +1,6 @@
+- 2022-11-14	release 3.2.3
+- 2022-11-14	partial fix for #101
+- 2022-11-14	`ocss` now only opens snippets
 - 2022-11-04	release 3.2.2
 - 2022-11-04	allow for multiple workspaces to be spellchecked
 - 2022-11-04	release 3.2.1

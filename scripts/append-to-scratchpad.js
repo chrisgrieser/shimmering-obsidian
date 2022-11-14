@@ -64,7 +64,7 @@ function run(argv) {
 	const scratchpadLines = scratchpadContent.split("\n");
 	const headingLineNo = scratchpadLines
 		.map(line => {
-			const lineIsHeading = line.match(/^#+ /)
+			const lineIsHeading = line.match(/^#+ /);
 			if (lineIsHeading) return line.replace(/^#+ /gm, "");
 			return ""; // ensures that a line with the same content as a heading isn't detected
 		})
