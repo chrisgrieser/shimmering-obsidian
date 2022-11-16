@@ -1223,7 +1223,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>75571120-8CAD-415A-8B57-F7BDDE3A629E</string>
+				<string>4B017801-8C1B-40FF-972D-EA7CA117420C</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -4387,21 +4387,10 @@ set parameter to do shell script "echo " &amp; quoted form of (system attribute 
 			<integer>1</integer>
 		</dict>
 		<dict>
-			<key>config</key>
-			<dict>
-				<key>externaltriggerid</key>
-				<string>update-obsidian-workflow</string>
-				<key>passinputasargument</key>
-				<true/>
-				<key>passvariables</key>
-				<true/>
-				<key>workflowbundleid</key>
-				<string>self</string>
-			</dict>
 			<key>type</key>
-			<string>alfred.workflow.output.callexternaltrigger</string>
+			<string>alfred.workflow.utility.hidealfred</string>
 			<key>uid</key>
-			<string>75571120-8CAD-415A-8B57-F7BDDE3A629E</string>
+			<string>4B017801-8C1B-40FF-972D-EA7CA117420C</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -9492,6 +9481,17 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>ypos</key>
 			<real>315</real>
 		</dict>
+		<key>4B017801-8C1B-40FF-972D-EA7CA117420C</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>note</key>
+			<string>needed for folders</string>
+			<key>xpos</key>
+			<real>1865</real>
+			<key>ypos</key>
+			<real>1210</real>
+		</dict>
 		<key>4B2FBAC0-BF9C-46B5-82A3-423036076906</key>
 		<dict>
 			<key>colorindex</key>
@@ -9942,15 +9942,6 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<real>2134</real>
 			<key>ypos</key>
 			<real>1560</real>
-		</dict>
-		<key>75571120-8CAD-415A-8B57-F7BDDE3A629E</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>xpos</key>
-			<real>1855</real>
-			<key>ypos</key>
-			<real>1180</real>
 		</dict>
 		<key>76BE7619-FDB9-4324-81C7-6570B534A123</key>
 		<dict>
