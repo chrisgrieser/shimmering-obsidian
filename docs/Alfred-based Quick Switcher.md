@@ -5,22 +5,23 @@ The Alfred-based Quick Switcher is basically an enhanced version of [Obsidian's 
 
 ## Table of Contents
 <!--toc:start-->
-  - [How the Search works](#how-the-search-works)
-  - [Main Search](#main-search)
-    - [Search for Notes](#search-for-notes)
-    - [Smart Queries](#smart-queries)
-    - [Search for Aliases](#search-for-aliases)
-    - [Search for Folders](#search-for-folders)
-    - [Search for Headings](#search-for-headings)
-  - [Browse Links of a Note](#browse-links-of-a-note)
-  - [Search Notes via their Tags](#search-notes-via-their-tags)
-  - [Search Starred Files](#search-starred-files)
-  - [Search Recent Files](#search-recent-files)
-  - [Search for Attachments](#search-for-attachments)
-  - [Extra Features](#extra-features)
-    - [Supercharged Icons](#supercharged-icons)
-    - [Vault Search as Alfred Fallback](#vault-search-as-alfred-fallback)
-    - [Previewing Notes via Quicklook](#previewing-notes-via-quicklook)
+- [How the Search works](#how-the-search-works)
+- [Main Search](#main-search)
+  - [Search for Notes](#search-for-notes)
+  - [Smart Queries](#smart-queries)
+  - [Search for Aliases](#search-for-aliases)
+  - [Search for Folders](#search-for-folders)
+  - [Search for Headings](#search-for-headings)
+- [Browse Links of a Note](#browse-links-of-a-note)
+- [Search Notes via their Tags](#search-notes-via-their-tags)
+- [Search Starred Files](#search-starred-files)
+- [Search Recent Files](#search-recent-files)
+- [Search for Attachments](#search-for-attachments)
+- [Extra Features](#extra-features)
+  - [Supercharged Icons](#supercharged-icons)
+  - [Privacy Mode](#privacy-mode)
+  - [Vault Search as Alfred Fallback](#vault-search-as-alfred-fallback)
+  - [Previewing Notes via QuickLook](#previewing-notes-via-quicklook)
 <!--toc:end-->
 
 ## How the Search works
@@ -48,12 +49,11 @@ This works similar to Obsidian's built-in *Quick Switcher*, but can be triggered
 
 ### Search for Aliases
 This command also looks for **aliases**, when they are [defined in the YAML-Header](https://help.obsidian.md/How+to/Add+aliases+to+note#Set+aliases).
-- As compared to version 1.x, there is no delay anymore!
 - Add `alias` to your search query, to only display aliases, e.g., `o obsidian alias` will only display notes that have the *alias* `obsidian`.
 
 ### Search for Folders
 When **selecting a folder**, you will **“browse”** the selected folder – this means that you are now searching only for files and folders inside that folder.
-- When browsing a folder, you also have the ⌥ion to create a new note *in that folder*. Will use the template note defined in the [workflow configuration](Workflow%20Configuration.md#New-Note-Creation) `template_note_path`.
+- When browsing a folder, you also have the ⌥ion to create a new note *in that folder*. Will use the template note defined with the setting `template_note_path`.
 - Furthermore, you can go up and browse the *parent* folder of the current folder. Basically, you can fully navigate the folder structure of your vault via Alfred.
 - Add `folder` to your search query, to only display folders, e.g., `o foobar folder` will only display *folder* that have `foobar` in their name.
 - When you are browsing inside a folder, use the query `..` or the `new` to quickly access the item for going up to the parent folder or creating a new note in that folder, respectively.
@@ -85,7 +85,7 @@ Displayed alongside the other search results are all headings in your vault. Sel
 	- Select a tag with `↵` to display & search all notes with that tag.
 	- In the subsequent list of your notes, all the modifiers (`⌘/⌃/⌥/fn/⇧ + ↵`) apply the same way as they do with the `o` search.
 	- Press `⌘ + ↵` instead to open Obsidian's search pane and search for the tag there.
--  Use the workflow configuration to set whether nested tags should be merged with their parent or not.
+- Use the workflow configuration to set whether nested tags should be merged with their parent or not.
 
 ## Search Starred Files
 **`os`: Search `s`tarred Files and Searches**
@@ -102,7 +102,7 @@ Displayed alongside the other search results are all headings in your vault. Sel
 **`oa`: `a`ttachment Search**
 - Searches exclusively for attachments (i.e., non-Markdown files) in your vault. `↵` will open the selected file in Obsidian, if [Obsidian is able to open them](https://help.obsidian.md/Advanced+topics/Accepted+file+formats). Otherwise, they will be opened in your system's default app for the respective file type. 
 - The modifiers `⌘/⌃/⌥ + ↵` and the previewing (`⇧` or `⌘y`) work the same way as with the main `o` search.
-- The `fn + ↵` however, works differently; it opens the file in system's default app, *regardless* whether Obsidian can open the file or not.
+- The `fn + ↵` combination, however, works differently; it opens the file in system's default app, *regardless* whether Obsidian can open the file or not.
 
 ## Extra Features
 
@@ -119,7 +119,7 @@ You can prepend/append icons to the results of any search based on the notes' ta
 	seedling,,🌱
 	```
 
-	...will result in:
+	…will result in:
 
 	```text
 	💻 Filename1
@@ -128,12 +128,15 @@ You can prepend/append icons to the results of any search based on the notes' ta
 	Filename4 🌱
 	```
 
+### Privacy Mode
+When the "Privacy Mode" checkbox is enabled, all notes with the cssclass `private` will be censored when performing a search. This setting is meant to be enabled temporarily, e.g., during screen sharing.
+
 ### Vault Search as Alfred Fallback
 The main search (`o`) can also be used as [Fallback Search for Alfred](https://www.alfredapp.com/help/features/default-results/fallback-searches/), basically a search that shows up when any Alfred search has no result.
 
 ![fallback search](images/fallback-search.png)
 
-### Previewing Notes via Quicklook
+### Previewing Notes via QuickLook
 To avoid accidentally triggering the Quick Look feature, I suggest you turn off activating Quick Look via shift and use `⌘ + Y` instead. You can do so with in the Alfred Settings under `Features → Previews`:
 
 <img src="https://i.imgur.com/hDut8wK.png" alt="" width=60%>

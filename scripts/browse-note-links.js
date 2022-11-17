@@ -58,7 +58,7 @@ function run () {
 			.filter(l => l.length !== 0);
 	}
 
-	// ---------------------------
+	//───────────────────────────────────────────────────────────────────────────
 
 	// create input note JSON
 	const inputPath = readFile($.getenv("alfred_workflow_data") + "/buffer_inputPath");
@@ -167,8 +167,16 @@ function run () {
 		if (linkList.includes (relativePath)) linkIcon += "🔗 ";
 		if (backlinkList.includes (relativePath)) linkIcon += "⬅️ ";
 
+		// exclude cssclass: private
+		let displayName = filename;
+		const censorChar = $.getenv("censor_char");
+		const isPrivateNote = file.frontmatter?.cssclass?.includes("private");
+		const privacyModeOn = $.getenv("privacy_mode") === "1";
+		const applyCensoring = isPrivateNote && privacyModeOn;
+		if (applyCensoring) displayName = filename.replace(/./g, censorChar);
+
 		jsonArray.push({
-			"title": linkIcon + emoji + superchargedIcon + filename + superchargedIcon2,
+			"title": linkIcon + emoji + superchargedIcon + displayName + superchargedIcon2,
 			"match": additionalMatcher + alfredMatcher(filename),
 			"subtitle": "▸ " + parentFolder(relativePath),
 			"type": "file:skipcheck",

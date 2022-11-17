@@ -11615,9 +11615,30 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>variable</key>
 			<string>auto_update</string>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<false/>
+				<key>required</key>
+				<false/>
+				<key>text</key>
+				<string>on</string>
+			</dict>
+			<key>description</key>
+			<string>While enabled, all Notes with the cssclass "private" will be censored. This setting is meant to be enabled temporarily when sharing the screen.</string>
+			<key>label</key>
+			<string>Privacy Mode</string>
+			<key>type</key>
+			<string>checkbox</string>
+			<key>variable</key>
+			<string>privacy_mode</string>
+		</dict>
 	</array>
 	<key>variables</key>
 	<dict>
+		<key>censor_char</key>
+		<string>▉</string>
 		<key>create_in_new_tab</key>
 		<string></string>
 		<key>selected_text</key>

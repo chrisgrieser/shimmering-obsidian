@@ -69,15 +69,13 @@ if (readFile(starredJSON) !== "") {
 			.map (item => item.path);
 }
 
-// Excluded Files
+// Excluded Files: Obsi Setting
 const excludeFilter = JSON.parse(readFile(excludeFilterJSON)).userIgnoreFilters;
 console.log("excluded files: " + excludeFilter);
 
-// ---------------------------------
-// Excluded Files & Ignored Headings
-// ---------------------------------
+//──────────────────────────────────────────────────────────────────────────────
 
-// folder search
+// FOLDER SEARCH
 let folderArray = app.doShellScript(`find "${pathToCheck}" -type d -mindepth 1 -not -path "*/.*"`)
 	.split("\r"); // returns *absolute* paths
 if (!folderArray) folderArray = [];
@@ -101,15 +99,16 @@ if (excludeFilter?.length && folderArray?.length) {
 	});
 }
 
-// file search
+// FILE ARRAY
 let fileArray = JSON.parse (readFile(metadataJSON)); // returns file objects
+// excluded files (Obsi Setting)
 if (excludeFilter?.length) {
 	fileArray = fileArray.filter(file => {
 		let include = true;
 		excludeFilter.forEach(filter => {
 
 			const isRegexFilter = filter.startsWith("/");
-			// TODO: investigate properly how regex filter works in Obsidian to
+			// TODO: investigate how regex filter works in Obsidian to
 			// properly replicate the behavior
 
 			const relPath = file.relativePath;
@@ -120,9 +119,11 @@ if (excludeFilter?.length) {
 		return include;
 	});
 }
+
+// if in subfolder, filder files outside subfolder
 if (pathToCheck !== vaultPath) fileArray = fileArray.filter (f => f.relativePath.startsWith(currentFolder));
 
-// parse ignored headings setting
+// IGNORED HEADINGS
 const hLVLignore = $.getenv("h_lvl_ignore");
 const headingIgnore = [true];
 for (let i = 1; i < 7; i++) {
@@ -130,9 +131,8 @@ for (let i = 1; i < 7; i++) {
 	else headingIgnore.push(false);
 }
 
-// -------------------------------
-// Construction of JSON for Alfred
-// -------------------------------
+//──────────────────────────────────────────────────────────────────────────────
+// CONSTRUCTION OF JSON FOR ALFRED
 
 // FILES
 fileArray.forEach(file => {
@@ -175,9 +175,17 @@ fileArray.forEach(file => {
 	let linksSubtitle = "⛔️ Note without Outgoing Links or Backlinks";
 	if (hasLinks) linksSubtitle = "⇧: Browse Links in Note";
 
+	// exclude cssclass: private
+	let displayName = filename;
+	const censorChar = $.getenv("censor_char");
+	const isPrivateNote = file.frontmatter?.cssclass?.includes("private");
+	const privacyModeOn = $.getenv("privacy_mode") === "1";
+	const applyCensoring = isPrivateNote && privacyModeOn;
+	if (applyCensoring) displayName = filename.replace(/./g, censorChar);
+
 	// Notes (file names)
 	jsonArray.push({
-		"title": emoji + superchargedIcon + filename + superchargedIcon2,
+		"title": emoji + superchargedIcon + displayName + superchargedIcon2,
 		"match": alfredMatcher(filename) + tagMatcher + " filename name title",
 		"subtitle": "▸ " + parentFolder(relativePath),
 		"arg": relativePath,
@@ -196,10 +204,12 @@ fileArray.forEach(file => {
 	// Aliases
 	if (file.aliases) {
 		file.aliases.forEach(alias => {
+			let displayAlias = alias;
+			if (applyCensoring) displayAlias = displayAlias.replace(/./g, censorChar);
 			jsonArray.push({
-				"title": superchargedIcon + alias + superchargedIcon2,
+				"title": superchargedIcon + displayAlias + superchargedIcon2,
 				"match": additionalMatcher + "alias " + alfredMatcher(alias),
-				"subtitle": "↪ " + filename,
+				"subtitle": "↪ " + displayName,
 				"arg": relativePath,
 				"quicklookurl": absolutePath,
 				"type": "file:skipcheck",
@@ -222,14 +232,14 @@ fileArray.forEach(file => {
 		const lvl = heading.level;
 		if (headingIgnore[lvl]) return; // skips iteration if heading has been configured as ignore
 		iconpath = "icons/headings/h" + lvl.toString() + ".png";
-		const matchStr =
-			"h" + lvl.toString() + " " +
-			alfredMatcher(hName) + " ";
+		const matchStr = "h" + lvl.toString() + " " + alfredMatcher(hName) + " ";
+		let displayHeading = hName;
+		if (applyCensoring) displayHeading = displayHeading.replace(/./g, censorChar);
 
 		jsonArray.push({
-			"title": hName,
+			"title": displayHeading,
 			"match": matchStr,
-			"subtitle": "➣ " + filename,
+			"subtitle": "➣ " + displayName,
 			"arg": relativePath + "#" + hName,
 			"quicklookurl": absolutePath,
 			"type": "file:skipcheck",

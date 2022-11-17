@@ -95,9 +95,17 @@ fileArray.forEach(file => {
 	let linksSubtitle = "⛔️ Note without Outgoing Links or Backlinks";
 	if (hasLinks) linksSubtitle = "⇧: Browse Links in Note";
 
+	// exclude cssclass: private
+	let displayName = filename;
+	const censorChar = $.getenv("censor_char");
+	const isPrivateNote = file.frontmatter?.cssclass?.includes("private");
+	const privacyModeOn = $.getenv("privacy_mode") === "1";
+	const applyCensoring = isPrivateNote && privacyModeOn;
+	if (applyCensoring) displayName = filename.replace(/./g, censorChar);
+
 	// push result
 	jsonArray.push({
-		"title": emoji + superchargedIcon + filename + superchargedIcon2,
+		"title": emoji + superchargedIcon + displayName + superchargedIcon2,
 		"match": additionalMatcher + alfredMatcher(filename),
 		"subtitle": "▸ " + parentFolder(relativePath),
 		"arg": relativePath,
