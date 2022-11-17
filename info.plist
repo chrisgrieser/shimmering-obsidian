@@ -11504,7 +11504,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 				<true/>
 			</dict>
 			<key>description</key>
-			<string>Must be an integer. Maximum number of backups that should be stored at the backup destination folder. When the number is reached, every new backup cause the oldest backup to be deleted. (Decrease this number, when your backup folder becomes too big.)</string>
+			<string>Must be an integer. Maximum number of backups that should be stored at the backup destination folder. When the number is reached, every new backup causes the oldest backup to be deleted. (Decrease this number, when your backup folder becomes too big.)</string>
 			<key>label</key>
 			<string>Maximum number of backups</string>
 			<key>type</key>

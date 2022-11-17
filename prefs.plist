@@ -10,6 +10,8 @@
 	<string>h1 h2 h3 h4 h5 h6</string>
 	<key>input_append</key>
 	<string>clipboard</string>
+	<key>max_number_of_bkps</key>
+	<string>15</string>
 	<key>merge_nested_tags</key>
 	<true/>
 	<key>new_note_location</key>
