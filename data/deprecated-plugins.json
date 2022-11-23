@@ -1,30 +1,31 @@
 {
-	"sherlocked": [
-		"hotkey-helper",
-		"hover-external-link",
-		"code-block-copy",
-		"obsidian-code-copy",
-		"macOS-keyboard-nav-obsidian",
-		"cm-editor-syntax-highlight-obsidian",
-		"obsidian-system-dark-mode",
-		"open-note-to-window-title",
-		"image-window",
-		"obsidian-budget-wysiwyg",
-		"obsidian-tabs",
-		"obsidian-embedded-note-titles",
-		"obsidian-collapse-all-plugin",
-		"obsidian-native-scrollbars",
-		"obsidian-show-file-path",
-		"sliding-panes-obsidian",
-		"obsidian-codemirror-options"
-	],
-	"dysfunct": [
-		"obsidian-vale",
-		"obsidian-cursor-location-plugin",
-		"obsidian-text-expander",
-		"improved-obsidian-vimcursor"
-	],
-	"deprecated": [
-		"obsidian-prettify"
-	]
+  "sherlocked": [
+    "hotkey-helper",
+    "hover-external-link",
+    "code-block-copy",
+    "obsidian-code-copy",
+    "macOS-keyboard-nav-obsidian",
+    "cm-editor-syntax-highlight-obsidian",
+    "obsidian-system-dark-mode",
+    "open-note-to-window-title",
+    "image-window",
+    "obsidian-budget-wysiwyg",
+    "obsidian-tabs",
+    "obsidian-embedded-note-titles",
+    "obsidian-collapse-all-plugin",
+    "obsidian-native-scrollbars",
+    "obsidian-show-file-path",
+    "sliding-panes-obsidian",
+    "improved-vimcursor",
+    "obsidian-codemirror-options"
+  ],
+  "dysfunct": [
+    "obsidian-vale",
+    "obsidian-cursor-location-plugin",
+    "obsidian-text-expander",
+    "improved-obsidian-vimcursor"
+  ],
+  "deprecated": [
+    "obsidian-prettify"
+  ]
 }
