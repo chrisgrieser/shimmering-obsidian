@@ -11644,9 +11644,9 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 		<key>selected_text</key>
 		<string></string>
 		<key>vault_name_ENC</key>
-		<string>Main%20Vault</string>
+		<string>main-vault</string>
 		<key>vault_path</key>
-		<string>~/Main Vault</string>
+		<string>~/main-vault</string>
 	</dict>
 	<key>variablesdontexport</key>
 	<array>
