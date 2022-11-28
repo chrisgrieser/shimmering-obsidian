@@ -21,9 +21,8 @@ function run (argv) {
 
 	if ($.getenv("spellcheck-workspace") === "") return;
 
-	const workspacesToSpellcheck = $.getenv("workspace_to_spellcheck")
-		.split(",")
-		.map(workspace => workspace.trim());
+	const workspacesToSpellcheck = $.getenv("workspace_to_spellcheck").split(/, ?/);
+	console.log("workspacesToSpellcheck: " + workspacesToSpellcheck);
 
 	// abort and do nothing when workspaces are managed, spellcheck toggled, or no spellcheck-workspace defined
 	if (urlscheme.endsWith("workspaces%253Aopen-modal")) return;
