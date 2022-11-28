@@ -11218,7 +11218,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>colorindex</key>
 			<integer>7</integer>
 			<key>note</key>
-			<string>Quick Element Picker
+			<string>Open Browser Tab in Obsidian Surfing
 
 DOUBLE CLICK to set hotkey</string>
 			<key>xpos</key>
