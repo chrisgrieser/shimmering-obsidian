@@ -31,14 +31,14 @@ body:
       label: Debugging Log
       description: "You can get a debugging log by opening the workflow in Alfred preferences and pressing `cmd + D`. A small window will open up which will log everything happening during the execution of the Workflow. Use the malfunctioning part of the workflow once more, copy the content of the log window, and paste it here. If the debugging log is long, please attach it as file instead of pasting everything in here."
       render: Text
-      placeholder: 'If the log is long, you can also truncate the really long `Shimmering Obsidian[Script Filter]` line.'
+      placeholder: 'If the log is long, you can also truncate the really long `Shimmering Obsidian[Script Filter]` line or attach it as a file instead.'
     validations:
       required: true
   - type: textarea
     id: workflow-configuration-1
     attributes:
       label: Workflow Configuration 1
-      description: "Attach your workflow configuration file `prefs.plist`. You can find it by right-clicking the workflow in the Alfred settings, and then opening it in Finder."
+      description: "Please add a screenshot of all your [workflow configuration](https://www.alfredapp.com/help/workflows/workflow-configuration/)."
     validations:
       required: true
   - type: textarea
