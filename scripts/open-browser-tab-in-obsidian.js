@@ -24,5 +24,4 @@ function currentBrowserTab() {
 //──────────────────────────────────────────────────────────────────────────────
 
 const obsiSurfingURL = "obsidian://web-open?url=" + encodeURIComponent(currentBrowserTab().url);
-console.log("obsiSurfingURL: " + obsiSurfingURL);
 app.openLocation(obsiSurfingURL);
