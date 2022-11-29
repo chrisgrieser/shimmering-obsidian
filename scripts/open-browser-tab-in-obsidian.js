@@ -3,7 +3,7 @@ ObjC.import("stdlib");
 const app = Application.currentApplication();
 app.includeStandardAdditions = true;
 
-function currentBrowserTab() {
+function browserTab() {
 	const frontmostAppName = Application("System Events").applicationProcesses.where({ frontmost: true }).name()[0];
 	const frontmostApp = Application(frontmostAppName);
 	const chromiumVariants = ["Google Chrome", "Chromium", "Opera", "Vivaldi", "Brave Browser", "Microsoft Edge"];
@@ -23,5 +23,5 @@ function currentBrowserTab() {
 
 //──────────────────────────────────────────────────────────────────────────────
 
-const obsiSurfingURL = "obsidian://web-open?url=" + encodeURIComponent(currentBrowserTab().url);
+const obsiSurfingURL = "obsidian://web-open?url=" + encodeURIComponent(browserTab().url);
 app.openLocation(obsiSurfingURL);
