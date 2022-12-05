@@ -7722,11 +7722,11 @@ open "obsidian://advanced-uri?vault=$vault_name_ENC&amp;updateplugins=true"</str
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string>scripts/plugin-search.js</string>
+				<string>scripts/plugin-and-theme-search.js</string>
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
-				<string>Search Community Plugins...</string>
+				<string>Search Community Plugins &amp; Themes...</string>
 				<key>type</key>
 				<integer>8</integer>
 				<key>withspace</key>
