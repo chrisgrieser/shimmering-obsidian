@@ -4,8 +4,6 @@
 <dict>
 	<key>bundleid</key>
 	<string>de.chris-grieser.shimmering-obsidian</string>
-	<key>category</key>
-	<string>App-Enhance</string>
 	<key>connections</key>
 	<dict>
 		<key>03D4FDF8-2991-4C26-B8D3-14EE389B8822</key>
