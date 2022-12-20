@@ -17,13 +17,13 @@ function run (argv) {
 	Application("com.runningwithcrayons.Alfred").setConfiguration ("vault_path", {
 		toValue: vaultPath.replace(/\/Users\/[^/]*/, "~"),
 		inWorkflow: $.getenv("alfred_workflow_bundleid"),
-		exportable: false
+		exportable: false,
 	});
 
 	Application("com.runningwithcrayons.Alfred").setConfiguration ("vault_name_ENC", {
 		toValue: encodeURIComponent(vaultName),
 		inWorkflow: $.getenv("alfred_workflow_bundleid"),
-		exportable: false
+		exportable: false,
 	});
 
 	// error message

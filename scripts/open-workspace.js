@@ -52,7 +52,7 @@ workspaceArray.forEach(workspaceName => {
 			"cmd": {
 				"arg": workspaceSaveLoadURI,
 				"subtitle": "⌘: Save '" + currentWorkspace + "', then load",
-			}
+			},
 		},
 	});
 });

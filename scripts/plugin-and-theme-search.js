@@ -58,7 +58,7 @@ const deprecatedJSON = JSON.parse(readFile("./data/deprecated-plugins.json"));
 const deprecatedPlugins = [
 	...deprecatedJSON.sherlocked,
 	...deprecatedJSON.dysfunct,
-	...deprecatedJSON.deprecated
+	...deprecatedJSON.deprecated,
 ];
 
 //------------------------------------------------------------------------------

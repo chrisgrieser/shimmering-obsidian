@@ -1,3 +1,12 @@
+- 2022-12-20	release 3.3.0
+- 2022-12-20	validation for when no canvas exists
+- 2022-12-20	feat: main search now also shows canvases
+- 2022-12-05	theme search opens directly in theme browser
+- 2022-11-28	fix for multiple workspaces to spellcheck
+- 2022-11-28	prelimary support for Obsidian surfing plugin
+- 2022-11-17	Optional Privacy Mode for o-search
+- 2022-11-16	fix: Alfred not hiding when op. folder in Finder
+- 2022-11-16	better matcher for snippet search
 - 2022-11-14	release 3.2.3
 - 2022-11-14	partial fix for #101
 - 2022-11-14	`ocss` now only opens snippets

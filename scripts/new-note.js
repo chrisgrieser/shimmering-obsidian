@@ -19,7 +19,7 @@ function run(argv) {
 			.setConfiguration(envVar, {
 				toValue: newValue,
 				inWorkflow: $.getenv("alfred_workflow_bundleid"),
-				exportable: false
+				exportable: false,
 			});
 	}
 

@@ -29,7 +29,7 @@ const officialDocs =	officialDocsJSON
 	.filter ( item =>
 		item.path.slice(-3) === ".md" &&
 		item.path.slice(0, 3) === "en/" &&
-		item.path.slice(0, 9) !== "en/.trash"
+		item.path.slice(0, 9) !== "en/.trash",
 	);
 
 officialDocs.forEach(item => {
@@ -101,7 +101,7 @@ communityDocs.forEach(item => {
 		"icon": { "path" : "icons/community-vault.png" },
 		"subtitle": area,
 		"uid": url,
-		"arg": url
+		"arg": url,
 	});
 });
 

@@ -31,7 +31,7 @@ const deprecatedJSON = JSON.parse(readFile("./data/deprecated-plugins.json"));
 const deprecatedPlugins = [
 	...deprecatedJSON.sherlocked,
 	...deprecatedJSON.dysfunct,
-	...deprecatedJSON.deprecated
+	...deprecatedJSON.deprecated,
 ];
 
 //------------------------------------------------------------------------------
@@ -62,7 +62,7 @@ enabledCorePlugins.forEach(pluginID => {
 			"ctrl": {
 				"arg": pluginID,
 				"subtitle": "⌃: Copy plugin ID '" + pluginID + "'",
-			}
+			},
 		},
 	});
 
@@ -83,7 +83,7 @@ standardSettings.forEach(setting => {
 			"cmd": { "valid": false },
 			"ctrl": { "valid": false },
 			"fn": { "valid": false },
-		}
+		},
 	});
 });
 
@@ -97,7 +97,7 @@ installedPlugins.forEach(pluginFolder => {
 		// catches error caused by plugins without "manifest.json" (beta plugins)
 		manifest = {
 			"id": pluginFolder,
-			"name": pluginFolder.replaceAll ("-", " ")
+			"name": pluginFolder.replaceAll ("-", " "),
 		};
 	}
 	const name = manifest.name;
@@ -149,8 +149,8 @@ installedPlugins.forEach(pluginFolder => {
 			"ctrl": {
 				"arg": pluginID,
 				"subtitle": `⌃: Copy plugin ID '${pluginID}'`,
-			}
-		}
+			},
+		},
 	});
 });
 

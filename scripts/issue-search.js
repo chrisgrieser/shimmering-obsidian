@@ -59,7 +59,7 @@ if ($.getenv("plugin_id")) {
 		latestVersion = JSON.parse(
 			app.doShellScript(
 				"curl -sL https://github.com/" + repo +
-				"/releases/latest/download/manifest.json")
+				"/releases/latest/download/manifest.json"),
 		).version;
 		if (localVersion !== latestVersion) outOfDate = true;
 	}
@@ -120,7 +120,7 @@ issueJSON.forEach(issue => {
 		issue.state,
 		alfredMatcher(title),
 		alfredMatcher(issueCreator),
-		"#" + issue.number
+		"#" + issue.number,
 	].join(" ");
 
 	jsonArray.push({
@@ -132,8 +132,8 @@ issueJSON.forEach(issue => {
 			"alt": {
 				"arg": shareURL,
 				"subtitle": "⌥: Copy GitHub Link" + isDiscordReady,
-			}
-		}
+			},
+		},
 	});
 });
 

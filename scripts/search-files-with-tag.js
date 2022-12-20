@@ -123,7 +123,7 @@ fileArray.forEach(file => {
 		"mods": {
 			"shift": {
 				"valid": hasLinks,
-				"subtitle": linksSubtitle
+				"subtitle": linksSubtitle,
 			},
 		},
 	});

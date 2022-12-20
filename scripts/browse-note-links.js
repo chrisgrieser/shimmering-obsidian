@@ -103,7 +103,7 @@ function run () {
 	if (externalLinkList) {
 		externalLinkList = externalLinkList.map (mdlink => [
 			mdlink.split("](")[0].slice(1),
-			mdlink.split("](")[1].slice(0, -1)
+			mdlink.split("](")[1].slice(0, -1),
 		]);
 	}
 	else externalLinkList = [];
@@ -114,7 +114,7 @@ function run () {
 	if (!bothLinksList.length && !externalLinkList.length) {
 		jsonArray.push({
 			"title": "No links recognized in the file.",
-			"subtitle": "Press [Esc] to abort."
+			"subtitle": "Press [Esc] to abort.",
 		});
 		return JSON.stringify({ items: jsonArray });
 	}
@@ -187,7 +187,7 @@ function run () {
 			"mods": {
 				"shift": {
 					"valid": hasLinks,
-					"subtitle": linksSubtitle
+					"subtitle": linksSubtitle,
 				},
 			},
 		});
@@ -211,7 +211,7 @@ function run () {
 
 		const modifierInvalid = {
 			"valid": false,
-			"subtitle": "⛔️ Cannot do that with external link."
+			"subtitle": "⛔️ Cannot do that with external link.",
 		};
 
 		jsonArray.push({
@@ -228,7 +228,7 @@ function run () {
 				"ctrl": modifierInvalid,
 				"alt": {
 					"arg": shareURL,
-					"subtitle": "⌥: Copy URL" + isDiscordReady
+					"subtitle": "⌥: Copy URL" + isDiscordReady,
 				},
 			},
 		});

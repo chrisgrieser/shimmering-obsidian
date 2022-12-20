@@ -49,7 +49,7 @@ vaultArray.forEach(vaultPath => {
 			"ctrl": { "arg": vaultPath },
 			"shift": { "arg": vaultPath },
 			"fn": { "arg": vaultPath },
-		}
+		},
 	});
 });
 
@@ -75,7 +75,7 @@ jsonArray.push({
 			"valid": false,
 			"subtitle": "⛔️",
 		},
-	}
+	},
 });
 
 JSON.stringify({ items: jsonArray });

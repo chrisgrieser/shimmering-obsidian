@@ -60,9 +60,9 @@ const betaManifests = betaRepos
 			"mods": {
 				"alt": {
 					"arg": shareURL,
-					"subtitle": "⌥: Copy Link" + isDiscordReady
-				}
-			}
+					"subtitle": "⌥: Copy Link" + isDiscordReady,
+				},
+			},
 		};
 	});
 
