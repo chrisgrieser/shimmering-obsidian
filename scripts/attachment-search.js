@@ -26,7 +26,7 @@ const attachmentMetadata = vaultPath + "/.obsidian/plugins/metadata-extractor/al
 // filter the metadataJSON for the items w/ relativePaths of starred files
 const attachmentArr = JSON.parse(readFile(attachmentMetadata))
 	.nonMdFiles
-	.map(file => {
+	.map(file => { /* eslint-disable-line complexity */
 		const filename = file.name;
 		const ext = file.name.split(".").pop();
 		const relativePath = file.relativePath;
