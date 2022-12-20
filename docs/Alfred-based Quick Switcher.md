@@ -44,6 +44,7 @@ This works similar to Obsidian's built-in *Quick Switcher*, but can be triggered
 
 ### Smart Queries
 - Add `filename` or `title` to your search query, to display only files and no aliases, folders, or headings. For example, `o obsidian filename` will display only notes that have the `obsidian` in their filename.
+- Add `canvas` to your search to only display canvases (Obsidian 1.1).
 - Similarly, you can also filter for starred or recent files by adding `starred` or `recent` to your query.
 - You can add `#tag` to your search query to search only for files with a specific tag, e.g., `o foobar #moc` will only display notes with the name `foobar` that are also tagged with `#moc`.
 

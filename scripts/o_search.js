@@ -93,7 +93,7 @@ if (!folderArray) folderArray = [];
 folderArray = applyExcludeFilter(folderArray, true);
 
 // CANVAS ARRAY
-let canvasArray = JSON.parse(readFile(canvasJSON)); // returns file objects
+let canvasArray = fileExists(canvasJSON) ? JSON.parse(readFile(canvasJSON)) : [];
 canvasArray = applyExcludeFilter(canvasArray, false);
 
 // FILE ARRAY
