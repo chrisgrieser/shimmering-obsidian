@@ -5572,15 +5572,8 @@ Application('com.runningwithcrayons.Alfred').removeConfiguration('ObRunning', {
 				<string>{var:vault_path}/.obsidian/plugins/metadata-extractor/data.json</string>
 				<key>filetext</key>
 				<string>{
-  "tagPath": "",
-  "metadataPath": "",
-  "allExceptMdPath": "",
-  "tagFile": "tags.json",
-  "metadataFile": "metadata.json",
-  "allExceptMdFile": "allExceptMd.json",
   "writingFrequency": "30",
-  "writeFilesOnLaunch": true,
-  "consoleLog": false
+  "writeFilesOnLaunch": true
 }</string>
 				<key>ignoredynamicplaceholders</key>
 				<false/>

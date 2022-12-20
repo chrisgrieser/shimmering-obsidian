@@ -7,7 +7,7 @@ app.includeStandardAdditions = true;
 const externalLinkRegex = /\[[^\]]*\]\([^)]+\)/;
 
 // Functions
-function readFile (path, encoding) {
+function readFile(path, encoding) {
 	if (!encoding) encoding = $.NSUTF8StringEncoding;
 	const fm = $.NSFileManager.defaultManager;
 	const data = fm.contentsAtPath(path);
@@ -15,15 +15,12 @@ function readFile (path, encoding) {
 	return ObjC.unwrap(str);
 }
 
-function parentFolder (filePath) {
+function parentFolder(filePath) {
 	if (!filePath.includes("/")) return "/";
-	return filePath
-		.split("/")
-		.slice(0, -1)
-		.join("/");
+	return filePath.split("/").slice(0, -1).join("/");
 }
-const alfredMatcher = (str) => str.replace (/[-()_.]/g, " ") + " " + str;
-const fileExists = (filePath) => Application("Finder").exists(Path(filePath));
+const alfredMatcher = str => str.replace(/[-()_.]/g, " ") + " " + str;
+const fileExists = filePath => Application("Finder").exists(Path(filePath));
 
 //------------------------------------------------------------------------------
 
@@ -62,11 +59,9 @@ try {
 const recentFiles = JSON.parse(readFile(recentJSON)).lastOpenFiles;
 let starredFiles = [];
 if (readFile(starredJSON) !== "") {
-	starredFiles =
-		JSON.parse(readFile(starredJSON))
-			.items
-			.filter (item => item.type === "file")
-			.map (item => item.path);
+	starredFiles = JSON.parse(readFile(starredJSON))
+		.items.filter(item => item.type === "file")
+		.map(item => item.path);
 }
 
 // Excluded Files: Obsi Setting
@@ -76,16 +71,14 @@ console.log("excluded files: " + excludeFilter);
 //──────────────────────────────────────────────────────────────────────────────
 
 // FOLDER SEARCH
-let folderArray = app.doShellScript(`find "${pathToCheck}" -type d -mindepth 1 -not -path "*/.*"`)
-	.split("\r"); // returns *absolute* paths
+let folderArray = app.doShellScript(`find "${pathToCheck}" -type d -mindepth 1 -not -path "*/.*"`).split("\r"); // returns *absolute* paths
 if (!folderArray) folderArray = [];
 if (excludeFilter?.length && folderArray?.length) {
-	folderArray = folderArray.filter (folder => {
+	folderArray = folderArray.filter(folder => {
 		let include = true;
 		folder += "/";
 
 		excludeFilter.forEach(filter => {
-
 			const isRegexFilter = filter.startsWith("/");
 			// TODO: investigate properly how regex filter works in Obsidian to
 			// properly replicate the behavior
@@ -93,20 +86,18 @@ if (excludeFilter?.length && folderArray?.length) {
 			const relPath = folder.slice(vaultPath.length + 1);
 			if (isRegexFilter && relPath.includes(filter)) include = false;
 			if (!isRegexFilter && relPath.startsWith(filter)) include = false;
-
 		});
 		return include;
 	});
 }
 
 // FILE ARRAY
-let fileArray = JSON.parse (readFile(metadataJSON)); // returns file objects
+let fileArray = JSON.parse(readFile(metadataJSON)); // returns file objects
 // excluded files (Obsi Setting)
 if (excludeFilter?.length) {
 	fileArray = fileArray.filter(file => {
 		let include = true;
 		excludeFilter.forEach(filter => {
-
 			const isRegexFilter = filter.startsWith("/");
 			// TODO: investigate how regex filter works in Obsidian to
 			// properly replicate the behavior
@@ -114,20 +105,19 @@ if (excludeFilter?.length) {
 			const relPath = file.relativePath;
 			if (isRegexFilter && relPath.includes(filter)) include = false;
 			if (!isRegexFilter && relPath.startsWith(filter)) include = false;
-
 		});
 		return include;
 	});
 }
 
 // if in subfolder, filder files outside subfolder
-if (pathToCheck !== vaultPath) fileArray = fileArray.filter (f => f.relativePath.startsWith(currentFolder));
+if (pathToCheck !== vaultPath) fileArray = fileArray.filter(f => f.relativePath.startsWith(currentFolder));
 
 // IGNORED HEADINGS
 const hLVLignore = $.getenv("h_lvl_ignore");
 const headingIgnore = [true];
 for (let i = 1; i < 7; i++) {
-	if (hLVLignore.includes(i.toString())) headingIgnore.push (true);
+	if (hLVLignore.includes(i.toString())) headingIgnore.push(true);
 	else headingIgnore.push(false);
 }
 
@@ -147,7 +137,7 @@ fileArray.forEach(file => {
 	let iconpath = "icons/note.png";
 	let emoji = "";
 	let additionalMatcher = "";
-	if (starredFiles.includes(relativePath))	{
+	if (starredFiles.includes(relativePath)) {
 		emoji += "⭐️ ";
 		additionalMatcher += "starred ";
 	}
@@ -155,7 +145,7 @@ fileArray.forEach(file => {
 		emoji += "🕑 ";
 		additionalMatcher += "recent ";
 	}
-	if (filename.toLowerCase().includes("kanban"))	iconpath = "icons/kanban.png";
+	if (filename.toLowerCase().includes("kanban")) iconpath = "icons/kanban.png";
 
 	let superchargedIcon = "";
 	let superchargedIcon2 = "";
@@ -170,7 +160,7 @@ fileArray.forEach(file => {
 	}
 
 	// check link existence of file
-	let hasLinks = Boolean (file.links?.some(l => l.relativePath) || file.backlinks ); // no relativePath => unresolved link
+	let hasLinks = Boolean(file.links?.some(l => l.relativePath) || file.backlinks); // no relativePath => unresolved link
 	if (!hasLinks) hasLinks = externalLinkRegex.test(readFile(absolutePath)); // readFile only executed when no other links found for performance
 	let linksSubtitle = "⛔️ Note without Outgoing Links or Backlinks";
 	if (hasLinks) linksSubtitle = "⇧: Browse Links in Note";
@@ -185,20 +175,20 @@ fileArray.forEach(file => {
 
 	// Notes (file names)
 	jsonArray.push({
-		"title": emoji + superchargedIcon + displayName + superchargedIcon2,
-		"match": alfredMatcher(filename) + tagMatcher + " filename name title",
-		"subtitle": "▸ " + parentFolder(relativePath),
-		"arg": relativePath,
-		"quicklookurl": absolutePath,
-		"type": "file:skipcheck",
-		"uid": relativePath,
-		"icon": { "path": iconpath },
-		"mods": {
-			"shift": {
-				"valid": hasLinks,
-				"subtitle": linksSubtitle
-			}
-		}
+		title: emoji + superchargedIcon + displayName + superchargedIcon2,
+		match: alfredMatcher(filename) + tagMatcher + " filename name title",
+		subtitle: "▸ " + parentFolder(relativePath),
+		arg: relativePath,
+		quicklookurl: absolutePath,
+		type: "file:skipcheck",
+		uid: relativePath,
+		icon: { path: iconpath },
+		mods: {
+			shift: {
+				valid: hasLinks,
+				subtitle: linksSubtitle,
+			},
+		},
 	});
 
 	// Aliases
@@ -207,20 +197,20 @@ fileArray.forEach(file => {
 			let displayAlias = alias;
 			if (applyCensoring) displayAlias = displayAlias.replace(/./g, censorChar);
 			jsonArray.push({
-				"title": superchargedIcon + displayAlias + superchargedIcon2,
-				"match": additionalMatcher + "alias " + alfredMatcher(alias),
-				"subtitle": "↪ " + displayName,
-				"arg": relativePath,
-				"quicklookurl": absolutePath,
-				"type": "file:skipcheck",
-				"uid": alias + "_" + relativePath,
-				"icon": { "path": "icons/alias.png" },
-				"mods": {
-					"shift": {
-						"valid": hasLinks,
-						"subtitle": linksSubtitle
-					}
-				}
+				title: superchargedIcon + displayAlias + superchargedIcon2,
+				match: additionalMatcher + "alias " + alfredMatcher(alias),
+				subtitle: "↪ " + displayName,
+				arg: relativePath,
+				quicklookurl: absolutePath,
+				type: "file:skipcheck",
+				uid: alias + "_" + relativePath,
+				icon: { path: "icons/alias.png" },
+				mods: {
+					shift: {
+						valid: hasLinks,
+						subtitle: linksSubtitle,
+					},
+				},
 			});
 		});
 	}
@@ -237,23 +227,23 @@ fileArray.forEach(file => {
 		if (applyCensoring) displayHeading = displayHeading.replace(/./g, censorChar);
 
 		jsonArray.push({
-			"title": displayHeading,
-			"match": matchStr,
-			"subtitle": "➣ " + displayName,
-			"arg": relativePath + "#" + hName,
-			"quicklookurl": absolutePath,
-			"type": "file:skipcheck",
-			"uid": hName + "_" + relativePath,
-			"icon": { "path": iconpath },
-			"mods": {
-				"shift": {
-					"valid": hasLinks,
-					"subtitle": linksSubtitle,
-					"arg": relativePath
+			title: displayHeading,
+			match: matchStr,
+			subtitle: "➣ " + displayName,
+			arg: relativePath + "#" + hName,
+			quicklookurl: absolutePath,
+			type: "file:skipcheck",
+			uid: hName + "_" + relativePath,
+			icon: { path: iconpath },
+			mods: {
+				shift: {
+					valid: hasLinks,
+					subtitle: linksSubtitle,
+					arg: relativePath,
 				},
-				"alt": { "arg": relativePath },
-				"fn": { "valid": false }
-			}
+				alt: { arg: relativePath },
+				fn: { valid: false },
+			},
 		});
 	});
 });
@@ -265,53 +255,52 @@ folderArray.forEach(absolutePath => {
 	if (!name) return; // root on 2 level deep folder search
 
 	jsonArray.push({
-		"title": name,
-		"match": alfredMatcher(name) + " folder",
-		"subtitle": "▸ " + parentFolder(relativePath) + "   [↵: Browse]",
-		"arg": relativePath,
-		"type": "file:skipcheck",
-		"uid": relativePath,
-		"icon": { "path": "icons/folder.png" },
-		"mods": {
-			"alt": { "subtitle": "⌥: Open Folder in Finder" },
-			"cmd": {
-				"valid": false,
-				"subtitle": "⛔️ Cannot open folders",
+		title: name,
+		match: alfredMatcher(name) + " folder",
+		subtitle: "▸ " + parentFolder(relativePath) + "   [↵: Browse]",
+		arg: relativePath,
+		type: "file:skipcheck",
+		uid: relativePath,
+		icon: { path: "icons/folder.png" },
+		mods: {
+			alt: { subtitle: "⌥: Open Folder in Finder" },
+			cmd: {
+				valid: false,
+				subtitle: "⛔️ Cannot open folders",
 			},
-			"shift": {
-				"valid": false,
-				"subtitle": "⛔️ Folders have no links.",
+			shift: {
+				valid: false,
+				subtitle: "⛔️ Folders have no links.",
 			},
-			"ctrl": {
-				"valid": false,
-				"subtitle": "⛔️ Linking not possible for folders",
+			ctrl: {
+				valid: false,
+				subtitle: "⛔️ Linking not possible for folders",
 			},
-			"fn": {
-				"valid": false,
-				"subtitle": "⛔️ Cannot append to folders.",
-			}
-		}
+			fn: {
+				valid: false,
+				subtitle: "⛔️ Cannot append to folders.",
+			},
+		},
 	});
 });
 
 // Additional options when browsing a folder
 if (pathToCheck !== vaultPath) {
-
 	// New File in Folder
 	jsonArray.push({
-		"title": "Create new Note in here",
-		"subtitle": "▸ " + currentFolder,
-		"arg": "new",
-		"icon": { "path": "icons/new.png" },
+		title: "Create new Note in here",
+		subtitle: "▸ " + currentFolder,
+		arg: "new",
+		icon: { path: "icons/new.png" },
 	});
 
 	// go up to parent folder
 	jsonArray.push({
-		"title": "⬆️ Up to Parent Folder",
-		"match": "up back parent folder directory browse .. cd",
-		"subtitle": "▸ " + parentFolder(currentFolder),
-		"arg": parentFolder(currentFolder),
-		"icon": { "path": "icons/folder.png" },
+		title: "⬆️ Up to Parent Folder",
+		match: "up back parent folder directory browse .. cd",
+		subtitle: "▸ " + parentFolder(currentFolder),
+		arg: parentFolder(currentFolder),
+		icon: { path: "icons/folder.png" },
 	});
 }
 
