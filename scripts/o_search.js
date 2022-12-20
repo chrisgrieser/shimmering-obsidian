@@ -27,6 +27,7 @@ const fileExists = filePath => Application("Finder").exists(Path(filePath));
 // Import Data
 const vaultPath = $.getenv("vault_path").replace(/^~/, app.pathTo("home folder"));
 const metadataJSON = vaultPath + "/.obsidian/plugins/metadata-extractor/metadata.json";
+const canvasJSON = vaultPath + "/.obsidian/plugins/metadata-extractor/canvas.json";
 const starredJSON = vaultPath + "/.obsidian/starred.json";
 const excludeFilterJSON = vaultPath + "/.obsidian/app.json";
 let recentJSON = vaultPath + "/.obsidian/workspace.json";
@@ -68,47 +69,36 @@ if (readFile(starredJSON) !== "") {
 const excludeFilter = JSON.parse(readFile(excludeFilterJSON)).userIgnoreFilters;
 console.log("excluded files: " + excludeFilter);
 
+function applyExcludeFilter(arr, isFolder) {
+	if (!excludeFilter || excludeFilter.length === 0 || arr.length === 0) return arr;
+
+	return arr.filter(item => {
+		let include = true;
+		if (isFolder) item += "/";
+		excludeFilter.forEach(filter => {
+			const isRegexFilter = filter.startsWith("/");
+			const relPath = isFolder ? item.slice(vaultPath.length + 1) : item.relativePath;
+			if (isRegexFilter && relPath.includes(filter)) include = false;
+			if (!isRegexFilter && relPath.startsWith(filter)) include = false;
+		});
+		return include;
+	});
+}
+
 //──────────────────────────────────────────────────────────────────────────────
 
 // FOLDER SEARCH
 let folderArray = app.doShellScript(`find "${pathToCheck}" -type d -mindepth 1 -not -path "*/.*"`).split("\r"); // returns *absolute* paths
 if (!folderArray) folderArray = [];
-if (excludeFilter?.length && folderArray?.length) {
-	folderArray = folderArray.filter(folder => {
-		let include = true;
-		folder += "/";
+folderArray = applyExcludeFilter(folderArray, true);
 
-		excludeFilter.forEach(filter => {
-			const isRegexFilter = filter.startsWith("/");
-			// TODO: investigate properly how regex filter works in Obsidian to
-			// properly replicate the behavior
-
-			const relPath = folder.slice(vaultPath.length + 1);
-			if (isRegexFilter && relPath.includes(filter)) include = false;
-			if (!isRegexFilter && relPath.startsWith(filter)) include = false;
-		});
-		return include;
-	});
-}
+// CANVAS ARRAY
+let canvasArray = JSON.parse(readFile(canvasJSON)); // returns file objects
+canvasArray = applyExcludeFilter(canvasArray, false);
 
 // FILE ARRAY
 let fileArray = JSON.parse(readFile(metadataJSON)); // returns file objects
-// excluded files (Obsi Setting)
-if (excludeFilter?.length) {
-	fileArray = fileArray.filter(file => {
-		let include = true;
-		excludeFilter.forEach(filter => {
-			const isRegexFilter = filter.startsWith("/");
-			// TODO: investigate how regex filter works in Obsidian to
-			// properly replicate the behavior
-
-			const relPath = file.relativePath;
-			if (isRegexFilter && relPath.includes(filter)) include = false;
-			if (!isRegexFilter && relPath.startsWith(filter)) include = false;
-		});
-		return include;
-	});
-}
+fileArray = applyExcludeFilter(fileArray, false);
 
 // if in subfolder, filder files outside subfolder
 if (pathToCheck !== vaultPath) fileArray = fileArray.filter(f => f.relativePath.startsWith(currentFolder));
@@ -246,6 +236,31 @@ fileArray.forEach(file => {
 			},
 		});
 	});
+});
+
+// CANVASES
+canvasArray.forEach(file => {
+	const name = file.basename;
+	const relativePath = file.relativePath;
+	const denyForCanvas = {
+		valid: false,
+		subtitle: "⛔ Cannot do that with a canvas.",
+	};
+
+	jsonArray.push({
+		title: name,
+		match: alfredMatcher(name) + " canvas",
+		subtitle: "▸ " + parentFolder(relativePath),
+		arg: relativePath,
+		type: "file:skipcheck",
+		icon: { path: "icons/canvas.png" },
+		uid: relativePath,
+		mods: {
+			shift: denyForCanvas,
+			fn: denyForCanvas,
+		},
+	});
+
 });
 
 // FOLDERS
