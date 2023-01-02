@@ -8751,7 +8751,7 @@ echo | git pull</string>
 				<key>subtext</key>
 				<string></string>
 				<key>text</key>
-				<string>⚙️ Open '.obsidian' in Vault</string>
+				<string>⚙️ Open .obsidian</string>
 				<key>withspace</key>
 				<false/>
 			</dict>
@@ -8772,7 +8772,7 @@ echo | git pull</string>
 				<key>subtext</key>
 				<string></string>
 				<key>text</key>
-				<string>Open Obsidian's Internal Trash Folder</string>
+				<string>Open Obsidian's Internal Trash</string>
 				<key>withspace</key>
 				<false/>
 			</dict>
