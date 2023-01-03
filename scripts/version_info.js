@@ -66,6 +66,7 @@ if (workspaceData15) log("'workspace' exists");
 if (workspaceData16) log("'workspace.json' exists");
 if (!workspaceData15 && !workspaceData16) log("none exists");
 log("-------------------------------");
+log("SYSTEM");
 log("macOS: " + macVer);
 log("Alfred: " + $.getenv("alfred_version"));
 log("-------------------------------");
