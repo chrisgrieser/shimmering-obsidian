@@ -7,11 +7,10 @@ app.includeStandardAdditions = true;
 const externalLinkRegex = /\[[^\]]*\]\([^)]+\)/;
 
 // Functions
-function readFile(path, encoding) {
-	if (!encoding) encoding = $.NSUTF8StringEncoding;
+function readFile(path) {
 	const fm = $.NSFileManager.defaultManager;
 	const data = fm.contentsAtPath(path);
-	const str = $.NSString.alloc.initWithDataEncoding(data, encoding);
+	const str = $.NSString.alloc.initWithDataEncoding(data, $.NSUTF8StringEncoding);
 	return ObjC.unwrap(str);
 }
 
@@ -19,12 +18,12 @@ function parentFolder(filePath) {
 	if (!filePath.includes("/")) return "/";
 	return filePath.split("/").slice(0, -1).join("/");
 }
-const alfredMatcher = str => str.replace(/[-()_.]/g, " ") + " " + str;
+const alfredMatcher = str => str.replace(/[-()_.[\]]/g, " ") + " " + str;
 const fileExists = filePath => Application("Finder").exists(Path(filePath));
 
 //------------------------------------------------------------------------------
 
-// Import Data
+// Read and Parse data
 const vaultPath = $.getenv("vault_path").replace(/^~/, app.pathTo("home folder"));
 const metadataJSON = vaultPath + "/.obsidian/plugins/metadata-extractor/metadata.json";
 const canvasJSON = vaultPath + "/.obsidian/plugins/metadata-extractor/canvas.json";
@@ -33,21 +32,31 @@ const excludeFilterJSON = vaultPath + "/.obsidian/app.json";
 let recentJSON = vaultPath + "/.obsidian/workspace.json";
 if (!fileExists(recentJSON)) recentJSON = recentJSON.slice(0, -5); // Obsidian 0.16 uses workspace.json → https://discord.com/channels/686053708261228577/716028884885307432/1013906018578743478
 const jsonArray = [];
+let temp;
 
-// Supercharged Icons File
-let superchargedIconFileExists = false;
-const superchargedIconFile = $.getenv("supercharged_icon_file").replace(/^~/, app.pathTo("home folder"));
-if (superchargedIconFile) superchargedIconFileExists = Application("Finder").exists(Path(superchargedIconFile));
-let superchargedIconList;
-if (superchargedIconFileExists) {
-	superchargedIconList = readFile(superchargedIconFile)
-		.split("\n")
-		.filter(l => l.length !== 0);
-}
+const excludeFilter = fileExists(excludeFilterJSON) ? JSON.parse(readFile(excludeFilterJSON)).userIgnoreFilters : [];
+console.log("excludeFilter: " + excludeFilter);
+const recentFiles = fileExists(recentJSON) ? JSON.parse(readFile(recentJSON)).lastOpenFiles : [];
+let starredFiles = fileExists(starredJSON) ? JSON.parse(readFile(starredJSON)).items : [];
+if (starredFiles.length > 0) starredFiles = starredFiles.filter(item => item.type === "file").map(item => item.path);
+let canvasArray = fileExists(canvasJSON) ? JSON.parse(readFile(canvasJSON)) : [];
 
-// either searches the vault, or a subfolder of the vault
+const superIconFile = $.getenv("supercharged_icon_file").replace(/^~/, app.pathTo("home folder"));
+let iconFileExists = superIconFile ? fileExists(superIconFile) : false;
+if (superIconFile) iconFileExists = fileExists(superIconFile);
+let superIconList = iconFileExists ? readFile(superIconFile) : [];
+if (superIconList.length > 0) superIconList = superIconList.split("\n").filter(l => l.length !== 0);
+
+let fileArray;
+if (fileExists(metadataJSON)) fileArray = JSON.parse(readFile(metadataJSON));
+else console.log("metadata.json missing.");
+
+//──────────────────────────────────────────────────────────────────────────────
+
+// DETERMINE PATH TO SEARCH
 let currentFolder;
 let pathToCheck;
+// either searches the vault, or a subfolder of the vault
 try {
 	currentFolder = $.getenv("browse_folder");
 	pathToCheck = vaultPath + "/" + currentFolder;
@@ -56,18 +65,11 @@ try {
 	pathToCheck = vaultPath;
 }
 
-// starred & recent files
-const recentFiles = JSON.parse(readFile(recentJSON)).lastOpenFiles;
-let starredFiles = [];
-if (readFile(starredJSON) !== "") {
-	starredFiles = JSON.parse(readFile(starredJSON))
-		.items.filter(item => item.type === "file")
-		.map(item => item.path);
-}
+let folderArray = app.doShellScript(`find "${pathToCheck}" -type d -mindepth 1 -not -path "*/.*"`).split("\r"); // returns *absolute* paths
+if (!folderArray) folderArray = [];
 
-// Excluded Files: Obsi Setting
-const excludeFilter = JSON.parse(readFile(excludeFilterJSON)).userIgnoreFilters;
-console.log("excluded files: " + excludeFilter);
+//──────────────────────────────────────────────────────────────────────────────
+// EXCLUSION & IGNORING
 
 function applyExcludeFilter(arr, isFolder) {
 	if (!excludeFilter || excludeFilter.length === 0 || arr.length === 0) return arr;
@@ -85,19 +87,8 @@ function applyExcludeFilter(arr, isFolder) {
 	});
 }
 
-//──────────────────────────────────────────────────────────────────────────────
-
-// FOLDER SEARCH
-let folderArray = app.doShellScript(`find "${pathToCheck}" -type d -mindepth 1 -not -path "*/.*"`).split("\r"); // returns *absolute* paths
-if (!folderArray) folderArray = [];
 folderArray = applyExcludeFilter(folderArray, true);
-
-// CANVAS ARRAY
-let canvasArray = fileExists(canvasJSON) ? JSON.parse(readFile(canvasJSON)) : [];
 canvasArray = applyExcludeFilter(canvasArray, false);
-
-// FILE ARRAY
-let fileArray = JSON.parse(readFile(metadataJSON)); // returns file objects
 fileArray = applyExcludeFilter(fileArray, false);
 
 // if in subfolder, filder files outside subfolder
@@ -139,8 +130,8 @@ fileArray.forEach(file => {
 
 	let superchargedIcon = "";
 	let superchargedIcon2 = "";
-	if (superchargedIconFileExists && file.tags) {
-		superchargedIconList.forEach(pair => {
+	if (iconFileExists && file.tags) {
+		superIconList.forEach(pair => {
 			const tag = pair.split(",")[0].toLowerCase().replaceAll("#", "");
 			const icon = pair.split(",")[1];
 			const icon2 = pair.split(",")[2];
@@ -260,7 +251,6 @@ canvasArray.forEach(file => {
 			fn: denyForCanvas,
 		},
 	});
-
 });
 
 // FOLDERS
