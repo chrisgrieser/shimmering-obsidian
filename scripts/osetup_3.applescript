@@ -6,7 +6,7 @@ delay 1
 repeat until application "Obsidian" is not running
 	delay 0.5
 end repeat
-delay 4
+delay 3
 
 # dump metadata
 set vaultName to (system attribute "vault_name_ENC")
@@ -19,4 +19,6 @@ tell application "Obsidian"
 	open location (prefix & "write-tags-json")
 	delay 0.5
 	open location (prefix & "write-allExceptMd-json")
+	delay 0.5
+	open location (prefix & "write-canvas-json")
 end tell
