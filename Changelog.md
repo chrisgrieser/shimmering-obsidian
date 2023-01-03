@@ -1,3 +1,5 @@
+- 2023-01-03	release 3.3.2
+- 2023-01-03	fix: write canvas.json metad. on osetup (fix #108)
 - 2023-01-03	release 3.3.1
 - 2023-01-03	fix: more validation for o-search & oinfo (#108)
 - 2023-01-03	chore: update issue templates
