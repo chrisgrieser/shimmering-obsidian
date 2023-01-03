@@ -38,7 +38,7 @@ body:
     id: workflow-configuration-1
     attributes:
       label: Workflow Configuration 1
-      description: "Please add a screenshot of all your [workflow configuration](https://www.alfredapp.com/help/workflows/user-configuration/)."
+      description: "Please add a screenshot of all your [workflow configuration](https://www.alfredapp.com/help/workflows/user-configuration/) (clicking \"Configure Workflow\")"
     validations:
       required: true
   - type: textarea
@@ -51,11 +51,16 @@ body:
   - type: textarea
     id: version-info
     attributes:
-      label: Version & System Information
-      description: "Please run the command `oinfo` in Alfred. It will copy various version information into your clipboard. Paste the result here. (If the command `oinfo` itself also does not work, follow [these instructions here.](https://github.com/chrisgrieser/shimmering-obsidian/issues/98#issuecomment-1247370074))"
+      label: 'Version & System Information'
+      description: "Please run the command `oinfo` in Alfred. It will copy various version information into your clipboard. Paste the result here. (If the command `oinfo` itself also does not work, please state so and follow [these instructions here.](https://github.com/chrisgrieser/shimmering-obsidian/issues/98#issuecomment-1247370074))"
       render: Text
     validations:
       required: true
+  - type: input
+    id: version-info
+    attributes:
+      label: Last working version
+      description: If you updated the workflow, and it was working before but stopped working now, please add the last version which did work.
   - type: checkboxes
     id: checklist
     attributes:
