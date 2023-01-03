@@ -1,3 +1,10 @@
+- 2023-01-03	release 3.3.1
+- 2023-01-03	fix: more validation for o-search & oinfo (#108)
+- 2023-01-03	chore: update issue templates
+- 2023-01-03	chore
+- 2023-01-03	chore
+- 2023-01-02	chore
+- 2023-01-02	chore
 - 2022-12-20	release 3.3.0
 - 2022-12-20	validation for when no canvas exists
 - 2022-12-20	feat: main search now also shows canvases
