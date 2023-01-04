@@ -61,6 +61,18 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
+				<string>E5E0B205-1716-4D34-A458-4CC01834DCFE</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>19CF6E75-A418-4AEF-B66E-45E894CDE858</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
 				<string>E60130DC-8A6E-4892-8516-B79153DC480B</string>
 				<key>modifiers</key>
 				<integer>0</integer>
@@ -110,18 +122,7 @@
 			</dict>
 		</array>
 		<key>0C46CBB1-C490-4F62-8CC4-F59D7B1016D6</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>37EC9932-F455-4BBC-BA2B-AF780E3851F3</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
+		<array/>
 		<key>0D4E8328-70EB-4B78-9879-93DEBEE99412</key>
 		<array>
 			<dict>
@@ -754,21 +755,6 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>4920FD05-4820-4CA1-A792-3A785A3BA6C8</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>B0B1C61B-93A6-492E-BD07-2F06FB73F410</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>sourceoutputuid</key>
-				<string>0FE84C8E-C444-4461-AC9F-30CD4B47058C</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -1768,6 +1754,16 @@
 				<key>vitoclose</key>
 				<false/>
 			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>37EC9932-F455-4BBC-BA2B-AF780E3851F3</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
 		</array>
 		<key>8CA441F0-9476-4FEF-8DC9-E8D8C19EC431</key>
 		<array>
@@ -1995,7 +1991,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>4920FD05-4820-4CA1-A792-3A785A3BA6C8</string>
+				<string>B0B1C61B-93A6-492E-BD07-2F06FB73F410</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -2445,18 +2441,7 @@
 			</dict>
 		</array>
 		<key>CCB61EC0-26E7-4CE6-9703-BF95602B73D6</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>E5E0B205-1716-4D34-A458-4CC01834DCFE</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
+		<array/>
 		<key>CD6ADFC6-4DE3-4083-ABD6-A35719BEF5A3</key>
 		<array>
 			<dict>
@@ -3460,38 +3445,6 @@ fi</string>
 			<string>alfred.workflow.trigger.external</string>
 			<key>uid</key>
 			<string>E7DAD30E-15A3-46BE-8534-7F5ABE826FC6</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>conditions</key>
-				<array>
-					<dict>
-						<key>inputstring</key>
-						<string>{const:alfred_version}</string>
-						<key>matchcasesensitive</key>
-						<false/>
-						<key>matchmode</key>
-						<integer>4</integer>
-						<key>matchstring</key>
-						<string>^5\.</string>
-						<key>outputlabel</key>
-						<string>version &gt;= 5</string>
-						<key>uid</key>
-						<string>0FE84C8E-C444-4461-AC9F-30CD4B47058C</string>
-					</dict>
-				</array>
-				<key>elselabel</key>
-				<string>version &lt;= 4</string>
-				<key>hideelse</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.conditional</string>
-			<key>uid</key>
-			<string>4920FD05-4820-4CA1-A792-3A785A3BA6C8</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -5425,6 +5378,27 @@ Application('com.runningwithcrayons.Alfred').removeConfiguration('ObRunning', {
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string></string>
+				<key>title</key>
+				<string>⏳ Restarting Obsidian &amp; Creating Metadata...</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>CCB61EC0-26E7-4CE6-9703-BF95602B73D6</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>externaltriggerid</key>
 				<string>open-in-obsidian</string>
 				<key>passinputasargument</key>
@@ -5465,6 +5439,23 @@ Application('com.runningwithcrayons.Alfred').removeConfiguration('ObRunning', {
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>argument</key>
+				<string>{var:scratchpad_note_path}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>3CC54A98-B297-4BE8-8F53-22C52A7247B6</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>lastpathcomponent</key>
 				<false/>
 				<key>onlyshowifquerypopulated</key>
@@ -5486,36 +5477,19 @@ Application('com.runningwithcrayons.Alfred').removeConfiguration('ObRunning', {
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<false/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string></string>
-				<key>title</key>
-				<string>⏳ Restarting Obsidian &amp; Creating Metadata...</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>CCB61EC0-26E7-4CE6-9703-BF95602B73D6</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>soundname</key>
-				<string>Blow</string>
-				<key>systemsound</key>
+				<key>externaltriggerid</key>
+				<string>return-only-action</string>
+				<key>passinputasargument</key>
 				<true/>
+				<key>passvariables</key>
+				<true/>
+				<key>workflowbundleid</key>
+				<string>self</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.output.playsound</string>
+			<string>alfred.workflow.output.callexternaltrigger</string>
 			<key>uid</key>
-			<string>37EC9932-F455-4BBC-BA2B-AF780E3851F3</string>
+			<string>0CF629FC-A2DF-4AFA-B949-2D0D98C05B18</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -5541,23 +5515,6 @@ Application('com.runningwithcrayons.Alfred').removeConfiguration('ObRunning', {
 			<string>44832B9C-6E8E-49FB-A270-EBC4CC347812</string>
 			<key>version</key>
 			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string>{var:scratchpad_note_path}</string>
-				<key>passthroughargument</key>
-				<false/>
-				<key>variables</key>
-				<dict/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>3CC54A98-B297-4BE8-8F53-22C52A7247B6</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -5624,46 +5581,6 @@ end tell</string>
 			<string>F0E0AB83-B5CD-4107-A551-32C6AD581502</string>
 			<key>version</key>
 			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>delimiter</key>
-				<string>;;</string>
-				<key>discardemptyarguments</key>
-				<false/>
-				<key>outputas</key>
-				<integer>0</integer>
-				<key>trimarguments</key>
-				<true/>
-				<key>variableprefix</key>
-				<string>split</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.split</string>
-			<key>uid</key>
-			<string>8C9F828A-D313-4E2E-8428-621E160D07FE</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>externaltriggerid</key>
-				<string>return-only-action</string>
-				<key>passinputasargument</key>
-				<true/>
-				<key>passvariables</key>
-				<true/>
-				<key>workflowbundleid</key>
-				<string>self</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.callexternaltrigger</string>
-			<key>uid</key>
-			<string>0CF629FC-A2DF-4AFA-B949-2D0D98C05B18</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -5740,6 +5657,27 @@ end tell</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>delimiter</key>
+				<string>;;</string>
+				<key>discardemptyarguments</key>
+				<false/>
+				<key>outputas</key>
+				<integer>0</integer>
+				<key>trimarguments</key>
+				<true/>
+				<key>variableprefix</key>
+				<string>split</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.split</string>
+			<key>uid</key>
+			<string>8C9F828A-D313-4E2E-8428-621E160D07FE</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>conditions</key>
 				<array>
 					<dict>
@@ -5772,6 +5710,40 @@ end tell</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>soundname</key>
+				<string>Blow</string>
+				<key>systemsound</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.playsound</string>
+			<key>uid</key>
+			<string>37EC9932-F455-4BBC-BA2B-AF780E3851F3</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>externaltriggerid</key>
+				<string>append-to-note</string>
+				<key>passinputasargument</key>
+				<true/>
+				<key>passvariables</key>
+				<true/>
+				<key>workflowbundleid</key>
+				<string>self</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>81D69BF1-CF14-4A8E-A427-380B8C206C4C</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>alignment</key>
 				<integer>0</integer>
 				<key>backgroundcolor</key>
@@ -5797,25 +5769,6 @@ end tell</string>
 			<string>E60130DC-8A6E-4892-8516-B79153DC480B</string>
 			<key>version</key>
 			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>externaltriggerid</key>
-				<string>append-to-note</string>
-				<key>passinputasargument</key>
-				<true/>
-				<key>passvariables</key>
-				<true/>
-				<key>workflowbundleid</key>
-				<string>self</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.callexternaltrigger</string>
-			<key>uid</key>
-			<string>81D69BF1-CF14-4A8E-A427-380B8C206C4C</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -8989,9 +8942,9 @@ An Alfred Workflow with dozens of features for controlling Obsidian.
 			<key>colorindex</key>
 			<integer>11</integer>
 			<key>xpos</key>
-			<real>2590</real>
+			<real>2380</real>
 			<key>ypos</key>
-			<real>2840</real>
+			<real>2865</real>
 		</dict>
 		<key>0CF629FC-A2DF-4AFA-B949-2D0D98C05B18</key>
 		<dict>
@@ -9386,9 +9339,9 @@ An Alfred Workflow with dozens of features for controlling Obsidian.
 			<key>colorindex</key>
 			<integer>11</integer>
 			<key>xpos</key>
-			<real>2730</real>
+			<real>2385</real>
 			<key>ypos</key>
-			<real>2840</real>
+			<real>2980</real>
 		</dict>
 		<key>38F17F8F-FBE5-422F-B926-A8AFD40D5A4C</key>
 		<dict>
@@ -9497,9 +9450,9 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>note</key>
 			<string>check that all scripts are written</string>
 			<key>xpos</key>
-			<real>2370</real>
+			<real>2150</real>
 			<key>ypos</key>
-			<real>2840</real>
+			<real>2920</real>
 		</dict>
 		<key>44ACD8E5-CFE0-4D48-98F9-DD31AFBC7362</key>
 		<dict>
@@ -9554,15 +9507,6 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<real>245</real>
 			<key>ypos</key>
 			<real>7120</real>
-		</dict>
-		<key>4920FD05-4820-4CA1-A792-3A785A3BA6C8</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>11</integer>
-			<key>xpos</key>
-			<real>1925</real>
-			<key>ypos</key>
-			<real>315</real>
 		</dict>
 		<key>4B017801-8C1B-40FF-972D-EA7CA117420C</key>
 		<dict>
@@ -10294,9 +10238,9 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>colorindex</key>
 			<integer>11</integer>
 			<key>xpos</key>
-			<real>2520</real>
+			<real>2300</real>
 			<key>ypos</key>
-			<real>2870</real>
+			<real>2950</real>
 		</dict>
 		<key>8CA441F0-9476-4FEF-8DC9-E8D8C19EC431</key>
 		<dict>
@@ -10809,9 +10753,9 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>colorindex</key>
 			<integer>11</integer>
 			<key>xpos</key>
-			<real>1915</real>
+			<real>1850</real>
 			<key>ypos</key>
-			<real>2840</real>
+			<real>2800</real>
 		</dict>
 		<key>CD5E876D-3EA7-472D-8A6F-CE1A684C870C</key>
 		<dict>
@@ -11012,18 +10956,18 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>note</key>
 			<string>configure Metadata Extractor</string>
 			<key>xpos</key>
-			<real>2060</real>
+			<real>1845</real>
 			<key>ypos</key>
-			<real>2840</real>
+			<real>2920</real>
 		</dict>
 		<key>E60130DC-8A6E-4892-8516-B79153DC480B</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>11</integer>
+			<integer>1</integer>
 			<key>xpos</key>
-			<real>1915</real>
+			<real>1850</real>
 			<key>ypos</key>
-			<real>2965</real>
+			<real>3070</real>
 		</dict>
 		<key>E7ADA43C-52CF-46FD-AC9E-79616731DDA9</key>
 		<dict>
@@ -11166,9 +11110,9 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>note</key>
 			<string>restart Obsidian &amp; dump metadata</string>
 			<key>xpos</key>
-			<real>2215</real>
+			<real>1995</real>
 			<key>ypos</key>
-			<real>2840</real>
+			<real>2920</real>
 		</dict>
 		<key>F117FF8C-E6E5-4B0E-9FCE-DDB0A6476CAB</key>
 		<dict>

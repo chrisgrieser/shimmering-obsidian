@@ -8,6 +8,6 @@ function run () {
 	// -----------
 
 	const numberOfJSONS = app.doShellScript("ls '" + getEnv("vault_path") + "/.obsidian/plugins/metadata-extractor/' | grep \".json\" | grep -v \"manifest\" | grep -v \"^data\" | wc -l | tr -d \" \"");
-	if (numberOfJSONS < 3) return "⚠️ Metadata wasn't written properly.;;Run `oupdate` ➞ `Manually Refresh Metadata` to complete setup.";
+	if (numberOfJSONS < 4) return "⚠️ Metadata wasn't written properly.;;Run `oupdate` ➞ `Manually Refresh Metadata` to complete setup.";
 	return "🥳 Workflow Setup complete";
 }
