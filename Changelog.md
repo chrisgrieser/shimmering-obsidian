@@ -1,3 +1,6 @@
+- 2023-01-04	release 3.3.3
+- 2023-01-04	docs: add info on .obsidian requirement to places
+- 2023-01-04	fix: oinfo if not using .obsidian as folder
 - 2023-01-03	release 3.3.2
 - 2023-01-03	fix: write canvas.json metad. on osetup (fix #108)
 - 2023-01-03	release 3.3.1
