@@ -66,6 +66,8 @@ body:
     attributes:
       label: Make sure you have done the following
       options:
+        - label: I have not renamed my Obsidian config folder, it's still `.obsidian` (About → Advanced → Override config folder).
+          required: true
         - label: I have [updated to the latest version](https://github.com/chrisgrieser/shimmering-obsidian/releases/latest) of this workflow.
           required: true
         - label: I have read the [Troubleshooting Documentation](https://github.com/chrisgrieser/shimmering-obsidian/blob/main/docs/Troubleshooting.md).

@@ -141,10 +141,11 @@
 ---
 
 ## Workflow Installation
-*This workflow requires the [Powerpack for Alfred](https://www.alfredapp.com/powerpack/). Furthermore, version 3+ of this workflow requires Alfred 5, workflow version 2.27 being the last version supporting Alfred 4.*
+*This workflow requires the [Powerpack for Alfred](https://www.alfredapp.com/powerpack/). Furthermore, version 3+ of this workflow requires Alfred 5, workflow version 2.27 being the last version supporting Alfred 4.
 1. Install the Obsidian plugins [Advanced URI](https://obsidian.md/plugins?id=obsidian-advanced-uri) & [Metadata Extractor](https://obsidian.md/plugins?id=metadata-extractor). Enable both plugins.
-2. Download the [latest release at GitHub](https://github.com/chrisgrieser/shimmering-obsidian/releases/latest). Double-click the `.alfredworkflow` file to install it.
-3. Run the Alfred Command `osetup` and select the vault you want to control with *Shimmering Obsidian*. Obsidian will then restart. (Even if you have only one vault, you need to confirm that one vault once before you can use the workflow.)
+2. Make sure you have not renamed your Obsidian config folder, i.e., it's still `.obsidian` (Settings → About → Advanced → Override config folder).
+3. Download the [latest release at GitHub](https://github.com/chrisgrieser/shimmering-obsidian/releases/latest). Double-click the `.alfredworkflow` file to install it.
+4. Run the Alfred Command `osetup` and select the vault you want to control with *Shimmering Obsidian*. Obsidian will then restart. (Even if you have only one vault, you need to confirm that one vault once before you can use the workflow.)
 
 ## Configuration
 There are extensive settings to configure everything to your heart's content. 
