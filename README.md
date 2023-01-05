@@ -62,6 +62,7 @@
 ---
 
 ### Utility Features
+- 🆕 Open the current browser tab directly in Obsidian.
 - Backup your Vault
 - Access various folders like `.obsidian` or `.trash`
 - Update Plugins (including Beta Plugins installed via BRAT)
@@ -134,7 +135,7 @@
 - Quick Copy of a plugin's ID
 - Open the Vault's root in the default Terminal or in Finder
 - Add & Update Beta Plugins via [BRAT](https://github.com/TfTHacker/obsidian42-brat)
-- Search the [inofficial plugin docs](https://marcus.se.net/obsidian-plugin-docs/)
+- Search the [unofficial plugin docs](https://marcus.se.net/obsidian-plugin-docs/)
 
 ➡️ [Documentation of Features for Developers](docs/Features%20for%20Developers.md)
 
@@ -143,7 +144,7 @@
 ## Workflow Installation
 *This workflow requires the [Powerpack for Alfred](https://www.alfredapp.com/powerpack/). Furthermore, version 3+ of this workflow requires Alfred 5, workflow version 2.27 being the last version supporting Alfred 4.
 1. Install the Obsidian plugins [Advanced URI](https://obsidian.md/plugins?id=obsidian-advanced-uri) & [Metadata Extractor](https://obsidian.md/plugins?id=metadata-extractor). Enable both plugins.
-2. Make sure you have not renamed your Obsidian config folder, i.e., it's still `.obsidian` (Settings → About → Advanced → Override config folder).
+2. Verify you have not renamed your Obsidian config folder, i.e., it's still `.obsidian` (Settings → About → Advanced → Override config folder).
 3. Download the [latest release at GitHub](https://github.com/chrisgrieser/shimmering-obsidian/releases/latest). Double-click the `.alfredworkflow` file to install it.
 4. Run the Alfred Command `osetup` and select the vault you want to control with *Shimmering Obsidian*. Obsidian will then restart. (Even if you have only one vault, you need to confirm that one vault once before you can use the workflow.)
 
@@ -154,7 +155,6 @@ There are extensive settings to configure everything to your heart's content.
 
 ## Alfred Themes
 I also designed some [themes for Alfred](https://github.com/chrisgrieser/alfred-themes) you can check out.
-
 ## Credits & Thanks
 - Big shout-out to [@kometenstaub](https://github.com/kometenstaub) for developing the [metadata extractor plugin](https://github.com/kometenstaub/metadata-extractor), for which this workflow is right now the main client.
 - Also thanks to [@Vinzent03](https://github.com/Vinzent03) for his invaluable [Advanced URI plugin](https://github.com/Vinzent03/obsidian-advanced-uri), which enables Alfred to control various aspects of Obsidian.
