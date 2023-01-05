@@ -4005,26 +4005,6 @@ set parameter to do shell script "echo " &amp; quoted form of (system attribute 
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argument</key>
-				<string></string>
-				<key>passthroughargument</key>
-				<true/>
-				<key>variables</key>
-				<dict>
-					<key>create_in_new_tab</key>
-					<string>true</string>
-				</dict>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>CA4E2034-4495-477F-B3EC-CCCFE06FF886</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>adduuid</key>
 				<false/>
 				<key>allowemptyfiles</key>
@@ -4094,21 +4074,20 @@ set parameter to do shell script "echo " &amp; quoted form of (system attribute 
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>keyword</key>
-				<string>on</string>
-				<key>subtext</key>
-				<string>with title/parameter: '{query}'</string>
-				<key>text</key>
-				<string>New Note</string>
-				<key>withspace</key>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
 				<true/>
+				<key>variables</key>
+				<dict>
+					<key>create_in_new_tab</key>
+					<string>true</string>
+				</dict>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
+			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
-			<string>4B2FBAC0-BF9C-46B5-82A3-423036076906</string>
+			<string>CA4E2034-4495-477F-B3EC-CCCFE06FF886</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -4162,32 +4141,21 @@ set parameter to do shell script "echo " &amp; quoted form of (system attribute 
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>conditions</key>
-				<array>
-					<dict>
-						<key>inputstring</key>
-						<string>{var:use_quickadd}</string>
-						<key>matchcasesensitive</key>
-						<false/>
-						<key>matchmode</key>
-						<integer>0</integer>
-						<key>matchstring</key>
-						<string>0</string>
-						<key>outputlabel</key>
-						<string>Normal Note</string>
-						<key>uid</key>
-						<string>1FA9C912-1F4D-4BE4-AE05-BB43A703FD2B</string>
-					</dict>
-				</array>
-				<key>elselabel</key>
-				<string>QuickAdd</string>
-				<key>hideelse</key>
-				<false/>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>keyword</key>
+				<string>on</string>
+				<key>subtext</key>
+				<string>with title/parameter: '{query}'</string>
+				<key>text</key>
+				<string>New Note</string>
+				<key>withspace</key>
+				<true/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.utility.conditional</string>
+			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
-			<string>51FAE362-91BE-49DB-8099-B14DBA7B9536</string>
+			<string>4B2FBAC0-BF9C-46B5-82A3-423036076906</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -4240,6 +4208,38 @@ set parameter to do shell script "echo " &amp; quoted form of (system attribute 
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
 			<string>A5BA80AA-D2FF-43BC-AE70-4C34D0BB4E20</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:use_quickadd}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>0</string>
+						<key>outputlabel</key>
+						<string>Normal Note</string>
+						<key>uid</key>
+						<string>1FA9C912-1F4D-4BE4-AE05-BB43A703FD2B</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>QuickAdd</string>
+				<key>hideelse</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>51FAE362-91BE-49DB-8099-B14DBA7B9536</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -4644,6 +4644,14 @@ cat "$vault_path"/"$template_note_path"</string>
 			<integer>1</integer>
 		</dict>
 		<dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.junction</string>
+			<key>uid</key>
+			<string>643CDD16-1447-426E-B6BF-9E4375F3D684</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
 			<key>config</key>
 			<dict>
 				<key>argument</key>
@@ -4705,14 +4713,6 @@ cat "$vault_path"/"$template_note_path"</string>
 			<string>D3E8EE70-EB5F-4B58-B533-0A177A30C472</string>
 			<key>version</key>
 			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.junction</string>
-			<key>uid</key>
-			<string>643CDD16-1447-426E-B6BF-9E4375F3D684</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -4860,6 +4860,14 @@ cat "$vault_path"/"$template_note_path"</string>
 			<integer>3</integer>
 		</dict>
 		<dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.junction</string>
+			<key>uid</key>
+			<string>F1C409BD-CCD5-4012-B568-330DE3A0121C</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
 			<key>config</key>
 			<dict>
 				<key>conditions</key>
@@ -4907,14 +4915,6 @@ cat "$vault_path"/"$template_note_path"</string>
 			<string>alfred.workflow.output.callexternaltrigger</string>
 			<key>uid</key>
 			<string>92A31C69-A00D-4696-8552-B6092758941D</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.junction</string>
-			<key>uid</key>
-			<string>F1C409BD-CCD5-4012-B568-330DE3A0121C</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -5143,14 +5143,8 @@ cat "$vault_path"/"$template_note_path"</string>
 				<false/>
 				<key>modsmode</key>
 				<integer>0</integer>
-				<key>relatedApps</key>
-				<array>
-					<string>com.google.Chrome</string>
-					<string>com.brave.Browser</string>
-					<string>com.apple.Safari</string>
-				</array>
 				<key>relatedAppsMode</key>
-				<integer>1</integer>
+				<integer>0</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.trigger.hotkey</string>
@@ -8971,7 +8965,7 @@ An Alfred Workflow with dozens of features for controlling Obsidian.
 			<key>note</key>
 			<string>trasnform to advanced URI</string>
 			<key>xpos</key>
-			<real>220</real>
+			<real>205</real>
 			<key>ypos</key>
 			<real>1255</real>
 		</dict>
@@ -9397,9 +9391,9 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<real>400</real>
+			<real>575</real>
 			<key>ypos</key>
-			<real>1125</real>
+			<real>1120</real>
 		</dict>
 		<key>41F765F9-17DD-4FC0-BF28-E7EB61AF55DB</key>
 		<dict>
@@ -9526,9 +9520,9 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>note</key>
 			<string>new note</string>
 			<key>xpos</key>
-			<real>30</real>
+			<real>200</real>
 			<key>ypos</key>
-			<real>980</real>
+			<real>1010</real>
 		</dict>
 		<key>4B4D3ECE-1162-41DA-ACCC-16B0AC6FA3D1</key>
 		<dict>
@@ -9633,9 +9627,9 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<real>205</real>
+			<real>375</real>
 			<key>ypos</key>
-			<real>1000</real>
+			<real>1030</real>
 		</dict>
 		<key>52C6C47D-3998-4DF9-B9A4-04E586CC8380</key>
 		<dict>
@@ -9841,9 +9835,9 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<real>425</real>
+			<real>485</real>
 			<key>ypos</key>
-			<real>1385</real>
+			<real>1365</real>
 		</dict>
 		<key>65A519DF-2E95-46AA-BD21-64E5ECE9759D</key>
 		<dict>
@@ -10028,9 +10022,9 @@ DOUOBLE CLICK THIS to set hotkey.</string>
 			<key>note</key>
 			<string>new note</string>
 			<key>xpos</key>
-			<real>415</real>
+			<real>575</real>
 			<key>ypos</key>
-			<real>905</real>
+			<real>910</real>
 		</dict>
 		<key>7AFD378A-10C5-4D6A-A49E-54EC1266414F</key>
 		<dict>
@@ -10202,9 +10196,9 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<real>335</real>
+			<real>510</real>
 			<key>ypos</key>
-			<real>1155</real>
+			<real>1150</real>
 		</dict>
 		<key>89E2FCF0-5A14-4078-8D1F-C0FCAC339F63</key>
 		<dict>
@@ -10479,9 +10473,9 @@ DOUBLE CLICK to set hotkey</string>
 			<key>note</key>
 			<string>Workspace Switcher</string>
 			<key>xpos</key>
-			<real>30</real>
+			<real>205</real>
 			<key>ypos</key>
-			<real>1535</real>
+			<real>1490</real>
 		</dict>
 		<key>AC3931E7-5D73-42C4-8975-1E4B4DB66B69</key>
 		<dict>
@@ -10722,9 +10716,9 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>note</key>
 			<string>create in new tab</string>
 			<key>xpos</key>
-			<real>230</real>
+			<real>400</real>
 			<key>ypos</key>
-			<real>935</real>
+			<real>965</real>
 		</dict>
 		<key>CBAE02F7-62CC-4974-96C0-841453D73B48</key>
 		<dict>
@@ -11052,7 +11046,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>note</key>
 			<string>append to Scratchpad</string>
 			<key>xpos</key>
-			<real>30</real>
+			<real>170</real>
 			<key>ypos</key>
 			<real>635</real>
 		</dict>
@@ -11128,9 +11122,9 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<real>240</real>
+			<real>410</real>
 			<key>ypos</key>
-			<real>1605</real>
+			<real>1520</real>
 		</dict>
 		<key>F273E746-ABEB-4F5A-A7A1-2CFA02A663FA</key>
 		<dict>

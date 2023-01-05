@@ -16,12 +16,16 @@ function browserTab() {
 		url = frontmostApp.documents[0].url();
 		title = frontmostApp.documents[0].name();
 	} else {
-		return "You need a supported browser as your frontmost app";
+		return false;
 	}
-	return { "url": url, "title": title };
+	return { url: url, title: title };
 }
 
 //──────────────────────────────────────────────────────────────────────────────
 
-const obsiSurfingURL = "obsidian://web-open?url=" + encodeURIComponent(browserTab().url);
-app.openLocation(obsiSurfingURL);
+function run() {
+	const url = browserTab().url;
+	if (!url) return "Only Safari and Chromium-based Browsers are supported.";
+	const obsiSurfingURL = "obsidian://web-open?url=" + encodeURIComponent(url);
+	app.openLocation(obsiSurfingURL);
+}
