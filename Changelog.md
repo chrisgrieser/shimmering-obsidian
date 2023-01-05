@@ -1,4 +1,7 @@
 - 2023-01-05	release 3.4.0
+- 2023-01-05	fix: build goto submodule root
+- 2023-01-05	build: ensure going to git root
+- 2023-01-05	release 3.4.0
 - 2023-01-05	feat: integrate Obsidian Surfing (Utility Feature)
 - 2023-01-04	release 3.3.3
 - 2023-01-04	docs: add info on .obsidian requirement to places
