@@ -2,12 +2,14 @@
 
 # ALFRED WORKFLOW RELEASE
 # -----------------------
-# Requirements
-# - eslint
 
 # -----------------------
 # new version number
 # -----------------------
+
+# go to git repo root
+# shellcheck disable=2164
+r=$(git rev-parse --git-dir) && r=$(cd "$r" && pwd)/ && cd "${r%%/.git/*}"
 
 # Prompt for version number, if not entered
 nextVersion="$*"
@@ -37,7 +39,7 @@ echo ""
 cp -v info.plist info-original.plist
 
 # remove variables flagged as "no export" from info.plist
-if plutil -extract variablesdontexport json -o - info.plist &> /dev/null ; then
+if plutil -extract variablesdontexport json -o - info.plist &>/dev/null; then
 	excludedVars=$(plutil -extract variablesdontexport json -o - info.plist | tr -d "[]\"" | tr "," "\n")
 	echo "$excludedVars" | tr "\n" "\0" | xargs -0 -I {} plutil -replace variables.{} -string "" info.plist
 
@@ -68,8 +70,8 @@ echo ""
 # -----------------------
 
 # update changelog
-echo "- $(date +"%Y-%m-%d")	release $nextVersion" > ./Changelog.md
-git log --pretty=format:"- %ad%x09%s" --date=short | grep -Ev "minor$" | grep -Ev "patch$" | grep -Ev "typos?$" | grep -v "refactoring" | grep -v "Add files via upload" | grep -Ev "\tDelete" | grep -Ev "\tUpdate.*\.md" | sed -E "s/\t\+ /\t/g" >> ./Changelog.md
+echo "- $(date +"%Y-%m-%d")	release $nextVersion" >./Changelog.md
+git log --pretty=format:"- %ad%x09%s" --date=short | grep -Ev "minor$" | grep -Ev "patch$" | grep -Ev "typos?$" | grep -v "refactoring" | grep -v "Add files via upload" | grep -Ev "\tDelete" | grep -Ev "\tUpdate.*\.md" | sed -E "s/\t\+ /\t/g" >>./Changelog.md
 
 git add -A
 git commit -m "release $nextVersion"
