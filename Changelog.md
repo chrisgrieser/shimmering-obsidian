@@ -1,3 +1,4 @@
+- 2023-01-05	release 3.4.1
 - 2023-01-05	release 3.4.0
 - 2023-01-05	fix: build goto submodule root
 - 2023-01-05	build: ensure going to git root
