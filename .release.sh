@@ -7,9 +7,10 @@
 # new version number
 # -----------------------
 
-# go to git repo root
-# shellcheck disable=2164
-r=$(git rev-parse --git-dir) && r=$(cd "$r" && pwd)/ && cd "${r%%/.git/*}"
+# go to submodule repo root
+[[ ! -f "info.plist" ]] && cd ..
+[[ ! -f "info.plist" ]] && cd ..
+[[ ! -f "info.plist" ]] && exit 1
 
 # Prompt for version number, if not entered
 nextVersion="$*"
