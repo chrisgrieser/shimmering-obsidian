@@ -1,3 +1,9 @@
+- 2023-01-08	release 3.5.0
+- 2023-01-08	build: vaultpath data excluded
+- 2023-01-08	refactor/fix:write vaultpath tofile (#108,#101)
+- 2023-01-06	fix: disable surfing htokey when in Obsidian
+- 2023-01-05	chore
+- 2023-01-05	chore
 - 2023-01-05	release 3.4.1
 - 2023-01-05	release 3.4.0
 - 2023-01-05	fix: build goto submodule root
