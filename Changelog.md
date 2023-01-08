@@ -1,3 +1,7 @@
+- 2023-01-08	release 3.5.2
+- 2023-01-08	fix: ov vault-control change not via shift
+- 2023-01-08	chore
+- 2023-01-08	docs: update vault switcher desc
 - 2023-01-08	release 3.5.1
 - 2023-01-08	fix: ov vault switcher
 - 2023-01-08	release 3.5.0
