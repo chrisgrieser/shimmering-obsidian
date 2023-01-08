@@ -7,7 +7,16 @@ function run(argv) {
 
 	const workspaceName = argv.join("");
 	if (!workspaceName) return;
-	const vaultNameEnc = $.getenv("vault_name_ENC");
+
+	function getVaultNameEncoded() {
+		const _app = Application.currentApplication();
+		_app.includeStandardAdditions = true;
+		const dataFile = $.NSFileManager.defaultManager.contentsAtPath("./vaultPath");
+		const vault = $.NSString.alloc.initWithDataEncoding(dataFile, $.NSUTF8StringEncoding);
+		const vaultPath = ObjC.unwrap(vault).replace(/^~/, _app.pathTo("home folder"));
+		return encodeURIComponent(vaultPath.replace(/.*\//, ""));
+	}
+	const vaultNameEnc = getVaultNameEncoded();
 
 	const workspaceLoadURI =
 		"obsidian://advanced-uri?" +

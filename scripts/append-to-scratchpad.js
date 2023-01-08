@@ -1,6 +1,5 @@
 #!/usr/bin/env osascript -l JavaScript
 function run(argv) {
-
 	ObjC.import("stdlib");
 	ObjC.import("Foundation");
 	const app = Application.currentApplication();
@@ -21,12 +20,19 @@ function run(argv) {
 
 	const isHeading = line => /^#+ /.test(line);
 	const isEmpty = line => /^\s*$/.test(line);
-	const fileExists = (filePath) => Application("Finder").exists(Path(filePath));
+	const fileExists = filePath => Application("Finder").exists(Path(filePath));
 
 	function ensureEmptyLineAt(lines, lineNo) {
 		if (lineNo >= lines.length || !isEmpty(lines[lineNo])) lines.splice(lineNo, 0, "");
 	}
 
+	function getVaultPath() {
+		const _app = Application.currentApplication();
+		_app.includeStandardAdditions = true;
+		const dataFile = $.NSFileManager.defaultManager.contentsAtPath("./vaultPath");
+		const vault = $.NSString.alloc.initWithDataEncoding(dataFile, $.NSUTF8StringEncoding);
+		return ObjC.unwrap(vault).replace(/^~/, _app.pathTo("home folder"));
+	}
 	//───────────────────────────────────────────────────────────────────────────
 	// PREPARE AND READ FILE
 	let heading = "";
@@ -40,9 +46,7 @@ function run(argv) {
 		scratchpadRelPath = tempArr.join("");
 	}
 
-	let scratchpadAbsPath = $.getenv("vault_path")
-		.replace(/^~/, app.pathTo("home folder"))
-		+ "/" + scratchpadRelPath;
+	let scratchpadAbsPath = getVaultPath().replace(/^~/, app.pathTo("home folder")) + "/" + scratchpadRelPath;
 	if (scratchpadAbsPath.slice(-3) !== ".md") scratchpadAbsPath += ".md";
 	if (!fileExists(scratchpadAbsPath)) {
 		console.error("Scratchpad path invalid. Appending cancelled.");

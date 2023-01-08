@@ -13,9 +13,17 @@ function readFile (path, encoding) {
 	return ObjC.unwrap(str);
 }
 
+function getVaultPath() {
+	const _app = Application.currentApplication();
+	_app.includeStandardAdditions = true;
+	const dataFile = $.NSFileManager.defaultManager.contentsAtPath("./vaultPath");
+	const vault = $.NSString.alloc.initWithDataEncoding(dataFile, $.NSUTF8StringEncoding);
+	return ObjC.unwrap(vault).replace(/^~/, _app.pathTo("home folder"));
+}
+
 //──────────────────────────────────────────────────────────────────────────────
 
-const currentVault = $.getenv("vault_path").replace(/^~/, app.pathTo("home folder"));
+const currentVault = getVaultPath()
 const vaultListJson = app.pathTo("home folder") + "/Library/Application Support/obsidian/obsidian.json";
 
 // get vault paths
@@ -48,7 +56,6 @@ vaultArray.forEach(vaultPath => {
 			"cmd": { "arg": vaultPath },
 			"ctrl": { "arg": vaultPath },
 			"shift": { "arg": vaultPath },
-			"fn": { "arg": vaultPath },
 		},
 	});
 });

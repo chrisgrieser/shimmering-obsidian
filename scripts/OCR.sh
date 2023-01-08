@@ -13,9 +13,10 @@ ocr_text="$ocr_prefix\n\n$ocr_text"
 ocr_text=$(echo "$ocr_text" | egrep -v "Warning: Invalid resolution 0 dpi." | egrep -v "Estimating resolution as")
 
 # Write to file
-vaultPath="${vault_path/#\~/$HOME}"
+vault_path="$(cat ./vaultPath)" && vault_path="${vault_path/#\~/$HOME}"
+
 if [[ "$ocr_screenshot_file" == "" ]] ; then
-	ocr_screenshot_file="$vaultPath/OCR-Screenshots.md"
+	ocr_screenshot_file="$vault_path/OCR-Screenshots.md"
 else
 	ocr_screenshot_file="${ocr_screenshot_file/#\~/$HOME}"
 fi

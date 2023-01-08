@@ -19,6 +19,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>06308645-1484-49FA-8806-537D1A50C1B6</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>F07DA284-FCE4-4784-B4B5-6CD6817AEE98</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>0645AAB4-66F5-4149-A92B-C58A80B649C7</key>
 		<array>
 			<dict>
@@ -49,31 +62,19 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>CCB61EC0-26E7-4CE6-9703-BF95602B73D6</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>sourceoutputuid</key>
-				<string>19CF6E75-A418-4AEF-B66E-45E894CDE858</string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>E5E0B205-1716-4D34-A458-4CC01834DCFE</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>sourceoutputuid</key>
-				<string>19CF6E75-A418-4AEF-B66E-45E894CDE858</string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
 				<string>E60130DC-8A6E-4892-8516-B79153DC480B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>19CF6E75-A418-4AEF-B66E-45E894CDE858</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>0C46CBB1-C490-4F62-8CC4-F59D7B1016D6</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -122,7 +123,18 @@
 			</dict>
 		</array>
 		<key>0C46CBB1-C490-4F62-8CC4-F59D7B1016D6</key>
-		<array/>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>5DCF5960-8802-4BA6-A9C1-4D213236B720</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>0D4E8328-70EB-4B78-9879-93DEBEE99412</key>
 		<array>
 			<dict>
@@ -180,19 +192,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>24262C18-419C-4D91-8673-4C0BB27F31DA</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>1FE579F5-99C2-4C35-A110-CB55F903E327</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>5EF4465D-1198-4857-BFAD-B843B6339E84</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -368,7 +367,7 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>82C08ED7-D456-4D77-985B-6F4A779F0BC2</string>
+				<string>BF0363F9-98FD-4C0C-A592-BAD4319D51E2</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -487,19 +486,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>31A86D6E-0757-460B-9840-AC7E2BD728BC</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>E7ADA43C-52CF-46FD-AC9E-79616731DDA9</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>31F21F7E-7450-444B-B9FC-D46650DF6F17</key>
 		<array>
 			<dict>
@@ -562,13 +548,11 @@
 				<false/>
 			</dict>
 		</array>
-		<key>37EC9932-F455-4BBC-BA2B-AF780E3851F3</key>
-		<array/>
 		<key>38F17F8F-FBE5-422F-B926-A8AFD40D5A4C</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>B6C37E17-4D77-4232-879B-5D7F955DEF25</string>
+				<string>06308645-1484-49FA-8806-537D1A50C1B6</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -642,37 +626,11 @@
 				<false/>
 			</dict>
 		</array>
-		<key>42201C8D-D1DE-4EA8-9EC8-7F92FDF17572</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>6B3A98B8-CA8A-4745-AA31-24F1A7C7BF86</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>4357CED9-9613-4872-AFBA-58629EB27D48</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>76BE7619-FDB9-4324-81C7-6570B534A123</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>44832B9C-6E8E-49FB-A270-EBC4CC347812</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>8C9F828A-D313-4E2E-8428-621E160D07FE</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1167,19 +1125,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>624851C6-4CE8-40FF-939A-6A2905B80486</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>31A86D6E-0757-460B-9840-AC7E2BD728BC</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>643CDD16-1447-426E-B6BF-9E4375F3D684</key>
 		<array>
 			<dict>
@@ -1320,19 +1265,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>6B3A98B8-CA8A-4745-AA31-24F1A7C7BF86</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>A2EE3352-E242-48DC-8C16-5B7EC51E4003</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>6EB09DCF-CB1C-42D8-9CFF-90E7EAF28FBA</key>
 		<array>
 			<dict>
@@ -1421,16 +1353,6 @@
 				<string>89E2FCF0-5A14-4078-8D1F-C0FCAC339F63</string>
 				<key>modifiers</key>
 				<integer>262144</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>42201C8D-D1DE-4EA8-9EC8-7F92FDF17572</string>
-				<key>modifiers</key>
-				<integer>8388608</integer>
 				<key>modifiersubtext</key>
 				<string></string>
 				<key>vitoclose</key>
@@ -1651,19 +1573,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>82C08ED7-D456-4D77-985B-6F4A779F0BC2</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>860C2D5F-C032-49DF-812C-2973A0E3F3E8</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>85EAFB9C-A3C0-4BE8-9C10-BD61272812C6</key>
 		<array>
 			<dict>
@@ -1677,24 +1586,11 @@
 				<false/>
 			</dict>
 		</array>
-		<key>860C2D5F-C032-49DF-812C-2973A0E3F3E8</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>6EB09DCF-CB1C-42D8-9CFF-90E7EAF28FBA</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>88723AC0-4348-4B23-AFD7-FEFE6C532A94</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>1FE579F5-99C2-4C35-A110-CB55F903E327</string>
+				<string>B9AC24F9-316C-4D05-903D-7ED21EA0A3C8</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1742,34 +1638,11 @@
 				<false/>
 			</dict>
 		</array>
-		<key>8C9F828A-D313-4E2E-8428-621E160D07FE</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>0C46CBB1-C490-4F62-8CC4-F59D7B1016D6</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>37EC9932-F455-4BBC-BA2B-AF780E3851F3</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>8CA441F0-9476-4FEF-8DC9-E8D8C19EC431</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>A170DF0F-C1AD-46DF-9738-FF54AA497695</string>
+				<string>E88AC866-9A2B-4763-914C-EF2BB940DDE2</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1974,19 +1847,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>A170DF0F-C1AD-46DF-9738-FF54AA497695</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>25FCBA58-5263-4F11-B222-4978632AF5B9</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>A19798F1-4D8F-4DF9-B8C7-CE52542C5806</key>
 		<array>
 			<dict>
@@ -2007,19 +1867,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>D80CA78B-B320-4895-AECD-874B584EB863</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>A2EE3352-E242-48DC-8C16-5B7EC51E4003</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>0D36A181-34F8-492E-A565-C022DA3B34E6</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -2099,19 +1946,6 @@
 				<integer>1048576</integer>
 				<key>modifiersubtext</key>
 				<string>⌘: Save current Workspace before loading</string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>AD7DF1BF-E171-4081-A3B9-FDC3FA9D5DC3</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>25FCBA58-5263-4F11-B222-4978632AF5B9</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -2248,11 +2082,11 @@
 				<false/>
 			</dict>
 		</array>
-		<key>B6C37E17-4D77-4232-879B-5D7F955DEF25</key>
+		<key>B9AC24F9-316C-4D05-903D-7ED21EA0A3C8</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>25FCBA58-5263-4F11-B222-4978632AF5B9</string>
+				<string>5EF4465D-1198-4857-BFAD-B843B6339E84</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -2279,6 +2113,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>152229B2-B1D8-44E8-9EF7-98B39FE56FD4</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>BF0363F9-98FD-4C0C-A592-BAD4319D51E2</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>6EB09DCF-CB1C-42D8-9CFF-90E7EAF28FBA</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -2440,8 +2287,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>CCB61EC0-26E7-4CE6-9703-BF95602B73D6</key>
-		<array/>
 		<key>CD6ADFC6-4DE3-4083-ABD6-A35719BEF5A3</key>
 		<array>
 			<dict>
@@ -2584,7 +2429,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>1FE579F5-99C2-4C35-A110-CB55F903E327</string>
+				<string>B9AC24F9-316C-4D05-903D-7ED21EA0A3C8</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -2663,16 +2508,6 @@
 				<integer>131072</integer>
 				<key>modifiersubtext</key>
 				<string>⇧: Control this vault with this Alfred Workflow</string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>624851C6-4CE8-40FF-939A-6A2905B80486</string>
-				<key>modifiers</key>
-				<integer>8388608</integer>
-				<key>modifiersubtext</key>
-				<string>Fn: git pull the vault</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -2782,19 +2617,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>E5E0B205-1716-4D34-A458-4CC01834DCFE</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>F0E0AB83-B5CD-4107-A551-32C6AD581502</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>E7ADA43C-52CF-46FD-AC9E-79616731DDA9</key>
 		<array>
 			<dict>
@@ -2825,7 +2647,20 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>AD7DF1BF-E171-4081-A3B9-FDC3FA9D5DC3</string>
+				<string>F43AAA85-F638-4A4C-AE36-FB26D01EDFAA</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>E88AC866-9A2B-4763-914C-EF2BB940DDE2</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>F07DA284-FCE4-4784-B4B5-6CD6817AEE98</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -2938,11 +2773,11 @@
 				<false/>
 			</dict>
 		</array>
-		<key>F0E0AB83-B5CD-4107-A551-32C6AD581502</key>
+		<key>F07DA284-FCE4-4784-B4B5-6CD6817AEE98</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>44832B9C-6E8E-49FB-A270-EBC4CC347812</string>
+				<string>25FCBA58-5263-4F11-B222-4978632AF5B9</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -2956,6 +2791,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>643CDD16-1447-426E-B6BF-9E4375F3D684</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>F43AAA85-F638-4A4C-AE36-FB26D01EDFAA</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>F07DA284-FCE4-4784-B4B5-6CD6817AEE98</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -3007,16 +2855,6 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>03D4FDF8-2991-4C26-B8D3-14EE389B8822</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
 				<string>7107BFB2-1A6A-434E-9E32-F01F75AF1CF6</string>
 				<key>modifiers</key>
 				<integer>0</integer>
@@ -3024,6 +2862,16 @@
 				<string></string>
 				<key>sourceoutputuid</key>
 				<string>2AE2E6A9-0B8D-4985-82C0-3A8C7CF82036</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>03D4FDF8-2991-4C26-B8D3-14EE389B8822</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -3051,11 +2899,11 @@
 				<key>focusedappvariablename</key>
 				<string></string>
 				<key>hotkey</key>
-				<integer>0</integer>
+				<integer>23</integer>
 				<key>hotmod</key>
-				<integer>0</integer>
+				<integer>1179648</integer>
 				<key>hotstring</key>
-				<string></string>
+				<string>5</string>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -4005,29 +3853,25 @@ set parameter to do shell script "echo " &amp; quoted form of (system attribute 
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>adduuid</key>
+				<key>concurrently</key>
 				<false/>
-				<key>allowemptyfiles</key>
-				<false/>
-				<key>createintermediatefolders</key>
-				<false/>
-				<key>filename</key>
-				<string>{var:vault_path}/{var:relative_path}</string>
-				<key>filetext</key>
-				<string>{var:append_prefix}{query}</string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>relativepathmode</key>
+				<key>escaping</key>
 				<integer>0</integer>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>append-to-file.js</string>
 				<key>type</key>
-				<integer>2</integer>
+				<integer>8</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.output.writefile</string>
+			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>1FE579F5-99C2-4C35-A110-CB55F903E327</string>
+			<string>B9AC24F9-316C-4D05-903D-7ED21EA0A3C8</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -4351,6 +4195,29 @@ set parameter to do shell script "echo " &amp; quoted form of (system attribute 
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>append-template-to-file.js</string>
+				<key>type</key>
+				<integer>8</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>BF0363F9-98FD-4C0C-A592-BAD4319D51E2</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argument</key>
 				<string>{query}</string>
 				<key>passthroughargument</key>
@@ -4498,58 +4365,6 @@ set parameter to do shell script "echo " &amp; quoted form of (system attribute 
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>vault_path="${vault_path/#\~/$HOME}"
-
-cat "$vault_path"/"$template_note_path"</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>5</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>82C08ED7-D456-4D77-985B-6F4A779F0BC2</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>adduuid</key>
-				<false/>
-				<key>allowemptyfiles</key>
-				<true/>
-				<key>createintermediatefolders</key>
-				<true/>
-				<key>filename</key>
-				<string>{var:vault_path}/{var:current_folder}/Untitled.md</string>
-				<key>filetext</key>
-				<string>{query}</string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>relativepathmode</key>
-				<integer>0</integer>
-				<key>type</key>
-				<integer>2</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.writefile</string>
-			<key>uid</key>
-			<string>860C2D5F-C032-49DF-812C-2973A0E3F3E8</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>matchmode</key>
 				<integer>1</integer>
 				<key>matchstring</key>
@@ -4567,6 +4382,25 @@ cat "$vault_path"/"$template_note_path"</string>
 			<string>C13CEBC9-226C-42DC-A2AA-77690DB36934</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>externaltriggerid</key>
+				<string>browser-folder-loop</string>
+				<key>passinputasargument</key>
+				<false/>
+				<key>passvariables</key>
+				<true/>
+				<key>workflowbundleid</key>
+				<string>self</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>8BC09525-BB68-46E3-A7E2-C0E5C489FF60</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -4750,25 +4584,6 @@ cat "$vault_path"/"$template_note_path"</string>
 			<string>0E1A3641-F3D1-4DAE-A027-215B413CC472</string>
 			<key>version</key>
 			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>externaltriggerid</key>
-				<string>browser-folder-loop</string>
-				<key>passinputasargument</key>
-				<false/>
-				<key>passvariables</key>
-				<true/>
-				<key>workflowbundleid</key>
-				<string>self</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.callexternaltrigger</string>
-			<key>uid</key>
-			<string>8BC09525-BB68-46E3-A7E2-C0E5C489FF60</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -5376,27 +5191,6 @@ Application('com.runningwithcrayons.Alfred').removeConfiguration('ObRunning', {
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<false/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string></string>
-				<key>title</key>
-				<string>⏳ Restarting Obsidian &amp; Creating Metadata...</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>CCB61EC0-26E7-4CE6-9703-BF95602B73D6</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>externaltriggerid</key>
 				<string>open-in-obsidian</string>
 				<key>passinputasargument</key>
@@ -5454,23 +5248,31 @@ Application('com.runningwithcrayons.Alfred').removeConfiguration('ObRunning', {
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>lastpathcomponent</key>
+				<key>alignment</key>
+				<integer>0</integer>
+				<key>backgroundcolor</key>
+				<string></string>
+				<key>fadespeed</key>
+				<integer>0</integer>
+				<key>fillmode</key>
+				<integer>0</integer>
+				<key>font</key>
+				<string></string>
+				<key>ignoredynamicplaceholders</key>
 				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<false/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string>{var:split2}</string>
-				<key>title</key>
-				<string>{var:split1}</string>
+				<key>largetypetext</key>
+				<string>{query}Please install &amp; enable the plugin and re-run `osetup`.</string>
+				<key>textcolor</key>
+				<string></string>
+				<key>wrapat</key>
+				<integer>50</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
+			<string>alfred.workflow.output.largetype</string>
 			<key>uid</key>
-			<string>0C46CBB1-C490-4F62-8CC4-F59D7B1016D6</string>
+			<string>E60130DC-8A6E-4892-8516-B79153DC480B</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -5490,95 +5292,6 @@ Application('com.runningwithcrayons.Alfred').removeConfiguration('ObRunning', {
 			<string>0CF629FC-A2DF-4AFA-B949-2D0D98C05B18</string>
 			<key>version</key>
 			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>script</key>
-				<string></string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string>scripts/osetup-4.js</string>
-				<key>type</key>
-				<integer>8</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>44832B9C-6E8E-49FB-A270-EBC4CC347812</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>adduuid</key>
-				<false/>
-				<key>allowemptyfiles</key>
-				<false/>
-				<key>createintermediatefolders</key>
-				<true/>
-				<key>filename</key>
-				<string>{var:vault_path}/.obsidian/plugins/metadata-extractor/data.json</string>
-				<key>filetext</key>
-				<string>{
-  "writingFrequency": "30",
-  "writeFilesOnLaunch": true
-}</string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>relativepathmode</key>
-				<integer>0</integer>
-				<key>type</key>
-				<integer>1</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.writefile</string>
-			<key>uid</key>
-			<string>E5E0B205-1716-4D34-A458-4CC01834DCFE</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>68</integer>
-				<key>script</key>
-				<string>tell application "Obsidian" to if it is running then quit
-delay 0.2
-repeat until application "Obsidian" is not running 
-	delay 0.2
-end repeat
-delay 1
-
-# dump metadata
-tell application "Obsidian"
-	activate
-	open location "obsidian://advanced-uri?commandid=metadata-extractor%253Awrite-metadata-json"
-	open location "obsidian://advanced-uri?commandid=metadata-extractor%253Awrite-tags-json"
-	open location "obsidian://advanced-uri?commandid=metadata-extractor%253Awrite-allExceptMd-json"
-end tell</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string>scripts/osetup_3.applescript</string>
-				<key>type</key>
-				<integer>8</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>F0E0AB83-B5CD-4107-A551-32C6AD581502</string>
-			<key>version</key>
-			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -5655,27 +5368,6 @@ end tell</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>delimiter</key>
-				<string>;;</string>
-				<key>discardemptyarguments</key>
-				<false/>
-				<key>outputas</key>
-				<integer>0</integer>
-				<key>trimarguments</key>
-				<true/>
-				<key>variableprefix</key>
-				<string>split</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.split</string>
-			<key>uid</key>
-			<string>8C9F828A-D313-4E2E-8428-621E160D07FE</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>conditions</key>
 				<array>
 					<dict>
@@ -5686,15 +5378,15 @@ end tell</string>
 						<key>matchmode</key>
 						<integer>4</integer>
 						<key>matchstring</key>
-						<string>^\n$</string>
+						<string>^Error</string>
 						<key>outputlabel</key>
-						<string>✅</string>
+						<string>error</string>
 						<key>uid</key>
 						<string>19CF6E75-A418-4AEF-B66E-45E894CDE858</string>
 					</dict>
 				</array>
 				<key>elselabel</key>
-				<string>error</string>
+				<string>success</string>
 				<key>hideelse</key>
 				<false/>
 			</dict>
@@ -5702,6 +5394,27 @@ end tell</string>
 			<string>alfred.workflow.utility.conditional</string>
 			<key>uid</key>
 			<string>08322EF6-E1E3-48DA-86F5-9C61C812529F</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{var:split2}</string>
+				<key>title</key>
+				<string>{var:split1}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>0C46CBB1-C490-4F62-8CC4-F59D7B1016D6</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -5716,7 +5429,7 @@ end tell</string>
 			<key>type</key>
 			<string>alfred.workflow.output.playsound</string>
 			<key>uid</key>
-			<string>37EC9932-F455-4BBC-BA2B-AF780E3851F3</string>
+			<string>5DCF5960-8802-4BA6-A9C1-4D213236B720</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -5738,35 +5451,6 @@ end tell</string>
 			<string>81D69BF1-CF14-4A8E-A427-380B8C206C4C</string>
 			<key>version</key>
 			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>alignment</key>
-				<integer>0</integer>
-				<key>backgroundcolor</key>
-				<string></string>
-				<key>fadespeed</key>
-				<integer>0</integer>
-				<key>fillmode</key>
-				<integer>0</integer>
-				<key>font</key>
-				<string></string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>largetypetext</key>
-				<string>{query}Please install &amp; enable the plugin and re-run `osetup`.</string>
-				<key>textcolor</key>
-				<string></string>
-				<key>wrapat</key>
-				<integer>50</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.largetype</string>
-			<key>uid</key>
-			<string>E60130DC-8A6E-4892-8516-B79153DC480B</string>
-			<key>version</key>
-			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -7323,7 +7007,7 @@ fi</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string>scripts/metadata_refreshing.sh</string>
+				<string>scripts/metadata_refreshing.js</string>
 				<key>type</key>
 				<integer>8</integer>
 			</dict>
@@ -7545,16 +7229,15 @@ fi</string>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
-				<integer>102</integer>
+				<integer>0</integer>
 				<key>script</key>
-				<string>open "obsidian://advanced-uri?vault=$vault_name_ENC&amp;commandid=obsidian42-brat%253ABRAT-checkForUpdatesAndUpdate"
-open "obsidian://advanced-uri?vault=$vault_name_ENC&amp;updateplugins=true"</string>
+				<string></string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string></string>
+				<string>oupdate.js</string>
 				<key>type</key>
-				<integer>5</integer>
+				<integer>8</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
@@ -7992,67 +7675,6 @@ open "obsidian://advanced-uri?vault=$vault_name_ENC&amp;updateplugins=true"</str
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<true/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string>{query}</string>
-				<key>title</key>
-				<string>✅ git pull</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>6B3A98B8-CA8A-4745-AA31-24F1A7C7BF86</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>cd "$*"
-
-echo | git pull</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>5</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>42201C8D-D1DE-4EA8-9EC8-7F92FDF17572</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>soundname</key>
-				<string>Blow</string>
-				<key>systemsound</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.playsound</string>
-			<key>uid</key>
-			<string>A2EE3352-E242-48DC-8C16-5B7EC51E4003</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>browser</key>
 				<string></string>
 				<key>skipqueryencode</key>
@@ -8331,6 +7953,138 @@ echo | git pull</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>skipqueryencode</key>
+				<false/>
+				<key>skipvarencode</key>
+				<false/>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>obsidian://advanced-uri?vault={var:vault_name_ENC}&amp;commandid=obsidian42-brat%253ABRAT-AddBetaPlugin</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>4EA9A40E-C1AF-4EB5-B118-A36B1F0CE6F7</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>soundname</key>
+				<string>Blow</string>
+				<key>systemsound</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.playsound</string>
+			<key>uid</key>
+			<string>E7ADA43C-52CF-46FD-AC9E-79616731DDA9</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>'{var:changed_vault}'</string>
+				<key>title</key>
+				<string>✅ Vault for this workflow changed</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>7107BFB2-1A6A-434E-9E32-F01F75AF1CF6</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>tell application id "com.runningwithcrayons.Alfred" to set configuration "vault_path" to value query in workflow (system attribute "alfred_workflow_bundleid")</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>scripts/osetup_2.js</string>
+				<key>type</key>
+				<integer>8</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>2FB281A9-8BFA-4836-A2A9-73A46C3DE6DD</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>4</integer>
+						<key>matchstring</key>
+						<string>^Error</string>
+						<key>outputlabel</key>
+						<string>error</string>
+						<key>uid</key>
+						<string>2AE2E6A9-0B8D-4985-82C0-3A8C7CF82036</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>success</string>
+				<key>hideelse</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>FFC9BC93-DD73-4F52-A69B-7FF4E6490EC1</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<true/>
+				<key>variables</key>
+				<dict>
+					<key>changed_vault</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>85EAFB9C-A3C0-4BE8-9C10-BD61272812C6</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>alignment</key>
 				<integer>0</integer>
 				<key>backgroundcolor</key>
@@ -8371,184 +8125,6 @@ echo | git pull</string>
 			<string>alfred.workflow.output.playsound</string>
 			<key>uid</key>
 			<string>42744528-B755-4953-ADD5-05947D2FBFBF</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>browser</key>
-				<string></string>
-				<key>skipqueryencode</key>
-				<false/>
-				<key>skipvarencode</key>
-				<false/>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string>obsidian://advanced-uri?vault={var:vault_name_ENC}&amp;commandid=obsidian42-brat%253ABRAT-AddBetaPlugin</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
-			<key>uid</key>
-			<string>4EA9A40E-C1AF-4EB5-B118-A36B1F0CE6F7</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>68</integer>
-				<key>script</key>
-				<string>tell application id "com.runningwithcrayons.Alfred" to set configuration "vault_path" to value query in workflow (system attribute "alfred_workflow_bundleid")</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string>scripts/osetup_2.js</string>
-				<key>type</key>
-				<integer>8</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>2FB281A9-8BFA-4836-A2A9-73A46C3DE6DD</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>conditions</key>
-				<array>
-					<dict>
-						<key>inputstring</key>
-						<string></string>
-						<key>matchcasesensitive</key>
-						<false/>
-						<key>matchmode</key>
-						<integer>4</integer>
-						<key>matchstring</key>
-						<string>^\n$</string>
-						<key>outputlabel</key>
-						<string>success</string>
-						<key>uid</key>
-						<string>2AE2E6A9-0B8D-4985-82C0-3A8C7CF82036</string>
-					</dict>
-				</array>
-				<key>elselabel</key>
-				<string>plugin missing</string>
-				<key>hideelse</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.conditional</string>
-			<key>uid</key>
-			<string>FFC9BC93-DD73-4F52-A69B-7FF4E6490EC1</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<true/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string>'{var:changed_vault}'</string>
-				<key>title</key>
-				<string>✅ Vault for this workflow changed</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>7107BFB2-1A6A-434E-9E32-F01F75AF1CF6</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string></string>
-				<key>passthroughargument</key>
-				<true/>
-				<key>variables</key>
-				<dict>
-					<key>changed_vault</key>
-					<string>{query}</string>
-				</dict>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>85EAFB9C-A3C0-4BE8-9C10-BD61272812C6</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>soundname</key>
-				<string>Blow</string>
-				<key>systemsound</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.playsound</string>
-			<key>uid</key>
-			<string>E7ADA43C-52CF-46FD-AC9E-79616731DDA9</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>cd "$*"
-
-echo | git pull</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>5</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>624851C6-4CE8-40FF-939A-6A2905B80486</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<true/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string>{query}</string>
-				<key>title</key>
-				<string>✅ git pull</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>31A86D6E-0757-460B-9840-AC7E2BD728BC</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -8604,25 +8180,6 @@ echo | git pull</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>externaltriggerid</key>
-				<string>update-obsidian-workflow</string>
-				<key>passinputasargument</key>
-				<true/>
-				<key>passvariables</key>
-				<true/>
-				<key>workflowbundleid</key>
-				<string>self</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.callexternaltrigger</string>
-			<key>uid</key>
-			<string>8679F7B6-73DE-4CF7-9C42-CB7AC96326DF</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>browser</key>
 				<string></string>
 				<key>skipqueryencode</key>
@@ -8638,6 +8195,25 @@ echo | git pull</string>
 			<string>alfred.workflow.action.openurl</string>
 			<key>uid</key>
 			<string>BF2C7CBD-67E0-45CC-8948-E68291FF2B50</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>externaltriggerid</key>
+				<string>update-obsidian-workflow</string>
+				<key>passinputasargument</key>
+				<true/>
+				<key>passvariables</key>
+				<true/>
+				<key>workflowbundleid</key>
+				<string>self</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>8679F7B6-73DE-4CF7-9C42-CB7AC96326DF</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -8680,21 +8256,6 @@ echo | git pull</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>openwith</key>
-				<string></string>
-				<key>sourcefile</key>
-				<string>{var:vault_path}/.obsidian</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openfile</string>
-			<key>uid</key>
-			<string>AD7DF1BF-E171-4081-A3B9-FDC3FA9D5DC3</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argumenttype</key>
 				<integer>2</integer>
 				<key>keyword</key>
@@ -8712,6 +8273,46 @@ echo | git pull</string>
 			<string>E844180D-E691-40D1-9EB1-6A06F69C73B9</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>.obsidian</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>F43AAA85-F638-4A4C-AE36-FB26D01EDFAA</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>open-internal-folder.sh</string>
+				<key>type</key>
+				<integer>8</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>F07DA284-FCE4-4784-B4B5-6CD6817AEE98</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -8737,17 +8338,19 @@ echo | git pull</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>openwith</key>
-				<string></string>
-				<key>sourcefile</key>
-				<string>{var:vault_path}/.trash</string>
+				<key>argument</key>
+				<string>.trash</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.openfile</string>
+			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
-			<string>B6C37E17-4D77-4232-879B-5D7F955DEF25</string>
+			<string>06308645-1484-49FA-8806-537D1A50C1B6</string>
 			<key>version</key>
-			<integer>3</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -8792,17 +8395,19 @@ echo | git pull</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>openwith</key>
-				<string></string>
-				<key>sourcefile</key>
-				<string>{var:vault_path}/.obsidian/plugins</string>
+				<key>argument</key>
+				<string>.obsidian/plugins</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.openfile</string>
+			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
-			<string>A170DF0F-C1AD-46DF-9738-FF54AA497695</string>
+			<string>E88AC866-9A2B-4763-914C-EF2BB940DDE2</string>
 			<key>version</key>
-			<integer>3</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -8845,6 +8450,9 @@ echo | git pull</string>
 	<string># Shimmering Obsidian
 An Alfred Workflow with dozens of features for controlling Obsidian.
 
+## ⚠️⚠️⚠️ Change of Configuration System ⚠️⚠️⚠️
+➡️ **After updating to 3.5, please rerun `osetup` once more.**
+
 ## Info
 - [README](https://github.com/chrisgrieser/shimmering-obsidian/blob/main/README.md)
 - [Changelog](https://github.com/chrisgrieser/shimmering-obsidian/blob/main/Changelog.md)
@@ -8877,9 +8485,16 @@ An Alfred Workflow with dozens of features for controlling Obsidian.
 			<key>colorindex</key>
 			<integer>1</integer>
 			<key>xpos</key>
-			<real>555</real>
+			<real>550</real>
 			<key>ypos</key>
-			<real>8395</real>
+			<real>8655</real>
+		</dict>
+		<key>06308645-1484-49FA-8806-537D1A50C1B6</key>
+		<dict>
+			<key>xpos</key>
+			<real>175</real>
+			<key>ypos</key>
+			<real>9305</real>
 		</dict>
 		<key>0645AAB4-66F5-4149-A92B-C58A80B649C7</key>
 		<dict>
@@ -8940,9 +8555,9 @@ An Alfred Workflow with dozens of features for controlling Obsidian.
 			<key>colorindex</key>
 			<integer>11</integer>
 			<key>xpos</key>
-			<real>2380</real>
+			<real>1870</real>
 			<key>ypos</key>
-			<real>2865</real>
+			<real>2990</real>
 		</dict>
 		<key>0CF629FC-A2DF-4AFA-B949-2D0D98C05B18</key>
 		<dict>
@@ -8991,9 +8606,9 @@ An Alfred Workflow with dozens of features for controlling Obsidian.
 			<key>note</key>
 			<string>opens in default Terminal</string>
 			<key>xpos</key>
-			<real>250</real>
+			<real>255</real>
 			<key>ypos</key>
-			<real>8990</real>
+			<real>8945</real>
 		</dict>
 		<key>0F72D532-AAE1-48A3-85FC-A819F196DC3E</key>
 		<dict>
@@ -9013,7 +8628,7 @@ An Alfred Workflow with dozens of features for controlling Obsidian.
 			<key>xpos</key>
 			<real>245</real>
 			<key>ypos</key>
-			<real>7615</real>
+			<real>7485</real>
 		</dict>
 		<key>152229B2-B1D8-44E8-9EF7-98B39FE56FD4</key>
 		<dict>
@@ -9068,17 +8683,6 @@ An Alfred Workflow with dozens of features for controlling Obsidian.
 			<real>2445</real>
 			<key>ypos</key>
 			<real>1110</real>
-		</dict>
-		<key>1FE579F5-99C2-4C35-A110-CB55F903E327</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>note</key>
-			<string>Append Clipboard Content</string>
-			<key>xpos</key>
-			<real>2140</real>
-			<key>ypos</key>
-			<real>960</real>
 		</dict>
 		<key>221F4BFD-7850-440F-BB16-C39AC39E729C</key>
 		<dict>
@@ -9221,7 +8825,7 @@ An Alfred Workflow with dozens of features for controlling Obsidian.
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<real>35</real>
+			<real>30</real>
 			<key>ypos</key>
 			<real>8160</real>
 		</dict>
@@ -9239,13 +8843,13 @@ An Alfred Workflow with dozens of features for controlling Obsidian.
 		<key>2FB281A9-8BFA-4836-A2A9-73A46C3DE6DD</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>note</key>
 			<string>set vault</string>
 			<key>xpos</key>
-			<real>250</real>
+			<real>255</real>
 			<key>ypos</key>
-			<real>8510</real>
+			<real>8575</real>
 		</dict>
 		<key>2FD866C2-DDB1-4C2D-A420-3A580FBC60D2</key>
 		<dict>
@@ -9264,15 +8868,6 @@ An Alfred Workflow with dozens of features for controlling Obsidian.
 			<real>280</real>
 			<key>ypos</key>
 			<real>2810</real>
-		</dict>
-		<key>31A86D6E-0757-460B-9840-AC7E2BD728BC</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>xpos</key>
-			<real>555</real>
-			<key>ypos</key>
-			<real>8665</real>
 		</dict>
 		<key>31F21F7E-7450-444B-B9FC-D46650DF6F17</key>
 		<dict>
@@ -9332,15 +8927,6 @@ An Alfred Workflow with dozens of features for controlling Obsidian.
 			<key>ypos</key>
 			<real>3370</real>
 		</dict>
-		<key>37EC9932-F455-4BBC-BA2B-AF780E3851F3</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>11</integer>
-			<key>xpos</key>
-			<real>2385</real>
-			<key>ypos</key>
-			<real>2980</real>
-		</dict>
 		<key>38F17F8F-FBE5-422F-B926-A8AFD40D5A4C</key>
 		<dict>
 			<key>colorindex</key>
@@ -9394,6 +8980,8 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 		<dict>
 			<key>colorindex</key>
 			<integer>9</integer>
+			<key>note</key>
+			<string>quickadd</string>
 			<key>xpos</key>
 			<real>575</real>
 			<key>ypos</key>
@@ -9410,25 +8998,14 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>ypos</key>
 			<real>5725</real>
 		</dict>
-		<key>42201C8D-D1DE-4EA8-9EC8-7F92FDF17572</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>note</key>
-			<string>git pull</string>
-			<key>xpos</key>
-			<real>245</real>
-			<key>ypos</key>
-			<real>7475</real>
-		</dict>
 		<key>42744528-B755-4953-ADD5-05947D2FBFBF</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>1</integer>
 			<key>xpos</key>
-			<real>700</real>
+			<real>695</real>
 			<key>ypos</key>
-			<real>8395</real>
+			<real>8655</real>
 		</dict>
 		<key>4357CED9-9613-4872-AFBA-58629EB27D48</key>
 		<dict>
@@ -9440,17 +9017,6 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<real>30</real>
 			<key>ypos</key>
 			<real>5090</real>
-		</dict>
-		<key>44832B9C-6E8E-49FB-A270-EBC4CC347812</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>11</integer>
-			<key>note</key>
-			<string>check that all scripts are written</string>
-			<key>xpos</key>
-			<real>2150</real>
-			<key>ypos</key>
-			<real>2920</real>
 		</dict>
 		<key>44ACD8E5-CFE0-4D48-98F9-DD31AFBC7362</key>
 		<dict>
@@ -9473,7 +9039,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 		<key>46A5196E-D0B3-4D06-95AB-93FDA30C175D</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>11</integer>
 			<key>xpos</key>
 			<real>1455</real>
 			<key>ypos</key>
@@ -9482,7 +9048,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 		<key>475C216C-4A37-4F50-91DE-B1FE3666684F</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>xpos</key>
 			<real>350</real>
 			<key>ypos</key>
@@ -9509,7 +9075,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 		<key>4B017801-8C1B-40FF-972D-EA7CA117420C</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>note</key>
 			<string>needed for folders</string>
 			<key>xpos</key>
@@ -9651,7 +9217,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>xpos</key>
 			<real>250</real>
 			<key>ypos</key>
-			<real>8880</real>
+			<real>8820</real>
 		</dict>
 		<key>560E177F-C4A4-432D-A640-5A15B7048CB8</key>
 		<dict>
@@ -9743,6 +9309,15 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>ypos</key>
 			<real>6825</real>
 		</dict>
+		<key>5DCF5960-8802-4BA6-A9C1-4D213236B720</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>11</integer>
+			<key>xpos</key>
+			<real>2025</real>
+			<key>ypos</key>
+			<real>2990</real>
+		</dict>
 		<key>5E1194F1-12BA-456E-8511-C5708AE07906</key>
 		<dict>
 			<key>colorindex</key>
@@ -9804,17 +9379,6 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<real>55</real>
 			<key>ypos</key>
 			<real>2810</real>
-		</dict>
-		<key>624851C6-4CE8-40FF-939A-6A2905B80486</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>note</key>
-			<string>git pull</string>
-			<key>xpos</key>
-			<real>250</real>
-			<key>ypos</key>
-			<real>8640</real>
 		</dict>
 		<key>624B592C-7815-4AE9-84DA-8EB7AD964966</key>
 		<dict>
@@ -9906,15 +9470,6 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>ypos</key>
 			<real>6775</real>
 		</dict>
-		<key>6B3A98B8-CA8A-4745-AA31-24F1A7C7BF86</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>xpos</key>
-			<real>395</real>
-			<key>ypos</key>
-			<real>7475</real>
-		</dict>
 		<key>6EB09DCF-CB1C-42D8-9CFF-90E7EAF28FBA</key>
 		<dict>
 			<key>colorindex</key>
@@ -9940,11 +9495,11 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 		<key>7107BFB2-1A6A-434E-9E32-F01F75AF1CF6</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>xpos</key>
-			<real>555</real>
+			<real>550</real>
 			<key>ypos</key>
-			<real>8535</real>
+			<real>8530</real>
 		</dict>
 		<key>72551A9E-43E8-4462-9CB0-D5C419B4AEA2</key>
 		<dict>
@@ -10095,7 +9650,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>colorindex</key>
 			<integer>11</integer>
 			<key>note</key>
-			<string>log verison info for debugging</string>
+			<string>log version info for debugging</string>
 			<key>xpos</key>
 			<real>1610</real>
 			<key>ypos</key>
@@ -10130,25 +9685,14 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>ypos</key>
 			<real>3030</real>
 		</dict>
-		<key>82C08ED7-D456-4D77-985B-6F4A779F0BC2</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>note</key>
-			<string>read template</string>
-			<key>xpos</key>
-			<real>2050</real>
-			<key>ypos</key>
-			<real>1260</real>
-		</dict>
 		<key>85EAFB9C-A3C0-4BE8-9C10-BD61272812C6</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>xpos</key>
-			<real>185</real>
+			<real>190</real>
 			<key>ypos</key>
-			<real>8540</real>
+			<real>8605</real>
 		</dict>
 		<key>85FB81E3-166A-4AFB-A0F4-E9ADF2A6DBAB</key>
 		<dict>
@@ -10158,15 +9702,6 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<real>200</real>
 			<key>ypos</key>
 			<real>8040</real>
-		</dict>
-		<key>860C2D5F-C032-49DF-812C-2973A0E3F3E8</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>xpos</key>
-			<real>2200</real>
-			<key>ypos</key>
-			<real>1260</real>
 		</dict>
 		<key>863C601A-3E8C-4BD2-8240-F66020F40A44</key>
 		<dict>
@@ -10227,18 +9762,9 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>colorindex</key>
 			<integer>6</integer>
 			<key>xpos</key>
-			<real>2050</real>
+			<real>2110</real>
 			<key>ypos</key>
-			<real>1400</real>
-		</dict>
-		<key>8C9F828A-D313-4E2E-8428-621E160D07FE</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>11</integer>
-			<key>xpos</key>
-			<real>2300</real>
-			<key>ypos</key>
-			<real>2950</real>
+			<real>1310</real>
 		</dict>
 		<key>8CA441F0-9476-4FEF-8DC9-E8D8C19EC431</key>
 		<dict>
@@ -10279,7 +9805,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 		<key>90B9D6E4-3DA5-43AE-9517-49A1B96BD0A2</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>11</integer>
 			<key>xpos</key>
 			<real>1450</real>
 			<key>ypos</key>
@@ -10335,9 +9861,9 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<real>160</real>
+			<real>170</real>
 			<key>ypos</key>
-			<real>9020</real>
+			<real>8975</real>
 		</dict>
 		<key>99CFB472-ADBD-4D50-9A4E-70BCE3B09355</key>
 		<dict>
@@ -10383,15 +9909,6 @@ DOUBLE CLICK to set hotkey</string>
 			<key>ypos</key>
 			<real>1670</real>
 		</dict>
-		<key>A170DF0F-C1AD-46DF-9738-FF54AA497695</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>xpos</key>
-			<real>200</real>
-			<key>ypos</key>
-			<real>9400</real>
-		</dict>
 		<key>A19798F1-4D8F-4DF9-B8C7-CE52542C5806</key>
 		<dict>
 			<key>colorindex</key>
@@ -10413,15 +9930,6 @@ DOUBLE CLICK to set hotkey</string>
 			<real>160</real>
 			<key>ypos</key>
 			<real>3725</real>
-		</dict>
-		<key>A2EE3352-E242-48DC-8C16-5B7EC51E4003</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>xpos</key>
-			<real>540</real>
-			<key>ypos</key>
-			<real>7475</real>
 		</dict>
 		<key>A3384012-6E44-47C2-9CB5-8067AEE35F34</key>
 		<dict>
@@ -10490,15 +9998,6 @@ DOUBLE CLICK to set hotkey</string>
 			<key>ypos</key>
 			<real>2040</real>
 		</dict>
-		<key>AD7DF1BF-E171-4081-A3B9-FDC3FA9D5DC3</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>xpos</key>
-			<real>200</real>
-			<key>ypos</key>
-			<real>9160</real>
-		</dict>
 		<key>B0AB019E-6AC5-494E-9F31-F818F9BFEE21</key>
 		<dict>
 			<key>colorindex</key>
@@ -10515,7 +10014,7 @@ DOUBLE CLICK to set hotkey</string>
 			<key>note</key>
 			<string>OneUpdater (automatic update function)</string>
 			<key>xpos</key>
-			<real>2050</real>
+			<real>1955</real>
 			<key>ypos</key>
 			<real>285</real>
 		</dict>
@@ -10572,15 +10071,6 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>ypos</key>
 			<real>25</real>
 		</dict>
-		<key>B6C37E17-4D77-4232-879B-5D7F955DEF25</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>xpos</key>
-			<real>200</real>
-			<key>ypos</key>
-			<real>9280</real>
-		</dict>
 		<key>B7C53241-E63D-4D66-8A15-57B0DD1C72AC</key>
 		<dict>
 			<key>colorindex</key>
@@ -10608,6 +10098,17 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>ypos</key>
 			<real>4710</real>
 		</dict>
+		<key>B9AC24F9-316C-4D05-903D-7ED21EA0A3C8</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>9</integer>
+			<key>note</key>
+			<string>append to file</string>
+			<key>xpos</key>
+			<real>2105</real>
+			<key>ypos</key>
+			<real>960</real>
+		</dict>
 		<key>BB114F09-A7D5-48D6-89F1-F54F698E20B1</key>
 		<dict>
 			<key>colorindex</key>
@@ -10626,6 +10127,17 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>ypos</key>
 			<real>8280</real>
 		</dict>
+		<key>BF0363F9-98FD-4C0C-A592-BAD4319D51E2</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>9</integer>
+			<key>note</key>
+			<string>new file in folder with template</string>
+			<key>xpos</key>
+			<real>2110</real>
+			<key>ypos</key>
+			<real>1145</real>
+		</dict>
 		<key>BF2C7CBD-67E0-45CC-8948-E68291FF2B50</key>
 		<dict>
 			<key>colorindex</key>
@@ -10633,7 +10145,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>xpos</key>
 			<real>250</real>
 			<key>ypos</key>
-			<real>8770</real>
+			<real>8710</real>
 		</dict>
 		<key>BF450A0C-67CF-4B13-8B0D-D94298462DE7</key>
 		<dict>
@@ -10716,7 +10228,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 		<key>CA4E2034-4495-477F-B3EC-CCCFE06FF886</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>note</key>
 			<string>create in new tab</string>
 			<key>xpos</key>
@@ -10745,15 +10257,6 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<real>30</real>
 			<key>ypos</key>
 			<real>1255</real>
-		</dict>
-		<key>CCB61EC0-26E7-4CE6-9703-BF95602B73D6</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>11</integer>
-			<key>xpos</key>
-			<real>1850</real>
-			<key>ypos</key>
-			<real>2800</real>
 		</dict>
 		<key>CD5E876D-3EA7-472D-8A6F-CE1A684C870C</key>
 		<dict>
@@ -10947,34 +10450,23 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>ypos</key>
 			<real>2490</real>
 		</dict>
-		<key>E5E0B205-1716-4D34-A458-4CC01834DCFE</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>11</integer>
-			<key>note</key>
-			<string>configure Metadata Extractor</string>
-			<key>xpos</key>
-			<real>1845</real>
-			<key>ypos</key>
-			<real>2920</real>
-		</dict>
 		<key>E60130DC-8A6E-4892-8516-B79153DC480B</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>1</integer>
 			<key>xpos</key>
-			<real>1850</real>
+			<real>1870</real>
 			<key>ypos</key>
-			<real>3070</real>
+			<real>2865</real>
 		</dict>
 		<key>E7ADA43C-52CF-46FD-AC9E-79616731DDA9</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<real>695</real>
+			<real>700</real>
 			<key>ypos</key>
-			<real>8600</real>
+			<real>8530</real>
 		</dict>
 		<key>E7DAD30E-15A3-46BE-8534-7F5ABE826FC6</key>
 		<dict>
@@ -10995,6 +10487,13 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<real>30</real>
 			<key>ypos</key>
 			<real>9160</real>
+		</dict>
+		<key>E88AC866-9A2B-4763-914C-EF2BB940DDE2</key>
+		<dict>
+			<key>xpos</key>
+			<real>175</real>
+			<key>ypos</key>
+			<real>9430</real>
 		</dict>
 		<key>E98B2FB0-60FA-4F2F-9159-6B774AD0277E</key>
 		<dict>
@@ -11017,7 +10516,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 		<key>EA58397D-673F-4DA6-B773-D16D6053ED61</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>xpos</key>
 			<real>260</real>
 			<key>ypos</key>
@@ -11050,7 +10549,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>note</key>
 			<string>append to Scratchpad</string>
 			<key>xpos</key>
-			<real>170</real>
+			<real>155</real>
 			<key>ypos</key>
 			<real>635</real>
 		</dict>
@@ -11101,16 +10600,14 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>ypos</key>
 			<real>115</real>
 		</dict>
-		<key>F0E0AB83-B5CD-4107-A551-32C6AD581502</key>
+		<key>F07DA284-FCE4-4784-B4B5-6CD6817AEE98</key>
 		<dict>
-			<key>colorindex</key>
-			<integer>11</integer>
 			<key>note</key>
-			<string>restart Obsidian &amp; dump metadata</string>
+			<string>open folder</string>
 			<key>xpos</key>
-			<real>1995</real>
+			<real>310</real>
 			<key>ypos</key>
-			<real>2920</real>
+			<real>9275</real>
 		</dict>
 		<key>F117FF8C-E6E5-4B0E-9FCE-DDB0A6476CAB</key>
 		<dict>
@@ -11138,6 +10635,13 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<real>220</real>
 			<key>ypos</key>
 			<real>4365</real>
+		</dict>
+		<key>F43AAA85-F638-4A4C-AE36-FB26D01EDFAA</key>
+		<dict>
+			<key>xpos</key>
+			<real>175</real>
+			<key>ypos</key>
+			<real>9190</real>
 		</dict>
 		<key>F86263EA-1E22-46A5-8FE0-084C9C6A9066</key>
 		<dict>
@@ -11175,11 +10679,11 @@ DOUBLE CLICK to set hotkey</string>
 		<key>FFC9BC93-DD73-4F52-A69B-7FF4E6490EC1</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>xpos</key>
-			<real>395</real>
+			<real>410</real>
 			<key>ypos</key>
-			<real>8530</real>
+			<real>8595</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>

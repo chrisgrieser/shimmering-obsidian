@@ -5,7 +5,7 @@ ObjC.import("Foundation");
 const app = Application.currentApplication();
 app.includeStandardAdditions = true;
 
-function readFile (path, encoding) {
+function readFile(path, encoding) {
 	if (!encoding) encoding = $.NSUTF8StringEncoding;
 	const fm = $.NSFileManager.defaultManager;
 	const data = fm.contentsAtPath(path);
@@ -15,74 +15,80 @@ function readFile (path, encoding) {
 
 //------------------------------------------------------------------------------
 
-const vaultPath = $.getenv("vault_path").replace(/^~/, app.pathTo("home folder"));
-const URIstart = "obsidian://advanced-uri?vault=" + $.getenv("vault_name_ENC");
+function getVaultPath() {
+	const _app = Application.currentApplication();
+	_app.includeStandardAdditions = true;
+	const dataFile = $.NSFileManager.defaultManager.contentsAtPath("./vaultPath");
+	const vault = $.NSString.alloc.initWithDataEncoding(dataFile, $.NSUTF8StringEncoding);
+	return ObjC.unwrap(vault).replace(/^~/, _app.pathTo("home folder"));
+}
+const vaultPath = getVaultPath();
+
+function getVaultNameEncoded() {
+	const _app = Application.currentApplication();
+	_app.includeStandardAdditions = true;
+	const dataFile = $.NSFileManager.defaultManager.contentsAtPath("./vaultPath");
+	const vault = $.NSString.alloc.initWithDataEncoding(dataFile, $.NSUTF8StringEncoding);
+	const _vaultPath = ObjC.unwrap(vault).replace(/^~/, _app.pathTo("home folder"));
+	return encodeURIComponent(_vaultPath.replace(/.*\//, ""));
+}
+
+const uriStart = "obsidian://advanced-uri?vault=" + getVaultNameEncoded();
 const jsonArray = [];
 
 const standardSettings = JSON.parse(readFile("./data/settings-database.json"));
 
-const installedPlugins = app.doShellScript("ls -1 \"" + vaultPath + "\"\"/.obsidian/plugins/\"").split("\r");
+const installedPlugins = app.doShellScript('ls -1 "' + vaultPath + '""/.obsidian/plugins/"').split("\r");
 const enabledComPlugins = JSON.parse(readFile(vaultPath + "/.obsidian/community-plugins.json"));
 
 const corePluginsWithSettings = JSON.parse(readFile("./data/core-plugins-with-settings-database.json"));
 const enabledCorePlugins = JSON.parse(readFile(vaultPath + "/.obsidian/core-plugins.json"));
 
 const deprecatedJSON = JSON.parse(readFile("./data/deprecated-plugins.json"));
-const deprecatedPlugins = [
-	...deprecatedJSON.sherlocked,
-	...deprecatedJSON.dysfunct,
-	...deprecatedJSON.deprecated,
-];
+const deprecatedPlugins = [...deprecatedJSON.sherlocked, ...deprecatedJSON.dysfunct, ...deprecatedJSON.deprecated];
 
 //------------------------------------------------------------------------------
 
 enabledCorePlugins.forEach(pluginID => {
-	const hasSettings =
-		corePluginsWithSettings
-			.map(p => p.id)
-			.includes(pluginID);
+	const hasSettings = corePluginsWithSettings.map(p => p.id).includes(pluginID);
 	if (!hasSettings) return;
 
-	const pluginName = corePluginsWithSettings
-		.filter(item => item.id === pluginID)[0]
-		.title;
+	const pluginName = corePluginsWithSettings.filter(item => item.id === pluginID)[0].title;
 
-	const URI = URIstart + "&settingid=" + pluginID;
+	const URI = uriStart + "&settingid=" + pluginID;
 
 	jsonArray.push({
-		"title": pluginName,
-		"uid": pluginID,
-		"match": pluginName,
-		"arg": URI,
-		"icon": { "path": "icons/plugin.png" },
-		"mods": {
-			"alt": { "valid": false },
-			"cmd": { "valid": false },
-			"fn": { "valid": false },
-			"ctrl": {
-				"arg": pluginID,
-				"subtitle": "⌃: Copy plugin ID '" + pluginID + "'",
+		title: pluginName,
+		uid: pluginID,
+		match: pluginName,
+		arg: URI,
+		icon: { path: "icons/plugin.png" },
+		mods: {
+			alt: { valid: false },
+			cmd: { valid: false },
+			fn: { valid: false },
+			ctrl: {
+				arg: pluginID,
+				subtitle: "⌃: Copy plugin ID '" + pluginID + "'",
 			},
 		},
 	});
-
 });
 
 standardSettings.forEach(setting => {
-
-	let URI = URIstart + "&settingid=" + setting.id;
-	if (setting.id === "updateplugins") URI = URIstart + "&updateplugins=true";
+	let URI = uriStart + "&settingid=" + setting.id;
+	if (setting.id === "updateplugins") URI = uriStart + "&updateplugins=true";
 
 	jsonArray.push({
-		"title": setting.title,
-		"match": setting.match,
-		"uid": setting.id,
-		"arg": URI,
-		"mods": {
-			"alt": { "valid": false },
-			"cmd": { "valid": false },
-			"ctrl": { "valid": false },
-			"fn": { "valid": false },
+		title: setting.title,
+		match: setting.match,
+		uid: setting.id,
+		arg: URI,
+		mods: {
+			alt: { valid: false },
+			cmd: { valid: false },
+			ctrl: { valid: false },
+			fn: { valid: false },
 		},
 	});
 });
@@ -96,20 +102,20 @@ installedPlugins.forEach(pluginFolder => {
 	} catch (error) {
 		// catches error caused by plugins without "manifest.json" (beta plugins)
 		manifest = {
-			"id": pluginFolder,
-			"name": pluginFolder.replaceAll ("-", " "),
+			id: pluginFolder,
+			name: pluginFolder.replaceAll("-", " "),
 		};
 	}
 	const name = manifest.name;
 	const pluginID = manifest.id;
-	const URI = `${URIstart}&settingid=${pluginID}`;
+	const URI = `${uriStart}&settingid=${pluginID}`;
 
 	// toggling
 	const pluginEnabled = enabledComPlugins.includes(pluginID);
 	const settingSubtitle = pluginEnabled ? "" : "🟥 disabled";
 	const toggleSubtitle = pluginEnabled ? "⇧: 🟥 disable" : "⇧: 🟢 enable";
 	const toggleMode = pluginEnabled ? "disable-plugin" : "enable-plugin";
-	const toggleURI = `${URIstart}&${toggleMode}=${pluginID}`;
+	const toggleURI = `${uriStart}&${toggleMode}=${pluginID}`;
 
 	// icons
 	let icons = "";
@@ -120,35 +126,26 @@ installedPlugins.forEach(pluginFolder => {
 	}
 	if (name === "Style Settings") icons += " 🎨";
 	const isDeveloped = Application("Finder").exists(Path(pluginFolderPath + "/.git"));
-	let devSubtitle = "No '.git' folder found.";
-	if (isDeveloped) {
-		icons += " ⚙️";
-		devSubtitle = "fn: git pull";
-	}
+	if (isDeveloped) icons += " ⚙️";
 
 	jsonArray.push({
-		"title":name + icons,
-		"uid": pluginID,
-		"subtitle": subtitleIcons + settingSubtitle,
-		"arg": URI,
-		"icon": { "path": "icons/plugin.png" },
-		"valid": pluginEnabled,
-		"mods": {
-			"alt": { "arg": pluginFolderPath },
-			"cmd": { "arg": pluginFolderPath },
-			"fn": {
-				"arg": pluginFolderPath,
-				"valid": isDeveloped,
-				"subtitle": devSubtitle,
+		title: name + icons,
+		uid: pluginID,
+		subtitle: subtitleIcons + settingSubtitle,
+		arg: URI,
+		icon: { path: "icons/plugin.png" },
+		valid: pluginEnabled,
+		mods: {
+			alt: { arg: pluginFolderPath },
+			cmd: { arg: pluginFolderPath },
+			shift: {
+				arg: toggleURI,
+				valid: true,
+				subtitle: toggleSubtitle,
 			},
-			"shift": {
-				"arg": toggleURI,
-				"valid": true,
-				"subtitle": toggleSubtitle,
-			},
-			"ctrl": {
-				"arg": pluginID,
-				"subtitle": `⌃: Copy plugin ID '${pluginID}'`,
+			ctrl: {
+				arg: pluginID,
+				subtitle: `⌃: Copy plugin ID '${pluginID}'`,
 			},
 		},
 	});

@@ -16,7 +16,14 @@ function alfredMatcher (str) {
 	return str.replace (/\/|-|_/g, " ") + " " + str;
 }
 
-const vaultPath = $.getenv("vault_path").replace(/^~/, app.pathTo("home folder"));
+function getVaultPath() {
+	const _app = Application.currentApplication();
+	_app.includeStandardAdditions = true;
+	const dataFile = $.NSFileManager.defaultManager.contentsAtPath("./vaultPath");
+	const vault = $.NSString.alloc.initWithDataEncoding(dataFile, $.NSUTF8StringEncoding);
+	return ObjC.unwrap(vault).replace(/^~/, _app.pathTo("home folder"));
+}
+const vaultPath = getVaultPath()
 const tagsJSON = vaultPath + "/.obsidian/plugins/metadata-extractor/tags.json";
 const mergeNestedTags = $.getenv("merge_nested_tags") === "1";
 const jsonArray = [];
@@ -32,8 +39,7 @@ if (superchargedIconFileExists) {
 		.filter(l => l.length !== 0);
 }
 
-// eslint-disable-next-line no-var, vars-on-top
-var tagsArray = JSON.parse (readFile(tagsJSON))
+let tagsArray = JSON.parse (readFile(tagsJSON))
 	.map (function(t) {
 		t.merged = false;
 		return t;

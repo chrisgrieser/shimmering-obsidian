@@ -11,8 +11,14 @@ function alfredMatcher(str) {
 
 //──────────────────────────────────────────────────────────────────────────────
 
-const homepath = app.pathTo("home folder");
-const vaultPath = $.getenv("vault_path").replace(/^~/, homepath);
+function getVaultPath() {
+	const _app = Application.currentApplication();
+	_app.includeStandardAdditions = true;
+	const dataFile = $.NSFileManager.defaultManager.contentsAtPath("./vaultPath");
+	const vault = $.NSString.alloc.initWithDataEncoding(dataFile, $.NSUTF8StringEncoding);
+	return ObjC.unwrap(vault).replace(/^~/, _app.pathTo("home folder"));
+}
+const vaultPath = getVaultPath()
 const snippetPath = vaultPath + "/.obsidian/snippets/";
 
 // Input

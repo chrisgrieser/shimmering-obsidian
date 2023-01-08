@@ -15,17 +15,30 @@ function run(argv) {
 	}
 
 	function setEnvVar(envVar, newValue) {
-		Application("com.runningwithcrayons.Alfred")
-			.setConfiguration(envVar, {
-				toValue: newValue,
-				inWorkflow: $.getenv("alfred_workflow_bundleid"),
-				exportable: false,
-			});
+		Application("com.runningwithcrayons.Alfred").setConfiguration(envVar, {
+			toValue: newValue,
+			inWorkflow: $.getenv("alfred_workflow_bundleid"),
+			exportable: false,
+		});
 	}
 
+	function getVaultPath() {
+		const _app = Application.currentApplication();
+		_app.includeStandardAdditions = true;
+		const dataFile = $.NSFileManager.defaultManager.contentsAtPath("./vaultPath");
+		const vault = $.NSString.alloc.initWithDataEncoding(dataFile, $.NSUTF8StringEncoding);
+		return ObjC.unwrap(vault).replace(/^~/, _app.pathTo("home folder"));
+	}
+	function getVaultNameEncoded() {
+		const _app = Application.currentApplication();
+		_app.includeStandardAdditions = true;
+		const dataFile = $.NSFileManager.defaultManager.contentsAtPath("./vaultPath");
+		const vault = $.NSString.alloc.initWithDataEncoding(dataFile, $.NSUTF8StringEncoding);
+		const vaultPath = ObjC.unwrap(vault).replace(/^~/, _app.pathTo("home folder"));
+		return encodeURIComponent(vaultPath.replace(/.*\//, ""));
+	}
+	const vaultNameEnc = getVaultNameEncoded();
 	//───────────────────────────────────────────────────────────────────────────
-
-	const vaultNameEnc = $.getenv("vault_name_ENC");
 
 	let selectedText; // when hotkey was used
 	try {
@@ -40,21 +53,24 @@ function run(argv) {
 	} catch (error) {
 		createInNewTab = false;
 	}
-	if (createInNewTab) app.openLocation(`obsidian://advanced-uri?vault=${vaultNameEnc}&commandid=workspace%253Anew-tab`);
+	if (createInNewTab)
+		app.openLocation(`obsidian://advanced-uri?vault=${vaultNameEnc}&commandid=workspace%253Anew-tab`);
 
 	let fileName = argv.join("");
 	if (!fileName) fileName = "Untitled";
-	fileName = fileName.replace(/[\\/:]/g, ""); // remove illegal charcters
+	fileName = fileName.replace(/[\\/:]/g, ""); // remove illegal characters
 	fileName = fileName.charAt(0).toUpperCase() + fileName.slice(1); // eslint-disable-line newline-per-chained-call
 
 	//───────────────────────────────────────────────────────────────────────────
 
-	const newNotePath = ($.getenv("new_note_location") + "/" + fileName)
-		.replaceAll("//", "/");
+	const newNotePath = ($.getenv("new_note_location") + "/" + fileName).replaceAll("//", "/");
 
-	let URI = "obsidian://advanced-uri?" +
-		"vault=" + vaultNameEnc +
-		"&filepath=" + encodeURIComponent(newNotePath) +
+	let URI =
+		"obsidian://advanced-uri?" +
+		"vault=" +
+		vaultNameEnc +
+		"&filepath=" +
+		encodeURIComponent(newNotePath) +
 		"&mode=new" +
 		"&line=999999999999999"; // = append at end of file
 
@@ -62,8 +78,7 @@ function run(argv) {
 	let newNoteContent = "";
 	const templateRelPath = $.getenv("template_note_path");
 	if (templateRelPath) {
-		let templateAbsPath = $.getenv("vault_path").replace(/^~/, app.pathTo("home folder"))
-			+ "/" + templateRelPath;
+		let templateAbsPath = getVaultPath() + "/" + templateRelPath;
 		if (!templateAbsPath.endsWith(".md")) templateAbsPath += ".md";
 		newNoteContent += readFile(templateAbsPath).replace("{{title}}", fileName);
 		console.log("absolute template path:" + templateAbsPath);

@@ -20,7 +20,14 @@ function parentFolder (filePath) {
 
 //------------------------------------------------------------------------------
 
-const vaultPath = $.getenv("vault_path").replace(/^~/, app.pathTo("home folder"));
+function getVaultPath() {
+	const _app = Application.currentApplication();
+	_app.includeStandardAdditions = true;
+	const dataFile = $.NSFileManager.defaultManager.contentsAtPath("./vaultPath");
+	const vault = $.NSString.alloc.initWithDataEncoding(dataFile, $.NSUTF8StringEncoding);
+	return ObjC.unwrap(vault).replace(/^~/, _app.pathTo("home folder"));
+}
+const vaultPath = getVaultPath()
 const attachmentMetadata = vaultPath + "/.obsidian/plugins/metadata-extractor/allExceptMd.json";
 
 // filter the metadataJSON for the items w/ relativePaths of starred files

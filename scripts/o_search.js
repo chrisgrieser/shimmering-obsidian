@@ -24,7 +24,14 @@ const fileExists = filePath => Application("Finder").exists(Path(filePath));
 //------------------------------------------------------------------------------
 
 // Read and Parse data
-const vaultPath = $.getenv("vault_path").replace(/^~/, app.pathTo("home folder"));
+function getVaultPath() {
+	const _app = Application.currentApplication();
+	_app.includeStandardAdditions = true;
+	const dataFile = $.NSFileManager.defaultManager.contentsAtPath("./vaultPath");
+	const vault = $.NSString.alloc.initWithDataEncoding(dataFile, $.NSUTF8StringEncoding);
+	return ObjC.unwrap(vault).replace(/^~/, _app.pathTo("home folder"));
+}
+const vaultPath = getVaultPath()
 const metadataJSON = vaultPath + "/.obsidian/plugins/metadata-extractor/metadata.json";
 const canvasJSON = vaultPath + "/.obsidian/plugins/metadata-extractor/canvas.json";
 const starredJSON = vaultPath + "/.obsidian/starred.json";

@@ -1,13 +1,15 @@
 #!/usr/bin/env osascript -l JavaScript
 
-function run (argv) {
-	ObjC.import("stdlib");
-	const app = Application.currentApplication();
-	app.includeStandardAdditions = true;
-	const vaultPath = $.getenv("vault_path").replace(/^~/, app.pathTo("home folder"));
+function run(argv) {
+	function getVaultPath() {
+		const _app = Application.currentApplication();
+		_app.includeStandardAdditions = true;
+		const dataFile = $.NSFileManager.defaultManager.contentsAtPath("./vaultPath");
+		const vault = $.NSString.alloc.initWithDataEncoding(dataFile, $.NSUTF8StringEncoding);
+		return ObjC.unwrap(vault).replace(/^~/, _app.pathTo("home folder"));
+	}
 
 	const absolutePath = argv.join("");
-	const relativePath = absolutePath.slice (vaultPath.length);
-
+	const relativePath = absolutePath.slice(getVaultPath().length);
 	return relativePath;
 }

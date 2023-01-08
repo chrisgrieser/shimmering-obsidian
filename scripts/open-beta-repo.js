@@ -23,7 +23,17 @@ function SafeApplication(appId) {
 const discordReadyLinks = ["Discord", "Discord PTB", "Discord Canary"]
 	.some(discordApp => SafeApplication(discordApp)?.frontmost());
 const alfredMatcher = (str) => str.replace (/[-()_.]/g, " ") + " " + str + " ";
-const pluginFolder = $.getenv("vault_path").replace(/^~/, app.pathTo("home folder")) + "/.obsidian/plugins/";
+
+function getVaultPath() {
+	const _app = Application.currentApplication();
+	_app.includeStandardAdditions = true;
+	const dataFile = $.NSFileManager.defaultManager.contentsAtPath("./vaultPath");
+	const vault = $.NSString.alloc.initWithDataEncoding(dataFile, $.NSUTF8StringEncoding);
+	return ObjC.unwrap(vault).replace(/^~/, _app.pathTo("home folder"));
+}
+
+const pluginFolder = getVaultPath().replace(/^~/, app.pathTo("home folder")) + "/.obsidian/plugins/";
+//──────────────────────────────────────────────────────────────────────────────
 
 const betaRepos = JSON.parse(readFile(pluginFolder + "obsidian42-brat/data.json")).pluginList;
 const betaManifests = betaRepos

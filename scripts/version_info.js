@@ -4,6 +4,7 @@ ObjC.import("stdlib");
 ObjC.import("Foundation");
 const app = Application.currentApplication();
 app.includeStandardAdditions = true;
+
 function readFile(path, encoding) {
 	if (!encoding) encoding = $.NSUTF8StringEncoding;
 	const fm = $.NSFileManager.defaultManager;
@@ -14,17 +15,22 @@ function readFile(path, encoding) {
 const onlineJSON = url => JSON.parse(app.doShellScript("curl -sL '" + url + "'"));
 const fileExists = filePath => Application("Finder").exists(Path(filePath));
 
-//---------------------------------------------------------------------------
-
-// input parameters
-const vaultPath = $.getenv("vault_path").replace(/^~/, app.pathTo("home folder"));
-const vaultNameEnc = $.getenv("vault_name_ENC");
 let output = "";
-
-// either logs to console or returns for clipboard
 function log(str) {
 	output += str + "\n";
 }
+
+//──────────────────────────────────────────────────────────────────────────────
+
+// input parameters
+function getVaultPath() {
+	const _app = Application.currentApplication();
+	_app.includeStandardAdditions = true;
+	const dataFile = $.NSFileManager.defaultManager.contentsAtPath("./vaultPath");
+	const vault = $.NSString.alloc.initWithDataEncoding(dataFile, $.NSUTF8StringEncoding);
+	return ObjC.unwrap(vault).replace(/^~/, _app.pathTo("home folder"));
+}
+const vaultPath = getVaultPath()
 
 const appTempPath = app.pathTo("home folder") + "/Library/Application Support/obsidian/";
 let obsiVer;
@@ -37,7 +43,6 @@ try {
 	obsiVer = ".asar file missing";
 }
 const macVer = app.doShellScript("sw_vers -productVersion");
-
 const dotObsidian = fileExists(vaultPath + "/.obsidian/") ? "exists" : "does NOT exist";
 
 const advancedUriJSON = vaultPath + "/.obsidian/plugins/obsidian-advanced-uri/manifest.json";
@@ -75,11 +80,16 @@ const numberOfJSONS = app.doShellScript(
 const metadataJSON = vaultPath + "/.obsidian/plugins/metadata-extractor/metadata.json";
 const metadataStrLen = fileExists(metadataJSON) ? readFile(metadataJSON).length : "no metadata.json";
 
+//──────────────────────────────────────────────────────────────────────────────
+
+log("");
 log("-------------------------------");
+log("INTERNAL WORKFLOW CONFIGURATION");
+log("Vault Path: " + vaultPath);
 log(".obsidian: " + dotObsidian);
 log("Metadata JSONs: " + numberOfJSONS + "/4");
 if (numberOfJSONS < 4) log("Not all metadata not found. Please run `osetup` and retry.");
-log("Metadata String Length: " + metadataStrLen);
+log("metadata.json String Length: " + metadataStrLen);
 log("-------------------------------");
 log("WORKSPACE DATA");
 if (workspaceData15) log("'workspace' exists");
@@ -101,10 +111,6 @@ log(`Obsidian: ${obsiVerOnline} (Insider: ${obsiVerBetaOnline})`);
 log("This Workflow: " + workflowVerOnline);
 log("Advanced URI Plugin: " + advancedUriVerOnline);
 log("Metadata Extractor: " + metadataExVerOnline);
-log("-------------------------------");
-log("INTERNAL WORKFLOW CONFIGURATION");
-log("Vault Path: " + vaultPath);
-log("Vault Name (encoded): " + vaultNameEnc);
 log("-------------------------------");
 
 // remove config

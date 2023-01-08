@@ -5,7 +5,15 @@ function run () {
 	const app = Application.currentApplication();
 	app.includeStandardAdditions = true;
 
-	const vaultNameEnc = $.getenv("vault_name_ENC");
+	function getVaultNameEncoded() {
+		const _app = Application.currentApplication();
+		_app.includeStandardAdditions = true;
+		const dataFile = $.NSFileManager.defaultManager.contentsAtPath("./vaultPath");
+		const vault = $.NSString.alloc.initWithDataEncoding(dataFile, $.NSUTF8StringEncoding);
+		const _vaultPath = ObjC.unwrap(vault).replace(/^~/, _app.pathTo("home folder"));
+		return encodeURIComponent(_vaultPath.replace(/.*\//, ""));
+	}
+	const vaultNameEnc = getVaultNameEncoded();
 
 	app.openLocation(`obsidian://advanced-uri?${vaultNameEnc}&commandid=workspace%253Acopy-path`);
 	delay(0.1);

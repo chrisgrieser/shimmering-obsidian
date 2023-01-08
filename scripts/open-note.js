@@ -8,10 +8,18 @@ function run(argv) {
 	const input = argv.join("").trim(); // trim to remove trailing \n
 	const relativePath = input.split("#")[0];
 	const heading = input.split("#")[1];
-	const vaultNameENC = $.getenv("vault_name_ENC");
 
-	let urlScheme = `obsidian://advanced-uri?vault=${vaultNameENC}&filepath=`
-		+ encodeURIComponent(relativePath);
+	function getVaultNameEncoded() {
+		const _app = Application.currentApplication();
+		_app.includeStandardAdditions = true;
+		const dataFile = $.NSFileManager.defaultManager.contentsAtPath("./vaultPath");
+		const vault = $.NSString.alloc.initWithDataEncoding(dataFile, $.NSUTF8StringEncoding);
+		const vaultPath = ObjC.unwrap(vault).replace(/^~/, _app.pathTo("home folder"));
+		return encodeURIComponent(vaultPath.replace(/.*\//, ""));
+	}
+	const vaultNameEnc = getVaultNameEncoded();
+
+	let urlScheme = `obsidian://advanced-uri?vault=${vaultNameEnc}&filepath=` + encodeURIComponent(relativePath);
 	if (heading) urlScheme += "&heading=" + encodeURIComponent(heading);
 
 	const app = Application.currentApplication();
@@ -20,12 +28,4 @@ function run(argv) {
 
 	// press 'Esc' to leave settings menu
 	if (obsiRunningAlready) Application("System Events").keyCode(53); // eslint-disable-line no-magic-numbers
-
-	if ($.getenv("alfred_debug") === "1") {
-		console.log("Encoded Vault Name: " + vaultNameENC);
-		console.log("Relative Path: " + relativePath);
-		console.log("Heading: " + heading);
-		console.log("URL Scheme: " + urlScheme);
-	}
-
 }

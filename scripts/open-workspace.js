@@ -5,7 +5,7 @@ ObjC.import("Foundation");
 const app = Application.currentApplication();
 app.includeStandardAdditions = true;
 
-function readFile (path, encoding) {
+function readFile(path, encoding) {
 	if (!encoding) encoding = $.NSUTF8StringEncoding;
 	const fm = $.NSFileManager.defaultManager;
 	const data = fm.contentsAtPath(path);
@@ -13,8 +13,24 @@ function readFile (path, encoding) {
 	return ObjC.unwrap(str);
 }
 
-const vaultNameEnc = $.getenv("vault_name_ENC");
-const vaultPath = $.getenv("vault_path").replace(/^~/, app.pathTo("home folder"));
+function getVaultNameEncoded() {
+	const _app = Application.currentApplication();
+	_app.includeStandardAdditions = true;
+	const dataFile = $.NSFileManager.defaultManager.contentsAtPath("./vaultPath");
+	const vault = $.NSString.alloc.initWithDataEncoding(dataFile, $.NSUTF8StringEncoding);
+	const _vaultPath = ObjC.unwrap(vault).replace(/^~/, _app.pathTo("home folder"));
+	return encodeURIComponent(_vaultPath.replace(/.*\//, ""));
+}
+const vaultNameEnc = getVaultNameEncoded();
+function getVaultPath() {
+	const _app = Application.currentApplication();
+	_app.includeStandardAdditions = true;
+	const dataFile = $.NSFileManager.defaultManager.contentsAtPath("./vaultPath");
+	const vault = $.NSString.alloc.initWithDataEncoding(dataFile, $.NSUTF8StringEncoding);
+	return ObjC.unwrap(vault).replace(/^~/, _app.pathTo("home folder"));
+}
+
+const vaultPath = getVaultPath();
 const workspaceToSpellcheck = $.getenv("workspace_to_spellcheck");
 const workspaceJSON = JSON.parse(readFile(vaultPath + "/.obsidian/workspaces.json"));
 const workspaceArray = Object.keys(workspaceJSON.workspaces);
@@ -29,9 +45,7 @@ else spellcheckStatus = "Enable";
 const jsonArray = [];
 workspaceArray.forEach(workspaceName => {
 	const workspaceLoadURI =
-		"obsidian://advanced-uri?" +
-		"vault=" + vaultNameEnc +
-		"&workspace=" + encodeURIComponent(workspaceName);
+		"obsidian://advanced-uri?vault=" + vaultNameEnc + "&workspace=" + encodeURIComponent(workspaceName);
 	const workspaceSaveLoadURI = workspaceLoadURI + "&saveworkspace=true";
 
 	// icons/emoji
@@ -43,15 +57,15 @@ workspaceArray.forEach(workspaceName => {
 	if (workspaceName.toLowerCase().includes("longform")) iconpath = "icons/writing.png";
 
 	jsonArray.push({
-		"title": "Load \"" + workspaceName + "\"" + spellcheckInfo,
-		"match": workspaceName.replaceAll ("-", " ") + " " + workspaceName,
-		"arg": workspaceLoadURI,
-		"uid": workspaceName,
-		"icon": { "path": iconpath },
-		"mods": {
-			"cmd": {
-				"arg": workspaceSaveLoadURI,
-				"subtitle": "⌘: Save '" + currentWorkspace + "', then load",
+		title: 'Load "' + workspaceName + '"' + spellcheckInfo,
+		match: workspaceName.replaceAll("-", " ") + " " + workspaceName,
+		arg: workspaceLoadURI,
+		uid: workspaceName,
+		icon: { path: iconpath },
+		mods: {
+			cmd: {
+				arg: workspaceSaveLoadURI,
+				subtitle: "⌘: Save '" + currentWorkspace + "', then load",
 			},
 		},
 	});
@@ -59,24 +73,24 @@ workspaceArray.forEach(workspaceName => {
 
 // Save Current Workspace
 jsonArray.push({
-	"title": "Save \"" + currentWorkspace + "\"",
-	"arg": "obsidian://advanced-uri?vault=" + vaultNameEnc + "&saveworkspace=true",
-	"icon": { "path": "icons/save-workspace.png" },
-	"uid": "save-workspace",
+	title: 'Save "' + currentWorkspace + '"',
+	arg: "obsidian://advanced-uri?vault=" + vaultNameEnc + "&saveworkspace=true",
+	icon: { path: "icons/save-workspace.png" },
+	uid: "save-workspace",
 });
 
 // Manage Workspaces (no UID to ensure it is on bottom)
 jsonArray.push({
-	"title": "Manage Workspaces",
-	"arg": "obsidian://advanced-uri?vault=" + vaultNameEnc + "&commandid=workspaces%253Aopen-modal",
-	"icon": { "path": "icons/settings.png" },
+	title: "Manage Workspaces",
+	arg: "obsidian://advanced-uri?vault=" + vaultNameEnc + "&commandid=workspaces%253Aopen-modal",
+	icon: { path: "icons/settings.png" },
 });
 
 // Toggle Spellcheck (no UID to ensure it is on bottom)
 jsonArray.push({
-	"title": spellcheckStatus + " Spellcheck",
-	"arg": "obsidian://advanced-uri?vault=" + vaultNameEnc + "&commandid=editor%253Atoggle-spellcheck",
-	"icon": { "path": "icons/spellcheck.png" },
+	title: spellcheckStatus + " Spellcheck",
+	arg: "obsidian://advanced-uri?vault=" + vaultNameEnc + "&commandid=editor%253Atoggle-spellcheck",
+	icon: { path: "icons/spellcheck.png" },
 });
 
 JSON.stringify({ items: jsonArray });

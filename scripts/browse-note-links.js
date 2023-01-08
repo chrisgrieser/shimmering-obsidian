@@ -1,7 +1,6 @@
 #!/usr/bin/env osascript -l JavaScript
 
-function run () {
-
+function run() {
 	ObjC.import("stdlib");
 	ObjC.import("Foundation");
 	const app = Application.currentApplication();
@@ -9,7 +8,7 @@ function run () {
 	const externalLinkRegex = /\[[^\]]*\]\([^)]+\)/g;
 	const singleExternalLinkRegex = /\[[^\]]*\]\([^)]+\)/;
 
-	function readFile (path, encoding) {
+	function readFile(path, encoding) {
 		if (!encoding) encoding = $.NSUTF8StringEncoding;
 		const fm = $.NSFileManager.defaultManager;
 		const data = fm.contentsAtPath(path);
@@ -17,14 +16,13 @@ function run () {
 		return ObjC.unwrap(str);
 	}
 
-	function parentFolder (filePath) {
+	function parentFolder(filePath) {
 		if (!filePath.includes("/")) return "/";
-		return filePath.split("/").slice(0, -1)
-			.join("/");
+		return filePath.split("/").slice(0, -1).join("/");
 	}
 
-	const alfredMatcher = str => " " + str.replace (/[-()_/:.@]/g, " ") + " " + str + " ";
-	const fileExists = (filePath) => Application("Finder").exists(Path(filePath));
+	const alfredMatcher = str => " " + str.replace(/[-()_/:.@]/g, " ") + " " + str + " ";
+	const fileExists = filePath => Application("Finder").exists(Path(filePath));
 
 	function SafeApplication(appId) {
 		try {
@@ -34,13 +32,20 @@ function run () {
 		}
 	}
 
-	const discordReadyLinks = ["Discord", "Discord PTB", "Discord Canary"]
-		.some(discordApp => SafeApplication(discordApp)?.frontmost());
-
+	const discordReadyLinks = ["Discord", "Discord PTB", "Discord Canary"].some(discordApp =>
+		SafeApplication(discordApp)?.frontmost(),
+	);
+	function getVaultPath() {
+		const _app = Application.currentApplication();
+		_app.includeStandardAdditions = true;
+		const dataFile = $.NSFileManager.defaultManager.contentsAtPath("./vaultPath");
+		const vault = $.NSString.alloc.initWithDataEncoding(dataFile, $.NSUTF8StringEncoding);
+		return ObjC.unwrap(vault).replace(/^~/, _app.pathTo("home folder"));
+	}
 	//---------------------------------------------------------------------------
 
 	// Import Data
-	const vaultPath = $.getenv("vault_path").replace(/^~/, app.pathTo("home folder"));
+	const vaultPath = getVaultPath();
 	const metadataJSON = vaultPath + "/.obsidian/plugins/metadata-extractor/metadata.json";
 	const starredJSON = vaultPath + "/.obsidian/starred.json";
 	let recentJSON = vaultPath + "/.obsidian/workspace.json";
@@ -72,17 +77,12 @@ function run () {
 	let linkList = [];
 	let backlinkList = [];
 	if (inputNoteJSON.links) {
-		linkList = inputNoteJSON
-			.links
-			.filter(l => l.relativePath)
-			.map(item => item.relativePath);
-		bothLinksList.push (...linkList);
+		linkList = inputNoteJSON.links.filter(l => l.relativePath).map(item => item.relativePath);
+		bothLinksList.push(...linkList);
 	}
 	if (inputNoteJSON.backlinks) {
-		backlinkList = inputNoteJSON
-			.backlinks
-			.map(item => item.relativePath);
-		bothLinksList.push (...backlinkList);
+		backlinkList = inputNoteJSON.backlinks.map(item => item.relativePath);
+		bothLinksList.push(...backlinkList);
 	}
 	bothLinksList = [...new Set(bothLinksList)]; // only unique items
 
@@ -90,40 +90,34 @@ function run () {
 	let starredFiles = [];
 	if (readFile(starredJSON) !== "") {
 		starredFiles = JSON.parse(readFile(starredJSON))
-			.items
-			.filter (item => item.type === "file")
-			.map (item => item.path);
+			.items.filter(item => item.type === "file")
+			.map(item => item.path);
 	}
 
 	const recentFiles = JSON.parse(readFile(recentJSON)).lastOpenFiles;
 
 	// get external links
-	let externalLinkList = readFile(vaultPath + "/" + inputPath)
-		.match (externalLinkRegex);
+	let externalLinkList = readFile(vaultPath + "/" + inputPath).match(externalLinkRegex);
 	if (externalLinkList) {
-		externalLinkList = externalLinkList.map (mdlink => [
+		externalLinkList = externalLinkList.map(mdlink => [
 			mdlink.split("](")[0].slice(1),
 			mdlink.split("](")[1].slice(0, -1),
 		]);
-	}
-	else externalLinkList = [];
-
+	} else externalLinkList = [];
 
 	// guard clause if no links of any sort (should only occur with "ol" command though)
 	// -----------------------------------------------------
 	if (!bothLinksList.length && !externalLinkList.length) {
 		jsonArray.push({
-			"title": "No links recognized in the file.",
-			"subtitle": "Press [Esc] to abort.",
+			title: "No links recognized in the file.",
+			subtitle: "Press [Esc] to abort.",
 		});
 		return JSON.stringify({ items: jsonArray });
 	}
 
-
 	// create JSON for Script Filter
 	// -----------------------------
-	const fileArray = metaJSON
-		.filter(item => bothLinksList.includes(item.relativePath));
+	const fileArray = metaJSON.filter(item => bothLinksList.includes(item.relativePath));
 
 	fileArray.forEach(file => {
 		const filename = file.fileName;
@@ -131,7 +125,7 @@ function run () {
 		const absolutePath = vaultPath + "/" + relativePath;
 
 		// check link existence of file
-		let hasLinks = Boolean (file.links?.some(l => l.relativePath) || file.backlinks ); // no relativePath => unresolved link
+		let hasLinks = Boolean(file.links?.some(l => l.relativePath) || file.backlinks); // no relativePath => unresolved link
 		if (!hasLinks) hasLinks = singleExternalLinkRegex.test(readFile(absolutePath)); // readFile only executed when no other links found for performance
 		let linksSubtitle = "⛔️ Note without Outgoing Links or Backlinks";
 		if (hasLinks) linksSubtitle = "⇧: Browse Links in Note";
@@ -140,7 +134,7 @@ function run () {
 		let iconpath = "icons/note.png";
 		let emoji = "";
 		let additionalMatcher = "";
-		if (starredFiles.includes(relativePath))	{
+		if (starredFiles.includes(relativePath)) {
 			emoji += "⭐️ ";
 			additionalMatcher += "starred ";
 		}
@@ -148,7 +142,7 @@ function run () {
 			emoji += "🕑 ";
 			additionalMatcher += "recent ";
 		}
-		if (filename.toLowerCase().includes("kanban"))	iconpath = "icons/kanban.png";
+		if (filename.toLowerCase().includes("kanban")) iconpath = "icons/kanban.png";
 
 		let superchargedIcon = "";
 		let superchargedIcon2 = "";
@@ -164,8 +158,8 @@ function run () {
 
 		// emojis dependent on link type
 		let linkIcon = "";
-		if (linkList.includes (relativePath)) linkIcon += "🔗 ";
-		if (backlinkList.includes (relativePath)) linkIcon += "⬅️ ";
+		if (linkList.includes(relativePath)) linkIcon += "🔗 ";
+		if (backlinkList.includes(relativePath)) linkIcon += "⬅️ ";
 
 		// exclude cssclass: private
 		let displayName = filename;
@@ -176,18 +170,18 @@ function run () {
 		if (applyCensoring) displayName = filename.replace(/./g, censorChar);
 
 		jsonArray.push({
-			"title": linkIcon + emoji + superchargedIcon + displayName + superchargedIcon2,
-			"match": additionalMatcher + alfredMatcher(filename),
-			"subtitle": "▸ " + parentFolder(relativePath),
-			"type": "file:skipcheck",
-			"quicklookurl": vaultPath + "/" + relativePath,
-			"uid": relativePath,
-			"arg": relativePath,
-			"icon": { "path": iconpath },
-			"mods": {
-				"shift": {
-					"valid": hasLinks,
-					"subtitle": linksSubtitle,
+			title: linkIcon + emoji + superchargedIcon + displayName + superchargedIcon2,
+			match: additionalMatcher + alfredMatcher(filename),
+			subtitle: "▸ " + parentFolder(relativePath),
+			type: "file:skipcheck",
+			quicklookurl: vaultPath + "/" + relativePath,
+			uid: relativePath,
+			arg: relativePath,
+			icon: { path: iconpath },
+			mods: {
+				shift: {
+					valid: hasLinks,
+					subtitle: linksSubtitle,
 				},
 			},
 		});
@@ -210,29 +204,29 @@ function run () {
 		}
 
 		const modifierInvalid = {
-			"valid": false,
-			"subtitle": "⛔️ Cannot do that with external link.",
+			valid: false,
+			subtitle: "⛔️ Cannot do that with external link.",
 		};
 
 		jsonArray.push({
-			"title": title,
-			"match": "external" + alfredMatcher(title) + alfredMatcher(url),
-			"subtitle": url,
-			"uid": url,
-			"arg": url,
-			"icon": { "path": "icons/external_link.png" },
-			"mods": {
-				"shift": modifierInvalid,
-				"fn": modifierInvalid,
-				"cmd": modifierInvalid,
-				"ctrl": modifierInvalid,
-				"alt": {
-					"arg": shareURL,
-					"subtitle": "⌥: Copy URL" + isDiscordReady,
+			title: title,
+			match: "external" + alfredMatcher(title) + alfredMatcher(url),
+			subtitle: url,
+			uid: url,
+			arg: url,
+			icon: { path: "icons/external_link.png" },
+			mods: {
+				shift: modifierInvalid,
+				fn: modifierInvalid,
+				cmd: modifierInvalid,
+				ctrl: modifierInvalid,
+				alt: {
+					arg: shareURL,
+					subtitle: "⌥: Copy URL" + isDiscordReady,
 				},
 			},
 		});
 	});
 
-	return JSON.stringify({ items: jsonArray }); // JXA direct return not possible becuase of guard clause above
+	return JSON.stringify({ items: jsonArray });
 }

@@ -39,8 +39,24 @@ function SafeApplication(appId) {
 const discordReadyLinks = ["Discord", "Discord PTB", "Discord Canary"]
 	.some(discordApp => SafeApplication(discordApp)?.frontmost());
 
-const vaultPath = $.getenv("vault_path").replace(/^~/, app.pathTo("home folder"));
-const vaultNameENC = $.getenv("vault_name_ENC").replace(/^~/, app.pathTo("home folder"));
+function getVaultPath() {
+	const _app = Application.currentApplication();
+	_app.includeStandardAdditions = true;
+	const dataFile = $.NSFileManager.defaultManager.contentsAtPath("./vaultPath");
+	const vault = $.NSString.alloc.initWithDataEncoding(dataFile, $.NSUTF8StringEncoding);
+	return ObjC.unwrap(vault).replace(/^~/, _app.pathTo("home folder"));
+}
+const vaultPath = getVaultPath()
+
+function getVaultNameEncoded() {
+	const _app = Application.currentApplication();
+	_app.includeStandardAdditions = true;
+	const dataFile = $.NSFileManager.defaultManager.contentsAtPath("./vaultPath");
+	const vault = $.NSString.alloc.initWithDataEncoding(dataFile, $.NSUTF8StringEncoding);
+	const _vaultPath = ObjC.unwrap(vault).replace(/^~/, _app.pathTo("home folder"));
+	return encodeURIComponent(_vaultPath.replace(/.*\//, ""));
+}
+const vaultNameEnc = getVaultNameEncoded();
 const jsonArray = [];
 
 //------------------------------------------------------------------------------
@@ -75,7 +91,7 @@ pluginJSON.forEach(plugin => {
 	const repo = plugin.repo;
 
 	const githubURL = "https://github.com/" + repo;
-	const openURI = `obsidian://show-plugin?vault=${vaultNameENC}&id=${id}`;
+	const openURI = `obsidian://show-plugin?vault=${vaultNameEnc}&id=${id}`;
 	let isDiscordReady, shareURL;
 	if (discordReadyLinks) {
 		shareURL = `> **${name}**: ${description} <https://obsidian.md/plugins?id=${id}>`;
@@ -138,7 +154,7 @@ themeJSON.forEach(theme => {
 
 	const githubURL = "https://github.com/" + repo;
 	const nameEncoded = encodeURIComponent(name);
-	const openURI = `obsidian://show-theme?vault=${vaultNameENC}&name=${nameEncoded}`;
+	const openURI = `obsidian://show-theme?vault=${vaultNameEnc}&name=${nameEncoded}`;
 	let shareURL = `obsidian://show-theme?name=${nameEncoded}`;
 	let isDiscordReady = "";
 	if (discordReadyLinks) {
