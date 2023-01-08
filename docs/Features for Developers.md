@@ -7,8 +7,6 @@
 - [Open various folders related to development](#open-various-folders-related-to-development)
 - [Vault-related features](#vault-related-features)
 - [Beta Plugins](#beta-plugins)
-- [Obsidian Version Information](#obsidian-version-information)
-- [Browse Obsidian via Terminal](#browse-obsidian-via-terminal)
 
 <!-- /MarkdownTOC -->
 
@@ -19,8 +17,7 @@ Searches the unofficial [plugin development documentation by Marcus Olsson](http
 ![](images/plugin-docs-search-demo.gif)
 
 ## Plugin Search
-➡️ Refer to the [Plugin & Theme Search](Plugin%20and%20Theme%20Search.md#Plugins) for the Information on the theme search capabilities. Particularly useful for plugin developers should be:
-- the `fn + ↵` command to clone a plugin.
+➡️ Refer to the [Plugin & Theme Search](Plugin%20and%20Theme%20Search.md#Plugins) for information about the theme search capabilities. Particularly useful for plugin developers should be:
 - the [GitHub issue search](Plugin%20and%20Theme%20Search.md#%F0%9F%86%95-Searching-GitHub-Issues)
 - `⌃ + ↵` to see and copy plugin IDs
 
@@ -31,7 +28,7 @@ Searches the unofficial [plugin development documentation by Marcus Olsson](http
 - To quickly open local plugin folders in `.obsidian/plugins/`, use to the [Settings & Local Plugin Search](Settings%20and%20Local%20Plugin%20Search.md).
 
 ## Vault-related features
-➡️ Refer to the documentation of the [Vault Switcher](Vault%20Switcher.md) for information on how to switch vaults quickly and open the the vault root in Finder or the Terminal.
+➡️ Refer to the documentation of the [Vault Switcher](Vault%20Switcher.md) for information about switching vaults quickly and open the vault root in Finder or the Terminal.
 
 ## Beta Plugins
 **`obeta`: Access `beta`-plugin-related commands.**
@@ -45,17 +42,3 @@ Searches the unofficial [plugin development documentation by Marcus Olsson](http
 ## Quick Element Picker
 **Triggered via Hotkey: Open Console & Activate Element Picker**
 Saves only a keypress, but hey, it saves a keypress.
-
-## Obsidian Version Information
-**Snippet Trigger: `!oversion`**
-Type `!oversion` in any text field, and Alfred will output your current Mac and Obsidian version. Useful for people frequently creating bug reports. (Note that Alfred snippet triggers need to be activated.)
-
----
-
-## Browse Obsidian via Terminal
-Do want to navigate your vault from within the Terminal? [Have a look here.](https://gist.github.com/chrisgrieser/4e4d21d701f70b0eef5e25496583e38e)
-
-![Vault Navigation in the Terminal](images/terminal-vault-navigation.png)
-
-(Thanks to `@jack of some trades`.)
-[plugin-docs-search-demo.gif]:
