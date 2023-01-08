@@ -40,7 +40,8 @@ function run(argv) {
 
 	if (errorMsg) {
 		errorMsg = `Error:
-${errorMsg}Please install & enable the plugin and re-run "osetup"`;
+${errorMsg}
+Please install & enable the plugin and re-run "osetup"`;
 		return errorMsg;
 	}
 	//───────────────────────────────────────────────────────────────────────────
