@@ -1,3 +1,5 @@
+- 2023-01-08	release 3.5.1
+- 2023-01-08	fix: ov vault switcher
 - 2023-01-08	release 3.5.0
 - 2023-01-08	build: vaultpath data excluded
 - 2023-01-08	refactor/fix:write vaultpath tofile (#108,#101)
