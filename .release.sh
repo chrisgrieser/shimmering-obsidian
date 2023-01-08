@@ -52,7 +52,7 @@ rm -fv ./*.alfredworkflow
 # zip
 workflowName=$(plutil -extract name xml1 -o - info.plist | sed -n 4p | cut -d">" -f2 | cut -d"<" -f1)
 workflowName=$(echo "$workflowName" | tr " " "-")
-zip --quiet -r "$workflowName.alfredworkflow" . -x ".*" "promo*.png" "doc*/*" ".gitignore" "info-original.plist" "prefs.plist" "README.md" "*.alfredworkflow"
+zip --quiet -r "$workflowName.alfredworkflow" . -x ".*" "promo*.png" "doc*/*" ".gitignore" "info-original.plist" "prefs.plist" "README.md" "*.alfredworkflow" "vaultPath"
 echo "new $workflowName.alfredworkflow file created."
 
 # restore original
