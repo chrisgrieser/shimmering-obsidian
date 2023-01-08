@@ -2466,9 +2466,9 @@
 				<key>destinationuid</key>
 				<string>6EDD1A38-8B72-43A8-A86D-A50DFA235654</string>
 				<key>modifiers</key>
-				<integer>0</integer>
+				<integer>131072</integer>
 				<key>modifiersubtext</key>
-				<string></string>
+				<string>⇧: Control this vault with Alfred</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
