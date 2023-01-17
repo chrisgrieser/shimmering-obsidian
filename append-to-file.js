@@ -19,6 +19,7 @@ function run(argv) {
 
 	//───────────────────────────────────────────────────────────────────────────
 
+	ObjC.import("stdlib");
 	const content = $.getenv("append_prefix") + argv[0];
 	const absolutePath = getVaultPath() + "/" + $.getenv("relative_path");
 	appendToFile(content, absolutePath);
