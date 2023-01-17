@@ -1,3 +1,5 @@
+- 2023-01-17	release 3.5.3
+- 2023-01-17	fix: appending via o… fn+return (fix #111)
 - 2023-01-08	release 3.5.2
 - 2023-01-08	fix: ov vault-control change not via shift
 - 2023-01-08	chore
