@@ -31,33 +31,44 @@ function getVaultPath() {
 	const vault = $.NSString.alloc.initWithDataEncoding(dataFile, $.NSUTF8StringEncoding);
 	return ObjC.unwrap(vault).replace(/^~/, _app.pathTo("home folder"));
 }
-const vaultPath = getVaultPath()
+const vaultPath = getVaultPath();
 const metadataJSON = vaultPath + "/.obsidian/plugins/metadata-extractor/metadata.json";
 const canvasJSON = vaultPath + "/.obsidian/plugins/metadata-extractor/canvas.json";
 const starredJSON = vaultPath + "/.obsidian/starred.json";
 const excludeFilterJSON = vaultPath + "/.obsidian/app.json";
+const superIconFile = $.getenv("supercharged_icon_file").replace(/^~/, app.pathTo("home folder"));
+
 let recentJSON = vaultPath + "/.obsidian/workspace.json";
 if (!fileExists(recentJSON)) recentJSON = recentJSON.slice(0, -5); // Obsidian 0.16 uses workspace.json → https://discord.com/channels/686053708261228577/716028884885307432/1013906018578743478
-const jsonArray = [];
-let temp;
 
 const excludeFilter = fileExists(excludeFilterJSON) ? JSON.parse(readFile(excludeFilterJSON)).userIgnoreFilters : [];
 console.log("excludeFilter: " + excludeFilter);
 const recentFiles = fileExists(recentJSON) ? JSON.parse(readFile(recentJSON)).lastOpenFiles : [];
-let starredFiles = fileExists(starredJSON) ? JSON.parse(readFile(starredJSON)).items : [];
-if (starredFiles.length > 0) starredFiles = starredFiles.filter(item => item.type === "file").map(item => item.path);
+console.log("recentFiles length: " + recentFiles.length);
 let canvasArray = fileExists(canvasJSON) ? JSON.parse(readFile(canvasJSON)) : [];
+console.log("canvasArray length: " + canvasArray.length);
 
-const superIconFile = $.getenv("supercharged_icon_file").replace(/^~/, app.pathTo("home folder"));
-let iconFileExists = superIconFile ? fileExists(superIconFile) : false;
-if (superIconFile) iconFileExists = fileExists(superIconFile);
-let superIconList = iconFileExists ? readFile(superIconFile) : [];
-if (superIconList.length > 0) superIconList = superIconList.split("\n").filter(l => l.length !== 0);
+let starredFiles = [];
+if (fileExists(starredJSON)) {
+	starredFiles = JSON.parse(readFile(starredJSON))
+		.items.filter(item => item.type === "file")
+		.map(item => item.path);
+}
+console.log("starredFiles length: " + starredFiles.length);
+
+let superIconList = [];
+if (superIconFile && fileExists(superIconFile)) {
+	superIconList = readFile(superIconFile)
+		.split("\n")
+		.filter(l => l.length !== 0);
+}
+console.log("superIconList length: " + superIconList.length);
 
 let fileArray;
 if (fileExists(metadataJSON)) fileArray = JSON.parse(readFile(metadataJSON));
 else console.log("metadata.json missing.");
 
+const jsonArray = [];
 //──────────────────────────────────────────────────────────────────────────────
 
 // DETERMINE PATH TO SEARCH
@@ -137,7 +148,7 @@ fileArray.forEach(file => {
 
 	let superchargedIcon = "";
 	let superchargedIcon2 = "";
-	if (iconFileExists && file.tags) {
+	if (superIconList.length > 0 && file.tags) {
 		superIconList.forEach(pair => {
 			const tag = pair.split(",")[0].toLowerCase().replaceAll("#", "");
 			const icon = pair.split(",")[1];
