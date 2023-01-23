@@ -134,7 +134,6 @@ installedPlugins.forEach(pluginFolder => {
 		subtitle: subtitleIcons + settingSubtitle,
 		arg: URI,
 		icon: { path: "icons/plugin.png" },
-		valid: pluginEnabled,
 		mods: {
 			alt: { arg: pluginFolderPath },
 			cmd: { arg: pluginFolderPath },
