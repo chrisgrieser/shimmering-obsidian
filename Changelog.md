@@ -1,3 +1,9 @@
+- 2023-01-25	release 3.5.4
+- 2023-01-25	fix: rm references to Alf.placehold. (fix #112)
+- 2023-01-25	fix: spellcheck switch for workspaces
+- 2023-01-23	chore
+- 2023-01-18	feat: some extra logging
+- 2023-01-17	chore
 - 2023-01-17	release 3.5.3
 - 2023-01-17	fix: appending via o… fn+return (fix #111)
 - 2023-01-08	release 3.5.2
