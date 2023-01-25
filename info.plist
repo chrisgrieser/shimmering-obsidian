@@ -10519,7 +10519,7 @@ DOUBLE CLICK to set hotkey</string>
 				<false/>
 			</dict>
 			<key>description</key>
-			<string>String to insert before content appended to a note via the Alfred-based Quick-Switchers (`fn + ↵`). Does accept dynamic content like the current date or time when you use Alfred's Placeholder Syntax. See: https://www.alfredapp.com/help/workflows/advanced/placeholders/#date-time</string>
+			<string>String to insert before content appended to a note via the Alfred-based Quick-Switchers (`fn + ↵`).</string>
 			<key>label</key>
 			<string>Appending Prefix</string>
 			<key>type</key>
@@ -10676,16 +10676,16 @@ DOUBLE CLICK to set hotkey</string>
 			<key>config</key>
 			<dict>
 				<key>default</key>
-				<string>{date:yyyy-MM-dd}, {time:HH:mm}</string>
+				<string></string>
 				<key>placeholder</key>
 				<string>e.g. -</string>
 				<key>required</key>
 				<false/>
 				<key>trim</key>
-				<false/>
+				<true/>
 			</dict>
 			<key>description</key>
-			<string>String to insert before content appended to the OCR'ed content. Does accept dynamic content like the current date or time when you use Alfred's Placeholder Syntax. See: https://www.alfredapp.com/help/workflows/advanced/placeholders/#date-time</string>
+			<string>String to insert before OCR'ed content.</string>
 			<key>label</key>
 			<string>OCR Screenshot Prefix</string>
 			<key>type</key>
