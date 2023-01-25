@@ -10769,7 +10769,7 @@ DOUBLE CLICK to set hotkey</string>
 			<key>description</key>
 			<string>Folder where the backups done by the `obackup` command should be saved. Recommended to be a folder outside your vault.</string>
 			<key>label</key>
-			<string>Backup Destionation</string>
+			<string>Backup Destination</string>
 			<key>type</key>
 			<string>filepicker</string>
 			<key>variable</key>

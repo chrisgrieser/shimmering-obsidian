@@ -36,7 +36,7 @@ function run(argv) {
 
 	const workspaceName = decodeURIComponent(urlscheme.split("=")[2]);
 
-	if ($.getenv("spellcheck-workspace") === "") return;
+	if ($.getenv("workspace_to_spellcheck") === "") return;
 
 	const workspacesToSpellcheck = $.getenv("workspace_to_spellcheck").split(/, ?/);
 	console.log("workspacesToSpellcheck: " + workspacesToSpellcheck);
