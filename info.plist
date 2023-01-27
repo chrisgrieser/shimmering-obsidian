@@ -10333,7 +10333,7 @@ DOUBLE CLICK to set hotkey</string>
 		<string>vault_name_ENC</string>
 	</array>
 	<key>version</key>
-	<string>3.5.4</string>
+	<string>3.6.0</string>
 	<key>webaddress</key>
 	<string>https://chris-grieser.de/</string>
 </dict>

@@ -1,3 +1,7 @@
+- 2023-01-27	release 3.6.0
+- 2023-01-27	chore: prepare for Alfred Gallery
+- 2023-01-27	chore: prepare for Alfred Gallery
+- 2023-01-27	chore
 - 2023-01-25	release 3.5.4
 - 2023-01-25	fix: rm references to Alf.placehold. (fix #112)
 - 2023-01-25	fix: spellcheck switch for workspaces
