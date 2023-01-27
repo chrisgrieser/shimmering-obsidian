@@ -7727,7 +7727,7 @@ fi</string>
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>## Alfred Gallery[This workflow is now included in the Alfred gallery](http://alfred.app/workflows/chrisgrieser/alfred-bibtex-citation-picker/) and auto-updates will there be managed by Alfred and not by this workflow anymore.## ⚠️ Change of Configuration System ⚠️
+	<string>## Alfred Gallery[This workflow is now included in the Alfred gallery](http://alfred.app/workflows/chrisgrieser/shimmering-obsidian/) and auto-updates will there be managed by Alfred and not by this workflow anymore.## ⚠️ Change of Configuration System ⚠️
 ➡️ **After updating to 3.5, please rerun `osetup` once more.**---
 
 # Shimmering Obsidian
