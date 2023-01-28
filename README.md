@@ -1,12 +1,6 @@
 # Shimmering Obsidian 🎩
 *An Alfred Workflow with dozens of features for [Obsidian](https://obsidian.md/)*.
 
-> **Note**  
-> [Version 2.27](https://github.com/chrisgrieser/shimmering-obsidian/releases/tag/2.27.7) is the last version compatible with Alfred 4. All future versions of this workflow will require Alfred 5.
-
-> **Warning**  
-> The initial version 3 had a bug preventing auto-updating. Please [manually download 3.1.1 or newer](https://github.com/chrisgrieser/shimmering-obsidian/releases) to receive auto-updates.
-
 ![](https://img.shields.io/github/downloads/chrisgrieser/shimmering-obsidian/total?label=Downloads&style=plastic) ![](https://img.shields.io/github/v/release/chrisgrieser/shimmering-obsidian?label=Latest%20Release&style=plastic) [![](https://img.shields.io/badge/changelog-click%20here-FFE800?style=plastic)](Changelog.md)
 
 <img src="https://user-images.githubusercontent.com/73286100/139678407-9ac39baa-5f49-42a0-9622-0fbaf68540b2.gif" alt="Promo Video" width=70%>
@@ -153,16 +147,15 @@ There are extensive settings to configure everything to your heart's content.
 
 ![workflow settings](docs/images/workflow-settings.gif)
 
-## Alfred Themes
-I also designed some [themes for Alfred](https://github.com/chrisgrieser/alfred-themes) you can check out.
 ## Credits & Thanks
 - Big shout-out to [@kometenstaub](https://github.com/kometenstaub) for developing the [metadata extractor plugin](https://github.com/kometenstaub/metadata-extractor), for which this workflow is right now the main client.
 - Also thanks to [@Vinzent03](https://github.com/Vinzent03) for his invaluable [Advanced URI plugin](https://github.com/Vinzent03/obsidian-advanced-uri), which enables Alfred to control various aspects of Obsidian.
 - Main icon by [Jack Liu](https://www.reddit.com/user/jackliu1219).
 - <a href="https://www.flaticon.com/authors/freepik">Other icons created by Freepik - Flaticon</a>
 
+<!-- vale Google.FirstPerson = NO -->
 ## About the Developer
-In my day job, I am a sociologist studying the social mechanisms underlying the digital economy. For my PhD project, I investigate the governance of the app economy and how software ecosystems manage the tension between innovation and compatibility. If you are interested in this subject, feel free to get in touch!
+In my day job, I am a sociologist studying the social mechanisms underlying the digital economy. For my PhD project, I investigate the governance of the app economy and how software ecosystems manage the tension between innovation and compatibility. If you are interested in this subject, feel free to get in touch.
 
 <!-- markdown-link-check-disable -->
 
