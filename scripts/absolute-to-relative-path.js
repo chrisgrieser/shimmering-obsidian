@@ -9,6 +9,9 @@ function run(argv) {
 		return ObjC.unwrap(vault).replace(/^~/, _app.pathTo("home folder"));
 	}
 
+	if (bla == "f") return
+
+
 	const absolutePath = argv.join("");
 	const relativePath = absolutePath.slice(getVaultPath().length);
 	return relativePath;
