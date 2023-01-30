@@ -1,3 +1,7 @@
+- 2023-01-30	release 3.6.1
+- 2023-01-30	fix: screenshot saving (fix #113)
+- 2023-01-29	chore
+- 2023-01-28	chore
 - 2023-01-27	release 3.6.0
 - 2023-01-27	chore: prepare for Alfred Gallery
 - 2023-01-27	chore: prepare for Alfred Gallery
