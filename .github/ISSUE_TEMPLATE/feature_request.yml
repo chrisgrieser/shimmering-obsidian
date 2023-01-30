@@ -22,6 +22,8 @@ body:
       options:
         - label: The feature would be useful to more users than just me.
           required: true
+        - label: This is actually a feature request and not a bug report. (Bug reports being submitted as feature requests will be closed.)
+          required: true
         - label: I have checked the [feature overview](https://github.com/chrisgrieser/shimmering-obsidian#feature-overview) and the feature doesn't already exist.
           required: true
         - label: 'Feature Requests regarding daily notes will not be implemented, since there are [other Alfred workflows that do focus on daily notes already](https://github.com/hauselin/obsidian-alfred).'
