@@ -1,10 +1,11 @@
 #!/bin/zsh
-vault_path="$(cat ./vaultPath)" && vault_path="${vault_path/#\~/$HOME}"
+vault_path="$(cat ./vaultPath)" 
+vault_path="${vault_path/#\~/$HOME}"
 
 if [[ "$screenshot_path" == "" ]] ; then
-	screenshot_path="$vaultPath/screenshots"
+	screenshot_path="$vault_path/screenshots"
 else
-	screenshot_path="${screenshot_path/#\~/$HOME}"
+	screenshot_path="$vault_path${screenshot_path/#\~/$HOME}"
 fi
 
 imageNote="$vault_path/Images.md"
