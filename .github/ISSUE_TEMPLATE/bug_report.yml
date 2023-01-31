@@ -57,7 +57,7 @@ body:
     validations:
       required: true
   - type: input
-    id: version-info
+    id: last-working-version
     attributes:
       label: Last working version
       description: If you updated the workflow, and it was working before but stopped working now, please add the last version which did work.
