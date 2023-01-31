@@ -10,3 +10,54 @@ body:
       description: A clear and concise description of the bug.
     validations:
       required: true
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Relevant Screenshot
+      description: If applicable, add screenshots or a screen recording to help explain your problem.
+  - type: textarea
+    id: reproduction-steps
+    attributes:
+      label: To Reproduce
+      description: Steps to reproduce the problem
+      placeholder: |
+        For example:
+        1. Go to '...'
+        2. Click on '...'
+        3. Scroll down to '...'
+  - type: textarea
+    id: debugging-log
+    attributes:
+      label: Debugging Log
+      description: "You can get a debugging log by opening the workflow in Alfred preferences and pressing `cmd + D`. A small window will open up which will log everything happening during the execution of the Workflow. Use the malfunctioning part of the workflow once more, copy the content of the log window, and paste it here. If the debugging log is long, please attach it as file instead of pasting everything in here."
+      render: Text
+      placeholder: 'If the log is long, you can also truncate the really long `Shimmering Obsidian[Script Filter]` line or attach it as a file instead.'
+    validations:
+      required: true
+  - type: textarea
+    id: workflow-configuration-1
+    attributes:
+      label: Workflow Configuration 1
+      description: "Please add a screenshot of all your [workflow configuration](https://www.alfredapp.com/help/workflows/user-configuration/) (clicking \"Configure Workflow\")"
+    validations:
+      required: true
+  - type: textarea
+    id: workflow-configuration-2
+    attributes:
+      label: Workflow Configuration 2
+      description: "Attach a screenshot of the Alfred environment variables. [You can see the environment variables here.](https://user-images.githubusercontent.com/73286100/190274824-ff8e2653-e359-4640-bf01-981ce9d78a0c.png)"
+    validations:
+      required: true
+  - type: textarea
+    id: version-info
+    attributes:
+      label: 'Version & System Information'
+      description: "Please run the command `oinfo` in Alfred. It will copy various version information into your clipboard. Paste the result here. (If the command `oinfo` itself also does not work, please state so and follow [these instructions here.](https://github.com/chrisgrieser/shimmering-obsidian/issues/98#issuecomment-1247370074))"
+      render: Text
+    validations:
+      required: true
+  - type: input
+    id: version-info
+    attributes:
+      label: Last working version
+      description: If you updated the workflow, and it was working before but stopped working now, please add the last version which did work.
