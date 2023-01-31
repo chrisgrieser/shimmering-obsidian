@@ -56,6 +56,12 @@ body:
       render: Text
     validations:
       required: true
+  - type: input
+    id: version-info
+    attributes:
+      label: Last working version
+      description: If you updated the workflow, and it was working before but stopped working now, please add the last version which did work.
+      placeholder: "e.g. 1.2.3"
   - type: checkboxes
     id: checklist
     attributes:
