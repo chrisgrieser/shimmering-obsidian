@@ -1,3 +1,14 @@
+- 2023-02-01	release 3.6.2
+- 2023-02-01	fix #113
+- 2023-02-01	chore
+- 2023-01-31	fix: bug report form (#113)
+- 2023-01-31	chore
+- 2023-01-31	chore
+- 2023-01-31	chore
+- 2023-01-31	chore
+- 2023-01-31	chore
+- 2023-01-31	chore
+- 2023-01-30	chore
 - 2023-01-30	release 3.6.1
 - 2023-01-30	fix: screenshot saving (fix #113)
 - 2023-01-29	chore
