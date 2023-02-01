@@ -10109,25 +10109,6 @@ DOUBLE CLICK to set hotkey</string>
 			<key>config</key>
 			<dict>
 				<key>default</key>
-				<true/>
-				<key>required</key>
-				<false/>
-				<key>text</key>
-				<string></string>
-			</dict>
-			<key>description</key>
-			<string>Open Note after screenshot or OCR screenshot. (Disable this to be able to take OCR screenshots in quick succession without opening Obsidian.)</string>
-			<key>label</key>
-			<string>Open Note after (OCR-)Screenshot</string>
-			<key>type</key>
-			<string>checkbox</string>
-			<key>variable</key>
-			<string>open_after_screenshot</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>default</key>
 				<string></string>
 				<key>filtermode</key>
 				<integer>2</integer>
@@ -10137,7 +10118,7 @@ DOUBLE CLICK to set hotkey</string>
 				<false/>
 			</dict>
 			<key>description</key>
-			<string>Vault-relative path to the note where the text resulting from the OCR should be saved to. When empty, will save/append to the file `{vault-path}/OCR-Screenshots.md`. Can be a markdown file outside your note and be used independently from Obsidian.</string>
+			<string>Markdown file where the ORC'ed text will be saved to. When empty, will save/append to the file `{vault-path}/OCR-Screenshots.md`. Can be a markdown file outside your note and be used independently from Obsidian.</string>
 			<key>label</key>
 			<string>OCR Screenshot Note</string>
 			<key>type</key>
@@ -10151,20 +10132,39 @@ DOUBLE CLICK to set hotkey</string>
 				<key>default</key>
 				<string></string>
 				<key>filtermode</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>placeholder</key>
 				<string></string>
 				<key>required</key>
 				<false/>
 			</dict>
 			<key>description</key>
-			<string>Folder where the image screenshots should be saved to. When empty, will save them the images to `{vault-path}/screenshots/`.</string>
+			<string>Folder where the image screenshots should be saved to. When empty, will save the images in `{vault-path}/screenshots/`.</string>
 			<key>label</key>
 			<string>Screenshot Path</string>
 			<key>type</key>
 			<string>filepicker</string>
 			<key>variable</key>
 			<string>screenshot_path</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<true/>
+				<key>required</key>
+				<false/>
+				<key>text</key>
+				<string></string>
+			</dict>
+			<key>description</key>
+			<string>Open mote after screenshot or OCR screenshot. (Disable this to be able to take screenshots in quick succession without opening Obsidian.)</string>
+			<key>label</key>
+			<string>Open after Screenshot / OCR Screenshot</string>
+			<key>type</key>
+			<string>checkbox</string>
+			<key>variable</key>
+			<string>open_after_screenshot</string>
 		</dict>
 		<dict>
 			<key>config</key>
