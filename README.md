@@ -3,6 +3,9 @@
 
 ![](https://img.shields.io/github/downloads/chrisgrieser/shimmering-obsidian/total?label=Downloads&style=plastic) ![](https://img.shields.io/github/v/release/chrisgrieser/shimmering-obsidian?label=Latest%20Release&style=plastic) [![](https://img.shields.io/badge/changelog-click%20here-FFE800?style=plastic)](Changelog.md)
 
+> __Note__  
+> For inclusion in the upcoming Alfred Gallery, this workflow's auto-update feature had to be removed. However, the submission process for the upcoming Alfred Gallery takes longer than expected, and until admitted in the Gallery, you will have to update the workflow manually by downloading the latest release: Download the [latest release at GitHub](https://github.com/chrisgrieser/shimmering-obsidian/releases/latest). 
+
 <img src="https://user-images.githubusercontent.com/73286100/139678407-9ac39baa-5f49-42a0-9622-0fbaf68540b2.gif" alt="Promo Video" width=70%>
 
 ---
@@ -28,7 +31,7 @@
 - Search Notes via Tags
 - Browse a note's links (outgoing, backlinks, external)
 - Open External Links of a Note (without switching to the document or opening Obsidian)
-- Search exclusively for attachments (non-markdown files) in your vault
+- Search only for attachments (non-markdown files) in your vault
 - Graph Traversal via Alfred
 - Smart Search: A query like `o foobar #moc starred` displays only files named "foobar" with the tag "#moc" that are also starred.
 - Visual Search: Add Icons to your tags based on their tags, similar to the [Supercharged Links](https://obsidian.md/plugins?id=supercharged-links-obsidian) Plugin.
@@ -136,7 +139,7 @@
 ---
 
 ## Workflow Installation
-*This workflow requires the [Powerpack for Alfred](https://www.alfredapp.com/powerpack/). Furthermore, version 3+ of this workflow requires Alfred 5, workflow version 2.27 being the last version supporting Alfred 4.
+*This workflow requires the Alfred 5 with [Powerpack](https://www.alfredapp.com/powerpack/).*
 1. Install the Obsidian plugins [Advanced URI](https://obsidian.md/plugins?id=obsidian-advanced-uri) & [Metadata Extractor](https://obsidian.md/plugins?id=metadata-extractor). Enable both plugins.
 2. Verify you have not renamed your Obsidian config folder, i.e., it's still `.obsidian` (Settings → About → Advanced → Override config folder).
 3. Download the [latest release at GitHub](https://github.com/chrisgrieser/shimmering-obsidian/releases/latest). Double-click the `.alfredworkflow` file to install it.
