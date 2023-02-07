@@ -14,8 +14,8 @@ function run(argv) {
 		_app.includeStandardAdditions = true;
 		const dataFile = $.NSFileManager.defaultManager.contentsAtPath("./vaultPath");
 		const vault = $.NSString.alloc.initWithDataEncoding(dataFile, $.NSUTF8StringEncoding);
-		const vaultPath = ObjC.unwrap(vault).replace(/^~/, _app.pathTo("home folder"));
-		return encodeURIComponent(vaultPath.replace(/.*\//, ""));
+		const _vaultPath = ObjC.unwrap(vault).replace(/^~/, _app.pathTo("home folder"));
+		return encodeURIComponent(_vaultPath.replace(/.*\//, ""));
 	}
 	const vaultNameEnc = getVaultNameEncoded();
 

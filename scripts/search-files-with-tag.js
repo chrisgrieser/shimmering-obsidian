@@ -21,7 +21,7 @@ function readFile (path, encoding) {
 	return ObjC.unwrap(str);
 }
 
-//------------------------------------------------------------------------------
+//──────────────────────────────────────────────────────────────────────────────
 
 function getVaultPath() {
 	const _app = Application.currentApplication();
@@ -30,33 +30,44 @@ function getVaultPath() {
 	const vault = $.NSString.alloc.initWithDataEncoding(dataFile, $.NSUTF8StringEncoding);
 	return ObjC.unwrap(vault).replace(/^~/, _app.pathTo("home folder"));
 }
-const vaultPath = getVaultPath()
+const vaultPath = getVaultPath();
 const metadataJSON = vaultPath + "/.obsidian/plugins/metadata-extractor/metadata.json";
 const starredJSON = vaultPath + "/.obsidian/starred.json";
+const superIconFile = $.getenv("supercharged_icon_file").replace(/^~/, app.pathTo("home folder"));
+
 let recentJSON = vaultPath + "/.obsidian/workspace.json";
 if (!fileExists(recentJSON)) recentJSON = recentJSON.slice(0, -5); // Obsidian 0.16 uses workspace.json → https://discord.com/channels/686053708261228577/716028884885307432/1013906018578743478
-const mergeNestedTags = $.getenv("merge_nested_tags") === "true" || false;
-const jsonArray = [];
 
-// Supercharged Icons File
-let superchargedIconFileExists = false;
-const superchargedIconFile = $.getenv("supercharged_icon_file").replace(/^~/, app.pathTo("home folder"));
-if (superchargedIconFile) superchargedIconFileExists = Application("Finder").exists(Path(superchargedIconFile));
-let superchargedIconList;
-if (superchargedIconFileExists) {
-	superchargedIconList = readFile(superchargedIconFile)
+const workspaceFile = fileExists(recentJSON) ? JSON.parse(readFile(recentJSON)) : [];
+let recentFiles = [];
+if (workspaceFile.lastOpenFiles) {
+	recentFiles = workspaceFile.lastOpenFiles;
+} else if (workspaceFile.recentFiles) {
+	recentFiles = workspaceFile.recentFiles;
+}
+console.log("recentFiles length: " + recentFiles.length);
+
+let starredFiles = [];
+if (fileExists(starredJSON)) {
+	starredFiles = JSON.parse(readFile(starredJSON))
+		.items.filter(item => item.type === "file")
+		.map(item => item.path);
+}
+console.log("starredFiles length: " + starredFiles.length);
+
+let superIconList = [];
+if (superIconFile && fileExists(superIconFile)) {
+	superIconList = readFile(superIconFile)
 		.split("\n")
 		.filter(l => l.length !== 0);
 }
+console.log("superIconList length: " + superIconList.length);
 
-let starredFiles = [];
-if (readFile(starredJSON) !== "") { starredFiles = JSON.parse(readFile(starredJSON))
-	.items
-	.filter (s => s.type === "file")
-	.map (s => s.path);
-}
+const jsonArray = [];
 
-const recentFiles = JSON.parse(readFile(recentJSON)).lastOpenFiles;
+//──────────────────────────────────────────────────────────────────────────────
+
+const mergeNestedTags = $.getenv("merge_nested_tags") === "1";
 
 // filter the metadataJSON for the items w/ relativePaths of tagged files
 let selectedTag = readFile($.getenv("alfred_workflow_data") + "/buffer_selectedTag");
@@ -95,11 +106,14 @@ fileArray.forEach(file => {
 	if (filename.toLowerCase().includes("kanban"))	iconpath = "icons/kanban.png";
 
 	let superchargedIcon = "";
-	if (superchargedIconFileExists && file.tags) {
-		superchargedIconList.forEach(pair => {
+	let superchargedIcon2 = "";
+	if (superIconList.length > 0 && file.tags) {
+		superIconList.forEach(pair => {
 			const tag = pair.split(",")[0].toLowerCase().replaceAll("#", "");
 			const icon = pair.split(",")[1];
-			if (file.tags.includes(tag)) superchargedIcon = icon + " ";
+			const icon2 = pair.split(",")[2];
+			if (file.tags.includes(tag) && icon) superchargedIcon = icon + " ";
+			else if (file.tags.includes(tag) && icon2) superchargedIcon2 = " " + icon2;
 		});
 	}
 
@@ -119,7 +133,7 @@ fileArray.forEach(file => {
 
 	// push result
 	jsonArray.push({
-		"title": emoji + superchargedIcon + displayName,
+		"title": emoji + superchargedIcon + displayName + superchargedIcon2,
 		"match": additionalMatcher + alfredMatcher(filename),
 		"subtitle": "▸ " + parentFolder(relativePath),
 		"arg": relativePath,
