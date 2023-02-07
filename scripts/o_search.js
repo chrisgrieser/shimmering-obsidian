@@ -44,7 +44,7 @@ if (!fileExists(recentJSON)) recentJSON = recentJSON.slice(0, -5); // Obsidian 0
 const excludeFilter = fileExists(excludeFilterJSON) ? JSON.parse(readFile(excludeFilterJSON)).userIgnoreFilters : [];
 console.log("excludeFilter length: " + excludeFilter.length);
 
-// obsidian 1.1.10 changes the key for recent files
+// Obsidian 1.1.10 changes the key for recent files
 const workspaceFile = fileExists(recentJSON) ? JSON.parse(readFile(recentJSON)) : [];
 let recentFiles = [];
 if (workspaceFile.lastOpenFiles) {
