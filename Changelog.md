@@ -1,3 +1,9 @@
+- 2023-02-07	release 3.6.3
+- 2023-02-07	fix: searching tagged files
+- 2023-02-07	fix: recent, starred, and tag search
+- 2023-02-07	fix: o search for Obsidian 1.1.10
+- 2023-02-05	chore: update documentation search
+- 2023-02-05	chore
 - 2023-02-01	release 3.6.2
 - 2023-02-01	fix #113
 - 2023-02-01	chore
