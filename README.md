@@ -4,7 +4,7 @@
 ![](https://img.shields.io/github/downloads/chrisgrieser/shimmering-obsidian/total?label=Downloads&style=plastic) ![](https://img.shields.io/github/v/release/chrisgrieser/shimmering-obsidian?label=Latest%20Release&style=plastic) [![](https://img.shields.io/badge/changelog-click%20here-FFE800?style=plastic)](Changelog.md)
 
 > __Note__  
-> For inclusion in the upcoming Alfred Gallery, this workflow's auto-update feature had to be removed. However, the submission process for the upcoming Alfred Gallery takes longer than expected, and until admitted in the Gallery, you will have to update the workflow manually by downloading the latest release: Download the [latest release at GitHub](https://github.com/chrisgrieser/shimmering-obsidian/releases/latest). 
+> For inclusion in the upcoming Alfred Gallery, this workflow's auto-update feature had to be removed. However, the submission process for the upcoming Alfred Gallery takes longer than expected, and until admitted in the Gallery, you have to update the workflow manually by downloading the [latest release at GitHub](https://github.com/chrisgrieser/shimmering-obsidian/releases/latest). 
 
 <img src="https://user-images.githubusercontent.com/73286100/139678407-9ac39baa-5f49-42a0-9622-0fbaf68540b2.gif" alt="Promo Video" width=70%>
 
