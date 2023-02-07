@@ -43,8 +43,19 @@ if (!fileExists(recentJSON)) recentJSON = recentJSON.slice(0, -5); // Obsidian 0
 
 const excludeFilter = fileExists(excludeFilterJSON) ? JSON.parse(readFile(excludeFilterJSON)).userIgnoreFilters : [];
 console.log("excludeFilter: " + excludeFilter);
-const recentFiles = fileExists(recentJSON) ? JSON.parse(readFile(recentJSON)).lastOpenFiles : [];
-console.log("recentFiles length: " + recentFiles.length);
+
+const workspaceFile = fileExists(recentJSON) ? JSON.parse(readFile(recentJSON)) : [];
+let recentFiles 
+if (workspaceFile.length > 0 && workspaceFile.lastOpenFiles) {
+	recentFiles = workspaceFile.lastOpenFiles;
+} else if (workspaceFile.length > 0 && workspaceFile.recentFiles) {
+	recentFiles = workspaceFile.recentFiles;
+} else {
+	recentFiles = [];
+}
+if (workspaceFile.length > 0) workspaceFile
+console.log("recentFiles: " + recentFiles);
+
 let canvasArray = fileExists(canvasJSON) ? JSON.parse(readFile(canvasJSON)) : [];
 console.log("canvasArray length: " + canvasArray.length);
 
