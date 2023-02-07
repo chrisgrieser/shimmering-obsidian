@@ -42,19 +42,16 @@ let recentJSON = vaultPath + "/.obsidian/workspace.json";
 if (!fileExists(recentJSON)) recentJSON = recentJSON.slice(0, -5); // Obsidian 0.16 uses workspace.json → https://discord.com/channels/686053708261228577/716028884885307432/1013906018578743478
 
 const excludeFilter = fileExists(excludeFilterJSON) ? JSON.parse(readFile(excludeFilterJSON)).userIgnoreFilters : [];
-console.log("excludeFilter: " + excludeFilter);
+console.log("excludeFilter length: " + excludeFilter.length);
 
 const workspaceFile = fileExists(recentJSON) ? JSON.parse(readFile(recentJSON)) : [];
-let recentFiles 
-if (workspaceFile.length > 0 && workspaceFile.lastOpenFiles) {
+let recentFiles = [];
+if (workspaceFile.lastOpenFiles) {
 	recentFiles = workspaceFile.lastOpenFiles;
-} else if (workspaceFile.length > 0 && workspaceFile.recentFiles) {
+} else if (workspaceFile.recentFiles) {
 	recentFiles = workspaceFile.recentFiles;
-} else {
-	recentFiles = [];
 }
-if (workspaceFile.length > 0) workspaceFile
-console.log("recentFiles: " + recentFiles);
+console.log("recentFiles length: " + recentFiles.length);
 
 let canvasArray = fileExists(canvasJSON) ? JSON.parse(readFile(canvasJSON)) : [];
 console.log("canvasArray length: " + canvasArray.length);

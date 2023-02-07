@@ -12,33 +12,26 @@ const readFile = function (path, encoding) {
 	const str = $.NSString.alloc.initWithDataEncoding(data, encoding);
 	return ObjC.unwrap(str);
 };
-function alfredMatcher (str) {
-	return str.replace (/\/|-|_/g, " ") + " " + str;
-}
+const alfredMatcher = (str) => str.replace (/[-()_.]/g, " ") + " " + str;
+const fileExists = (filePath) => Application("Finder").exists(Path(filePath));
 
-function getVaultPath() {
-	const _app = Application.currentApplication();
-	_app.includeStandardAdditions = true;
-	const dataFile = $.NSFileManager.defaultManager.contentsAtPath("./vaultPath");
-	const vault = $.NSString.alloc.initWithDataEncoding(dataFile, $.NSUTF8StringEncoding);
-	return ObjC.unwrap(vault).replace(/^~/, _app.pathTo("home folder"));
-}
-const vaultPath = getVaultPath()
+//──────────────────────────────────────────────────────────────────────────────
+
+const vaultPath = $.getenv("vault_path").replace(/^~/, app.pathTo("home folder"));
 const tagsJSON = vaultPath + "/.obsidian/plugins/metadata-extractor/tags.json";
 const mergeNestedTags = $.getenv("merge_nested_tags") === "1";
+const superIconFile = $.getenv("supercharged_icon_file").replace(/^~/, app.pathTo("home folder"));
 const jsonArray = [];
 
-// Supercharged Icons File
-let superchargedIconFileExists = false;
-const superchargedIconFile = $.getenv("supercharged_icon_file").replace(/^~/, app.pathTo("home folder"));
-if (superchargedIconFile) superchargedIconFileExists = Application("Finder").exists(Path(superchargedIconFile));
-let superchargedIconList;
-if (superchargedIconFileExists) {
-	superchargedIconList = readFile(superchargedIconFile)
+let superIconList = [];
+if (superIconFile && fileExists(superIconFile)) {
+	superIconList = readFile(superIconFile)
 		.split("\n")
 		.filter(l => l.length !== 0);
 }
+console.log("superIconList length: " + superIconList.length);
 
+// eslint-disable-next-line no-var, vars-on-top
 let tagsArray = JSON.parse (readFile(tagsJSON))
 	.map (function(t) {
 		t.merged = false;
@@ -46,7 +39,6 @@ let tagsArray = JSON.parse (readFile(tagsJSON))
 	});
 
 if (mergeNestedTags) {
-
 	// reduce tag-key to the parent-tag.
 	tagsArray = tagsArray.map (function (t) {
 		t.tag = t.tag.split("/")[0];
@@ -84,8 +76,8 @@ tagsArray.forEach(tagData => {
 
 	let superchargedIcon = "";
 	let superchargedIcon2 = "";
-	if (superchargedIconFileExists) {
-		superchargedIconList.forEach(pair => {
+	if (superIconList) {
+		superIconList.forEach(pair => {
 			const tag = pair.split(",")[0].toLowerCase().replaceAll("#", "");
 			const icon = pair.split(",")[1];
 			const icon2 = pair.split(",")[2];

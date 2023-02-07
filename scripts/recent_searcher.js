@@ -21,7 +21,7 @@ function readFile (path, encoding) {
 	return ObjC.unwrap(str);
 }
 
-//------------------------------------------------------------------------------
+//──────────────────────────────────────────────────────────────────────────────
 
 function getVaultPath() {
 	const _app = Application.currentApplication();
@@ -30,38 +30,47 @@ function getVaultPath() {
 	const vault = $.NSString.alloc.initWithDataEncoding(dataFile, $.NSUTF8StringEncoding);
 	return ObjC.unwrap(vault).replace(/^~/, _app.pathTo("home folder"));
 }
-const vaultPath = getVaultPath()
+const vaultPath = getVaultPath();
 const metadataJSON = vaultPath + "/.obsidian/plugins/metadata-extractor/metadata.json";
 const starredJSON = vaultPath + "/.obsidian/starred.json";
+const superIconFile = $.getenv("supercharged_icon_file").replace(/^~/, app.pathTo("home folder"));
+
 let recentJSON = vaultPath + "/.obsidian/workspace.json";
 if (!fileExists(recentJSON)) recentJSON = recentJSON.slice(0, -5); // Obsidian 0.16 uses workspace.json → https://discord.com/channels/686053708261228577/716028884885307432/1013906018578743478
-const jsonArray = [];
 
-// Supercharged Icons File
-let superchargedIconFileExists = false;
-const superchargedIconFile = $.getenv("supercharged_icon_file").replace(/^~/, app.pathTo("home folder"));
-if (superchargedIconFile) superchargedIconFileExists = Application("Finder").exists(Path(superchargedIconFile));
-let superchargedIconList;
-if (superchargedIconFileExists) {
-	superchargedIconList = readFile(superchargedIconFile)
+const workspaceFile = fileExists(recentJSON) ? JSON.parse(readFile(recentJSON)) : [];
+let recentFiles = [];
+if (workspaceFile.lastOpenFiles) {
+	recentFiles = workspaceFile.lastOpenFiles;
+} else if (workspaceFile.recentFiles) {
+	recentFiles = workspaceFile.recentFiles;
+}
+console.log("recentFiles length: " + recentFiles.length);
+
+let starredFiles = [];
+if (fileExists(starredJSON)) {
+	starredFiles = JSON.parse(readFile(starredJSON))
+		.items.filter(item => item.type === "file")
+		.map(item => item.path);
+}
+console.log("starredFiles length: " + starredFiles.length);
+
+let superIconList = [];
+if (superIconFile && fileExists(superIconFile)) {
+	superIconList = readFile(superIconFile)
 		.split("\n")
 		.filter(l => l.length !== 0);
 }
+console.log("superIconList length: " + superIconList.length);
 
-let starredFiles = [];
-if (readFile(starredJSON) !== "") {
-	starredFiles = JSON.parse(readFile(starredJSON))
-		.items
-		.filter (item => item.type === "file")
-		.map (item => item.path);
-}
-
-const recentFiles = JSON.parse(readFile(recentJSON)).lastOpenFiles;
+const jsonArray = [];
+//──────────────────────────────────────────────────────────────────────────────
 
 // filter the metadataJSON for the items w/ relativePaths of recent files
 const fileArray = JSON.parse(readFile(metadataJSON))
 	.filter(item => recentFiles.includes(item.relativePath));
 
+//──────────────────────────────────────────────────────────────────────────────
 fileArray.forEach(file => {
 	const filename = file.fileName;
 	const relativePath = file.relativePath;
@@ -79,8 +88,8 @@ fileArray.forEach(file => {
 
 	let superchargedIcon = "";
 	let superchargedIcon2 = "";
-	if (superchargedIconFileExists && file.tags) {
-		superchargedIconList.forEach(pair => {
+	if (superIconList.length > 0 && file.tags) {
+		superIconList.forEach(pair => {
 			const tag = pair.split(",")[0].toLowerCase().replaceAll("#", "");
 			const icon = pair.split(",")[1];
 			const icon2 = pair.split(",")[2];
