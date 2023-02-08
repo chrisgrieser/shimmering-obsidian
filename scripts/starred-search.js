@@ -39,13 +39,7 @@ const superIconFile = $.getenv("supercharged_icon_file").replace(/^~/, app.pathT
 let recentJSON = vaultPath + "/.obsidian/workspace.json";
 if (!fileExists(recentJSON)) recentJSON = recentJSON.slice(0, -5); // Obsidian 0.16 uses workspace.json → https://discord.com/channels/686053708261228577/716028884885307432/1013906018578743478
 
-const workspaceFile = fileExists(recentJSON) ? JSON.parse(readFile(recentJSON)) : [];
-let recentFiles = [];
-if (workspaceFile.lastOpenFiles) {
-	recentFiles = workspaceFile.lastOpenFiles;
-} else if (workspaceFile.recentFiles) {
-	recentFiles = workspaceFile.recentFiles;
-}
+const recentFiles = fileExists(recentJSON) ? JSON.parse(readFile(recentJSON)).lastOpenFiles : [];
 console.log("recentFiles length: " + recentFiles.length);
 
 let starredFiles = [];
