@@ -3398,7 +3398,7 @@ set parameter to do shell script "echo " &amp; quoted form of (system attribute 
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string>append-to-file.js</string>
+				<string>scripts/append-to-file.js</string>
 				<key>type</key>
 				<integer>8</integer>
 			</dict>
@@ -3721,7 +3721,7 @@ set parameter to do shell script "echo " &amp; quoted form of (system attribute 
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string>append-template-to-file.js</string>
+				<string>scripts/append-template-to-file.js</string>
 				<key>type</key>
 				<integer>8</integer>
 			</dict>
@@ -6689,7 +6689,7 @@ fi</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string>oupdate.js</string>
+				<string>scripts/oupdate.js</string>
 				<key>type</key>
 				<integer>8</integer>
 			</dict>
@@ -7602,7 +7602,7 @@ fi</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string>open-internal-folder.sh</string>
+				<string>scripts/open-internal-folder.sh</string>
 				<key>type</key>
 				<integer>8</integer>
 			</dict>
