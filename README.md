@@ -11,7 +11,6 @@
 ---
 
 - [Installation](#Workflow-Installation)
-- [Troubleshooting](docs/Troubleshooting.md)
 - [Changelog](Changelog.md)
 - [Credits & Donations](#Credits--Thanks)
 - [About the Developer](#about-the-developer)
