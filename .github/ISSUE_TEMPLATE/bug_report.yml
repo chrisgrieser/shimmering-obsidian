@@ -35,17 +35,10 @@ body:
     validations:
       required: true
   - type: textarea
-    id: workflow-configuration-1
+    id: workflow-configuration
     attributes:
-      label: Workflow Configuration 1
+      label: Workflow Configuration
       description: 'Please add a screenshot of all your [workflow configuration](https://www.alfredapp.com/help/workflows/user-configuration/) (clicking "Configure Workflow")'
-    validations:
-      required: true
-  - type: textarea
-    id: workflow-configuration-2
-    attributes:
-      label: Workflow Configuration 2
-      description: "Attach a screenshot of the Alfred environment variables. [You can see the environment variables here.](https://user-images.githubusercontent.com/73286100/190274824-ff8e2653-e359-4640-bf01-981ce9d78a0c.png)"
     validations:
       required: true
   - type: textarea
@@ -60,7 +53,7 @@ body:
     id: last-working-version
     attributes:
       label: Last working version
-      description: If you updated the workflow, and it was working before but stopped working now, please add the last version which did work.
+      description: If you updated the workflow, and it was working before but stopped working now, please name the last version which did work.
       placeholder: "e.g. 1.2.3"
   - type: checkboxes
     id: checklist
@@ -69,11 +62,13 @@ body:
       options:
         - label: I have [updated to the latest version](https://github.com/chrisgrieser/shimmering-obsidian/releases/latest) of this workflow.
           required: true
+        - label: I have updated to the latest version of the Metadata-Extractor and the Advanced URI plugin.
+          required: true
         - label: If the `o…` main search does not work, I made sure that I haven't changed any of the default settings of the Metadata-Extractor. Furthermore, I have tried rerunning `osetup` and it still does not work.
           required: true
         - label: If notes in general can be found, but recently created or renamed notes cannot, I used the `oupdate` command to manually update the metadata.
           required: true
-        - label: If I updated to version 3+ for the first time, I have disabled migrating workflow cutomizations. (If you haven't, you can simply re-download and install the latest release from GitHub and uncheck `Migrate my workflow customizations`.)
-          required: true
         - label: I have not renamed my Obsidian config folder, it's still `.obsidian` (About → Advanced → Override config folder).
+          required: true
+        - label: If I updated to version 3+ for the first time, I have disabled migrating workflow cutomizations. (If you haven't, you can simply re-download and install the latest release from GitHub and uncheck `Migrate my workflow customizations`.)
           required: true
