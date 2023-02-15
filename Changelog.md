@@ -1,3 +1,12 @@
+- 2023-02-15	release 3.6.4
+- 2023-02-15	fix: o-search with no excluded files (fix #117)
+- 2023-02-15	docs: update troubleshooting info
+- 2023-02-10	chore
+- 2023-02-09	chore
+- 2023-02-08	revert: recentFiles back to lastOpenFiles
+- 2023-02-07	chore
+- 2023-02-07	chore
+- 2023-02-07	docs: info on temporary manual update
 - 2023-02-07	release 3.6.3
 - 2023-02-07	fix: searching tagged files
 - 2023-02-07	fix: recent, starred, and tag search
