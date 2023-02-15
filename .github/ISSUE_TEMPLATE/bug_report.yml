@@ -62,6 +62,8 @@ body:
       options:
         - label: I have [updated to the latest version](https://github.com/chrisgrieser/shimmering-obsidian/releases/latest) of this workflow.
           required: true
+        - label: I am using Alfred 5. (Alfred 4 is not supported by this workflow anymore.)
+          required: true
         - label: I have updated to the latest version of the Metadata-Extractor and the Advanced URI plugin.
           required: true
         - label: If the `o…` main search does not work, I made sure that I haven't changed any of the default settings of the Metadata-Extractor. Furthermore, I have tried rerunning `osetup` and it still does not work.
