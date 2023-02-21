@@ -4,6 +4,7 @@
 <!--toc:start-->
 - [Create a new Note](#create-a-new-note)
 - [Scratchpad](#scratchpad)
+- [Obsidian Surfing Integration](#obsidian-surfing-integration)
 <!--toc:end-->
 
 ## Create a new Note
