@@ -24,4 +24,9 @@ __`oo` or `triggered via hotkey`: Append to your Scratchpad Note__
 - 💡 Using `- [ ]` as prefix and inserting below a specific heading enables you to add cards to a Kanban Board.
 - 💡 There are various settings for the scratchpad in the workflow configuration.
 
-ℹ️ *Since I do not use daily notes myself and cannot properly maintain the feature, the daily notes functionality has been deprecated. I encourage you to check out the [Alfred workflow for Obsidian by hauselin](https://github.com/hauselin/obsidian-alfred), which focuses on daily notes and complements this workflow well.*
+## Obsidian Surfing Integration
+__Triggered via Hotkey: Open Browser Tab in Obsidian__
+- Requires the [Obsidian Surfing plugin](https://github.com/quorafind/obsidian-surfing).
+- Only Safari and Chromium-based Browsers (Chrome, Brave, Vivaldi, etc.) are supported. [Mozilla Firefox is not supported since Mozilla has not implemented AppleScript support.](https://www.alfredforum.com/topic/16748-how-to-do-x-in-firefox-from-alfred/)
+
+![](https://user-images.githubusercontent.com/73286100/210782443-1474334a-7149-4b9a-92b9-232548763aa4.gif)

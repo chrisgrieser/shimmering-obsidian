@@ -6,14 +6,6 @@
 - [Open Various Folders](#open-various-folders)
 - [Update Plugins & Metadata](#update-plugins--metadata)
 
-
-## Obsidian Surfing Integration
-**Triggered via Hotkey: Open Browser Tab in Obsidian**
-- Requires the [Obsidian Surfing plugin](https://github.com/quorafind/obsidian-surfing).
-- Only Safari and Chromium-based Browsers (Chrome, Brave, Vivaldi, etc.) are supported.[Mozilla Firefox is not supported since Mozilla has not implemented AppleScript support.](https://www.alfredforum.com/topic/16748-how-to-do-x-in-firefox-from-alfred/)
-
-![2023-01-05 13 20 09](https://user-images.githubusercontent.com/73286100/210782443-1474334a-7149-4b9a-92b9-232548763aa4.gif)
-
 ## Backup your Vault
 **`obackup`: Create a `backup` of your vault.**
 - Your whole vault will be compressed into a *zip* file and then moved to the location you specified in the workflow configuration.

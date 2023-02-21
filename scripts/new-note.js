@@ -82,7 +82,6 @@ function run(argv) {
 		newNoteContent = "";
 	}
 
-
 	writeToFile(newNoteContent, newNoteAbsPath);
 
 	// reset
