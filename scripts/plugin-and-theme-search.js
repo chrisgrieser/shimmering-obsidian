@@ -125,6 +125,7 @@ pluginJSON.forEach(plugin => {
 		"title": name + icons,
 		"subtitle": subtitleIcons + description + " — by " + author + downloadsStr,
 		"arg": openURI,
+		"uid": id,
 		"match": `plugin ${URImatcher} ${alfredMatcher(name)} ${alfredMatcher(author)} ${alfredMatcher(id)} ${alfredMatcher(description)}`,
 		"mods": {
 			"cmd": { "arg": githubURL },
@@ -177,6 +178,7 @@ themeJSON.forEach(theme => {
 		"subtitle": modes + "  by " + author,
 		"match": `theme ${alfredMatcher(author)} ${alfredMatcher(name)}`,
 		"arg": openURI,
+		"uid": repo,
 		"quicklookurl": screenshotURL,
 		"icon": { "path": "icons/css.png" },
 		"mods": {

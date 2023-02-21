@@ -10316,7 +10316,16 @@ DOUBLE CLICK to set hotkey</string>
 	<dict>
 		<key>censor_char</key>
 		<string>▉</string>
+		<key>create_in_new_tab</key>
+		<string></string>
+		<key>selected_text</key>
+		<string></string>
 	</dict>
+	<key>variablesdontexport</key>
+	<array>
+		<string>selected_text</string>
+		<string>create_in_new_tab</string>
+	</array>
 	<key>version</key>
 	<string>3.6.4</string>
 	<key>webaddress</key>

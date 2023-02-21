@@ -85,6 +85,7 @@ function run(argv) {
 	}
 
 	if (selectedText) newNoteContent += selectedText;
+	console.log("newNoteContent:", newNoteContent);
 
 	URI += "&data=" + encodeURIComponent(newNoteContent);
 	console.log("URI: " + URI);
