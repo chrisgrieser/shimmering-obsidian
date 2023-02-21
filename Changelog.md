@@ -1,3 +1,9 @@
+- 2023-02-21	release 3.6.5
+- 2023-02-21	fix: edge cases of new note creation with on
+- 2023-02-21	feat: `op` search considers recency for sorting
+- 2023-02-15	chore
+- 2023-02-15	refactor: all scripts moved to script folder
+- 2023-02-15	docs: update bug report form
 - 2023-02-15	release 3.6.4
 - 2023-02-15	fix: o-search with no excluded files (fix #117)
 - 2023-02-15	docs: update troubleshooting info
