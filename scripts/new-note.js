@@ -13,6 +13,10 @@ function run(argv) {
 		const str = $.NSString.alloc.initWithDataEncoding(data, encoding);
 		return ObjC.unwrap(str);
 	}
+	function writeToFile(text, file) {
+		const str = $.NSString.alloc.initWithUTF8String(text);
+		str.writeToFileAtomicallyEncodingError(file, true, $.NSUTF8StringEncoding, null);
+	}
 
 	function setEnvVar(envVar, newValue) {
 		Application("com.runningwithcrayons.Alfred").setConfiguration(envVar, {
@@ -37,7 +41,7 @@ function run(argv) {
 		const vaultPath = ObjC.unwrap(vault).replace(/^~/, _app.pathTo("home folder"));
 		return encodeURIComponent(vaultPath.replace(/.*\//, ""));
 	}
-	const vaultNameEnc = getVaultNameEncoded();
+
 	//───────────────────────────────────────────────────────────────────────────
 
 	let selectedText; // when hotkey was used
@@ -54,44 +58,36 @@ function run(argv) {
 		createInNewTab = false;
 	}
 	if (createInNewTab)
-		app.openLocation(`obsidian://advanced-uri?vault=${vaultNameEnc}&commandid=workspace%253Anew-tab`);
-
-	let fileName = argv.join("");
-	if (!fileName) fileName = "Untitled";
-	fileName = fileName.replace(/[\\/:]/g, ""); // remove illegal characters
-	fileName = fileName.charAt(0).toUpperCase() + fileName.slice(1); // eslint-disable-line newline-per-chained-call
+		app.openLocation(`obsidian://advanced-uri?vault=${getVaultNameEncoded()}&commandid=workspace%253Anew-tab`);
 
 	//───────────────────────────────────────────────────────────────────────────
 
-	const newNotePath = ($.getenv("new_note_location") + "/" + fileName).replaceAll("//", "/");
+	let fileName = argv.join("") || "Untitled";
+	fileName = fileName.replace(/[\\/:]/g, ""); // remove illegal characters
+	fileName = fileName.charAt(0).toUpperCase() + fileName.slice(1); // capitalize
 
-	let URI =
-		"obsidian://advanced-uri?" +
-		"vault=" +
-		vaultNameEnc +
-		"&filepath=" +
-		encodeURIComponent(newNotePath) +
-		"&mode=new" +
-		"&line=999999999999999"; // = append at end of file
+	const templateRelPath = $.getenv("template_note_path") || "";
+	const newNoteLocation = $.getenv("new_note_location") || "";
+	const newNoteRelPath = newNoteLocation + "/" + fileName;
+	const newNoteAbsPath = getVaultPath() + "/" + newNoteRelPath;
 
-	// Content
-	let newNoteContent = "";
-	const templateRelPath = $.getenv("template_note_path");
-	if (templateRelPath) {
+	let newNoteContent;
+	if (selectedText) {
+		newNoteContent = selectedText;
+	} else if (templateRelPath) {
 		let templateAbsPath = getVaultPath() + "/" + templateRelPath;
 		if (!templateAbsPath.endsWith(".md")) templateAbsPath += ".md";
-		newNoteContent += readFile(templateAbsPath).replace("{{title}}", fileName);
-		console.log("absolute template path:" + templateAbsPath);
+		newNoteContent = readFile(templateAbsPath).replace("{{title}}", fileName); // insert title
+	} else {
+		newNoteContent = "";
 	}
 
-	if (selectedText) newNoteContent += selectedText;
-	console.log("newNoteContent:", newNoteContent);
 
-	URI += "&data=" + encodeURIComponent(newNoteContent);
-	console.log("URI: " + URI);
-	app.openLocation(URI);
+	writeToFile(newNoteContent, newNoteAbsPath);
 
 	// reset
 	setEnvVar("create_in_new_tab", "");
 	setEnvVar("selected_text", "");
+
+	return newNoteRelPath; // pass to opening function
 }

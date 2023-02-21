@@ -541,8 +541,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>41EC4120-8D84-4617-9706-00B017180D8B</key>
-		<array/>
 		<key>41F765F9-17DD-4FC0-BF28-E7EB61AF55DB</key>
 		<array>
 			<dict>
@@ -640,21 +638,21 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>CA4E2034-4495-477F-B3EC-CCCFE06FF886</string>
+				<string>7A1E8A69-D52C-47C5-9661-38702F6BDEC9</string>
 				<key>modifiers</key>
-				<integer>1048576</integer>
+				<integer>0</integer>
 				<key>modifiersubtext</key>
-				<string>⌘: Create Note in new Tab</string>
+				<string></string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>51FAE362-91BE-49DB-8099-B14DBA7B9536</string>
+				<string>CA4E2034-4495-477F-B3EC-CCCFE06FF886</string>
 				<key>modifiers</key>
-				<integer>0</integer>
+				<integer>1048576</integer>
 				<key>modifiersubtext</key>
-				<string></string>
+				<string>⌘: Create Note in new Tab</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -797,31 +795,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>A5BA80AA-D2FF-43BC-AE70-4C34D0BB4E20</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>51FAE362-91BE-49DB-8099-B14DBA7B9536</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>7A1E8A69-D52C-47C5-9661-38702F6BDEC9</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>sourceoutputuid</key>
-				<string>1FA9C912-1F4D-4BE4-AE05-BB43A703FD2B</string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>893ACA70-8B0A-4005-AA28-58686CB6425A</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1298,7 +1271,18 @@
 			</dict>
 		</array>
 		<key>7A1E8A69-D52C-47C5-9661-38702F6BDEC9</key>
-		<array/>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>C346E480-1C93-4CF9-9AA0-8C04E549591B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>7AFD378A-10C5-4D6A-A49E-54EC1266414F</key>
 		<array>
 			<dict>
@@ -1397,19 +1381,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>B9AC24F9-316C-4D05-903D-7ED21EA0A3C8</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>893ACA70-8B0A-4005-AA28-58686CB6425A</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>41EC4120-8D84-4617-9706-00B017180D8B</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -3218,6 +3189,55 @@ return hook;
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>externaltriggerid</key>
+				<string>open-in-obsidian</string>
+				<key>passinputasargument</key>
+				<true/>
+				<key>passvariables</key>
+				<true/>
+				<key>workflowbundleid</key>
+				<string>self</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>C346E480-1C93-4CF9-9AA0-8C04E549591B</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>if application "Obsidian" is not running then
+	tell application "Obsidian" to activate
+	delay 1.2
+end if
+
+tell application "Obsidian" to open location "obsidian://advanced-uri?commandid=quickadd%253ArunQuickAdd"
+
+set parameter to do shell script "echo " &amp; quoted form of (system attribute "parameter") &amp; " | iconv -f UTF-8-MAC -t MACROMAN"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>scripts/new-note.js</string>
+				<key>type</key>
+				<integer>8</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>7A1E8A69-D52C-47C5-9661-38702F6BDEC9</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>action</key>
 				<integer>0</integer>
 				<key>argument</key>
@@ -3340,36 +3360,6 @@ return "{query}"</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>68</integer>
-				<key>script</key>
-				<string>if application "Obsidian" is not running then
-	tell application "Obsidian" to activate
-	delay 1.2
-end if
-
-tell application "Obsidian" to open location "obsidian://advanced-uri?commandid=quickadd%253ArunQuickAdd"
-
-set parameter to do shell script "echo " &amp; quoted form of (system attribute "parameter") &amp; " | iconv -f UTF-8-MAC -t MACROMAN"</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string>scripts/new-note.js</string>
-				<key>type</key>
-				<integer>8</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>7A1E8A69-D52C-47C5-9661-38702F6BDEC9</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argumenttype</key>
 				<integer>0</integer>
 				<key>subtext</key>
@@ -3435,26 +3425,6 @@ set parameter to do shell script "echo " &amp; quoted form of (system attribute 
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argument</key>
-				<string></string>
-				<key>passthroughargument</key>
-				<true/>
-				<key>variables</key>
-				<dict>
-					<key>create_in_new_tab</key>
-					<string>true</string>
-				</dict>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>CA4E2034-4495-477F-B3EC-CCCFE06FF886</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>conditions</key>
 				<array>
 					<dict>
@@ -3507,9 +3477,9 @@ set parameter to do shell script "echo " &amp; quoted form of (system attribute 
 				<key>keyword</key>
 				<string>on</string>
 				<key>subtext</key>
-				<string>with title/parameter: '{query}'</string>
+				<string></string>
 				<key>text</key>
-				<string>New Note</string>
+				<string>New Note: '{query}'</string>
 				<key>withspace</key>
 				<true/>
 			</dict>
@@ -3575,32 +3545,20 @@ set parameter to do shell script "echo " &amp; quoted form of (system attribute 
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>conditions</key>
-				<array>
-					<dict>
-						<key>inputstring</key>
-						<string>{var:use_quickadd}</string>
-						<key>matchcasesensitive</key>
-						<false/>
-						<key>matchmode</key>
-						<integer>0</integer>
-						<key>matchstring</key>
-						<string>0</string>
-						<key>outputlabel</key>
-						<string>Normal Note</string>
-						<key>uid</key>
-						<string>1FA9C912-1F4D-4BE4-AE05-BB43A703FD2B</string>
-					</dict>
-				</array>
-				<key>elselabel</key>
-				<string>QuickAdd</string>
-				<key>hideelse</key>
-				<false/>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<true/>
+				<key>variables</key>
+				<dict>
+					<key>create_in_new_tab</key>
+					<string>true</string>
+				</dict>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.utility.conditional</string>
+			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
-			<string>51FAE362-91BE-49DB-8099-B14DBA7B9536</string>
+			<string>CA4E2034-4495-477F-B3EC-CCCFE06FF886</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -3685,36 +3643,6 @@ set parameter to do shell script "echo " &amp; quoted form of (system attribute 
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
-				<integer>68</integer>
-				<key>script</key>
-				<string>if application "Obsidian" is not running then
-	tell application "Obsidian" to activate
-	delay 1.2
-end if
-
-tell application "Obsidian" to open location "obsidian://advanced-uri?commandid=quickadd%253ArunQuickAdd"
-
-set parameter to do shell script "echo " &amp; quoted form of (system attribute "parameter") &amp; " | iconv -f UTF-8-MAC -t MACROMAN"</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string>scripts/quickadd-trigger.applescript</string>
-				<key>type</key>
-				<integer>8</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>41EC4120-8D84-4617-9706-00B017180D8B</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
 				<integer>0</integer>
 				<key>script</key>
 				<string></string>
@@ -3731,26 +3659,6 @@ set parameter to do shell script "echo " &amp; quoted form of (system attribute 
 			<string>BF0363F9-98FD-4C0C-A592-BAD4319D51E2</string>
 			<key>version</key>
 			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string>{query}</string>
-				<key>passthroughargument</key>
-				<true/>
-				<key>variables</key>
-				<dict>
-					<key>parameter</key>
-					<string>{query}</string>
-				</dict>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>893ACA70-8B0A-4005-AA28-58686CB6425A</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -8229,17 +8137,6 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>ypos</key>
 			<real>210</real>
 		</dict>
-		<key>41EC4120-8D84-4617-9706-00B017180D8B</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>note</key>
-			<string>quickadd</string>
-			<key>xpos</key>
-			<real>575</real>
-			<key>ypos</key>
-			<real>1120</real>
-		</dict>
 		<key>41F765F9-17DD-4FC0-BF28-E7EB61AF55DB</key>
 		<dict>
 			<key>colorindex</key>
@@ -8336,7 +8233,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>xpos</key>
 			<real>200</real>
 			<key>ypos</key>
-			<real>1010</real>
+			<real>1005</real>
 		</dict>
 		<key>4B4D3ECE-1162-41DA-ACCC-16B0AC6FA3D1</key>
 		<dict>
@@ -8435,15 +8332,6 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<real>1500</real>
 			<key>ypos</key>
 			<real>990</real>
-		</dict>
-		<key>51FAE362-91BE-49DB-8099-B14DBA7B9536</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>xpos</key>
-			<real>375</real>
-			<key>ypos</key>
-			<real>1030</real>
 		</dict>
 		<key>52C6C47D-3998-4DF9-B9A4-04E586CC8380</key>
 		<dict>
@@ -8798,9 +8686,9 @@ DOUOBLE CLICK THIS to set hotkey.</string>
 			<key>note</key>
 			<string>new note</string>
 			<key>xpos</key>
-			<real>575</real>
+			<real>460</real>
 			<key>ypos</key>
-			<real>910</real>
+			<real>790</real>
 		</dict>
 		<key>7AFD378A-10C5-4D6A-A49E-54EC1266414F</key>
 		<dict>
@@ -8928,15 +8816,6 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<real>1925</real>
 			<key>ypos</key>
 			<real>1095</real>
-		</dict>
-		<key>893ACA70-8B0A-4005-AA28-58686CB6425A</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>xpos</key>
-			<real>510</real>
-			<key>ypos</key>
-			<real>1150</real>
 		</dict>
 		<key>89E2FCF0-5A14-4078-8D1F-C0FCAC339F63</key>
 		<dict>
@@ -9366,6 +9245,15 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>ypos</key>
 			<real>1285</real>
 		</dict>
+		<key>C346E480-1C93-4CF9-9AA0-8C04E549591B</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>6</integer>
+			<key>xpos</key>
+			<real>645</real>
+			<key>ypos</key>
+			<real>790</real>
+		</dict>
 		<key>C5E65176-674E-4553-A255-37A40EB99342</key>
 		<dict>
 			<key>colorindex</key>
@@ -9411,7 +9299,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>xpos</key>
 			<real>400</real>
 			<key>ypos</key>
-			<real>965</real>
+			<real>1035</real>
 		</dict>
 		<key>CBAE02F7-62CC-4974-96C0-841453D73B48</key>
 		<dict>
@@ -9980,25 +9868,6 @@ DOUBLE CLICK to set hotkey</string>
 			<string>textfield</string>
 			<key>variable</key>
 			<string>new_note_location</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>default</key>
-				<false/>
-				<key>required</key>
-				<false/>
-				<key>text</key>
-				<string>Use QuickAdd</string>
-			</dict>
-			<key>description</key>
-			<string>Instead of creating a new note based on a template, will trigger the QuickAdd Plugin. Then inputs the query as parameter to QuickAdd.</string>
-			<key>label</key>
-			<string></string>
-			<key>type</key>
-			<string>checkbox</string>
-			<key>variable</key>
-			<string>use_quickadd</string>
 		</dict>
 		<dict>
 			<key>config</key>
