@@ -60,8 +60,8 @@ When **selecting a folder**, you will **“browse”** the selected folder – t
 - When you are browsing inside a folder, use the query `..` or the `new` to quickly access the item for going up to the parent folder or creating a new note in that folder, respectively.
 
 ### Search for Headings
-Displayed alongside the other search results are all headings in your vault. Selecting a heading with `↵` will open the file *at the respective heading*.
-- `⌃ + ↵`: Will copy the [Obsidian-URI to the selected file](https://help.obsidian.md/Advanced+topics/Using+obsidian+URI#Action+%60hook-get-address%60).
+Displayed alongside the other search results are all headings in your vault. Selecting a heading with `↵` opens the file *at the respective heading*.
+- `⌃ + ↵`: Copies either a markdown link [that uses the Obsidian URI](https://help.obsidian.md/Advanced+topics/Using+obsidian+URI#Action+%60hook-get-address%60) or the wikilink to the selected file, depending on the setting. Also work with headings.
 - Add `heading` to your search query, to only display headings, e.g., `o foobar heading` will only display *headings* that include `foobar`.
 - Add `h1`, `h2`, … to your search query, to only display headings of a certain level, e.g., `o obsidian h2` will only display *level 2 headings* that include `obsidian`.
 - You can ignore certain (or all) heading levels with the respective workflow configuration.
@@ -149,6 +149,6 @@ To avoid accidentally triggering the Quick Look feature, I suggest you turn off 
 - The app `QLmarkdown.app` must be started at least once. You may need to right-click the app and select `open`, to be able be able to allow macOS to trust the app.
 - To enable proper display of YAML headers, you need to enable the respective setting in the Advanced Options of QLMarkdown:
 
-<img width="654" alt="Screenshot 2021-12-05 01 49 11" src="https://user-images.githubusercontent.com/73286100/144729141-72d8cd41-8e45-43e0-a11a-ce98ba97c2ac.png">
+<img width="654" alt="" src="https://user-images.githubusercontent.com/73286100/144729141-72d8cd41-8e45-43e0-a11a-ce98ba97c2ac.png">
 
 </details>
