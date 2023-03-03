@@ -165,19 +165,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>221F4BFD-7850-440F-BB16-C39AC39E729C</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>92307BE0-68AE-451F-9850-FE01218229BF</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>22701FEF-BDAC-42A0-8FF9-38D158FC5BB8</key>
 		<array>
 			<dict>
@@ -657,19 +644,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>4B4D3ECE-1162-41DA-ACCC-16B0AC6FA3D1</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>221F4BFD-7850-440F-BB16-C39AC39E729C</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>4C840008-B2DF-415E-9109-A7D1F6470E0B</key>
 		<array>
 			<dict>
@@ -721,7 +695,7 @@
 				<key>modifiers</key>
 				<integer>262144</integer>
 				<key>modifiersubtext</key>
-				<string>⌃: Copy Markdown Link</string>
+				<string>⌃: Copy {var:link_type_to_copy}</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -925,7 +899,7 @@
 				<key>modifiers</key>
 				<integer>262144</integer>
 				<key>modifiersubtext</key>
-				<string>⌃: Copy Markdown Link</string>
+				<string>⌃: Copy {var:link_type_to_copy}</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -1575,7 +1549,7 @@
 				<key>modifiers</key>
 				<integer>262144</integer>
 				<key>modifiersubtext</key>
-				<string>⌃: Copy Markdown Link</string>
+				<string>⌃: Copy {var:link_type_to_copy}</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -1898,24 +1872,11 @@
 		</array>
 		<key>BF2C7CBD-67E0-45CC-8948-E68291FF2B50</key>
 		<array/>
-		<key>BF450A0C-67CF-4B13-8B0D-D94298462DE7</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>4B4D3ECE-1162-41DA-ACCC-16B0AC6FA3D1</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>BFF5266E-FA2A-455F-9C52-3A0480BAFF2F</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>BF450A0C-67CF-4B13-8B0D-D94298462DE7</string>
+				<string>92307BE0-68AE-451F-9850-FE01218229BF</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -2079,7 +2040,7 @@
 				<key>modifiers</key>
 				<integer>262144</integer>
 				<key>modifiersubtext</key>
-				<string>⌃: Copy Markdown Link</string>
+				<string>⌃: Copy {var:link_type_to_copy}</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -3058,25 +3019,6 @@ tesseract "$temp_image" stdout -l $ocr_languages 2&gt;&amp;1</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>autopaste</key>
-				<false/>
-				<key>clipboardtext</key>
-				<string>{query}</string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>transient</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>4B4D3ECE-1162-41DA-ACCC-16B0AC6FA3D1</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>availableviaurlhandler</key>
 				<false/>
 				<key>triggerid</key>
@@ -3112,7 +3054,7 @@ return hook;
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string>scripts/copy-markdown-link.js</string>
+				<string>scripts/copy-note-link.js</string>
 				<key>type</key>
 				<integer>8</integer>
 			</dict>
@@ -3133,9 +3075,9 @@ return hook;
 				<key>removeextension</key>
 				<false/>
 				<key>text</key>
-				<string>'{query}'</string>
+				<string>{query}</string>
 				<key>title</key>
-				<string>🪝 Obsidian Markdown Link copied</string>
+				<string>✅ {var:link_type_to_copy} copied</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.notification</string>
@@ -3143,48 +3085,6 @@ return hook;
 			<string>92307BE0-68AE-451F-9850-FE01218229BF</string>
 			<key>version</key>
 			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>matchmode</key>
-				<integer>1</integer>
-				<key>matchstring</key>
-				<string>\[(.*)\].*</string>
-				<key>regexcaseinsensitive</key>
-				<true/>
-				<key>regexmultiline</key>
-				<false/>
-				<key>replacestring</key>
-				<string>$1</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.replace</string>
-			<key>uid</key>
-			<string>221F4BFD-7850-440F-BB16-C39AC39E729C</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>matchmode</key>
-				<integer>1</integer>
-				<key>matchstring</key>
-				<string>\n$</string>
-				<key>regexcaseinsensitive</key>
-				<false/>
-				<key>regexmultiline</key>
-				<false/>
-				<key>replacestring</key>
-				<string></string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.replace</string>
-			<key>uid</key>
-			<string>BF450A0C-67CF-4B13-8B0D-D94298462DE7</string>
-			<key>version</key>
-			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -7865,17 +7765,6 @@ An Alfred Workflow with dozens of features for controlling Obsidian.
 			<key>ypos</key>
 			<real>1110</real>
 		</dict>
-		<key>221F4BFD-7850-440F-BB16-C39AC39E729C</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>note</key>
-			<string>Strip Markdown</string>
-			<key>xpos</key>
-			<real>2120</real>
-			<key>ypos</key>
-			<real>710</real>
-		</dict>
 		<key>22701FEF-BDAC-42A0-8FF9-38D158FC5BB8</key>
 		<dict>
 			<key>colorindex</key>
@@ -8234,15 +8123,6 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<real>200</real>
 			<key>ypos</key>
 			<real>1005</real>
-		</dict>
-		<key>4B4D3ECE-1162-41DA-ACCC-16B0AC6FA3D1</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>xpos</key>
-			<real>1960</real>
-			<key>ypos</key>
-			<real>680</real>
 		</dict>
 		<key>4C840008-B2DF-415E-9109-A7D1F6470E0B</key>
 		<dict>
@@ -8883,9 +8763,9 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 		<key>92307BE0-68AE-451F-9850-FE01218229BF</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>9</integer>
+			<integer>3</integer>
 			<key>xpos</key>
-			<real>2205</real>
+			<real>1910</real>
 			<key>ypos</key>
 			<real>680</real>
 		</dict>
@@ -9203,23 +9083,12 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>ypos</key>
 			<real>8710</real>
 		</dict>
-		<key>BF450A0C-67CF-4B13-8B0D-D94298462DE7</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>note</key>
-			<string>remove \n</string>
-			<key>xpos</key>
-			<real>1890</real>
-			<key>ypos</key>
-			<real>710</real>
-		</dict>
 		<key>BFF5266E-FA2A-455F-9C52-3A0480BAFF2F</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>9</integer>
+			<integer>3</integer>
 			<key>note</key>
-			<string>Copy Markdown Link</string>
+			<string>Copy Markdown Link / wikilink</string>
 			<key>xpos</key>
 			<real>1745</real>
 			<key>ypos</key>
@@ -9725,6 +9594,25 @@ DOUBLE CLICK to set hotkey</string>
 			<key>config</key>
 			<dict>
 				<key>default</key>
+				<false/>
+				<key>required</key>
+				<false/>
+				<key>text</key>
+				<string>on</string>
+			</dict>
+			<key>description</key>
+			<string>While enabled, all Notes with the cssclass "private" will be censored. This setting is meant to be enabled temporarily when sharing the screen.</string>
+			<key>label</key>
+			<string>Privacy Mode</string>
+			<key>type</key>
+			<string>checkbox</string>
+			<key>variable</key>
+			<string>privacy_mode</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
 				<string>h1 h5 h6</string>
 				<key>placeholder</key>
 				<string>h1 h5 h6</string>
@@ -9741,25 +9629,6 @@ DOUBLE CLICK to set hotkey</string>
 			<string>textfield</string>
 			<key>variable</key>
 			<string>h_lvl_ignore</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>default</key>
-				<false/>
-				<key>required</key>
-				<false/>
-				<key>text</key>
-				<string></string>
-			</dict>
-			<key>description</key>
-			<string>Merge Nested Tags for the tag-search `ot`. Example: `#inbox/to-read` and `#inbox/later` would both be subsumed under `#inbox`.</string>
-			<key>label</key>
-			<string>Merge Nested Tags</string>
-			<key>type</key>
-			<string>checkbox</string>
-			<key>variable</key>
-			<string>merge_nested_tags</string>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -9826,6 +9695,51 @@ DOUBLE CLICK to set hotkey</string>
 			<string>textfield</string>
 			<key>variable</key>
 			<string>append_prefix</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>Markdown Link</string>
+				<key>pairs</key>
+				<array>
+					<array>
+						<string>Markdown Link</string>
+						<string>Markdown Link</string>
+					</array>
+					<array>
+						<string>Wikilink</string>
+						<string>Wikilink</string>
+					</array>
+				</array>
+			</dict>
+			<key>description</key>
+			<string>when using `control+return`</string>
+			<key>label</key>
+			<string>Type of Link to Copy</string>
+			<key>type</key>
+			<string>popupbutton</string>
+			<key>variable</key>
+			<string>link_type_to_copy</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<false/>
+				<key>required</key>
+				<false/>
+				<key>text</key>
+				<string></string>
+			</dict>
+			<key>description</key>
+			<string>Merge Nested Tags for the tag-search `ot`. Example: `#inbox/to-read` and `#inbox/later` would both be subsumed under `#inbox`.</string>
+			<key>label</key>
+			<string>Merge Nested Tags</string>
+			<key>type</key>
+			<string>checkbox</string>
+			<key>variable</key>
+			<string>merge_nested_tags</string>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -10160,25 +10074,6 @@ DOUBLE CLICK to set hotkey</string>
 			<string>textfield</string>
 			<key>variable</key>
 			<string>workspace_to_spellcheck</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>default</key>
-				<false/>
-				<key>required</key>
-				<false/>
-				<key>text</key>
-				<string>on</string>
-			</dict>
-			<key>description</key>
-			<string>While enabled, all Notes with the cssclass "private" will be censored. This setting is meant to be enabled temporarily when sharing the screen.</string>
-			<key>label</key>
-			<string>Privacy Mode</string>
-			<key>type</key>
-			<string>checkbox</string>
-			<key>variable</key>
-			<string>privacy_mode</string>
 		</dict>
 	</array>
 	<key>variables</key>
