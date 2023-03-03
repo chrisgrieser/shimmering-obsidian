@@ -1,3 +1,8 @@
+- 2023-03-03	release 3.7.0
+- 2023-03-03	feat: opt. to copy wikil inst. of mdlink (#109)
+- 2023-02-26	chore
+- 2023-02-21	chore
+- 2023-02-21	chore
 - 2023-02-21	release 3.6.5
 - 2023-02-21	fix: edge cases of new note creation with on
 - 2023-02-21	feat: `op` search considers recency for sorting
