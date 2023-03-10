@@ -6,8 +6,7 @@ const app = Application.currentApplication();
 app.includeStandardAdditions = true;
 function readFile(path, encoding) {
 	if (!encoding) encoding = $.NSUTF8StringEncoding;
-	const fm = $.NSFileManager.defaultManager;
-	const data = fm.contentsAtPath(path);
+	const data = $.NSFileManager.defaultManager.contentsAtPath(path);
 	const str = $.NSString.alloc.initWithDataEncoding(data, encoding);
 	return ObjC.unwrap(str);
 }
@@ -19,7 +18,7 @@ function alfredMatcher(str) {
 function SafeApplication(appId) {
 	try {
 		return Application(appId);
-	} catch (e) {
+	} catch (error) {
 		return null;
 	}
 }
@@ -30,11 +29,11 @@ const jsonArray = [];
 const repo = $.getenv("repo");
 
 function getVaultPath() {
-	const _app = Application.currentApplication();
-	_app.includeStandardAdditions = true;
+	const theApp = Application.currentApplication();
+	theApp.includeStandardAdditions = true;
 	const dataFile = $.NSFileManager.defaultManager.contentsAtPath("./vaultPath");
 	const vault = $.NSString.alloc.initWithDataEncoding(dataFile, $.NSUTF8StringEncoding);
-	return ObjC.unwrap(vault).replace(/^~/, _app.pathTo("home folder"));
+	return ObjC.unwrap(vault).replace(/^~/, theApp.pathTo("home folder"));
 }
 
 //──────────────────────────────────────────────────────────────────────────────
@@ -42,12 +41,14 @@ function getVaultPath() {
 // get plugin issues
 const issueAPIURL = "https://api.github.com/repos/" + repo + "/issues?state=all&per_page=100"; // GitHub API only returns 100 results https://stackoverflow.com/questions/30656761/github-search-api-only-return-30-results
 
-const issueJSON = JSON.parse(app.doShellScript('curl -s "' + issueAPIURL + '"')).sort(function (x, y) {
-	// sort open issues on top
-	const a = x.state;
-	const b = y.state;
-	return a === b ? 0 : a < b ? 1 : -1; // eslint-disable-line no-nested-ternary
-});
+const issueJSON = JSON.parse(app.doShellScript(`curl -s "${issueAPIURL}"`)).sort(
+	function sortIssue(x, y) {
+		// sort open issues on top
+		const a = x.state;
+		const b = y.state;
+		return a === b ? 0 : a < b ? 1 : -1; // eslint-disable-line no-nested-ternary
+	},
+);
 
 // Get plugin version
 let outOfDate = false;
@@ -55,11 +56,14 @@ let localVersion = "";
 let latestVersion = "";
 
 if ($.getenv("plugin_id")) {
-	const manifestJSON = getVaultPath() + "/.obsidian/plugins/" + $.getenv("plugin_id") + "/manifest.json";
+	const manifestJSON =
+		getVaultPath() + "/.obsidian/plugins/" + $.getenv("plugin_id") + "/manifest.json";
 	if (readFile(manifestJSON) !== "") {
 		localVersion = JSON.parse(readFile(manifestJSON)).version;
 		latestVersion = JSON.parse(
-			app.doShellScript("curl -sL https://github.com/" + repo + "/releases/latest/download/manifest.json"),
+			app.doShellScript(
+				"curl -sL https://github.com/" + repo + "/releases/latest/download/manifest.json",
+			),
 		).version;
 		if (localVersion !== latestVersion) outOfDate = true;
 	}
@@ -71,11 +75,9 @@ if (outOfDate) {
 	const subtitle =
 		"New: v." +
 		latestVersion +
-		" ⬩ " +
-		"Installed: v." +
+		" ⬩ Installed: v." +
 		localVersion +
-		" ⬩ " +
-		"Press [return] to open Obsidian Settings for updating.";
+		" ⬩ Press [return] to open Obsidian Settings for updating.";
 	jsonArray.push({
 		title: title,
 		subtitle: subtitle,
@@ -117,7 +119,12 @@ issueJSON.forEach(issue => {
 		isDiscordReady = "";
 	}
 
-	const issueMatcher = [issue.state, alfredMatcher(title), alfredMatcher(issueCreator), "#" + issue.number].join(" ");
+	const issueMatcher = [
+		issue.state,
+		alfredMatcher(title),
+		alfredMatcher(issueCreator),
+		"#" + issue.number,
+	].join(" ");
 
 	jsonArray.push({
 		title: state + title,
