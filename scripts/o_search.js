@@ -8,8 +8,7 @@ const externalLinkRegex = /\[[^\]]*\]\([^)]+\)/;
 
 // Functions
 function readFile(path) {
-	const fm = $.NSFileManager.defaultManager;
-	const data = fm.contentsAtPath(path);
+	const data = $.NSFileManager.defaultManager.contentsAtPath(path);
 	const str = $.NSString.alloc.initWithDataEncoding(data, $.NSUTF8StringEncoding);
 	return ObjC.unwrap(str);
 }
@@ -18,18 +17,22 @@ function parentFolder(filePath) {
 	if (!filePath.includes("/")) return "/";
 	return filePath.split("/").slice(0, -1).join("/");
 }
-const alfredMatcher = str => str.replace(/[-()_.[\]]/g, " ") + " " + str;
-const fileExists = filePath => Application("Finder").exists(Path(filePath));
+function alfredMatcher(str) {
+	return str.replace(/[-()_.[\]]/g, " ") + " " + str;
+}
+function fileExists(filePath) {
+	return Application("Finder").exists(Path(filePath));
+}
 
 //------------------------------------------------------------------------------
 
 // Read and Parse data
 function getVaultPath() {
-	const _app = Application.currentApplication();
-	_app.includeStandardAdditions = true;
+	const theApp = Application.currentApplication();
+	theApp.includeStandardAdditions = true;
 	const dataFile = $.NSFileManager.defaultManager.contentsAtPath("./vaultPath");
 	const vault = $.NSString.alloc.initWithDataEncoding(dataFile, $.NSUTF8StringEncoding);
-	return ObjC.unwrap(vault).replace(/^~/, _app.pathTo("home folder"));
+	return ObjC.unwrap(vault).replace(/^~/, theApp.pathTo("home folder"));
 }
 const vaultPath = getVaultPath();
 const metadataJSON = vaultPath + "/.obsidian/plugins/metadata-extractor/metadata.json";
@@ -62,7 +65,7 @@ let superIconList = [];
 if (superIconFile && fileExists(superIconFile)) {
 	superIconList = readFile(superIconFile)
 		.split("\n")
-		.filter(l => l.length !== 0);
+		.filter(line => line.length !== 0);
 }
 console.log("superIconList length: " + superIconList.length);
 
@@ -112,7 +115,7 @@ canvasArray = applyExcludeFilter(canvasArray, false);
 fileArray = applyExcludeFilter(fileArray, false);
 
 // if in subfolder, filder files outside subfolder
-if (pathToCheck !== vaultPath) fileArray = fileArray.filter(f => f.relativePath.startsWith(currentFolder));
+if (pathToCheck !== vaultPath) fileArray = fileArray.filter(file => file.relativePath.startsWith(currentFolder));
 
 // IGNORED HEADINGS
 const hLVLignore = $.getenv("h_lvl_ignore");
@@ -161,7 +164,7 @@ fileArray.forEach(file => {
 	}
 
 	// check link existence of file
-	let hasLinks = Boolean(file.links?.some(l => l.relativePath) || file.backlinks); // no relativePath => unresolved link
+	let hasLinks = Boolean(file.links?.some(link => link.relativePath) || file.backlinks); // no relativePath => unresolved link
 	if (!hasLinks) hasLinks = externalLinkRegex.test(readFile(absolutePath)); // readFile only executed when no other links found for performance
 	let linksSubtitle = "⛔️ Note without Outgoing Links or Backlinks";
 	if (hasLinks) linksSubtitle = "⇧: Browse Links in Note";
@@ -220,10 +223,10 @@ fileArray.forEach(file => {
 	if (!file.headings) return; // skips iteration if no heading
 	file.headings.forEach(heading => {
 		const hName = heading.heading;
-		const lvl = heading.level;
-		if (headingIgnore[lvl]) return; // skips iteration if heading has been configured as ignore
-		iconpath = "icons/headings/h" + lvl.toString() + ".png";
-		const matchStr = "h" + lvl.toString() + " " + alfredMatcher(hName) + " ";
+		const hLevel = heading.level;
+		if (headingIgnore[hLevel]) return; // skips iteration if heading has been configured as ignore
+		iconpath = "icons/headings/h" + hLevel.toString() + ".png";
+		const matchStr = "h" + hLevel.toString() + " " + alfredMatcher(hName) + " ";
 		let displayHeading = hName;
 		if (applyCensoring) displayHeading = displayHeading.replace(/./g, censorChar);
 
@@ -243,7 +246,6 @@ fileArray.forEach(file => {
 					arg: relativePath,
 				},
 				alt: { arg: relativePath },
-				fn: { valid: false },
 			},
 		});
 	});

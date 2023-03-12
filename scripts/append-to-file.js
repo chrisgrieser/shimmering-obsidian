@@ -2,11 +2,11 @@
 function run(argv) {
 
 	function getVaultPath() {
-		const _app = Application.currentApplication();
-		_app.includeStandardAdditions = true;
+		const theApp = Application.currentApplication();
+		theApp.includeStandardAdditions = true;
 		const dataFile = $.NSFileManager.defaultManager.contentsAtPath("./vaultPath");
 		const vault = $.NSString.alloc.initWithDataEncoding(dataFile, $.NSUTF8StringEncoding);
-		return ObjC.unwrap(vault).replace(/^~/, _app.pathTo("home folder"));
+		return ObjC.unwrap(vault).replace(/^~/, theApp.pathTo("home folder"));
 	}
 
 	function appendToFile(text, absPath) {
@@ -20,7 +20,7 @@ function run(argv) {
 	//───────────────────────────────────────────────────────────────────────────
 
 	ObjC.import("stdlib");
-	const content = $.getenv("append_prefix") + argv[0];
+	const content = $.getenv("prefix") + argv[0];
 	const absolutePath = getVaultPath() + "/" + $.getenv("relative_path");
 	appendToFile(content, absolutePath);
 }

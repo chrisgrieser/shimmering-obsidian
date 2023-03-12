@@ -1,12 +1,10 @@
 #!/bin/zsh
 relPath="$*"
 vault_path="$(cat ./vaultPath)" && vault_path="${vault_path/#\~/$HOME}"
-filePath="$vault_path/$relPath"
+absPath="$vault_path/$relPath"
 
-if [[ $(file --brief "$filePath") == directory ]] ; then
-	open "$filePath"
-else
-	open -R "$filePath"
+if [[ -d "$absPath" ]] ; then
+	open "$absPath"
+elif [[ -f "$absPath" ]] ; then
+	open -R "$absPath"
 fi
-
-echo -n "$relPath"
