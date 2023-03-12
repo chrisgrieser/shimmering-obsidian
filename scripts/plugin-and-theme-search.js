@@ -132,14 +132,10 @@ pluginJSON.forEach(plugin => {
 		"match": `plugin ${URImatcher} ${alfredMatcher(name)} ${alfredMatcher(author)} ${alfredMatcher(id)} ${alfredMatcher(description)}`,
 		"mods": {
 			"cmd": { "arg": githubURL },
+			"shift": { "arg": `${repo};${id};${name}` },
 			"alt": {
 				"arg": shareURL,
 				"subtitle": "⌥: Copy Link" + isDiscordReady,
-			},
-			"shift": { "arg": `${repo};${id};${name}` },
-			"ctrl": {
-				"arg": id,
-				"subtitle": `ID: ${id} (⌃: Copy ID)`,
 			},
 		},
 	});
@@ -185,8 +181,8 @@ themeJSON.forEach(theme => {
 		"quicklookurl": screenshotURL,
 		"icon": { "path": "icons/css.png" },
 		"mods": {
-			"shift": { "arg": repo },
 			"cmd": { "arg": githubURL },
+			"shift": { "arg": repo },
 			"alt": {
 				"arg": shareURL,
 				"subtitle": "⌥: Copy Obsidian URI form Theme" + isDiscordReady,

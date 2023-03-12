@@ -1,3 +1,9 @@
+- 2023-03-12	release 3.7.1
+- 2023-03-12	feat!: plugin search shows dl dount w/o ⌃↵
+- 2023-03-11	fix: added null-check (@kometenstaub)
+- 2023-03-10	style: update to new eslint
+- 2023-03-06	chore
+- 2023-03-03	docs: option to copy wikilink with ctrl+return
 - 2023-03-03	release 3.7.0
 - 2023-03-03	feat: opt. to copy wikil inst. of mdlink (#109)
 - 2023-02-26	chore
