@@ -1,3 +1,5 @@
+- 2023-03-12	release 3.7.2
+- 2023-03-12	refactor: appending to note/heading (fix #122)
 - 2023-03-12	release 3.7.1
 - 2023-03-12	feat!: plugin search shows dl dount w/o ⌃↵
 - 2023-03-11	fix: added null-check (@kometenstaub)
