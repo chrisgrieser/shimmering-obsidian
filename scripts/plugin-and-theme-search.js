@@ -108,7 +108,7 @@ pluginJSON.forEach(plugin => {
 	let downloadsStr = "";
 	if (downloadsJSON[id]) {
 		const downloads = downloadsJSON[id].downloads;
-		downloadsStr = "  ↓ " + insert1000sep(downloads);
+		downloadsStr = insert1000sep(downloads) + " ↓   ";
 	}
 
 	// check whether already installed / deprecated
@@ -126,7 +126,7 @@ pluginJSON.forEach(plugin => {
 	// create json for Alfred
 	jsonArray.push({
 		"title": name + icons,
-		"subtitle": subtitleIcons + description + " — by " + author + downloadsStr,
+		"subtitle": downloadsStr + subtitleIcons + description + " — by " + author,
 		"arg": openURI,
 		"uid": id,
 		"match": `plugin ${URImatcher} ${alfredMatcher(name)} ${alfredMatcher(author)} ${alfredMatcher(id)} ${alfredMatcher(description)}`,
@@ -139,7 +139,7 @@ pluginJSON.forEach(plugin => {
 			"shift": { "arg": `${repo};${id};${name}` },
 			"ctrl": {
 				"arg": id,
-				"subtitle": `by ${author}   ${downloadsStr}       ID: ${id} (⌃: Copy ID)`,
+				"subtitle": `ID: ${id} (⌃: Copy ID)`,
 			},
 		},
 	});
@@ -190,10 +190,6 @@ themeJSON.forEach(theme => {
 			"alt": {
 				"arg": shareURL,
 				"subtitle": "⌥: Copy Obsidian URI form Theme" + isDiscordReady,
-			},
-			"ctrl": {
-				"valid": false,
-				"subtitle": "⛔️ Theme Download numbers not supported yet.",
 			},
 		},
 	});

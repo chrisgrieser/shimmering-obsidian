@@ -13,8 +13,6 @@
 	- Use `⌘ + ↵` to open the plugin's GitHub repository instead.
 	- Press `⌥ + ↵` to copy the plugin URI (`obsidian://show-plugin?id=…`) to your clipboard. When Discord is the frontmost app, the copied link will be surrounded with `<` `>` for more convenient pasting in the Discord Desktop app (disables auto-preview). (This does not work with Alfred's Compatibility Mode.)
 	- `⇧ + ↵` to display & search the GitHub issues. See [the section below](#searching-github-issues) for more information.
-	- *Holding* `⌃` will display download numbers, author, and plugin ID. This is useful, when the plugin description is so long that you cannot see it anymore.
-	- *⚙️ For developers:* *Pressing* `⌃+↵` will copy the plugin ID to the clipboard.
 - Only plugins officially included in the community plugins are displayed — plugins solely available via GitHub or still in review are not shown.
 - Add `plugin` to the search query to only display plugin, e.g., use `op focus plugin` as search query to only display *plugins* with the term `focus`.
 - The `op` search also considers the name of the plugin's author, meaning the query `op JaneDoe` returns all plugins (and themes) authored by the user `JaneDoe`.
