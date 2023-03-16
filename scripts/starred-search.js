@@ -14,26 +14,25 @@ function parentFolder (filePath) {
 const alfredMatcher = (str) => str.replace (/[-()_.]/g, " ") + " " + str;
 const fileExists = (filePath) => Application("Finder").exists(Path(filePath));
 
-function readFile (path, encoding) {
-	!encoding && (encoding = $.NSUTF8StringEncoding);
-	const fm = $.NSFileManager.defaultManager;
-	const data = fm.contentsAtPath(path);
-	const str = $.NSString.alloc.initWithDataEncoding(data, encoding);
+function readFile (path) {
+	const data = $.NSFileManager.defaultManager.contentsAtPath(path);
+	const str = $.NSString.alloc.initWithDataEncoding(data, $.NSUTF8StringEncoding);
 	return ObjC.unwrap(str);
 }
 
 //──────────────────────────────────────────────────────────────────────────────
 
 function getVaultPath() {
-	const _app = Application.currentApplication();
-	_app.includeStandardAdditions = true;
+	const theApp = Application.currentApplication();
+	theApp.includeStandardAdditions = true;
 	const dataFile = $.NSFileManager.defaultManager.contentsAtPath("./vaultPath");
 	const vault = $.NSString.alloc.initWithDataEncoding(dataFile, $.NSUTF8StringEncoding);
-	return ObjC.unwrap(vault).replace(/^~/, _app.pathTo("home folder"));
+	return ObjC.unwrap(vault).replace(/^~/, theApp.pathTo("home folder"));
 }
 const vaultPath = getVaultPath();
 const metadataJSON = vaultPath + "/.obsidian/plugins/metadata-extractor/metadata.json";
 const starredJSON = vaultPath + "/.obsidian/starred.json";
+const bookmarkJSON = vaultPath + "/.obsidian/bookmarks.json";
 const superIconFile = $.getenv("supercharged_icon_file").replace(/^~/, app.pathTo("home folder"));
 
 let recentJSON = vaultPath + "/.obsidian/workspace.json";
@@ -42,19 +41,37 @@ if (!fileExists(recentJSON)) recentJSON = recentJSON.slice(0, -5); // Obsidian 0
 const recentFiles = fileExists(recentJSON) ? JSON.parse(readFile(recentJSON)).lastOpenFiles : [];
 console.log("recentFiles length: " + recentFiles.length);
 
-let starredFiles = [];
+//──────────────────────────────────────────────────────────────────────────────
+// bookmarks & stars
+let stars = [];
+const bookmarks = [];
 if (fileExists(starredJSON)) {
-	starredFiles = JSON.parse(readFile(starredJSON))
+	stars = JSON.parse(readFile(starredJSON))
 		.items.filter(item => item.type === "file")
 		.map(item => item.path);
 }
-console.log("starredFiles length: " + starredFiles.length);
+
+function bmFlatten(input, collector) {
+	input.forEach(item => {
+		if (item.type === "file") collector.push(item.path);
+		if (item.type === "group") bmFlatten(item.items, collector);
+	});
+}
+
+if (fileExists(bookmarkJSON)) {
+	const bookm = JSON.parse(readFile(bookmarkJSON)).items;
+	bmFlatten(bookm, bookmarks);
+}
+const starsAndBookmarks = [...new Set([...stars, ...bookmarks])]
+console.log("starsAndBookmarks length:", starsAndBookmarks.length);
+
+//──────────────────────────────────────────────────────────────────────────────
 
 let superIconList = [];
 if (superIconFile && fileExists(superIconFile)) {
 	superIconList = readFile(superIconFile)
 		.split("\n")
-		.filter(l => l.length !== 0);
+		.filter(line => line.length !== 0);
 }
 console.log("superIconList length: " + superIconList.length);
 
@@ -63,7 +80,7 @@ const jsonArray = [];
 
 // filter the metadataJSON for the items w/ relativePaths of starred files
 const fileArray = JSON.parse(readFile(metadataJSON))
-	.filter(item => starredFiles.includes(item.relativePath));
+	.filter(item => starsAndBookmarks.includes(item.relativePath));
 
 const starredSearches = JSON.parse(readFile(starredJSON))
 	.items
@@ -78,7 +95,7 @@ fileArray.forEach(file => {
 
 	// icon & type dependent actions
 	let iconpath = "icons/note.png";
-	let emoji = "⭐️ ";
+	let emoji = "🔖 ";
 	let additionalMatcher = "";
 	if (recentFiles.includes(relativePath)) {
 		emoji += "🕑 ";
@@ -99,7 +116,7 @@ fileArray.forEach(file => {
 	}
 
 	// check link existence of file
-	let hasLinks = Boolean (file.links?.some(l => l.relativePath) || file.backlinks ); // no relativePath => unresolved link
+	let hasLinks = Boolean (file.links?.some(line => line.relativePath) || file.backlinks ); // no relativePath => unresolved link
 	if (!hasLinks) hasLinks = externalLinkRegex.test(readFile(absolutePath)); // readFile only executed when no other links found for performance
 	let linksSubtitle = "⛔️ Note without Outgoing Links or Backlinks";
 	if (hasLinks) linksSubtitle = "⇧: Browse Links in Note";

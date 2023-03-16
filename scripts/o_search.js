@@ -6,7 +6,6 @@ const app = Application.currentApplication();
 app.includeStandardAdditions = true;
 const externalLinkRegex = /\[[^\]]*\]\([^)]+\)/;
 
-// Functions
 function readFile(path) {
 	const data = $.NSFileManager.defaultManager.contentsAtPath(path);
 	const str = $.NSString.alloc.initWithDataEncoding(data, $.NSUTF8StringEncoding);
@@ -24,9 +23,9 @@ function fileExists(filePath) {
 	return Application("Finder").exists(Path(filePath));
 }
 
-//------------------------------------------------------------------------------
-
+//──────────────────────────────────────────────────────────────────────────────
 // Read and Parse data
+
 function getVaultPath() {
 	const theApp = Application.currentApplication();
 	theApp.includeStandardAdditions = true;
@@ -38,6 +37,7 @@ const vaultPath = getVaultPath();
 const metadataJSON = vaultPath + "/.obsidian/plugins/metadata-extractor/metadata.json";
 const canvasJSON = vaultPath + "/.obsidian/plugins/metadata-extractor/canvas.json";
 const starredJSON = vaultPath + "/.obsidian/starred.json";
+const bookmarkJSON = vaultPath + "/.obsidian/bookmarks.json";
 const excludeFilterJSON = vaultPath + "/.obsidian/app.json";
 const superIconFile = $.getenv("supercharged_icon_file").replace(/^~/, app.pathTo("home folder"));
 
@@ -53,14 +53,34 @@ console.log("recentFiles length: " + recentFiles.length);
 let canvasArray = fileExists(canvasJSON) ? JSON.parse(readFile(canvasJSON)) : [];
 console.log("canvasArray length: " + canvasArray.length);
 
-let starredFiles = [];
+//──────────────────────────────────────────────────────────────────────────────
+// BOOKMARKS & STARS
+
+let stars = [];
+const bookmarks = [];
 if (fileExists(starredJSON)) {
-	starredFiles = JSON.parse(readFile(starredJSON))
+	stars = JSON.parse(readFile(starredJSON))
 		.items.filter(item => item.type === "file")
 		.map(item => item.path);
 }
-console.log("starredFiles length: " + starredFiles.length);
 
+// recursively flatten the array and collect the paths in the collective
+function bmFlatten(input, collector) {
+	input.forEach(item => {
+		if (item.type === "file") collector.push(item.path);
+		if (item.type === "group") bmFlatten(item.items, collector);
+	});
+}
+
+if (fileExists(bookmarkJSON)) {
+	const bookm = JSON.parse(readFile(bookmarkJSON)).items;
+	bmFlatten(bookm, bookmarks);
+}
+const starsAndBookmarks = [...new Set([...stars, ...bookmarks])]
+console.log("starsAndBookmarks length:", starsAndBookmarks.length);
+
+//──────────────────────────────────────────────────────────────────────────────
+// ICONS
 let superIconList = [];
 if (superIconFile && fileExists(superIconFile)) {
 	superIconList = readFile(superIconFile)
@@ -74,8 +94,8 @@ if (fileExists(metadataJSON)) fileArray = JSON.parse(readFile(metadataJSON));
 else console.log("metadata.json missing.");
 
 const jsonArray = [];
-//──────────────────────────────────────────────────────────────────────────────
 
+//──────────────────────────────────────────────────────────────────────────────
 // DETERMINE PATH TO SEARCH
 let currentFolder;
 let pathToCheck;
@@ -141,9 +161,9 @@ fileArray.forEach(file => {
 	let iconpath = "icons/note.png";
 	let emoji = "";
 	let additionalMatcher = "";
-	if (starredFiles.includes(relativePath)) {
-		emoji += "⭐️ ";
-		additionalMatcher += "starred ";
+	if (starsAndBookmarks.includes(relativePath)) {
+		emoji += "🔖 ";
+		additionalMatcher += "starred bookmarked ";
 	}
 	if (recentFiles.includes(relativePath)) {
 		emoji += "🕑 ";
