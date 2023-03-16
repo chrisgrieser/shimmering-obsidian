@@ -9960,7 +9960,7 @@ DOUBLE CLICK to set hotkey</string>
 		<string>create_in_new_tab</string>
 	</array>
 	<key>version</key>
-	<string>3.7.2</string>
+	<string>3.8.0</string>
 	<key>webaddress</key>
 	<string>https://chris-grieser.de/</string>
 </dict>
