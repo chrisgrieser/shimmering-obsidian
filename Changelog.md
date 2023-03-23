@@ -1,3 +1,5 @@
+- 2023-03-23	release 3.8.1
+- 2023-03-23	refactor: plugin and theme search
 - 2023-03-16	release 3.8.0
 - 2023-03-16	feat: support for bookmarks
 - 2023-03-12	release 3.7.2
