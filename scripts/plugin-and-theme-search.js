@@ -138,7 +138,7 @@ pluginJSON.forEach(plugin => {
 			"ctrl": { arg: id },
 			"cmd+alt": {
 				arg: discordUrl,
-				subtitle: "⌥: Copy Link (discord ready)",
+				subtitle: "⌘⌥: Copy Link (discord ready)",
 			},
 			"shift": { arg: `${repo};${id};${name}` },
 			"alt": {
@@ -194,7 +194,7 @@ themeJSON.forEach(theme => {
 			"shift": { arg: repo },
 			"cmd+alt": {
 				arg: discordUrl,
-				subtitle: "⌥: Copy Link (discord ready)",
+				subtitle: "⌘⌥: Copy Link (discord ready)",
 			},
 			"alt": {
 				arg: shareURL,
