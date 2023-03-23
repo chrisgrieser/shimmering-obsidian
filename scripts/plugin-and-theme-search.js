@@ -12,15 +12,12 @@ function alfredMatcher(str) {
 }
 
 function onlineJSON(url) {
-	return JSON.parse(app.doShellScript("curl -s \"" + url + "\""));
+	return JSON.parse(app.doShellScript('curl -s "' + url + '"'));
 }
 function insert1000sep(num) {
 	let numText = String(num);
 	if (num >= 10000) {
-		numText =
-			numText.slice(0, -3) +
-			"." +
-			numText.slice(-3);
+		numText = numText.slice(0, -3) + "." + numText.slice(-3);
 	}
 	return numText;
 }
@@ -39,8 +36,9 @@ function SafeApplication(appId) {
 		return null;
 	}
 }
-const discordReadyLinks = ["Discord", "Discord PTB", "Discord Canary"]
-	.some(discordApp => SafeApplication(discordApp)?.frontmost());
+const discordReadyLinks = ["Discord", "Discord PTB", "Discord Canary"].some(discordApp =>
+	SafeApplication(discordApp)?.frontmost(),
+);
 
 function getVaultPath() {
 	const theApp = Application.currentApplication();
@@ -49,7 +47,7 @@ function getVaultPath() {
 	const vault = $.NSString.alloc.initWithDataEncoding(dataFile, $.NSUTF8StringEncoding);
 	return ObjC.unwrap(vault).replace(/^~/, theApp.pathTo("home folder"));
 }
-const vaultPath = getVaultPath()
+const vaultPath = getVaultPath();
 
 function getVaultNameEncoded() {
 	const theApp = Application.currentApplication();
@@ -64,40 +62,43 @@ const jsonArray = [];
 
 //------------------------------------------------------------------------------
 
-const pluginJSON = onlineJSON("https://raw.githubusercontent.com/obsidianmd/obsidian-releases/master/community-plugins.json");
-const downloadsJSON = onlineJSON("https://raw.githubusercontent.com/obsidianmd/obsidian-releases/master/community-plugin-stats.json");
-const installedPlugins = app.doShellScript("ls -1 \"" + vaultPath + "\"\"/.obsidian/plugins/\"")
-	.split("\r");
+const pluginJSON = onlineJSON(
+	"https://raw.githubusercontent.com/obsidianmd/obsidian-releases/master/community-plugins.json",
+);
+const downloadsJSON = onlineJSON(
+	"https://raw.githubusercontent.com/obsidianmd/obsidian-releases/master/community-plugin-stats.json",
+);
+const installedPlugins = app.doShellScript('ls -1 "' + vaultPath + '""/.obsidian/plugins/"').split("\r");
 
-const themeJSON = onlineJSON("https://raw.githubusercontent.com/obsidianmd/obsidian-releases/master/community-css-themes.json");
-const installedThemes = app.doShellScript("find '" + vaultPath + "/.obsidian/themes/' -name '*.css' ");
-const currentTheme = app.doShellScript("cat \"" + vaultPath + "/.obsidian/appearance.json\" | grep \"cssTheme\" | head -n 1 | cut -d\\\" -f 4"); // eslint-disable-line no-useless-escape
+const themeJSON = onlineJSON(
+	"https://raw.githubusercontent.com/obsidianmd/obsidian-releases/master/community-css-themes.json",
+);
+const installedThemes = app.doShellScript(`find '${vaultPath}/.obsidian/themes/' -name '*.css' `);
+const currentTheme = app.doShellScript(
+	`cat "${vaultPath}/.obsidian/appearance.json" | grep "cssTheme" | head -n 1 | cut -d\\" -f 4`,
+);
 
 const deprecatedJSON = JSON.parse(readFile("./data/deprecated-plugins.json"));
-const deprecatedPlugins = [
-	...deprecatedJSON.sherlocked,
-	...deprecatedJSON.dysfunct,
-	...deprecatedJSON.deprecated,
-];
+const deprecatedPlugins = [...deprecatedJSON.sherlocked, ...deprecatedJSON.dysfunct, ...deprecatedJSON.deprecated];
 
 //------------------------------------------------------------------------------
-
 
 // add PLUGINS to the JSON
 pluginJSON.forEach(plugin => {
 	const id = plugin.id;
 	const name = plugin.name;
 	const description = plugin.description
-		.replaceAll("\\\"", "'") // to deal with escaped '"' in descriptions
+		.replaceAll('\\"', "'") // to deal with escaped '"' in descriptions
 		.replace(/\. *$/, ""); // trailing dot in description looks weird with the styling done here later in the item subtitle
 	const author = plugin.author;
 	const repo = plugin.repo;
 
 	const githubURL = "https://github.com/" + repo;
 	const openURI = `obsidian://show-plugin?vault=${vaultNameEnc}&id=${id}`;
+	const discordUrl = `> **${name}**: ${description} <https://obsidian.md/plugins?id=${id}>`;
 	let isDiscordReady, shareURL;
 	if (discordReadyLinks) {
-		shareURL = `> **${name}**: ${description} <https://obsidian.md/plugins?id=${id}>`;
+		shareURL = discordUrl;
 		isDiscordReady = " (discord ready)";
 	} else {
 		shareURL = "https://obsidian.md/plugins?id=" + id;
@@ -125,17 +126,24 @@ pluginJSON.forEach(plugin => {
 
 	// create json for Alfred
 	jsonArray.push({
-		"title": name + icons,
-		"subtitle": downloadsStr + subtitleIcons + description + " — by " + author,
-		"arg": openURI,
-		"uid": id,
-		"match": `plugin ${URImatcher} ${alfredMatcher(name)} ${alfredMatcher(author)} ${alfredMatcher(id)} ${alfredMatcher(description)}`,
-		"mods": {
-			"cmd": { "arg": githubURL },
-			"shift": { "arg": `${repo};${id};${name}` },
+		title: name + icons,
+		subtitle: downloadsStr + subtitleIcons + description + " — by " + author,
+		arg: openURI,
+		uid: id,
+		match: `plugin ${URImatcher} ${alfredMatcher(name)} ${alfredMatcher(author)} ${alfredMatcher(id)} ${alfredMatcher(
+			description,
+		)}`,
+		mods: {
+			"cmd": { arg: githubURL },
+			"ctrl": { arg: id },
+			"cmd+alt": {
+				arg: discordUrl,
+				subtitle: "⌥: Copy Link (discord ready)",
+			},
+			"shift": { arg: `${repo};${id};${name}` },
 			"alt": {
-				"arg": shareURL,
-				"subtitle": "⌥: Copy Link" + isDiscordReady,
+				arg: shareURL,
+				subtitle: "⌥: Copy Link" + isDiscordReady,
 			},
 		},
 	});
@@ -148,44 +156,49 @@ themeJSON.forEach(theme => {
 	const repo = theme.repo;
 	const branch = theme.branch ? theme.branch : "master";
 
-	// const githubURL = "https://github.com/" + repo;
-	const rawGitHub = "https://raw.githubusercontent.com/" + repo + "/" + branch + "/";
+	const rawGitHub = `https://raw.githubusercontent.com/${repo}/${branch}/`;
 	const screenshotURL = rawGitHub + theme.screenshot;
-
 	const githubURL = "https://github.com/" + repo;
 	const nameEncoded = encodeURIComponent(name);
 	const openURI = `obsidian://show-theme?vault=${vaultNameEnc}&name=${nameEncoded}`;
-	let shareURL = `obsidian://show-theme?name=${nameEncoded}`;
-	let isDiscordReady = "";
+	const discordUrl = `> **${name}**: <${openURI}>`;
+
+	let isDiscordReady, shareURL;
 	if (discordReadyLinks) {
-		shareURL = `> **${name}**: <${shareURL}>`;
+		shareURL = discordUrl;
 		isDiscordReady = " (discord ready)";
+	} else {
+		shareURL = `obsidian://show-theme?name=${nameEncoded}`;
+		isDiscordReady = "";
 	}
 
 	let modes = "";
 	let installedIcon = "";
-	if (theme.modes) {
-		if (theme.modes.includes("light")) modes += "☀️ ";
-		if (theme.modes.includes("dark")) modes += "🌒 ";
-	}
-	if (installedThemes.includes(name)) installedIcon = " ✅";
+	if (theme.modes?.includes("light")) modes += "☀️ ";
+	if (theme.modes?.includes("dark")) modes += "🌒 ";
 	if (currentTheme === name) installedIcon = " ⭐️";
+	else if (installedThemes.includes(name)) installedIcon = " ✅";
 
 	// create json for Alfred
 	jsonArray.push({
-		"title": name + installedIcon,
-		"subtitle": modes + "  by " + author,
-		"match": `theme ${alfredMatcher(author)} ${alfredMatcher(name)}`,
-		"arg": openURI,
-		"uid": repo,
-		"quicklookurl": screenshotURL,
-		"icon": { "path": "icons/css.png" },
-		"mods": {
-			"cmd": { "arg": githubURL },
-			"shift": { "arg": repo },
+		title: name + installedIcon,
+		subtitle: `${modes}  by ${author}`,
+		match: `theme ${alfredMatcher(author)} ${alfredMatcher(name)}`,
+		arg: openURI,
+		uid: repo,
+		quicklookurl: screenshotURL,
+		icon: { path: "icons/css.png" },
+		mods: {
+			"ctrl": { valid: false },
+			"cmd": { arg: githubURL },
+			"shift": { arg: repo },
+			"cmd+alt": {
+				arg: discordUrl,
+				subtitle: "⌥: Copy Link (discord ready)",
+			},
 			"alt": {
-				"arg": shareURL,
-				"subtitle": "⌥: Copy Obsidian URI form Theme" + isDiscordReady,
+				arg: shareURL,
+				subtitle: "⌥: Copy Obsidian URI for Theme" + isDiscordReady,
 			},
 		},
 	});
