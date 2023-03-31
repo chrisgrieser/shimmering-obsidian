@@ -140,7 +140,7 @@ pluginJSON.forEach(plugin => {
 				arg: discordUrl,
 				subtitle: "⌘⌥: Copy Link (discord ready)",
 			},
-			"shift": { arg: `${repo};${id};${name}` },
+			"shift": { arg: repo },
 			"alt": {
 				arg: shareURL,
 				subtitle: "⌥: Copy Link" + isDiscordReady,

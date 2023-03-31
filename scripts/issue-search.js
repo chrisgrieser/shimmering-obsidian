@@ -1,93 +1,53 @@
 #!/usr/bin/env osascript -l JavaScript
 
-function run(argv) {
-	ObjC.import("stdlib");
-	ObjC.import("Foundation");
-	const app = Application.currentApplication();
-	app.includeStandardAdditions = true;
+ObjC.import("stdlib");
+ObjC.import("Foundation");
+const app = Application.currentApplication();
+app.includeStandardAdditions = true;
 
-	function readFile(path) {
-		const data = $.NSFileManager.defaultManager.contentsAtPath(path);
-		const str = $.NSString.alloc.initWithDataEncoding(data, $.NSUTF8StringEncoding);
-		return ObjC.unwrap(str);
+function alfredMatcher(str) {
+	return str.replace(/[-()_.]/g, " ") + " " + str;
+}
+
+function SafeApplication(appId) {
+	try {
+		return Application(appId);
+	} catch (error) {
+		return null;
 	}
+}
 
-	//──────────────────────────────────────────────────────────────────────────────
+const discordReadyLinks = ["Discord", "Discord PTB", "Discord Canary"].some(discordApp =>
+	SafeApplication(discordApp)?.frontmost(),
+);
 
-	function alfredMatcher(str) {
-		return str.replace(/[-()_.]/g, " ") + " " + str;
-	}
+//──────────────────────────────────────────────────────────────────────────────
 
-	function SafeApplication(appId) {
-		try {
-			return Application(appId);
-		} catch (error) {
-			return null;
-		}
-	}
-
-	const discordReadyLinks = ["Discord", "Discord PTB", "Discord Canary"].some(discordApp =>
-		SafeApplication(discordApp)?.frontmost(),
-	);
-
-	function getVaultPath() {
-		const theApp = Application.currentApplication();
-		theApp.includeStandardAdditions = true;
-		const dataFile = $.NSFileManager.defaultManager.contentsAtPath("./vaultPath");
-		const vault = $.NSString.alloc.initWithDataEncoding(dataFile, $.NSUTF8StringEncoding);
-		return ObjC.unwrap(vault).replace(/^~/, theApp.pathTo("home folder"));
-	}
-
-	//──────────────────────────────────────────────────────────────────────────────
+function run() {
 	const jsonArray = [];
-	const repo = argv[0];
+	const repo = $.getenv("repoID");
 
 	// get issues
-	const issueAPIURL = "https://api.github.com/repos/" + repo + "/issues?state=all&per_page=100"; // GitHub API only returns 100 results https://stackoverflow.com/questions/30656761/github-search-api-only-return-30-results
+	// GitHub API only returns 100 results https://stackoverflow.com/questions/30656761/github-search-api-only-return-30-results
+	const issueAPIURL = `https://api.github.com/repos/${repo}/issues?state=all&per_page=100`;
 
-	const issueJSON = JSON.parse(app.doShellScript(`curl -s "${issueAPIURL}"`)).sort(function sortIssue(x, y) {
+	const issueJSON = JSON.parse(app.doShellScript(`curl -sL "${issueAPIURL}"`)) // issues json
 		// sort open issues on top
-		const a = x.state;
-		const b = y.state;
-		return a === b ? 0 : a < b ? 1 : -1; // eslint-disable-line no-nested-ternary
+		.sort((x, y) => {
+			const a = x.state;
+			const b = y.state;
+			return a === b ? 0 : a < b ? 1 : -1; // eslint-disable-line no-nested-ternary
+		});
+
+	const newIssueURL = `https://github.com/${repo}/issues/new?title=`;
+	jsonArray.push({
+		title: "🪲 New Bug Report",
+		arg: newIssueURL + encodeURIComponent("[BUG]: "),
 	});
-
-	// Get plugin version
-	let outOfDate = false;
-	let localVersion = "";
-	let latestVersion = "";
-
-	if ($.getenv("plugin_id")) {
-		const manifestJSON = getVaultPath() + "/.obsidian/plugins/" + $.getenv("plugin_id") + "/manifest.json";
-		if (readFile(manifestJSON) !== "") {
-			localVersion = JSON.parse(readFile(manifestJSON)).version;
-			latestVersion = JSON.parse(
-				app.doShellScript(`curl -sL 'https://github.com/${repo}/releases/latest/download/manifest.json'`),
-			).version;
-			if (localVersion !== latestVersion) outOfDate = true;
-		}
-	}
-
-	// out of date info OR option to create issue
-	if (outOfDate) {
-		const title = `⚠️ New Version for '${$.getenv("plugin_name")}' available`;
-		const subtitle = `New: v.${latestVersion} ⬩ Installed: v.${localVersion} ⬩ Press [return] to open Obsidian Settings for updating.`;
-		jsonArray.push({
-			title: title,
-			subtitle: subtitle,
-			arg: "obsidian://advanced-uri?vault=" + $.getenv("vault_name_ENC") + "&updateplugins=true",
-		});
-	} else {
-		const newIssueURL = "https://github.com/" + repo + "/issues/new?title=";
-		jsonArray.push({
-			title: "🪲 New Bug Report",
-			arg: newIssueURL + encodeURIComponent("[BUG]: "),
-		});
-		jsonArray.push({
-			title: "🙏 New Feature Request",
-			arg: newIssueURL + encodeURIComponent("Feature Request: "),
-		});
-	}
+	jsonArray.push({
+		title: "🙏 New Feature Request",
+		arg: newIssueURL + encodeURIComponent("Feature Request: "),
+	});
 
 	// existing issues
 	issueJSON.forEach(issue => {
