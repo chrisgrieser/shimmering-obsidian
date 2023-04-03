@@ -16,9 +16,13 @@ function parentFolder(filePath) {
 	if (!filePath.includes("/")) return "/";
 	return filePath.split("/").slice(0, -1).join("/");
 }
+
 function alfredMatcher(str) {
-	return str.replace(/[-()_.[\]]/g, " ") + " " + str;
+	const clean = str.replace(/[-()_.:#/\\;,[\]]/g, " ");
+	const camelCaseSeperated = str.replace(/([A-Z])/g, " $1");
+	return [clean, camelCaseSeperated, str].join(" ") + " ";
 }
+
 function fileExists(filePath) {
 	return Application("Finder").exists(Path(filePath));
 }
