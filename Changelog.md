@@ -1,3 +1,9 @@
+- 2023-04-03	release 3.8.2
+- 2023-04-03	chore
+- 2023-04-03	feat: o-search partl CamelCase matching (fix #123)
+- 2023-04-02	chore
+- 2023-03-31	fix: plugin issue search
+- 2023-03-27	chore: remove oversized gif from repo
 - 2023-03-23	release 3.8.1
 - 2023-03-23	refactor: plugin and theme search
 - 2023-03-16	release 3.8.0
