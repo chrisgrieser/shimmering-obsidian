@@ -118,10 +118,10 @@ if (!folderArray) folderArray = [];
 //──────────────────────────────────────────────────────────────────────────────
 // EXCLUSION & IGNORING
 
-function applyExcludeFilter(arr, isFolder) {
-	if (!excludeFilter || excludeFilter.length === 0 || arr.length === 0) return arr;
+function applyExcludeFilter(array, isFolder) {
+	if (!excludeFilter || excludeFilter.length === 0 || array.length === 0) return array;
 
-	return arr.filter(item => {
+	return array.filter(item => {
 		let include = true;
 		if (isFolder) item += "/";
 		excludeFilter.forEach(filter => {
