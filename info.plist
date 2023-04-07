@@ -4754,7 +4754,7 @@ Application('com.runningwithcrayons.Alfred').removeConfiguration('ObRunning', {
 				<key>escaping</key>
 				<integer>0</integer>
 				<key>keyword</key>
-				<string>o</string>
+				<string>{var:main_search_keyword}</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -9450,6 +9450,27 @@ DOUBLE CLICK to set hotkey</string>
 	</dict>
 	<key>userconfigurationconfig</key>
 	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>o</string>
+				<key>placeholder</key>
+				<string>o</string>
+				<key>required</key>
+				<true/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>Alfred keyword for the main search (Alfred-based Quick Switcher)</string>
+			<key>label</key>
+			<string>keyword for the main search</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>main_search_keyword</string>
+		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
