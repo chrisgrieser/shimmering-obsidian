@@ -1,3 +1,5 @@
+- 2023-04-08	release 3.8.3
+- 2023-04-08	feat: `o`search has a configurable keyword
 - 2023-04-03	release 3.8.2
 - 2023-04-03	chore
 - 2023-04-03	feat: o-search partl CamelCase matching (fix #123)
