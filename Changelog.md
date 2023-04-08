@@ -1,3 +1,5 @@
+- 2023-04-08	release 3.8.7
+- 2023-04-08	fix: star search by removing starred searches
 - 2023-04-08	release 3.8.6
 - 2023-04-08	release 3.8.5
 - 2023-04-08	fix: setup not persisting w/ update @kometenstaub
