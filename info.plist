@@ -2328,6 +2328,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>E60130DC-8A6E-4892-8516-B79153DC480B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>882A3EBC-D27F-474F-A2C8-03A347DC0FE8</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>E844180D-E691-40D1-9EB1-6A06F69C73B9</key>
 		<array>
 			<dict>
@@ -4494,6 +4507,21 @@ Application('com.runningwithcrayons.Alfred').removeConfiguration('ObRunning', {
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
 			<string>3CC54A98-B297-4BE8-8F53-22C52A7247B6</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>soundname</key>
+				<string>Basso</string>
+				<key>systemsound</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.playsound</string>
+			<key>uid</key>
+			<string>882A3EBC-D27F-474F-A2C8-03A347DC0FE8</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -8572,6 +8600,15 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<real>460</real>
 			<key>ypos</key>
 			<real>4015</real>
+		</dict>
+		<key>882A3EBC-D27F-474F-A2C8-03A347DC0FE8</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>1</integer>
+			<key>xpos</key>
+			<real>2025</real>
+			<key>ypos</key>
+			<real>2865</real>
 		</dict>
 		<key>88723AC0-4348-4B23-AFD7-FEFE6C532A94</key>
 		<dict>

@@ -6,11 +6,9 @@ function run(argv) {
 	const app = Application.currentApplication();
 	app.includeStandardAdditions = true;
 
-	function readFile(path, encoding) {
-		if (!encoding) encoding = $.NSUTF8StringEncoding;
-		const fm = $.NSFileManager.defaultManager;
-		const data = fm.contentsAtPath(path);
-		const str = $.NSString.alloc.initWithDataEncoding(data, encoding);
+	function readFile(path) {
+		const data = $.NSFileManager.defaultManager.contentsAtPath(path);
+		const str = $.NSString.alloc.initWithDataEncoding(data, $.NSUTF8StringEncoding);
 		return ObjC.unwrap(str);
 	}
 
@@ -32,18 +30,20 @@ function run(argv) {
 
 	// error message if a plugin is not installed in that vault
 	let errorMsg = "";
-	const activatedPlugins = JSON.parse(readFile(vaultPath + "/.obsidian/community-plugins.json"));
-	if (!activatedPlugins.includes("metadata-extractor"))
-		errorMsg += "Metadata Extractor is not installed or not enabled in the selected vault. \n";
-	if (!activatedPlugins.includes("obsidian-advanced-uri"))
-		errorMsg += "Advanced URI Plugin is not installed or not enabled in the selected vault. \n";
-
-	if (errorMsg) {
-		errorMsg = `Error:
-${errorMsg}
-Please install & enable the plugin and re-run "osetup"`;
-		return errorMsg;
+	const pluginList = readFile(vaultPath + "/.obsidian/community-plugins.json");
+	if (pluginList) {
+		const activatedPlugins = JSON.parse(pluginList);
+		if (!activatedPlugins.includes("metadata-extractor"))
+			errorMsg += "Metadata Extractor is not installed or not enabled in the selected vault. \n\n";
+		if (!activatedPlugins.includes("obsidian-advanced-uri"))
+			errorMsg += "Advanced URI Plugin is not installed or not enabled in the selected vault. \n\n";
+		errorMsg = "ERROR\n\n" + errorMsg + "Please install & enable the plugin(s) and re-run `osetup`.";
+	} else {
+		errorMsg +=
+			"ERROR\n\nNo plugins found in the selected vault.\nPlease install & enable the Metadata Extractor plugin & the Advanced URI plugin, restart the vault, and run `osetup` again.";
 	}
+	if (errorMsg) return errorMsg;
+
 	//───────────────────────────────────────────────────────────────────────────
 
 	// configure metadata extractor
