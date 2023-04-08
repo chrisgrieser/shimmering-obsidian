@@ -1,3 +1,5 @@
+- 2023-04-08	release 3.8.4
+- 2023-04-08	fix: `osetup` in freshly created vaults
 - 2023-04-08	release 3.8.3
 - 2023-04-08	feat: `o`search has a configurable keyword
 - 2023-04-03	release 3.8.2
