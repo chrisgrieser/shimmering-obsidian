@@ -33,11 +33,12 @@ function fileExists(filePath) {
 function getVaultPath() {
 	const theApp = Application.currentApplication();
 	theApp.includeStandardAdditions = true;
-	const dataFile = $.NSFileManager.defaultManager.contentsAtPath("./vaultPath");
+	const dataFile = $.NSFileManager.defaultManager.contentsAtPath($.getenv("alfred_workflow_data") + "/vaultPath");
 	const vault = $.NSString.alloc.initWithDataEncoding(dataFile, $.NSUTF8StringEncoding);
-	return ObjC.unwrap(vault).replace(/^~/, theApp.pathTo("home folder"));
+	return ObjC.unwrap(vault);
 }
 const vaultPath = getVaultPath();
+if (!vaultPath) console.log("vaultPath not found.");
 const metadataJSON = vaultPath + "/.obsidian/plugins/metadata-extractor/metadata.json";
 const canvasJSON = vaultPath + "/.obsidian/plugins/metadata-extractor/canvas.json";
 const starredJSON = vaultPath + "/.obsidian/starred.json";
@@ -80,7 +81,7 @@ if (fileExists(bookmarkJSON)) {
 	const bookm = JSON.parse(readFile(bookmarkJSON)).items;
 	bmFlatten(bookm, bookmarks);
 }
-const starsAndBookmarks = [...new Set([...stars, ...bookmarks])]
+const starsAndBookmarks = [...new Set([...stars, ...bookmarks])];
 console.log("starsAndBookmarks length:", starsAndBookmarks.length);
 
 //──────────────────────────────────────────────────────────────────────────────

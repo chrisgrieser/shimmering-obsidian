@@ -6,22 +6,21 @@ function run(argv) {
 	app.includeStandardAdditions = true;
 
 	const workspaceName = argv.join("");
-	if (!workspaceName) return;
+	if (!workspaceName) return "";
 
 	function getVaultNameEncoded() {
-		const _app = Application.currentApplication();
-		_app.includeStandardAdditions = true;
-		const dataFile = $.NSFileManager.defaultManager.contentsAtPath("./vaultPath");
+		const theApp = Application.currentApplication();
+		theApp.includeStandardAdditions = true;
+		const dataFile = $.NSFileManager.defaultManager.contentsAtPath($.getenv("alfred_workflow_data") + "/vaultPath");
 		const vault = $.NSString.alloc.initWithDataEncoding(dataFile, $.NSUTF8StringEncoding);
-		const vaultPath = ObjC.unwrap(vault).replace(/^~/, _app.pathTo("home folder"));
-		return encodeURIComponent(vaultPath.replace(/.*\//, ""));
+		const theVaultPath = ObjC.unwrap(vault);
+		const vaultName = theVaultPath.replace(/.*\//, "");
+		return encodeURIComponent(vaultName);
 	}
 	const vaultNameEnc = getVaultNameEncoded();
 
 	const workspaceLoadURI =
-		"obsidian://advanced-uri?" +
-		"vault=" + vaultNameEnc +
-		"&workspace=" + encodeURIComponent(workspaceName);
+		`obsidian://advanced-uri?vault=${vaultNameEnc}&workspace=${encodeURIComponent(workspaceName)}`;
 
 	return workspaceLoadURI;
 }

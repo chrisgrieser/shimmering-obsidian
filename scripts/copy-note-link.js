@@ -6,12 +6,13 @@ function run(argv) {
 	app.includeStandardAdditions = true;
 
 	function getVaultNameEncoded() {
-		const _app = Application.currentApplication();
-		_app.includeStandardAdditions = true;
-		const dataFile = $.NSFileManager.defaultManager.contentsAtPath("./vaultPath");
+		const theApp = Application.currentApplication();
+		theApp.includeStandardAdditions = true;
+		const dataFile = $.NSFileManager.defaultManager.contentsAtPath($.getenv("alfred_workflow_data") + "/vaultPath");
 		const vault = $.NSString.alloc.initWithDataEncoding(dataFile, $.NSUTF8StringEncoding);
-		const _vaultPath = ObjC.unwrap(vault).replace(/^~/, _app.pathTo("home folder"));
-		return encodeURIComponent(_vaultPath.replace(/.*\//, ""));
+		const theVaultPath = ObjC.unwrap(vault);
+		const vaultName = theVaultPath.replace(/.*\//, "");
+		return encodeURIComponent(vaultName);
 	}
 	const vaultNameEnc = getVaultNameEncoded();
 

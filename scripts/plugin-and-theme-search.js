@@ -22,10 +22,9 @@ function insert1000sep(num) {
 	return numText;
 }
 
-function readFile(path, encoding) {
-	if (!encoding) encoding = $.NSUTF8StringEncoding;
+function readFile(path) {
 	const data = $.NSFileManager.defaultManager.contentsAtPath(path);
-	const str = $.NSString.alloc.initWithDataEncoding(data, encoding);
+	const str = $.NSString.alloc.initWithDataEncoding(data, $.NSUTF8StringEncoding);
 	return ObjC.unwrap(str);
 }
 
@@ -43,19 +42,20 @@ const discordReadyLinks = ["Discord", "Discord PTB", "Discord Canary"].some(disc
 function getVaultPath() {
 	const theApp = Application.currentApplication();
 	theApp.includeStandardAdditions = true;
-	const dataFile = $.NSFileManager.defaultManager.contentsAtPath("./vaultPath");
+	const dataFile = $.NSFileManager.defaultManager.contentsAtPath($.getenv("alfred_workflow_data") + "/vaultPath");
 	const vault = $.NSString.alloc.initWithDataEncoding(dataFile, $.NSUTF8StringEncoding);
-	return ObjC.unwrap(vault).replace(/^~/, theApp.pathTo("home folder"));
+	return ObjC.unwrap(vault);
 }
 const vaultPath = getVaultPath();
 
 function getVaultNameEncoded() {
 	const theApp = Application.currentApplication();
 	theApp.includeStandardAdditions = true;
-	const dataFile = $.NSFileManager.defaultManager.contentsAtPath("./vaultPath");
+	const dataFile = $.NSFileManager.defaultManager.contentsAtPath($.getenv("alfred_workflow_data") + "/vaultPath");
 	const vault = $.NSString.alloc.initWithDataEncoding(dataFile, $.NSUTF8StringEncoding);
-	const theVaultPath = ObjC.unwrap(vault).replace(/^~/, theApp.pathTo("home folder"));
-	return encodeURIComponent(theVaultPath.replace(/.*\//, ""));
+	const theVaultPath = ObjC.unwrap(vault)
+	const vaultName = theVaultPath.replace(/.*\//, "")
+	return encodeURIComponent(vaultName);
 }
 const vaultNameEnc = getVaultNameEncoded();
 const jsonArray = [];

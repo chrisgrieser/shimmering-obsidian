@@ -12,13 +12,11 @@ function run(argv) {
 		return ObjC.unwrap(str);
 	}
 
-	function writeData(key, newValue) {
-		const dataPath = `./${key}`; // save in workflow folder, so paths are synced
-		const str = $.NSString.alloc.initWithUTF8String(newValue);
-		str.writeToFileAtomicallyEncodingError(dataPath, true, $.NSUTF8StringEncoding, null);
-	}
-
 	function writeToFile(file, text) {
+		app.doShellScript(`
+			mkdir -p "$(dirname "${file}")"
+			touch "${file}"
+		`);
 		const str = $.NSString.alloc.initWithUTF8String(text);
 		str.writeToFileAtomicallyEncodingError(file, true, $.NSUTF8StringEncoding, null);
 	}
@@ -26,7 +24,7 @@ function run(argv) {
 	//───────────────────────────────────────────────────────────────────────────
 
 	const vaultPath = argv.join("");
-	writeData("vaultPath", vaultPath.replace(/\/Users\/.*?\//i, "~/"));
+	writeToFile($.getenv("alfred_workflow_data") + "/vaultPath", vaultPath.replace(/\/Users\/.*?\//i, "~/"));
 
 	// error message if a plugin is not installed in that vault
 	let errorMsg = "";
@@ -37,7 +35,7 @@ function run(argv) {
 			errorMsg += "Metadata Extractor is not installed or not enabled in the selected vault. \n\n";
 		if (!activatedPlugins.includes("obsidian-advanced-uri"))
 			errorMsg += "Advanced URI Plugin is not installed or not enabled in the selected vault. \n\n";
-		errorMsg = "ERROR\n\n" + errorMsg + "Please install & enable the plugin(s) and re-run `osetup`.";
+		if (errorMsg) errorMsg = "ERROR\n\n" + errorMsg + "Please install & enable the plugin(s) and re-run `osetup`.";
 	} else {
 		errorMsg +=
 			"ERROR\n\nNo plugins found in the selected vault.\nPlease install & enable the Metadata Extractor plugin & the Advanced URI plugin, restart the vault, and run `osetup` again.";

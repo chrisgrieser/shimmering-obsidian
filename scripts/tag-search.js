@@ -5,24 +5,23 @@ ObjC.import("Foundation");
 const app = Application.currentApplication();
 app.includeStandardAdditions = true;
 
-const readFile = function (path, encoding) {
-	!encoding && (encoding = $.NSUTF8StringEncoding);
-	const fm = $.NSFileManager.defaultManager;
-	const data = fm.contentsAtPath(path);
-	const str = $.NSString.alloc.initWithDataEncoding(data, encoding);
+function readFile(path) {
+	const data = $.NSFileManager.defaultManager.contentsAtPath(path);
+	const str = $.NSString.alloc.initWithDataEncoding(data, $.NSUTF8StringEncoding);
 	return ObjC.unwrap(str);
-};
+}
+
 const alfredMatcher = str => str.replace(/[-()_.]/g, " ") + " " + str;
 const fileExists = filePath => Application("Finder").exists(Path(filePath));
 
 //──────────────────────────────────────────────────────────────────────────────
 
 function getVaultPath() {
-	const _app = Application.currentApplication();
-	_app.includeStandardAdditions = true;
-	const dataFile = $.NSFileManager.defaultManager.contentsAtPath("./vaultPath");
+	const theApp = Application.currentApplication();
+	theApp.includeStandardAdditions = true;
+	const dataFile = $.NSFileManager.defaultManager.contentsAtPath($.getenv("alfred_workflow_data") + "/vaultPath");
 	const vault = $.NSString.alloc.initWithDataEncoding(dataFile, $.NSUTF8StringEncoding);
-	return ObjC.unwrap(vault).replace(/^~/, _app.pathTo("home folder"));
+	return ObjC.unwrap(vault);
 }
 const vaultPath = getVaultPath();
 const tagsJSON = vaultPath + "/.obsidian/plugins/metadata-extractor/tags.json";
@@ -34,35 +33,35 @@ let superIconList = [];
 if (superIconFile && fileExists(superIconFile)) {
 	superIconList = readFile(superIconFile)
 		.split("\n")
-		.filter(l => l.length !== 0);
+		.filter(line => line.length !== 0);
 }
 console.log("superIconList length: " + superIconList.length);
 
 function getVaultNameEncoded() {
-	const _app = Application.currentApplication();
-	_app.includeStandardAdditions = true;
-	const dataFile = $.NSFileManager.defaultManager.contentsAtPath("./vaultPath");
+	const theApp = Application.currentApplication();
+	theApp.includeStandardAdditions = true;
+	const dataFile = $.NSFileManager.defaultManager.contentsAtPath($.getenv("alfred_workflow_data") + "/vaultPath");
 	const vault = $.NSString.alloc.initWithDataEncoding(dataFile, $.NSUTF8StringEncoding);
-	const _vaultPath = ObjC.unwrap(vault).replace(/^~/, _app.pathTo("home folder"));
-	return encodeURIComponent(_vaultPath.replace(/.*\//, ""));
+	const theVaultPath = ObjC.unwrap(vault);
+	const vaultName = theVaultPath.replace(/.*\//, "");
+	return encodeURIComponent(vaultName);
 }
 const vaultNameEnc = getVaultNameEncoded();
 
 //──────────────────────────────────────────────────────────────────────────────
 
-// eslint-disable-next-line no-var, vars-on-top
-let tagsArray = JSON.parse(readFile(tagsJSON)).map(function (t) {
-	t.merged = false;
-	return t;
+let tagsArray = JSON.parse(readFile(tagsJSON)).map(tag => {
+	tag.merged = false;
+	return tag;
 });
 
 //──────────────────────────────────────────────────────────────────────────────
 
 if (mergeNestedTags) {
 	// reduce tag-key to the parent-tag.
-	tagsArray = tagsArray.map(function (t) {
-		t.tag = t.tag.split("/")[0];
-		return t;
+	tagsArray = tagsArray.map(tag => {
+		tag.tag = tag.tag.split("/")[0];
+		return tag;
 	});
 
 	// merge tag-object based on same tag-key https://stackoverflow.com/a/33850667

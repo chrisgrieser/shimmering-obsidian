@@ -5,20 +5,18 @@ ObjC.import("Foundation");
 const app = Application.currentApplication();
 app.includeStandardAdditions = true;
 
-function readFile (path, encoding) {
-	if (!encoding) encoding = $.NSUTF8StringEncoding;
-	const fm = $.NSFileManager.defaultManager;
-	const data = fm.contentsAtPath(path);
-	const str = $.NSString.alloc.initWithDataEncoding(data, encoding);
+function readFile(path) {
+	const data = $.NSFileManager.defaultManager.contentsAtPath(path);
+	const str = $.NSString.alloc.initWithDataEncoding(data, $.NSUTF8StringEncoding);
 	return ObjC.unwrap(str);
 }
 
 function getVaultPath() {
-	const _app = Application.currentApplication();
-	_app.includeStandardAdditions = true;
-	const dataFile = $.NSFileManager.defaultManager.contentsAtPath("./vaultPath");
+	const theApp = Application.currentApplication();
+	theApp.includeStandardAdditions = true;
+	const dataFile = $.NSFileManager.defaultManager.contentsAtPath($.getenv("alfred_workflow_data") + "/vaultPath");
 	const vault = $.NSString.alloc.initWithDataEncoding(dataFile, $.NSUTF8StringEncoding);
-	return ObjC.unwrap(vault).replace(/^~/, _app.pathTo("home folder"));
+	return ObjC.unwrap(vault);
 }
 
 //──────────────────────────────────────────────────────────────────────────────
