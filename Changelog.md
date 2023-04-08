@@ -1,3 +1,5 @@
+- 2023-04-08	release 3.8.5
+- 2023-04-08	fix: setup not persisting w/ update @kometenstaub
 - 2023-04-08	release 3.8.4
 - 2023-04-08	fix: `osetup` in freshly created vaults
 - 2023-04-08	release 3.8.3

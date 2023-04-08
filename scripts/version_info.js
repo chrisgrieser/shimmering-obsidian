@@ -14,7 +14,7 @@ const onlineJSON = url => JSON.parse(app.doShellScript("curl -sL '" + url + "'")
 const fileExists = filePath => Application("Finder").exists(Path(filePath));
 
 let output = "";
-function log(str) {
+function logger(str) {
 	output += str + "\n";
 }
 
@@ -26,7 +26,7 @@ function getVaultPath() {
 	theApp.includeStandardAdditions = true;
 	const dataFile = $.NSFileManager.defaultManager.contentsAtPath($.getenv("alfred_workflow_data") + "/vaultPath");
 	const vault = $.NSString.alloc.initWithDataEncoding(dataFile, $.NSUTF8StringEncoding);
-	return ObjC.unwrap(vault);
+	return ObjC.unwrap(vault).replace(/^~/, theApp.pathTo("home folder"));
 }
 const vaultPath = getVaultPath()
 
@@ -80,36 +80,36 @@ const metadataStrLen = fileExists(metadataJSON) ? readFile(metadataJSON).length 
 
 //──────────────────────────────────────────────────────────────────────────────
 
-log("");
-log("-------------------------------");
-log("INTERNAL WORKFLOW CONFIGURATION");
-log("Vault Path: " + vaultPath);
-log(".obsidian: " + dotObsidian);
-log("Metadata JSONs: " + numberOfJSONS + "/4");
-if (numberOfJSONS < 4) log("Not all metadata not found. Please run `osetup` and retry.");
-log("metadata.json String Length: " + metadataStrLen);
-log("-------------------------------");
-log("WORKSPACE DATA");
-if (workspaceData15) log("'workspace' exists");
-if (workspaceData16) log("'workspace.json' exists");
-if (!workspaceData15 && !workspaceData16) log("none exists");
-log("-------------------------------");
-log("SYSTEM");
-log("macOS: " + macVer);
-log("Alfred: " + $.getenv("alfred_version"));
-log("-------------------------------");
-log("INSTALLED VERSION");
-log("Obsidian: " + obsiVer);
-log("This Workflow: " + $.getenv("alfred_workflow_version"));
-log("Advanced URI Plugin: " + advancedUriVer);
-log("Metadata Extractor: " + metadataExVer);
-log("-------------------------------");
-log("LATEST VERSION");
-log(`Obsidian: ${obsiVerOnline} (Insider: ${obsiVerBetaOnline})`);
-log("This Workflow: " + workflowVerOnline);
-log("Advanced URI Plugin: " + advancedUriVerOnline);
-log("Metadata Extractor: " + metadataExVerOnline);
-log("-------------------------------");
+logger("");
+logger("-------------------------------");
+logger("INTERNAL WORKFLOW CONFIGURATION");
+logger("Vault Path: " + vaultPath);
+logger(".obsidian: " + dotObsidian);
+logger("Metadata JSONs: " + numberOfJSONS + "/4");
+if (numberOfJSONS < 4) logger("Not all metadata not found. Please run `osetup` and retry.");
+logger("metadata.json String Length: " + metadataStrLen);
+logger("-------------------------------");
+logger("WORKSPACE DATA");
+if (workspaceData15) logger("'workspace' exists");
+if (workspaceData16) logger("'workspace.json' exists");
+if (!workspaceData15 && !workspaceData16) logger("none exists");
+logger("-------------------------------");
+logger("SYSTEM");
+logger("macOS: " + macVer);
+logger("Alfred: " + $.getenv("alfred_version"));
+logger("-------------------------------");
+logger("INSTALLED VERSION");
+logger("Obsidian: " + obsiVer);
+logger("This Workflow: " + $.getenv("alfred_workflow_version"));
+logger("Advanced URI Plugin: " + advancedUriVer);
+logger("Metadata Extractor: " + metadataExVer);
+logger("-------------------------------");
+logger("LATEST VERSION");
+logger(`Obsidian: ${obsiVerOnline} (Insider: ${obsiVerBetaOnline})`);
+logger("This Workflow: " + workflowVerOnline);
+logger("Advanced URI Plugin: " + advancedUriVerOnline);
+logger("Metadata Extractor: " + metadataExVerOnline);
+logger("-------------------------------");
 
 // remove config
 Application("com.runningwithcrayons.Alfred").removeConfiguration("ObRunning", { inWorkflow: $.getenv("alfred_workflow_bundleid") });
