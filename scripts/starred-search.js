@@ -82,12 +82,6 @@ const jsonArray = [];
 const fileArray = JSON.parse(readFile(metadataJSON))
 	.filter(item => starsAndBookmarks.includes(item.relativePath));
 
-const starredSearches = JSON.parse(readFile(starredJSON))
-	.items
-	.filter (item => item.type === "search")
-	.map (item => item.query);
-
-
 fileArray.forEach(file => {
 	const filename = file.fileName;
 	const relativePath = file.relativePath;
@@ -143,39 +137,6 @@ fileArray.forEach(file => {
 			"shift": {
 				"valid": hasLinks,
 				"subtitle": linksSubtitle,
-			},
-		},
-	});
-});
-
-
-// Starred Searches
-starredSearches.forEach(searchQuery => {
-	const subtitle = "⛔️ Cannot do that with a starred search.";
-	jsonArray.push({
-		"title": "⭐️ " + searchQuery,
-		"arg": "obsidian://search?vault=" + $.getenv("vault_name_ENC") + "t&query=" + searchQuery,
-		"uid": searchQuery,
-		"mods": {
-			"fn": {
-				"subtitle": subtitle,
-				"valid": false,
-			},
-			"ctrl": {
-				"subtitle": subtitle,
-				"valid": false,
-			},
-			"cmd": {
-				"subtitle": subtitle,
-				"valid": false,
-			},
-			"alt": {
-				"subtitle": subtitle,
-				"valid": false,
-			},
-			"shift": {
-				"subtitle": subtitle,
-				"valid": false,
 			},
 		},
 	});
