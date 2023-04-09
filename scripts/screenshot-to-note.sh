@@ -1,6 +1,6 @@
 #!/bin/zsh
-vault_path="$(cat ./vaultPath)"
-vault_path="${vault_path/#\~/$HOME}"
+
+vault_path="$(cat "$alfred_workflow_data/vaultPath")" && vault_path="${vault_path/#\~/$HOME}"
 
 if [[ "$screenshot_path" == "" ]]; then
 	screenshot_path="$vault_path/screenshots"
