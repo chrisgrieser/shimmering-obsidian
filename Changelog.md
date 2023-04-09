@@ -1,3 +1,5 @@
+- 2023-04-09	release 3.8.8
+- 2023-04-09	fix: workflow data for shell files
 - 2023-04-08	release 3.8.7
 - 2023-04-08	fix: star search by removing starred searches
 - 2023-04-08	release 3.8.6
