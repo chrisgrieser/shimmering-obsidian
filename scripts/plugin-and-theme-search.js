@@ -14,6 +14,7 @@ function alfredMatcher(str) {
 function onlineJSON(url) {
 	return JSON.parse(app.doShellScript('curl -s "' + url + '"'));
 }
+
 function insert1000sep(num) {
 	let numText = String(num);
 	if (num >= 10000) {
@@ -73,7 +74,7 @@ const installedPlugins = app.doShellScript('ls -1 "' + vaultPath + '""/.obsidian
 const themeJSON = onlineJSON(
 	"https://raw.githubusercontent.com/obsidianmd/obsidian-releases/master/community-css-themes.json",
 );
-const installedThemes = app.doShellScript(`find '${vaultPath}/.obsidian/themes/' -name '*.css' `);
+const installedThemes = app.doShellScript(`find '${vaultPath}/.obsidian/themes/' -name '*.css' || true`);
 const currentTheme = app.doShellScript(
 	`cat "${vaultPath}/.obsidian/appearance.json" | grep "cssTheme" | head -n 1 | cut -d\\" -f 4`,
 );
