@@ -7433,8 +7433,7 @@ fi</string>
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>## Alfred Gallery[This workflow is now included in the Alfred gallery](http://alfred.app/workflows/chrisgrieser/shimmering-obsidian/) and auto-updates will there be managed by Alfred and not by this workflow anymore.## ⚠️ Change of Configuration System ⚠️
-➡️ **After updating to 3.5, please rerun `osetup` once more.**---
+	<string># Auto-Updates via Alfred Gallery[This workflow is now included in the Alfred gallery](http://alfred.app/workflows/chrisgrieser/shimmering-obsidian/) and auto-updates will there be managed by Alfred and not by this workflow anymore.---
 
 # Shimmering Obsidian
 An Alfred Workflow with dozens of features for controlling Obsidian.
@@ -10009,7 +10008,7 @@ DOUBLE CLICK to set hotkey</string>
 		<string>create_in_new_tab</string>
 	</array>
 	<key>version</key>
-	<string>3.8.9</string>
+	<string>3.9.0</string>
 	<key>webaddress</key>
 	<string>https://chris-grieser.de/</string>
 </dict>
