@@ -1,3 +1,7 @@
+- 2023-04-15	release 3.8.9
+- 2023-04-15	fix: plugin-theme-search in vault w/o theme
+- 2023-04-15	Merge pull request #124 from vitorgalvao/patch-1
+- 2023-04-14	Alfred-based Quick Switcher.md: Fix bases to basis
 - 2023-04-09	release 3.8.8
 - 2023-04-09	fix: workflow data for shell files
 - 2023-04-08	release 3.8.7
