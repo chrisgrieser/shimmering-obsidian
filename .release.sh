@@ -6,6 +6,7 @@
 # go to submodule repo root
 [[ ! -f "info.plist" ]] && cd ..
 [[ ! -f "info.plist" ]] && cd ..
+[[ ! -f "info.plist" ]] && cd ..
 [[ ! -f "info.plist" ]] && exit 1
 
 # -----------------------
@@ -50,9 +51,9 @@ fi
 rm -fv ./*.alfredworkflow
 
 # zip
-workflowName=$(plutil -extract name xml1 -o - info.plist | sed -n 4p | cut -d">" -f2 | cut -d"<" -f1)
-workflowName=$(echo "$workflowName" | tr " " "-")
-zip --quiet -r "$workflowName.alfredworkflow" . -x ".*" "promo*.png" "doc*/*" ".gitignore" "info-original.plist" "prefs.plist" "README.md" "*.alfredworkflow" "vaultPath"
+workflowName=$(plutil -extract name xml1 -o - info.plist | sed -n 4p | cut -d">" -f2 | cut -d"<" -f1 | tr " " "-")
+# ".*" excludes the dotfiles (glob pattern, not regex)
+zip --quiet -r "$workflowName.alfredworkflow" . -x ".*" "doc*/*" "*.plist" "*.md" "*.alfredworkflow" "*.gif"
 echo "new $workflowName.alfredworkflow file created."
 
 # restore original
