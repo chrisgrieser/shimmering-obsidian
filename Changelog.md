@@ -1,3 +1,5 @@
+- 2023-04-21	release 3.9.4
+- 2023-04-21	build: remove info-original.plist (#128)
 - 2023-04-21	release 3.9.3
 - 2023-04-21	fix: info.plist excluded during build (fix #128)
 - 2023-04-21	release 3.9.2
