@@ -67,7 +67,7 @@ function run(argv) {
 
 	const templateRelPath = $.getenv("template_note_path") || "";
 	const newNoteLocation = $.getenv("new_note_location") || "";
-	const newNoteRelPath = newNoteLocation + "/" + fileName;
+	const newNoteRelPath = `${newNoteLocation}/${fileName}.md`;
 	const newNoteAbsPath = getVaultPath() + "/" + newNoteRelPath;
 
 	let newNoteContent;
