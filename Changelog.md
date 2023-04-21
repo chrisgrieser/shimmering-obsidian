@@ -1,3 +1,6 @@
+- 2023-04-21	release 3.9.2
+- 2023-04-21	fix: `on` creating dups w/o extension
+- 2023-04-16	build: reduce file size when zipping
 - 2023-04-15	release 3.9.1
 - 2023-04-15	release 3.9.0
 - 2023-04-15	docs: updated due to inclusion in Alfred Gallery
