@@ -1,3 +1,5 @@
+- 2023-04-21	release 3.9.3
+- 2023-04-21	fix: info.plist excluded during build (fix #128)
 - 2023-04-21	release 3.9.2
 - 2023-04-21	fix: `on` creating dups w/o extension
 - 2023-04-16	build: reduce file size when zipping
