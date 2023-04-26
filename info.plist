@@ -687,7 +687,7 @@
 				<key>modifiersubtext</key>
 				<string>fn: Append to Note ({var:input_append})</string>
 				<key>vitoclose</key>
-				<false/>
+				<true/>
 			</dict>
 			<dict>
 				<key>destinationuid</key>
@@ -951,7 +951,7 @@
 				<key>modifiersubtext</key>
 				<string>fn: Append to Note ({var:input_append})</string>
 				<key>vitoclose</key>
-				<false/>
+				<true/>
 			</dict>
 			<dict>
 				<key>destinationuid</key>
@@ -1420,6 +1420,16 @@
 				<key>vitoclose</key>
 				<false/>
 			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>280DB408-BEB4-4633-850F-4C95E07C4449</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
 		</array>
 		<key>89E2FCF0-5A14-4078-8D1F-C0FCAC339F63</key>
 		<array>
@@ -1586,7 +1596,7 @@
 				<key>modifiersubtext</key>
 				<string>fn: Append to Note ({var:input_append})</string>
 				<key>vitoclose</key>
-				<false/>
+				<true/>
 			</dict>
 			<dict>
 				<key>destinationuid</key>
@@ -2038,7 +2048,7 @@
 				<key>modifiersubtext</key>
 				<string>fn: Append to Note ({var:input_append})</string>
 				<key>vitoclose</key>
-				<false/>
+				<true/>
 			</dict>
 			<dict>
 				<key>destinationuid</key>
@@ -3400,6 +3410,14 @@ set parameter to do shell script "echo " &amp; quoted form of (system attribute 
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
 			<string>88723AC0-4348-4B23-AFD7-FEFE6C532A94</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.hidealfred</string>
+			<key>uid</key>
+			<string>280DB408-BEB4-4633-850F-4C95E07C4449</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -7743,6 +7761,15 @@ An Alfred Workflow with dozens of features for controlling Obsidian.
 			<real>190</real>
 			<key>ypos</key>
 			<real>460</real>
+		</dict>
+		<key>280DB408-BEB4-4633-850F-4C95E07C4449</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>xpos</key>
+			<real>2055</real>
+			<key>ypos</key>
+			<real>975</real>
 		</dict>
 		<key>290EF84F-6C99-465F-9330-F13E903467FD</key>
 		<dict>
