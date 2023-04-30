@@ -1,4 +1,5 @@
 #!/usr/bin/env osascript -l JavaScript
+// @ts-nocheck
 
 ObjC.import("stdlib");
 ObjC.import("Foundation");
@@ -109,7 +110,7 @@ try {
 	currentFolder = $.getenv("browse_folder");
 	pathToCheck = vaultPath + "/" + currentFolder;
 	if (pathToCheck.endsWith("//")) pathToCheck = vaultPath; // when going back up from child of vault root
-} catch (error) {
+} catch (_) {
 	pathToCheck = vaultPath;
 }
 
