@@ -63,7 +63,6 @@ function run(argv) {
 
 	let fileName = argv.join("") || "Untitled";
 	fileName = fileName.replace(/[\\/:]/g, ""); // remove illegal characters
-	fileName = fileName.charAt(0).toUpperCase() + fileName.slice(1); // capitalize
 
 	const templateRelPath = $.getenv("template_note_path") || "";
 	const newNoteLocation = $.getenv("new_note_location") || "";
