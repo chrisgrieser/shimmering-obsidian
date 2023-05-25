@@ -110,11 +110,12 @@ try {
 	currentFolder = $.getenv("browse_folder");
 	pathToCheck = vaultPath + "/" + currentFolder;
 	if (pathToCheck.endsWith("//")) pathToCheck = vaultPath; // when going back up from child of vault root
-} catch (_) {
+} catch (_error) {
 	pathToCheck = vaultPath;
 }
 
-let folderArray = app.doShellScript(`find "${pathToCheck}" -type d -mindepth 1 -not -path "*/.*"`).split("\r"); // returns *absolute* paths
+// returns *absolute* paths
+let folderArray = app.doShellScript(`find "${pathToCheck}" -type d -mindepth 1 -not -path "*/.*"`).split("\r"); 
 if (!folderArray) folderArray = [];
 
 //──────────────────────────────────────────────────────────────────────────────
@@ -140,8 +141,12 @@ folderArray = applyExcludeFilter(folderArray, true);
 canvasArray = applyExcludeFilter(canvasArray, false);
 fileArray = applyExcludeFilter(fileArray, false);
 
-// if in subfolder, filder files outside subfolder
-if (pathToCheck !== vaultPath) fileArray = fileArray.filter(file => file.relativePath.startsWith(currentFolder));
+// if in subfolder, filter files outside subfolder
+if (pathToCheck !== vaultPath) {
+	fileArray = fileArray.filter(file => file.relativePath.startsWith(currentFolder));
+	canvasArray = canvasArray.filter(file => file.relativePath.startsWith(currentFolder));
+	// folderarray does not need to be filtered, since already filtered on creation
+}
 
 // IGNORED HEADINGS
 const hLVLignore = $.getenv("h_lvl_ignore");
