@@ -8,7 +8,7 @@
 
 ## Plugin Developer Documentation Search
 **`odd`: `O`bsidian `D`eveloper `D`ocumentation Search**
-Searches the unofficial [plugin development documentation by Marcus Olsson](https://marcus.se.net/obsidian-plugin-docs/).
+Search the official [Obsidian developer docs](https://docs.obsidian.md/Home).
 
 ![](images/plugin-docs-search-demo.gif)
 
@@ -28,9 +28,8 @@ Searches the unofficial [plugin development documentation by Marcus Olsson](http
 
 ## Beta Plugins
 **`obeta`: Access `beta`-plugin-related commands.**
-- Add a new plugin to your beta plugins.
+- Add a new plugin to your Beta plugins.
 - Open the repository of a beta plugin.
 	- Press `⌥ + ↵` to copy the GitHub repository URL to your clipboard. When Discord is the frontmost app, the copied link will be surrounded with `<` `>` for more convenient pasting in the Discord Desktop app (disables auto-preview).
-- Update all beta plugins.
+- Update all Beta plugins.
 - All commands require the [BRAT Plugin](https://github.com/TfTHacker/obsidian42-brat).
-- Install a new BETA theme.
