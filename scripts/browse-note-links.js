@@ -53,7 +53,6 @@ function run() {
 	const jsonArray = [];
 
 	// Supercharged Icons File
-
 	let superIconList = [];
 	if (superIconFile && fileExists(superIconFile)) {
 		superIconList = readFile(superIconFile)
@@ -65,7 +64,7 @@ function run() {
 	//───────────────────────────────────────────────────────────────────────────
 
 	// create input note JSON
-	const inputPath = readFile($.getenv("alfred_workflow_data") + "/buffer_inputPath");
+	const inputPath = $.getenv("inputPath");
 	console.log(inputPath);
 
 	const metaJSON = JSON.parse(readFile(metadataJSON));

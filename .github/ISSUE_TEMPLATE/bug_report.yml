@@ -72,5 +72,3 @@ body:
           required: true
         - label: I have not renamed my Obsidian config folder, it's still `.obsidian` (About → Advanced → Override config folder).
           required: true
-        - label: If I updated to version 3+ for the first time, I have disabled migrating workflow cutomizations. (If you haven't, you can simply re-download and install the latest release from GitHub and uncheck `Migrate my workflow customizations`.)
-          required: true

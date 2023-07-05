@@ -5,14 +5,15 @@ ObjC.import("Foundation");
 const app = Application.currentApplication();
 app.includeStandardAdditions = true;
 
+/** @param {string} filePath */
 function parentFolder (filePath) {
 	if (!filePath.includes("/")) return "/";
-	return filePath.split("/").slice(0, -1)
-		.join("/");
+	return filePath.split("/").slice(0, -1).join("/");
 }
 const alfredMatcher = (str) => str.replace (/[-()_.]/g, " ") + " " + str;
 const fileExists = (filePath) => Application("Finder").exists(Path(filePath));
 
+/** @param {string} path */
 function readFile(path) {
 	const data = $.NSFileManager.defaultManager.contentsAtPath(path);
 	const str = $.NSString.alloc.initWithDataEncoding(data, $.NSUTF8StringEncoding);
@@ -62,12 +63,12 @@ const jsonArray = [];
 const mergeNestedTags = $.getenv("merge_nested_tags") === "1";
 
 // filter the metadataJSON for the items w/ relativePaths of tagged files
-let selectedTag = readFile($.getenv("alfred_workflow_data") + "/buffer_selectedTag");
+let selectedTag = $.getenv("selectedTag")
 if (mergeNestedTags) selectedTag = selectedTag.split("/")[0];
 
 let fileArray = JSON.parse(readFile(metadataJSON)).filter(j => j.tags);
-if (mergeNestedTags) { fileArray = fileArray
-	.filter(function (f) {
+if (mergeNestedTags) { 
+	fileArray = fileArray.filter(f => {
 		let hasParentTag = false;
 		f.tags.forEach(tag => {
 			if (tag.startsWith(selectedTag + "/") || tag === selectedTag) hasParentTag = true;

@@ -1,6 +1,6 @@
 {
 	"compilerOptions": {
 		"checkJs": true,
-		"target": "ES2021" // makes `.replaceAll()` and `new Set` valid
+		"target": "ES2022" 
 	}
 }

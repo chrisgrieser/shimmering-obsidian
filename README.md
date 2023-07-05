@@ -1,14 +1,13 @@
 # Shimmering Obsidian 🎩
 *An Alfred Workflow with dozens of features for [Obsidian](https://obsidian.md/)*. [Featured in the Alfred Gallery.](https://alfred.app/workflows/chrisgrieser/shimmering-obsidian/)
 
-![](https://img.shields.io/github/downloads/chrisgrieser/shimmering-obsidian/total?label=Downloads&style=plastic) ![](https://img.shields.io/github/v/release/chrisgrieser/shimmering-obsidian?label=Latest%20Release&style=plastic) [![](https://img.shields.io/badge/changelog-click%20here-FFE800?style=plastic)](Changelog.md)
+![](https://img.shields.io/github/downloads/chrisgrieser/shimmering-obsidian/total?label=Downloads&style=plastic) ![](https://img.shields.io/github/v/release/chrisgrieser/shimmering-obsidian?label=Latest%20Release&style=plastic) 
 
 <img src="https://user-images.githubusercontent.com/73286100/139678407-9ac39baa-5f49-42a0-9622-0fbaf68540b2.gif" alt="Promo Video" width=70%>
 
 ---
 
 - [Installation](#Workflow-Installation)
-- [Changelog](Changelog.md)
 - [Credits & Donations](#Credits--Thanks)
 - [About the Developer](#about-the-developer)
 
@@ -21,7 +20,7 @@
 - Search for Notes
 	- Includes Aliases
 	- Search Headings (included heading levels configurable)
-	- Search Starred Notes
+	- Search Bookmarked Notes
 	- Search Recent Notes
 - Browse Folders (move to parent folders, create notes in folders)
 - Search Notes via Tags
@@ -29,7 +28,7 @@
 - Open External Links of a Note (without switching to the document or opening Obsidian)
 - Search only for attachments (non-markdown files) in your vault
 - Graph Traversal via Alfred
-- Smart Search: A query like `o foobar #moc starred` displays only files named "foobar" with the tag "#moc" that are also starred.
+- Smart Search: A query like `o foobar #moc starred` displays only files named "foobar" with the tag `#moc` that are also starred.
 - Visual Search: Add Icons to your tags based on their tags, similar to the [Supercharged Links](https://obsidian.md/plugins?id=supercharged-links-obsidian) Plugin.
 - …
 
@@ -38,7 +37,7 @@
 ---
 
 ### Note-related Features
-- Create new Notes (based on Template or via QuickAdd)
+- Create new Notes, based on a template
 - Quickly append to a scratchpad note
 
 ➡️ [Documentation of Note-related Features](docs/Note-related%20Features.md)
@@ -58,7 +57,7 @@
 - 🆕 Open the current browser tab directly in Obsidian.
 - Backup your Vault
 - Access various folders like `.obsidian` or `.trash`
-- Update Plugins (including Beta Plugins installed via BRAT)
+- Update Plugins (including beta Plugins installed via BRAT)
 
 ➡️ [Documentation of all Utility Features](docs/Utility%20Features.md)
 
@@ -99,10 +98,8 @@
 ### Documentation Search
 - Search the [Official Obsidian Documentation](https://help.obsidian.md/Obsidian/Index)
 - Simultaneously search the [Obsidian Hub](https://publish.obsidian.md/hub/00+-+Start+here)
-- Search the [Obsidian Forum](https://forum.obsidian.md/)
-- Browse Forum Categories
 
-➡️ [Documentation of the Documentation & Forum Search](docs/Documentation%20and%20Forum%20Search.md)
+➡️ [Documentation of the Documentation](docs/Documentation%20Search.md)
 
 ---
 
@@ -116,7 +113,6 @@
 
 ### CSS-related Features
 - Access themes & CSS Snippets
-- Create new snippets from the clipboard
 
 ➡️ [Documentation of CSS-related Features](docs/CSS-related%20Features.md)
 
@@ -144,8 +140,7 @@
 ## Credits & Thanks
 - Big shout-out to [@kometenstaub](https://github.com/kometenstaub) for developing the [metadata extractor plugin](https://github.com/kometenstaub/metadata-extractor), for which this workflow is the main client.
 - Also thanks to [@Vinzent03](https://github.com/Vinzent03) for his invaluable [Advanced URI plugin](https://github.com/Vinzent03/obsidian-advanced-uri), which enables Alfred to control various aspects of Obsidian.
-- Main icon by [Jack Liu](https://www.reddit.com/user/jackliu1219).
-- <a href="https://www.flaticon.com/authors/freepik">Other icons created by Freepik - Flaticon</a>
+- <a href="https://www.flaticon.com/authors/freepik">Most icons created by Freepik - Flaticon</a>
 
 <!-- vale Google.FirstPerson = NO -->
 ## About the Developer
@@ -157,6 +152,7 @@ In my day job, I am a sociologist studying the social mechanisms underlying the 
 - [Discord](https://discordapp.com/users/462774483044794368/)
 - [GitHub](https://github.com/chrisgrieser/)
 - [Twitter](https://twitter.com/pseudo_meta)
+- [Mastodon](https://pkm.social/@pseudometa)
 - [LinkedIn](https://www.linkedin.com/in/christopher-grieser-ba693b17a/)
 
 *Note that for questions, bug reports, or feature requests for this workflow, please open a [GitHub issue](https://github.com/chrisgrieser/shimmering-obsidian/issues), since it is better suited for technical support.*

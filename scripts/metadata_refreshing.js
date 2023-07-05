@@ -1,4 +1,6 @@
 #!/usr/bin/env osascript -l JavaScript
+ObjC.import("stdlib")
+
 function getVaultNameEncoded() {
 	const theApp = Application.currentApplication();
 	theApp.includeStandardAdditions = true;
@@ -8,6 +10,8 @@ function getVaultNameEncoded() {
 	const vaultName = theVaultPath.replace(/.*\//, "")
 	return encodeURIComponent(vaultName);
 }
+
+//──────────────────────────────────────────────────────────────────────────────
 
 // dump metadata files
 const app = Application.currentApplication();

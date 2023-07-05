@@ -1,7 +1,5 @@
 # Utility Features
 
-## Table of Contents
-
 - [Backup your Vault](#backup-your-vault)
 - [Open Various Folders](#open-various-folders)
 - [Update Plugins & Metadata](#update-plugins--metadata)
@@ -33,6 +31,6 @@ end tell
 
 ## Update Plugins & Metadata
 **`oupdate`: Update Plugins and Metadata used by this workflow**
-- Update your Community Plugins (and Beta plugins installed via [the BRAT Plugin](https://github.com/TfTHacker/obsidian42-brat)).
+- Update your Community Plugins (and beta plugins installed via [the BRAT Plugin](https://github.com/TfTHacker/obsidian42-brat)).
 - Re-index the data for the [Documentation Search](Documentation%20and%20Forum%20Search.md). 
 - Refresh the metadata used for this workflow manually.
