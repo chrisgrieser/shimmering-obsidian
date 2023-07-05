@@ -124,7 +124,7 @@
 - Quick Copy of a plugin's ID
 - Open the Vault's root in the default Terminal or in Finder
 - Add & Update Beta Plugins via [BRAT](https://github.com/TfTHacker/obsidian42-brat)
-- Search the [unofficial plugin docs](https://marcus.se.net/obsidian-plugin-docs/)
+- Search the [official developer docs](https://docs.obsidian.md/Home)
 
 ➡️ [Documentation of Features for Developers](docs/Features%20for%20Developers.md)
 
