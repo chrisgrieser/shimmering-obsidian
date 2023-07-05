@@ -89,7 +89,10 @@ function run(argv) {
 	const newNoteLocation = $.getenv("new_note_location") || "";
 	const newNoteRelPath = `${newNoteLocation}/${fileName}.md`;
 	let newNoteAbsPath = getVaultPath() + "/" + newNoteRelPath;
-	if (fileExists(newNoteAbsPath)) newNoteAbsPath += " 1";
+	while (fileExists(newNoteAbsPath)) {
+		newNoteAbsPath += " 1";
+	}
+
 
 	let newNoteContent;
 	if (selectedText) {
