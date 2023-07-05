@@ -96,10 +96,10 @@
 ---
 
 ### Documentation Search
-- Search the [Official Obsidian Documentation](https://help.obsidian.md/Obsidian/Index)
+- Search the [Official Obsidian Documentation](https://help.obsidian.md/Home)
 - Simultaneously search the [Obsidian Hub](https://publish.obsidian.md/hub/00+-+Start+here)
 
-➡️ [Documentation of the Documentation](docs/Documentation%20Search.md)
+➡️ [Documentation of the Documentation Search](docs/Documentation%20Search.md)
 
 ---
 
