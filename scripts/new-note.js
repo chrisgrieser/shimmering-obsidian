@@ -20,18 +20,6 @@ function writeToFile(text, file) {
 	str.writeToFileAtomicallyEncodingError(file, true, $.NSUTF8StringEncoding, null);
 }
 
-/**
- * @param {string} envVar
- * @param {string} newValue
- */
-function setEnvVar(envVar, newValue) {
-	Application("com.runningwithcrayons.Alfred").setConfiguration(envVar, {
-		toValue: newValue,
-		inWorkflow: $.getenv("alfred_workflow_bundleid"),
-		exportable: false,
-	});
-}
-
 function getVaultPath() {
 	const theApp = Application.currentApplication();
 	theApp.includeStandardAdditions = true;
@@ -61,23 +49,13 @@ const fileExists = (/** @type {string} */ filePath) => Application("Finder").exi
 /** @type {AlfredRun} */
 // rome-ignore lint/correctness/noUnusedVariables: Alfred run
 function run(argv) {
-	let selectedText; // when hotkey was used
-	try {
-		selectedText = $.getenv("selected_text");
-	} catch (_error) {
-		selectedText = "";
-	}
-
 	let createInNewTab;
 	try {
 		createInNewTab = $.getenv("create_in_new_tab") === "true";
-	} catch (_error) {
-		createInNewTab = false;
-	}
-	if (createInNewTab)
 		app.openLocation(
 			`obsidian://advanced-uri?vault=${getVaultNameEncoded()}&commandid=workspace%253Anew-tab`,
 		);
+	} catch (_error) {}
 
 	//───────────────────────────────────────────────────────────────────────────
 
@@ -85,6 +63,7 @@ function run(argv) {
 	fileName = fileName.replace(/[\\/:]/g, ""); // remove illegal characters
 	fileName = fileName.charAt(0).toUpperCase() + fileName.slice(1); // capitalize
 
+	const selectedText = $.getenv("selected_text");
 	const templateRelPath = $.getenv("template_note_path") || "";
 	const newNoteLocation = $.getenv("new_note_location") || "";
 	const newNoteRelPath = `${newNoteLocation}/${fileName}.md`;
@@ -106,10 +85,6 @@ function run(argv) {
 	}
 
 	writeToFile(newNoteContent, newNoteAbsPath);
-
-	// reset
-	setEnvVar("create_in_new_tab", "");
-	setEnvVar("selected_text", "");
 
 	return newNoteRelPath; // pass to opening function
 }

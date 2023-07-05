@@ -1,18 +1,11 @@
 # Note-related Features
 
-## Table of Contents
-<!--toc:start-->
-- [Create a new Note](#create-a-new-note)
-- [Scratchpad](#scratchpad)
-<!--toc:end-->
-
 ## Create a new Note
-__`on` or `triggered via hotkey`: Create a `n`ew note.__
+__`on`: Create a `n`ew note.__
 - __File Name:__ Anything you type after the keyword `on` (e.g., `on foobar`) will become the file name of the new note (e.g., `foobar.md`). (Note that the [Filename Heading Sync Plugin](https://obsidian.md/plugins?id=obsidian-filename-heading-sync) may interfere with this.)
 	- When triggered via `cmd + ↵`, the new note will be created in a new tab.
 - __Content:__ You can select a template note to use in the workflow configuration. Any `{{title}}` placeholders in the template will be replaced with the name of the file. Be aware that the template will be overridden by Folder Templates from the [Templater plugin](https://obsidian.md/plugins?id=templater-obsidian).
 - __Location:__ The new note will be placed in the folder specified in the workflow configuration. If the configuration is left empty, it will be placed in your vault root.
-- When triggered via __hotkey__, will append the current selection.
 - 💡 There are various settings for creating new notes in the workflow configuration.
 
 ## Scratchpad

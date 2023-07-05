@@ -63,12 +63,6 @@ workspaceArray.forEach(workspaceName => {
 		arg: workspaceLoadURI,
 		uid: workspaceName,
 		icon: { path: iconpath },
-		mods: {
-			cmd: {
-				arg: workspaceSaveLoadURI,
-				subtitle: "⌘: Save '" + currentWorkspace + "', then load",
-			},
-		},
 	});
 });
 
