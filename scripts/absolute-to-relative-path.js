@@ -1,5 +1,7 @@
 #!/usr/bin/env osascript -l JavaScript
 
+ObjC.import("stdlib")
+
 function run(argv) {
 	function getVaultPath() {
 		const theApp = Application.currentApplication();
