@@ -1,2 +1,5 @@
 # Mac
 .DS_Store
+
+# Alfred
+prefs.plist

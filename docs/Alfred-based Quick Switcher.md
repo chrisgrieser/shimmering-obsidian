@@ -135,8 +135,6 @@ When the "Privacy Mode" checkbox is enabled, all notes with the cssclass `privat
 ### Vault Search as Alfred Fallback
 The main search (`o`) can also be used as [Fallback Search for Alfred](https://www.alfredapp.com/help/features/default-results/fallback-searches/), basically a search that shows up when any Alfred search has no result.
 
-![fallback search](images/fallback-search.png)
-
 ### Previewing Notes via QuickLook
 To avoid accidentally triggering the Quick Look feature, I suggest you turn off activating Quick Look via shift and use `⌘ + Y` instead. You can do so with in the Alfred Settings under `Features → Previews`:
 

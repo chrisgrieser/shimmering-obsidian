@@ -3250,6 +3250,47 @@ set parameter to do shell script "echo " &amp; quoted form of (system attribute 
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>keyword</key>
+				<string>on</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>New Note: '{query}'</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>4B2FBAC0-BF9C-46B5-82A3-423036076906</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<true/>
+				<key>variables</key>
+				<dict>
+					<key>create_in_new_tab</key>
+					<string>true</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>CA4E2034-4495-477F-B3EC-CCCFE06FF886</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>externaltriggerid</key>
 				<string>open-relative-path-in-obsidian</string>
 				<key>passinputasargument</key>
@@ -3307,47 +3348,6 @@ return "{query}"</string>
 			<string>21AA977D-B161-4D09-BC2C-C8A26504140F</string>
 			<key>version</key>
 			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>keyword</key>
-				<string>on</string>
-				<key>subtext</key>
-				<string></string>
-				<key>text</key>
-				<string>New Note: '{query}'</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>4B2FBAC0-BF9C-46B5-82A3-423036076906</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string></string>
-				<key>passthroughargument</key>
-				<true/>
-				<key>variables</key>
-				<dict>
-					<key>create_in_new_tab</key>
-					<string>true</string>
-				</dict>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>CA4E2034-4495-477F-B3EC-CCCFE06FF886</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -5236,6 +5236,25 @@ JSON.stringify({ 'items': jsonArray });
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>externaltriggerid</key>
+				<string>copy-markdown-link</string>
+				<key>passinputasargument</key>
+				<true/>
+				<key>passvariables</key>
+				<true/>
+				<key>workflowbundleid</key>
+				<string>self</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>E98B2FB0-60FA-4F2F-9159-6B774AD0277E</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>availableviaurlhandler</key>
 				<false/>
 				<key>triggerid</key>
@@ -5265,25 +5284,6 @@ JSON.stringify({ 'items': jsonArray });
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
 			<string>D58F4E6C-BAA2-47E7-91E4-7B2C52FF0D2A</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>externaltriggerid</key>
-				<string>copy-markdown-link</string>
-				<key>passinputasargument</key>
-				<true/>
-				<key>passvariables</key>
-				<true/>
-				<key>workflowbundleid</key>
-				<string>self</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.callexternaltrigger</string>
-			<key>uid</key>
-			<string>E98B2FB0-60FA-4F2F-9159-6B774AD0277E</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -6972,7 +6972,7 @@ An Alfred Workflow with dozens of features for controlling Obsidian.
 		<key>07C4D3F5-5CBC-4BAF-9004-B506BEF11C23</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>xpos</key>
 			<real>495</real>
 			<key>ypos</key>
@@ -6990,7 +6990,7 @@ An Alfred Workflow with dozens of features for controlling Obsidian.
 		<key>0884C587-3452-45CA-94B3-6C10D113D381</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>xpos</key>
 			<real>215</real>
 			<key>ypos</key>
@@ -7001,7 +7001,7 @@ An Alfred Workflow with dozens of features for controlling Obsidian.
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<real>890</real>
+			<real>650</real>
 			<key>ypos</key>
 			<real>5425</real>
 		</dict>
@@ -7072,12 +7072,12 @@ An Alfred Workflow with dozens of features for controlling Obsidian.
 			<key>xpos</key>
 			<real>260</real>
 			<key>ypos</key>
-			<real>8230</real>
+			<real>8220</real>
 		</dict>
 		<key>0F72D532-AAE1-48A3-85FC-A819F196DC3E</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>xpos</key>
 			<real>330</real>
 			<key>ypos</key>
@@ -7095,7 +7095,7 @@ An Alfred Workflow with dozens of features for controlling Obsidian.
 		<key>11CD2255-4E07-4648-8E5C-A59346A63EC0</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>note</key>
 			<string>enable/disable plugin</string>
 			<key>xpos</key>
@@ -7115,7 +7115,7 @@ An Alfred Workflow with dozens of features for controlling Obsidian.
 		<key>164B20C3-4277-490E-9EB2-DCE923784B89</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>xpos</key>
 			<real>445</real>
 			<key>ypos</key>
@@ -7151,7 +7151,7 @@ An Alfred Workflow with dozens of features for controlling Obsidian.
 		<key>1E497866-1199-4947-BC1A-AC23ADDD6C82</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>xpos</key>
 			<real>2480</real>
 			<key>ypos</key>
@@ -7200,7 +7200,7 @@ An Alfred Workflow with dozens of features for controlling Obsidian.
 		<key>27BE592C-7FFD-4F99-8501-204EB94A4138</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>note</key>
 			<string>selection</string>
 			<key>xpos</key>
@@ -7251,7 +7251,7 @@ An Alfred Workflow with dozens of features for controlling Obsidian.
 		<key>2BB4DFA9-6E15-4EE5-8E69-7E1AE14AA2EC</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>xpos</key>
 			<real>215</real>
 			<key>ypos</key>
@@ -7271,7 +7271,7 @@ An Alfred Workflow with dozens of features for controlling Obsidian.
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<real>1040</real>
+			<real>800</real>
 			<key>ypos</key>
 			<real>5490</real>
 		</dict>
@@ -7307,7 +7307,7 @@ An Alfred Workflow with dozens of features for controlling Obsidian.
 		<key>3375D306-A5E5-433F-9624-ECB93A8F9539</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>note</key>
 			<string>search docs</string>
 			<key>xpos</key>
@@ -7345,7 +7345,7 @@ An Alfred Workflow with dozens of features for controlling Obsidian.
 		<key>392642B8-A259-495D-A715-AD6FE5DBE992</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>note</key>
 			<string>plugin update</string>
 			<key>xpos</key>
@@ -7365,7 +7365,7 @@ An Alfred Workflow with dozens of features for controlling Obsidian.
 		<key>3AB54AFB-E09E-4F9E-9436-2B3F830B87B0</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>note</key>
 			<string>set vars</string>
 			<key>xpos</key>
@@ -7480,9 +7480,9 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>note</key>
 			<string>new note</string>
 			<key>xpos</key>
-			<real>200</real>
+			<real>185</real>
 			<key>ypos</key>
-			<real>1005</real>
+			<real>935</real>
 		</dict>
 		<key>4D2CDFC0-FABC-4A89-AB61-3BEB278DE479</key>
 		<dict>
@@ -7507,7 +7507,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 		<key>4D7CE883-A32F-45EC-BC4A-106918BD64AF</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>xpos</key>
 			<real>495</real>
 			<key>ypos</key>
@@ -7536,7 +7536,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 		<key>4F356F57-A6AA-4277-B742-27DC8EE84450</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>note</key>
 			<string>refreshing metadata</string>
 			<key>xpos</key>
@@ -7560,7 +7560,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 		<key>506E519A-3B07-43B8-91CF-46161EB47E5E</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>xpos</key>
 			<real>645</real>
 			<key>ypos</key>
@@ -7591,14 +7591,14 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>xpos</key>
 			<real>255</real>
 			<key>ypos</key>
-			<real>8105</real>
+			<real>8095</real>
 		</dict>
 		<key>560E177F-C4A4-432D-A640-5A15B7048CB8</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<real>545</real>
+			<real>480</real>
 			<key>ypos</key>
 			<real>5125</real>
 		</dict>
@@ -7625,16 +7625,16 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<real>220</real>
+			<real>190</real>
 			<key>ypos</key>
 			<real>5555</real>
 		</dict>
 		<key>59F6D45C-8613-4D9A-9D10-F66F46506215</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>xpos</key>
-			<real>220</real>
+			<real>190</real>
 			<key>ypos</key>
 			<real>5685</real>
 		</dict>
@@ -7670,14 +7670,14 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<real>735</real>
+			<real>495</real>
 			<key>ypos</key>
 			<real>5555</real>
 		</dict>
 		<key>5EF4465D-1198-4857-BFAD-B843B6339E84</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>note</key>
 			<string>open after</string>
 			<key>xpos</key>
@@ -7721,7 +7721,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 		<key>62FD6FDE-5585-4973-952D-D394AC354375</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>xpos</key>
 			<real>245</real>
 			<key>ypos</key>
@@ -7782,7 +7782,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 		<key>6A8AE7C9-2FE9-45DD-8CCC-69B6146E26F7</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>note</key>
 			<string>search plugins/themes</string>
 			<key>xpos</key>
@@ -7824,7 +7824,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 		<key>755E6BC4-2009-4A82-BE54-9591E7B0FB74</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>xpos</key>
 			<real>245</real>
 			<key>ypos</key>
@@ -7935,7 +7935,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 		<key>7E09083A-9554-427F-AAD5-875DEF5F1A5C</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>note</key>
 			<string>re-index</string>
 			<key>xpos</key>
@@ -7995,7 +7995,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 		<key>882A3EBC-D27F-474F-A2C8-03A347DC0FE8</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>1</integer>
+			<integer>11</integer>
 			<key>xpos</key>
 			<real>2040</real>
 			<key>ypos</key>
@@ -8004,7 +8004,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 		<key>88723AC0-4348-4B23-AFD7-FEFE6C532A94</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>note</key>
 			<string>pass clipboard</string>
 			<key>xpos</key>
@@ -8042,7 +8042,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 		<key>8DD30BCA-F11D-415E-8DFA-F40BD34857F9</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
@@ -8069,7 +8069,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 		<key>92307BE0-68AE-451F-9850-FE01218229BF</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>xpos</key>
 			<real>1845</real>
 			<key>ypos</key>
@@ -8100,7 +8100,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>xpos</key>
 			<real>175</real>
 			<key>ypos</key>
-			<real>8260</real>
+			<real>8250</real>
 		</dict>
 		<key>994FC5F6-BF71-4B6D-8E8B-794A453AC62D</key>
 		<dict>
@@ -8174,7 +8174,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 		<key>A5ADC808-2010-447C-9B0A-B4C14C3801EB</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>xpos</key>
 			<real>355</real>
 			<key>ypos</key>
@@ -8183,7 +8183,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 		<key>A5BA80AA-D2FF-43BC-AE70-4C34D0BB4E20</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>note</key>
 			<string>set vars</string>
 			<key>xpos</key>
@@ -8198,7 +8198,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>4080</real>
+			<real>4195</real>
 		</dict>
 		<key>AA9D1406-C025-496B-B7BD-DE68ABA1954E</key>
 		<dict>
@@ -8223,7 +8223,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 		<key>AE9C92E7-0280-463B-997F-A879F77F2E4F</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>1</integer>
+			<integer>9</integer>
 			<key>xpos</key>
 			<real>2480</real>
 			<key>ypos</key>
@@ -8287,7 +8287,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>colorindex</key>
 			<integer>6</integer>
 			<key>xpos</key>
-			<real>420</real>
+			<real>340</real>
 			<key>ypos</key>
 			<real>3960</real>
 		</dict>
@@ -8305,14 +8305,14 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>colorindex</key>
 			<integer>6</integer>
 			<key>xpos</key>
-			<real>420</real>
+			<real>340</real>
 			<key>ypos</key>
 			<real>4075</real>
 		</dict>
 		<key>B9AC24F9-316C-4D05-903D-7ED21EA0A3C8</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>note</key>
 			<string>append to file</string>
 			<key>xpos</key>
@@ -8325,7 +8325,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<real>890</real>
+			<real>650</real>
 			<key>ypos</key>
 			<real>5555</real>
 		</dict>
@@ -8356,12 +8356,12 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>xpos</key>
 			<real>255</real>
 			<key>ypos</key>
-			<real>7995</real>
+			<real>7985</real>
 		</dict>
 		<key>BFF5266E-FA2A-455F-9C52-3A0480BAFF2F</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>note</key>
 			<string>Copy Markdown Link / wikilink</string>
 			<key>xpos</key>
@@ -8372,7 +8372,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 		<key>C066249A-3C9E-424F-8919-CA805A3D3C31</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>note</key>
 			<string>issue search GitHub</string>
 			<key>xpos</key>
@@ -8401,7 +8401,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 		<key>C53137FD-2FD6-430E-8855-F4DC3164786D</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>xpos</key>
 			<real>825</real>
 			<key>ypos</key>
@@ -8432,9 +8432,9 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>note</key>
 			<string>create in new tab</string>
 			<key>xpos</key>
-			<real>400</real>
+			<real>385</real>
 			<key>ypos</key>
-			<real>1035</real>
+			<real>965</real>
 		</dict>
 		<key>CBAE02F7-62CC-4974-96C0-841453D73B48</key>
 		<dict>
@@ -8443,7 +8443,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>note</key>
 			<string>re-index documentation</string>
 			<key>xpos</key>
-			<real>520</real>
+			<real>345</real>
 			<key>ypos</key>
 			<real>5555</real>
 		</dict>
@@ -8514,16 +8514,16 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 		<key>D58F4E6C-BAA2-47E7-91E4-7B2C52FF0D2A</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>xpos</key>
 			<real>175</real>
 			<key>ypos</key>
-			<real>4110</real>
+			<real>4225</real>
 		</dict>
 		<key>D5F4366E-F9DC-479B-991D-8A00AB231A39</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>xpos</key>
 			<real>255</real>
 			<key>ypos</key>
@@ -8563,7 +8563,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<real>405</real>
+			<real>340</real>
 			<key>ypos</key>
 			<real>5125</real>
 		</dict>
@@ -8619,7 +8619,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<real>520</real>
+			<real>340</real>
 			<key>ypos</key>
 			<real>5265</real>
 		</dict>
@@ -8644,7 +8644,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 		<key>E60130DC-8A6E-4892-8516-B79153DC480B</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>1</integer>
+			<integer>11</integer>
 			<key>xpos</key>
 			<real>1885</real>
 			<key>ypos</key>
@@ -8673,7 +8673,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>colorindex</key>
 			<integer>6</integer>
 			<key>xpos</key>
-			<real>420</real>
+			<real>340</real>
 			<key>ypos</key>
 			<real>4185</real>
 		</dict>
@@ -8691,14 +8691,14 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<real>520</real>
+			<real>345</real>
 			<key>ypos</key>
 			<real>5425</real>
 		</dict>
 		<key>EE4720A7-4048-4A92-B0AA-8F811AE57C1E</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>note</key>
 			<string>append to Scratchpad</string>
 			<key>xpos</key>
@@ -8722,7 +8722,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>colorindex</key>
 			<integer>6</integer>
 			<key>xpos</key>
-			<real>420</real>
+			<real>340</real>
 			<key>ypos</key>
 			<real>3845</real>
 		</dict>
@@ -8778,11 +8778,11 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 		<key>F273E746-ABEB-4F5A-A7A1-2CFA02A663FA</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
 			<key>xpos</key>
-			<real>220</real>
+			<real>205</real>
 			<key>ypos</key>
-			<real>3730</real>
+			<real>3760</real>
 		</dict>
 		<key>F43AAA85-F638-4A4C-AE36-FB26D01EDFAA</key>
 		<dict>

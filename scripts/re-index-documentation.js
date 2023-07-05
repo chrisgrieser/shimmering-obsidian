@@ -4,7 +4,7 @@ const app = Application.currentApplication();
 app.includeStandardAdditions = true;
 
 function onlineJSON (url) {
-	return JSON.parse (app.doShellScript("curl -s \"" + url + "\""));
+	return JSON.parse (app.doShellScript(`curl -sL  "${url}"`));
 }
 
 function alfredMatcher (str) {
@@ -26,7 +26,7 @@ const communityDocsJSON = onlineJSON("https://api.github.com/repos/obsidian-comm
 // --------------------------------
 const officialDocs =	officialDocsJSON
 	.tree
-	.filter ( item =>
+	.filter (item =>
 		item.path.slice(-3) === ".md" &&
 		item.path.slice(0, 3) === "en/" &&
 		item.path.slice(0, 9) !== "en/.trash",
