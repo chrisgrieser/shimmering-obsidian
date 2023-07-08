@@ -6,6 +6,7 @@
 cd "$(git rev-parse --show-toplevel)" || return 1
 
 #───────────────────────────────────────────────────────────────────────────────
+# BUMP VERSION NUMBER
 
 # Prompt for next version number
 nextVersion="$*"
