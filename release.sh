@@ -5,6 +5,8 @@
 # goto git root
 cd "$(git rev-parse --show-toplevel)" || return 1
 
+#───────────────────────────────────────────────────────────────────────────────
+
 # Prompt for next version number
 nextVersion="$*"
 currentVersion=$(plutil -extract version xml1 -o - info.plist | sed -n 4p | cut -d">" -f2 | cut -d"<" -f1)
@@ -12,7 +14,16 @@ echo "current version: $currentVersion"
 echo -n "   next version: "
 read -r nextVersion
 echo
+
+# Insert next version number
 plutil -replace version -string "$nextVersion" info.plist
+localInfoPlist="$DOTFILE_FOLDER/Alfred.alfredpreferences/workflows/$(basename "$PWD")/info.plist"
+if [[ -f "$localInfoPlist" ]]; then
+	plutil -replace version -string "$nextVersion" "$localInfoPlist"
+fi
+
+#───────────────────────────────────────────────────────────────────────────────
+# COMPILE ALFREDWORKFLOW FILE
 
 # backup info.plist
 cp -v info.plist info-original.plist # backup
@@ -23,8 +34,8 @@ if plutil -extract variablesdontexport json -o - info.plist &>/dev/null; then
 	echo "$excludedVars" | tr "\n" "\0" | xargs -0 -I {} plutil -replace variables.{} -string "" info.plist
 fi
 
-# COMPILE ALFREDWORKFLOW FILE
-rm -fv ./*.alfredworkflow # remove workflow file from previous release
+# remove workflow file from previous release
+rm -fv ./*.alfredworkflow
 
 # zip
 workflowName=$(plutil -extract name xml1 -o - info.plist | sed -n 4p | cut -d">" -f2 | cut -d"<" -f1 | tr " " "-")
@@ -33,6 +44,8 @@ zip --quiet --recurse-paths "$workflowName.alfredworkflow" . \
 
 # restore original
 rm -fv info.plist && mv -fv info-original.plist info.plist
+
+#───────────────────────────────────────────────────────────────────────────────
 
 # GIT OPERATIONS
 git add -A
