@@ -47,8 +47,8 @@ zip --quiet --recurse-paths "$workflowName.alfredworkflow" . \
 rm -fv info.plist && mv -fv info-original.plist info.plist
 
 #───────────────────────────────────────────────────────────────────────────────
-
 # GIT OPERATIONS
+
 git add -A
 git commit -m "release $nextVersion"
 git pull
