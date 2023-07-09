@@ -69,7 +69,7 @@ function run(argv) {
 	const newNoteRelPath = `${newNoteLocation}/${fileName}.md`;
 	let newNoteAbsPath = getVaultPath() + "/" + newNoteRelPath;
 	while (fileExists(newNoteAbsPath)) {
-		newNoteAbsPath += " 1";
+		newNoteAbsPath = newNoteAbsPath.slice(0, -3) + " 1.md";
 	}
 
 
