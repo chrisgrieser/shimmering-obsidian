@@ -1,0 +1,46 @@
+name: Build & Release Alfred Workflow
+
+on: # yamllint disable-line rule:truthy
+  push:
+    tags:
+      - "*"
+
+env:
+  WORKFLOW_NAME: ${{ github.event.repository.name }}
+  VERSION: ${{ github.ref }} # = the tag used to trigger this action
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VERSION: ${{ env.VERSION }}
+        with:
+          tag_name: ${{ env.VERSION }}
+          release_name: ${{ env.VERSION }}
+          draft: false
+          prerelease: false
+
+      - name: Build .alfredworkflow
+        run: |
+          zip --quiet --recurse-paths "${{ env.WORKFLOW_NAME }}.alfredworkflow" . \
+            --exclude ".git*" "Makefile" "build-and-release.sh" "README.md" "assets/*" ".DS_Store"
+
+      - name: Upload .alfredworkflow as Release Asset
+        id: upload-alfredworkflow
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./${{ env.WORKFLOW_NAME }}.alfredworkflow
+          asset_name: ${{ env.WORKFLOW_NAME }}.alfredworkflow
+          asset_content_type: application/zip
