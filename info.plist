@@ -1272,9 +1272,9 @@
 				<key>destinationuid</key>
 				<string>F273E746-ABEB-4F5A-A7A1-2CFA02A663FA</string>
 				<key>modifiers</key>
-				<integer>8388608</integer>
+				<integer>0</integer>
 				<key>modifiersubtext</key>
-				<string>fn: Open in Default App</string>
+				<string></string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -1282,9 +1282,9 @@
 				<key>destinationuid</key>
 				<string>EFE0C492-DFD2-4B30-85A5-C36E50F63B7E</string>
 				<key>modifiers</key>
-				<integer>0</integer>
+				<integer>131072</integer>
 				<key>modifiersubtext</key>
-				<string></string>
+				<string>⇧: Open in Obsidian</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -4653,7 +4653,7 @@ Application('com.runningwithcrayons.Alfred').removeConfiguration('ObRunning', {
 				<key>escaping</key>
 				<integer>0</integer>
 				<key>keyword</key>
-				<string>os</string>
+				<string>ob</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -4669,11 +4669,11 @@ Application('com.runningwithcrayons.Alfred').removeConfiguration('ObRunning', {
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string>scripts/starred-search.js</string>
+				<string>scripts/bookmark-search.js</string>
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
-				<string>⭐️ Open Starred Files and Searches</string>
+				<string>⭐️ Open Bookmarked Files and Searches</string>
 				<key>type</key>
 				<integer>8</integer>
 				<key>withspace</key>
@@ -6685,27 +6685,23 @@ fi</string>
 		</dict>
 	</array>
 	<key>readme</key>
-	<string># ℹ️ After updating to 3.9+, you have to re-run `osetup` once before the workflow works.
-
----
-
-# Auto-Updates via Alfred Gallery[This workflow is now included in the Alfred gallery](http://alfred.app/workflows/chrisgrieser/shimmering-obsidian/) and auto-updates will there be managed by Alfred and not by this workflow anymore.---
-
-# Shimmering Obsidian
+	<string># Shimmering Obsidian
 An Alfred Workflow with dozens of features for controlling Obsidian.
 
-## Info
-- [README](https://github.com/chrisgrieser/shimmering-obsidian/blob/main/README.md)
-- [Changelog](https://github.com/chrisgrieser/shimmering-obsidian/blob/main/Changelog.md)
-- [Bug Reports](https://github.com/chrisgrieser/shimmering-obsidian/issues)
-
 ## Workflow Setup
-1. Install the Obsidian plugins [Advanced URI](https://obsidian.md/plugins?id=obsidian-advanced-uri) &amp; [Metadata Extractor](https://obsidian.md/plugins?id=metadata-extractor). Enable both plugins.
-2. Run the Alfred Command `osetup` and select the vault you want to control with *Shimmering Obsidian*. Obsidian will then restart. (Even if you have only one vault, you need to confirm that one vault once before you can use the workflow.)
+1. Install the Obsidian plugins [Advanced URI](https://obsidian.md/plugins?id=obsidian-advanced-uri) &amp; [Metadata Extractor](https://obsidian.md/plugins?id=metadata-extractor). 
+2. Enable both plugins.
+3. Run the Alfred Command `osetup` and select the vault you want to control with *Shimmering Obsidian*. Obsidian will then restart. (Even if you have only one vault, you need to confirm that one vault once before you can use the workflow.)
 
 ## Workflow Configuration
 - Some features require additional configuration to the right. You can get further information on those features at the respective sections of the [documentation](https://github.com/chrisgrieser/shimmering-obsidian/blob/main/README.md).
 - To configure the Hotkeys, double-click [sky-blue fields](https://i.imgur.com/wlpht7f.png) at the top left of the workflow window. 
+
+## More
+- 📓 [Documentation of All Features](https://github.com/chrisgrieser/shimmering-obsidian/blob/main/README.md)
+- 🐛 [Bug Reports](https://github.com/chrisgrieser/shimmering-obsidian/issues)
+
+---
 
 ## Created by
 [Chris Grieser](https://chris-grieser.de/)
@@ -7237,7 +7233,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>note</key>
-			<string>⭐️ search starred files/searches</string>
+			<string>🔖 search bookmarked files/searches</string>
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
@@ -7473,7 +7469,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>note</key>
 			<string>open to Scratchpad</string>
 			<key>xpos</key>
-			<real>35</real>
+			<real>30</real>
 			<key>ypos</key>
 			<real>800</real>
 		</dict>
@@ -8095,7 +8091,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>note</key>
 			<string>new note</string>
 			<key>xpos</key>
-			<real>40</real>
+			<real>30</real>
 			<key>ypos</key>
 			<real>1770</real>
 		</dict>
@@ -8483,7 +8479,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>xpos</key>
 			<real>205</real>
 			<key>ypos</key>
-			<real>3520</real>
+			<real>3510</real>
 		</dict>
 		<key>F43AAA85-F638-4A4C-AE36-FB26D01EDFAA</key>
 		<dict>
