@@ -6685,36 +6685,43 @@ fi</string>
 		</dict>
 	</array>
 	<key>readme</key>
-	<string># Shimmering Obsidian
-An Alfred Workflow with dozens of features for controlling Obsidian.
-
-## Workflow Setup
-1. Install the Obsidian plugins [Advanced URI](https://obsidian.md/plugins?id=obsidian-advanced-uri) &amp; [Metadata Extractor](https://obsidian.md/plugins?id=metadata-extractor). 
-2. Enable both plugins.
-3. Run the Alfred Command `osetup` and select the vault you want to control with *Shimmering Obsidian*. Obsidian will then restart. (Even if you have only one vault, you need to confirm that one vault once before you can use the workflow.)
-
-## Workflow Configuration
-- Some features require additional configuration to the right. You can get further information on those features at the respective sections of the [documentation](https://github.com/chrisgrieser/shimmering-obsidian/blob/main/README.md).
-- To configure the Hotkeys, double-click [sky-blue fields](https://i.imgur.com/wlpht7f.png) at the top left of the workflow window. 
-
-## More
-- 📓 [Documentation of All Features](https://github.com/chrisgrieser/shimmering-obsidian/blob/main/README.md)
-- 🐛 [Bug Reports](https://github.com/chrisgrieser/shimmering-obsidian/issues)
+	<string>## ℹ️ Recent Changes
+- new: `odd` obsidian developer document search for the [Obsidian Developer Docs](https://docs.obsidian.md/Home).
+- `os` starred-search renamed to `ob` bookmark-search to reflect the switch from the Starred Core Plugin to the Bookmarks Core Plugin
+- `oa` attachment search now opens in the default app by default, not opening Obsidian. (Use `⇧⏎` to open in Obsidian.)
+- Workflow Icon updated due to the Obsidian Icon change
+- Forum Search has been deprecated/removed.
+- ⭐️ 600 Stars on GitHub! Thank you everyone for your support. (You can also star the plugin at the [GitHub repo](https://github.com/chrisgrieser/shimmering-obsidian) to show your support for it.)
+- Various Bug Fixes (OCR Screenshots, `on` not overriding existing files, etc.)
 
 ---
 
-## Created by
-[Chris Grieser](https://chris-grieser.de/)
+## 🏁 Workflow Setup
+1. Install the Obsidian plugins [Advanced URI](https://obsidian.md/plugins?id=obsidian-advanced-uri) &amp; [Metadata Extractor](https://obsidian.md/plugins?id=metadata-extractor). Enable both plugins.
+2. Run the Alfred Command `osetup` and select the vault you want to control with *Shimmering Obsidian*. Obsidian will then restart. (Even if you have only one vault, you need to confirm that one vault once before you can use the workflow.)
 
-#### Profiles
+## ⚙️ Workflow Configuration
+- Some features require additional configuration to the right. You can get further information on those features at the respective sections of the [documentation](https://github.com/chrisgrieser/shimmering-obsidian/blob/main/README.md).
+- To configure the Hotkeys, double-click [sky-blue fields](https://i.imgur.com/wlpht7f.png) at the top left of the workflow window. 
+
+
+---
+
+### 📓 [Documentation of all features](https://github.com/chrisgrieser/shimmering-obsidian/blob/main/README.md)
+
+### 🐛 [Bug reports](https://github.com/chrisgrieser/shimmering-obsidian/issues)
+
+### ☕️ [Buy me a Coffee](https://ko-fi.com/pseudometa)
+
+---
+
+### Created by [Chris Grieser](https://chris-grieser.de/)
 - [ResearchGate](https://www.researchgate.net/profile/Christopher-Grieser)
 - [Discord](https://discordapp.com/users/462774483044794368/)
 - [GitHub](https://github.com/chrisgrieser/)
 - [Twitter](https://twitter.com/pseudo_meta)
-- [LinkedIn](https://www.linkedin.com/in/christopher-grieser-ba693b17a/)
-
-#### Buy me a Coffee
-[Ko-Fi](https://ko-fi.com/pseudometa)</string>
+- [Mastodon](https://pkm.social/@pseudometa)
+- [LinkedIn](https://www.linkedin.com/in/christopher-grieser-ba693b17a/)</string>
 	<key>uidata</key>
 	<dict>
 		<key>06308645-1484-49FA-8806-537D1A50C1B6</key>
@@ -8551,7 +8558,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 				<key>required</key>
 				<false/>
 				<key>text</key>
-				<string>on</string>
+				<string>enabled</string>
 			</dict>
 			<key>description</key>
 			<string>While enabled, all Notes with the cssclass "private" will be censored. This setting is meant to be enabled temporarily when sharing the screen.</string>
@@ -9033,16 +9040,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 	<dict>
 		<key>censor_char</key>
 		<string>▉</string>
-		<key>create_in_new_tab</key>
-		<string></string>
-		<key>selected_text</key>
-		<string></string>
 	</dict>
-	<key>variablesdontexport</key>
-	<array>
-		<string>selected_text</string>
-		<string>create_in_new_tab</string>
-	</array>
 	<key>version</key>
 	<string>3.10.6</string>
 	<key>webaddress</key>
