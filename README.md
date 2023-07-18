@@ -34,15 +34,11 @@
 
 ➡️ [Documentation of Quick Switcher Features](docs/Alfred-based%20Quick%20Switcher.md)
 
----
-
 ### Note-related Features
 - Create new Notes, based on a template
 - Quickly append to a scratchpad note
 
 ➡️ [Documentation of Note-related Features](docs/Note-related%20Features.md)
-
----
 
 ### Screenshot Features
 - OCR-Screenshots
@@ -51,27 +47,21 @@
 
 ➡️ [Documentation of Screenshot Features](docs/Screenshot%20Features.md)
 
----
-
 ### Utility Features
-- 🆕 Open the current browser tab directly in Obsidian.
-- Backup your Vault
+- Back up your Vault
 - Access various folders like `.obsidian` or `.trash`
-- Update Plugins (including beta Plugins installed via BRAT)
+- Update Plugins (including Beta Plugins installed via BRAT)
+- Access themes & CSS Snippets
 
 ➡️ [Documentation of all Utility Features](docs/Utility%20Features.md)
 
----
-
-### Plugin & Theme Search
+### Plugins & Themes
 - Search Community Plugins and Themes
 - Open in Obsidian or GitHub
 - Access Plugin Settings
 - Search & Create GitHub Issues
 
 ➡️ [Documentation of the Plugin & Theme Search](docs/Plugin%20and%20Theme%20Search.md)
-
----
 
 ### Workspace Switcher
 - Switch workspaces
@@ -82,9 +72,7 @@
 
 ➡️ [Documentation of the Workspace Switcher](docs/Workspace%20Switcher.md)
 
----
-
-### Settings & Local Plugin Search
+### Settings & Local Plugins
 - Search & open specific Settings Tabs, the Theme Browser, or the Community Browser
 - Update all plugins
 - Open Plugin Settings
@@ -93,30 +81,17 @@
 
 ➡️ [Documentation of the Settings Search](docs/Settings%20and%20Local%20Plugin%20Search.md)
 
----
-
-### Documentation Search
+### Documentation & Help
 - Search the [Official Obsidian Documentation](https://help.obsidian.md/Home)
 - Simultaneously search the [Obsidian Hub](https://publish.obsidian.md/hub/00+-+Start+here)
 
 ➡️ [Documentation of the Documentation Search](docs/Documentation%20Search.md)
-
----
 
 ### Vault Switcher
 - Switch the Vault controlled by this Alfred workflow.
 - Open vaults in Obsidian, Finder, or the Terminal.
 
 ➡️ [Documentation of the Vault Switcher](docs/Vault%20Switcher.md)
-
----
-
-### CSS-related Features
-- Access themes & CSS Snippets
-
-➡️ [Documentation of CSS-related Features](docs/CSS-related%20Features.md)
-
----
 
 ### Features for Developers
 - Open various development-related folders
@@ -128,8 +103,6 @@
 
 ➡️ [Documentation of Features for Developers](docs/Features%20for%20Developers.md)
 
----
-
 ## Workflow Installation
 *This workflow requires the Alfred 5 with [Powerpack](https://www.alfredapp.com/powerpack/).*
 1. Install the Obsidian plugins [Advanced URI](https://obsidian.md/plugins?id=obsidian-advanced-uri) & [Metadata Extractor](https://obsidian.md/plugins?id=metadata-extractor). Enable both plugins.
@@ -138,9 +111,9 @@
 4. Run the Alfred Command `osetup` and select the vault you want to control with *Shimmering Obsidian*. Obsidian then restarts. (Even if you have only one vault, you need to confirm that one vault once before you can use the workflow.)
 
 ## Credits & Thanks
-- Big shout-out to [@kometenstaub](https://github.com/kometenstaub) for developing the [metadata extractor plugin](https://github.com/kometenstaub/metadata-extractor), for which this workflow is the main client.
+- Big shout-out to [@kometenstaub](https://github.com/kometenstaub) for developing the [metadata extractor plugin](https://github.com/kometenstaub/metadata-extractor), as this workflow is its main client.
 - Also thanks to [@Vinzent03](https://github.com/Vinzent03) for his invaluable [Advanced URI plugin](https://github.com/Vinzent03/obsidian-advanced-uri), which enables Alfred to control various aspects of Obsidian.
-- <a href="https://www.flaticon.com/authors/freepik">Most icons created by Freepik - Flaticon</a>
+- <a href="https://www.flaticon.com/authors/freepik">Most icons created by Freepik (Flaticon)</a>
 
 <!-- vale Google.FirstPerson = NO -->
 ## About the Developer
