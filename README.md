@@ -30,38 +30,32 @@
 - Graph Traversal via Alfred
 - Smart Search: A query like `o foobar #moc starred` displays only files named "foobar" with the tag `#moc` that are also starred.
 - Visual Search: Add Icons to your tags based on their tags, similar to the [Supercharged Links](https://obsidian.md/plugins?id=supercharged-links-obsidian) Plugin.
-- …
-
-➡️ [Documentation of Quick Switcher Features](docs/Alfred-based%20Quick%20Switcher.md)
+- ➡️ [Documentation of Quick Switcher Features](docs/Alfred-based%20Quick%20Switcher.md)
 
 ### Note-related Features
 - Create new Notes, based on a template
 - Quickly append to a scratchpad note
-
-➡️ [Documentation of Note-related Features](docs/Note-related%20Features.md)
+- ➡️ [Documentation of Note-related Features](docs/Note-related%20Features.md)
 
 ### Screenshot Features
 - OCR-Screenshots
 - Image Screenshot
 - Both work for screenshots taken in quick succession, for example during a live presentation or lecture.
-
-➡️ [Documentation of Screenshot Features](docs/Screenshot%20Features.md)
+- ➡️ [Documentation of Screenshot Features](docs/Screenshot%20Features.md)
 
 ### Utility Features
 - Back up your Vault
 - Access various folders like `.obsidian` or `.trash`
 - Update Plugins (including Beta Plugins installed via BRAT)
 - Access themes & CSS Snippets
-
-➡️ [Documentation of all Utility Features](docs/Utility%20Features.md)
+- ➡️ [Documentation of all Utility Features](docs/Utility%20Features.md)
 
 ### Plugins & Themes
 - Search Community Plugins and Themes
 - Open in Obsidian or GitHub
 - Access Plugin Settings
 - Search & Create GitHub Issues
-
-➡️ [Documentation of the Plugin & Theme Search](docs/Plugin%20and%20Theme%20Search.md)
+- ➡️ [Documentation of the Plugin & Theme Search](docs/Plugin%20and%20Theme%20Search.md)
 
 ### Workspace Switcher
 - Switch workspaces
@@ -69,8 +63,7 @@
 - Save Workspaces
 - Manage Workspaces
 - Automatically toggle spellchecking when switching to certain workspaces
-
-➡️ [Documentation of the Workspace Switcher](docs/Workspace%20Switcher.md)
+- ➡️ [Documentation of the Workspace Switcher](docs/Workspace%20Switcher.md)
 
 ### Settings & Local Plugins
 - Search & open specific Settings Tabs, the Theme Browser, or the Community Browser
@@ -78,20 +71,17 @@
 - Open Plugin Settings
 - Open local plugin folders in `.obsidian/plugins/`
 - Enable or disable plugins
-
-➡️ [Documentation of the Settings Search](docs/Settings%20and%20Local%20Plugin%20Search.md)
+- ➡️ [Documentation of the Settings Search](docs/Settings%20and%20Local%20Plugin%20Search.md)
 
 ### Documentation & Help
 - Search the [Official Obsidian Documentation](https://help.obsidian.md/Home)
 - Simultaneously search the [Obsidian Hub](https://publish.obsidian.md/hub/00+-+Start+here)
-
-➡️ [Documentation of the Documentation Search](docs/Documentation%20Search.md)
+- ➡️ [Documentation of the Documentation Search](docs/Documentation%20Search.md)
 
 ### Vault Switcher
 - Switch the Vault controlled by this Alfred workflow.
 - Open vaults in Obsidian, Finder, or the Terminal.
-
-➡️ [Documentation of the Vault Switcher](docs/Vault%20Switcher.md)
+- ➡️ [Documentation of the Vault Switcher](docs/Vault%20Switcher.md)
 
 ### Features for Developers
 - Open various development-related folders
@@ -100,8 +90,7 @@
 - Open the Vault's root in the default Terminal or in Finder
 - Add & Update Beta Plugins via [BRAT](https://github.com/TfTHacker/obsidian42-brat)
 - Search the [official developer docs](https://docs.obsidian.md/Home)
-
-➡️ [Documentation of Features for Developers](docs/Features%20for%20Developers.md)
+- ➡️ [Documentation of Features for Developers](docs/Features%20for%20Developers.md)
 
 ## Workflow Installation
 *This workflow requires the Alfred 5 with [Powerpack](https://www.alfredapp.com/powerpack/).*
