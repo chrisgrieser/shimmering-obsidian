@@ -32,7 +32,7 @@
 ### Powerful Alfred-based Quick Switcher
 - Search for Notes
 	- Includes Aliases
-	- Search Headings (included heading levels configurable)
+	- Search Headings
 	- Search Bookmarked Notes
 	- Search Recent Notes
 - Browse Folders (move to parent folders, create notes in folders)
@@ -79,7 +79,7 @@
 - ➡️ [Documentation of the Workspace Switcher](docs/Workspace%20Switcher.md)
 
 ### Settings & Local Plugin Search
-- Search & open specific Settings Tabs, the Theme Browser, or the Community Browser
+- Search & open specific Settings Tabs
 - Update all plugins
 - Open Plugin Settings
 - Open local plugin folders in `.obsidian/plugins/`
