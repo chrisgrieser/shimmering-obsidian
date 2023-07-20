@@ -59,11 +59,10 @@ function run(argv) {
 
 	//───────────────────────────────────────────────────────────────────────────
 
-	let fileName = argv.join("") || "Untitled";
+	let fileName = argv[0]?.trim() || "Untitled";
 	fileName = fileName.replace(/[\\/:]/g, ""); // remove illegal characters
 	fileName = fileName.charAt(0).toUpperCase() + fileName.slice(1); // capitalize
 
-	const selectedText = $.getenv("selected_text");
 	const templateRelPath = $.getenv("template_note_path") || "";
 	const newNoteLocation = $.getenv("new_note_location") || "";
 	const newNoteRelPath = `${newNoteLocation}/${fileName}.md`;
@@ -72,16 +71,11 @@ function run(argv) {
 		newNoteAbsPath = newNoteAbsPath.slice(0, -3) + " 1.md";
 	}
 
-
-	let newNoteContent;
-	if (selectedText) {
-		newNoteContent = selectedText;
-	} else if (templateRelPath) {
+	let newNoteContent = "";
+	if (templateRelPath) {
 		let templateAbsPath = getVaultPath() + "/" + templateRelPath;
 		if (!templateAbsPath.endsWith(".md")) templateAbsPath += ".md";
 		newNoteContent = readFile(templateAbsPath).replace("{{title}}", fileName); // insert title
-	} else {
-		newNoteContent = "";
 	}
 
 	writeToFile(newNoteContent, newNoteAbsPath);
