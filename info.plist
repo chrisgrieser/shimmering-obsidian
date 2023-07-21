@@ -9042,7 +9042,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 		<string>▉</string>
 	</dict>
 	<key>version</key>
-	<string>3.11.1</string>
+	<string>3.11.2</string>
 	<key>webaddress</key>
 	<string>https://chris-grieser.de/</string>
 </dict>
