@@ -61,35 +61,30 @@ Alfred Workflow with dozens of features for controlling your [Obsidian vault](ht
 - Back up your Vault
 - Access various folders like `.obsidian` or `.trash`
 - Update Plugins (including Beta Plugins installed via BRAT)
-- Access themes & CSS Snippets
+- Open CSS Snippets
 - ➡️ [Documentation of all Utility Features](docs/Utility%20Features.md)
 
 ### Plugin & Theme Search
-- Search Community Plugins and Themes
-- Open in Obsidian or GitHub
+- Search Community Plugins and Themes, open in Obsidian or at GitHub
 - Access Plugin Settings
 - Search & Create GitHub Issues
 - ➡️ [Documentation of the Plugin & Theme Search](docs/Plugin%20and%20Theme%20Search.md)
 
 ### Workspace Switcher
-- Switch workspaces
-- Works with via Switcher Modal or Hotkeys
-- Save Workspaces
+- Switch & Save workspaces
 - Manage Workspaces
 - Automatically toggle spellchecking when switching to certain workspaces
 - ➡️ [Documentation of the Workspace Switcher](docs/Workspace%20Switcher.md)
 
 ### Settings & Local Plugin Search
 - Search & open specific Settings Tabs
-- Update all plugins
 - Open Plugin Settings
 - Open local plugin folders in `.obsidian/plugins/`
 - Enable or disable plugins
 - ➡️ [Documentation of the Settings Search](docs/Settings%20and%20Local%20Plugin%20Search.md)
 
 ### Documentation & Help Search
-- Search the [Official Obsidian Documentation](https://help.obsidian.md/Home)
-- Simultaneously search the [Obsidian Hub](https://publish.obsidian.md/hub/00+-+Start+here)
+- Search the [Official Obsidian Documentation](https://help.obsidian.md/Home) and the [Obsidian Hub](https://publish.obsidian.md/hub/00+-+Start+here)
 - ➡️ [Documentation of the Documentation Search](docs/Documentation%20Search.md)
 
 ### Vault Switcher
@@ -98,12 +93,12 @@ Alfred Workflow with dozens of features for controlling your [Obsidian vault](ht
 - ➡️ [Documentation of the Vault Switcher](docs/Vault%20Switcher.md)
 
 ### Features for Obsidian Plugin Developers
+- Search the [official developer docs](https://docs.obsidian.md/Home)
 - Open various development-related folders
 - Open a local plugin's folder in Finder or the Terminal
-- Quick Copy of a plugin's ID
+- Copy plugin IDs
 - Open the Vault's root in the default Terminal or in Finder
 - Add & Update Beta Plugins via [BRAT](https://github.com/TfTHacker/obsidian42-brat)
-- Search the [official developer docs](https://docs.obsidian.md/Home)
 - ➡️ [Documentation of Features for Developers](docs/Features%20for%20Developers.md)
 
 ## Installation
