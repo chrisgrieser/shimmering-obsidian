@@ -1,6 +1,7 @@
 # Shimmering Obsidian 🎩
+Alfred Workflow with dozens of features for controlling your [Obsidian vault](https://obsidian.md/).
 
-*An Alfred Workflow with dozens of features for [Obsidian](https://obsidian.md/)*. [Featured in the Alfred Gallery.](https://alfred.app/workflows/chrisgrieser/shimmering-obsidian/)
+[Featured in the Alfred Gallery.](https://alfred.app/workflows/chrisgrieser/shimmering-obsidian/)
 
 ![](https://img.shields.io/github/downloads/chrisgrieser/shimmering-obsidian/total?label=Downloads&style=plastic) ![](https://img.shields.io/github/v/release/chrisgrieser/shimmering-obsidian?label=Latest%20Release&style=plastic) 
 
