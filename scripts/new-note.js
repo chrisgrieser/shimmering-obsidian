@@ -11,13 +11,11 @@ function readFile(path) {
 	const str = $.NSString.alloc.initWithDataEncoding(data, $.NSUTF8StringEncoding);
 	return ObjC.unwrap(str);
 }
-/**
- * @param {string} text
- * @param {string} file
- */
-function writeToFile(text, file) {
+
+/** @param {string} filepath @param {string} text */
+function writeToFile(filepath, text) {
 	const str = $.NSString.alloc.initWithUTF8String(text);
-	str.writeToFileAtomicallyEncodingError(file, true, $.NSUTF8StringEncoding, null);
+	str.writeToFileAtomicallyEncodingError(filepath, true, $.NSUTF8StringEncoding, null);
 }
 
 function getVaultPath() {
@@ -78,7 +76,7 @@ function run(argv) {
 		newNoteContent = readFile(templateAbsPath).replace("{{title}}", fileName); // insert title
 	}
 
-	writeToFile(newNoteContent, newNoteAbsPath);
+	writeToFile(newNoteAbsPath, newNoteContent);
 
 	return newNoteRelPath; // pass to opening function
 }
