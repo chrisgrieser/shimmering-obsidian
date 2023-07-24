@@ -6878,6 +6878,7 @@ fi</string>
 	</array>
 	<key>readme</key>
 	<string>## ℹ️ Recent Changes
+- new: `oe` [Search all external links in your entire vault.](https://github.com/chrisgrieser/shimmering-obsidian/blob/main/docs/Note-related%20Features.md#search-all-external-links-in-the-entire-vault)
 - new: `odd` obsidian developer document search for the [Obsidian Developer Docs](https://docs.obsidian.md/Home).
 - `os` starred-search renamed to `ob` bookmark-search to reflect the switch from the Starred Core Plugin to the Bookmarks Core Plugin
 - `oa` attachment search now opens in the default app by default, not opening Obsidian. (Use `⇧⏎` to open in Obsidian.)
