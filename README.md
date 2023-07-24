@@ -49,7 +49,7 @@ Alfred Workflow with dozens of features for controlling your [Obsidian vault](ht
 ### Note-related Features
 - Create new Notes, based on a template
 - Quickly append to a scratchpad note
-- Search all external links in the vault
+- 🆕 Search all external links in the vault
 - ➡️ [Documentation of Note-related Features](docs/Note-related%20Features.md)
 
 ### Screenshot Features
