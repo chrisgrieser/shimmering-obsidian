@@ -30,7 +30,7 @@ function run() {
 		// yes, I considered `rg`, but `grep` alone is actually surprisingly fast
 		// already, making `grep` potentially a better choice since it does not
 		// add a dependency
-		.doShellScript(`cd "${vaultPath}" && grep -Eoh "\\[[^[]*?\\]\\(http[^)]*\\)" **/*.md`)
+		.doShellScript(`cd "${vaultPath}" && grep -Eoh "\\[[^[]*?\\]\\(http[^)]*\\)" ./**/*.md`)
 		.split("\r")
 		.map((mdlink) => {
 			const [_, title, url] = mdlink.match(/\[([^[]*)\]\((.*)\)/);
@@ -40,6 +40,9 @@ function run() {
 				arg: url,
 				match: alfredMatcher(title) + alfredMatcher(url),
 				uid: mdlink,
+				mods: {
+					cmd: { arg: mdlink },
+				},
 			};
 		});
 

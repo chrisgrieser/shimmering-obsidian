@@ -29,4 +29,5 @@ __`oo` or `triggered via hotkey`: Append to your Scratchpad Note__
 __`oe`: Search all `e`xternal links in your entire vault__
 <!-- vale on -->
 - `⏎`: Opens the link in the browser.
+- `cmd + ⏎`: Reveal the link in Obsidian.
 - `alt + ⏎`: Copies the URL to the clipboard.

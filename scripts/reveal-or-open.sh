@@ -1,5 +1,6 @@
 #!/bin/zsh
 relPath="$*"
+# shellcheck disable=2154
 vault_path="$(cat "$alfred_workflow_data/vaultPath")" && vault_path="${vault_path/#\~/$HOME}"
 absPath="$vault_path/$relPath"
 
