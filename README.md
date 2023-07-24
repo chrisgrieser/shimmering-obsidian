@@ -15,10 +15,10 @@ Alfred Workflow with dozens of features for controlling your [Obsidian vault](ht
     - [Note-related Features](#note-related-features)
     - [Screenshot Features](#screenshot-features)
     - [Utility Features](#utility-features)
-    - [Plugin & Theme Search](#plugin-theme-search)
+    - [Plugins & Themes](#plugins-themes)
     - [Workspace Switcher](#workspace-switcher)
-    - [Settings & Local Plugin Search](#settings-local-plugin-search)
-    - [Documentation & Help Search](#documentation-help-search)
+    - [Settings & Local Plugins](#settings-local-plugins)
+    - [Documentation & Help](#documentation-help)
     - [Vault Switcher](#vault-switcher)
     - [Features for Obsidian Plugin Developers](#features-for-obsidian-plugin-developers)
 - [Installation](#installation)
@@ -49,6 +49,7 @@ Alfred Workflow with dozens of features for controlling your [Obsidian vault](ht
 ### Note-related Features
 - Create new Notes, based on a template
 - Quickly append to a scratchpad note
+- Search all external links in the vault
 - ➡️ [Documentation of Note-related Features](docs/Note-related%20Features.md)
 
 ### Screenshot Features
@@ -60,11 +61,11 @@ Alfred Workflow with dozens of features for controlling your [Obsidian vault](ht
 ### Utility Features
 - Back up your Vault
 - Access various folders like `.obsidian` or `.trash`
-- Update Plugins (including Beta Plugins installed via BRAT)
+- Update Plugins (including Beta Plugins installed via `BRAT`)
 - Open CSS Snippets
 - ➡️ [Documentation of all Utility Features](docs/Utility%20Features.md)
 
-### Plugin & Theme Search
+### Plugins & Themes
 - Search Community Plugins and Themes, open in Obsidian or at GitHub
 - Access Plugin Settings
 - Search & Create GitHub Issues
@@ -76,14 +77,14 @@ Alfred Workflow with dozens of features for controlling your [Obsidian vault](ht
 - Automatically toggle spellchecking when switching to certain workspaces
 - ➡️ [Documentation of the Workspace Switcher](docs/Workspace%20Switcher.md)
 
-### Settings & Local Plugin Search
+### Settings & Local Plugins
 - Search & open specific Settings Tabs
 - Open Plugin Settings
 - Open local plugin folders in `.obsidian/plugins/`
 - Enable or disable plugins
 - ➡️ [Documentation of the Settings Search](docs/Settings%20and%20Local%20Plugin%20Search.md)
 
-### Documentation & Help Search
+### Documentation & Help
 - Search the [Official Obsidian Documentation](https://help.obsidian.md/Home) and the [Obsidian Hub](https://publish.obsidian.md/hub/00+-+Start+here)
 - ➡️ [Documentation of the Documentation Search](docs/Documentation%20Search.md)
 

@@ -1,7 +1,7 @@
 # Utility Features
 <!--toc:start-->
   - [Backup your Vault](#backup-your-vault)
-  - [Open CSS Files](#open-css-files)
+  - [CSS Files](#css-files)
   - [Open Various Folders](#open-various-folders)
   - [Update Plugins & Metadata](#update-plugins-metadata)
 <!--toc:end-->
@@ -20,10 +20,12 @@ end tell
 # pass 'no sound' as argument to turn off backup confirmation sound
 ```
 
+<!-- vale Google.FirstPerson = NO -->
 > **Warning**  
 > Please be aware that this is a simplistic backup solution. While I did not have any problems with it, this workflow comes without any warranties, as stated in [the license](https://github.com/chrisgrieser/shimmering-obsidian/blob/main/LICENSE). If you want 100% safety, please use a professional backup solution.
+<!-- vale Google.FirstPerson = YES -->
 
-## Open CSS Files
+## CSS Files
 **`ocss`: Access your `css` files.**
 - Open a CSS snippet in your default text editor.
 
