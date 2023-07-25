@@ -1655,7 +1655,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>5EF4465D-1198-4857-BFAD-B843B6339E84</string>
+				<string>FBC5BD0C-F69A-4171-A33D-6548860B3119</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -2284,6 +2284,19 @@
 		</array>
 		<key>F8FA8843-EC3D-45BB-AD77-1F99F2E82DD8</key>
 		<array/>
+		<key>FBC5BD0C-F69A-4171-A33D-6548860B3119</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>5EF4465D-1198-4857-BFAD-B843B6339E84</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 	</dict>
 	<key>createdby</key>
 	<string>Chris Grieser</string>
@@ -2981,6 +2994,27 @@ return hook;
 			<string>5EF4465D-1198-4857-BFAD-B843B6339E84</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>matchmode</key>
+				<integer>1</integer>
+				<key>matchstring</key>
+				<string>\n$</string>
+				<key>regexcaseinsensitive</key>
+				<false/>
+				<key>regexmultiline</key>
+				<false/>
+				<key>replacestring</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.replace</string>
+			<key>uid</key>
+			<string>FBC5BD0C-F69A-4171-A33D-6548860B3119</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -7645,7 +7679,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>note</key>
 			<string>open after</string>
 			<key>xpos</key>
-			<real>2285</real>
+			<real>2315</real>
 			<key>ypos</key>
 			<real>685</real>
 		</dict>
@@ -8767,6 +8801,17 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<real>440</real>
 			<key>ypos</key>
 			<real>560</real>
+		</dict>
+		<key>FBC5BD0C-F69A-4171-A33D-6548860B3119</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>9</integer>
+			<key>note</key>
+			<string>remove \n</string>
+			<key>xpos</key>
+			<real>2245</real>
+			<key>ypos</key>
+			<real>710</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
