@@ -47,11 +47,12 @@ const fileExists = (/** @type {string} */ filePath) => Application("Finder").exi
 /** @type {AlfredRun} */
 // rome-ignore lint/correctness/noUnusedVariables: Alfred run
 function run(argv) {
+	const vaultNameEnc = getVaultNameEncoded();
 	let createInNewTab;
 	try {
 		createInNewTab = $.getenv("create_in_new_tab") === "true";
 		app.openLocation(
-			`obsidian://advanced-uri?vault=${getVaultNameEncoded()}&commandid=workspace%253Anew-tab`,
+			`obsidian://advanced-uri?vault=${vaultNameEnc}&commandid=workspace%253Anew-tab`,
 		);
 	} catch (_error) {}
 
@@ -77,6 +78,11 @@ function run(argv) {
 	}
 
 	writeToFile(newNoteAbsPath, newNoteContent);
+
+	delay(0.1); // ensure note is written
+	// since there is a new note, rewrite the metadata. CAVEAT: Notes created not
+	// by this workflow are not immediately written to the metadata
+	app.openLocation(`obsidian://advanced-uri?vault=${vaultNameEnc}&commandid=metadata-extractor%253Awrite-metadata-json`)
 
 	return newNoteRelPath; // pass to opening function
 }
