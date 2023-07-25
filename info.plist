@@ -6911,7 +6911,19 @@ fi</string>
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>## ℹ️ Recent Changes
+	<string>## 1️⃣ Workflow Setup
+#### 1. Install the Obsidian plugins [Advanced URI](https://obsidian.md/plugins?id=obsidian-advanced-uri) &amp; [Metadata Extractor](https://obsidian.md/plugins?id=metadata-extractor). Enable both plugins.
+#### 2. Run the Alfred Command `osetup` and select the vault you want to control with Shimmering Obsidian. Obsidian will then restart. This step is required even if you have only one vault.
+
+---
+
+## ⚙️ Workflow Configuration
+- **Some features require additional configuration to the left.** You can get further information on those features at the respective sections of the [documentation](https://github.com/chrisgrieser/shimmering-obsidian/blob/main/README.md).
+- To configure the Hotkeys, double-click [sky-blue fields](https://i.imgur.com/wlpht7f.png) at the top left of the workflow window. 
+
+---
+
+## 📙 Recent Changes
 - new: `oe` [Search all external links in your entire vault.](https://github.com/chrisgrieser/shimmering-obsidian/blob/main/docs/Note-related%20Features.md#search-all-external-links-in-the-entire-vault)
 - new: `odd` obsidian developer document search for the [Obsidian Developer Docs](https://docs.obsidian.md/Home).
 - `os` starred-search renamed to `ob` bookmark-search to reflect the switch from the Starred Core Plugin to the Bookmarks Core Plugin
@@ -6920,17 +6932,6 @@ fi</string>
 - Forum Search has been deprecated/removed.
 - ⭐️ 600 Stars on GitHub! Thank you everyone for your support. (You can also star the plugin at the [GitHub repo](https://github.com/chrisgrieser/shimmering-obsidian) to show your support for it.)
 - Various Bug Fixes (OCR Screenshots, `on` not overriding existing files, etc.)
-
----
-
-## 🏁 Workflow Setup
-1. Install the Obsidian plugins [Advanced URI](https://obsidian.md/plugins?id=obsidian-advanced-uri) &amp; [Metadata Extractor](https://obsidian.md/plugins?id=metadata-extractor). Enable both plugins.
-2. Run the Alfred Command `osetup` and select the vault you want to control with *Shimmering Obsidian*. Obsidian will then restart. (Even if you have only one vault, you need to confirm that one vault once before you can use the workflow.)
-
-## ⚙️ Workflow Configuration
-- Some features require additional configuration to the right. You can get further information on those features at the respective sections of the [documentation](https://github.com/chrisgrieser/shimmering-obsidian/blob/main/README.md).
-- To configure the Hotkeys, double-click [sky-blue fields](https://i.imgur.com/wlpht7f.png) at the top left of the workflow window. 
-
 
 ---
 
