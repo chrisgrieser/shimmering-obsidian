@@ -5390,7 +5390,7 @@ echo "$backup"</string>
 				<key>text</key>
 				<string>{query}</string>
 				<key>title</key>
-				<string>✅ 'Vault Backup finished'</string>
+				<string>✅ Vault Backup finished</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.notification</string>
