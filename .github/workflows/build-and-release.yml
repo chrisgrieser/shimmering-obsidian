@@ -32,7 +32,7 @@ jobs:
       - name: Build .alfredworkflow
         run: |
           zip --quiet --recurse-paths "${{ env.WORKFLOW_NAME }}.alfredworkflow" . \
-            --exclude ".git*" "Makefile" "build-and-release.sh" "README.md" "assets/*" ".DS_Store"
+            --exclude ".git*" "Makefile" "build-and-release.sh" "README.md" "assets/*" ".DS_Store" ".rsync-exclude"
 
       - name: Upload .alfredworkflow as Release Asset
         id: upload-alfredworkflow

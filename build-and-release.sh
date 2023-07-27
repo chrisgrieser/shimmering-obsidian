@@ -15,11 +15,16 @@ echo "────────────────────────"
 # update version number in *repo* info.plist
 plutil -replace version -string "$nextVersion" info.plist
 
+# #───────────────────────────────────────────────────────────────────────────────
+#
 # INFO specific to my setup: update version number in *local* info.plist 
 localInfoPlist="$DOTFILE_FOLDER/Alfred.alfredpreferences/workflows/$(basename "$PWD")/info.plist"
 if [[ -f "$localInfoPlist" ]]; then
 	plutil -replace version -string "$nextVersion" "$localInfoPlist"
 fi
+
+# convenience: copy new version number (e.g. for closed bug reports)
+echo "$nextVersion" | pbcopy
 
 #───────────────────────────────────────────────────────────────────────────────
 
