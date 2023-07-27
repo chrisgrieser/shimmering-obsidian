@@ -1,0 +1,9 @@
+.rsync-exclude
+.gitignore
+.git/
+.github/
+docs/
+prefs.plist
+README.md
+Makefile
+build-and-release.sh
