@@ -3272,7 +3272,7 @@ return "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string>scripts/append-template-to-file.js</string>
+				<string>./scripts/new-note-in-folder.js</string>
 				<key>type</key>
 				<integer>8</integer>
 			</dict>

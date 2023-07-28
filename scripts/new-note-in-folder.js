@@ -15,18 +15,6 @@ function getVaultPath() {
 	return ObjC.unwrap(vault).replace(/^~/, theApp.pathTo("home folder"));
 }
 
-/**
- * @param {string} text
- * @param {string} absPath
- */
-function appendToFile(text, absPath) {
-	ObjC.import("stdlib");
-	const app = Application.currentApplication();
-	app.includeStandardAdditions = true;
-	text = text.replaceAll("'", "`"); // ' in text string breaks echo writing method
-	app.doShellScript(`echo '${text}' >> '${absPath}'`); // use single quotes to prevent running of input such as "$(rm -rf /)"
-}
-
 /** @param {string} path */
 function readFile(path) {
 	const data = $.NSFileManager.defaultManager.contentsAtPath(path);
@@ -46,6 +34,14 @@ function getVaultNameEncoded() {
 	return encodeURIComponent(vaultName);
 }
 
+/** @param {string} filepath @param {string} text */
+function writeToFile(filepath, text) {
+	const str = $.NSString.alloc.initWithUTF8String(text);
+	str.writeToFileAtomicallyEncodingError(filepath, true, $.NSUTF8StringEncoding, null);
+}
+
+const fileExists = (/** @type {string} */ filePath) => Application("Finder").exists(Path(filePath));
+
 //───────────────────────────────────────────────────────────────────────────
 
 /** @type {AlfredRun} */
@@ -53,7 +49,7 @@ function getVaultNameEncoded() {
 function run() {
 	const vaultPath = getVaultPath();
 	const relativePath = $.getenv("current_folder") + "/Untitled.md";
-	const newFileAbsolutePath = `${vaultPath}/${relativePath}`;
+	let newNoteAbsPath = `${vaultPath}/${relativePath}`;
 
 	let newNoteContent = "";
 	const templateRelPath = $.getenv("template_note_path") || "";
@@ -62,8 +58,10 @@ function run() {
 		if (!templateAbsPath.endsWith(".md")) templateAbsPath += ".md";
 		newNoteContent = readFile(templateAbsPath)
 	}
-
-	appendToFile(newNoteContent, newFileAbsolutePath);
+	while (fileExists(newNoteAbsPath)) {
+		newNoteAbsPath = newNoteAbsPath.slice(0, -3) + " 1.md";
+	}
+	writeToFile(newNoteContent, newNoteAbsPath);
 
 	delay(0.1); // ensure note is written
 	// since there is a new note, rewrite the metadata. CAVEAT: Notes created not

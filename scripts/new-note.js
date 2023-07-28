@@ -48,10 +48,9 @@ const fileExists = (/** @type {string} */ filePath) => Application("Finder").exi
 // rome-ignore lint/correctness/noUnusedVariables: Alfred run
 function run(argv) {
 	const vaultNameEnc = getVaultNameEncoded();
-	let createInNewTab;
 	try {
-		createInNewTab = $.getenv("create_in_new_tab") === "true";
-		app.openLocation(
+		const createInNewTab = $.getenv("create_in_new_tab") === "true";
+		if (createInNewTab) app.openLocation(
 			`obsidian://advanced-uri?vault=${vaultNameEnc}&commandid=workspace%253Anew-tab`,
 		);
 	} catch (_error) {}
