@@ -80,6 +80,7 @@ const attachmentArr = JSON.parse(readFile(attachmentMetadata)).nonMdFiles.map((/
 		default:
 			emoji = "📎";
 	}
+	if ($.getenv("remove_emojis") === "1") emoji = "";
 
 	return {
 		title: `${emoji} ${filename}`,

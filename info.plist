@@ -6924,6 +6924,7 @@ fi</string>
 ---
 
 ## 📙 Recent Changes
+- new: Setting to reduce the number of emojis displayed throughout the workflow.
 - new: `oe` [Search all external links in your entire vault.](https://github.com/chrisgrieser/shimmering-obsidian/blob/main/docs/Note-related%20Features.md#search-all-external-links-in-the-entire-vault)
 - new: `odd` obsidian developer document search for the [Obsidian Developer Docs](https://docs.obsidian.md/Home).
 - `os` starred-search renamed to `ob` bookmark-search to reflect the switch from the Starred Core Plugin to the Bookmarks Core Plugin
@@ -8856,6 +8857,25 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<string>checkbox</string>
 			<key>variable</key>
 			<string>privacy_mode</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<false/>
+				<key>required</key>
+				<false/>
+				<key>text</key>
+				<string></string>
+			</dict>
+			<key>description</key>
+			<string>Reduces the number of emojis used throughout the workflow. (This does not apply to emojis you have explicitly yourself added with the Supercharged Icons feature further below.)</string>
+			<key>label</key>
+			<string>Remove emojis</string>
+			<key>type</key>
+			<string>checkbox</string>
+			<key>variable</key>
+			<string>remove_emojis</string>
 		</dict>
 		<dict>
 			<key>config</key>

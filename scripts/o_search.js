@@ -181,6 +181,7 @@ fileArray.forEach(file => {
 		additionalMatcher += "recent ";
 	}
 	if (filename.toLowerCase().includes("kanban")) iconpath = "icons/kanban.png";
+	if ($.getenv("remove_emojis") === "1") emoji = "";
 
 	let superchargedIcon = "";
 	let superchargedIcon2 = "";
