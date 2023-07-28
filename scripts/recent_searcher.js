@@ -62,7 +62,6 @@ if (fileExists(bookmarkJSON)) {
 	bmFlatten(bookm, bookmarks);
 }
 const starsAndBookmarks = [...new Set([...stars, ...bookmarks])]
-console.log("starsAndBookmarks length:", starsAndBookmarks.length);
 
 //──────────────────────────────────────────────────────────────────────────────
 
@@ -72,7 +71,6 @@ if (superIconFile && fileExists(superIconFile)) {
 		.split("\n")
 		.filter(line => line.length !== 0);
 }
-console.log("superIconList length: " + superIconList.length);
 
 const jsonArray = [];
 //──────────────────────────────────────────────────────────────────────────────
@@ -95,6 +93,7 @@ fileArray.forEach(file => {
 		emoji += "🔖 ";
 		additionalMatcher += "starred bookmark ";
 	}
+	if ($.getenv("remove_emojis") === "1") emoji = "";
 	if (filename.toLowerCase().includes("kanban"))	iconpath = "icons/kanban.png";
 
 	let superchargedIcon = "";

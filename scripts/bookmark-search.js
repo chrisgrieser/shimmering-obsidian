@@ -40,7 +40,6 @@ let recentJSON = vaultPath + "/.obsidian/workspace.json";
 if (!fileExists(recentJSON)) recentJSON = recentJSON.slice(0, -5); // Obsidian 0.16 uses workspace.json → https://discord.com/channels/686053708261228577/716028884885307432/1013906018578743478
 
 const recentFiles = fileExists(recentJSON) ? JSON.parse(readFile(recentJSON)).lastOpenFiles : [];
-console.log("recentFiles length: " + recentFiles.length);
 
 //──────────────────────────────────────────────────────────────────────────────
 // bookmarks & stars
@@ -64,7 +63,6 @@ if (fileExists(bookmarkJSON)) {
 	bmFlatten(bookm, bookmarks);
 }
 const starsAndBookmarks = [...new Set([...stars, ...bookmarks])];
-console.log("starsAndBookmarks length:", starsAndBookmarks.length);
 
 //──────────────────────────────────────────────────────────────────────────────
 
@@ -74,7 +72,6 @@ if (superIconFile && fileExists(superIconFile)) {
 		.split("\n")
 		.filter((line) => line.length !== 0);
 }
-console.log("superIconList length: " + superIconList.length);
 
 const jsonArray = [];
 //──────────────────────────────────────────────────────────────────────────────
@@ -97,6 +94,7 @@ fileArray.forEach((file) => {
 		emoji += "🕑 ";
 		additionalMatcher += "recent ";
 	}
+	if ($.getenv("remove_emojis") === "1") emoji = "";
 	if (filename.toLowerCase().includes("kanban")) iconpath = "icons/kanban.png";
 
 	let superchargedIcon = "";
