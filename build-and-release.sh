@@ -24,7 +24,7 @@ if [[ -f "$localInfoPlist" ]]; then
 fi
 
 # convenience: copy new version number (e.g. for closed bug reports)
-echo "$nextVersion" | pbcopy
+echo -n "$nextVersion" | pbcopy
 
 #───────────────────────────────────────────────────────────────────────────────
 
