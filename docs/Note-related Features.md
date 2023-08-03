@@ -11,7 +11,7 @@ __`on`: Create a `n`ew note.__
 <!-- LTeX: enabled=true --><!-- vale on -->
 - __File Name:__ Anything you type after the keyword `on` (for example, `on foobar`) becomes the file name of the new note (for example, `foobar.md`). (Note that the [Filename Heading Sync Plugin](https://obsidian.md/plugins?id=obsidian-filename-heading-sync) may interfere with this.)
 	- When triggered via `cmd + ↵`, the new note is created in a new tab.
-- __Content:__ You can select a template note to use in the workflow configuration. Any `{{title}}` placeholders in the template is replaced with the name of the file. Be aware that the template is overridden by Folder Templates from the [Templater plugin](https://obsidian.md/plugins?id=templater-obsidian).
+- __Content:__ You can select a template note to use in the workflow configuration. Only `{{title}}` is supported as placeholder and will be replaced with the file name. Be aware that the template might be overridden by Folder Templates from the [Templater plugin](https://obsidian.md/plugins?id=templater-obsidian).
 - __Location:__ The new note is placed in the folder specified in the workflow configuration. If the configuration is empty, it is placed in your vault root.
 - 💡 There are various settings for creating new notes in the workflow configuration.
 
