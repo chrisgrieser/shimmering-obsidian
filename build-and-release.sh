@@ -23,8 +23,10 @@ if [[ -f "$localInfoPlist" ]]; then
 	plutil -replace version -string "$nextVersion" "$localInfoPlist"
 fi
 
-# convenience: copy new version number (e.g. for closed bug reports)
-echo -n "$nextVersion" | pbcopy
+# convenience: copy download link for current version
+workflow_name="$(basename "$PWD")"
+echo -n "https://github.com/chrisgrieser/${workflow_name}/releases/download/${nextVersion}/${workflow_name}.alfredworkflow" |
+	pbcopy
 
 #───────────────────────────────────────────────────────────────────────────────
 
