@@ -436,7 +436,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>B9AC24F9-316C-4D05-903D-7ED21EA0A3C8</string>
+				<string>956AC463-0D84-45FF-B72B-80E2C495EC71</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1231,7 +1231,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>B9AC24F9-316C-4D05-903D-7ED21EA0A3C8</string>
+				<string>956AC463-0D84-45FF-B72B-80E2C495EC71</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1347,6 +1347,19 @@
 		</array>
 		<key>92307BE0-68AE-451F-9850-FE01218229BF</key>
 		<array/>
+		<key>956AC463-0D84-45FF-B72B-80E2C495EC71</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>B9AC24F9-316C-4D05-903D-7ED21EA0A3C8</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>9888408F-4081-4003-8D82-85FF20EB8138</key>
 		<array>
 			<dict>
@@ -1973,7 +1986,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>B9AC24F9-316C-4D05-903D-7ED21EA0A3C8</string>
+				<string>956AC463-0D84-45FF-B72B-80E2C495EC71</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -2998,6 +3011,26 @@ return hook;
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<true/>
+				<key>variables</key>
+				<dict>
+					<key>appendedText</key>
+					<string>{var:prefix}{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>956AC463-0D84-45FF-B72B-80E2C495EC71</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>matchmode</key>
 				<integer>1</integer>
 				<key>matchstring</key>
@@ -3026,7 +3059,7 @@ return hook;
 				<key>removeextension</key>
 				<false/>
 				<key>text</key>
-				<string>to '{var:relative_path}'</string>
+				<string>{var:appendedText}</string>
 				<key>title</key>
 				<string>✅ Appended</string>
 			</dict>
@@ -3299,7 +3332,7 @@ return "{query}"</string>
 				<key>hotkey</key>
 				<integer>18</integer>
 				<key>hotmod</key>
-				<integer>917504</integer>
+				<integer>524288</integer>
 				<key>hotstring</key>
 				<string>1</string>
 				<key>leftcursor</key>
@@ -3411,7 +3444,7 @@ return "{query}"</string>
 				<key>hotkey</key>
 				<integer>19</integer>
 				<key>hotmod</key>
-				<integer>917504</integer>
+				<integer>524288</integer>
 				<key>hotstring</key>
 				<string>2</string>
 				<key>leftcursor</key>
@@ -3530,7 +3563,7 @@ return "{query}"</string>
 				<key>hotkey</key>
 				<integer>20</integer>
 				<key>hotmod</key>
-				<integer>917504</integer>
+				<integer>524288</integer>
 				<key>hotstring</key>
 				<string>3</string>
 				<key>leftcursor</key>
@@ -7369,7 +7402,7 @@ fi</string>
 			<key>note</key>
 			<string>set vars</string>
 			<key>xpos</key>
-			<real>1915</real>
+			<real>1880</real>
 			<key>ypos</key>
 			<real>675</real>
 		</dict>
@@ -7509,7 +7542,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>note</key>
 			<string>input</string>
 			<key>xpos</key>
-			<real>1771</real>
+			<real>1741</real>
 			<key>ypos</key>
 			<real>790</real>
 		</dict>
@@ -7975,7 +8008,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>note</key>
 			<string>pass clipboard</string>
 			<key>xpos</key>
-			<real>1915</real>
+			<real>1885</real>
 			<key>ypos</key>
 			<real>875</real>
 		</dict>
@@ -8050,6 +8083,17 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<real>2320</real>
 			<key>ypos</key>
 			<real>1480</real>
+		</dict>
+		<key>956AC463-0D84-45FF-B72B-80E2C495EC71</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>9</integer>
+			<key>note</key>
+			<string>save appended text for notification</string>
+			<key>xpos</key>
+			<real>2040</real>
+			<key>ypos</key>
+			<real>710</real>
 		</dict>
 		<key>9888408F-4081-4003-8D82-85FF20EB8138</key>
 		<dict>
@@ -8156,7 +8200,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>note</key>
 			<string>set vars</string>
 			<key>xpos</key>
-			<real>1675</real>
+			<real>1645</real>
 			<key>ypos</key>
 			<real>800</real>
 		</dict>
@@ -8525,7 +8569,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<real>1880</real>
+			<real>1850</real>
 			<key>ypos</key>
 			<real>740</real>
 		</dict>
@@ -8610,7 +8654,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>colorindex</key>
 			<integer>6</integer>
 			<key>xpos</key>
-			<real>1605</real>
+			<real>1565</real>
 			<key>ypos</key>
 			<real>645</real>
 		</dict>
