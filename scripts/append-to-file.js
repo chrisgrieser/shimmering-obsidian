@@ -6,16 +6,17 @@ app.includeStandardAdditions = true;
 
 //──────────────────────────────────────────────────────────────────────────────
 
-/**
- * @param {string} text
- * @param {string} absPath
- */
-function appendToFile(text, absPath) {
-	ObjC.import("stdlib");
-	const app = Application.currentApplication();
-	app.includeStandardAdditions = true;
-	text = text.replaceAll("'", "`"); // ' in text string breaks echo writing method
-	app.doShellScript(`echo '${text}' >> '${absPath}'`); // use single quotes to prevent running of input such as "$(rm -rf /)"
+/** @param {string} filepath @param {string} text */
+function writeToFile(filepath, text) {
+	const str = $.NSString.alloc.initWithUTF8String(text);
+	str.writeToFileAtomicallyEncodingError(filepath, true, $.NSUTF8StringEncoding, null);
+}
+
+/** @param {string} path */
+function readFile(path) {
+	const data = $.NSFileManager.defaultManager.contentsAtPath(path);
+	const str = $.NSString.alloc.initWithDataEncoding(data, $.NSUTF8StringEncoding);
+	return ObjC.unwrap(str);
 }
 
 //──────────────────────────────────────────────────────────────────────────────
@@ -25,7 +26,8 @@ function appendToFile(text, absPath) {
 function run(argv) {
 	const vaultPath = $.getenv("vault_path");
 
-	const content = $.getenv("prefix") + argv[0];
+	const toAppend = $.getenv("prefix") + argv[0];
 	const absolutePath = vaultPath + "/" + $.getenv("relative_path");
-	appendToFile(content, absolutePath);
+	const content = readFile(absolutePath) + "\n" + toAppend;
+	writeToFile(absolutePath, content);
 }

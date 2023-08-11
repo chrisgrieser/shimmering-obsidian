@@ -37,6 +37,12 @@ function readFile(path) {
 	return ObjC.unwrap(str);
 }
 
+/** @param {string} filepath @param {string} text */
+function writeToFile(filepath, text) {
+	const str = $.NSString.alloc.initWithUTF8String(text);
+	str.writeToFileAtomicallyEncodingError(filepath, true, $.NSUTF8StringEncoding, null);
+}
+
 /** @param {string} appId */
 function SafeApplication(appId) {
 	try {
@@ -49,17 +55,45 @@ const discordReadyLinks = ["Discord", "Discord PTB", "Discord Canary"].some((dis
 	SafeApplication(discordApp)?.frontmost(),
 );
 
+function ensureCacheFolderExists() {
+	const finder = Application("Finder");
+	const cacheDir = $.getenv("alfred_workflow_cache");
+	if (!finder.exists(Path(cacheDir))) {
+		console.log("Cache Dir does not exist and is created.");
+		const cacheDirBasename = $.getenv("alfred_workflow_bundleid");
+		const cacheDirParent = cacheDir.slice(0, -cacheDirBasename.length);
+		finder.make({
+			new: "folder",
+			at: Path(cacheDirParent),
+			withProperties: { name: cacheDirBasename },
+		});
+	}
+}
+
+/** @param {string} path */
+function cacheIsOutdated(path) {
+	const cacheAgeThresholdHours = 24;
+	ensureCacheFolderExists();
+	const cacheObj = Application("System Events").aliases[path];
+	if (!cacheObj.exists()) return true;
+	const cacheAgeMins = (+new Date() - cacheObj.creationDate()) / 1000 / 60 / 60;
+	return cacheAgeMins > cacheAgeThresholdHours;
+}
+
 //──────────────────────────────────────────────────────────────────────────────
 
 /** @type {AlfredRun} */
 // rome-ignore lint/correctness/noUnusedVariables: Alfred run
 function run() {
+	// PERF cache results
+	const cachePath = $.getenv("alfred_workflow_cache") + "/plugin-cache.json";
+	if (!cacheIsOutdated(cachePath)) return readFile(cachePath);
+
+	//───────────────────────────────────────────────────────────────────────────
+
 	const vaultPath = $.getenv("vault_path");
 	const configFolder = $.getenv("config_folder");
 	const vaultNameEnc = encodeURIComponent(vaultPath.replace(/.*\//, ""));
-
-	/** @type{AlfredItem[]} */
-	const jsonArray = [];
 
 	const pluginJSON = onlineJSON(
 		"https://raw.githubusercontent.com/obsidianmd/obsidian-releases/master/community-plugins.json",
@@ -76,7 +110,7 @@ function run() {
 		`find '${vaultPath}/${configFolder}/themes/' -name '*.css' || true`,
 	);
 	const currentTheme = app.doShellScript(
-		`grep "cssTheme" ${vaultPath}/${configFolder}/appearance.json" | head -n1 | cut -d'"' -f4 || true`,
+		`grep "cssTheme" "${vaultPath}/${configFolder}/appearance.json" | head -n1 | cut -d'"' -f4 || true`,
 	);
 
 	const deprecated = JSON.parse(readFile("./data/deprecated-plugins.json"));
@@ -85,7 +119,7 @@ function run() {
 	//───────────────────────────────────────────────────────────────────────────
 
 	// add PLUGINS to the JSON
-	pluginJSON.forEach(
+	const plugins = pluginJSON.map(
 		(/** @type {{ id: any; name: any; description: string; author: any; repo: any; }} */ plugin) => {
 			const id = plugin.id;
 			const name = plugin.name;
@@ -111,7 +145,7 @@ function run() {
 			let downloadsStr = "";
 			if (downloadsJSON[id]) {
 				const downloads = downloadsJSON[id].downloads;
-				downloadsStr = insert1000sep(downloads) + " ↓   ";
+				downloadsStr = insert1000sep(downloads) + "↓  ·  ";
 			}
 
 			// check whether already installed / deprecated
@@ -120,21 +154,24 @@ function run() {
 			if (installedPlugins.includes(id)) icons += " ✅";
 			if (deprecatedPlugins.includes(id)) {
 				icons += " ⚠️";
-				subtitleIcons = "deprecated – ";
+				subtitleIcons = "deprecated · ";
 			}
 
 			// Better matching for some plugins
 			const URImatcher = name.includes("URI") ? "URL" : "";
+			const matcher = `plugin ${URImatcher} ${alfredMatcher(name)} ${alfredMatcher(author)} ${alfredMatcher(
+				id,
+			)} ${alfredMatcher(description)}`;
+			const subtitle = downloadsStr + subtitleIcons + description + "  ·  by " + author;
 
 			// create json for Alfred
-			jsonArray.push({
+			/** @type {AlfredItem} */
+			const alfredItem = {
 				title: name + icons,
-				subtitle: downloadsStr + subtitleIcons + description + " — by " + author,
+				subtitle: subtitle,
 				arg: openURI,
 				uid: id,
-				match: `plugin ${URImatcher} ${alfredMatcher(name)} ${alfredMatcher(author)} ${alfredMatcher(
-					id,
-				)} ${alfredMatcher(description)}`,
+				match: matcher,
 				mods: {
 					cmd: { arg: githubURL },
 					ctrl: { arg: id },
@@ -148,12 +185,13 @@ function run() {
 						subtitle: "⌥: Copy Link" + isDiscordReady,
 					},
 				},
-			});
+			};
+			return alfredItem;
 		},
 	);
 
 	// add THEMES to the JSON
-	themeJSON.forEach(
+	const themes = themeJSON.map(
 		(
 			/** @type {{ name: any; author: any; repo: any; branch: any; screenshot: string; modes: string | string[]; }} */ theme,
 		) => {
@@ -186,7 +224,8 @@ function run() {
 			else if (installedThemes.includes(name)) installedIcon = " ✅";
 
 			// create json for Alfred
-			jsonArray.push({
+			/** @type {AlfredItem} */
+			return {
 				title: name + installedIcon,
 				subtitle: `${modes}  by ${author}`,
 				match: `theme ${alfredMatcher(author)} ${alfredMatcher(name)}`,
@@ -207,9 +246,12 @@ function run() {
 						subtitle: "⌥: Copy Obsidian URI for Theme" + isDiscordReady,
 					},
 				},
-			});
+			};
 		},
 	);
 
-	return JSON.stringify({ items: jsonArray });
+	const alfredResponse = JSON.stringify({ items: [...plugins, ...themes] });
+	writeToFile(cachePath, alfredResponse);
+
+	return alfredResponse;
 }
