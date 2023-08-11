@@ -68,9 +68,7 @@ Displayed alongside the other search results are all headings in your vault. Sel
 - 💡 **Recommendation**: Add more heading levels to `h_lvl_ignore` if your search results become too crowded.
 
 ## Browse Links of a Note
-**`ol`: Browse `l`inks of the current note**
-
-**OR use `⇧ + ↵` on any search result of the main `o` search to browse the links of that note**
+**Use `⇧ + ↵` on any search result of the main `o` search to browse the links of that note**
 
 - Displays a list of *all* links of the note: outgoing links, backlinks, and external links. (As of now, unresolved internal links are not displayed though.)
 - Selecting an outgoing link or backlink opens the respective note.
@@ -148,5 +146,5 @@ To avoid accidentally triggering the Quick Look feature, I suggest you turn off 
 - The app `QLMarkdown.app` must be started at least once. You may need to right-click the app and select `open`, to be able to allow macOS to trust the app.
 - To enable proper display of YAML headers, you need to enable the respective setting in the Advanced Options of QLMarkdown:
 
-<img width="654" alt="" src="https://user-images.githubusercontent.com/73286100/144729141-72d8cd41-8e45-43e0-a11a-ce98ba97c2ac.png">
+<img width="654" alt="screenshot of QLMarkdown" src="https://user-images.githubusercontent.com/73286100/144729141-72d8cd41-8e45-43e0-a11a-ce98ba97c2ac.png">
 </details>

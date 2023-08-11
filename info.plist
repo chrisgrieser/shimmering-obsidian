@@ -1336,6 +1336,16 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
+				<string>0A2601F3-7A5C-46E1-A1AF-A7D85F3EEAB9</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
 				<string>7EBAA02C-F8A5-48BB-97DA-28E128D766A3</string>
 				<key>modifiers</key>
 				<integer>0</integer>
@@ -1478,19 +1488,6 @@
 				<integer>524288</integer>
 				<key>modifiersubtext</key>
 				<string>⌥: Copy URL</string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>A2D6E56D-5D44-4167-B710-EABF9F1FFF0A</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>D80CA78B-B320-4895-AECD-874B584EB863</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -1956,19 +1953,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>D80CA78B-B320-4895-AECD-874B584EB863</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>7D288B7C-5CB7-4A0E-B99D-3A2D9186DEC5</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>DBA6DBFB-3701-4BFC-B72C-406BF62DF384</key>
 		<array>
 			<dict>
@@ -2116,18 +2100,7 @@
 			</dict>
 		</array>
 		<key>E60130DC-8A6E-4892-8516-B79153DC480B</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>882A3EBC-D27F-474F-A2C8-03A347DC0FE8</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
+		<array/>
 		<key>E6C3B3BC-E42C-40AC-89D3-4E7905BC4C9C</key>
 		<array>
 			<dict>
@@ -2224,19 +2197,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>4DF20498-89F0-43F5-929C-1AA8B44880AA</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>F8A28B5B-0774-406B-BD27-E4F0C69FD6A2</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>A2D6E56D-5D44-4167-B710-EABF9F1FFF0A</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -4168,6 +4128,27 @@ set parameter to do shell script "echo " &amp; quoted form of (system attribute 
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string></string>
+				<key>title</key>
+				<string>⏳ Gathering Data…</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>0A2601F3-7A5C-46E1-A1AF-A7D85F3EEAB9</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>externaltriggerid</key>
 				<string>copy-markdown-link</string>
 				<key>passinputasargument</key>
@@ -4373,21 +4354,6 @@ Application('com.runningwithcrayons.Alfred').removeConfiguration('ObRunning', {
 			<string>alfred.workflow.trigger.fallback</string>
 			<key>uid</key>
 			<string>341089EA-5936-4C81-ADE8-ECF290EA808D</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>soundname</key>
-				<string>Basso</string>
-				<key>systemsound</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.playsound</string>
-			<key>uid</key>
-			<string>882A3EBC-D27F-474F-A2C8-03A347DC0FE8</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -4667,71 +4633,6 @@ Application('com.runningwithcrayons.Alfred').removeConfiguration('ObRunning', {
 			<string>9E3B9072-3C3B-4C45-A973-426BC0F7E30F</string>
 			<key>version</key>
 			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>keyword</key>
-				<string>ol</string>
-				<key>subtext</key>
-				<string></string>
-				<key>text</key>
-				<string>Browse Links of current Note</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>F8A28B5B-0774-406B-BD27-E4F0C69FD6A2</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>script</key>
-				<string></string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string>scripts/get-current-path.js</string>
-				<key>type</key>
-				<integer>8</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>A2D6E56D-5D44-4167-B710-EABF9F1FFF0A</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>matchmode</key>
-				<integer>1</integer>
-				<key>matchstring</key>
-				<string>\n$</string>
-				<key>regexcaseinsensitive</key>
-				<false/>
-				<key>regexmultiline</key>
-				<false/>
-				<key>replacestring</key>
-				<string></string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.replace</string>
-			<key>uid</key>
-			<string>D80CA78B-B320-4895-AECD-874B584EB863</string>
-			<key>version</key>
-			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -6813,6 +6714,15 @@ fi</string>
 			<key>ypos</key>
 			<real>5055</real>
 		</dict>
+		<key>0A2601F3-7A5C-46E1-A1AF-A7D85F3EEAB9</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>11</integer>
+			<key>xpos</key>
+			<real>1630</real>
+			<key>ypos</key>
+			<real>2260</real>
+		</dict>
 		<key>0B6B06C2-6914-4603-B703-5F8DA27FD029</key>
 		<dict>
 			<key>colorindex</key>
@@ -7765,15 +7675,6 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>ypos</key>
 			<real>3140</real>
 		</dict>
-		<key>882A3EBC-D27F-474F-A2C8-03A347DC0FE8</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>11</integer>
-			<key>xpos</key>
-			<real>2040</real>
-			<key>ypos</key>
-			<real>2540</real>
-		</dict>
 		<key>88723AC0-4348-4B23-AFD7-FEFE6C532A94</key>
 		<dict>
 			<key>colorindex</key>
@@ -7927,17 +7828,6 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<real>455</real>
 			<key>ypos</key>
 			<real>2780</real>
-		</dict>
-		<key>A2D6E56D-5D44-4167-B710-EABF9F1FFF0A</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>note</key>
-			<string>get current path</string>
-			<key>xpos</key>
-			<real>175</real>
-			<key>ypos</key>
-			<real>2850</real>
 		</dict>
 		<key>A33900E9-EB4A-4AFE-8AA8-05503A501496</key>
 		<dict>
@@ -8310,15 +8200,6 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>ypos</key>
 			<real>5640</real>
 		</dict>
-		<key>D80CA78B-B320-4895-AECD-874B584EB863</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>xpos</key>
-			<real>310</real>
-			<key>ypos</key>
-			<real>2880</real>
-		</dict>
 		<key>D967483C-9C29-4D50-912B-0D6FA38D25ED</key>
 		<dict>
 			<key>colorindex</key>
@@ -8562,17 +8443,6 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<real>175</real>
 			<key>ypos</key>
 			<real>7765</real>
-		</dict>
-		<key>F8A28B5B-0774-406B-BD27-E4F0C69FD6A2</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>note</key>
-			<string>Browse Links of current Note</string>
-			<key>xpos</key>
-			<real>30</real>
-			<key>ypos</key>
-			<real>2850</real>
 		</dict>
 		<key>F8FA8843-EC3D-45BB-AD77-1F99F2E82DD8</key>
 		<dict>
