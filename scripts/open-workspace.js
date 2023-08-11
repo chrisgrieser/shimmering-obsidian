@@ -5,34 +5,29 @@ ObjC.import("Foundation");
 const app = Application.currentApplication();
 app.includeStandardAdditions = true;
 
-function readFile(path, encoding) {
-	if (!encoding) encoding = $.NSUTF8StringEncoding;
+//──────────────────────────────────────────────────────────────────────────────
+
+/** @param {string} path */
+function readFile(path) {
 	const fm = $.NSFileManager.defaultManager;
 	const data = fm.contentsAtPath(path);
-	const str = $.NSString.alloc.initWithDataEncoding(data, encoding);
+	const str = $.NSString.alloc.initWithDataEncoding(data, $.NSUTF8StringEncoding);
 	return ObjC.unwrap(str);
 }
-
-function getVaultPath() {
-	const theApp = Application.currentApplication();
-	theApp.includeStandardAdditions = true;
-	const dataFile = $.NSFileManager.defaultManager.contentsAtPath(
-		$.getenv("alfred_workflow_data") + "/vaultPath",
-	);
-	const vault = $.NSString.alloc.initWithDataEncoding(dataFile, $.NSUTF8StringEncoding);
-	return ObjC.unwrap(vault).replace(/^~/, theApp.pathTo("home folder"));
-}
-
-const workspaceToSpellcheck = $.getenv("workspace_to_spellcheck").split(/ ?, ?/);
-const workspaceJSON = JSON.parse(readFile(getVaultPath() + "/.obsidian/workspaces.json"));
-const workspaceArray = Object.keys(workspaceJSON.workspaces);
-const currentWorkspace = workspaceJSON.active;
 
 //──────────────────────────────────────────────────────────────────────────────
 
 /** @type {AlfredRun} */
 // rome-ignore lint/correctness/noUnusedVariables: Alfred run
 function run() {
+	const workspaceToSpellcheck = $.getenv("workspace_to_spellcheck").split(/ ?, ?/);
+	const vaultPath = $.getenv("vault_path");
+	const configFolder = $.getenv("config_folder");
+
+	const workspaceJSON = JSON.parse(readFile(`${vaultPath}/${configFolder}/workspaces.json`));
+	const workspaceArray = Object.keys(workspaceJSON.workspaces);
+	const currentWorkspace = workspaceJSON.active;
+
 	const jsonArray = [];
 	workspaceArray.forEach((workspaceName) => {
 		// icons/emoji

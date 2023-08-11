@@ -49,35 +49,14 @@ const discordReadyLinks = ["Discord", "Discord PTB", "Discord Canary"].some((dis
 	SafeApplication(discordApp)?.frontmost(),
 );
 
-function getVaultPath() {
-	const theApp = Application.currentApplication();
-	theApp.includeStandardAdditions = true;
-	const dataFile = $.NSFileManager.defaultManager.contentsAtPath(
-		$.getenv("alfred_workflow_data") + "/vaultPath",
-	);
-	const vault = $.NSString.alloc.initWithDataEncoding(dataFile, $.NSUTF8StringEncoding);
-	return ObjC.unwrap(vault).replace(/^~/, theApp.pathTo("home folder"));
-}
-
-function getVaultNameEncoded() {
-	const theApp = Application.currentApplication();
-	theApp.includeStandardAdditions = true;
-	const dataFile = $.NSFileManager.defaultManager.contentsAtPath(
-		$.getenv("alfred_workflow_data") + "/vaultPath",
-	);
-	const vault = $.NSString.alloc.initWithDataEncoding(dataFile, $.NSUTF8StringEncoding);
-	const theVaultPath = ObjC.unwrap(vault);
-	const vaultName = theVaultPath.replace(/.*\//, "");
-	return encodeURIComponent(vaultName);
-}
-
 //──────────────────────────────────────────────────────────────────────────────
 
 /** @type {AlfredRun} */
 // rome-ignore lint/correctness/noUnusedVariables: Alfred run
 function run() {
-	const vaultPath = getVaultPath();
-	const vaultNameEnc = getVaultNameEncoded();
+	const vaultPath = $.getenv("vault_path");
+	const configFolder = $.getenv("config_folder");
+	const vaultNameEnc = encodeURIComponent(vaultPath.replace(/.*\//, ""));
 
 	/** @type{AlfredItem[]} */
 	const jsonArray = [];
@@ -88,22 +67,20 @@ function run() {
 	const downloadsJSON = onlineJSON(
 		"https://raw.githubusercontent.com/obsidianmd/obsidian-releases/master/community-plugin-stats.json",
 	);
-	const installedPlugins = app.doShellScript('ls -1 "' + vaultPath + '""/.obsidian/plugins/"').split("\r");
+	const installedPlugins = app.doShellScript(`ls -1 "${vaultPath}/${configFolder}/plugins/"`).split("\r");
 
 	const themeJSON = onlineJSON(
 		"https://raw.githubusercontent.com/obsidianmd/obsidian-releases/master/community-css-themes.json",
 	);
-	const installedThemes = app.doShellScript(`find '${vaultPath}/.obsidian/themes/' -name '*.css' || true`);
+	const installedThemes = app.doShellScript(
+		`find '${vaultPath}/${configFolder}/themes/' -name '*.css' || true`,
+	);
 	const currentTheme = app.doShellScript(
-		`cat "${vaultPath}/.obsidian/appearance.json" | grep "cssTheme" | head -n 1 | cut -d\\" -f 4`,
+		`grep "cssTheme" ${vaultPath}/${configFolder}/appearance.json" | head -n1 | cut -d'"' -f4 || true`,
 	);
 
-	const deprecatedJSON = JSON.parse(readFile("./data/deprecated-plugins.json"));
-	const deprecatedPlugins = [
-		...deprecatedJSON.sherlocked,
-		...deprecatedJSON.dysfunct,
-		...deprecatedJSON.deprecated,
-	];
+	const deprecated = JSON.parse(readFile("./data/deprecated-plugins.json"));
+	const deprecatedPlugins = [...deprecated.sherlocked, ...deprecated.dysfunct, ...deprecated.deprecated];
 
 	//───────────────────────────────────────────────────────────────────────────
 

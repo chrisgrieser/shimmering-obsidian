@@ -1,4 +1,5 @@
 #!/bin/zsh
+# shellcheck disable=2154
 export PATH=/usr/local/bin/:/opt/homebrew/bin/:$PATH
 
 # OCR
@@ -11,9 +12,6 @@ ocr_text="$ocr_prefix\n\n$ocr_text"
 
 # if using multiple monitors
 ocr_text=$(echo "$ocr_text" | grep -Ev "Warning: Invalid resolution 0 dpi." | grep -Ev "Estimating resolution as")
-
-# Write to file
-vault_path="$(cat "$alfred_workflow_data/vaultPath")" && vault_path="${vault_path/#\~/$HOME}"
 
 if [[ "$ocr_screenshot_file" == "" ]]; then
 	ocr_screenshot_file="$vault_path/OCR-Screenshots.md"

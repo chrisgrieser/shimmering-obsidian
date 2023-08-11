@@ -3,6 +3,7 @@ ObjC.import("stdlib");
 const app = Application.currentApplication();
 app.includeStandardAdditions = true;
 
+/** @param {string} str */
 function alfredMatcher(str) {
 	const clean = str.replace(/[-()_.:#]/g, " ");
 	const camelCaseSeperated = str.replace(/([A-Z])/g, " $1");
@@ -10,29 +11,26 @@ function alfredMatcher(str) {
 }
 
 //──────────────────────────────────────────────────────────────────────────────
+/** @type {AlfredRun} */
+// rome-ignore lint/correctness/noUnusedVariables: Alfred run
+function run() {
+	const vaultPath = $.getenv("vault_path");
+	const configFolder = $.getenv("config_folder");
 
-function getVaultPath() {
-	const theApp = Application.currentApplication();
-	theApp.includeStandardAdditions = true;
-	const dataFile = $.NSFileManager.defaultManager.contentsAtPath($.getenv("alfred_workflow_data") + "/vaultPath");
-	const vault = $.NSString.alloc.initWithDataEncoding(dataFile, $.NSUTF8StringEncoding);
-	return ObjC.unwrap(vault).replace(/^~/, theApp.pathTo("home folder"));
+	const snippetArr = app
+		.doShellScript(`find '${vaultPath}/${configFolder}/snippets/' -name '*.css'`)
+		.split("\r")
+		.map((snippetFilePath) => {
+			const filename = snippetFilePath.replace(/.*\/(.*)\..+/, "$1");
+			return {
+				title: filename,
+				match: alfredMatcher(filename),
+				arg: snippetFilePath,
+				subtitle: "snippet",
+				type: "file:skipcheck",
+				uid: snippetFilePath,
+			};
+		});
+
+	return JSON.stringify({ items: snippetArr });
 }
-const vaultPath = getVaultPath()
-const snippetPath = vaultPath + "/.obsidian/snippets/";
-
-// Input
-const snippetArr = app.doShellScript("find '" + snippetPath + "' -name '*.css' ").split("\r")
-	.map(snippetFilePath => {
-		const filename = snippetFilePath.replace(/.*\/(.*)\..+/, "$1");
-		return {
-			"title": filename,
-			"match": alfredMatcher(filename),
-			"arg": snippetFilePath,
-			"subtitle": "snippet",
-			"type": "file:skipcheck",
-			"uid": snippetFilePath,
-		};
-	});
-
-JSON.stringify({ "items": snippetArr });

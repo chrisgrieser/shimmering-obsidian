@@ -39,7 +39,7 @@ Alfred Workflow with dozens of features for controlling your [Obsidian vault](ht
 - Browse Folders (move to parent folders, create notes in folders)
 - Search Notes via Tags
 - Browse a note's links (outgoing, backlinks, external)
-- Open External Links of a Note (without switching to the document or opening Obsidian)
+- Open External Links of a note (without switching to the document or opening Obsidian)
 - Search only for attachments (non-markdown files) in your vault
 - Graph Traversal via Alfred
 - Smart Search: A query like `o foobar #moc starred` displays only files named "foobar" with the tag `#moc` that are also starred.
@@ -89,7 +89,6 @@ Alfred Workflow with dozens of features for controlling your [Obsidian vault](ht
 - ➡️ [Documentation of the Documentation Search](docs/Documentation%20Search.md)
 
 ### Vault Switcher
-- Switch the Vault controlled by this Alfred workflow.
 - Open vaults in Obsidian, Finder, or the Terminal.
 - ➡️ [Documentation of the Vault Switcher](docs/Vault%20Switcher.md)
 
@@ -105,9 +104,9 @@ Alfred Workflow with dozens of features for controlling your [Obsidian vault](ht
 ## Installation
 *This workflow requires the Alfred 5 with [Powerpack](https://www.alfredapp.com/powerpack/).*
 1. Install the Obsidian plugins [Advanced URI](https://obsidian.md/plugins?id=obsidian-advanced-uri) & [Metadata Extractor](https://obsidian.md/plugins?id=metadata-extractor). Enable both plugins.
-2. Verify you have not renamed your Obsidian config folder, meaning it is still `.obsidian` (Settings → About → Advanced → Override config folder).
-3. Download the [latest release at GitHub](https://github.com/chrisgrieser/shimmering-obsidian/releases/latest). Double-click the `.alfredworkflow` file to install it.
-4. Run the Alfred Command `osetup` and select the vault you want to control with *Shimmering Obsidian*. Obsidian then restarts. (Even if you have only one vault, you need to confirm that one vault once before you can use the workflow.)
+2. Download the [latest release at GitHub](https://github.com/chrisgrieser/shimmering-obsidian/releases/latest). Double-click the `.alfredworkflow` file to install it.
+3. Set your vault path in the workflow configuration.
+4. Run the Alfred Command `osetup`. Obsidian then restarts. 
 
 ## Credits
 - Big shout-out to [@kometenstaub](https://github.com/kometenstaub) for developing the [metadata extractor plugin](https://github.com/kometenstaub/metadata-extractor), as this workflow is its main client.

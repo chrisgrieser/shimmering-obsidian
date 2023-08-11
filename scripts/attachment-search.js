@@ -21,82 +21,77 @@ function parentFolder(filePath) {
 
 //──────────────────────────────────────────────────────────────────────────────
 
-function getVaultPath() {
-	const theApp = Application.currentApplication();
-	theApp.includeStandardAdditions = true;
-	const dataFile = $.NSFileManager.defaultManager.contentsAtPath(
-		$.getenv("alfred_workflow_data") + "/vaultPath",
-	);
-	const vault = $.NSString.alloc.initWithDataEncoding(dataFile, $.NSUTF8StringEncoding);
-	return ObjC.unwrap(vault).replace(/^~/, theApp.pathTo("home folder"));
-}
+/** @type {AlfredRun} */
+// rome-ignore lint/correctness/noUnusedVariables: Alfred run
+function run() {
+	const vaultPath = $.getenv("vault_path");
+	const configFolder = $.getenv("config_folder");
+	const attachmentMetadata = `${vaultPath}/${configFolder}/plugins/metadata-extractor/allExceptMd.json`;
 
-//──────────────────────────────────────────────────────────────────────────────
+	// filter the metadataJSON for the items w/ relativePaths of starred files
+	const attachmentArr = JSON.parse(readFile(attachmentMetadata)).nonMdFiles.map(
+		(/** @type {{ name: string; relativePath: any; }} */ file) => {
+			/* eslint-disable-line complexity */ const filename = file.name;
+			const ext = file.name.split(".").pop();
+			const relativePath = file.relativePath;
+			const absolutePath = vaultPath + "/" + relativePath;
 
-const vaultPath = getVaultPath();
-const attachmentMetadata = vaultPath + "/.obsidian/plugins/metadata-extractor/allExceptMd.json";
+			let emoji = "";
+			switch (ext) {
+				case "jpg":
+				case "jpeg":
+				case "png":
+				case "tiff":
+					emoji = "🏞";
+					break;
+				case "pdf":
+					emoji = "📕";
+					break;
+				case "wav":
+				case "mp3":
+					emoji = "🎙";
+					break;
+				case "mov":
+				case "mp4":
+					emoji = "🎞";
+					break;
+				case "js":
+				case "ts":
+				case "css":
+					emoji = "🧑‍💻";
+					break;
+				case "csv":
+				case "xlsx":
+					emoji = "📊";
+					break;
+				case "pptx":
+					emoji = "📙";
+					break;
+				case "docx":
+					emoji = "📘";
+					break;
+				default:
+					emoji = "📎";
+			}
+			if ($.getenv("remove_emojis") === "1") emoji = "";
 
-// filter the metadataJSON for the items w/ relativePaths of starred files
-const attachmentArr = JSON.parse(readFile(attachmentMetadata)).nonMdFiles.map((/** @type {{ name: string; relativePath: any; }} */ file) => {
-	/* eslint-disable-line complexity */ const filename = file.name;
-	const ext = file.name.split(".").pop();
-	const relativePath = file.relativePath;
-	const absolutePath = vaultPath + "/" + relativePath;
-
-	let emoji = "";
-	switch (ext) {
-		case "jpg":
-		case "jpeg":
-		case "png":
-		case "tiff":
-			emoji = "🏞";
-			break;
-		case "pdf":
-			emoji = "📕";
-			break;
-		case "wav":
-		case "mp3":
-			emoji = "🎙";
-			break;
-		case "mov":
-		case "mp4":
-			emoji = "🎞";
-			break;
-		case "js":
-		case "ts":
-		case "css":
-			emoji = "🧑‍💻";
-			break;
-		case "csv":
-		case "xlsx":
-			emoji = "📊";
-			break;
-		case "pptx":
-			emoji = "📙";
-			break;
-		case "docx":
-			emoji = "📘";
-			break;
-		default:
-			emoji = "📎";
-	}
-	if ($.getenv("remove_emojis") === "1") emoji = "";
-
-	return {
-		title: `${emoji} ${filename}`,
-		match: alfredMatcher(filename),
-		subtitle: "▸ " + parentFolder(relativePath),
-		arg: absolutePath,
-		quicklookurl: absolutePath,
-		type: "file:skipcheck",
-		uid: absolutePath,
-		mods: {
-			shift: { arg: relativePath },
-			cmd: { arg: relativePath },
-			alt: { arg: relativePath },
-			ctrl: { arg: relativePath },
+			return {
+				title: `${emoji} ${filename}`,
+				match: alfredMatcher(filename),
+				subtitle: "▸ " + parentFolder(relativePath),
+				arg: absolutePath,
+				quicklookurl: absolutePath,
+				type: "file:skipcheck",
+				uid: absolutePath,
+				mods: {
+					shift: { arg: relativePath },
+					cmd: { arg: relativePath },
+					alt: { arg: relativePath },
+					ctrl: { arg: relativePath },
+				},
+			};
 		},
-	};
-});
+	);
 
-JSON.stringify({ items: attachmentArr });
+	return JSON.stringify({ items: attachmentArr });
+}

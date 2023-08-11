@@ -1,44 +1,52 @@
 #!/usr/bin/env osascript -l JavaScript
+
+ObjC.import("stdlib");
+ObjC.import("Foundation");
+const app = Application.currentApplication();
+app.includeStandardAdditions = true;
+
+//──────────────────────────────────────────────────────────────────────────────
+
+/** @param {string} path */
+function readFile(path) {
+	const data = $.NSFileManager.defaultManager.contentsAtPath(path);
+	const str = $.NSString.alloc.initWithDataEncoding(data, $.NSUTF8StringEncoding);
+	return ObjC.unwrap(str);
+}
+
+/**
+ * @param {string} file
+ * @param {string} text
+ */
+function writeToFile(file, text) {
+	const str = $.NSString.alloc.initWithUTF8String(text);
+	str.writeToFileAtomicallyEncodingError(file, true, $.NSUTF8StringEncoding, null);
+}
+
+const isHeading = (/** @type {string} */ line) => /^#+ /.test(line);
+const isEmpty = (/** @type {string} */ line) => /^\s*$/.test(line);
+const fileExists = (/** @type {string} */ filePath) => Application("Finder").exists(Path(filePath));
+
+/**
+ * @param {string[]} fileLines
+ * @param {number} lineNo
+ */
+function ensureEmptyLineAt(fileLines, lineNo) {
+	if (lineNo >= fileLines.length || !isEmpty(fileLines[lineNo])) {
+		fileLines.splice(lineNo, 0, "");
+	}
+}
+
+//──────────────────────────────────────────────────────────────────────────────
+/** @type {AlfredRun} */
+// rome-ignore lint/correctness/noUnusedVariables: Alfred run
 function run(argv) {
-	ObjC.import("stdlib");
-	ObjC.import("Foundation");
-	const app = Application.currentApplication();
-	app.includeStandardAdditions = true;
+	const vaultPath = $.getenv("vault_path");
 
-	function readFile(path) {
-		const data = $.NSFileManager.defaultManager.contentsAtPath(path);
-		const str = $.NSString.alloc.initWithDataEncoding(data, $.NSUTF8StringEncoding);
-		return ObjC.unwrap(str);
-	}
-
-	function writeToFile(text, file) {
-		const str = $.NSString.alloc.initWithUTF8String(text);
-		str.writeToFileAtomicallyEncodingError(file, true, $.NSUTF8StringEncoding, null);
-	}
-
-	const isHeading = line => /^#+ /.test(line);
-	const isEmpty = line => /^\s*$/.test(line);
-	const fileExists = filePath => Application("Finder").exists(Path(filePath));
-
-	function ensureEmptyLineAt(fileLines, lineNo) {
-		if (lineNo >= fileLines.length || !isEmpty(fileLines[lineNo])) {
-			fileLines.splice(lineNo, 0, "");
-		}
-	}
-
-	function getVaultPath() {
-		const theApp = Application.currentApplication();
-		theApp.includeStandardAdditions = true;
-		const dataFile = $.NSFileManager.defaultManager.contentsAtPath($.getenv("alfred_workflow_data") + "/vaultPath");
-		const vault = $.NSString.alloc.initWithDataEncoding(dataFile, $.NSUTF8StringEncoding);
-		return ObjC.unwrap(vault).replace(/^~/, theApp.pathTo("home folder"));
-	}
-
-	//───────────────────────────────────────────────────────────────────────────
 	// PREPARE AND READ FILE
 	let heading = "";
 	let relativePath = $.getenv("relative_path");
-	const prefix = $.getenv("prefix");
+	const toAppend = $.getenv("prefix") + argv[0];
 
 	const noteHasHeading = /#[^ ][^/]*$/.test(relativePath);
 	if (noteHasHeading) {
@@ -47,25 +55,24 @@ function run(argv) {
 		relativePath = tempArr.join("");
 	}
 
-	let absolutePath = getVaultPath() + "/" + relativePath;
+	let absolutePath = vaultPath + "/" + relativePath;
 	if (absolutePath.slice(-3) !== ".md") absolutePath += ".md";
 	if (!fileExists(absolutePath)) return "invalid"; // trigger error notification in Alfred
 
 	const noteContent = readFile(absolutePath);
-	const toAppend = prefix + argv.join("");
 
 	//───────────────────────────────────────────────────────────────────────────
 	// APPEND TO FILE
 
 	if (!noteHasHeading) {
-		writeToFile(noteContent + "\n" + toAppend, absolutePath);
+		writeToFile(absolutePath, noteContent + "\n" + toAppend);
 		return relativePath; // return for opening function
 	}
 
 	// determine heading location to append to
 	const lines = noteContent.split("\n");
 	const headingLineNo = lines
-		.map(line => {
+		.map((line) => {
 			const lineIsHeading = line.match(/^#+ /);
 			if (lineIsHeading) return line.replace(/^#+ /gm, "");
 			return ""; // ensures that a line with the same content as a heading isn't detected
@@ -73,8 +80,8 @@ function run(argv) {
 		.indexOf(heading);
 
 	if (headingLineNo === -1) {
-		console.warn("Heading not found. Appending to the bottom of the note instead.");
-		writeToFile(noteContent + "\n" + toAppend, absolutePath);
+		console.log("Heading not found. Appending to the bottom of the note instead.");
+		writeToFile(absolutePath, noteContent + "\n" + toAppend);
 		return relativePath; // return for opening function
 	}
 
@@ -92,7 +99,8 @@ function run(argv) {
 		lines.splice(headingLineNo + 2, 0, toAppend);
 		ensureEmptyLineAt(lines, headingLineNo + 3);
 	}
-	writeToFile(lines.join("\n") + "\n", absolutePath);
+	const content = lines.join("\n") + "\n";
+	writeToFile(absolutePath, content);
 
 	return relativePath; // return for opening function
 }

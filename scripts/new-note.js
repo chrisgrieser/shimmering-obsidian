@@ -18,27 +18,7 @@ function writeToFile(filepath, text) {
 	str.writeToFileAtomicallyEncodingError(filepath, true, $.NSUTF8StringEncoding, null);
 }
 
-function getVaultPath() {
-	const theApp = Application.currentApplication();
-	theApp.includeStandardAdditions = true;
-	const dataFile = $.NSFileManager.defaultManager.contentsAtPath(
-		$.getenv("alfred_workflow_data") + "/vaultPath",
-	);
-	const vault = $.NSString.alloc.initWithDataEncoding(dataFile, $.NSUTF8StringEncoding);
-	return ObjC.unwrap(vault).replace(/^~/, theApp.pathTo("home folder"));
-}
 
-function getVaultNameEncoded() {
-	const theApp = Application.currentApplication();
-	theApp.includeStandardAdditions = true;
-	const dataFile = $.NSFileManager.defaultManager.contentsAtPath(
-		$.getenv("alfred_workflow_data") + "/vaultPath",
-	);
-	const vault = $.NSString.alloc.initWithDataEncoding(dataFile, $.NSUTF8StringEncoding);
-	const theVaultPath = ObjC.unwrap(vault);
-	const vaultName = theVaultPath.replace(/.*\//, "");
-	return encodeURIComponent(vaultName);
-}
 
 const fileExists = (/** @type {string} */ filePath) => Application("Finder").exists(Path(filePath));
 
@@ -47,7 +27,8 @@ const fileExists = (/** @type {string} */ filePath) => Application("Finder").exi
 /** @type {AlfredRun} */
 // rome-ignore lint/correctness/noUnusedVariables: Alfred run
 function run(argv) {
-	const vaultNameEnc = getVaultNameEncoded();
+	const vaultPath = $.getenv("vault_path");
+	const vaultNameEnc = encodeURIComponent(vaultPath.replace(/.*\//, ""));
 	try {
 		const createInNewTab = $.getenv("create_in_new_tab") === "true";
 		if (createInNewTab) app.openLocation(
@@ -64,14 +45,14 @@ function run(argv) {
 	const templateRelPath = $.getenv("template_note_path") || "";
 	const newNoteLocation = $.getenv("new_note_location") || "";
 	const newNoteRelPath = `${newNoteLocation}/${fileName}.md`;
-	let newNoteAbsPath = getVaultPath() + "/" + newNoteRelPath;
+	let newNoteAbsPath = `${vaultPath}/${newNoteRelPath}`;
 	while (fileExists(newNoteAbsPath)) {
 		newNoteAbsPath = newNoteAbsPath.slice(0, -3) + " 1.md";
 	}
 
 	let newNoteContent = "";
 	if (templateRelPath) {
-		let templateAbsPath = getVaultPath() + "/" + templateRelPath;
+		let templateAbsPath = `${vaultPath}/${templateRelPath}`;
 		if (!templateAbsPath.endsWith(".md")) templateAbsPath += ".md";
 		newNoteContent = readFile(templateAbsPath).replace("{{title}}", fileName); // insert title
 	}

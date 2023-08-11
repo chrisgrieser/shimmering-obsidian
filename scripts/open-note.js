@@ -4,31 +4,20 @@ ObjC.import("stdlib");
 const app = Application.currentApplication();
 app.includeStandardAdditions = true;
 
-function getVaultNameEncoded() {
-	const theApp = Application.currentApplication();
-	theApp.includeStandardAdditions = true;
-	const dataFile = $.NSFileManager.defaultManager.contentsAtPath(
-		$.getenv("alfred_workflow_data") + "/vaultPath",
-	);
-	const vault = $.NSString.alloc.initWithDataEncoding(dataFile, $.NSUTF8StringEncoding);
-	const theVaultPath = ObjC.unwrap(vault);
-	const vaultName = theVaultPath.replace(/.*\//, "");
-	return encodeURIComponent(vaultName);
-}
-
 //──────────────────────────────────────────────────────────────────────────────
 
 /** @type {AlfredRun} */
 // rome-ignore lint/correctness/noUnusedVariables: Alfred run
 function run(argv) {
+	const vaultPath = $.getenv("vault_path");
+	const vaultNameEnc = encodeURIComponent(vaultPath.replace(/.*\//, ""));
+
 	const obsiRunningAlready = Application("Obsidian").running();
 
-	const input = argv.join("").trim(); // trim to remove trailing \n
+	const input = argv[0].trim(); // trim to remove trailing \n
 	const relativePath = input.split("#")[0].split(":")[0];
 	const heading = input.split("#")[1];
 	const lineNum = input.split(":")[1]; // used by `oe` external link search to open at line
-
-	const vaultNameEnc = getVaultNameEncoded();
 
 	// construct URI scheme -- https://vinzent03.github.io/obsidian-advanced-uri/actions/navigation
 	let urlScheme =

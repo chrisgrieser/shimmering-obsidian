@@ -12,7 +12,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>F07DA284-FCE4-4784-B4B5-6CD6817AEE98</string>
+				<string>4DF20498-89F0-43F5-929C-1AA8B44880AA</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -342,6 +342,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>2FD76964-F91F-4EEB-B136-70238A407628</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>CD6ADFC6-4DE3-4083-ABD6-A35719BEF5A3</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>2FD866C2-DDB1-4C2D-A420-3A580FBC60D2</key>
 		<array/>
 		<key>31F21F7E-7450-444B-B9FC-D46650DF6F17</key>
@@ -523,19 +536,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>46A5196E-D0B3-4D06-95AB-93FDA30C175D</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>CD6ADFC6-4DE3-4083-ABD6-A35719BEF5A3</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>47CB6610-109D-41E0-BBFF-BF83FB0FC8CE</key>
 		<array/>
 		<key>48992F43-A163-41CB-9AD0-ED130267D058</key>
@@ -565,7 +565,7 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>DF5B66BD-78AD-45F3-B6B5-8E81957741FC</string>
+				<string>16A2C5C4-4D7B-4854-96CF-E21ADE3A612F</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1449,19 +1449,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>9CD5A007-9328-4F09-9C30-4A103FD5D2AE</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>CD6ADFC6-4DE3-4083-ABD6-A35719BEF5A3</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>9DC48313-88F4-44F1-BC18-0B16E0549C51</key>
 		<array>
 			<dict>
@@ -2031,43 +2018,8 @@
 				<false/>
 			</dict>
 		</array>
-		<key>DF5B66BD-78AD-45F3-B6B5-8E81957741FC</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>9E3B9072-3C3B-4C45-A973-426BC0F7E30F</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>sourceoutputuid</key>
-				<string>1E3FD543-3BB6-47AF-8440-406216FA401D</string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>16A2C5C4-4D7B-4854-96CF-E21ADE3A612F</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>E24806C9-408F-4504-B601-DED0239F88FD</key>
 		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>6EDD1A38-8B72-43A8-A86D-A50DFA235654</string>
-				<key>modifiers</key>
-				<integer>131072</integer>
-				<key>modifiersubtext</key>
-				<string>⇧: Control this vault with Alfred</string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
 			<dict>
 				<key>destinationuid</key>
 				<string>BF2C7CBD-67E0-45CC-8948-E68291FF2B50</string>
@@ -2206,7 +2158,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>F07DA284-FCE4-4784-B4B5-6CD6817AEE98</string>
+				<string>4DF20498-89F0-43F5-929C-1AA8B44880AA</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -2267,13 +2219,11 @@
 				<false/>
 			</dict>
 		</array>
-		<key>F07DA284-FCE4-4784-B4B5-6CD6817AEE98</key>
-		<array/>
 		<key>F43AAA85-F638-4A4C-AE36-FB26D01EDFAA</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>F07DA284-FCE4-4784-B4B5-6CD6817AEE98</string>
+				<string>4DF20498-89F0-43F5-929C-1AA8B44880AA</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -4473,51 +4423,23 @@ Application('com.runningwithcrayons.Alfred').removeConfiguration('ObRunning', {
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>alfredfiltersresults</key>
-				<true/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttreatemptyqueryasnil</key>
-				<true/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
 				<key>argumenttype</key>
 				<integer>1</integer>
-				<key>escaping</key>
-				<integer>0</integer>
 				<key>keyword</key>
 				<string>osetup</string>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
-				<key>runningsubtext</key>
-				<string>loading...</string>
-				<key>script</key>
-				<string></string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string>scripts/osetup_1.js</string>
 				<key>subtext</key>
 				<string>Obsidian will restart afterwards</string>
-				<key>title</key>
+				<key>text</key>
 				<string>Initial Setup for Shimmering Obsidian</string>
-				<key>type</key>
-				<integer>8</integer>
 				<key>withspace</key>
 				<true/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
+			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
-			<string>46A5196E-D0B3-4D06-95AB-93FDA30C175D</string>
+			<string>2FD76964-F91F-4EEB-B136-70238A407628</string>
 			<key>version</key>
-			<integer>3</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -4531,7 +4453,7 @@ Application('com.runningwithcrayons.Alfred').removeConfiguration('ObRunning', {
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string>scripts/osetup_2.js</string>
+				<string>scripts/osetup.js</string>
 				<key>type</key>
 				<integer>8</integer>
 			</dict>
@@ -4665,9 +4587,9 @@ Application('com.runningwithcrayons.Alfred').removeConfiguration('ObRunning', {
 				<key>removeextension</key>
 				<false/>
 				<key>text</key>
-				<string>{var:split2}</string>
+				<string></string>
 				<key>title</key>
-				<string>{var:split1}</string>
+				<string>{query}</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.notification</string>
@@ -4724,21 +4646,6 @@ Application('com.runningwithcrayons.Alfred').removeConfiguration('ObRunning', {
 			<string>D508118D-D946-434E-93B0-471D6FE85B18</string>
 			<key>version</key>
 			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>availableviaurlhandler</key>
-				<false/>
-				<key>triggerid</key>
-				<string>select-vault-to-control</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.external</string>
-			<key>uid</key>
-			<string>9CD5A007-9328-4F09-9C30-4A103FD5D2AE</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -4848,38 +4755,6 @@ Application('com.runningwithcrayons.Alfred').removeConfiguration('ObRunning', {
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>conditions</key>
-				<array>
-					<dict>
-						<key>inputstring</key>
-						<string></string>
-						<key>matchcasesensitive</key>
-						<false/>
-						<key>matchmode</key>
-						<integer>4</integer>
-						<key>matchstring</key>
-						<string>^obsidian</string>
-						<key>outputlabel</key>
-						<string>search</string>
-						<key>uid</key>
-						<string>1E3FD543-3BB6-47AF-8440-406216FA401D</string>
-					</dict>
-				</array>
-				<key>elselabel</key>
-				<string>file</string>
-				<key>hideelse</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.conditional</string>
-			<key>uid</key>
-			<string>DF5B66BD-78AD-45F3-B6B5-8E81957741FC</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>externaltriggerid</key>
 				<string>return-only-action</string>
 				<key>passinputasargument</key>
@@ -4922,19 +4797,19 @@ Application('com.runningwithcrayons.Alfred').removeConfiguration('ObRunning', {
 				<key>queuemode</key>
 				<integer>1</integer>
 				<key>runningsubtext</key>
-				<string></string>
+				<string>loading…</string>
 				<key>script</key>
-				<string></string>
+				<string>osascript -l JavaScript ./scripts/bookmark-or-recent-files.js "bookmarks"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string>scripts/bookmark-search.js</string>
+				<string></string>
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
-				<string>⭐️ Open Bookmarked Files and Searches</string>
+				<string>🔖 Search Bookmarked Files</string>
 				<key>type</key>
-				<integer>8</integer>
+				<integer>11</integer>
 				<key>withspace</key>
 				<true/>
 			</dict>
@@ -4990,90 +4865,19 @@ Application('com.runningwithcrayons.Alfred').removeConfiguration('ObRunning', {
 				<key>queuemode</key>
 				<integer>1</integer>
 				<key>runningsubtext</key>
-				<string></string>
+				<string>loading…</string>
 				<key>script</key>
-				<string>ObjC.import('stdlib');
-app = Application.currentApplication();
-app.includeStandardAdditions = true;
-
-// Emoji-Regex: https://stackoverflow.com/questions/37089427/javascript-find-emoji-in-string-and-parse
-const emojiRegex = "(?:[\u2700-\u27bf]|(?:\ud83c[\udde6-\uddff]){2}|[\ud800-\udbff][\udc00-\udfff]|[\u0023-\u0039]\ufe0f?\u20e3|\u3299|\u3297|\u303d|\u3030|\u24c2|\ud83c[\udd70-\udd71]|\ud83c[\udd7e-\udd7f]|\ud83c\udd8e|\ud83c[\udd91-\udd9a]|\ud83c[\udde6-\uddff]|[\ud83c[\ude01-\ude02]|\ud83c\ude1a|\ud83c\ude2f|[\ud83c[\ude32-\ude3a]|[\ud83c[\ude50-\ude51]|\u203c|\u2049|[\u25aa-\u25ab]|\u25b6|\u25c0|[\u25fb-\u25fe]|\u00a9|\u00ae|\u2122|\u2139|\ud83c\udc04|[\u2600-\u26FF]|\u2b05|\u2b06|\u2b07|\u2b1b|\u2b1c|\u2b50|\u2b55|\u231a|\u231b|\u2328|\u23cf|[\u23e9-\u23f3]|[\u23f8-\u23fa]|\ud83c\udccf|\u2934|\u2935|[\u2190-\u21ff])";
-/*------------*/
-
-var vault_path = $.getenv('vault_path');
-let homepath = app.pathTo('home folder');
-vault_path = vault_path.replace(/^~/, homepath);
-const vaultPathLength = vault_path.length + 1;
-const vault_name = vault_path.replace (/.*\/(.*)$/,"$1");
-
-let files = app.doShellScript("echo | find '" + vault_path + "' -not -path '*/.obsidian/*' -not -path '*/.trash/*' -not -path '*.DS_Store*' -not -path '*Icon?'");
-
-var file_array = files.split ("\r");
-
-let jsonArray = [];
-file_array.forEach(file =&gt; {
-  // filename extraction
-  let name = file.replace (/.*\/(.*?)$/,"$1");
-  let type = file.replace (/.*\/.*?(\.\w+)?$/,"$1");
-  let relativePath = file.substring(vaultPathLength, (file.length - name.length - 1));
-  let absolutePath = file;
-
-  //icon
-  let icon = "";
-  if (type == ".md"){
-    icon ="📄 ";
-  } else if (type == ".png"){
-    icon ="🏞 ";
-  } else if (type == ".pdf"){
-    icon ="📜 ";
-  } else if (type == ".csv"){
-    icon ="📊 ";
-  } else if (type == ""){
-    icon ="📁 ";
-  }
-
-  //no icon, if emoji at beginning already
-  var emojiFirstRegEx = new RegExp ("^" + emojiRegex)
-  if (name.match(emojiFirstRegEx)) {
-    icon = "";
-  }
-
-//new Note
-    jsonArray.push ({
-        'title': '❇️ New note with title: ',
-        'arg': 'NEW;;',
-	    'uid': 'newobsidian'
-    })
-
-  //push result
-  if (type != ""){
-      jsonArray.push ({
-        'title': icon + name,
-        'subtitle': vault_name + " ▹ " + relativePath,
-        'arg': absolutePath,
-		'type':'file',
-		'uid': absolutePath
-      })
-  } else {
-
-
-  }
-
-});
-
-JSON.stringify({ 'items': jsonArray });
-
-</string>
+				<string>osascript -l JavaScript ./scripts/bookmark-or-recent-files.js "recents"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string>scripts/recent_searcher.js</string>
+				<string>./scripts/bookmark-or-recent-files.js</string>
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
 				<string>Search Recent Files</string>
 				<key>type</key>
-				<integer>8</integer>
+				<integer>11</integer>
 				<key>withspace</key>
 				<true/>
 			</dict>
@@ -5787,6 +5591,27 @@ fi</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>keyword</key>
+				<string>oupdate</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>🔁 Manually Refresh Metadata</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>4F356F57-A6AA-4277-B742-27DC8EE84450</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>lastpathcomponent</key>
 				<false/>
 				<key>onlyshowifquerypopulated</key>
@@ -5827,27 +5652,6 @@ fi</string>
 			<string>EC424B98-D702-4608-B1EA-07AF49C56048</string>
 			<key>version</key>
 			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>keyword</key>
-				<string>oupdate</string>
-				<key>subtext</key>
-				<string></string>
-				<key>text</key>
-				<string>🔁 Manually Refresh Metadata</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>4F356F57-A6AA-4277-B742-27DC8EE84450</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -6647,25 +6451,6 @@ fi</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>externaltriggerid</key>
-				<string>select-vault-to-control</string>
-				<key>passinputasargument</key>
-				<true/>
-				<key>passvariables</key>
-				<true/>
-				<key>workflowbundleid</key>
-				<string>self</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.callexternaltrigger</string>
-			<key>uid</key>
-			<string>6EDD1A38-8B72-43A8-A86D-A50DFA235654</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>alfredfiltersresults</key>
 				<true/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -6777,9 +6562,9 @@ fi</string>
 				<key>keyword</key>
 				<string>o.obsidian</string>
 				<key>subtext</key>
-				<string></string>
+				<string>{var:config_folder}</string>
 				<key>text</key>
-				<string>⚙️ Open .obsidian</string>
+				<string>⚙️ Open config folder</string>
 				<key>withspace</key>
 				<false/>
 			</dict>
@@ -6794,7 +6579,7 @@ fi</string>
 			<key>config</key>
 			<dict>
 				<key>argument</key>
-				<string>.obsidian</string>
+				<string>{var:config_folder}</string>
 				<key>passthroughargument</key>
 				<false/>
 				<key>variables</key>
@@ -6810,25 +6595,17 @@ fi</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>script</key>
+				<key>openwith</key>
 				<string></string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string>scripts/open-internal-folder.sh</string>
-				<key>type</key>
-				<integer>8</integer>
+				<key>sourcefile</key>
+				<string>{var:vault_path}/{query}</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.script</string>
+			<string>alfred.workflow.action.openfile</string>
 			<key>uid</key>
-			<string>F07DA284-FCE4-4784-B4B5-6CD6817AEE98</string>
+			<string>4DF20498-89F0-43F5-929C-1AA8B44880AA</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -6944,28 +6721,24 @@ fi</string>
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>## 1️⃣ REQUIRED Workflow Setup
+	<string>## 1️⃣ REQUIRED Setting up this workflow for the first time
 #### 1. Install the Obsidian plugins [Advanced URI](https://obsidian.md/plugins?id=obsidian-advanced-uri) &amp; [Metadata Extractor](https://obsidian.md/plugins?id=metadata-extractor). Enable both plugins.
-#### 2. Run the Alfred Command `osetup` and select the vault you want to control with Shimmering Obsidian. Obsidian will then restart. (This step is required even if you have only one vault.)
+#### 2. Set your vault path in the configuration to the left.
+#### 3. Run the Alfred Command `osetup` once. Obsidian will then restart.
 
 ---
 
 ## ⚙️ Workflow Configuration
 - **Some features require additional configuration to the left.** You can get further information on those features at the respective sections of the [documentation](https://github.com/chrisgrieser/shimmering-obsidian/blob/main/README.md).
-- To configure the Hotkeys, double-click [sky-blue fields](https://i.imgur.com/wlpht7f.png) at the top left of the workflow window. 
+- To configure the hotkeys, double-click [sky-blue fields](https://i.imgur.com/wlpht7f.png) at the top left of the workflow window. 
 
 ---
 
 ## 📙 Recent Changes
-- new: Setting to reduce the number of emojis displayed throughout the workflow.
-- new: `oe` [Search all external links in your entire vault.](https://github.com/chrisgrieser/shimmering-obsidian/blob/main/docs/Note-related%20Features.md#search-all-external-links-in-the-entire-vault)
-- new: `odd` obsidian developer document search for the [Obsidian Developer Docs](https://docs.obsidian.md/Home).
-- `os` starred-search renamed to `ob` bookmark-search to reflect the switch from the Starred Core Plugin to the Bookmarks Core Plugin
-- `oa` attachment search now opens in the default app by default, not opening Obsidian. (Use `⇧⏎` to open in Obsidian.)
-- Workflow Icon updated due to the Obsidian Icon change
-- Forum Search has been deprecated/removed.
-- ⭐️ 600 Stars on GitHub! Thank you everyone for your support. (You can also star the plugin at the [GitHub repo](https://github.com/chrisgrieser/shimmering-obsidian) to show your support for it.)
-- Various Bug Fixes (OCR Screenshots, `on` not overriding existing files, etc.)
+- ⚠️ **breaking change**: vault paths are now configured via the setting to the right instead. 
+- 🆕 You can now use vaults even if the config folder is not placed in `.obsidian`.
+- 🆕 `oe` [Search all external links in your entire vault.](https://github.com/chrisgrieser/shimmering-obsidian/blob/main/docs/Note-related%20Features.md#search-all-external-links-in-the-entire-vault)
+- ⭐️ 600 Stars on GitHub! Thanks everyone for your support. (You can also star the plugin at the [GitHub repo](https://github.com/chrisgrieser/shimmering-obsidian) to show your support for it.)
 
 ---
 
@@ -6991,9 +6764,9 @@ fi</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<real>180</real>
+			<real>175</real>
 			<key>ypos</key>
-			<real>8150</real>
+			<real>7880</real>
 		</dict>
 		<key>0645AAB4-66F5-4149-A92B-C58A80B649C7</key>
 		<dict>
@@ -7094,9 +6867,9 @@ fi</string>
 			<key>note</key>
 			<string>opens in default Terminal</string>
 			<key>xpos</key>
-			<real>260</real>
+			<real>255</real>
 			<key>ypos</key>
-			<real>7780</real>
+			<real>7580</real>
 		</dict>
 		<key>0F72D532-AAE1-48A3-85FC-A819F196DC3E</key>
 		<dict>
@@ -7141,7 +6914,7 @@ fi</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<real>445</real>
+			<real>440</real>
 			<key>ypos</key>
 			<real>425</real>
 		</dict>
@@ -7299,6 +7072,15 @@ fi</string>
 			<key>ypos</key>
 			<real>6970</real>
 		</dict>
+		<key>2FD76964-F91F-4EEB-B136-70238A407628</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>11</integer>
+			<key>xpos</key>
+			<real>1465</real>
+			<key>ypos</key>
+			<real>2610</real>
+		</dict>
 		<key>2FD866C2-DDB1-4C2D-A420-3A580FBC60D2</key>
 		<dict>
 			<key>colorindex</key>
@@ -7371,9 +7153,9 @@ fi</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<real>35</real>
+			<real>30</real>
 			<key>ypos</key>
-			<real>8125</real>
+			<real>7855</real>
 		</dict>
 		<key>392642B8-A259-495D-A715-AD6FE5DBE992</key>
 		<dict>
@@ -7455,9 +7237,9 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<real>35</real>
+			<real>30</real>
 			<key>ypos</key>
-			<real>8365</real>
+			<real>8095</real>
 		</dict>
 		<key>4666F95D-B06C-48CD-8FA2-9A795FAF23D7</key>
 		<dict>
@@ -7468,23 +7250,14 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>ypos</key>
 			<real>6360</real>
 		</dict>
-		<key>46A5196E-D0B3-4D06-95AB-93FDA30C175D</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>11</integer>
-			<key>xpos</key>
-			<real>1470</real>
-			<key>ypos</key>
-			<real>2610</real>
-		</dict>
 		<key>47CB6610-109D-41E0-BBFF-BF83FB0FC8CE</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<real>205</real>
+			<real>200</real>
 			<key>ypos</key>
-			<real>8365</real>
+			<real>8095</real>
 		</dict>
 		<key>48992F43-A163-41CB-9AD0-ED130267D058</key>
 		<dict>
@@ -7534,6 +7307,15 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<real>495</real>
 			<key>ypos</key>
 			<real>5445</real>
+		</dict>
+		<key>4DF20498-89F0-43F5-929C-1AA8B44880AA</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>xpos</key>
+			<real>275</real>
+			<key>ypos</key>
+			<real>7850</real>
 		</dict>
 		<key>4DFA3143-56A4-4661-8DF9-4103FFA7D703</key>
 		<dict>
@@ -7611,9 +7393,9 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<real>255</real>
+			<real>250</real>
 			<key>ypos</key>
-			<real>7655</real>
+			<real>7455</real>
 		</dict>
 		<key>560E177F-C4A4-432D-A640-5A15B7048CB8</key>
 		<dict>
@@ -7734,7 +7516,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>note</key>
-			<string>quicksearch note</string>
+			<string>main search</string>
 			<key>xpos</key>
 			<real>35</real>
 			<key>ypos</key>
@@ -7765,7 +7547,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>note</key>
-			<string>reveal file, open folder</string>
+			<string>reveal file / open folder</string>
 			<key>xpos</key>
 			<real>1680</real>
 			<key>ypos</key>
@@ -7813,15 +7595,6 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<real>30</real>
 			<key>ypos</key>
 			<real>5610</real>
-		</dict>
-		<key>6EDD1A38-8B72-43A8-A86D-A50DFA235654</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>6</integer>
-			<key>xpos</key>
-			<real>260</real>
-			<key>ypos</key>
-			<real>7420</real>
 		</dict>
 		<key>72551A9E-43E8-4462-9CB0-D5C419B4AEA2</key>
 		<dict>
@@ -8035,9 +7808,9 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<real>35</real>
+			<real>30</real>
 			<key>ypos</key>
-			<real>8245</real>
+			<real>7975</real>
 		</dict>
 		<key>8DD30BCA-F11D-415E-8DFA-F40BD34857F9</key>
 		<dict>
@@ -8100,9 +7873,9 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<real>175</real>
+			<real>170</real>
 			<key>ypos</key>
-			<real>7810</real>
+			<real>7610</real>
 		</dict>
 		<key>994FC5F6-BF71-4B6D-8E8B-794A453AC62D</key>
 		<dict>
@@ -8123,15 +7896,6 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<real>30</real>
 			<key>ypos</key>
 			<real>3230</real>
-		</dict>
-		<key>9CD5A007-9328-4F09-9C30-4A103FD5D2AE</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>6</integer>
-			<key>xpos</key>
-			<real>1470</real>
-			<key>ypos</key>
-			<real>2740</real>
 		</dict>
 		<key>9DA49FEA-E8E8-41DF-9645-53CC395531A2</key>
 		<dict>
@@ -8358,9 +8122,9 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<real>255</real>
+			<real>250</real>
 			<key>ypos</key>
-			<real>7545</real>
+			<real>7345</real>
 		</dict>
 		<key>BFA862CD-BAD9-4682-868F-8873F7DCFCBF</key>
 		<dict>
@@ -8602,15 +8366,6 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>ypos</key>
 			<real>95</real>
 		</dict>
-		<key>DF5B66BD-78AD-45F3-B6B5-8E81957741FC</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>xpos</key>
-			<real>180</real>
-			<key>ypos</key>
-			<real>3030</real>
-		</dict>
 		<key>E24806C9-408F-4504-B601-DED0239F88FD</key>
 		<dict>
 			<key>colorindex</key>
@@ -8618,9 +8373,9 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>note</key>
 			<string>Vault Switcher</string>
 			<key>xpos</key>
-			<real>35</real>
+			<real>30</real>
 			<key>ypos</key>
-			<real>7545</real>
+			<real>7345</real>
 		</dict>
 		<key>E2A349EC-FD2E-4562-A58E-8D47A46956F6</key>
 		<dict>
@@ -8688,20 +8443,20 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 		<key>E844180D-E691-40D1-9EB1-6A06F69C73B9</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>9</integer>
+			<integer>3</integer>
 			<key>xpos</key>
-			<real>35</real>
+			<real>30</real>
 			<key>ypos</key>
-			<real>8005</real>
+			<real>7735</real>
 		</dict>
 		<key>E88AC866-9A2B-4763-914C-EF2BB940DDE2</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<real>180</real>
+			<real>175</real>
 			<key>ypos</key>
-			<real>8275</real>
+			<real>8005</real>
 		</dict>
 		<key>E98B2FB0-60FA-4F2F-9159-6B774AD0277E</key>
 		<dict>
@@ -8781,17 +8536,6 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>ypos</key>
 			<real>65</real>
 		</dict>
-		<key>F07DA284-FCE4-4784-B4B5-6CD6817AEE98</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>note</key>
-			<string>open folder</string>
-			<key>xpos</key>
-			<real>285</real>
-			<key>ypos</key>
-			<real>8120</real>
-		</dict>
 		<key>F117FF8C-E6E5-4B0E-9FCE-DDB0A6476CAB</key>
 		<dict>
 			<key>colorindex</key>
@@ -8815,9 +8559,9 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<real>180</real>
+			<real>175</real>
 			<key>ypos</key>
-			<real>8035</real>
+			<real>7765</real>
 		</dict>
 		<key>F8A28B5B-0774-406B-BD27-E4F0C69FD6A2</key>
 		<dict>
@@ -8862,6 +8606,48 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 	</dict>
 	<key>userconfigurationconfig</key>
 	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string></string>
+				<key>filtermode</key>
+				<integer>1</integer>
+				<key>placeholder</key>
+				<string>~/my-vault</string>
+				<key>required</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string></string>
+			<key>label</key>
+			<string>Vault Path</string>
+			<key>type</key>
+			<string>filepicker</string>
+			<key>variable</key>
+			<string>vault_path</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>.obsidian</string>
+				<key>placeholder</key>
+				<string>.obsidian</string>
+				<key>required</key>
+				<true/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>Advanced users: If you use a different config folder than the default one.</string>
+			<key>label</key>
+			<string>override config folder</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>config_folder</string>
+		</dict>
 		<dict>
 			<key>config</key>
 			<dict>

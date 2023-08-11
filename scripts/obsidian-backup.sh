@@ -1,8 +1,9 @@
 #!/bin/zsh
+# shellcheck disable=2154
+
 timestamp=$(date '+%Y-%m-%d_%H-%M')
 backup_destination="${backup_destination/#\~/$HOME}"
 backup="$backup_destination/Obsidian-Backup_$timestamp.zip"
-vault_path="$(cat "$alfred_workflow_data/vaultPath")" && vault_path="${vault_path/#\~/$HOME}"
 
 # directory change necessary to avoid zipping root folder https://unix.stackexchange.com/questions/245856/zip-a-file-without-including-the-parent-directory
 # "./.*" matches all hidden files, including `.git`, which inflates the backup size,

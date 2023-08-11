@@ -1,17 +1,16 @@
 #!/usr/bin/env osascript -l JavaScript
 
-ObjC.import("stdlib")
+ObjC.import("stdlib");
+const app = Application.currentApplication();
+app.includeStandardAdditions = true;
 
+//──────────────────────────────────────────────────────────────────────────────
+
+/** @type {AlfredRun} */
+// rome-ignore lint/correctness/noUnusedVariables: Alfred run
 function run(argv) {
-	function getVaultPath() {
-		const theApp = Application.currentApplication();
-		theApp.includeStandardAdditions = true;
-		const dataFile = $.NSFileManager.defaultManager.contentsAtPath($.getenv("alfred_workflow_data") + "/vaultPath");
-		const vault = $.NSString.alloc.initWithDataEncoding(dataFile, $.NSUTF8StringEncoding);
-		return ObjC.unwrap(vault).replace(/^~/, theApp.pathTo("home folder"));
-	}
-
-	const absolutePath = argv.join("");
-	const relativePath = absolutePath.slice(getVaultPath().length);
+	const absolutePath = argv[0];
+	const vaultPath = $.getenv("vault_path");
+	const relativePath = absolutePath.slice(vaultPath.length);
 	return relativePath;
 }

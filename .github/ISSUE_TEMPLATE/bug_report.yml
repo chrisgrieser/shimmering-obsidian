@@ -72,5 +72,3 @@ body:
           required: true
         - label: If notes in general can be found, but recently created or renamed notes cannot, I used the `oupdate` command to manually update the metadata.
           required: true
-        - label: I have not renamed my Obsidian config folder, it's still `.obsidian` (About → Advanced → Override config folder).
-          required: true
