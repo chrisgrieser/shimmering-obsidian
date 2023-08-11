@@ -39,8 +39,22 @@ function run(argv) {
 
 	const recentFiles = fileExists(recentJSON) ? JSON.parse(readFile(recentJSON)).lastOpenFiles : [];
 
+	//───────────────────────────────────────────────────────────────────────────
+	// GUARD: metadata does not exist since user has not run `osetup`
+	if (!fileExists(metadataJSON)) {
+		return JSON.stringify({
+			items: [
+				{
+					title: "⚠️ No vault metadata found.",
+					subtitle: "Please run the Alfred command `osetup` first. This only has to be done once.",
+					valid: false,
+				},
+			],
+		});
+	}
+
 	//──────────────────────────────────────────────────────────────────────────────
-	// bookmarks & stars
+	// BOOKMARKS & STARS
 	let stars = [];
 	const bookmarks = [];
 	if (fileExists(starredJSON)) {

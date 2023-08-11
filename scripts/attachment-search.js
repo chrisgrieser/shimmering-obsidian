@@ -19,6 +19,8 @@ function parentFolder(filePath) {
 	return filePath.split("/").slice(0, -1).join("/");
 }
 
+const fileExists = (/** @type {string} */ filePath) => Application("Finder").exists(Path(filePath));
+
 //──────────────────────────────────────────────────────────────────────────────
 
 /** @type {AlfredRun} */
@@ -27,6 +29,22 @@ function run() {
 	const vaultPath = $.getenv("vault_path");
 	const configFolder = $.getenv("config_folder");
 	const attachmentMetadata = `${vaultPath}/${configFolder}/plugins/metadata-extractor/allExceptMd.json`;
+
+	//───────────────────────────────────────────────────────────────────────────
+	// GUARD: metadata does not exist since user has not run `osetup`
+	if (!fileExists(attachmentMetadata)) {
+		return JSON.stringify({
+			items: [
+				{
+					title: "⚠️ No vault metadata found.",
+					subtitle: "Please run the Alfred command `osetup` first. This only has to be done once.",
+					valid: false,
+				},
+			],
+		});
+	}
+
+	//───────────────────────────────────────────────────────────────────────────
 
 	// filter the metadataJSON for the items w/ relativePaths of starred files
 	const attachmentArr = JSON.parse(readFile(attachmentMetadata)).nonMdFiles.map(

@@ -43,6 +43,20 @@ function run() {
 			.filter((line) => line.length !== 0);
 	}
 
+	//───────────────────────────────────────────────────────────────────────────
+	// GUARD: metadata does not exist since user has not run `osetup`
+	if (!fileExists(tagsJSON)) {
+		return JSON.stringify({
+			items: [
+				{
+					title: "⚠️ No vault metadata found.",
+					subtitle: "Please run the Alfred command `osetup` first. This only has to be done once.",
+					valid: false,
+				},
+			],
+		});
+	}
+
 	//──────────────────────────────────────────────────────────────────────────────
 
 	let tagsArray = JSON.parse(readFile(tagsJSON)).map((/** @type {{ merged: boolean; }} */ tag) => {
