@@ -59,20 +59,6 @@ function run() {
 	const superIconFile = $.getenv("supercharged_icon_file");
 
 	//───────────────────────────────────────────────────────────────────────────
-	// GUARD: metadata does not exist since user has not run `osetup`
-	if (!fileExists(metadataJSON)) {
-		return JSON.stringify({
-			items: [
-				{
-					title: "⚠️ No vault metadata found.",
-					subtitle: "Please run the Alfred command `osetup` first. This only has to be done once.",
-					valid: false,
-				},
-			],
-		});
-	}
-
-	//───────────────────────────────────────────────────────────────────────────
 
 	// ICONS
 	// Recent Files

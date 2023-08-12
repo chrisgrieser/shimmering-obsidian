@@ -48,8 +48,8 @@ function run(argv) {
 	let relativePath = $.getenv("relative_path");
 	const toAppend = $.getenv("prefix") + argv[0];
 
-	const noteHasHeading = /#[^ ][^/]*$/.test(relativePath);
-	if (noteHasHeading) {
+	const notePathHasHeading = /#[^ ][^/]*$/.test(relativePath);
+	if (notePathHasHeading) {
 		const tempArr = relativePath.split("#");
 		heading = tempArr.pop();
 		relativePath = tempArr.join("");
@@ -64,7 +64,7 @@ function run(argv) {
 	//───────────────────────────────────────────────────────────────────────────
 	// APPEND TO FILE
 
-	if (!noteHasHeading) {
+	if (!notePathHasHeading) {
 		writeToFile(absolutePath, noteContent + "\n" + toAppend);
 		return relativePath; // return for opening function
 	}
@@ -79,27 +79,28 @@ function run(argv) {
 		})
 		.indexOf(heading);
 
+	// guard: heading not found
 	if (headingLineNo === -1) {
-		console.log("Heading not found. Appending to the bottom of the note instead.");
+		app.displayNotification("", { withTitle: "Heading not found.", subtitle: "Appending to the bottom of the note instead." })
 		writeToFile(absolutePath, noteContent + "\n" + toAppend);
 		return relativePath; // return for opening function
 	}
 
-	// Appending
+	// Appending at last non-empty line of heading-section
 	let lastNonEmptyLineNo = -1;
 	for (let i = headingLineNo + 1; i < lines.length; i++) {
 		const line = lines[i];
 		if (isHeading(line)) break;
 		else if (!isEmpty(line)) lastNonEmptyLineNo = i;
 	}
-	if (lastNonEmptyLineNo > 0) {
-		lines.splice(lastNonEmptyLineNo + 1, 0, toAppend);
-	} else {
+	if (lastNonEmptyLineNo === -1) {
 		ensureEmptyLineAt(lines, headingLineNo + 1);
 		lines.splice(headingLineNo + 2, 0, toAppend);
 		ensureEmptyLineAt(lines, headingLineNo + 3);
+	} else {
+		lines.splice(lastNonEmptyLineNo + 1, 0, toAppend);
 	}
-	const content = lines.join("\n") + "\n";
+	const content = lines.join("\n");
 	writeToFile(absolutePath, content);
 
 	return relativePath; // return for opening function
