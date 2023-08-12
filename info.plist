@@ -8489,7 +8489,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 				<true/>
 			</dict>
 			<key>description</key>
-			<string></string>
+			<string>Path to the vault that you want to control with this Alfred workflow.</string>
 			<key>label</key>
 			<string>Vault Path</string>
 			<key>type</key>
