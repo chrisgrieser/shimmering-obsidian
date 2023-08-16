@@ -102,7 +102,7 @@ Alfred Workflow with dozens of features for controlling your [Obsidian vault](ht
 - ➡️ [Documentation of Features for Developers](docs/Features%20for%20Developers.md)
 
 ## Installation
-*This workflow requires the Alfred 5 with [Powerpack](https://www.alfredapp.com/powerpack/).*
+*This workflow requires Alfred 5 with [Powerpack](https://www.alfredapp.com/powerpack/).*
 1. Install the Obsidian plugins [Advanced URI](https://obsidian.md/plugins?id=obsidian-advanced-uri) & [Metadata Extractor](https://obsidian.md/plugins?id=metadata-extractor). Enable both plugins.
 2. Download the [latest release at GitHub](https://github.com/chrisgrieser/shimmering-obsidian/releases/latest). Double-click the `.alfredworkflow` file to install it.
 3. Set your vault path in the workflow configuration.
