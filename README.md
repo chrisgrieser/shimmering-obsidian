@@ -43,7 +43,7 @@ Alfred Workflow with dozens of features for controlling your [Obsidian vault](ht
 - Search only for attachments (non-markdown files) in your vault
 - Graph Traversal via Alfred
 - Smart Search: A query like `o foobar #moc starred` displays only files named "foobar" with the tag `#moc` that are also starred.
-- Visual Search: Add Icons to your tags based on their tags, similar to the [Supercharged Links](https://obsidian.md/plugins?id=supercharged-links-obsidian) Plugin.
+- Visual Search: Add Icons to your notes based on their tags, similar to the [Supercharged Links](https://obsidian.md/plugins?id=supercharged-links-obsidian) Plugin.
 - ➡️ [Documentation of Quick Switcher Features](docs/Alfred-based%20Quick%20Switcher.md)
 
 ### Note-related Features
