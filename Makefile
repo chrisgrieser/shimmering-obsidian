@@ -1,4 +1,4 @@
-.PHONY: transfer-local-files, release
+.PHONY: transfer-local-files release
 #───────────────────────────────────────────────────────────────────────────────
 
 transfer-local-files:
