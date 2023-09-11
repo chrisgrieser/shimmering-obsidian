@@ -271,7 +271,7 @@ function run() {
 		for (const heading of file.headings) {
 			const hName = heading.heading;
 			const hLevel = heading.level;
-			if (headingIgnore[hLevel]) return; // skips iteration if heading has been configured as ignore
+			if (headingIgnore[hLevel]) continue; // skips iteration if heading has been configured as ignore
 			const headingIconpath = `icons/headings/h${hLevel}.png`;
 			const matchStr = [`h${hLevel}`, alfredMatcher(hName), alfredMatcher(filename)].join(" ");
 			const displayHeading = applyCensoring ? hName.replace(/./g, censorChar) : hName;
