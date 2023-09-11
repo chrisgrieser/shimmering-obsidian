@@ -1,5 +1,4 @@
 #!/usr/bin/env osascript -l JavaScript
-
 ObjC.import("stdlib");
 ObjC.import("Foundation");
 const app = Application.currentApplication();
@@ -115,19 +114,20 @@ function run() {
 	//──────────────────────────────────────────────────────────────────────────────
 	// DETERMINE PATH TO SEARCH
 	let currentFolder;
-	let pathToCheck;
+	let pathToSearch;
 	// either searches the vault, or a subfolder of the vault
 	try {
 		currentFolder = $.getenv("browse_folder");
-		pathToCheck = vaultPath + "/" + currentFolder;
-		if (pathToCheck.endsWith("//")) pathToCheck = vaultPath; // when going back up from child of vault root
+		pathToSearch = vaultPath + "/" + currentFolder;
+		if (pathToSearch.endsWith("//")) pathToSearch = vaultPath; // when going back up from child of vault root
 	} catch (_error) {
-		pathToCheck = vaultPath;
+		pathToSearch = vaultPath;
 	}
+	const isInSubfolder = pathToSearch !== vaultPath;
 
 	// returns *absolute* paths
 	let folderArray = app
-		.doShellScript(`find "${pathToCheck}" -type d -mindepth 1 -not -path "*/.*"`)
+		.doShellScript(`find "${pathToSearch}" -type d -mindepth 1 -not -path "*/.*"`)
 		.split("\r");
 	if (!folderArray) folderArray = [];
 
@@ -158,7 +158,7 @@ function run() {
 	fileArray = applyExcludeFilter(fileArray, false);
 
 	// if in subfolder, filter files outside subfolder
-	if (pathToCheck !== vaultPath) {
+	if (isInSubfolder) {
 		fileArray = fileArray.filter((file) => file.relativePath.startsWith(currentFolder));
 		canvasArray = canvasArray.filter((/** @type {{ relativePath: string; }} */ file) =>
 			file.relativePath.startsWith(currentFolder),
@@ -187,21 +187,24 @@ function run() {
 		const filename = file.fileName;
 		const relativePath = file.relativePath;
 		const absolutePath = vaultPath + "/" + relativePath;
+		const isBookmarked = starsAndBookmarks.includes(relativePath);
+		const isRecent = recentFiles.includes(relativePath);
 
+		// matching for Alfred
 		const tagMatcher = file.tags ? " #" + file.tags.join(" #") : "";
+		let additionalMatcher = "";
+		if (isRecent) additionalMatcher += "recent ";
+		if (isBookmarked) additionalMatcher += "starred bookmarked ";
+
+		// pprioritization of sorting
+		const prioritzedSorting = isRecent || isBookmarked;
+		const insertVia = prioritzedSorting ? "unshift" : "push";
 
 		// icon & emojis
 		let iconpath = "icons/note.png";
 		let emoji = "";
-		let additionalMatcher = "";
-		if (starsAndBookmarks.includes(relativePath)) {
-			emoji += "🔖 ";
-			additionalMatcher += "starred bookmarked ";
-		}
-		if (recentFiles.includes(relativePath)) {
-			emoji += "🕑 ";
-			additionalMatcher += "recent ";
-		}
+		if (isBookmarked) emoji += "🔖 ";
+		if (isRecent) emoji += "🕑 ";
 		if (filename.toLowerCase().includes("kanban")) iconpath = "icons/kanban.png";
 		if ($.getenv("remove_emojis") === "1") emoji = "";
 
@@ -232,7 +235,7 @@ function run() {
 		const displayName = applyCensoring ? filename.replace(/./g, censorChar) : filename;
 
 		// Notes (file names)
-		resultsArr.push({
+		resultsArr[insertVia]({
 			title: emoji + superchargedIcon + displayName + superchargedIcon2,
 			match: alfredMatcher(filename) + tagMatcher + " filename name title",
 			subtitle: "▸ " + parentFolder(relativePath),
@@ -250,8 +253,8 @@ function run() {
 		if (file.aliases) {
 			for (const alias of file.aliases) {
 				const displayAlias = applyCensoring ? alias.replace(/./g, censorChar) : alias;
-				resultsArr.push({
-					title: superchargedIcon + displayAlias + superchargedIcon2,
+				resultsArr[insertVia]({
+					title: emoji + superchargedIcon + displayAlias + superchargedIcon2,
 					match: additionalMatcher + "alias " + alfredMatcher(alias),
 					subtitle: "↪ " + displayName,
 					arg: relativePath,
@@ -276,7 +279,7 @@ function run() {
 			const matchStr = [`h${hLevel}`, alfredMatcher(hName), alfredMatcher(filename)].join(" ");
 			const displayHeading = applyCensoring ? hName.replace(/./g, censorChar) : hName;
 
-			resultsArr.push({
+			resultsArr[insertVia]({
 				title: displayHeading,
 				match: matchStr,
 				subtitle: "➣ " + displayName,
@@ -301,8 +304,19 @@ function run() {
 		const name = file.basename;
 		const relativePath = file.relativePath;
 		const denyForCanvas = { valid: false, subtitle: "⛔ Cannot do that with a canvas." };
+		const isBookmarked = starsAndBookmarks.includes(relativePath);
+		const isRecent = recentFiles.includes(relativePath);
 
-		resultsArr.push({
+		// matching for Alfred
+		let additionalMatcher = "";
+		if (isRecent) additionalMatcher += "recent ";
+		if (isBookmarked) additionalMatcher += "starred bookmarked ";
+
+		// pprioritization of sorting
+		const prioritzedSorting = isRecent || isBookmarked;
+		const insertVia = prioritzedSorting ? "unshift" : "push";
+
+		resultsArr[insertVia]({
 			title: name,
 			match: alfredMatcher(name) + " canvas",
 			subtitle: "▸ " + parentFolder(relativePath),
@@ -342,7 +356,7 @@ function run() {
 	}
 
 	// ADDITIONAL OPTIONS WHEN BROWSING A FOLDER
-	if (pathToCheck !== vaultPath) {
+	if (isInSubfolder) {
 		// New File in Folder
 		resultsArr.push({
 			title: "Create new note in this folder",
@@ -353,7 +367,7 @@ function run() {
 
 		// go up to parent folder
 		resultsArr.push({
-			title: "⬆� Up to Parent Folder",
+			title: "⬆ Up to Parent Folder",
 			match: "up back parent folder directory browse .. cd",
 			subtitle: "▸ " + parentFolder(currentFolder),
 			arg: parentFolder(currentFolder),
