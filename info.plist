@@ -6636,7 +6636,9 @@ fi</string>
 ---
 
 ## 📙 Recent Changes
-- ⚠️ **breaking change**: vault paths are now configured via the setting to the right instead. 
+- ⬆️ Prioritization of recent or bookmarked notes in the search results.
+- 🩹 Fixed Some headings being ignored in certain situations.
+- ⚠️ Vault paths are now configured via the setting to the right instead. 
 - 🆕 You can now use vaults even if the config folder is not placed in `.obsidian`.
 - 🆕 `oe` [Search all external links in your entire vault.](https://github.com/chrisgrieser/shimmering-obsidian/blob/main/docs/Note-related%20Features.md#search-all-external-links-in-the-entire-vault)
 - ⭐️ 600 Stars on GitHub! Thanks everyone for your support. (You can also star the plugin at the [GitHub repo](https://github.com/chrisgrieser/shimmering-obsidian) to show your support for it.)
@@ -6651,7 +6653,8 @@ fi</string>
 
 ---
 
-### Created by [Chris Grieser](https://chris-grieser.de/)
+### Created by Chris Grieser aka pseudometa
+- [Academic Website](https://chris-grieser.de/)
 - [ResearchGate](https://www.researchgate.net/profile/Christopher-Grieser)
 - [Discord](https://discordapp.com/users/462774483044794368/)
 - [GitHub](https://github.com/chrisgrieser/)
