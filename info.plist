@@ -8572,7 +8572,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 				<string></string>
 			</dict>
 			<key>description</key>
-			<string>Reduces the number of emojis used throughout the workflow. (This does not apply to emojis you have explicitly yourself added with the Supercharged Icons feature further below.)</string>
+			<string>Reduces the number of emojis used throughout the workflow. (This does not apply to emojis you have explicitly added yourself with the Supercharged Icons feature further below.)</string>
 			<key>label</key>
 			<string>Remove emojis</string>
 			<key>type</key>

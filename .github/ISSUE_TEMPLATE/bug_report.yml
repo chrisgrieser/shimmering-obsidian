@@ -19,12 +19,14 @@ body:
     id: reproduction-steps
     attributes:
       label: To Reproduce
-      description: Steps to reproduce the problem
+      description: Steps to reproduce the problem, which part of the workflow is not working?
       placeholder: |
         For example:
-        1. Go to '...'
-        2. Click on '...'
-        3. Scroll down to '...'
+        1. Go to…
+        2. Use the keyword…
+        3. Select…
+    validations:
+      required: true
   - type: textarea
     id: debugging-log
     attributes:
