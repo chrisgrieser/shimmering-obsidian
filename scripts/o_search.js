@@ -51,11 +51,10 @@ function run() {
 		: [];
 
 	const recentFiles = fileExists(recentJSON) ? JSON.parse(readFile(recentJSON)).lastOpenFiles : [];
-
 	let canvasArray = fileExists(canvasJSON) ? JSON.parse(readFile(canvasJSON)) : [];
 
 	//───────────────────────────────────────────────────────────────────────────
-	// GUARD: metadata does not exist since user has not run `osetup`
+	// Main Metadata
 	if (!fileExists(metadataJSON)) {
 		return JSON.stringify({
 			items: [
@@ -67,6 +66,7 @@ function run() {
 			],
 		});
 	}
+	let fileArray = JSON.parse(readFile(metadataJSON));
 
 	//──────────────────────────────────────────────────────────────────────────────
 	// BOOKMARKS & STARS
@@ -105,12 +105,6 @@ function run() {
 			.filter((line) => line.length !== 0);
 	}
 
-	let fileArray;
-	if (fileExists(metadataJSON)) fileArray = JSON.parse(readFile(metadataJSON));
-	else console.log("metadata.json missing.");
-
-	const resultsArr = [];
-
 	//──────────────────────────────────────────────────────────────────────────────
 	// DETERMINE PATH TO SEARCH
 	let currentFolder;
@@ -134,8 +128,19 @@ function run() {
 	//──────────────────────────────────────────────────────────────────────────────
 	// EXCLUSION & IGNORING
 
+	// if in subfolder, filter files outside subfolder
+	if (isInSubfolder) {
+		fileArray = fileArray.filter((/** @type {{ relativePath: string; }} */ file) =>
+			file.relativePath.startsWith(currentFolder),
+		);
+		canvasArray = canvasArray.filter((/** @type {{ relativePath: string; }} */ file) =>
+			file.relativePath.startsWith(currentFolder),
+		);
+		// folderarray does not need to be filtered, since already filtered on creation
+	}
+
 	/**
-	 * @param {any[]} array
+	 * @param {object[]} array
 	 * @param {boolean} isFolder
 	 */
 	function applyExcludeFilter(array, isFolder) {
@@ -157,15 +162,6 @@ function run() {
 	canvasArray = applyExcludeFilter(canvasArray, false);
 	fileArray = applyExcludeFilter(fileArray, false);
 
-	// if in subfolder, filter files outside subfolder
-	if (isInSubfolder) {
-		fileArray = fileArray.filter((file) => file.relativePath.startsWith(currentFolder));
-		canvasArray = canvasArray.filter((/** @type {{ relativePath: string; }} */ file) =>
-			file.relativePath.startsWith(currentFolder),
-		);
-		// folderarray does not need to be filtered, since already filtered on creation
-	}
-
 	// ignored headings
 	const hLVLignore = $.getenv("h_lvl_ignore");
 	const headingIgnore = [];
@@ -180,10 +176,10 @@ function run() {
 
 	//──────────────────────────────────────────────────────────────────────────────
 	// CONSTRUCTION OF JSON FOR ALFRED
+	const resultsArr = [];
 
 	// FILES
-	// biome-ignore lint/complexity/noForEach: breaks workflow?
-	fileArray.forEach((file) => {
+	for (const file of fileArray) {
 		const filename = file.fileName;
 		const relativePath = file.relativePath;
 		const absolutePath = vaultPath + "/" + relativePath;
@@ -270,7 +266,7 @@ function run() {
 		}
 
 		// Headings
-		if (!file.headings) return; // skips iteration if no heading
+		if (!file.headings) continue; // skips iteration if no heading
 		for (const heading of file.headings) {
 			const hName = heading.heading;
 			const hLevel = heading.level;
@@ -297,12 +293,12 @@ function run() {
 				},
 			});
 		}
-	});
+	}
 
 	// CANVASES
-	for (const file of canvasArray) {
-		const name = file.basename;
-		const relativePath = file.relativePath;
+	for (const canvas of canvasArray) {
+		const name = canvas.basename;
+		const relativePath = canvas.relativePath;
 		const denyForCanvas = { valid: false, subtitle: "⛔ Cannot do that with a canvas." };
 		const isBookmarked = starsAndBookmarks.includes(relativePath);
 		const isRecent = recentFiles.includes(relativePath);
@@ -333,9 +329,10 @@ function run() {
 
 	// FOLDERS
 	for (const absolutePath of folderArray) {
+		const denyForFolder = { valid: false, subtitle: "⛔ Cannot do that with a folder." };
 		const name = absolutePath.split("/").pop();
 		const relativePath = absolutePath.slice(vaultPath.length + 1);
-		if (!name) return; // root on 2 level deep folder search
+		if (!name) continue; // root on 2 level deep folder search
 
 		resultsArr.push({
 			title: name,
@@ -347,10 +344,10 @@ function run() {
 			icon: { path: "icons/folder.png" },
 			mods: {
 				alt: { subtitle: "⌥: Open Folder in Finder" },
-				cmd: { valid: false, subtitle: "⛔ Cannot open folders" },
-				shift: { valid: false, subtitle: "⛔ Folders have no links." },
-				ctrl: { valid: false, subtitle: "⛔ Linking not possible for folders" },
-				fn: { valid: false, subtitle: "⛔ Cannot append to folders." },
+				cmd: denyForFolder,
+				shift: denyForFolder,
+				ctrl: denyForFolder,
+				fn: denyForFolder,
 			},
 		});
 	}
