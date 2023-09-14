@@ -1,0 +1,25 @@
+name: "Close stale issues and PRs"
+on:
+  workflow_dispatch: 
+  schedule:
+    - cron: "18 04 * * *" 
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Close Stale Issues
+        uses: actions/stale@v8
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          days-before-stale: 180
+          stale-issue-label: "Stale"
+          stale-issue-message: |
+            This issue has been automatically marked as stale.
+            **If this issue is still affecting you, please leave any comment**, for example "bump", and it will be kept open.
+          close-issue-message: |
+            This issue has been closed due to inactivity, and will not be monitored.
