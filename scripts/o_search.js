@@ -125,6 +125,7 @@ function run() {
 		.doShellScript(`find "${pathToSearch}" -type d -mindepth 1 -not -path "*/.*"`)
 		.split("\r");
 	if (folderArray[0] === "") folderArray = [];
+	console.log("🪚 folderArray:", JSON.stringify(folderArray))
 
 	//──────────────────────────────────────────────────────────────────────────────
 	// EXCLUSION & IGNORING

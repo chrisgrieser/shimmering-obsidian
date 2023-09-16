@@ -27,6 +27,7 @@ function log(str) {
 function run() {
 	const vaultPath = $.getenv("vault_path");
 	const configFolder = $.getenv("config_folder");
+	const vaultConfig = `${vaultPath}/${configFolder}`;
 
 	// input parameters
 	const appSupportPath = app.pathTo("home folder") + "/Library/Application Support/obsidian/";
@@ -40,9 +41,9 @@ function run() {
 		obsiVer = ".asar file missing";
 	}
 	const macVer = app.doShellScript("sw_vers -productVersion");
-	const dotObsidian = fileExists(`${vaultPath}/${configFolder}/`) ? "exists" : "does NOT exist";
+	const dotObsidian = fileExists(`${vaultConfig}/`) ? "exists" : "does NOT exist";
 
-	const advancedUriJSON = `${vaultPath}/${configFolder}/plugins/obsidian-advanced-uri/manifest.json`;
+	const advancedUriJSON = `${vaultConfig}/plugins/obsidian-advanced-uri/manifest.json`;
 	const advancedUriVer = fileExists(advancedUriJSON)
 		? JSON.parse(readFile(advancedUriJSON)).version
 		: "Advanced URI plugin not installed.";
@@ -50,7 +51,7 @@ function run() {
 		"https://github.com/Vinzent03/obsidian-advanced-uri/releases/latest/download/manifest.json",
 	).version;
 
-	const metadataExJSON = `${vaultPath}/${configFolder}/plugins/metadata-extractor/manifest.json`;
+	const metadataExJSON = `${vaultConfig}/plugins/metadata-extractor/manifest.json`;
 	const metadataExVer = fileExists(metadataExJSON)
 		? JSON.parse(readFile(metadataExJSON)).version
 		: "Metadata Extractor plugin not installed.";
@@ -68,19 +69,21 @@ function run() {
 		"https://api.github.com/repos/chrisgrieser/shimmering-obsidian/tags",
 	)[0].name;
 
-	const workspaceData15 = fileExists(`${vaultPath}/${configFolder}/workspace`);
-	const workspaceData16 = fileExists(`${vaultPath}/${configFolder}/workspace.json`);
+	const workspaceData15 = fileExists(`${vaultConfig}/workspace`);
+	const workspaceData16 = fileExists(`${vaultConfig}/workspace.json`);
 
 	let numberOfJSONS;
 	try {
 		numberOfJSONS = parseInt(app.doShellScript(
-			`ls '${vaultPath}/${configFolder}/plugins/metadata-extractor/' | grep ".json" | grep -v "manifest" | grep -v "^data" | wc -l | tr -d " "`,
+			`ls '${vaultConfig}/plugins/metadata-extractor/' | grep ".json" | grep -v "manifest" | grep -v "^data" | wc -l | tr -d " "`,
 		))
 	} catch (_error) {
-		numberOfJSONS = 0;
+		numberOfJSONS = -1;
 	}
-	const metadataJSON = `${vaultPath}/${configFolder}/plugins/metadata-extractor/metadata.json`;
+	const metadataJSON = `${vaultConfig}/plugins/metadata-extractor/metadata.json`;
 	const metadataStrLen = fileExists(metadataJSON) ? readFile(metadataJSON).length : "no metadata.json";
+	const metadataExtConfigPath = `${vaultConfig}/plugins/metadata-extractor/data.json`;
+	const metadataExtConfig = fileExists(metadataExtConfigPath) ? readFile(`${vaultConfig}/plugins/metadata-extractor/data.json`) : "No Config Found."
 
 	//──────────────────────────────────────────────────────────────────────────────
 
@@ -92,6 +95,9 @@ function run() {
 	log(`Metadata JSONs: ${numberOfJSONS}/4`);
 	if (numberOfJSONS < 4) log("Not all metadata found. Please run `osetup` and retry.");
 	log("metadata.json String Length: " + metadataStrLen);
+	log("-------------------------------");
+	log("METADATA EXTRACTOR CONFIG");
+	log(metadataExtConfig)
 	log("-------------------------------");
 	log("WORKSPACE DATA");
 	if (workspaceData15) log("'workspace' exists");
