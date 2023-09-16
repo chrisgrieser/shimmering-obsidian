@@ -34,16 +34,17 @@ const fileExists = (/** @type {string} */ filePath) => Application("Finder").exi
 function run() {
 	const vaultPath = $.getenv("vault_path");
 	const configFolder = $.getenv("config_folder");
+	const vaultConfig = `${vaultPath}/${configFolder}`;
 	const externalLinkRegex = /\[[^\]]*\]\([^)]+\)/;
 
-	const metadataJSON = `${vaultPath}/${configFolder}/plugins/metadata-extractor/metadata.json`;
-	const canvasJSON = `${vaultPath}/${configFolder}/plugins/metadata-extractor/canvas.json`;
-	const starredJSON = `${vaultPath}/${configFolder}/starred.json`;
-	const bookmarkJSON = `${vaultPath}/${configFolder}/bookmarks.json`;
-	const excludeFilterJSON = `${vaultPath}/${configFolder}/app.json`;
+	const metadataJSON = `${vaultConfig}/plugins/metadata-extractor/metadata.json`;
+	const canvasJSON = `${vaultConfig}/plugins/metadata-extractor/canvas.json`;
+	const starredJSON = `${vaultConfig}/starred.json`;
+	const bookmarkJSON = `${vaultConfig}/bookmarks.json`;
+	const excludeFilterJSON = `${vaultConfig}/app.json`;
 	const superIconFile = $.getenv("supercharged_icon_file");
 
-	let recentJSON = `${vaultPath}/${configFolder}/workspace.json`;
+	let recentJSON = `${vaultConfig}/workspace.json`;
 	if (!fileExists(recentJSON)) recentJSON = recentJSON.slice(0, -5); // Obsidian 0.16 uses workspace.json → https://discord.com/channels/686053708261228577/716028884885307432/1013906018578743478
 
 	const excludeFilter = fileExists(excludeFilterJSON)
@@ -80,8 +81,8 @@ function run() {
 	}
 
 	/**
-	 * @param {any[]} input
-	 * @param {any[]} collector
+	 * @param {object[]} input
+	 * @param {object[]} collector
 	 */
 	function bmFlatten(input, collector) {
 		for (const item of input) {
@@ -123,7 +124,7 @@ function run() {
 	let folderArray = app
 		.doShellScript(`find "${pathToSearch}" -type d -mindepth 1 -not -path "*/.*"`)
 		.split("\r");
-	if (!folderArray) folderArray = [];
+	if (folderArray[0] === "") folderArray = [];
 
 	//──────────────────────────────────────────────────────────────────────────────
 	// EXCLUSION & IGNORING
@@ -136,7 +137,7 @@ function run() {
 		canvasArray = canvasArray.filter((/** @type {{ relativePath: string; }} */ file) =>
 			file.relativePath.startsWith(currentFolder),
 		);
-		// folderarray does not need to be filtered, since already filtered on creation
+		// INFO folderarray does not need to be filtered, since already filtered on creation
 	}
 
 	/**
@@ -369,6 +370,13 @@ function run() {
 			subtitle: "▸ " + parentFolder(currentFolder),
 			arg: parentFolder(currentFolder),
 			icon: { path: "icons/folder.png" },
+		});
+	}
+	if (resultsArr.length === 0) {
+		resultsArr.push({
+			title: "🚫 No notes found.",
+			subtitle: "⛔ Possible causes: folder is empty or excluded in the Obsidian settings.",
+			valid: false,
 		});
 	}
 
