@@ -1,13 +1,13 @@
 name: Bug Report
 description: File a bug report
-title: "[Bug]: "
+title: "Bug: "
 labels: ["bug"]
 body:
   - type: textarea
     id: bug-description
     attributes:
       label: Bug Description
-      description: A clear and concise description of the bug.
+      description: Which part of the workflow is not working and in what way?
     validations:
       required: true
   - type: textarea
@@ -19,44 +19,41 @@ body:
     id: reproduction-steps
     attributes:
       label: To Reproduce
-      description: Steps to reproduce the problem, which part of the workflow is not working?
+      description: Steps to reproduce the problem.
       placeholder: |
         For example:
         1. Go to…
         2. Use the keyword…
         3. Select…
-    validations:
-      required: true
+    validations: { required: true }
   - type: textarea
     id: debugging-log
     attributes:
       label: Debugging Log
-      description: "You can get a debugging log by opening the workflow in Alfred preferences and pressing `cmd + D`. A small window will open up which will log everything happening during the execution of the Workflow. Use the malfunctioning part of the workflow once more, copy the content of the log window, and paste it here. If the debugging log is long, please attach it as file instead of pasting everything in here."
+      description: > 
+        You can get a debugging log by opening the workflow in Alfred
+        preferences and pressing `cmd + D`. A small window will open up. At the 
+        top of the window, change `All Information` to `Core Information`. Use 
+        the malfunctioning part of the workflow once more, copy the content of 
+        the log window, and paste it here.
       render: Text
-      placeholder: "If the log is long, you can also truncate the really long `Shimmering Obsidian[Script Filter]` line or attach it as a file instead."
-    validations:
-      required: true
+    validations: { required: true }
   - type: textarea
     id: workflow-configuration
     attributes:
       label: Workflow Configuration
       description: 'Please add a screenshot of all your [workflow configuration](https://www.alfredapp.com/help/workflows/user-configuration/) (clicking "Configure Workflow")'
-    validations:
-      required: true
+    validations: { required: true }
   - type: textarea
     id: version-info
     attributes:
       label: "Version & System Information"
-      description: "Please run the command `oinfo` in Alfred. It will copy various version information into your clipboard. Paste the result here. (If the command `oinfo` itself also does not work, please state so and follow [the instructions here.](https://github.com/chrisgrieser/shimmering-obsidian/issues/98#issuecomment-1247370074))"
+      description: >
+        Please run the command `oinfo` in Alfred. It will copy various version
+        information into your clipboard. Paste the result here. (If the command
+        `oinfo` itself also does not work, please state so and follow [the instructions here.](https://github.com/chrisgrieser/shimmering-obsidian/issues/98#issuecomment-1247370074))
       render: Text
-    validations:
-      required: true
-  - type: input
-    id: last-working-version
-    attributes:
-      label: Last working version
-      description: If you updated the workflow, and it was working before but stopped working now, please name the last version which did work.
-      placeholder: "e.g. 1.2.3"
+    validations: { required: true }
   - type: checkboxes
     id: checklist
     attributes:
