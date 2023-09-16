@@ -25,7 +25,7 @@ const fileExists = (/** @type {string} */ filePath) => Application("Finder").exi
 //───────────────────────────────────────────────────────────────────────────
 
 /** @type {AlfredRun} */
-// rome-ignore lint/correctness/noUnusedVariables: Alfred run
+// biome-ignore lint/correctness/noUnusedVariables: Alfred run
 function run(argv) {
 	const vaultPath = $.getenv("vault_path");
 	const vaultNameEnc = encodeURIComponent(vaultPath.replace(/.*\//, ""));

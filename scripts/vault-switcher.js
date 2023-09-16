@@ -15,7 +15,7 @@ function readFile(path) {
 //──────────────────────────────────────────────────────────────────────────────
 
 /** @type {AlfredRun} */
-// rome-ignore lint/correctness/noUnusedVariables: Alfred run
+// biome-ignore lint/correctness/noUnusedVariables: Alfred run
 function run() {
 	const currentVault = $.getenv("vault_path");
 	const vaultListJson = app.pathTo("home folder") + "/Library/Application Support/obsidian/obsidian.json";

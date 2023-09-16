@@ -76,14 +76,14 @@ function cacheIsOutdated(path) {
 	ensureCacheFolderExists();
 	const cacheObj = Application("System Events").aliases[path];
 	if (!cacheObj.exists()) return true;
-	const cacheAgeMins = (+new Date() - cacheObj.creationDate()) / 1000 / 60 / 60;
-	return cacheAgeMins > cacheAgeThresholdHours;
+	const cacheAgeHours = (+new Date() - cacheObj.creationDate()) / 1000 / 60 / 60;
+	return cacheAgeHours > cacheAgeThresholdHours;
 }
 
 //──────────────────────────────────────────────────────────────────────────────
 
 /** @type {AlfredRun} */
-// rome-ignore lint/correctness/noUnusedVariables: Alfred run
+// biome-ignore lint/correctness/noUnusedVariables: Alfred run
 function run() {
 	// PERF cache results
 	const cachePath = $.getenv("alfred_workflow_cache") + "/plugin-cache.json";

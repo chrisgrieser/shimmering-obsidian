@@ -6,13 +6,13 @@ app.includeStandardAdditions = true;
 //──────────────────────────────────────────────────────────────────────────────
 
 /** @type {AlfredRun} */
-// rome-ignore lint/correctness/noUnusedVariables: Alfred run
+// biome-ignore lint/correctness/noUnusedVariables: Alfred run
 function run() {
 	const vaultPath = $.getenv("vault_path");
 	const vaultNameEnc = encodeURIComponent(vaultPath.replace(/.*\//, ""));
 
 	const prefix = `obsidian://advanced-uri?vault=${vaultNameEnc}&commandid=metadata-extractor%253A`;
-	// rome-ignore format: multi-line better when when there are changes
+	// biome-ignore format: multi-line better when when there are changes
 	const files = [
 		"write-metadata-json",
 		"write-tags-json",

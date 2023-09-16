@@ -39,7 +39,7 @@ function ensureEmptyLineAt(fileLines, lineNo) {
 
 //──────────────────────────────────────────────────────────────────────────────
 /** @type {AlfredRun} */
-// rome-ignore lint/correctness/noUnusedVariables: Alfred run
+// biome-ignore lint/correctness/noUnusedVariables: Alfred run
 function run(argv) {
 	const vaultPath = $.getenv("vault_path");
 
