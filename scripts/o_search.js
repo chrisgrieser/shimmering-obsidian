@@ -35,7 +35,6 @@ function run() {
 	const vaultPath = $.getenv("vault_path");
 	const configFolder = $.getenv("config_folder");
 	const vaultConfig = `${vaultPath}/${configFolder}`;
-	const externalLinkRegex = /\[[^\]]*\]\([^)]+\)/;
 
 	const metadataJSON = `${vaultConfig}/plugins/metadata-extractor/metadata.json`;
 	const canvasJSON = `${vaultConfig}/plugins/metadata-extractor/canvas.json`;
@@ -125,7 +124,6 @@ function run() {
 		.doShellScript(`find "${pathToSearch}" -type d -mindepth 1 -not -path "*/.*"`)
 		.split("\r");
 	if (folderArray[0] === "") folderArray = [];
-	console.log("🪚 folderArray:", JSON.stringify(folderArray))
 
 	//──────────────────────────────────────────────────────────────────────────────
 	// EXCLUSION & IGNORING
@@ -191,8 +189,8 @@ function run() {
 		// matching for Alfred
 		const tagMatcher = file.tags ? " #" + file.tags.join(" #") : "";
 		let additionalMatcher = "";
-		if (isRecent) additionalMatcher += "recent ";
-		if (isBookmarked) additionalMatcher += "starred bookmarked ";
+		if (isRecent) additionalMatcher += " recent";
+		if (isBookmarked) additionalMatcher += " starred bookmarked";
 
 		// pprioritization of sorting
 		const prioritzedSorting = isRecent || isBookmarked;
@@ -218,11 +216,10 @@ function run() {
 		}
 
 		// check link existence of file
-		let hasLinks = Boolean(
+		const hasLinks = Boolean(
 			file.links?.some((/** @type {{ relativePath: string; }} */ link) => link.relativePath) ||
 				file.backlinks,
 		); // no relativePath => unresolved link
-		if (!hasLinks) hasLinks = externalLinkRegex.test(readFile(absolutePath)); // readFile only executed when no other links found for performance
 		const linksSubtitle = hasLinks
 			? "⇧: Browse Links in Note"
 			: "⛔ Note without Outgoing Links or Backlinks";
@@ -235,7 +232,7 @@ function run() {
 		// Notes (file names)
 		resultsArr[insertVia]({
 			title: emoji + superchargedIcon + displayName + superchargedIcon2,
-			match: alfredMatcher(filename) + tagMatcher + " filename name title",
+			match: alfredMatcher(filename) + tagMatcher + " filename name title" + additionalMatcher,
 			subtitle: "▸ " + parentFolder(relativePath),
 			arg: relativePath,
 			quicklookurl: absolutePath,
@@ -253,7 +250,7 @@ function run() {
 				const displayAlias = applyCensoring ? alias.replace(/./g, censorChar) : alias;
 				resultsArr[insertVia]({
 					title: emoji + superchargedIcon + displayAlias + superchargedIcon2,
-					match: additionalMatcher + "alias " + alfredMatcher(alias),
+					match: alfredMatcher(alias) + "alias",
 					subtitle: "↪ " + displayName,
 					arg: relativePath,
 					quicklookurl: absolutePath,
@@ -307,16 +304,16 @@ function run() {
 
 		// matching for Alfred
 		let additionalMatcher = "";
-		if (isRecent) additionalMatcher += "recent ";
-		if (isBookmarked) additionalMatcher += "starred bookmarked ";
+		if (isRecent) additionalMatcher += " recent";
+		if (isBookmarked) additionalMatcher += " starred bookmarked";
 
 		// pprioritization of sorting
 		const prioritzedSorting = isRecent || isBookmarked;
-		const insertVia = prioritzedSorting ? "unshift" : "push";
+		const insertMode = prioritzedSorting ? "unshift" : "push";
 
-		resultsArr[insertVia]({
+		resultsArr[insertMode]({
 			title: name,
-			match: alfredMatcher(name) + " canvas",
+			match: alfredMatcher(name) + "canvas" + additionalMatcher,
 			subtitle: "▸ " + parentFolder(relativePath),
 			arg: relativePath,
 			type: "file:skipcheck",
@@ -338,7 +335,7 @@ function run() {
 
 		resultsArr.push({
 			title: name,
-			match: alfredMatcher(name) + " folder",
+			match: alfredMatcher(name) + " folder ",
 			subtitle: "▸ " + parentFolder(relativePath) + "   [↵: Browse]",
 			arg: relativePath,
 			type: "file:skipcheck",
