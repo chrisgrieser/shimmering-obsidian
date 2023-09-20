@@ -6,4 +6,4 @@
 	- `⌥ ⏎` opens the root in Finder.
 
 > [!NOTE]  
-> In previous versions, `⇧ + ⏎` was used to switch which vault you would control. Since version 3.13, 
+> In previous versions, `⇧ + ⏎` was used to switch which vault you would control/search. Since version 3.13, this is not supported anymore. To control/search a different vault, you have to select a different vault in the workflow configuration.
