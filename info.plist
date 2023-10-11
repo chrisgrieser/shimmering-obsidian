@@ -4328,6 +4328,19 @@ Application('com.runningwithcrayons.Alfred').removeConfiguration('ObRunning', {
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>text</key>
+				<string>Search Vault: '{query}'</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.fallback</string>
+			<key>uid</key>
+			<string>341089EA-5936-4C81-ADE8-ECF290EA808D</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>externaltriggerid</key>
 				<string>open-in-new-tab</string>
 				<key>passinputasargument</key>
@@ -4341,19 +4354,6 @@ Application('com.runningwithcrayons.Alfred').removeConfiguration('ObRunning', {
 			<string>alfred.workflow.output.callexternaltrigger</string>
 			<key>uid</key>
 			<string>F117FF8C-E6E5-4B0E-9FCE-DDB0A6476CAB</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>text</key>
-				<string>Search Vault: '{query}'</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.fallback</string>
-			<key>uid</key>
-			<string>341089EA-5936-4C81-ADE8-ECF290EA808D</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -6625,7 +6625,7 @@ fi</string>
 	<string>## 1️⃣ REQUIRED Setting up this workflow for the first time
 1. Install the Obsidian plugins [Advanced URI](https://obsidian.md/plugins?id=obsidian-advanced-uri) &amp; [Metadata Extractor](https://obsidian.md/plugins?id=metadata-extractor). Enable both plugins.
 2. Set your vault path in the configuration to the left.
-3. Run the Alfred Command `osetup` once. Obsidian will then restart.
+3. Run the Alfred Command `osetup`. Obsidian will then restart.
 
 ---
 
@@ -6636,20 +6636,22 @@ fi</string>
 ---
 
 ## 📙 Recent Changes
-- ⬆️ Prioritization of recent or bookmarked notes in the search results.
-- 🩹 Fixed Some headings being ignored in certain situations.
-- ⚠️ Vault paths are now configured via the setting to the right instead. 
-- 🆕 You can now use vaults even if the config folder is not placed in `.obsidian`.
-- 🆕 `oe` [Search all external links in your entire vault.](https://github.com/chrisgrieser/shimmering-obsidian/blob/main/docs/Note-related%20Features.md#search-all-external-links-in-the-entire-vault)
-- ⭐️ 600 Stars on GitHub! Thanks everyone for your support. (You can also star the plugin at the [GitHub repo](https://github.com/chrisgrieser/shimmering-obsidian) to show your support for it.)
+- Keywordless search (Opt-in)
+- Prioritization of recent or bookmarked notes in the search results.
+- Fixed Some headings being ignored in certain situations.
+- Vault paths are now configured via the setting to the right instead. 
+- You can now use vaults even if the config folder is not placed in `.obsidian`.
+- `oe` [Search all external links in your entire vault.](https://github.com/chrisgrieser/shimmering-obsidian/blob/main/docs/Note-related%20Features.md#search-all-external-links-in-the-entire-vault)
 
 ---
 
-### 📓 [Documentation of all features](https://github.com/chrisgrieser/shimmering-obsidian/blob/main/README.md)
+#### 📓 [Documentation of all features](https://github.com/chrisgrieser/shimmering-obsidian/blob/main/README.md)
 
-### 🐛 [Bug reports](https://github.com/chrisgrieser/shimmering-obsidian/issues)
+#### 🐛 [Bug reports](https://github.com/chrisgrieser/shimmering-obsidian/issues)
 
-### ☕️ [Buy me a Coffee](https://ko-fi.com/pseudometa)
+#### ☕️ [Buy me a Coffee](https://ko-fi.com/pseudometa)
+
+#### ⭐️ [Star on GitHub](https://github.com/chrisgrieser/shimmering-obsidian)
 
 ---
 
@@ -7057,9 +7059,9 @@ fi</string>
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>xpos</key>
-			<real>35</real>
+			<real>30</real>
 			<key>ypos</key>
-			<real>2495</real>
+			<real>2475</real>
 		</dict>
 		<key>38F17F8F-FBE5-422F-B926-A8AFD40D5A4C</key>
 		<dict>
@@ -7431,9 +7433,9 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>note</key>
 			<string>main search</string>
 			<key>xpos</key>
-			<real>35</real>
+			<real>30</real>
 			<key>ypos</key>
-			<real>2285</real>
+			<real>2290</real>
 		</dict>
 		<key>60A87101-8D59-46BF-BCAE-A9195D6A034E</key>
 		<dict>
@@ -9045,6 +9047,32 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<string>textfield</string>
 			<key>variable</key>
 			<string>workspace_to_spellcheck</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string></string>
+				<key>pairs</key>
+				<array>
+					<array>
+						<string>disable</string>
+						<string></string>
+					</array>
+					<array>
+						<string>enable</string>
+						<string>a||b||c||d||e||f||g||h||i||j||k||l||m||n||o||p||q||r||s||t||u||v||w||x||y||z</string>
+					</array>
+				</array>
+			</dict>
+			<key>description</key>
+			<string>EXPERIMENTAL. Main search is always triggered, with or without the keyword. Useful for discoverability of your notes if you use Alfred a lot.</string>
+			<key>label</key>
+			<string>keywordless search</string>
+			<key>type</key>
+			<string>popupbutton</string>
+			<key>variable</key>
+			<string>keywordless_search</string>
 		</dict>
 	</array>
 	<key>variables</key>

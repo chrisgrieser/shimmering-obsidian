@@ -49,7 +49,6 @@ function run() {
 	const excludeFilter = fileExists(excludeFilterJSON)
 		? JSON.parse(readFile(excludeFilterJSON)).userIgnoreFilters
 		: [];
-
 	const recentFiles = fileExists(recentJSON) ? JSON.parse(readFile(recentJSON)).lastOpenFiles : [];
 	let canvasArray = fileExists(canvasJSON) ? JSON.parse(readFile(canvasJSON)) : [];
 
