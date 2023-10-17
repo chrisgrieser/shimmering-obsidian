@@ -3,7 +3,7 @@ Alfred Workflow with dozens of features for controlling your [Obsidian vault](ht
 
 [Featured in the Alfred Gallery.](https://alfred.app/workflows/chrisgrieser/shimmering-obsidian/)
 
-![](https://img.shields.io/github/downloads/chrisgrieser/shimmering-obsidian/total?label=Downloads&style=plastic) ![](https://img.shields.io/github/v/release/chrisgrieser/shimmering-obsidian?label=Latest%20Release&style=plastic) 
+![](https://img.shields.io/github/downloads/chrisgrieser/shimmering-obsidian/total?label=Downloads&style=plastic) ![](https://img.shields.io/github/v/release/chrisgrieser/shimmering-obsidian?label=Latest%20Release&style=plastic)
 
 <img src="https://user-images.githubusercontent.com/73286100/139678407-9ac39baa-5f49-42a0-9622-0fbaf68540b2.gif" alt="Promo Video" width=70%>
 
@@ -21,6 +21,8 @@ Alfred Workflow with dozens of features for controlling your [Obsidian vault](ht
     - [Documentation & Help](#documentation-help)
     - [Vault Switcher](#vault-switcher)
     - [Features for Obsidian Plugin Developers](#features-for-obsidian-plugin-developers)
+    - [Cheatsheet](#cheatsheet)
+
 - [Installation](#installation)
 - [Credits](#credits)
 - [About the Developer](#about-the-developer)
@@ -101,12 +103,42 @@ Alfred Workflow with dozens of features for controlling your [Obsidian vault](ht
 - Add & Update Beta Plugins via [BRAT](https://github.com/TfTHacker/obsidian42-brat)
 - ➡️ [Documentation of Features for Developers](docs/Features%20for%20Developers.md)
 
+### Cheatsheet
+Draft Note:
+- `oo`: Append to scratchpad
+- `oo`: Open to scratchpad
+
+Create Note:
+- `on`: New note
+
+Wroksapce:
+- `ow`: Worksapce switcher
+- `ov`: Vault switcher
+
+Search:
+- `oe`: Search all external link via vault
+- `ot`: Search tags
+- `ob`: Search bookmarked file/searches
+- `or`: Search recent files
+- `oa`: Open file (like images)
+- `op`: Search plugins/themes
+- o`,:` Search settings and installed plugins
+
+Misc:
+- `obackup`: Backup vault
+- `ocss`: Open snippit/theme
+- `odd`: Search docs
+- `oh`: Documentation search
+- `oupdate`: Refreshing metadata, re-index, plugin update
+
+
+
 ## Installation
 *This workflow requires Alfred 5 with [Powerpack](https://www.alfredapp.com/powerpack/).*
 1. Install the Obsidian plugins [Advanced URI](https://obsidian.md/plugins?id=obsidian-advanced-uri) & [Metadata Extractor](https://obsidian.md/plugins?id=metadata-extractor). Enable both plugins.
 2. Download the [latest release at GitHub](https://github.com/chrisgrieser/shimmering-obsidian/releases/latest). Double-click the `.alfredworkflow` file to install it.
 3. Set your vault path in the workflow configuration.
-4. Run the Alfred Command `osetup`. Obsidian then restarts. 
+4. Run the Alfred Command `osetup`. Obsidian then restarts.
 
 ## Credits
 - Big shout-out to [@kometenstaub](https://github.com/kometenstaub) for developing the [metadata extractor plugin](https://github.com/kometenstaub/metadata-extractor), as this workflow is its main client.
@@ -117,7 +149,7 @@ Alfred Workflow with dozens of features for controlling your [Obsidian vault](ht
 ## About the Developer
 In my day job, I am a sociologist studying the social mechanisms underlying the digital economy. For my PhD project, I investigate the governance of the app economy and how software ecosystems manage the tension between innovation and compatibility. If you are interested in this subject, feel free to get in touch.
 
-__Profiles__  
+__Profiles__
 - [Academic Website](https://chris-grieser.de/)
 - [ResearchGate](https://www.researchgate.net/profile/Christopher-Grieser)
 - [Discord](https://discordapp.com/users/462774483044794368/)
@@ -128,7 +160,7 @@ __Profiles__
 
 *Note that for questions, bug reports, or feature requests for this workflow, please open a [GitHub issue](https://github.com/chrisgrieser/shimmering-obsidian/issues), since it is better suited for technical support.*
 
-__Donate__  
+__Donate__
 <br>
 <a href='https://ko-fi.com/Y8Y86SQ91' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://cdn.ko-fi.com/cdn/kofi1.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
 
