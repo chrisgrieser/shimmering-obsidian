@@ -3,7 +3,7 @@ Alfred Workflow with dozens of features for controlling your [Obsidian vault](ht
 
 [Featured in the Alfred Gallery.](https://alfred.app/workflows/chrisgrieser/shimmering-obsidian/)
 
-![](https://img.shields.io/github/downloads/chrisgrieser/shimmering-obsidian/total?label=Downloads&style=plastic) ![](https://img.shields.io/github/v/release/chrisgrieser/shimmering-obsidian?label=Latest%20Release&style=plastic) 
+![](https://img.shields.io/github/downloads/chrisgrieser/shimmering-obsidian/total?label=Downloads&style=plastic) ![](https://img.shields.io/github/v/release/chrisgrieser/shimmering-obsidian?label=Latest%20Release&style=plastic)
 
 <img src="https://user-images.githubusercontent.com/73286100/139678407-9ac39baa-5f49-42a0-9622-0fbaf68540b2.gif" alt="Promo Video" width=70%>
 
@@ -21,6 +21,8 @@ Alfred Workflow with dozens of features for controlling your [Obsidian vault](ht
     - [Documentation & Help](#documentation-help)
     - [Vault Switcher](#vault-switcher)
     - [Features for Obsidian Plugin Developers](#features-for-obsidian-plugin-developers)
+    - [Cheatsheet](#cheatsheet)
+
 - [Installation](#installation)
 - [Credits](#credits)
 - [About the Developer](#about-the-developer)
@@ -101,12 +103,43 @@ Alfred Workflow with dozens of features for controlling your [Obsidian vault](ht
 - Add & Update Beta Plugins via [BRAT](https://github.com/TfTHacker/obsidian42-brat)
 - ➡️ [Documentation of Features for Developers](docs/Features%20for%20Developers.md)
 
+### Cheatsheet
+Draft Note:
+- `oo`: Append to scratchpad
+- `oo`: Open to scratchpad
+
+Create Note:
+- `on`: New note
+
+Workspace:
+- `ow`: Workspace switcher
+- `ov`: Vault switcher
+
+Search:
+- `o`: Search every things
+- `oe`: Search all external link via vault
+- `ot`: Search tags
+- `ob`: Search bookmarked file/searches
+- `or`: Search recent files
+- `oa`: Open attachments (like images)
+- `op`: Search plugins/themes
+- `o,:` Search settings and installed plugins
+
+Misc:
+- `obackup`: Backup vault
+- `ocss`: Open snippit/theme
+- `odd`: Search docs
+- `oh`: Documentation search
+- `oupdate`: Refreshing metadata, re-index, plugin update
+
+
+
 ## Installation
 *This workflow requires Alfred 5 with [Powerpack](https://www.alfredapp.com/powerpack/).*
 1. Install the Obsidian plugins [Advanced URI](https://obsidian.md/plugins?id=obsidian-advanced-uri) & [Metadata Extractor](https://obsidian.md/plugins?id=metadata-extractor). Enable both plugins.
 2. Download the [latest release at GitHub](https://github.com/chrisgrieser/shimmering-obsidian/releases/latest). Double-click the `.alfredworkflow` file to install it.
 3. Set your vault path in the workflow configuration.
-4. Run the Alfred Command `osetup`. Obsidian then restarts. 
+4. Run the Alfred Command `osetup`. Obsidian then restarts.
 
 ## Credits
 - Big shout-out to [@kometenstaub](https://github.com/kometenstaub) for developing the [metadata extractor plugin](https://github.com/kometenstaub/metadata-extractor), as this workflow is its main client.
