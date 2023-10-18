@@ -111,18 +111,19 @@ Draft Note:
 Create Note:
 - `on`: New note
 
-Wroksapce:
-- `ow`: Worksapce switcher
+Workspace:
+- `ow`: Workspace switcher
 - `ov`: Vault switcher
 
 Search:
+- `o`: Search every things
 - `oe`: Search all external link via vault
 - `ot`: Search tags
 - `ob`: Search bookmarked file/searches
 - `or`: Search recent files
-- `oa`: Open file (like images)
+- `oa`: Open attachments (like images)
 - `op`: Search plugins/themes
-- o`,:` Search settings and installed plugins
+- `o,:` Search settings and installed plugins
 
 Misc:
 - `obackup`: Backup vault
@@ -149,7 +150,7 @@ Misc:
 ## About the Developer
 In my day job, I am a sociologist studying the social mechanisms underlying the digital economy. For my PhD project, I investigate the governance of the app economy and how software ecosystems manage the tension between innovation and compatibility. If you are interested in this subject, feel free to get in touch.
 
-__Profiles__
+__Profiles__  
 - [Academic Website](https://chris-grieser.de/)
 - [ResearchGate](https://www.researchgate.net/profile/Christopher-Grieser)
 - [Discord](https://discordapp.com/users/462774483044794368/)
@@ -160,7 +161,7 @@ __Profiles__
 
 *Note that for questions, bug reports, or feature requests for this workflow, please open a [GitHub issue](https://github.com/chrisgrieser/shimmering-obsidian/issues), since it is better suited for technical support.*
 
-__Donate__
+__Donate__  
 <br>
 <a href='https://ko-fi.com/Y8Y86SQ91' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://cdn.ko-fi.com/cdn/kofi1.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
 
