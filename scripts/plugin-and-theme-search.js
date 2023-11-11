@@ -131,7 +131,9 @@ function run() {
 
 			const githubURL = "https://github.com/" + repo;
 			const openURI = `obsidian://show-plugin?vault=${vaultNameEnc}&id=${id}`;
-			const discordUrl = `> **${name}**: ${description} <https://obsidian.md/plugins?id=${id}>`;
+			// Discord accepts simple markdown, the enclosing, the enclosing `<>`
+			// remove the preview
+			const discordUrl = `> [${name}](<https://obsidian.md/plugins?id=${id}>): ${description}`;
 			let isDiscordReady, shareURL;
 			if (discordReadyLinks) {
 				shareURL = discordUrl;
@@ -158,8 +160,8 @@ function run() {
 			}
 
 			// Better matching for some plugins
-			const URImatcher = name.includes("URI") ? "URL" : "";
-			const matcher = `plugin ${URImatcher} ${alfredMatcher(name)} ${alfredMatcher(author)} ${alfredMatcher(
+			const uriMatcher = name.includes("URI") ? "URL" : "";
+			const matcher = `plugin ${uriMatcher} ${alfredMatcher(name)} ${alfredMatcher(author)} ${alfredMatcher(
 				id,
 			)} ${alfredMatcher(description)}`;
 			const subtitle = downloadsStr + subtitleIcons + description + "  ·  by " + author;
