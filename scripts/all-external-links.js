@@ -20,18 +20,21 @@ function run() {
 		// PERF considered `rg`, but `grep` alone is actually surprisingly fast
 		// already, making `grep` potentially a better choice since it does not
 		// add a dependency
-		.doShellScript(`cd "${vaultPath}" && grep -Eoh "\\[[^[]*?\\]\\(http[^)]*\\)" ./**/*.md`)
+		.doShellScript(`cd "${vaultPath}" && grep -Eo "\\[[^[]*?\\]\\(http[^)]*\\)" ./**/*.md`)
 		.split("\r")
-		.map((mdlink) => {
-			const [_, title, url] = mdlink.match(/\[([^[]*)\]\((.*)\)/);
+		.map((line) => {
+			const filename = line.split(":")[0].split("/").pop().slice(0, -3);
+			const mdLink = line.split(":").slice(1).join(":");
+			const [_, title, url] = mdLink.match(/\[([^[]*)\]\((.*)\)/);
+
 			return {
 				title: title,
-				subtitle: url,
+				subtitle: `${filename.slice(0, 30)}  ·  ${url.slice(8)}`,
 				arg: url,
-				match: alfredMatcher(title) + alfredMatcher(url),
-				uid: mdlink,
+				match: alfredMatcher(title) + alfredMatcher(filename) + alfredMatcher(url),
+				uid: line,
 				mods: {
-					cmd: { arg: mdlink },
+					cmd: { arg: line },
 				},
 			};
 		});
