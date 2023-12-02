@@ -10,8 +10,8 @@ app.includeStandardAdditions = true;
 function alfredMatcher(str) {
 	if (!str) return "";
 	const clean = str.replace(/[-()_.:#/\\;,[\]]/g, " ");
-	const camelCaseSeperated = str.replace(/([A-Z])/g, " $1");
-	return [clean, camelCaseSeperated, str].join(" ") + " ";
+	const camelCaseSeparated = str.replace(/([A-Z])/g, " $1");
+	return [clean, camelCaseSeparated, str].join(" ") + " ";
 }
 
 /** @param {string} url */
@@ -47,7 +47,8 @@ function writeToFile(filepath, text) {
 function SafeApplication(appId) {
 	try {
 		return Application(appId);
-	} catch (_error) {
+		// biome-ignore lint/nursery/noUselessLoneBlockStatements: required by try
+	} catch {
 		return null;
 	}
 }
@@ -101,7 +102,9 @@ function run() {
 	const downloadsJSON = onlineJSON(
 		"https://raw.githubusercontent.com/obsidianmd/obsidian-releases/master/community-plugin-stats.json",
 	);
-	const installedPlugins = app.doShellScript(`ls -1 "${vaultPath}/${configFolder}/plugins/"`).split("\r");
+	const installedPlugins = app
+		.doShellScript(`ls -1 "${vaultPath}/${configFolder}/plugins/"`)
+		.split("\r");
 
 	const themeJSON = onlineJSON(
 		"https://raw.githubusercontent.com/obsidianmd/obsidian-releases/master/community-css-themes.json",
@@ -114,7 +117,11 @@ function run() {
 	);
 
 	const deprecated = JSON.parse(readFile("./data/deprecated-plugins.json"));
-	const deprecatedPlugins = [...deprecated.sherlocked, ...deprecated.dysfunct, ...deprecated.deprecated];
+	const deprecatedPlugins = [
+		...deprecated.sherlocked,
+		...deprecated.dysfunct,
+		...deprecated.deprecated,
+	];
 
 	//───────────────────────────────────────────────────────────────────────────
 
@@ -161,9 +168,8 @@ function run() {
 
 			// Better matching for some plugins
 			const uriMatcher = name.includes("URI") ? "URL" : "";
-			const matcher = `plugin ${uriMatcher} ${alfredMatcher(name)} ${alfredMatcher(author)} ${alfredMatcher(
-				id,
-			)} ${alfredMatcher(description)}`;
+			// biome-ignore format: less readable
+			const matcher = `plugin ${uriMatcher} ${alfredMatcher(name)} ${alfredMatcher(author)} ${alfredMatcher(id)} ${alfredMatcher(description)}`;
 			const subtitle = downloadsStr + subtitleIcons + description + "  ·  by " + author;
 
 			// create json for Alfred
@@ -171,11 +177,11 @@ function run() {
 			const alfredItem = {
 				title: name + icons,
 				subtitle: subtitle,
-				arg: openURI,
+				arg: githubURL,
 				uid: id,
 				match: matcher,
 				mods: {
-					cmd: { arg: githubURL },
+					cmd: { arg: openURI },
 					ctrl: { arg: id },
 					"cmd+alt": {
 						arg: discordUrl,
@@ -220,9 +226,9 @@ function run() {
 
 			let modes = "";
 			let installedIcon = "";
-			if (theme.modes?.includes("light")) modes += "☀️ ";
+			if (theme.modes?.includes("light")) modes += "☀� ";
 			if (theme.modes?.includes("dark")) modes += "🌒 ";
-			if (currentTheme === name) installedIcon = " ⭐️";
+			if (currentTheme === name) installedIcon = " ⭐�";
 			else if (installedThemes.includes(name)) installedIcon = " ✅";
 
 			// create json for Alfred
