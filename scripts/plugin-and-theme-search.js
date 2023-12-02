@@ -141,14 +141,9 @@ function run() {
 			// Discord accepts simple markdown, the enclosing, the enclosing `<>`
 			// remove the preview
 			const discordUrl = `> [${name}](<https://obsidian.md/plugins?id=${id}>): ${description}`;
-			let isDiscordReady, shareURL;
-			if (discordReadyLinks) {
-				shareURL = discordUrl;
-				isDiscordReady = " (discord ready)";
-			} else {
-				shareURL = "https://obsidian.md/plugins?id=" + id;
-				isDiscordReady = "";
-			}
+
+			const isDiscordReady = discordReadyLinks ? " (discord ready)" : "";
+			const shareURL = isDiscordReady ? discordUrl : `https://obsidian.md/plugins?id=${id}`;
 
 			// Download Numbers
 			let downloadsStr = "";
@@ -215,14 +210,8 @@ function run() {
 			const openURI = `obsidian://show-theme?vault=${vaultNameEnc}&name=${nameEncoded}`;
 			const discordUrl = `> **${name}**: <${openURI}>`;
 
-			let isDiscordReady, shareURL;
-			if (discordReadyLinks) {
-				shareURL = discordUrl;
-				isDiscordReady = " (discord ready)";
-			} else {
-				shareURL = `obsidian://show-theme?name=${nameEncoded}`;
-				isDiscordReady = "";
-			}
+			const isDiscordReady = discordReadyLinks ? " (discord ready)" : "";
+			const shareURL = isDiscordReady ? discordUrl : `obsidian://show-theme?name=${nameEncoded}`;
 
 			let modes = "";
 			let installedIcon = "";
