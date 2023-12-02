@@ -18,7 +18,7 @@ plutil -replace version -string "$nextVersion" info.plist
 # #───────────────────────────────────────────────────────────────────────────────
 #
 # INFO specific to my setup: update version number in *local* info.plist 
-localInfoPlist="$DOTFILE_FOLDER/Alfred.alfredpreferences/workflows/$(basename "$PWD")/info.plist"
+localInfoPlist="$HOME/.config/Alfred.alfredpreferences/workflows/$(basename "$PWD")/info.plist"
 if [[ -f "$localInfoPlist" ]]; then
 	plutil -replace version -string "$nextVersion" "$localInfoPlist"
 fi
