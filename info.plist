@@ -9048,32 +9048,6 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>variable</key>
 			<string>workspace_to_spellcheck</string>
 		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>default</key>
-				<string></string>
-				<key>pairs</key>
-				<array>
-					<array>
-						<string>disable</string>
-						<string></string>
-					</array>
-					<array>
-						<string>enable</string>
-						<string>a||b||c||d||e||f||g||h||i||j||k||l||m||n||o||p||q||r||s||t||u||v||w||x||y||z</string>
-					</array>
-				</array>
-			</dict>
-			<key>description</key>
-			<string>EXPERIMENTAL. Main search is always triggered, with or without the keyword. Useful for discoverability of your notes if you use Alfred a lot.</string>
-			<key>label</key>
-			<string>keywordless search</string>
-			<key>type</key>
-			<string>popupbutton</string>
-			<key>variable</key>
-			<string>keywordless_search</string>
-		</dict>
 	</array>
 	<key>variables</key>
 	<dict>
@@ -9081,7 +9055,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 		<string>▉</string>
 	</dict>
 	<key>version</key>
-	<string>4.2.1</string>
+	<string>4.2.0</string>
 	<key>webaddress</key>
 	<string>https://chris-grieser.de/</string>
 </dict>
