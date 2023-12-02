@@ -970,7 +970,7 @@
 				<key>modifiers</key>
 				<integer>1048576</integer>
 				<key>modifiersubtext</key>
-				<string>⌘: Open GitHub Repository</string>
+				<string>⌘: Open directly in Obsidian</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
