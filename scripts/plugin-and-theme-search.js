@@ -226,9 +226,9 @@ function run() {
 
 			let modes = "";
 			let installedIcon = "";
-			if (theme.modes?.includes("light")) modes += "☀� ";
+			if (theme.modes?.includes("light")) modes += "☀️ ";
 			if (theme.modes?.includes("dark")) modes += "🌒 ";
-			if (currentTheme === name) installedIcon = " ⭐�";
+			if (currentTheme === name) installedIcon = " ⭐️";
 			else if (installedThemes.includes(name)) installedIcon = " ✅";
 
 			// create json for Alfred
@@ -237,13 +237,13 @@ function run() {
 				title: name + installedIcon,
 				subtitle: `${modes}  by ${author}`,
 				match: `theme ${alfredMatcher(author)} ${alfredMatcher(name)}`,
-				arg: openURI,
+				arg: githubURL,
 				uid: repo,
 				quicklookurl: screenshotURL,
 				icon: { path: "icons/css.png" },
 				mods: {
 					ctrl: { valid: false },
-					cmd: { arg: githubURL },
+					cmd: { arg: openURI },
 					shift: { arg: repo },
 					"cmd+alt": {
 						arg: discordUrl,
