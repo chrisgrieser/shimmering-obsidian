@@ -8,4 +8,4 @@ prefs.plist
 README.md
 LICENSE
 Makefile
-build-and-release.sh
+.build-and-release.sh

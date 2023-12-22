@@ -9,4 +9,4 @@ transfer-local-files:
 	git status --short
 
 release:
-	zsh ./build-and-release.sh
+	zsh ./.build-and-release.sh

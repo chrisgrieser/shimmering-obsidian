@@ -1,1 +1,1 @@
-/Users/chrisgrieser/.config/_linter-configs/alfred.d.ts
+/Users/chrisgrieser/.config/+ linter-configs/jxa/alfred.d.ts
