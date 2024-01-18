@@ -6622,7 +6622,7 @@ fi</string>
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>## 1️⃣ REQUIRED Setting up this workflow for the first time
+	<string>## 1️⃣ Setting up this workflow for the first time (required)
 1. Install the Obsidian plugins [Advanced URI](https://obsidian.md/plugins?id=obsidian-advanced-uri) &amp; [Metadata Extractor](https://obsidian.md/plugins?id=metadata-extractor). Enable both plugins.
 2. Set your vault path in the configuration to the left.
 3. Run the Alfred Command `osetup`. Obsidian will then restart.
@@ -6631,14 +6631,13 @@ fi</string>
 
 ## ⚙️ Workflow Configuration
 - **Some features require additional configuration to the left.** You can get further information on those features at the respective sections of the [documentation](https://github.com/chrisgrieser/shimmering-obsidian/blob/main/README.md).
-- To configure the hotkeys, double-click [sky-blue fields](https://i.imgur.com/wlpht7f.png) at the top left of the workflow window. 
+- To configure the hotkeys, double-click the [sky-blue fields](https://i.imgur.com/wlpht7f.png) at the top left of the workflow window. 
 
 ---
 
 ## 📙 Recent Changes
-- Keywordless search (Opt-in)
 - Prioritization of recent or bookmarked notes in the search results.
-- Fixed Some headings being ignored in certain situations.
+- Fixed some headings being ignored in certain situations.
 - Vault paths are now configured via the setting to the right instead. 
 - You can now use vaults even if the config folder is not placed in `.obsidian`.
 - `oe` [Search all external links in your entire vault.](https://github.com/chrisgrieser/shimmering-obsidian/blob/main/docs/Note-related%20Features.md#search-all-external-links-in-the-entire-vault)
@@ -6655,7 +6654,7 @@ fi</string>
 
 ---
 
-### Created by Chris Grieser aka pseudometa
+### Created by Chris Grieser (aka pseudometa)
 - [Academic Website](https://chris-grieser.de/)
 - [ResearchGate](https://www.researchgate.net/profile/Christopher-Grieser)
 - [Discord](https://discordapp.com/users/462774483044794368/)

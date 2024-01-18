@@ -9,3 +9,10 @@ README.md
 LICENSE
 Makefile
 .build-and-release.sh
+.editorconfig
+.markdownlint.yaml
+.typos.toml
+
+alfred.d.ts
+jsconfig.json
+jxa-globals.d.ts
