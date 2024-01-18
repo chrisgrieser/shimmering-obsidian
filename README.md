@@ -1,51 +1,56 @@
 # Shimmering Obsidian 🎩
-Alfred Workflow with dozens of features for controlling your [Obsidian vault](https://obsidian.md/).
+Alfred Workflow with dozens of features for controlling your
+[Obsidian](https://obsidian.md/) vault.
 
-[Featured in the Alfred Gallery.](https://alfred.app/workflows/chrisgrieser/shimmering-obsidian/)
+[⭐Featured in the Alfred Gallery.](https://alfred.app/workflows/chrisgrieser/shimmering-obsidian/)
 
-![](https://img.shields.io/github/downloads/chrisgrieser/shimmering-obsidian/total?label=Downloads&style=plastic) ![](https://img.shields.io/github/v/release/chrisgrieser/shimmering-obsidian?label=Latest%20Release&style=plastic)
+![Download Count](https://img.shields.io/github/downloads/chrisgrieser/shimmering-obsidian/total?label=Downloads&style=plastic)
+![Last Release](https://img.shields.io/github/v/release/chrisgrieser/shimmering-obsidian?label=Latest%20Release&style=plastic)
 
-<img src="https://user-images.githubusercontent.com/73286100/139678407-9ac39baa-5f49-42a0-9622-0fbaf68540b2.gif" alt="Promo Video" width=70%>
+<img alt="Promo Video" width=70% src="https://user-images.githubusercontent.com/73286100/139678407-9ac39baa-5f49-42a0-9622-0fbaf68540b2.gif">
 
 ---
 
-<!--toc:start-->
-- [Feature Overview](#feature-overview)
-    - [Powerful Alfred-based Quick Switcher](#powerful-alfred-based-quick-switcher)
-    - [Note-related Features](#note-related-features)
-    - [Screenshot Features](#screenshot-features)
-    - [Utility Features](#utility-features)
-    - [Plugins & Themes](#plugins-themes)
-    - [Workspace Switcher](#workspace-switcher)
-    - [Settings & Local Plugins](#settings-local-plugins)
-    - [Documentation & Help](#documentation-help)
-    - [Vault Switcher](#vault-switcher)
-    - [Features for Obsidian Plugin Developers](#features-for-obsidian-plugin-developers)
-    - [Cheatsheet](#cheatsheet)
+<!-- toc -->
 
+- [Feature Overview](#feature-overview)
+	* [Powerful Alfred-based Quick Switcher](#powerful-alfred-based-quick-switcher)
+	* [Note-related Features](#note-related-features)
+	* [Screenshot Features](#screenshot-features)
+	* [Utility Features](#utility-features)
+	* [Plugins & Themes](#plugins--themes)
+	* [Workspace Switcher](#workspace-switcher)
+	* [Settings & Local Plugins](#settings--local-plugins)
+	* [Documentation & Help](#documentation--help)
+	* [Vault Switcher](#vault-switcher)
+	* [Features for Obsidian Plugin Developers](#features-for-obsidian-plugin-developers)
+	* [Cheatsheet](#cheatsheet)
 - [Installation](#installation)
 - [Credits](#credits)
 - [About the Developer](#about-the-developer)
-<!--toc:end-->
 
+<!-- tocstop -->
 
 ## Feature Overview
 *For a full documentation & usage guide, follow the links to the respective subsection.*
 
 ### Powerful Alfred-based Quick Switcher
 - Search for Notes
-	- Includes Aliases
-	- Search Headings
-	- Search Bookmarked Notes
-	- Search Recent Notes
+	* Includes Aliases
+	* Search Headings
+	* Search Bookmarked Notes
+	* Search Recent Notes
 - Browse Folders (move to parent folders, create notes in folders)
 - Search Notes via Tags
 - Browse a note's links (outgoing, backlinks, external)
 - Open External Links of a note (without switching to the document or opening Obsidian)
 - Search only for attachments (non-markdown files) in your vault
 - Graph Traversal via Alfred
-- Smart Search: A query like `o foobar #moc starred` displays only files named "foobar" with the tag `#moc` that are also starred.
-- Visual Search: Add Icons to your notes based on their tags, similar to the [Supercharged Links](https://obsidian.md/plugins?id=supercharged-links-obsidian) Plugin.
+- Smart Search: A query like `o foobar #moc starred` displays only files named
+  "foobar" with the tag `#moc` that are also starred.
+- Visual Search: Add Icons to your notes based on their tags, similar to the
+  [Supercharged
+  Links](https://obsidian.md/plugins?id=supercharged-links-obsidian) Plugin.
 - ➡️ [Documentation of Quick Switcher Features](docs/Alfred-based%20Quick%20Switcher.md)
 
 ### Note-related Features
@@ -57,7 +62,8 @@ Alfred Workflow with dozens of features for controlling your [Obsidian vault](ht
 ### Screenshot Features
 - OCR-Screenshots
 - Image Screenshot
-- Both work for screenshots taken in quick succession, for example during a live presentation or lecture.
+- Both work for screenshots taken in quick succession, for example during a live
+  presentation or lecture.
 - ➡️ [Documentation of Screenshot Features](docs/Screenshot%20Features.md)
 
 ### Utility Features
@@ -87,7 +93,8 @@ Alfred Workflow with dozens of features for controlling your [Obsidian vault](ht
 - ➡️ [Documentation of the Settings Search](docs/Settings%20and%20Local%20Plugin%20Search.md)
 
 ### Documentation & Help
-- Search the [Official Obsidian Documentation](https://help.obsidian.md/Home) and the [Obsidian Hub](https://publish.obsidian.md/hub/00+-+Start+here)
+- Search the [Official Obsidian Documentation](https://help.obsidian.md/Home)
+  and the [Obsidian Hub](https://publish.obsidian.md/hub/00+-+Start+here)
 - ➡️ [Documentation of the Documentation Search](docs/Documentation%20Search.md)
 
 ### Vault Switcher
@@ -103,52 +110,62 @@ Alfred Workflow with dozens of features for controlling your [Obsidian vault](ht
 - Add & Update Beta Plugins via [BRAT](https://github.com/TfTHacker/obsidian42-brat)
 - ➡️ [Documentation of Features for Developers](docs/Features%20for%20Developers.md)
 
-### Cheatsheet
-Draft Note:
-- `oo`: Append to scratchpad
-- `oo`: Open to scratchpad
-
-Create Note:
-- `on`: New note
-
-Workspace:
-- `ow`: Workspace switcher
-- `ov`: Vault switcher
-
-Search:
-- `o`: Search every things
+## Cheatsheet
+Search
+- `o`: Search all notes
 - `oe`: Search all external link via vault
 - `ot`: Search tags
 - `ob`: Search bookmarked file/searches
 - `or`: Search recent files
 - `oa`: Open attachments (like images)
+
+Note Features
+- `oo`: Append to Scratchpad
+- `oo`: Open to Scratchpad
+- `on`: New note
+
+Workspace
+- `ow`: Workspace switcher
+- `ov`: Vault switcher
+
+Miscellaneous
 - `op`: Search plugins/themes
 - `o,:` Search settings and installed plugins
-
-Misc:
 - `obackup`: Backup vault
-- `ocss`: Open snippit/theme
-- `odd`: Search docs
+- `ocss`: Open snippet/theme
+- `odd`: Search developer docs
 - `oh`: Documentation search
 - `oupdate`: Refreshing metadata, re-index, plugin update
 
-
-
 ## Installation
 *This workflow requires Alfred 5 with [Powerpack](https://www.alfredapp.com/powerpack/).*
-1. Install the Obsidian plugins [Advanced URI](https://obsidian.md/plugins?id=obsidian-advanced-uri) & [Metadata Extractor](https://obsidian.md/plugins?id=metadata-extractor). Enable both plugins.
-2. Download the [latest release at GitHub](https://github.com/chrisgrieser/shimmering-obsidian/releases/latest). Double-click the `.alfredworkflow` file to install it.
+1. Install the Obsidian plugins [Advanced
+   URI](https://obsidian.md/plugins?id=obsidian-advanced-uri) & [Metadata
+   Extractor](https://obsidian.md/plugins?id=metadata-extractor). Enable both
+   plugins.
+2. Download the [latest release at
+   GitHub](https://github.com/chrisgrieser/shimmering-obsidian/releases/latest).
+   Double-click the `.alfredworkflow` file to install it.
 3. Set your vault path in the workflow configuration.
 4. Run the Alfred Command `osetup`. Obsidian then restarts.
 
 ## Credits
-- Big shout-out to [@kometenstaub](https://github.com/kometenstaub) for developing the [metadata extractor plugin](https://github.com/kometenstaub/metadata-extractor), as this workflow is its main client.
-- Also thanks to [@Vinzent03](https://github.com/Vinzent03) for his invaluable [Advanced URI plugin](https://github.com/Vinzent03/obsidian-advanced-uri), which enables Alfred to control various aspects of Obsidian.
-- <a href="https://www.flaticon.com/authors/freepik">Most icons created by Freepik (Flaticon)</a>
+- Big shout-out to [@kometenstaub](https://github.com/kometenstaub) for
+  developing the [metadata extractor
+  plugin](https://github.com/kometenstaub/metadata-extractor), as this workflow
+  is its main client.
+- Also thanks to [@Vinzent03](https://github.com/Vinzent03) for his invaluable
+  [Advanced URI plugin](https://github.com/Vinzent03/obsidian-advanced-uri),
+  which enables Alfred to control various aspects of Obsidian.
+- <a href="https://www.flaticon.com/authors/freepik">Most icons created by
+  Freepik (Flaticon)</a>
 
 <!-- vale Google.FirstPerson = NO -->
 ## About the Developer
-In my day job, I am a sociologist studying the social mechanisms underlying the digital economy. For my PhD project, I investigate the governance of the app economy and how software ecosystems manage the tension between innovation and compatibility. If you are interested in this subject, feel free to get in touch.
+In my day job, I am a sociologist studying the social mechanisms underlying the
+digital economy. For my PhD project, I investigate the governance of the app
+economy and how software ecosystems manage the tension between innovation and
+compatibility. If you are interested in this subject, feel free to get in touch.
 
 __Profiles__  
 - [Academic Website](https://chris-grieser.de/)
@@ -159,12 +176,15 @@ __Profiles__
 - [Mastodon](https://pkm.social/@pseudometa)
 - [LinkedIn](https://www.linkedin.com/in/christopher-grieser-ba693b17a/)
 
-*Note that for questions, bug reports, or feature requests for this workflow, please open a [GitHub issue](https://github.com/chrisgrieser/shimmering-obsidian/issues), since it is better suited for technical support.*
+*Note that for questions, bug reports, or feature requests for this workflow,
+please open a [GitHub
+issue](https://github.com/chrisgrieser/shimmering-obsidian/issues), since it is
+better suited for technical support.*
 
-__Donate__  
-<br>
-<a href='https://ko-fi.com/Y8Y86SQ91' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://cdn.ko-fi.com/cdn/kofi1.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+<a href='https://ko-fi.com/Y8Y86SQ91' target='_blank'><img height='36'
+style='border:0px;height:36px;' src='https://cdn.ko-fi.com/cdn/kofi1.png?v=3'
+border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
 
 ---
 
-[⬆️ Go Back to Top](#Feature-Overview)
+[⬆️ Go Back to Top](#feature-overview)
