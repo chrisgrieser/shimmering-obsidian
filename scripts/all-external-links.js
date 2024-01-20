@@ -20,7 +20,7 @@ function run() {
 		// PERF considered `rg`, but `grep` alone is actually surprisingly fast
 		// already, making `grep` potentially a better choice since it does not
 		// add a dependency
-		.doShellScript(`cd "${vaultPath}" && grep -Eo "\\[[^[]*?\\]\\(http[^)]*\\)" ./**/*.md`)
+		.doShellScript(`cd "${vaultPath}" && grep -Eor "\\[[^[]*?\\]\\(http[^)]*\\)" --include=\\*.md .`)
 		.split("\r")
 		.map((line) => {
 			const filename = line.split(":")[0].split("/").pop().slice(0, -3);
