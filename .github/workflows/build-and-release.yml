@@ -1,6 +1,6 @@
 name: Build & Release Alfred Workflow
 
-on: # yamllint disable-line rule:truthy
+on:
   push:
     tags:
       - "*"
@@ -32,7 +32,7 @@ jobs:
       - name: Build .alfredworkflow
         run: |
           zip --quiet --recurse-paths "${{ env.WORKFLOW_NAME }}.alfredworkflow" . \
-            --exclude ".git*" "Makefile" "build-and-release.sh" "README.md" "assets/*" ".DS_Store" ".rsync-exclude"
+            --exclude ".git*" "Makefile" ".build-and-release.sh" "README.md" "assets/*" ".DS_Store" ".rsync-exclude"
 
       - name: Upload .alfredworkflow as Release Asset
         id: upload-alfredworkflow
