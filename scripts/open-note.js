@@ -27,7 +27,8 @@ function run(argv) {
 		// press `Esc` to leave settings menu potentially open
 		Application("System Events").keyCode(53);
 	} else {
-		// delay opening URI scheme until Obsidian is running
+		// delay opening URI scheme until Obsidian is running, since Advanced URI
+		// plugin needs to be loaded before the URI scheme can be opened
 		Application("Obsidian").launch();
 		delay(1); // hard-coded, since Obsidian is registered as running before Advanced URI plugin loads
 		app.openLocation(urlScheme);
