@@ -5307,7 +5307,7 @@ echo "$backup"</string>
 				<key>scriptfile</key>
 				<string>scripts/obsi-developer-docs-search.js</string>
 				<key>subtext</key>
-				<string></string>
+				<string>including CodeMirror Docs</string>
 				<key>title</key>
 				<string>Obsidian Developer Docs</string>
 				<key>type</key>

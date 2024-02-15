@@ -2,21 +2,36 @@
 ObjC.import("stdlib");
 const app = Application.currentApplication();
 app.includeStandardAdditions = true;
+//──────────────────────────────────────────────────────────────────────────────
 
-const alfredMatcher = (/** @type {string} */ str) => str.replace(/[-()_/.]/g, " ") + " " + str + " ";
+/** @param {string} str */
+function camelCaseMatcher(str) {
+	const clean = str.replace(/[-_./]/g, " ");
+	const camelCaseSeparated = str.replace(/([A-Z])/g, " $1");
+	return [clean, camelCaseSeparated, str].join(" ") + " ";
+}
+
+/** @param {string} url @return {string} */
+function httpRequest(url) {
+	const queryURL = $.NSURL.URLWithString(url);
+	const data = $.NSData.dataWithContentsOfURL(queryURL);
+	const requestStr = $.NSString.alloc.initWithDataEncoding(data, $.NSUTF8StringEncoding).js;
+	return requestStr;
+}
 
 //──────────────────────────────────────────────────────────────────────────────
 
 /** @type {AlfredRun} */
 // biome-ignore lint/correctness/noUnusedVariables: Alfred run
 function run() {
-	const sourceURL =
+	const obsiDocsSource =
 		"https://api.github.com/repos/obsidianmd/obsidian-developer-docs/git/trees/main?recursive=1";
-	const baseURL = "https://docs.obsidian.md";
+	const obsiDocsBaseURL = "https://docs.obsidian.md";
 
-	const workArray = JSON.parse(app.doShellScript(`curl -sL ${sourceURL}`))
+	const obsiDocs = JSON.parse(httpRequest(obsiDocsSource))
 		.tree.filter(
-			(/** @type {{ path: string; }} */ file) => file.path.startsWith("en/") && file.path.endsWith(".md"),
+			(/** @type {{ path: string; }} */ file) =>
+				file.path.startsWith("en/") && file.path.endsWith(".md"),
 		)
 		.map((/** @type {{ path: string }} */ file) => {
 			const subsitePath = file.path.slice(3, -3);
@@ -32,11 +47,37 @@ function run() {
 			return {
 				title: displayTitle,
 				subtitle: category,
-				match: alfredMatcher(subsitePath),
-				arg: `${baseURL}/${subsiteURL}`,
+				match: camelCaseMatcher(subsitePath),
+				arg: `${obsiDocsBaseURL}/${subsiteURL}`,
 				uid: subsitePath,
 			};
 		});
 
-	return JSON.stringify({ items: workArray });
+	//───────────────────────────────────────────────────────────────────────────
+
+	const codeMirrorDocsSource = "https://codemirror.net/docs/ref/";
+	const ahrefRegex = /<a href="(#.*?)"/i;
+
+	const codeMirrorDocs = httpRequest(codeMirrorDocsSource)
+		.split("\n")
+		.filter((line) => line.includes('a href="#'))
+		.map((line) => {
+			const [_, anchor] = line.match(ahrefRegex) || [null, null];
+			if (!anchor) return {};
+			const url = codeMirrorDocsSource + anchor;
+			const data = decodeURIComponent(anchor).slice(1);
+
+			const [__, category, title] = data.match(/(.*)[.^](.*)/) || [null, "@codemirror", data];
+
+			return {
+				title: title,
+				subtitle: category,
+				match: camelCaseMatcher(title) + camelCaseMatcher(category),
+				icon: { path: "icons/codemirror-logo.png" },
+				arg: url,
+				uid: url,
+			};
+		});
+
+	return JSON.stringify({ items: [...codeMirrorDocs] });
 }
