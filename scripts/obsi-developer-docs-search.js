@@ -79,5 +79,5 @@ function run() {
 			};
 		});
 
-	return JSON.stringify({ items: [...codeMirrorDocs] });
+	return JSON.stringify({ items: [...obsiDocs, ...codeMirrorDocs] });
 }
