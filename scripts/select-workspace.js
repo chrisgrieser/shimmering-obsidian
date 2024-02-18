@@ -1,10 +1,8 @@
 #!/usr/bin/env osascript -l JavaScript
-
 ObjC.import("stdlib");
 ObjC.import("Foundation");
 const app = Application.currentApplication();
 app.includeStandardAdditions = true;
-
 //──────────────────────────────────────────────────────────────────────────────
 
 /** @param {string} path */
@@ -20,46 +18,40 @@ function readFile(path) {
 /** @type {AlfredRun} */
 // biome-ignore lint/correctness/noUnusedVariables: Alfred run
 function run() {
-	const workspaceToSpellcheck = $.getenv("workspace_to_spellcheck").split(/ ?, ?/);
 	const vaultPath = $.getenv("vault_path");
 	const configFolder = $.getenv("config_folder");
-
 	const workspaceJSON = JSON.parse(readFile(`${vaultPath}/${configFolder}/workspaces.json`));
-	const workspaceArray = Object.keys(workspaceJSON.workspaces);
 	const currentWorkspace = workspaceJSON.active;
 
-	const jsonArray = [];
-	workspaceArray.forEach((workspaceName) => {
-		// icons/emoji
-		let spellcheckInfo = "";
-		if (workspaceToSpellcheck.includes(workspaceName)) spellcheckInfo = " 🖍";
+	/** @type {AlfredItem[]} */
+	const workspaces = Object.keys(workspaceJSON.workspaces).map((workspace) => {
 		let iconpath = "icons/workspace.png";
-		if (workspaceName.toLowerCase().includes("writing") || workspaceName.toLowerCase().includes("longform"))
-			iconpath = "icons/writing.png";
+		if (workspace.toLowerCase().includes("longform")) iconpath = "icons/writing.png";
 
-		jsonArray.push({
-			title: `Load "${workspaceName}" ${spellcheckInfo}`,
-			match: workspaceName.replaceAll("-", " ") + " " + workspaceName,
-			arg: workspaceName,
-			uid: workspaceName,
+		return {
+			title: `Load "${workspace}"`,
+			match: workspace.replaceAll("-", " ") + " " + workspace,
+			arg: workspace,
+			uid: workspace,
 			icon: { path: iconpath },
-		});
+		};
 	});
 
 	// Save Current Workspace
-	jsonArray.push({
+	workspaces.push({
 		title: `Save "${currentWorkspace}"`,
 		arg: "_save-workspace",
 		icon: { path: "icons/save-workspace.png" },
 		uid: "save-workspace",
 	});
 
-	// Manage Workspaces (no UID to ensure it is on bottom)
-	jsonArray.push({
+	// Manage Workspaces
+	workspaces.push({
 		title: "Manage Workspaces",
 		arg: "_manage-workspace",
 		icon: { path: "icons/settings.png" },
+		// no UID to ensure it is on bottom
 	});
 
-	return JSON.stringify({ items: jsonArray });
+	return JSON.stringify({ items: workspaces });
 }
