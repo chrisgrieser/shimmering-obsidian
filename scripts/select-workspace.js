@@ -23,6 +23,16 @@ function run() {
 	const workspaceJSON = JSON.parse(readFile(`${vaultPath}/${configFolder}/workspaces.json`));
 	const currentWorkspace = workspaceJSON.active;
 
+	// GUARD 
+	if (!currentWorkspace) {
+		return JSON.stringify({
+			items: [{
+				title: "No Active Workspace found.",
+				subtitle: "Workspaces Core Plugin potentially not enabled.",
+			}],
+		});
+	}
+
 	/** @type {AlfredItem[]} */
 	const workspaces = Object.keys(workspaceJSON.workspaces).map((workspace) => {
 		let iconpath = "icons/workspace.png";
