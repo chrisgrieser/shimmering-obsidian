@@ -1446,7 +1446,7 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>BFA862CD-BAD9-4682-868F-8873F7DCFCBF</string>
+				<string>D4CB6E25-D9AE-4963-A0D8-E98E9433F4DC</string>
 				<key>modifiers</key>
 				<integer>1048576</integer>
 				<key>modifiersubtext</key>
@@ -1675,19 +1675,6 @@
 		</array>
 		<key>BF2C7CBD-67E0-45CC-8948-E68291FF2B50</key>
 		<array/>
-		<key>BFA862CD-BAD9-4682-868F-8873F7DCFCBF</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>D4CB6E25-D9AE-4963-A0D8-E98E9433F4DC</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>BFD0B48D-B946-47F3-8139-6D0AC9652F3A</key>
 		<array>
 			<dict>
@@ -3460,25 +3447,6 @@ set parameter to do shell script "echo " &amp; quoted form of (system attribute 
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>externaltriggerid</key>
-				<string>open-relative-path-in-obsidian</string>
-				<key>passinputasargument</key>
-				<true/>
-				<key>passvariables</key>
-				<true/>
-				<key>workflowbundleid</key>
-				<string>self</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.callexternaltrigger</string>
-			<key>uid</key>
-			<string>D4CB6E25-D9AE-4963-A0D8-E98E9433F4DC</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>browser</key>
 				<string></string>
 				<key>skipqueryencode</key>
@@ -3494,6 +3462,25 @@ set parameter to do shell script "echo " &amp; quoted form of (system attribute 
 			<string>alfred.workflow.action.openurl</string>
 			<key>uid</key>
 			<string>16CB8CAB-6E50-4226-9333-C55DE838C8F2</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>externaltriggerid</key>
+				<string>open-relative-path-in-obsidian</string>
+				<key>passinputasargument</key>
+				<true/>
+				<key>passvariables</key>
+				<true/>
+				<key>workflowbundleid</key>
+				<string>self</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>D4CB6E25-D9AE-4963-A0D8-E98E9433F4DC</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -3566,29 +3553,6 @@ set parameter to do shell script "echo " &amp; quoted form of (system attribute 
 			<string>9DC48313-88F4-44F1-BC18-0B16E0549C51</string>
 			<key>version</key>
 			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>script</key>
-				<string></string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string>./scripts/find-external-link-in-obsidian.sh</string>
-				<key>type</key>
-				<integer>8</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>BFA862CD-BAD9-4682-868F-8873F7DCFCBF</string>
-			<key>version</key>
-			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -6481,6 +6445,7 @@ fi</string>
 ## 📙 Recent Changes
 - Break: Hotkeys for Workspace-Switching removed, since functionality better done via [Workspace Plus Plugin](https://obsidian.md/plugins?id=workspaces-plus).
 - Fix: Note not being opened when Obsidian isn't running at the time `o` is triggered.
+- Fix: External link search, revealing in Obsidian
 
 ---
 
@@ -7847,17 +7812,6 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>ypos</key>
 			<real>6820</real>
 		</dict>
-		<key>BFA862CD-BAD9-4682-868F-8873F7DCFCBF</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>3</integer>
-			<key>note</key>
-			<string>reveal in Obsidian</string>
-			<key>xpos</key>
-			<real>240</real>
-			<key>ypos</key>
-			<real>1420</real>
-		</dict>
 		<key>BFD0B48D-B946-47F3-8139-6D0AC9652F3A</key>
 		<dict>
 			<key>colorindex</key>
@@ -7987,9 +7941,9 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>colorindex</key>
 			<integer>6</integer>
 			<key>xpos</key>
-			<real>630</real>
+			<real>555</real>
 			<key>ypos</key>
-			<real>1240</real>
+			<real>1360</real>
 		</dict>
 		<key>D508118D-D946-434E-93B0-471D6FE85B18</key>
 		<dict>

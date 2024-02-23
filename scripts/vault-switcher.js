@@ -46,6 +46,7 @@ function run() {
 				cmd: { arg: vaultPath },
 				ctrl: { arg: vaultPath },
 			},
+			uid: vaultURI,
 		};
 	});
 
@@ -59,6 +60,7 @@ function run() {
 			cmd: { valid: false, subtitle: "⛔️" },
 			ctrl: { valid: false, subtitle: "⛔️" },
 		},
+		// no UID, so it's always at the bottom
 	});
 
 	return JSON.stringify({ items: vaults });

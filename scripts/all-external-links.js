@@ -5,7 +5,7 @@ app.includeStandardAdditions = true;
 
 /** @param {string} str */
 function alfredMatcher(str) {
-	const clean = str.replace(/[-()_.:#/\\;,[\]]/g, " ");
+	const clean = str.replace(/[^\w\s]+/g, " ");
 	return [clean, str].join(" ") + " ";
 }
 
@@ -18,14 +18,13 @@ function run() {
 	/** @type AlfredItem[] */
 	const externalLinks = app
 		// PERF considered `rg`, but `grep` alone is actually surprisingly fast
-		// already, making `grep` potentially a better choice since it does not
-		// add a dependency
-		.doShellScript(`cd "${vaultPath}" && grep -Eor "\\[[^[]*?\\]\\(http[^)]*\\)" --include=\\*.md .`)
+		// already, making `grep` a better choice since it does not add a dependency
+		.doShellScript(`cd "${vaultPath}" && grep "\\[[^[]*?\\]\\(http[^)]*\\)" \
+		--include=\\*.md --recursive --line-number --only-matching --extended-regexp .`)
 		.split("\r")
 		.map((line) => {
-			const filename = line.split(":")[0].split("/").pop().slice(0, -3);
-			const mdLink = line.split(":").slice(1).join(":");
-			const [_, title, url] = mdLink.match(/\[([^[]*)\]\((.*)\)/);
+			const [filename, lnum, ...mdLink] = line.split(":");
+			const [_, title, url] = mdLink.join(":").match(/\[([^[]*)\]\((.*)\)/);
 
 			return {
 				title: title,
@@ -34,7 +33,7 @@ function run() {
 				match: alfredMatcher(title) + alfredMatcher(filename) + alfredMatcher(url),
 				uid: line,
 				mods: {
-					cmd: { arg: line },
+					cmd: { arg: filename + ":" + lnum },
 				},
 			};
 		});
