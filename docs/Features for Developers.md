@@ -15,7 +15,7 @@ Search the official [Obsidian developer docs](https://docs.obsidian.md/Home).
 ## Plugin Search
 ➡️ Refer to the [Plugin & Theme Search](Plugin%20and%20Theme%20Search.md#Plugins) for information about the theme search capabilities. Particularly useful for plugin developers should be:
 - the [GitHub issue search](Plugin%20and%20Theme%20Search.md#searching-github-issues)
-- `⌃ + ↵` to see and copy plugin IDs
+- `⌃ + ⏎` to see and copy plugin IDs
 
 <img src="https://user-images.githubusercontent.com/73286100/139559362-747b0c57-c29b-45b5-bc62-4ab53c0718c5.gif" alt="Issue Search" width=60%>
 
@@ -30,6 +30,6 @@ Search the official [Obsidian developer docs](https://docs.obsidian.md/Home).
 **`obeta`: Access `beta`-plugin-related commands.**
 - Add a new plugin to your Beta plugins.
 - Open the repository of a beta plugin.
-	- Press `⌥ + ↵` to copy the GitHub repository URL to your clipboard. When Discord is the frontmost app, the copied link will be surrounded with `<` `>` for more convenient pasting in the Discord Desktop app (disables auto-preview).
+	- Press `⌥ + ⏎` to copy the GitHub repository URL to your clipboard. When Discord is the frontmost app, the copied link will be surrounded with `<` `>` for more convenient pasting in the Discord Desktop app (disables auto-preview).
 - Update all Beta plugins.
 - All commands require the [BRAT Plugin](https://github.com/TfTHacker/obsidian42-brat).

@@ -43,12 +43,12 @@ This keyword searches all your notes, aliases, folders, and headings combined.
 ### Search for Notes
 This works similar to Obsidian's built-in *Quick Switcher*, but can be triggered
 without Obsidian running (in which case it opens Obsidian with the selected
-note). Press `↵` to open the selected file in Obsidian.
-- `⌘ + ↵`: Open the file in a new tab (requires Obsidian 0.16).
-- `⌥ + ↵`: Reveal the file in Finder.
-- `fn + ↵`: Append the content to the selected note.
-- `⌃ + ↵`: Copy the [Obsidian-URI to the selected file](https://help.obsidian.md/Advanced+topics/Using+obsidian+URI#Action+`hook-get-address`).
-- `⇧ + ↵`: Browse a list of all links of the selected note (outgoing links,
+note). Press `⏎` to open the selected file in Obsidian.
+- `⌘ + ⏎`: Open the file in a new tab (requires Obsidian 0.16).
+- `⌥ + ⏎`: Reveal the file in Finder.
+- `fn + ⏎`: Append the content to the selected note.
+- `⌃ + ⏎`: Copy the [Obsidian-URI to the selected file](https://help.obsidian.md/Advanced+topics/Using+obsidian+URI#Action+`hook-get-address`).
+- `⇧ + ⏎`: Browse a list of all links of the selected note (outgoing links,
   backlinks, external links.) See at the [section "Browse Links"
   below](#browse-links-of-a-note) for further information.
 - Press `⇧` or `⌘ y` to preview the selected note via macOS' Quick Look feature.
@@ -94,8 +94,8 @@ that you are now searching only for files and folders inside that folder.
 
 ### Search for Headings
 Displayed alongside the other search results are all headings in your vault.
-Selecting a heading with `↵` opens the file *at the respective heading*.
-- `⌃ + ↵`: Copies either a Markdown link [that uses the Obsidian
+Selecting a heading with `⏎` opens the file *at the respective heading*.
+- `⌃ + ⏎`: Copies either a Markdown link [that uses the Obsidian
   URI](https://help.obsidian.md/Advanced+topics/Using+obsidian+URI#Action+%60hook-get-address%60)
   or the wikilink to the selected file, depending on the setting. Also work with
   headings.
@@ -111,33 +111,33 @@ Selecting a heading with `↵` opens the file *at the respective heading*.
 > crowded.
 
 ## Browse Links of a Note
-**Use `⇧ + ↵` on any search result of the main `o` search to browse the links of
+**Use `⇧ + ⏎` on any search result of the main `o` search to browse the links of
 that note**
 
 - Displays a list of *all* links of the note: outgoing links, backlinks, and
   external links. (As of now, unresolved internal links are not displayed
   though.)
 - Selecting an outgoing link or backlink opens the respective note.
-	* All the modifiers (`⌘/⌃/⌥/fn/⇧ + ↵`) apply the same way as with the main `o` search.
-	* *Yes, this means you can repeatedly use `⇧ + ↵` to basically traverse
+	* All the modifiers (`⌘/⌃/⌥/fn/⇧ + ⏎`) apply the same way as with the main `o` search.
+	* *Yes, this means you can repeatedly use `⇧ + ⏎` to basically traverse
 	  your graph via Alfred. 😎*
 - for external links:
-	* Selecting an external link with `↵` opens the link in the default browser.
-	* Press `⌥ + ↵` on an external link to copy the URL to the clipboard instead.
+	* Selecting an external link with `⏎` opens the link in the default browser.
+	* Press `⌥ + ⏎` on an external link to copy the URL to the clipboard instead.
 
 ## Search Notes by their Tags
 **`ot`: Search `t`ags and subsequently files with that tag**
 - Display and search a full list of all tags in your vault.
-	* Select a tag with `↵` to display & search all notes with that tag.
-	* In the following list of your notes, all the modifiers (`⌘/⌃/⌥/fn/⇧ + ↵`)
+	* Select a tag with `⏎` to display & search all notes with that tag.
+	* In the following list of your notes, all the modifiers (`⌘/⌃/⌥/fn/⇧ + ⏎`)
 	  apply the same way as they do with the `o` search.
-	* Press `⌘ + ↵` instead to open Obsidian's search pane and search for the tag there.
+	* Press `⌘ + ⏎` instead to open Obsidian's search pane and search for the tag there.
 - Use the workflow configuration to set whether nested tags should be merged
   with their parent or not.
 
 ## Search Bookmarked Files
 **`ob`: Search `b`ookmarked Files and Searches**
-- When you select a starred *file*, all the modifiers (`⌘/⌃/⌥/fn/⇧ + ↵`) apply
+- When you select a starred *file*, all the modifiers (`⌘/⌃/⌥/fn/⇧ + ⏎`) apply
   the same way as with the main `o` search.
 - If you select a starred *search*, Obsidian opens the search pane with the
   respective query.
@@ -146,16 +146,16 @@ that note**
 
 ## Search Recent Files
 **`or`: Open `r`ecent Files**
-- All the modifiers (`⌘/⌃/⌥/fn/⇧ + ↵`) apply the same way as with the main `o` search.
+- All the modifiers (`⌘/⌃/⌥/fn/⇧ + ⏎`) apply the same way as with the main `o` search.
 - Only the 10 most recent files are displayed.
 
 ## Search for Attachments
 **`oa`: `a`ttachments**
-- Searches only for attachments (non-Markdown files) in your vault. `↵` opens
+- Searches only for attachments (non-Markdown files) in your vault. `⏎` opens
   the selected files in your default app. (Obsidian itself is not opened.)
-- The modifiers `⌘/⌃/⌥ + ↵` and the previewing (`⇧` or `⌘y`) work the same way
+- The modifiers `⌘/⌃/⌥ + ⏎` and the previewing (`⇧` or `⌘y`) work the same way
   as with the main `o` search.
-- `⇧ + ↵`, however, works differently: it opens the file in Obsidian, if
+- `⇧ + ⏎`, however, works differently: it opens the file in Obsidian, if
 [Obsidian is able to open
 them](https://help.obsidian.md/Advanced+topics/Accepted+file+formats). (If not,
 the file simply is opened in your default app.)

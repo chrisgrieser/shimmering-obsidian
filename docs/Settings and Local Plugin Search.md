@@ -2,14 +2,14 @@
 
 # Settings & Local Plugin Search
 **`o,`: Search and directly open specific setting tabs.[^1]**
-- The search includes Obsidian main settings, quick access to the plugin and theme browser, as well as settings for plugins. Press `↵` to open the respective setting *directly*.
+- The search includes Obsidian main settings, quick access to the plugin and theme browser, as well as settings for plugins. Press `⏎` to open the respective setting *directly*.
 - The search smartly matches also the content of the respective settings tabs, e.g. the query `o, readable line` will show the Editor Settings, since the "Readable line length" option can be found there.
-- `⌥ + ↵` will open the local plugin folder in `.obsidian/plugins/` in Finder.
-- `⇧ + ↵` enables/disables the plugin (requires Advanced URI plugin v 1.25+).[^1]
+- `⌥ + ⏎` will open the local plugin folder in `.obsidian/plugins/` in Finder.
+- `⇧ + ⏎` enables/disables the plugin (requires Advanced URI plugin v 1.25+).[^1]
 - *⚙️ For developers:*
-	- `⌘ + ↵` will open browse the local plugin folder in your default Terminal.[^2]
-	- `⌃ + ↵` copies the plugin's id. (Hold `⌃` to see the plugin's id.)
-	- `fn + ↵` runs `git pull` in the plugin's directory.
+	- `⌘ + ⏎` will open browse the local plugin folder in your default Terminal.[^2]
+	- `⌃ + ⏎` copies the plugin's id. (Hold `⌃` to see the plugin's id.)
+	- `fn + ⏎` runs `git pull` in the plugin's directory.
 	- 🆕 A "⚙️" will indicate that the plugin is being developed.[^3]
 
 ## Tips
