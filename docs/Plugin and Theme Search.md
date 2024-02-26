@@ -20,6 +20,7 @@
 	  your clipboard.
 	+ `⇧ + ↵` to display & search the GitHub issues. See [the section
 	  below](#searching-github-issues) for more information.
+	+ `fn + ↵` to open the plugin's page at [Obsidian Stats](https://www.moritzjung.dev/obsidian-stats/).
 - Only plugins officially included in the community plugins are displayed —
   plugins solely available via GitHub or still in review are not shown.
 - Add `plugin` to the search query to only display plugin, for example, use `op
@@ -41,6 +42,7 @@
 	  below](#searching-github-issues) for more information.
 	+ Use `⇧` or `⌘ + Y` to open a Quick Look Preview of the theme's promo
 	  screenshot. Press `⇧` or `⌘ + Y` again to close the preview.
+	+ `fn + ↵` to open the theme's page at [Obsidian Stats](https://www.moritzjung.dev/obsidian-stats/).
 - Only themes officially included in the community themes are displayed — themes
   solely available via GitHub or still in review are not shown.
 - Add `theme` to the search query to only display themes, for instance use `op

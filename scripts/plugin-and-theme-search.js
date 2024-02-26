@@ -47,7 +47,6 @@ function writeToFile(filepath, text) {
 function SafeApplication(appId) {
 	try {
 		return Application(appId);
-		// biome-ignore lint/nursery/noUselessLoneBlockStatements: required by try
 	} catch {
 		return null;
 	}
@@ -112,16 +111,10 @@ function run() {
 	const installedThemes = app.doShellScript(
 		`find '${vaultPath}/${configFolder}/themes/' -name '*.css' || true`,
 	);
-	const currentTheme = app.doShellScript(
-		`grep "cssTheme" "${vaultPath}/${configFolder}/appearance.json" | head -n1 | cut -d'"' -f4 || true`,
-	);
+	const currentTheme = JSON.parse(readFile(`${vaultPath}/${configFolder}/appearance.json`))?.cssTheme;
 
-	const deprecated = JSON.parse(readFile("./data/deprecated-plugins.json"));
-	const deprecatedPlugins = [
-		...deprecated.sherlocked,
-		...deprecated.dysfunct,
-		...deprecated.deprecated,
-	];
+	const depre = JSON.parse(readFile("./data/deprecated-plugins.json"));
+	const deprecatedPlugins = [ ...depre.sherlocked, ...depre.dysfunct, ...depre.deprecated ];
 
 	//───────────────────────────────────────────────────────────────────────────
 
@@ -176,6 +169,7 @@ function run() {
 				uid: id,
 				match: matcher,
 				mods: {
+					fn: { arg: "https://www.moritzjung.dev/obsidian-stats/plugins/" + plugin.id },
 					cmd: { arg: openURI },
 					ctrl: { arg: id },
 					"cmd+alt": {
@@ -196,11 +190,12 @@ function run() {
 	// add THEMES to the JSON
 	const themes = themeJSON.map(
 		(
-			/** @type {{ name: any; author: any; repo: any; branch: any; screenshot: string; modes: string | string[]; }} */ theme,
+			/** @type {{ name: string; author: string; repo: string; branch: string; screenshot: string; modes: string | string[]; }} */ theme,
 		) => {
 			const name = theme.name;
 			const author = theme.author;
 			const repo = theme.repo;
+			const id = repo.split("/")[1];
 			const branch = theme.branch ? theme.branch : "master";
 
 			const rawGitHub = `https://raw.githubusercontent.com/${repo}/${branch}/`;
@@ -234,6 +229,7 @@ function run() {
 					ctrl: { valid: false },
 					cmd: { arg: openURI },
 					shift: { arg: repo },
+					fn: { arg: "https://www.moritzjung.dev/obsidian-stats/themes/" + id },
 					"cmd+alt": {
 						arg: discordUrl,
 						subtitle: "⌘⌥: Copy Link (discord ready)",

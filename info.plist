@@ -950,6 +950,16 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
+				<string>B8972C2B-57E4-40CB-9127-43D9B3044987</string>
+				<key>modifiers</key>
+				<integer>8388608</integer>
+				<key>modifiersubtext</key>
+				<string>fn: Open at Obsidian Stats</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
 				<string>0F72D532-AAE1-48A3-85FC-A819F196DC3E</string>
 				<key>modifiers</key>
 				<integer>1048576</integer>
@@ -1613,6 +1623,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>661004F2-B1DF-4A0B-860D-62B0756649E4</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>B8972C2B-57E4-40CB-9127-43D9B3044987</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>4D7CE883-A32F-45EC-BC4A-106918BD64AF</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -5558,6 +5581,14 @@ fi</string>
 			<key>type</key>
 			<string>alfred.workflow.utility.junction</string>
 			<key>uid</key>
+			<string>B8972C2B-57E4-40CB-9127-43D9B3044987</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.junction</string>
+			<key>uid</key>
 			<string>0F72D532-AAE1-48A3-85FC-A819F196DC3E</string>
 			<key>version</key>
 			<integer>1</integer>
@@ -6584,9 +6615,9 @@ fi</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<real>330</real>
+			<real>265</real>
 			<key>ypos</key>
-			<real>4950</real>
+			<real>4995</real>
 		</dict>
 		<key>10873427-2384-4E8F-8D59-A9D1EB95EFC2</key>
 		<dict>
@@ -7762,6 +7793,15 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<real>340</real>
 			<key>ypos</key>
 			<real>3310</real>
+		</dict>
+		<key>B8972C2B-57E4-40CB-9127-43D9B3044987</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>9</integer>
+			<key>xpos</key>
+			<real>265</real>
+			<key>ypos</key>
+			<real>4930</real>
 		</dict>
 		<key>B9AC24F9-316C-4D05-903D-7ED21EA0A3C8</key>
 		<dict>
