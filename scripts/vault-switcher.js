@@ -11,12 +11,20 @@ function readFile(path) {
 	return ObjC.unwrap(str);
 }
 
+/** @param {string} str */
+function camelCaseMatch(str) {
+	const clean = str.replace(/[-_.]/g, " ");
+	const camelCaseSeparated = str.replace(/([A-Z])/g, " $1");
+	return [clean, camelCaseSeparated, str].join(" ") + " ";
+}
+
 //──────────────────────────────────────────────────────────────────────────────
 
 /** @type {AlfredRun} */
 // biome-ignore lint/correctness/noUnusedVariables: Alfred run
 function run() {
 	const currentVault = $.getenv("vault_path");
+	const vaultNameEnc = encodeURIComponent(currentVault.replace(/.*\//, ""));
 	const vaultListJson =
 		app.pathTo("home folder") + "/Library/Application Support/obsidian/obsidian.json";
 
@@ -41,6 +49,7 @@ function run() {
 			title: currentIcon + vaultName,
 			subtitle: shortPath,
 			arg: vaultURI,
+			match: camelCaseMatch(vaultName),
 			mods: {
 				alt: { arg: vaultPath },
 				cmd: { arg: vaultPath },
@@ -53,7 +62,7 @@ function run() {
 	vaults.push({
 		title: "Vault Menu",
 		subtitle: "Create or delete vaults",
-		arg: "obsidian://advanced-uri?commandid=app%253Aopen-vault",
+		arg: `obsidian://advanced-uri?vault=${vaultNameEnc}commandid=app%253Aopen-vault`,
 		icon: { path: "icons/settings.png" },
 		mods: {
 			alt: { valid: false, subtitle: "⛔️" },
