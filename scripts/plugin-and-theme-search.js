@@ -1,9 +1,7 @@
 #!/usr/bin/env osascript -l JavaScript
-
 ObjC.import("stdlib");
 const app = Application.currentApplication();
 app.includeStandardAdditions = true;
-
 //──────────────────────────────────────────────────────────────────────────────
 
 /** @param {string} str */
@@ -111,16 +109,20 @@ function run() {
 	const installedThemes = app.doShellScript(
 		`find '${vaultPath}/${configFolder}/themes/' -name '*.css' || true`,
 	);
-	const currentTheme = JSON.parse(readFile(`${vaultPath}/${configFolder}/appearance.json`))?.cssTheme;
+	const currentTheme = JSON.parse(
+		readFile(`${vaultPath}/${configFolder}/appearance.json`),
+	)?.cssTheme;
 
 	const depre = JSON.parse(readFile("./data/deprecated-plugins.json"));
-	const deprecatedPlugins = [ ...depre.sherlocked, ...depre.dysfunct, ...depre.deprecated ];
+	const deprecatedPlugins = [...depre.sherlocked, ...depre.dysfunct, ...depre.deprecated];
 
 	//───────────────────────────────────────────────────────────────────────────
 
 	// add PLUGINS to the JSON
 	const plugins = pluginJSON.map(
-		(/** @type {{ id: any; name: any; description: string; author: any; repo: any; }} */ plugin) => {
+		(
+			/** @type {{ id: string; name: string; description: string; author: string; repo: string; }} */ plugin,
+		) => {
 			const id = plugin.id;
 			const name = plugin.name;
 			const description = plugin.description
@@ -160,6 +162,9 @@ function run() {
 			const matcher = `plugin ${uriMatcher} ${alfredMatcher(name)} ${alfredMatcher(author)} ${alfredMatcher(id)} ${alfredMatcher(description)}`;
 			const subtitle = downloadsStr + subtitleIcons + description + "  ·  by " + author;
 
+			// needs lowercasing https://github.com/chrisgrieser/shimmering-obsidian/commit/9642fc3d36f9b59cedadbd24991dd4b65078132f#r139057296
+			const obsiStatsUrl = "https://www.moritzjung.dev/obsidian-stats/plugins/" + plugin.id.toLowerCase();
+
 			// create json for Alfred
 			/** @type {AlfredItem} */
 			const alfredItem = {
@@ -169,7 +174,7 @@ function run() {
 				uid: id,
 				match: matcher,
 				mods: {
-					fn: { arg: "https://www.moritzjung.dev/obsidian-stats/plugins/" + plugin.id },
+					fn: { arg: obsiStatsUrl },
 					cmd: { arg: openURI },
 					ctrl: { arg: id },
 					"cmd+alt": {
@@ -215,7 +220,9 @@ function run() {
 			if (currentTheme === name) installedIcon = " ⭐️";
 			else if (installedThemes.includes(name)) installedIcon = " ✅";
 
-			// create json for Alfred
+			// needs lowercasing https://github.com/chrisgrieser/shimmering-obsidian/commit/9642fc3d36f9b59cedadbd24991dd4b65078132f#r139057296
+			const obsiStatsUrl = "https://www.moritzjung.dev/obsidian-stats/themes/" + id.toLowerCase();
+
 			/** @type {AlfredItem} */
 			return {
 				title: name + installedIcon,
@@ -229,7 +236,7 @@ function run() {
 					ctrl: { valid: false },
 					cmd: { arg: openURI },
 					shift: { arg: repo },
-					fn: { arg: "https://www.moritzjung.dev/obsidian-stats/themes/" + id },
+					fn: { arg: obsiStatsUrl },
 					"cmd+alt": {
 						arg: discordUrl,
 						subtitle: "⌘⌥: Copy Link (discord ready)",
