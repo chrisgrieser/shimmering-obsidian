@@ -2412,6 +2412,11 @@ tesseract "$temp_image" stdout -l $ocr_languages 2&gt;&amp;1</string>
 			<integer>1</integer>
 		</dict>
 		<dict>
+			<key>config</key>
+			<dict>
+				<key>unstackview</key>
+				<false/>
+			</dict>
 			<key>type</key>
 			<string>alfred.workflow.utility.hidealfred</string>
 			<key>uid</key>
@@ -2554,6 +2559,11 @@ tesseract "$temp_image" stdout -l $ocr_languages 2&gt;&amp;1</string>
 			<integer>1</integer>
 		</dict>
 		<dict>
+			<key>config</key>
+			<dict>
+				<key>unstackview</key>
+				<false/>
+			</dict>
 			<key>type</key>
 			<string>alfred.workflow.utility.hidealfred</string>
 			<key>uid</key>
@@ -5690,6 +5700,11 @@ fi</string>
 			<integer>3</integer>
 		</dict>
 		<dict>
+			<key>config</key>
+			<dict>
+				<key>unstackview</key>
+				<false/>
+			</dict>
 			<key>type</key>
 			<string>alfred.workflow.utility.hidealfred</string>
 			<key>uid</key>
@@ -6474,6 +6489,8 @@ fi</string>
 ---
 
 ## 📙 Recent Changes
+- Perf: Increased performance for most searches (for users of Alfred 5.5).
+- Fix: Invalid tag count for tag search `ot`
 - Break: Hotkeys for Workspace-Switching removed, since functionality better done via [Workspace Plus Plugin](https://obsidian.md/plugins?id=workspaces-plus).
 - Fix: Note not being opened when Obsidian isn't running at the time `o` is triggered.
 - Fix: External link search, revealing in Obsidian
