@@ -1,6 +1,5 @@
 #!/usr/bin/env osascript -l JavaScript
 ObjC.import("stdlib");
-ObjC.import("Foundation");
 const app = Application.currentApplication();
 app.includeStandardAdditions = true;
 //──────────────────────────────────────────────────────────────────────────────
@@ -120,9 +119,11 @@ function run() {
 				});
 			}
 
+			const tagCountStr = tagData.tagCount ? `${tagData.tagCount}x` : "";
+
 			return {
 				title: superchargedIcon + "#" + tagName + superchargedIcon2,
-				subtitle: tagData.tagCount + "x" + mergeInfo,
+				subtitle: tagCountStr + mergeInfo,
 				match: camelCaseMatch("#" + tagName) + extraMatcher,
 				uid: tagName,
 				mods: { cmd: { arg: tagQuery } },
