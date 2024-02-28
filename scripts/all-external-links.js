@@ -38,5 +38,11 @@ function run() {
 			};
 		});
 
-	return JSON.stringify({ items: externalLinks });
+	return JSON.stringify({
+		items: externalLinks,
+		cache: {
+			seconds: 300,
+			loosereload: true,
+		},
+	});
 }

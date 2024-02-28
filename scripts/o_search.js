@@ -384,5 +384,11 @@ function run() {
 		});
 	}
 
-	return JSON.stringify({ items: resultsArr });
+	return JSON.stringify({
+		items: resultsArr,
+		cache: {
+			seconds: 600,
+			loosereload: true,
+		},
+	});
 }

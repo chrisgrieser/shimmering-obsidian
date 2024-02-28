@@ -2,10 +2,8 @@
 ObjC.import("stdlib");
 const app = Application.currentApplication();
 app.includeStandardAdditions = true;
-
 //──────────────────────────────────────────────────────────────────────────────
 
-/** @type {AlfredRun} */
 // biome-ignore lint/correctness/noUnusedVariables: Alfred run
 function run() {
 	const vaultPath = $.getenv("vault_path");
@@ -23,4 +21,8 @@ function run() {
 		app.openLocation(prefix + file);
 		delay(0.5);
 	}
+	// Refresh caches fro Alfred 5
+	Application("com.runningwithcrayons.Alfred").reloadWorkflow(
+		$.getenv("alfred_workflow_bundleid"),
+	);
 }

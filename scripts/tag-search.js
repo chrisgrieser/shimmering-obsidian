@@ -1,9 +1,9 @@
 #!/usr/bin/env osascript -l JavaScript
-
 ObjC.import("stdlib");
 ObjC.import("Foundation");
 const app = Application.currentApplication();
 app.includeStandardAdditions = true;
+//──────────────────────────────────────────────────────────────────────────────
 
 /** @param {string} path */
 function readFile(path) {
@@ -14,11 +14,17 @@ function readFile(path) {
 
 const fileExists = (/** @type {string} */ filePath) => Application("Finder").exists(Path(filePath));
 
-/** @param {string} str */
-function alfredMatcher(str) {
-	const clean = str.replace(/[-_.#]/g, " ");
-	const camelCaseSeperated = str.replace(/([A-Z])/g, " $1");
-	return [clean, camelCaseSeperated, str].join(" ") + " ";
+/** @param {string|string[]} item */
+function camelCaseMatch(item) {
+	if (typeof item === "string") item = [item];
+	return item
+		.map((str) => {
+			const subwords = str.replace(/[-_.]/g, " ");
+			const fullword = str.replace(/[-_.]/g, "");
+			const camelCaseSeparated = str.replace(/([A-Z])/g, " $1");
+			return [subwords, camelCaseSeparated, fullword, str].join(" ") + " ";
+		})
+		.join(" ");
 }
 
 //──────────────────────────────────────────────────────────────────────────────
@@ -34,8 +40,6 @@ function run() {
 	const mergeNestedTags = $.getenv("merge_nested_tags") === "1";
 	const superIconFile = $.getenv("supercharged_icon_file");
 
-	const jsonArray = [];
-
 	let superIconList = [];
 	if (superIconFile && fileExists(superIconFile)) {
 		superIconList = readFile(superIconFile)
@@ -50,7 +54,8 @@ function run() {
 			items: [
 				{
 					title: "⚠️ No vault metadata found.",
-					subtitle: "Please run the Alfred command `osetup` first. This only has to be done once.",
+					subtitle:
+						"Please run the Alfred command `osetup` first. This only has to be done once.",
 					valid: false,
 				},
 			],
@@ -86,42 +91,53 @@ function run() {
 		tagsArray = mergedTags;
 	}
 
-	tagsArray.forEach((/** @type {{ tag: string; merged: boolean; tagCount: number; }} */ tagData) => {
-		const tagName = tagData.tag;
-		const tagQuery =
-			"obsidian://search?vault=" + vaultNameEnc + "&query=" + encodeURIComponent("tag:#" + tagName);
+	tagsArray = tagsArray.map(
+		(/** @type {{ tag: string; merged: boolean; tagCount: number; }} */ tagData) => {
+			const tagName = tagData.tag;
+			const tagQuery =
+				"obsidian://search?vault=" +
+				vaultNameEnc +
+				"&query=" +
+				encodeURIComponent("tag:#" + tagName);
 
-		let mergeInfo = "";
-		let extraMatcher = "";
-		if (tagData.merged) {
-			mergeInfo = "  [merged]";
-			extraMatcher += " merged parent";
-		}
-		if (tagName.includes("/")) extraMatcher += " nested child";
+			let mergeInfo = "";
+			let extraMatcher = "";
+			if (tagData.merged) {
+				mergeInfo = "  [merged]";
+				extraMatcher += " merged parent";
+			}
+			if (tagName.includes("/")) extraMatcher += " nested child";
 
-		let superchargedIcon = "";
-		let superchargedIcon2 = "";
-		if (superIconList) {
-			superIconList.forEach((pair) => {
-				const tag = pair.split(",")[0].toLowerCase().replaceAll("#", "");
-				const icon = pair.split(",")[1];
-				const icon2 = pair.split(",")[2];
-				if (tagName === tag && icon) superchargedIcon = icon + " ";
-				else if (tagName === tag && icon2) superchargedIcon2 = " " + icon2;
-			});
-		}
+			let superchargedIcon = "";
+			let superchargedIcon2 = "";
+			if (superIconList) {
+				superIconList.forEach((pair) => {
+					const tag = pair.split(",")[0].toLowerCase().replaceAll("#", "");
+					const icon = pair.split(",")[1];
+					const icon2 = pair.split(",")[2];
+					if (tagName === tag && icon) superchargedIcon = icon + " ";
+					else if (tagName === tag && icon2) superchargedIcon2 = " " + icon2;
+				});
+			}
 
-		jsonArray.push({
-			title: superchargedIcon + "#" + tagName + superchargedIcon2,
-			subtitle: tagData.tagCount + "x" + mergeInfo,
-			match: alfredMatcher("#" + tagName) + extraMatcher,
-			uid: tagName,
-			mods: { cmd: { arg: tagQuery } },
-			// passed to next script filter
-			arg: "",
-			variables: { selectedTag: tagName },
-		});
+			return {
+				title: superchargedIcon + "#" + tagName + superchargedIcon2,
+				subtitle: tagData.tagCount + "x" + mergeInfo,
+				match: camelCaseMatch("#" + tagName) + extraMatcher,
+				uid: tagName,
+				mods: { cmd: { arg: tagQuery } },
+				// passed to next script filter
+				arg: "",
+				variables: { selectedTag: tagName },
+			};
+		},
+	);
+
+	return JSON.stringify({
+		items: tagsArray,
+		cache: {
+			seconds: 600,
+			loosereload: true,
+		},
 	});
-
-	return JSON.stringify({ items: jsonArray });
 }

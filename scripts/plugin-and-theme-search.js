@@ -35,12 +35,6 @@ function readFile(path) {
 	return ObjC.unwrap(str);
 }
 
-/** @param {string} filepath @param {string} text */
-function writeToFile(filepath, text) {
-	const str = $.NSString.alloc.initWithUTF8String(text);
-	str.writeToFileAtomicallyEncodingError(filepath, true, $.NSUTF8StringEncoding, null);
-}
-
 /** @param {string} appId */
 function SafeApplication(appId) {
 	try {
@@ -53,42 +47,11 @@ const discordReadyLinks = ["Discord", "Discord PTB", "Discord Canary"].some((dis
 	SafeApplication(discordApp)?.frontmost(),
 );
 
-function ensureCacheFolderExists() {
-	const finder = Application("Finder");
-	const cacheDir = $.getenv("alfred_workflow_cache");
-	if (!finder.exists(Path(cacheDir))) {
-		console.log("Cache Dir does not exist and is created.");
-		const cacheDirBasename = $.getenv("alfred_workflow_bundleid");
-		const cacheDirParent = cacheDir.slice(0, -cacheDirBasename.length);
-		finder.make({
-			new: "folder",
-			at: Path(cacheDirParent),
-			withProperties: { name: cacheDirBasename },
-		});
-	}
-}
-
-/** @param {string} path */
-function cacheIsOutdated(path) {
-	const cacheAgeThresholdHours = 24;
-	ensureCacheFolderExists();
-	const cacheObj = Application("System Events").aliases[path];
-	if (!cacheObj.exists()) return true;
-	const cacheAgeHours = (+new Date() - cacheObj.creationDate()) / 1000 / 60 / 60;
-	return cacheAgeHours > cacheAgeThresholdHours;
-}
-
 //──────────────────────────────────────────────────────────────────────────────
 
 /** @type {AlfredRun} */
 // biome-ignore lint/correctness/noUnusedVariables: Alfred run
 function run() {
-	// PERF cache results
-	const cachePath = $.getenv("alfred_workflow_cache") + "/plugin-cache.json";
-	if (!cacheIsOutdated(cachePath)) return readFile(cachePath);
-
-	//───────────────────────────────────────────────────────────────────────────
-
 	const vaultPath = $.getenv("vault_path");
 	const configFolder = $.getenv("config_folder");
 	const vaultNameEnc = encodeURIComponent(vaultPath.replace(/.*\//, ""));
@@ -163,7 +126,8 @@ function run() {
 			const subtitle = downloadsStr + subtitleIcons + description + "  ·  by " + author;
 
 			// needs lowercasing https://github.com/chrisgrieser/shimmering-obsidian/commit/9642fc3d36f9b59cedadbd24991dd4b65078132f#r139057296
-			const obsiStatsUrl = "https://www.moritzjung.dev/obsidian-stats/plugins/" + plugin.id.toLowerCase();
+			const obsiStatsUrl =
+				"https://www.moritzjung.dev/obsidian-stats/plugins/" + plugin.id.toLowerCase();
 
 			// create json for Alfred
 			/** @type {AlfredItem} */
@@ -221,7 +185,8 @@ function run() {
 			else if (installedThemes.includes(name)) installedIcon = " ✅";
 
 			// needs lowercasing https://github.com/chrisgrieser/shimmering-obsidian/commit/9642fc3d36f9b59cedadbd24991dd4b65078132f#r139057296
-			const obsiStatsUrl = "https://www.moritzjung.dev/obsidian-stats/themes/" + id.toLowerCase();
+			const obsiStatsUrl =
+				"https://www.moritzjung.dev/obsidian-stats/themes/" + id.toLowerCase();
 
 			/** @type {AlfredItem} */
 			return {
@@ -250,8 +215,11 @@ function run() {
 		},
 	);
 
-	const alfredResponse = JSON.stringify({ items: [...plugins, ...themes] });
-	writeToFile(cachePath, alfredResponse);
-
-	return alfredResponse;
+	return JSON.stringify({
+		items: [...plugins, ...themes],
+		cache: {
+			seconds: 3600 * 3, // 3 hours, bit quicker to catch new plugin admissions
+			loosereload: true,
+		},
+	});
 }

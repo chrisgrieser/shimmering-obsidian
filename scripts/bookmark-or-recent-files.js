@@ -32,7 +32,10 @@ function run(argv) {
 	const metadataJSON = vaultPath + `/${configFolder}/plugins/metadata-extractor/metadata.json`;
 	const starredJSON = vaultPath + `/${configFolder}/starred.json`;
 	const bookmarkJSON = vaultPath + `/${configFolder}/bookmarks.json`;
-	const superIconFile = $.getenv("supercharged_icon_file").replace(/^~/, app.pathTo("home folder"));
+	const superIconFile = $.getenv("supercharged_icon_file").replace(
+		/^~/,
+		app.pathTo("home folder"),
+	);
 
 	let recentJSON = vaultPath + `/${configFolder}/workspace.json`;
 	if (!fileExists(recentJSON)) recentJSON = recentJSON.slice(0, -5); // Obsidian 1.0 uses workspace.json → https://discord.com/channels/686053708261228577/716028884885307432/1013906018578743478
@@ -46,7 +49,8 @@ function run(argv) {
 			items: [
 				{
 					title: "⚠️ No vault metadata found.",
-					subtitle: "Please run the Alfred command `osetup` first. This only has to be done once.",
+					subtitle:
+						"Please run the Alfred command `osetup` first. This only has to be done once.",
 					valid: false,
 				},
 			],
@@ -95,7 +99,7 @@ function run(argv) {
 	const fileArray = JSON.parse(readFile(metadataJSON))
 		.filter((/** @type {{ relativePath: string; }} */ item) => {
 			if (mode === "recents") return recentFiles.includes(item.relativePath);
-			else if (mode === "bookmarks") return starsAndBookmarks.includes(item.relativePath);
+			if (mode === "bookmarks") return starsAndBookmarks.includes(item.relativePath);
 		})
 		.map(
 			(
@@ -169,5 +173,11 @@ function run(argv) {
 			},
 		);
 
-	return JSON.stringify({ items: fileArray });
+	return JSON.stringify({
+		items: fileArray,
+		cache: {
+			seconds: 300,
+			loosereload: true,
+		},
+	});
 }

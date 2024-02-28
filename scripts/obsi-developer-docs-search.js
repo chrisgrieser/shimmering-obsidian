@@ -4,11 +4,17 @@ const app = Application.currentApplication();
 app.includeStandardAdditions = true;
 //──────────────────────────────────────────────────────────────────────────────
 
-/** @param {string} str */
-function camelCaseMatcher(str) {
-	const clean = str.replace(/[-_./]/g, " ");
-	const camelCaseSeparated = str.replace(/([A-Z])/g, " $1");
-	return [clean, camelCaseSeparated, str].join(" ") + " ";
+/** @param {string|string[]} item */
+function camelCaseMatch(item) {
+	if (typeof item === "string") item = [item];
+	return item
+		.map((str) => {
+			const subwords = str.replace(/[-_.]/g, " ");
+			const fullword = str.replace(/[-_.]/g, "");
+			const camelCaseSeparated = str.replace(/([A-Z])/g, " $1");
+			return [subwords, camelCaseSeparated, fullword, str].join(" ") + " ";
+		})
+		.join(" ");
 }
 
 /** @param {string} url @return {string} */
@@ -47,7 +53,7 @@ function run() {
 			return {
 				title: displayTitle,
 				subtitle: category,
-				match: camelCaseMatcher(subsitePath),
+				match: camelCaseMatch(subsitePath),
 				arg: `${obsiDocsBaseURL}/${subsiteURL}`,
 				uid: subsitePath,
 			};
@@ -72,12 +78,18 @@ function run() {
 			return {
 				title: title,
 				subtitle: category,
-				match: camelCaseMatcher(title) + camelCaseMatcher(category),
+				match: camelCaseMatch([title, category]),
 				icon: { path: "icons/codemirror-logo.png" },
 				arg: url,
 				uid: url,
 			};
 		});
 
-	return JSON.stringify({ items: [...obsiDocs, ...codeMirrorDocs] });
+	return JSON.stringify({
+		items: [...obsiDocs, ...codeMirrorDocs],
+		cache: {
+			seconds: 3600 * 24 * 7,
+			loosereload: true,
+		},
+	});
 }
