@@ -17,11 +17,17 @@ function parentFolder(filePath) {
 	return filePath.split("/").slice(0, -1).join("/");
 }
 
-/** @param {string} str */
-function alfredMatcher(str) {
-	const clean = str.replace(/[-()_.:#/\\;,[\]]/g, " ");
-	const camelCaseSeperated = str.replace(/([A-Z])/g, " $1");
-	return [clean, camelCaseSeperated, str].join(" ") + " ";
+/** @param {string|string[]} item */
+function camelCaseMatch(item) {
+	if (typeof item === "string") item = [item];
+	return item
+		.map((str) => {
+			const subwords = str.replace(/[-_.]/g, " ");
+			const fullword = str.replace(/[-_.]/g, "");
+			const camelCaseSeparated = str.replace(/([A-Z])/g, " $1");
+			return [subwords, camelCaseSeparated, fullword, str].join(" ") + " ";
+		})
+		.join(" ");
 }
 
 const fileExists = (/** @type {string} */ filePath) => Application("Finder").exists(Path(filePath));
@@ -59,7 +65,8 @@ function run() {
 			items: [
 				{
 					title: "🚫 No vault metadata found.",
-					subtitle: "Please run the Alfred command `osetup` first. This only has to be done once.",
+					subtitle:
+						"Please run the Alfred command `osetup` first. This only has to be done once.",
 					valid: false,
 				},
 			],
@@ -231,7 +238,7 @@ function run() {
 		// Notes (file names)
 		resultsArr[insertVia]({
 			title: emoji + superchargedIcon + displayName + superchargedIcon2,
-			match: alfredMatcher(filename) + tagMatcher + " filename name title" + additionalMatcher,
+			match: camelCaseMatch(filename) + tagMatcher + " filename name title" + additionalMatcher,
 			subtitle: "▸ " + parentFolder(relativePath),
 			arg: relativePath,
 			quicklookurl: absolutePath,
@@ -249,7 +256,7 @@ function run() {
 				const displayAlias = applyCensoring ? alias.replace(/./g, censorChar) : alias;
 				resultsArr[insertVia]({
 					title: emoji + superchargedIcon + displayAlias + superchargedIcon2,
-					match: alfredMatcher(alias) + "alias",
+					match: camelCaseMatch(alias) + "alias",
 					subtitle: "↪ " + displayName,
 					arg: relativePath,
 					quicklookurl: absolutePath,
@@ -270,7 +277,7 @@ function run() {
 			const hLevel = heading.level;
 			if (headingIgnore[hLevel]) continue; // skips iteration if heading has been configured as ignore
 			const headingIconpath = `icons/headings/h${hLevel}.png`;
-			const matchStr = [`h${hLevel}`, alfredMatcher(hName), alfredMatcher(filename)].join(" ");
+			const matchStr = camelCaseMatch([hName, filename]) + `h${hLevel}`;
 			const displayHeading = applyCensoring ? hName.replace(/./g, censorChar) : hName;
 
 			resultsArr[insertVia]({
@@ -312,7 +319,7 @@ function run() {
 
 		resultsArr[insertMode]({
 			title: name,
-			match: alfredMatcher(name) + "canvas" + additionalMatcher,
+			match: camelCaseMatch(name) + "canvas" + additionalMatcher,
 			subtitle: "▸ " + parentFolder(relativePath),
 			arg: relativePath,
 			type: "file:skipcheck",
@@ -334,7 +341,7 @@ function run() {
 
 		resultsArr.push({
 			title: name,
-			match: alfredMatcher(name) + " folder ",
+			match: camelCaseMatch(name) + "folder",
 			subtitle: "▸ " + parentFolder(relativePath) + "   [↵: Browse]",
 			arg: relativePath,
 			type: "file:skipcheck",
