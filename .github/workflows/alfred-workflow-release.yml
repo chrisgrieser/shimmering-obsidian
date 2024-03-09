@@ -22,7 +22,7 @@ jobs:
         # by default, no tags and only a single commit is fetched. To use git
         # history in the next step, we need to fetch all history.
         with:
-          fetch-depth: 0 # 0 = all history
+          fetch-depth: 50 # assuming max. 50 commits between releases
           fetch-tags: true
 
       - name: Create Changelog
@@ -35,7 +35,7 @@ jobs:
             root_commit=$(git rev-list --max-parents=0 HEAD)
             ref="$root_commit"
           fi
-          prev_commit_messages=$(git log "$ref"..HEAD --format='- %s' |
+          prev_commit_messages=$(git log "$ref"..HEAD^ --format='- %s' |
             sed -E "s/([a-z]+): /**\1**: /")
           echo "### Changelog" > CHANGELOG.txt
           echo "$prev_commit_messages" >> CHANGELOG.txt
