@@ -6488,14 +6488,7 @@ fi</string>
 
 ---
 
-## 📙 Recent Changes
-- Perf: Increased performance for most searches (for users of Alfred 5.5).
-- Fix: Invalid tag count for tag search `ot`
-- Break: Hotkeys for Workspace-Switching removed, since functionality better done via [Workspace Plus Plugin](https://obsidian.md/plugins?id=workspaces-plus).
-- Fix: Note not being opened when Obsidian isn't running at the time `o` is triggered.
-- Fix: External link search, revealing in Obsidian
-
----
+#### 📙 [Changelog](https://github.com/chrisgrieser/shimmering-obsidian/releases)
 
 #### 📓 [Documentation of all features](https://github.com/chrisgrieser/shimmering-obsidian/blob/main/README.md)
 
