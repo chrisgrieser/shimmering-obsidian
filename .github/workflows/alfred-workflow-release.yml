@@ -1,0 +1,55 @@
+name: Alfred Workflow Release
+
+on:
+  push:
+    tags: ["*"]
+
+env:
+  WORKFLOW_NAME: ${{ github.event.repository.name }}
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+permissions:
+  contents: write
+
+#───────────────────────────────────────────────────────────────────────────────
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        # by default, no tags and only a single commit is fetched. To use git
+        # history in the next step, we need to fetch all history.
+        with:
+          fetch-depth: 0 # 0 = all history
+          fetch-tags: true
+
+      - name: Create Changelog
+        run: |
+          count_tags="$(git tag | wc -l)"
+          if [[ $count_tags -ge 2 ]]; then 
+            previous_tag=$(git tag --sort=-creatordate | head -2 | tail -1)
+            ref="$previous_tag"
+          else
+            root_commit=$(git rev-list --max-parents=0 HEAD)
+            ref="$root_commit"
+          fi
+          prev_commit_messages=$(git log "$ref"..HEAD --format='- %s' |
+            sed -E "s/([a-z]+): /**\1**: /")
+          echo "### Changelog" > CHANGELOG.txt
+          echo "$prev_commit_messages" >> CHANGELOG.txt
+
+      - name: Build .alfredworkflow
+        run: |
+          zip --quiet --recurse-paths "${{ env.WORKFLOW_NAME }}.alfredworkflow" . \
+            --exclude ".git*" "Makefile" ".build-and-release.sh" "README.md" \
+            "assets/*" ".rsync-exclude"
+
+      # DOCS https://github.com/softprops/action-gh-release?tab=readme-ov-file#%EF%B8%8F-uploading-release-assets
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          token: ${{ env.GITHUB_TOKEN }}
+          body_path: CHANGELOG.txt
+          files: ${{ env.WORKFLOW_NAME }}.alfredworkflow
