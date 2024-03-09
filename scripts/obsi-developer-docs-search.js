@@ -4,18 +4,18 @@ const app = Application.currentApplication();
 app.includeStandardAdditions = true;
 //──────────────────────────────────────────────────────────────────────────────
 
-/** @param {string|string[]} item */
-function camelCaseMatch(item) {
-	if (typeof item === "string") item = [item];
-	return item
-		.map((str) => {
-			const subwords = str.replace(/[-_.]/g, " ");
-			const fullword = str.replace(/[-_.]/g, "");
-			const camelCaseSeparated = str.replace(/([A-Z])/g, " $1");
-			return [subwords, camelCaseSeparated, fullword, str].join(" ") + " ";
+/** @param {string[]} args */
+function camelCaseMatch(...args) {
+	return args
+		.map((item) => {
+			const subwords = item.replace(/[-_./]/g, " ");
+			const fullword = item.replace(/[-_./]/g, "");
+			const camelCaseSeparated = item.replace(/([A-Z])/g, " $1");
+			return [subwords, camelCaseSeparated, fullword, item].join(" ") + " ";
 		})
 		.join(" ");
 }
+
 
 /** @param {string} url @return {string} */
 function httpRequest(url) {
@@ -78,7 +78,7 @@ function run() {
 			return {
 				title: title,
 				subtitle: category,
-				match: camelCaseMatch([title, category]),
+				match: camelCaseMatch(title, category),
 				icon: { path: "icons/codemirror-logo.png" },
 				arg: url,
 				uid: url,
