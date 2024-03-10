@@ -24,7 +24,7 @@ Alfred Workflow with dozens of features for controlling your
 	* [Documentation & Help](#documentation--help)
 	* [Vault Switcher](#vault-switcher)
 	* [Features for Obsidian Plugin Developers](#features-for-obsidian-plugin-developers)
-	* [Cheatsheet](#cheatsheet)
+- [Cheatsheet](#cheatsheet)
 - [Installation](#installation)
 - [Credits](#credits)
 - [About the Developer](#about-the-developer)
@@ -76,7 +76,6 @@ Alfred Workflow with dozens of features for controlling your
 ### Plugins & Themes
 - Search Community Plugins and Themes, open in Obsidian or at GitHub
 - Access Plugin Settings
-- Search & Create GitHub Issues
 - ➡️ [Documentation of the Plugin & Theme Search](docs/Plugin%20and%20Theme%20Search.md)
 
 ### Workspace Switcher
@@ -157,8 +156,7 @@ Miscellaneous
 - Also thanks to [@Vinzent03](https://github.com/Vinzent03) for his invaluable
   [Advanced URI plugin](https://github.com/Vinzent03/obsidian-advanced-uri),
   which enables Alfred to control various aspects of Obsidian.
-- <a href="https://www.flaticon.com/authors/freepik">Most icons created by
-  Freepik (Flaticon)</a>
+- Most icons created by [Freepik (Flaticon)](https://www.flaticon.com/authors/freepik).
 
 <!-- vale Google.FirstPerson = NO -->
 ## About the Developer
@@ -167,12 +165,9 @@ digital economy. For my PhD project, I investigate the governance of the app
 economy and how software ecosystems manage the tension between innovation and
 compatibility. If you are interested in this subject, feel free to get in touch.
 
-__Profiles__  
 - [Academic Website](https://chris-grieser.de/)
 - [ResearchGate](https://www.researchgate.net/profile/Christopher-Grieser)
 - [Discord](https://discordapp.com/users/462774483044794368/)
-- [GitHub](https://github.com/chrisgrieser/)
-- [Twitter](https://twitter.com/pseudo_meta)
 - [Mastodon](https://pkm.social/@pseudometa)
 - [LinkedIn](https://www.linkedin.com/in/christopher-grieser-ba693b17a/)
 
