@@ -36,7 +36,7 @@ jobs:
             ref="$root_commit"
           fi
           prev_commit_messages=$(git log "$ref"..HEAD^ --format='- %s' |
-            sed -E "s/([a-z]+): /**\1**: /")
+            sed -E "s/^- ([^ ]+): /- **\1**: /")
           echo "### Changelog" > CHANGELOG.txt
           echo "$prev_commit_messages" >> CHANGELOG.txt
 
