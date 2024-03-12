@@ -66,7 +66,7 @@ function run() {
 	vaults.push({
 		title: "Vault Menu",
 		subtitle: "Create or delete vaults",
-		arg: `obsidian://advanced-uri?vault=${vaultNameEnc}commandid=app%253Aopen-vault`,
+		arg: `obsidian://advanced-uri?vault=${vaultNameEnc}&commandid=app%253Aopen-vault`,
 		icon: { path: "icons/settings.png" },
 		mods: {
 			alt: { valid: false, subtitle: "⛔️" },
