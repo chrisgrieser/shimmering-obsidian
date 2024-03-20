@@ -221,15 +221,6 @@ function run() {
 			}
 		}
 
-		// check link existence of file
-		const hasLinks = Boolean(
-			file.links?.some((/** @type {{ relativePath: string; }} */ link) => link.relativePath) ||
-				file.backlinks,
-		); // no relativePath => unresolved link
-		const linksSubtitle = hasLinks
-			? "⇧: Browse Links in Note"
-			: "⛔ Note without Outgoing Links or Backlinks";
-
 		// censor note?
 		const isPrivateNote = file.frontmatter?.cssclass?.includes("private");
 		const applyCensoring = isPrivateNote && privacyModeOn;
@@ -245,9 +236,6 @@ function run() {
 			type: "file:skipcheck",
 			uid: relativePath,
 			icon: { path: iconpath },
-			mods: {
-				shift: { valid: hasLinks, subtitle: linksSubtitle },
-			},
 		});
 
 		// Aliases
@@ -263,9 +251,6 @@ function run() {
 					type: "file:skipcheck",
 					uid: alias + "_" + relativePath,
 					icon: { path: "icons/alias.png" },
-					mods: {
-						shift: { valid: hasLinks, subtitle: linksSubtitle },
-					},
 				});
 			}
 		}
@@ -291,8 +276,6 @@ function run() {
 				mods: {
 					alt: { arg: relativePath },
 					shift: {
-						valid: hasLinks,
-						subtitle: linksSubtitle,
 						arg: relativePath,
 					},
 				},

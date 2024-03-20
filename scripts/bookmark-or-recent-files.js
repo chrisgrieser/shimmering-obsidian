@@ -139,12 +139,6 @@ function run(argv) {
 					});
 				}
 
-				// check link existence of file
-				let hasLinks = Boolean(file.links?.some((line) => line.relativePath) || file.backlinks); // no relativePath => unresolved link
-				if (!hasLinks) hasLinks = externalLinkRegex.test(readFile(absolutePath)); // readFile only executed when no other links found for performance
-				let linksSubtitle = "⛔️ Note without Outgoing Links or Backlinks";
-				if (hasLinks) linksSubtitle = "⇧: Browse Links in Note";
-
 				// exclude cssclass: private
 				let displayName = filename;
 				const censorChar = $.getenv("censor_char");
@@ -163,21 +157,12 @@ function run(argv) {
 					type: "file:skipcheck",
 					uid: relativePath,
 					icon: { path: iconpath },
-					mods: {
-						shift: {
-							valid: hasLinks,
-							subtitle: linksSubtitle,
-						},
-					},
 				};
 			},
 		);
 
 	return JSON.stringify({
 		items: fileArray,
-		cache: {
-			seconds: 300,
-			loosereload: true,
-		},
+		cache: { seconds: 300, loosereload: true },
 	});
 }

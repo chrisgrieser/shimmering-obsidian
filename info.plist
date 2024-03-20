@@ -535,7 +535,7 @@
 				<key>modifiersubtext</key>
 				<string>⇧: Browse Links of Note</string>
 				<key>vitoclose</key>
-				<false/>
+				<true/>
 			</dict>
 			<dict>
 				<key>destinationuid</key>
@@ -854,9 +854,9 @@
 				<key>modifiers</key>
 				<integer>131072</integer>
 				<key>modifiersubtext</key>
-				<string></string>
+				<string>⇧: Browse Links in Note</string>
 				<key>vitoclose</key>
-				<false/>
+				<true/>
 			</dict>
 		</array>
 		<key>60A87101-8D59-46BF-BCAE-A9195D6A034E</key>
@@ -1379,7 +1379,7 @@
 				<key>modifiersubtext</key>
 				<string>⇧: Browse Links of Note</string>
 				<key>vitoclose</key>
-				<false/>
+				<true/>
 			</dict>
 			<dict>
 				<key>destinationuid</key>
@@ -1588,9 +1588,9 @@
 				<key>modifiers</key>
 				<integer>131072</integer>
 				<key>modifiersubtext</key>
-				<string>⇧: Browse Links of Note</string>
+				<string>⇧: Browse Links in Note</string>
 				<key>vitoclose</key>
-				<false/>
+				<true/>
 			</dict>
 		</array>
 		<key>B5F538F8-D47B-47E8-A7C8-5C9C149A58CC</key>
@@ -5286,6 +5286,27 @@ fi</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>keyword</key>
+				<string>oupdate</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>🔁 Manually Refresh Metadata</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>4F356F57-A6AA-4277-B742-27DC8EE84450</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>lastpathcomponent</key>
 				<false/>
 				<key>onlyshowifquerypopulated</key>
@@ -5326,27 +5347,6 @@ fi</string>
 			<string>EC424B98-D702-4608-B1EA-07AF49C56048</string>
 			<key>version</key>
 			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>keyword</key>
-				<string>oupdate</string>
-				<key>subtext</key>
-				<string></string>
-				<key>text</key>
-				<string>🔁 Manually Refresh Metadata</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>4F356F57-A6AA-4277-B742-27DC8EE84450</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>

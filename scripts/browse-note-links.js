@@ -1,10 +1,7 @@
 #!/usr/bin/env osascript -l JavaScript
-
 ObjC.import("stdlib");
-ObjC.import("Foundation");
 const app = Application.currentApplication();
 app.includeStandardAdditions = true;
-
 //──────────────────────────────────────────────────────────────────────────────
 
 /** @param {string} path */
@@ -101,7 +98,7 @@ function run() {
 	//───────────────────────────────────────────────────────────────────────────
 
 	// create input note JSON
-	const jsonArray = [];
+	const allLinksArr = [];
 	const inputPath = $.getenv("inputPath");
 
 	const metaJSON = JSON.parse(readFile(metadataJSON));
@@ -128,23 +125,23 @@ function run() {
 	bothLinksList = [...new Set(bothLinksList)]; // only unique items
 
 	// get external links
-	const externalLinkList = readFile(vaultPath + "/" + inputPath)
-		.match(externalLinkRegex)
-		.map((mdlink) => {
-			const [title, url] = mdlink.split("](");
-			return {
-				title: title.slice(1),
-				url: url.slice(0, -1),
-			};
-		});
-	console.log("🪓 externalLinkList:", JSON.stringify(externalLinkList));
+	const externalLinks = readFile(vaultPath + "/" + inputPath).match(externalLinkRegex) || [];
+	const externalLinkList = externalLinks.map((mdlink) => {
+		const [title, url] = mdlink.split("](");
+		return {
+			title: title.slice(1),
+			url: url.slice(0, -1),
+		};
+	});
 
 	//───────────────────────────────────────────────────────────────────────────
 	// create JSON for Script Filter
 
 	// file array
 	metaJSON
-		.filter((/** @type {{ relativePath: string; }} */ item) => bothLinksList.includes(item.relativePath))
+		.filter((/** @type {{ relativePath: string; }} */ item) =>
+			bothLinksList.includes(item.relativePath),
+		)
 		.forEach(
 			(
 				/** @type {{ fileName: string; relativePath: string; links: any[]; backlinks: any[]; tags: string[]; frontmatter: { cssclass: string | string[]; }; }} */ file,
@@ -199,7 +196,7 @@ function run() {
 				const applyCensoring = isPrivateNote && privacyModeOn;
 				if (applyCensoring) displayName = filename.replace(/./g, censorChar);
 
-				jsonArray.push({
+				allLinksArr.push({
 					title: linkIcon + emoji + superchargedIcon + displayName + superchargedIcon2,
 					match: additionalMatcher + alfredMatcher(filename),
 					subtitle: "▸ " + parentFolder(relativePath),
@@ -232,7 +229,7 @@ function run() {
 			subtitle: "⛔️ Cannot do that with external link.",
 		};
 
-		jsonArray.push({
+		allLinksArr.push({
 			title: title,
 			match: "external" + alfredMatcher(title) + alfredMatcher(url),
 			subtitle: url,
@@ -252,5 +249,13 @@ function run() {
 		});
 	});
 
-	return JSON.stringify({ items: jsonArray });
+	if (allLinksArr.length === 0) {
+		const basename = inputPath.split("/").slice(-1)[0].replace(/\.md$/, "");
+		allLinksArr.push({
+			title: `No links found in "${basename}"`,
+			valid: false,
+		});
+	}
+
+	return JSON.stringify({ items: allLinksArr });
 }
