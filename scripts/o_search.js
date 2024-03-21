@@ -65,8 +65,7 @@ function run() {
 			items: [
 				{
 					title: "🚫 No vault metadata found.",
-					subtitle:
-						"Please run the Alfred command `osetup` first. This only has to be done once.",
+					subtitle: "Please run the Alfred command `osetup` first. This only has to be done once.",
 					valid: false,
 				},
 			],
