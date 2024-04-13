@@ -667,6 +667,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>5BBF4796-A8F6-48DF-89D8-09E03C630491</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>6CFB6C8B-D62C-4DAB-8830-07EFE57F5F38</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>5E2BFA74-9185-4C41-82B0-274EB3C261BD</key>
 		<array>
 			<dict>
@@ -929,6 +942,19 @@
 				<integer>1572864</integer>
 				<key>modifiersubtext</key>
 				<string>⌘⌥: Copy URL (discord ready)</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>6CFB6C8B-D62C-4DAB-8830-07EFE57F5F38</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>4DF20498-89F0-43F5-929C-1AA8B44880AA</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -5872,21 +5898,6 @@ echo "$backup"</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>openwith</key>
-				<string></string>
-				<key>sourcefile</key>
-				<string>{var:vault_path}/{query}</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openfile</string>
-			<key>uid</key>
-			<string>4DF20498-89F0-43F5-929C-1AA8B44880AA</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argumenttype</key>
 				<integer>2</integer>
 				<key>keyword</key>
@@ -5925,6 +5936,21 @@ echo "$backup"</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>openwith</key>
+				<string></string>
+				<key>sourcefile</key>
+				<string>{var:vault_path}/{query}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openfile</string>
+			<key>uid</key>
+			<string>4DF20498-89F0-43F5-929C-1AA8B44880AA</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argumenttype</key>
 				<integer>2</integer>
 				<key>keyword</key>
@@ -5957,6 +5983,44 @@ echo "$backup"</string>
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
 			<string>E88AC866-9A2B-4763-914C-EF2BB940DDE2</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>othemes</string>
+				<key>subtext</key>
+				<string>in Finder</string>
+				<key>text</key>
+				<string>Open Themes Folder</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>5BBF4796-A8F6-48DF-89D8-09E03C630491</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>.obsidian/themes</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>6CFB6C8B-D62C-4DAB-8830-07EFE57F5F38</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -6040,7 +6104,7 @@ echo "$backup"</string>
 			<key>xpos</key>
 			<real>180</real>
 			<key>ypos</key>
-			<real>6340</real>
+			<real>6330</real>
 		</dict>
 		<key>0645AAB4-66F5-4149-A92B-C58A80B649C7</key>
 		<dict>
@@ -6378,7 +6442,7 @@ echo "$backup"</string>
 			<key>xpos</key>
 			<real>35</real>
 			<key>ypos</key>
-			<real>6315</real>
+			<real>6305</real>
 		</dict>
 		<key>392642B8-A259-495D-A715-AD6FE5DBE992</key>
 		<dict>
@@ -6442,7 +6506,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>xpos</key>
 			<real>35</real>
 			<key>ypos</key>
-			<real>6555</real>
+			<real>6655</real>
 		</dict>
 		<key>4666F95D-B06C-48CD-8FA2-9A795FAF23D7</key>
 		<dict>
@@ -6460,7 +6524,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>xpos</key>
 			<real>205</real>
 			<key>ypos</key>
-			<real>6555</real>
+			<real>6655</real>
 		</dict>
 		<key>48992F43-A163-41CB-9AD0-ED130267D058</key>
 		<dict>
@@ -6516,9 +6580,9 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<real>280</real>
+			<real>315</real>
 			<key>ypos</key>
-			<real>6310</real>
+			<real>6375</real>
 		</dict>
 		<key>4DFA3143-56A4-4661-8DF9-4103FFA7D703</key>
 		<dict>
@@ -6647,6 +6711,15 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>ypos</key>
 			<real>2185</real>
 		</dict>
+		<key>5BBF4796-A8F6-48DF-89D8-09E03C630491</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>9</integer>
+			<key>xpos</key>
+			<real>35</real>
+			<key>ypos</key>
+			<real>6535</real>
+		</dict>
 		<key>5DCF5960-8802-4BA6-A9C1-4D213236B720</key>
 		<dict>
 			<key>colorindex</key>
@@ -6771,6 +6844,15 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<real>30</real>
 			<key>ypos</key>
 			<real>4905</real>
+		</dict>
+		<key>6CFB6C8B-D62C-4DAB-8830-07EFE57F5F38</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>9</integer>
+			<key>xpos</key>
+			<real>180</real>
+			<key>ypos</key>
+			<real>6565</real>
 		</dict>
 		<key>72551A9E-43E8-4462-9CB0-D5C419B4AEA2</key>
 		<dict>
@@ -6977,7 +7059,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>xpos</key>
 			<real>35</real>
 			<key>ypos</key>
-			<real>6435</real>
+			<real>6420</real>
 		</dict>
 		<key>8DD30BCA-F11D-415E-8DFA-F40BD34857F9</key>
 		<dict>
@@ -7536,7 +7618,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>xpos</key>
 			<real>35</real>
 			<key>ypos</key>
-			<real>6180</real>
+			<real>6195</real>
 		</dict>
 		<key>E88AC866-9A2B-4763-914C-EF2BB940DDE2</key>
 		<dict>
@@ -7545,7 +7627,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>xpos</key>
 			<real>180</real>
 			<key>ypos</key>
-			<real>6465</real>
+			<real>6450</real>
 		</dict>
 		<key>E98B2FB0-60FA-4F2F-9159-6B774AD0277E</key>
 		<dict>
@@ -7641,7 +7723,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>xpos</key>
 			<real>180</real>
 			<key>ypos</key>
-			<real>6210</real>
+			<real>6225</real>
 		</dict>
 		<key>F8FA8843-EC3D-45BB-AD77-1F99F2E82DD8</key>
 		<dict>
