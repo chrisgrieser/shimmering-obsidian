@@ -87,19 +87,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>0B6B06C2-6914-4603-B703-5F8DA27FD029</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>39E83342-8818-474A-9AC2-27D0A97843EF</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>0C46CBB1-C490-4F62-8CC4-F59D7B1016D6</key>
 		<array>
 			<dict>
@@ -218,29 +205,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>2A4E4AA6-EBA8-4645-ADEC-62CA21AC7D9C</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>0B6B06C2-6914-4603-B703-5F8DA27FD029</string>
-				<key>modifiers</key>
-				<integer>524288</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>5E1194F1-12BA-456E-8511-C5708AE07906</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>2B55DCB2-3C6A-42EC-A014-095939CB3FAB</key>
 		<array>
 			<dict>
@@ -295,19 +259,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>A5ADC808-2010-447C-9B0A-B4C14C3801EB</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>2D7693A0-3ACD-4A9E-BEFF-44AE2096352B</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>290EF84F-6C99-465F-9330-F13E903467FD</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -613,8 +564,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>4EA9A40E-C1AF-4EB5-B118-A36B1F0CE6F7</key>
-		<array/>
 		<key>4F356F57-A6AA-4277-B742-27DC8EE84450</key>
 		<array>
 			<dict>
@@ -1277,19 +1226,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>8DF2E925-57ED-4FA4-BADE-4E0E1277C220</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>4EA9A40E-C1AF-4EB5-B118-A36B1F0CE6F7</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>90B9D6E4-3DA5-43AE-9517-49A1B96BD0A2</key>
 		<array>
 			<dict>
@@ -1637,19 +1573,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>2FD866C2-DDB1-4C2D-A420-3A580FBC60D2</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>BE35B236-05AF-434F-93F0-FC5A62A4F777</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>152229B2-B1D8-44E8-9EF7-98B39FE56FD4</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -5805,242 +5728,6 @@ echo "$backup"</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<true/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string>'{query}'</string>
-				<key>title</key>
-				<string>✅ Link copied</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>39E83342-8818-474A-9AC2-27D0A97843EF</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>autopaste</key>
-				<false/>
-				<key>clipboardtext</key>
-				<string>{query}</string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>transient</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>0B6B06C2-6914-4603-B703-5F8DA27FD029</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>alfredfiltersresults</key>
-				<true/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>2</integer>
-				<key>argumenttreatemptyqueryasnil</key>
-				<true/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>keyword</key>
-				<string>obeta</string>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
-				<key>runningsubtext</key>
-				<string></string>
-				<key>script</key>
-				<string></string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string>scripts/open-beta-repo.js</string>
-				<key>subtext</key>
-				<string></string>
-				<key>title</key>
-				<string>♋️ Open GitHub Repository of Beta Plugin</string>
-				<key>type</key>
-				<integer>8</integer>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>2A4E4AA6-EBA8-4645-ADEC-62CA21AC7D9C</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>browser</key>
-				<string></string>
-				<key>skipqueryencode</key>
-				<false/>
-				<key>skipvarencode</key>
-				<false/>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string></string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
-			<key>uid</key>
-			<string>5E1194F1-12BA-456E-8511-C5708AE07906</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>keyword</key>
-				<string>obeta</string>
-				<key>subtext</key>
-				<string></string>
-				<key>text</key>
-				<string>⚙️ Manage Beta Plugins &amp; Themes</string>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>2D7693A0-3ACD-4A9E-BEFF-44AE2096352B</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>browser</key>
-				<string></string>
-				<key>skipqueryencode</key>
-				<false/>
-				<key>skipvarencode</key>
-				<false/>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string>obsidian://advanced-uri?vault={var:vault_name_ENC}&amp;&amp;settingid=obsidian42-brat</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
-			<key>uid</key>
-			<string>290EF84F-6C99-465F-9330-F13E903467FD</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>keyword</key>
-				<string>obeta</string>
-				<key>subtext</key>
-				<string></string>
-				<key>text</key>
-				<string>🔁 Update all Beta Plugins &amp; Themes</string>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>BE35B236-05AF-434F-93F0-FC5A62A4F777</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>browser</key>
-				<string></string>
-				<key>skipqueryencode</key>
-				<false/>
-				<key>skipvarencode</key>
-				<false/>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string>obsidian://advanced-uri?vault={var:vault_name_ENC}&amp;commandid=obsidian42-brat%253ABRAT-checkForUpdatesAndUpdate</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
-			<key>uid</key>
-			<string>152229B2-B1D8-44E8-9EF7-98B39FE56FD4</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>browser</key>
-				<string></string>
-				<key>skipqueryencode</key>
-				<false/>
-				<key>skipvarencode</key>
-				<false/>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string>obsidian://advanced-uri?vault={var:vault_name_ENC}&amp;commandid=obsidian42-brat%253ABRAT-AddBetaPlugin</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
-			<key>uid</key>
-			<string>4EA9A40E-C1AF-4EB5-B118-A36B1F0CE6F7</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>keyword</key>
-				<string>obeta</string>
-				<key>subtext</key>
-				<string></string>
-				<key>text</key>
-				<string>❇️ Add Beta Plugin</string>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>8DF2E925-57ED-4FA4-BADE-4E0E1277C220</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>alfredfiltersresults</key>
 				<true/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -6409,15 +6096,6 @@ echo "$backup"</string>
 			<key>ypos</key>
 			<real>2260</real>
 		</dict>
-		<key>0B6B06C2-6914-4603-B703-5F8DA27FD029</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>xpos</key>
-			<real>200</real>
-			<key>ypos</key>
-			<real>5935</real>
-		</dict>
 		<key>0C46CBB1-C490-4F62-8CC4-F59D7B1016D6</key>
 		<dict>
 			<key>colorindex</key>
@@ -6493,15 +6171,6 @@ echo "$backup"</string>
 			<real>1685</real>
 			<key>ypos</key>
 			<real>180</real>
-		</dict>
-		<key>152229B2-B1D8-44E8-9EF7-98B39FE56FD4</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>xpos</key>
-			<real>200</real>
-			<key>ypos</key>
-			<real>6320</real>
 		</dict>
 		<key>164B20C3-4277-490E-9EB2-DCE923784B89</key>
 		<dict>
@@ -6608,26 +6277,6 @@ echo "$backup"</string>
 			<key>ypos</key>
 			<real>460</real>
 		</dict>
-		<key>290EF84F-6C99-465F-9330-F13E903467FD</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>xpos</key>
-			<real>200</real>
-			<key>ypos</key>
-			<real>6200</real>
-		</dict>
-		<key>2A4E4AA6-EBA8-4645-ADEC-62CA21AC7D9C</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>note</key>
-			<string>open beta repo</string>
-			<key>xpos</key>
-			<real>30</real>
-			<key>ypos</key>
-			<real>6065</real>
-		</dict>
 		<key>2B55DCB2-3C6A-42EC-A014-095939CB3FAB</key>
 		<dict>
 			<key>colorindex</key>
@@ -6645,15 +6294,6 @@ echo "$backup"</string>
 			<real>355</real>
 			<key>ypos</key>
 			<real>4015</real>
-		</dict>
-		<key>2D7693A0-3ACD-4A9E-BEFF-44AE2096352B</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>xpos</key>
-			<real>30</real>
-			<key>ypos</key>
-			<real>6200</real>
 		</dict>
 		<key>2FD76964-F91F-4EEB-B136-70238A407628</key>
 		<dict>
@@ -6750,15 +6390,6 @@ echo "$backup"</string>
 			<real>30</real>
 			<key>ypos</key>
 			<real>4790</real>
-		</dict>
-		<key>39E83342-8818-474A-9AC2-27D0A97843EF</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>xpos</key>
-			<real>340</real>
-			<key>ypos</key>
-			<real>5935</real>
 		</dict>
 		<key>3AB54AFB-E09E-4F9E-9436-2B3F830B87B0</key>
 		<dict>
@@ -6900,15 +6531,6 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>ypos</key>
 			<real>790</real>
 		</dict>
-		<key>4EA9A40E-C1AF-4EB5-B118-A36B1F0CE6F7</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>xpos</key>
-			<real>200</real>
-			<key>ypos</key>
-			<real>6435</real>
-		</dict>
 		<key>4F356F57-A6AA-4277-B742-27DC8EE84450</key>
 		<dict>
 			<key>colorindex</key>
@@ -7033,15 +6655,6 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<real>2040</real>
 			<key>ypos</key>
 			<real>2665</real>
-		</dict>
-		<key>5E1194F1-12BA-456E-8511-C5708AE07906</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>xpos</key>
-			<real>200</real>
-			<key>ypos</key>
-			<real>6065</real>
 		</dict>
 		<key>5E2BFA74-9185-4C41-82B0-274EB3C261BD</key>
 		<dict>
@@ -7375,15 +6988,6 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>ypos</key>
 			<real>3100</real>
 		</dict>
-		<key>8DF2E925-57ED-4FA4-BADE-4E0E1277C220</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>xpos</key>
-			<real>30</real>
-			<key>ypos</key>
-			<real>6435</real>
-		</dict>
 		<key>90B9D6E4-3DA5-43AE-9517-49A1B96BD0A2</key>
 		<dict>
 			<key>colorindex</key>
@@ -7648,15 +7252,6 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<real>650</real>
 			<key>ypos</key>
 			<real>4660</real>
-		</dict>
-		<key>BE35B236-05AF-434F-93F0-FC5A62A4F777</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>xpos</key>
-			<real>30</real>
-			<key>ypos</key>
-			<real>6320</real>
 		</dict>
 		<key>BF0363F9-98FD-4C0C-A592-BAD4319D51E2</key>
 		<dict>
