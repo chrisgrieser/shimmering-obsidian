@@ -45,7 +45,7 @@ function run() {
 
 			return {
 				title: capitalize(subsite),
-				subtitle: parent,
+				subtitle: capitalize(parent),
 				match: alfredMatcher(site),
 				arg: `${dvDocsBaseURL}/${site}/`,
 			};
@@ -53,6 +53,9 @@ function run() {
 
 	return JSON.stringify({
 		items: dvDocs,
-		cache: { seconds: 3600 * 24, loosereload: true },
+		cache: {
+			seconds: 3600 * 24,
+			loosereload: true,
+		},
 	});
 }
