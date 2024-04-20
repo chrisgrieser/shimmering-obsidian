@@ -453,8 +453,6 @@ end tell
 **`oupdate`: Update Plugins and Metadata used by this workflow**
 - Update your community plugins (and beta plugins installed via [the BRAT
   Plugin](https://github.com/TfTHacker/obsidian42-brat)).
-- Re-index the data for the [Obsidian Documentation
-  Search](#documentation-searches).
 - Refresh the metadata used for this workflow manually.
 
 ## Plugins, themes, and settings

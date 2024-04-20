@@ -1,0 +1,29 @@
+name: Update Documentation Search Index
+
+on:
+  # once a month (14:14 at the 14th of the month)
+  schedule:
+    - cron: "14 14 14 * *"
+
+  # allow triggering manually
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+#───────────────────────────────────────────────────────────────────────────────
+
+jobs:
+  build:
+    runs-on: macos-latest # required for `osascript`
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Update Documentation Search Index
+        run: |
+          osascript -l JavaScript ./.github/doc-search-cache/re-index-documentation.js > ./.github/doc-search-cache/cache.json
+          [[ -z "$(git status)" ]] && exit 0
+          git add ./.github/doc-search-cache/cache.json
+          git commit -m "Updated documentation index" --author="🤖 Automated GitHub Action<cron@job>"
+          git push

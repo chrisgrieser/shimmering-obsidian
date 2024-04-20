@@ -2,6 +2,7 @@
 ObjC.import("stdlib");
 const app = Application.currentApplication();
 app.includeStandardAdditions = true;
+//──────────────────────────────────────────────────────────────────────────────
 
 /** @param {string} url */
 function onlineJSON(url) {
@@ -19,7 +20,6 @@ function alfredMatcher(str) {
 
 //──────────────────────────────────────────────────────────────────────────────
 
-/** @type {AlfredRun} */
 // biome-ignore lint/correctness/noUnusedVariables: Alfred run
 function run() {
 	const jsonArray = [];
@@ -105,5 +105,8 @@ function run() {
 		});
 	});
 
-	return JSON.stringify({ items: jsonArray });
+	return JSON.stringify({
+		items: jsonArray,
+		cache: { seconds: 60 * 60 * 24 * 7, loosereload: true },
+	});
 }
