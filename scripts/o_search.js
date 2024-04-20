@@ -1,8 +1,8 @@
 #!/usr/bin/env osascript -l JavaScript
 ObjC.import("stdlib");
-ObjC.import("Foundation");
 const app = Application.currentApplication();
 app.includeStandardAdditions = true;
+//──────────────────────────────────────────────────────────────────────────────
 
 /** @param {string} path */
 function readFile(path) {
@@ -17,17 +17,12 @@ function parentFolder(filePath) {
 	return filePath.split("/").slice(0, -1).join("/");
 }
 
-/** @param {string|string[]} item */
-function camelCaseMatch(item) {
-	if (typeof item === "string") item = [item];
-	return item
-		.map((str) => {
-			const subwords = str.replace(/[-_.]/g, " ");
-			const fullword = str.replace(/[-_.]/g, "");
-			const camelCaseSeparated = str.replace(/([A-Z])/g, " $1");
-			return [subwords, camelCaseSeparated, fullword, str].join(" ") + " ";
-		})
-		.join(" ");
+/** @param {string} str */
+function camelCaseMatch(str) {
+	const subwords = str.replace(/[-_./]/g, " ");
+	const fullword = str.replace(/[-_./]/g, "");
+	const camelCaseSeparated = str.replace(/([A-Z])/g, " $1");
+	return [subwords, camelCaseSeparated, fullword, str].join(" ") + " ";
 }
 
 const fileExists = (/** @type {string} */ filePath) => Application("Finder").exists(Path(filePath));
@@ -261,7 +256,7 @@ function run() {
 			const hLevel = heading.level;
 			if (headingIgnore[hLevel]) continue; // skips iteration if heading has been configured as ignore
 			const headingIconpath = `icons/headings/h${hLevel}.png`;
-			const matchStr = camelCaseMatch([hName, filename]) + `h${hLevel}`;
+			const matchStr = camelCaseMatch(hName) + `h${hLevel}`;
 			const displayHeading = applyCensoring ? hName.replace(/./g, censorChar) : hName;
 
 			resultsArr[insertVia]({

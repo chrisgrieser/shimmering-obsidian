@@ -13,17 +13,12 @@ function readFile(path) {
 
 const fileExists = (/** @type {string} */ filePath) => Application("Finder").exists(Path(filePath));
 
-/** @param {string|string[]} item */
-function camelCaseMatch(item) {
-	if (typeof item === "string") item = [item];
-	return item
-		.map((str) => {
-			const subwords = str.replace(/[-_.]/g, " ");
-			const fullword = str.replace(/[-_.]/g, "");
-			const camelCaseSeparated = str.replace(/([A-Z])/g, " $1");
-			return [subwords, camelCaseSeparated, fullword, str].join(" ") + " ";
-		})
-		.join(" ");
+/** @param {string} str */
+function camelCaseMatch(str) {
+	const subwords = str.replace(/[-_./]/g, " ");
+	const fullword = str.replace(/[-_./]/g, "");
+	const camelCaseSeparated = str.replace(/([A-Z])/g, " $1");
+	return [subwords, camelCaseSeparated, fullword, str].join(" ") + " ";
 }
 
 //──────────────────────────────────────────────────────────────────────────────
