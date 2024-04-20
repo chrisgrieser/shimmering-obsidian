@@ -298,8 +298,6 @@ To avoid accidentally triggering the Quick Look feature, it is suggested you
 turn off activating QuickLook via shift and use `⌘ + Y` instead. You can do so
 with in the Alfred Settings under `Features → Previews`:
 
-<img src="https://i.imgur.com/hDut8wK.png" alt="" width=60%>
-
 [QLmarkdown](https://github.com/sbarex/QLMarkdown) and
 [Peek](https://apps.apple.com/app/peek-quick-look-extension/id1554235898) both
 enable previewing of Markdown documents. Peek works with a wide range of other
@@ -533,8 +531,6 @@ end tell
   recreation can take a minute, depending on your internet connection. You
   are notified when it is done.)
 
-<img src="https://i.imgur.com/RkKGrLw.gif" alt="Searching the Obsidian Documentation" width=60%>
-
 **`odv`: Search the [dataview](https://blacksmithgu.github.io/obsidian-dataview/) documentation.**
 - Press `⏎` to open in your default browser.
 - Use `⌥ + ⏎` to copy the link to your clipboard.
@@ -544,8 +540,6 @@ end tell
 **`odd`: `o`bsidian `d`eveloper `d`ocumentation Search**
 <!-- LTeX: enabled=true -->
 Search the official [Obsidian developer docs](https://docs.obsidian.md/Home).
-
-![Demo documentation search](images/plugin-docs-search-demo.gif)
 
 ## Cheatsheet
 - `o`: All notes
