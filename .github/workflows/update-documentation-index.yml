@@ -29,6 +29,6 @@ jobs:
         run: |
           node ./.github/doc-search-cache/re-index-documentation.mjs > ./.github/doc-search-cache/cache.json
           git add ./.github/doc-search-cache/cache.json
-          [[ -z "$(git status --short)" ]] && exit 0
+          [[ -z "$(git status --short)" ]] && exit 0 # no update needed
           git commit -m "chore: Updated documentation index" --author="🤖 Automated GitHub Action<cron@job>"
           git push
