@@ -15,15 +15,20 @@ permissions:
 
 jobs:
   build:
-    runs-on: macos-latest # required for `osascript`
+    runs-on: macos-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "21.x"
+
       - name: Update Documentation Search Index
         run: |
-          osascript -l JavaScript ./.github/doc-search-cache/re-index-documentation.js > ./.github/doc-search-cache/cache.json
+          node ./.github/doc-search-cache/re-index-documentation.mjs > ./.github/doc-search-cache/cache.json
           [[ -z "$(git status)" ]] && exit 0
           git add ./.github/doc-search-cache/cache.json
-          git commit -m "Updated documentation index" --author="🤖 Automated GitHub Action<cron@job>"
+          git commit -m "chore: Updated documentation index" --author="🤖 Automated GitHub Action<cron@job>"
           git push

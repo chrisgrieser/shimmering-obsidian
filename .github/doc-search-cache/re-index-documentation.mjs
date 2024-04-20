@@ -1,12 +1,13 @@
-#!/usr/bin/env osascript -l JavaScript
-ObjC.import("stdlib");
-const app = Application.currentApplication();
-app.includeStandardAdditions = true;
-//──────────────────────────────────────────────────────────────────────────────
+/** @param {string} url */
+async function getOnlineJson (url) {
+	const response = await fetch(url)
+	return await response.json();
+}
 
 /** @param {string} url */
-function onlineJSON(url) {
-	return JSON.parse(app.doShellScript(`curl -sL "${url}"`));
+async function getOnlineRaw (url) {
+	const response = await fetch(url)
+	return await response.text();
 }
 
 /** INFO not the same Alfred Matcher used in the other scripts
@@ -21,15 +22,15 @@ function alfredMatcher(str) {
 //──────────────────────────────────────────────────────────────────────────────
 
 // biome-ignore lint/correctness/noUnusedVariables: Alfred run
-function run() {
+async function run() {
 	const jsonArray = [];
 	const officialDocsURL = "https://help.obsidian.md/";
-	const officialDocsJSON = onlineJSON(
+	const officialDocsJSON = await getOnlineJson(
 		"https://api.github.com/repos/obsidianmd/obsidian-docs/git/trees/master?recursive=1",
 	);
 	const rawGitHubURL = "https://raw.githubusercontent.com/obsidianmd/obsidian-docs/master/";
 	const communityDocsURL = "https://publish.obsidian.md/hub/";
-	const communityDocsJSON = onlineJSON(
+	const communityDocsJSON = await getOnlineJson(
 		"https://api.github.com/repos/obsidian-community/obsidian-hub/git/trees/main?recursive=1",
 	);
 
@@ -44,7 +45,7 @@ function run() {
 	officialDocs.forEach((/** @type {{ path: string; }} */ item) => {
 		const area = item.path.split("/").slice(1, -1).join("/");
 		const url = officialDocsURL + item.path.slice(3, -3).replaceAll(" ", "+");
-		const title = item.path.split("/").pop().slice(0, -3);
+		const title = (item.path.split("/").pop() || "error").slice(0, -3);
 
 		jsonArray.push({
 			title: title,
@@ -56,33 +57,27 @@ function run() {
 	});
 
 	// HEADINGS of Official Docs
-	const documentationHeaders = [];
-	officialDocs.forEach((/** @type {{ path: string; }} */ doc) => {
+	officialDocs.forEach(async (/** @type {{ path: string; }} */ doc) => {
 		const docURL = rawGitHubURL + encodeURI(doc.path);
-		const docHeaders = app
-			.doShellScript("curl -sL '" + docURL + "' | grep -E '^#' | cut -d ' ' -f 2-")
-			.split("\r");
 
-		// add header to search hits
-		if (docHeaders[0] !== "") {
-			docHeaders.forEach((headerName) => {
-				documentationHeaders.push(doc.path + "#" + headerName);
+		const docText = await getOnlineRaw(docURL);
+		docText
+			.split("\n")
+			.filter((line) => line.startsWith("#"))
+			.forEach((headingLine) => {
+				const headerName = headingLine.replace(/^#+ /, "")
+				const area = doc.path.slice(3, -3)
+
+				const url = (doc.path.slice(3) + "#" + headerName).replaceAll(" ", "+")
+				jsonArray.push({
+					title: headerName,
+					subtitle: area,
+					uid: url,
+					match: alfredMatcher(headerName),
+					arg: url,
+				});
 			});
-		}
-	});
 
-	documentationHeaders.forEach((header) => {
-		const headerName = header.split("#")[1];
-		const area = header.split("#").slice(0, -1).join().slice(3, -3);
-		const url = officialDocsURL + header.slice(3).replaceAll(" ", "+");
-
-		jsonArray.push({
-			title: headerName,
-			subtitle: area,
-			uid: url,
-			match: alfredMatcher(header),
-			arg: url,
-		});
 	});
 
 	// COMMUNITY DOCS
@@ -93,7 +88,7 @@ function run() {
 	communityDocs.forEach((/** @type {{ path: string; }} */ item) => {
 		const area = item.path.split("/").slice(1, -1).join("/");
 		const url = communityDocsURL + item.path.replaceAll(" ", "+");
-		const title = item.path.split("/").pop().slice(0, -3);
+		const title = (item.path.split("/").pop() || "error").slice(0, -3);
 
 		jsonArray.push({
 			title: title,
@@ -110,3 +105,6 @@ function run() {
 		cache: { seconds: 60 * 60 * 24 * 7, loosereload: true },
 	});
 }
+
+// @ts-ignore
+process.stdout.write(await run());
