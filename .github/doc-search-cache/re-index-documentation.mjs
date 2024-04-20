@@ -23,14 +23,14 @@ function alfredMatcher(str) {
 
 // biome-ignore lint/correctness/noUnusedVariables: Alfred run
 async function run() {
-	const jsonArray = [];
+	const allDocs = [];
 	const officialDocsURL = "https://help.obsidian.md/";
 	const officialDocsJSON = await getOnlineJson(
 		"https://api.github.com/repos/obsidianmd/obsidian-docs/git/trees/master?recursive=1",
 	);
 	const rawGitHubURL = "https://raw.githubusercontent.com/obsidianmd/obsidian-docs/master/";
-	const communityDocsURL = "https://publish.obsidian.md/hub/";
-	const communityDocsJSON = await getOnlineJson(
+	const hubPagesURL = "https://publish.obsidian.md/hub/";
+	const hubPagesJSON = await getOnlineJson(
 		"https://api.github.com/repos/obsidian-community/obsidian-hub/git/trees/main?recursive=1",
 	);
 
@@ -42,22 +42,20 @@ async function run() {
 			item.path.slice(0, 9) !== "en/.trash",
 	);
 
-	officialDocs.forEach((/** @type {{ path: string; }} */ item) => {
-		const area = item.path.split("/").slice(1, -1).join("/");
-		const url = officialDocsURL + item.path.slice(3, -3).replaceAll(" ", "+");
-		const title = (item.path.split("/").pop() || "error").slice(0, -3);
+	for (const doc of officialDocs) {
+		const area = doc.path.split("/").slice(1, -1).join("/");
+		const url = officialDocsURL + doc.path.slice(3, -3).replaceAll(" ", "+");
+		const title = (doc.path.split("/").pop() || "error").slice(0, -3);
 
-		jsonArray.push({
+		allDocs.push({
 			title: title,
 			match: alfredMatcher(title),
 			subtitle: area,
 			uid: url,
 			arg: url,
 		});
-	});
 
-	// HEADINGS of Official Docs
-	officialDocs.forEach(async (/** @type {{ path: string; }} */ doc) => {
+		// HEADINGS of Official Docs
 		const docURL = rawGitHubURL + encodeURI(doc.path);
 
 		const docText = await getOnlineRaw(docURL);
@@ -69,7 +67,7 @@ async function run() {
 				const area = doc.path.slice(3, -3)
 
 				const url = (doc.path.slice(3) + "#" + headerName).replaceAll(" ", "+")
-				jsonArray.push({
+				allDocs.push({
 					title: headerName,
 					subtitle: area,
 					uid: url,
@@ -77,31 +75,28 @@ async function run() {
 					arg: url,
 				});
 			});
-
-	});
+	};
 
 	// COMMUNITY DOCS
-	const communityDocs = communityDocsJSON.tree
-		.filter((/** @type {{ path: string; }} */ item) => item.path.slice(-3) === ".md")
-		.filter((/** @type {{ path: string; }} */ item) => !item.path.startsWith(".github/"));
+	hubPagesJSON.tree
+		.filter((/** @type {{ path: string; }} */ item) => item.path.slice(-3) === ".md" && !item.path.startsWith(".github/"))
+		.forEach((/** @type {{ path: string; }} */ item) => {
+			const area = item.path.split("/").slice(1, -1).join("/");
+			const url = hubPagesURL + item.path.replaceAll(" ", "+");
+			const title = (item.path.split("/").pop() || "error").slice(0, -3);
 
-	communityDocs.forEach((/** @type {{ path: string; }} */ item) => {
-		const area = item.path.split("/").slice(1, -1).join("/");
-		const url = communityDocsURL + item.path.replaceAll(" ", "+");
-		const title = (item.path.split("/").pop() || "error").slice(0, -3);
-
-		jsonArray.push({
-			title: title,
-			match: alfredMatcher(title),
-			icon: { path: "icons/community-vault.png" },
-			subtitle: area,
-			uid: url,
-			arg: url,
+			allDocs.push({
+				title: title,
+				match: alfredMatcher(title),
+				icon: { path: "icons/community-vault.png" },
+				subtitle: area,
+				uid: url,
+				arg: url,
+			});
 		});
-	});
 
 	return JSON.stringify({
-		items: jsonArray,
+		items: allDocs,
 		cache: { seconds: 60 * 60 * 24 * 7, loosereload: true },
 	});
 }

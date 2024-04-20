@@ -5111,7 +5111,7 @@ curl -sL "https://raw.githubusercontent.com/chrisgrieser/shimmering-obsidian/mai
 				<key>title</key>
 				<string>Search Obsidian Documentation...</string>
 				<key>type</key>
-				<integer>0</integer>
+				<integer>11</integer>
 				<key>withspace</key>
 				<true/>
 			</dict>
