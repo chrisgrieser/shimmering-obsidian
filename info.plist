@@ -5184,6 +5184,27 @@ echo "$backup"</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>keyword</key>
+				<string>oupdate</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>🔁 Manually Refresh Metadata</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>4F356F57-A6AA-4277-B742-27DC8EE84450</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>lastpathcomponent</key>
 				<false/>
 				<key>onlyshowifquerypopulated</key>
@@ -5224,27 +5245,6 @@ echo "$backup"</string>
 			<string>EC424B98-D702-4608-B1EA-07AF49C56048</string>
 			<key>version</key>
 			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>keyword</key>
-				<string>oupdate</string>
-				<key>subtext</key>
-				<string></string>
-				<key>text</key>
-				<string>🔁 Manually Refresh Metadata</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>4F356F57-A6AA-4277-B742-27DC8EE84450</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -6067,25 +6067,16 @@ echo "$backup"</string>
 2. Set your vault path in the configuration to the left.
 3. Run the Alfred Command `osetup`. Obsidian will then restart.
 
----
-
 ## ⚙️ Workflow Configuration
 - **Some features require additional configuration to the left.** You can get further information on those features at the respective sections of the [documentation](https://github.com/chrisgrieser/shimmering-obsidian/blob/main/README.md).
 - To configure the hotkeys, double-click the [sky-blue fields](https://i.imgur.com/wlpht7f.png) at the top left of the workflow window. 
 
----
-
-#### 📙 [Changelog](https://github.com/chrisgrieser/shimmering-obsidian/releases)
-
-#### 📓 [Documentation of all features](https://github.com/chrisgrieser/shimmering-obsidian/blob/main/README.md)
-
-#### 🐛 [Bug reports](https://github.com/chrisgrieser/shimmering-obsidian/issues)
-
-#### ☕️ [Buy me a Coffee](https://ko-fi.com/pseudometa)
-
-#### ⭐️ [Star on GitHub](https://github.com/chrisgrieser/shimmering-obsidian)
-
----
+## Links
+- 📙 [Changelog](https://github.com/chrisgrieser/shimmering-obsidian/releases)
+- 📓 [Documentation of all features](https://github.com/chrisgrieser/shimmering-obsidian/blob/main/README.md)
+- 🐛 [Bug reports](https://github.com/chrisgrieser/shimmering-obsidian/issues)
+- ☕️ [Buy me a Coffee](https://ko-fi.com/pseudometa)
+- ⭐️ [Star on GitHub](https://github.com/chrisgrieser/shimmering-obsidian)
 
 ## Cheatsheet of some commands
 - `o`: All notes
@@ -6105,7 +6096,7 @@ echo "$backup"</string>
 
 ---
 
-### Created by Chris Grieser (aka pseudometa)
+**This Alfred plugin has been created by Chris Grieser (aka pseudometa).**
 - [Academic Website](https://chris-grieser.de/)
 - [ResearchGate](https://www.researchgate.net/profile/Christopher-Grieser)
 - [Mastodon](https://pkm.social/@pseudometa)
