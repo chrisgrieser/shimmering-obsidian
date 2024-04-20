@@ -6087,12 +6087,27 @@ echo "$backup"</string>
 
 ---
 
+## Cheatsheet of some commands
+- `o`: All notes
+- `oe`: All external links
+- `ot`: Tags
+- `ob`: Bookmarked files/searches
+- `or`: Recent files
+- `oa`: Attachments
+- `oo`: Append/open to scratchpad
+- `on`: New note
+- `ow`: Workspace switcher
+- `ov`: Vault switcher
+- `oh`: Documentation search
+- `op`: Search plugins/themes
+- `o,:` Search settings and installed plugins
+- `ocss`: Open CSS snippets
+
+---
+
 ### Created by Chris Grieser (aka pseudometa)
 - [Academic Website](https://chris-grieser.de/)
 - [ResearchGate](https://www.researchgate.net/profile/Christopher-Grieser)
-- [Discord](https://discordapp.com/users/462774483044794368/)
-- [GitHub](https://github.com/chrisgrieser/)
-- [Twitter](https://twitter.com/pseudo_meta)
 - [Mastodon](https://pkm.social/@pseudometa)
 - [LinkedIn](https://www.linkedin.com/in/christopher-grieser-ba693b17a/)</string>
 	<key>uidata</key>
