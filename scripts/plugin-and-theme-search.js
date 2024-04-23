@@ -63,8 +63,11 @@ function run() {
 		"https://raw.githubusercontent.com/obsidianmd/obsidian-releases/master/community-plugin-stats.json",
 	);
 	const installedPlugins = app
-		.doShellScript(`ls -1 "${vaultPath}/${configFolder}/plugins/"`)
-		.split("\r");
+		// checking for `main.js` instead of folders, to ensure that empty
+		// leftover folders are not picked up as installed plugins
+		.doShellScript(`find "${vaultPath}/${configFolder}/plugins" -name "main.js"`)
+		.split("\r")
+		.map((f) => f.replace(/.*\/(.*)\/main\.js/, "$1")); // path to plugin-id (= folder name)
 
 	const themeJSON = onlineJSON(
 		"https://raw.githubusercontent.com/obsidianmd/obsidian-releases/master/community-css-themes.json",
@@ -185,8 +188,7 @@ function run() {
 			else if (installedThemes.includes(name)) installedIcon = " ✅";
 
 			// needs lowercasing https://github.com/chrisgrieser/shimmering-obsidian/commit/9642fc3d36f9b59cedadbd24991dd4b65078132f#r139057296
-			const obsiStatsUrl =
-				"https://www.moritzjung.dev/obsidian-stats/themes/" + id.toLowerCase();
+			const obsiStatsUrl = "https://www.moritzjung.dev/obsidian-stats/themes/" + id.toLowerCase();
 
 			/** @type {AlfredItem} */
 			return {
