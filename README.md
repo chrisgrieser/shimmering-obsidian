@@ -351,7 +351,7 @@ works for Markdown and requires some minor setup.
   OCR-screenshots.
 
 **Requirement**  
-For the OCR-Screenshot Feature, you need to install [Tesseract](https://tesseract-ocr.github.io/tessdoc/Installation.html). If you use Homebrew, you can do so with the following two commands:
+For the OCR-Screenshot Feature, you need to install [Tesseract](https://tesseract-ocr.github.io/tessdoc/Installation.html). If you use Homebrew, you can do so with the following command:
 
 ```bash
 brew install tesseract tesseract-lang
