@@ -111,7 +111,7 @@ function run() {
 
 	//──────────────────────────────────────────────────────────────────────────────
 	// DETERMINE PATH TO SEARCH
-	let currentFolder;
+	let currentFolder = "";
 	let pathToSearch;
 	// either searches the vault, or a subfolder of the vault
 	try {
@@ -358,8 +358,7 @@ function run() {
 		});
 	}
 
-	return JSON.stringify({
-		items: resultsArr,
-		cache: { seconds: 600, loosereload: true },
-	});
+	// INFO not using Alfred's caching mechanism, as it breaks browsing folders
+	// see https://github.com/chrisgrieser/shimmering-obsidian/issues/176
+	return JSON.stringify({ items: resultsArr });
 }
