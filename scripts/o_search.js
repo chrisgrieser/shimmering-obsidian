@@ -75,17 +75,23 @@ function run() {
 	//──────────────────────────────────────────────────────────────────────────────
 	// BOOKMARKS & STARS
 
-	let stars = [];
-	const bookmarks = [];
+	/** @typedef {Object} Bookmark
+	 * @property {string} type
+	 * @property {string} path
+	 * @property {Bookmark[]} items
+	 */
+
+	/** @type {string[]} */ let stars = [];
+	/** @type {string[]} */ const bookmarks = [];
 	if (fileExists(starredJSON)) {
 		stars = JSON.parse(readFile(starredJSON))
 			.items.filter((/** @type {{ type: string; }} */ item) => item.type === "file")
-			.map((/** @type {{ path: any; }} */ item) => item.path);
+			.map((/** @type {{ path: string; }} */ item) => item.path);
 	}
 
 	/**
-	 * @param {object[]} input
-	 * @param {object[]} collector
+	 * @param {Bookmark[]} input
+	 * @param {string[]} collector
 	 */
 	function bmFlatten(input, collector) {
 		for (const item of input) {
@@ -102,11 +108,12 @@ function run() {
 
 	//──────────────────────────────────────────────────────────────────────────────
 	// ICONS
+	/** @type {string[]} */
 	let superIconList = [];
 	if (superIconFile && fileExists(superIconFile)) {
 		superIconList = readFile(superIconFile)
 			.split("\n")
-			.filter((line) => line.length !== 0);
+			.filter((line) => line.length > 0);
 	}
 
 	//──────────────────────────────────────────────────────────────────────────────
@@ -144,17 +151,17 @@ function run() {
 	}
 
 	/**
-	 * @param {object[]} array
+	 * @param {string[]} pathList
 	 * @param {boolean} isFolder
 	 */
-	function applyExcludeFilter(array, isFolder) {
-		if (!excludeFilter || excludeFilter.length === 0 || array.length === 0) return array;
-		return array.filter((item) => {
+	function applyExcludeFilter(pathList, isFolder) {
+		if (!excludeFilter || excludeFilter.length === 0 || pathList.length === 0) return pathList;
+		return pathList.filter((path) => {
 			let include = true;
-			if (isFolder) item += "/";
+			if (isFolder) path += "/";
 			for (const filter of excludeFilter) {
 				const isRegexFilter = filter.startsWith("/");
-				const relPath = isFolder ? item.slice(vaultPath.length + 1) : item.relativePath;
+				const relPath = isFolder ? path.slice(vaultPath.length + 1) : path;
 				if (isRegexFilter && relPath.includes(filter)) include = false;
 				if (!isRegexFilter && relPath.startsWith(filter)) include = false;
 			}
@@ -176,6 +183,7 @@ function run() {
 
 	//──────────────────────────────────────────────────────────────────────────────
 	// CONSTRUCTION OF JSON FOR ALFRED
+	/** @type {AlfredItem[]} */
 	const resultsArr = [];
 
 	// FILES
