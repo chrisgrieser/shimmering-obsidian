@@ -66,7 +66,7 @@ async function run() {
 				const headerName = headingLine.replace(/^#+ /, "")
 				const area = doc.path.slice(3, -3)
 
-				const url = (doc.path.slice(3) + "#" + headerName).replaceAll(" ", "+")
+				const url = officialDocsURL + (doc.path.slice(3) + "#" + headerName).replaceAll(" ", "+")
 				allDocs.push({
 					title: headerName,
 					subtitle: area,
@@ -77,7 +77,7 @@ async function run() {
 			});
 	};
 
-	// COMMUNITY DOCS
+	// OBSIDAN HUB
 	hubPagesJSON.tree
 		.filter((/** @type {{ path: string; }} */ item) => item.path.slice(-3) === ".md" && !item.path.startsWith(".github/"))
 		.forEach((/** @type {{ path: string; }} */ item) => {
@@ -101,5 +101,5 @@ async function run() {
 	});
 }
 
-// @ts-ignore
+// @ts-expect-error // not installing type definitions just for this
 process.stdout.write(await run());
