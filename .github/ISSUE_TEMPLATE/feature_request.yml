@@ -10,11 +10,20 @@ body:
       options:
         - label: The feature would be useful to more users than just me.
           required: true
-        - label: I have checked the [feature overview](https://github.com/chrisgrieser/shimmering-obsidian#feature-overview) and the feature doesn't already exist.
+        - label:
+            I have checked the [feature
+            overview](https://github.com/chrisgrieser/shimmering-obsidian#feature-overview) and the
+            feature doesn't already exist.
           required: true
-        - label: 'Feature Requests regarding daily notes will not be implemented, since there are [other Alfred workflows that do focus on daily notes already](https://github.com/hauselin/obsidian-alfred).'
+        - label:
+            "Feature Requests regarding daily notes will not be implemented, since there are [other
+            Alfred workflows that do focus on daily notes
+            already](https://github.com/hauselin/obsidian-alfred)."
           required: true
-        - label: "If you are looking for a way to trigger a specific Obsidian command from outside Obsidian, [see this comment explaining how you can easily create such a workflow yourself.](https://github.com/chrisgrieser/shimmering-obsidian/issues/172#issuecomment-2066890678)"
+        - label:
+            "If you are looking for a way to trigger a specific Obsidian command from outside Obsidian,
+            [see this comment explaining how you can easily create such a workflow
+            yourself.](https://github.com/chrisgrieser/shimmering-obsidian/issues/172#issuecomment-2066890678)"
           required: true
   - type: textarea
     id: feature-requested
@@ -27,7 +36,9 @@ body:
     id: alternatives-considered
     attributes:
       label: Alternatives considered
-      description: Especially when there is already an Obsidian plugin doing that, please explain why it makes sense to have such a feature available via Alfred.
+      description:
+        Especially when there is already an Obsidian plugin doing that, please explain why it makes sense
+        to have such a feature available via Alfred.
     validations:
       required: true
   - type: textarea

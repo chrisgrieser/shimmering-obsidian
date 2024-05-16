@@ -74,11 +74,11 @@ body:
   - type: checkboxes
     id: compatibility-mode
     attributes:
-      label:
-        Are you using Alfred in Compatibility Mode? (Alfred Appearance settings > Options > Focusing)
+      label: Are you using Alfred in Compatibility Mode?
+      description: Alfred Appearance settings > Options > Focusing
       options:
-        - label: yes
-          required: true
+        - label: "I am using Compatibility Mode."
+          required: false
   - type: textarea
     id: version-info
     attributes:
