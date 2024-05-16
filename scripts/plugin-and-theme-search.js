@@ -14,7 +14,7 @@ function alfredMatcher(str) {
 
 /** @param {string} url */
 function onlineJSON(url) {
-	return JSON.parse(app.doShellScript('curl -s "' + url + '"'));
+	return JSON.parse(app.doShellScript(`curl -sL "${url}"`));
 }
 
 /** @param {number} num */
@@ -89,13 +89,10 @@ function run() {
 		(
 			/** @type {{ id: string; name: string; description: string; author: string; repo: string; }} */ plugin,
 		) => {
-			const id = plugin.id;
-			const name = plugin.name;
-			const description = plugin.description
+			let { id, name, description, author, repo } = plugin;
+			description = plugin.description
 				.replaceAll('\\"', "'") // to deal with escaped '"' in descriptions
 				.replace(/\. *$/, ""); // trailing dot in description looks weird with the styling done here later in the item subtitle
-			const author = plugin.author;
-			const repo = plugin.repo;
 
 			const githubURL = "https://github.com/" + repo;
 			const openURI = `obsidian://show-plugin?vault=${vaultNameEnc}&id=${id}`;
@@ -164,14 +161,12 @@ function run() {
 		(
 			/** @type {{ name: string; author: string; repo: string; branch: string; screenshot: string; modes: string | string[]; }} */ theme,
 		) => {
-			const name = theme.name;
-			const author = theme.author;
-			const repo = theme.repo;
+			let { name, author, repo, branch, screenshot } = theme;
 			const id = repo.split("/")[1];
-			const branch = theme.branch ? theme.branch : "master";
+			branch = branch || "master";
 
 			const rawGitHub = `https://raw.githubusercontent.com/${repo}/${branch}/`;
-			const screenshotURL = rawGitHub + theme.screenshot;
+			const screenshotURL = rawGitHub + screenshot;
 			const githubURL = "https://github.com/" + repo;
 			const nameEncoded = encodeURIComponent(name);
 			const openURI = `obsidian://show-theme?vault=${vaultNameEnc}&name=${nameEncoded}`;
