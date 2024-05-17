@@ -151,14 +151,16 @@ function run() {
 	}
 
 	/**
-	 * @param {string[]} pathList
+	 * @param {(string|{relativePath: string})[]} items if folder, object list otherwise
 	 * @param {boolean} isFolder
+	 * @return {(string|{relativePath: string})[]}
 	 */
-	function applyExcludeFilter(pathList, isFolder) {
-		if (!excludeFilter || excludeFilter.length === 0 || pathList.length === 0) return pathList;
-		return pathList.filter((path) => {
+	function applyExcludeFilter(items, isFolder) {
+		if (!excludeFilter || excludeFilter.length === 0 || items.length === 0) return items;
+		return items.filter((item) => {
 			let include = true;
-			if (isFolder) path += "/";
+			// @ts-expect-error
+			const path = isFolder ? item + "/" : item.relativePath;
 			for (const filter of excludeFilter) {
 				const isRegexFilter = filter.startsWith("/");
 				const relPath = isFolder ? path.slice(vaultPath.length + 1) : path;
@@ -169,6 +171,7 @@ function run() {
 		});
 	}
 
+	// @ts-expect-error
 	folderArray = applyExcludeFilter(folderArray, true);
 	canvasArray = applyExcludeFilter(canvasArray, false);
 	fileArray = applyExcludeFilter(fileArray, false);
