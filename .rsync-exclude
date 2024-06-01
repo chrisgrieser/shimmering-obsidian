@@ -7,7 +7,7 @@ assets/
 prefs.plist
 README.md
 LICENSE
-Makefile
+Justfile
 .build-and-release.sh
 .editorconfig
 .markdownlint.yaml
