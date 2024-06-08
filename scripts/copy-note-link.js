@@ -14,7 +14,7 @@ function run(argv) {
 
 	// import variables
 	let [relativePath, heading] = argv[0].split("#");
-	relativePath = encodeURIComponent(relativePath);
+	relativeEncodedPath = encodeURIComponent(relativePath);
 	heading = encodeURIComponent(heading);
 	const linkType = $.getenv("link_type_to_copy");
 
@@ -23,16 +23,16 @@ function run(argv) {
 	let filenameNoExt = relativePath.split("/").pop().replace(/\.\w+$/, "");
 	let toCopy;
 
-	if (linkType === "Markdown Link" && heading) {
-		const urlScheme = `obsidian://advanced-uri?vault=${vaultNameEnc}&filepath=${relativePath}&heading=${heading}`;
+	if (linkType === "Markdown Link" && heading && heading != 'undefined' ) {
+		const urlScheme = `obsidian://advanced-uri?vault=${vaultNameEnc}&filepath=${relativeEncodedPath}&heading=${heading}`;
 		filenameNoExt += "|" + heading;
 		toCopy = `[${filenameNoExt}](${urlScheme})`;
-	} else if (linkType === "Markdown Link" && !heading) {
-		const urlScheme = `obsidian://open?vault=${vaultNameEnc}&file=${relativePath}`;
+	} else if (linkType === "Markdown Link") {
+		const urlScheme = `obsidian://open?vault=${vaultNameEnc}&file=${relativeEncodedPath}`;
 		toCopy = `[${filenameNoExt}](${urlScheme})`;
-	} else if (linkType === "Wikilink" && heading) {
+	} else if (linkType === "Wikilink" && heading && heading != 'undefined' ) {
 		toCopy = `[[${filenameNoExt}#${heading}]]`;
-	} else if (linkType === "Wikilink" && !heading) {
+	} else if (linkType === "Wikilink") {
 		toCopy = `[[${filenameNoExt}]]`;
 	}
 
