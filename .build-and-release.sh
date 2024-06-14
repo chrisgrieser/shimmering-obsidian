@@ -27,10 +27,8 @@ plutil -replace version -string "$nextVersion" info.plist
 # update version number in LOCAL `info.plist`
 prefs_location=$(grep "current" "$HOME/Library/Application Support/Alfred/prefs.json" | cut -d'"' -f4 | sed -e 's|\\/|/|g' -e "s|^~|$HOME|")
 workflow_name="$(basename "$PWD")"
-localInfoPlist="$HOME/.config/Alfred.alfredpreferences/workflows/$workflow_name/info.plist"
-if [[ -f "$localInfoPlist" ]]; then
-	plutil -replace version -string "$nextVersion" "$localInfoPlist"
-fi
+localInfoPlist="$prefs_location/workflows/$workflow_name/info.plist"
+[[ -f "$localInfoPlist" ]] && plutil -replace version -string "$nextVersion" "$localInfoPlist"
 
 # convenience: copy download link for current version
 github_username="chrisgrieser"
@@ -38,10 +36,12 @@ echo -n "https://github.com/$github_username/$workflow_name/releases/download/$n
 	pbcopy
 
 #───────────────────────────────────────────────────────────────────────────────
+# commit and push
+# (pushing a tag triggers the github release action)
 
 git add --all &&
 	git commit -m "release: $nextVersion" &&
 	git pull &&
 	git push &&
 	git tag "$nextVersion" &&
-	git push origin --tags # trigger the GitHub release action
+	git push origin --tags
