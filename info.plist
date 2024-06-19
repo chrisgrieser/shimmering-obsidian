@@ -1251,19 +1251,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>9888408F-4081-4003-8D82-85FF20EB8138</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>0E7DC543-BCFD-4F7B-864B-C4BBF40DD8BB</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>994FC5F6-BF71-4B6D-8E8B-794A453AC62D</key>
 		<array>
 			<dict>
@@ -1806,17 +1793,17 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>0E7DC543-BCFD-4F7B-864B-C4BBF40DD8BB</string>
+				<string>C2BF1FF2-F76A-4580-8D08-51DA0694D3F2</string>
 				<key>modifiers</key>
-				<integer>1048576</integer>
+				<integer>131072</integer>
 				<key>modifiersubtext</key>
-				<string>⌘: Open Root in Terminal</string>
+				<string>⇧: Control this vault</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>9888408F-4081-4003-8D82-85FF20EB8138</string>
+				<string>0E7DC543-BCFD-4F7B-864B-C4BBF40DD8BB</string>
 				<key>modifiers</key>
 				<integer>262144</integer>
 				<key>modifiersubtext</key>
@@ -5125,6 +5112,27 @@ curl -sL "https://raw.githubusercontent.com/chrisgrieser/shimmering-obsidian/mai
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>keyword</key>
+				<string>oupdate</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>🔁 Manually Refresh Metadata</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>4F356F57-A6AA-4277-B742-27DC8EE84450</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>lastpathcomponent</key>
 				<false/>
 				<key>onlyshowifquerypopulated</key>
@@ -5178,27 +5186,6 @@ curl -sL "https://raw.githubusercontent.com/chrisgrieser/shimmering-obsidian/mai
 			<string>alfred.workflow.output.playsound</string>
 			<key>uid</key>
 			<string>2FD866C2-DDB1-4C2D-A420-3A580FBC60D2</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>keyword</key>
-				<string>oupdate</string>
-				<key>subtext</key>
-				<string></string>
-				<key>text</key>
-				<string>🔁 Manually Refresh Metadata</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>4F356F57-A6AA-4277-B742-27DC8EE84450</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -5667,6 +5654,29 @@ curl -sL "https://raw.githubusercontent.com/chrisgrieser/shimmering-obsidian/mai
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>./scripts/change-vault-setting.js</string>
+				<key>type</key>
+				<integer>8</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>C2BF1FF2-F76A-4580-8D08-51DA0694D3F2</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>path</key>
 				<string></string>
 			</dict>
@@ -5674,14 +5684,6 @@ curl -sL "https://raw.githubusercontent.com/chrisgrieser/shimmering-obsidian/mai
 			<string>alfred.workflow.action.browseinterminal</string>
 			<key>uid</key>
 			<string>0E7DC543-BCFD-4F7B-864B-C4BBF40DD8BB</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.junction</string>
-			<key>uid</key>
-			<string>9888408F-4081-4003-8D82-85FF20EB8138</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -6028,9 +6030,9 @@ curl -sL "https://raw.githubusercontent.com/chrisgrieser/shimmering-obsidian/mai
 			<key>note</key>
 			<string>opens in default Terminal</string>
 			<key>xpos</key>
-			<real>250</real>
+			<real>270</real>
 			<key>ypos</key>
-			<real>6010</real>
+			<real>6110</real>
 		</dict>
 		<key>0F72D532-AAE1-48A3-85FC-A819F196DC3E</key>
 		<dict>
@@ -6483,7 +6485,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<real>250</real>
+			<real>270</real>
 			<key>ypos</key>
 			<real>5885</real>
 		</dict>
@@ -6911,15 +6913,6 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>ypos</key>
 			<real>710</real>
 		</dict>
-		<key>9888408F-4081-4003-8D82-85FF20EB8138</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>xpos</key>
-			<real>170</real>
-			<key>ypos</key>
-			<real>6040</real>
-		</dict>
 		<key>994FC5F6-BF71-4B6D-8E8B-794A453AC62D</key>
 		<dict>
 			<key>colorindex</key>
@@ -7145,7 +7138,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<real>250</real>
+			<real>270</real>
 			<key>ypos</key>
 			<real>5775</real>
 		</dict>
@@ -7181,6 +7174,15 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<real>30</real>
 			<key>ypos</key>
 			<real>1150</real>
+		</dict>
+		<key>C2BF1FF2-F76A-4580-8D08-51DA0694D3F2</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>9</integer>
+			<key>xpos</key>
+			<real>270</real>
+			<key>ypos</key>
+			<real>5995</real>
 		</dict>
 		<key>C53137FD-2FD6-430E-8855-F4DC3164786D</key>
 		<dict>

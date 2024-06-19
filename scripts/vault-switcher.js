@@ -25,17 +25,19 @@ function camelCaseMatch(str) {
 // biome-ignore lint/correctness/noUnusedVariables: Alfred run
 function run() {
 	const currentVault = $.getenv("vault_path");
+	// biome-ignore lint/nursery/useTopLevelRegex: not necessary
 	const vaultNameEnc = encodeURIComponent(currentVault.replace(/.*\//, ""));
-	const vaultListJson =
-		app.pathTo("home folder") + "/Library/Application Support/obsidian/obsidian.json";
 
 	// get vault paths
+	const vaultListJson =
+		app.pathTo("home folder") + "/Library/Application Support/obsidian/obsidian.json";
 	const vaultList = JSON.parse(readFile(vaultListJson)).vaults;
 	const vaultPaths = [];
 	for (const hash in vaultList) vaultPaths.push(vaultList[hash].path);
 
 	/** @type {AlfredItem[]} */
 	const vaults = vaultPaths.map((vaultPath) => {
+		// biome-ignore lint/nursery/useTopLevelRegex: not necessary
 		const vaultName = vaultPath.replace(/.*\//, "");
 		const vaultURI = "obsidian://open?vault=" + encodeURIComponent(vaultName);
 
@@ -44,6 +46,7 @@ function run() {
 		if (currentVault === vaultPath) currentIcon = "✅ ";
 		if (vaultName.toLowerCase().includes("development")) currentIcon += "⚙️ ";
 		if (vaultName === "Obsidian Sandbox") currentIcon += "🏖 ";
+		// biome-ignore lint/nursery/useTopLevelRegex: not necessary
 		const shortPath = vaultPath.replace(/\/Users\/[^/]*/, "~").slice(0, -(vaultName.length + 1));
 
 		return {
@@ -53,8 +56,8 @@ function run() {
 			match: camelCaseMatch(vaultName),
 			mods: {
 				alt: { arg: vaultPath },
-				cmd: { arg: vaultPath },
 				ctrl: { arg: vaultPath },
+				shift: { arg: vaultPath },
 			},
 			uid: vaultURI,
 		};
@@ -67,8 +70,8 @@ function run() {
 		icon: { path: "icons/settings.png" },
 		mods: {
 			alt: { valid: false, subtitle: "⛔️" },
-			cmd: { valid: false, subtitle: "⛔️" },
 			ctrl: { valid: false, subtitle: "⛔️" },
+			shift: { valid: false, subtitle: "⛔️" },
 		},
 		// no UID, so it's always at the bottom
 	});

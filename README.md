@@ -393,14 +393,11 @@ brew install tesseract tesseract-lang
 ### Vault switcher
 **`ov`: Open `V`aults in Obsidian, Finder, or the Terminal**
 - Select a Vault and press `⏎` to open it in Obsidian.
-- `⌘ ⏎` opens the root of the selected vault in your default Terminal. You can
+- `⌃ ⏎` opens the root of the selected vault in your default Terminal. You can
   [change the default terminal in the Alfred
   Settings](https://www.alfredapp.com/help/features/terminal/).
 - `⌥ ⏎` opens the root in Finder.
-
-> [!NOTE]  
-> To control/search a different vault, you have to change the vault path in the
-> workflow configuration.
+- `⇧ ⏎` Control this vault with Alfred.
 
 ### Back up your vault
 **`obackup`: Create a `backup` of your vault.**
