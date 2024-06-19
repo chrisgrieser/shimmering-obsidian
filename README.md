@@ -399,6 +399,10 @@ brew install tesseract tesseract-lang
 - `⌥ ⏎` opens the root in Finder.
 - `⇧ ⏎` Control this vault with Alfred.
 
+> [!NOTE]
+> The `Metadata Extractor` and the `Advanced URI` plugin need to be installed in
+> every vault you want to control, and `osetup` needs to be run once.
+
 ### Back up your vault
 **`obackup`: Create a `backup` of your vault.**
 - Your whole vault is compressed into a *zip* file and then moved to the

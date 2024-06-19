@@ -44,20 +44,25 @@ function run() {
 		// visual: icons & shorter path
 		let currentIcon = "";
 		if (currentVault === vaultPath) currentIcon = "✅ ";
-		if (vaultName.toLowerCase().includes("development")) currentIcon += "⚙️ ";
 		if (vaultName === "Obsidian Sandbox") currentIcon += "🏖 ";
 		// biome-ignore lint/nursery/useTopLevelRegex: not necessary
-		const shortPath = vaultPath.replace(/\/Users\/[^/]*/, "~").slice(0, -(vaultName.length + 1));
+		const tildePath = vaultPath.replace(/\/Users\/[^/]*/, "~");
+		const shortParentPath = tildePath.slice(0, -(vaultName.length + 1));
+
+		const shiftArg =
+			currentVault === vaultPath
+				? { valid: false, subtitle: "⛔️ Already controlling this vault." }
+				: { arg: tildePath };
 
 		return {
 			title: currentIcon + vaultName,
-			subtitle: shortPath,
+			subtitle: shortParentPath,
 			arg: vaultURI,
 			match: camelCaseMatch(vaultName),
 			mods: {
 				alt: { arg: vaultPath },
 				ctrl: { arg: vaultPath },
-				shift: { arg: vaultPath },
+				shift: shiftArg,
 			},
 			uid: vaultURI,
 		};

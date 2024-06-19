@@ -1,9 +1,8 @@
 #!/usr/bin/env osascript -l JavaScript
-
 ObjC.import("stdlib");
-ObjC.import("Foundation");
 const app = Application.currentApplication();
 app.includeStandardAdditions = true;
+//──────────────────────────────────────────────────────────────────────────────
 
 /** @param {string} path */
 function readFile(path) {
@@ -22,6 +21,10 @@ function writeToFile(file, text) {
 	str.writeToFileAtomicallyEncodingError(file, true, $.NSUTF8StringEncoding, null);
 }
 
+const fileExists = (/** @type {string} */ filePath) => Application("Finder").exists(Path(filePath));
+
+//──────────────────────────────────────────────────────────────────────────────
+
 /** @type {AlfredRun} */
 // biome-ignore lint/correctness/noUnusedVariables: Alfred run
 function run() {
@@ -30,18 +33,20 @@ function run() {
 
 	let errorMsg = ""; // error message if a plugin is not installed in that vault
 
+	const pluginFolder = `${vaultPath}/${configFolder}/plugins`;
 	const pluginList = readFile(`${vaultPath}/${configFolder}/community-plugins.json`);
+
 	if (pluginList) {
 		const activatedPlugins = JSON.parse(pluginList);
-		if (!activatedPlugins.includes("metadata-extractor"))
+		if (!activatedPlugins.includes("metadata-extractor") || !fileExists(`${pluginFolder}/metadata-extractor`))
 			errorMsg += "Metadata Extractor is not installed or not enabled in the selected vault. \n\n";
-		if (!activatedPlugins.includes("obsidian-advanced-uri"))
+		if (!activatedPlugins.includes("obsidian-advanced-uri") || !fileExists(`${pluginFolder}/obsidian-advanced-uri`))
 			errorMsg += "Advanced URI Plugin is not installed or not enabled in the selected vault. \n\n";
 		if (errorMsg)
 			errorMsg = "ERROR\n\n" + errorMsg + "Please install & enable the plugin(s) and re-run `osetup`.";
 	} else {
 		errorMsg +=
-			"ERROR\n\nNo plugins found in the selected vault.\nPlease install & enable the Metadata Extractor plugin & the Advanced URI plugin, restart the vault, and run `osetup` again.";
+			'ERROR\n\nNo plugins found in the selected vault.\nPlease install & enable the "Metadata Extractor" plugin & the "Advanced URI" plugin, restart the vault, and run `osetup` again.';
 	}
 	if (errorMsg) return errorMsg;
 
@@ -66,4 +71,5 @@ function run() {
 		delay(0.2);
 	}
 	obsidian.activate();
+	return
 }

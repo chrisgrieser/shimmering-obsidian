@@ -564,6 +564,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>4EDC4109-AB66-4380-88C8-400F76EF7874</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>C2BF1FF2-F76A-4580-8D08-51DA0694D3F2</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>4F356F57-A6AA-4277-B742-27DC8EE84450</key>
 		<array>
 			<dict>
@@ -1606,6 +1619,8 @@
 				<false/>
 			</dict>
 		</array>
+		<key>C2BF1FF2-F76A-4580-8D08-51DA0694D3F2</key>
+		<array/>
 		<key>C5E65176-674E-4553-A255-37A40EB99342</key>
 		<array>
 			<dict>
@@ -1793,7 +1808,7 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>C2BF1FF2-F76A-4580-8D08-51DA0694D3F2</string>
+				<string>4EDC4109-AB66-4380-88C8-400F76EF7874</string>
 				<key>modifiers</key>
 				<integer>131072</integer>
 				<key>modifiersubtext</key>
@@ -4272,9 +4287,9 @@ set parameter to do shell script "echo " &amp; quoted form of (system attribute 
 				<key>keyword</key>
 				<string>osetup</string>
 				<key>subtext</key>
-				<string>Obsidian will restart afterwards</string>
+				<string>for the vault: "{var:vault_path}"</string>
 				<key>text</key>
-				<string>Initial Setup for Shimmering Obsidian</string>
+				<string>Initial Setup</string>
 				<key>withspace</key>
 				<true/>
 			</dict>
@@ -5654,6 +5669,27 @@ curl -sL "https://raw.githubusercontent.com/chrisgrieser/shimmering-obsidian/mai
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>✅ Now controlling</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>4EDC4109-AB66-4380-88C8-400F76EF7874</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -6429,6 +6465,15 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>ypos</key>
 			<real>790</real>
 		</dict>
+		<key>4EDC4109-AB66-4380-88C8-400F76EF7874</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>9</integer>
+			<key>xpos</key>
+			<real>275</real>
+			<key>ypos</key>
+			<real>5995</real>
+		</dict>
 		<key>4F356F57-A6AA-4277-B742-27DC8EE84450</key>
 		<dict>
 			<key>colorindex</key>
@@ -7179,8 +7224,10 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 		<dict>
 			<key>colorindex</key>
 			<integer>9</integer>
+			<key>note</key>
+			<string>switch vault to control</string>
 			<key>xpos</key>
-			<real>270</real>
+			<real>435</real>
 			<key>ypos</key>
 			<real>5995</real>
 		</dict>
