@@ -2,7 +2,8 @@
 Alfred workflow with dozens of features for controlling your
 [Obsidian](https://obsidian.md/) vault.
 
-[⭐Featured in the Alfred Gallery.](https://alfred.app/workflows/chrisgrieser/shimmering-obsidian/)
+[⭐Featured in the Alfred
+Gallery.](https://alfred.app/workflows/chrisgrieser/shimmering-obsidian/)
 
 ![Download count](https://img.shields.io/github/downloads/chrisgrieser/shimmering-obsidian/total?label=Downloads&style=plastic)
 ![Last release](https://img.shields.io/github/v/release/chrisgrieser/shimmering-obsidian?label=Latest%20Release&style=plastic)
@@ -60,7 +61,8 @@ Alfred workflow with dozens of features for controlling your
 <!-- tocstop -->
 
 ## Installation
-*This workflow requires Alfred 5 with [Powerpack](https://www.alfredapp.com/powerpack/).*
+*This workflow requires Alfred 5 with
+[Powerpack](https://www.alfredapp.com/powerpack/).*
 1. Install the Obsidian plugins [Advanced
    URI](https://obsidian.md/plugins?id=obsidian-advanced-uri) & [Metadata
    Extractor](https://obsidian.md/plugins?id=metadata-extractor). Enable both
@@ -75,7 +77,8 @@ Alfred workflow with dozens of features for controlling your
 The Alfred-based Quick Switcher is basically an enhanced version of [Obsidian's
 Quick Switcher Core Plugin](https://help.obsidian.md/Plugins/Quick+switcher).
 
-<img alt="promo video" width=70% src="https://user-images.githubusercontent.com/73286100/139678407-9ac39baa-5f49-42a0-9622-0fbaf68540b2.gif">
+<img alt="promo video" width=70%
+src="https://user-images.githubusercontent.com/73286100/139678407-9ac39baa-5f49-42a0-9622-0fbaf68540b2.gif">
 
 ### How the search works
 All the search features listed here do not *directly* search your vault, but
@@ -133,10 +136,13 @@ note). Press `⏎` to open the selected file in Obsidian.
   `foobar` that are also tagged with `#moc`.
 
 #### Search for aliases
-This command also looks for **aliases**, when they are [defined in the YAML-Header](https://help.obsidian.md/How+to/Add+aliases+to+note#Set+aliases).
+This command also looks for **aliases**, when they are [defined in the
+YAML-Header](https://help.obsidian.md/How+to/Add+aliases+to+note#Set+aliases).
 - Add `alias` to your search query, to only display aliases, for example, `o
-  obsidian alias` only displays notes that have the *alias* `obsidian`.# Search for Aliases
-This command also looks for **aliases**, when they are [defined in the YAML-Header](https://help.obsidian.md/How+to/Add+aliases+to+note#Set+aliases).
+  obsidian alias` only displays notes that have the *alias* `obsidian`.# Search
+  for Aliases
+This command also looks for **aliases**, when they are [defined in the
+YAML-Header](https://help.obsidian.md/How+to/Add+aliases+to+note#Set+aliases).
 - Add `alias` to your search query, to only display aliases, for example, `o
   obsidian alias` only displays notes that have the *alias* `obsidian`.
 
@@ -178,7 +184,8 @@ Selecting a heading with `⏎` opens the file *at the respective heading*.
 - Add `h1`, `h2`, … to your search query, to only display headings of a certain
   level, for example, `o obsidian h2` only displays *level 2 headings* that
   include `obsidian`.
-- You can ignore certain (or all) heading levels with the respective workflow configuration.
+- You can ignore certain (or all) heading levels with the respective workflow
+  configuration.
 
 > [!TIP]
 > Add more heading levels to `h_lvl_ignore` if your search results become too
@@ -194,7 +201,8 @@ Selecting a heading with `⏎` opens the file *at the respective heading*.
 - Add `h1`, `h2`, … to your search query, to only display headings of a certain
   level, for example, `o obsidian h2` only displays *level 2 headings* that
   include `obsidian`.
-- You can ignore certain (or all) heading levels with the respective workflow configuration.
+- You can ignore certain (or all) heading levels with the respective workflow
+  configuration.
 
 > [!TIP]
 > Add more heading levels to `h_lvl_ignore` if your search results become too
@@ -208,12 +216,14 @@ that note**
   external links. (As of now, unresolved internal links are not displayed
   though.)
 - Selecting an outgoing link or backlink opens the respective note.
-	* All the modifiers (`⌘/⌃/⌥/fn/⇧ + ⏎`) apply the same way as with the main `o` search.
+	* All the modifiers (`⌘/⌃/⌥/fn/⇧ + ⏎`) apply the same way as with the main
+	  `o` search.
 	* *Yes, this means you can repeatedly use `⇧ + ⏎` to basically traverse
 	  your graph via Alfred. 😎*
 - for external links:
 	* Selecting an external link with `⏎` opens the link in the default browser.
-	* Press `⌥ + ⏎` on an external link to copy the URL to the clipboard instead.
+	* Press `⌥ + ⏎` on an external link to copy the URL to the clipboard
+	  instead.
 
 ### Search notes by their tags
 **`ot`: Search `t`ags and subsequently files with that tag**
@@ -221,7 +231,8 @@ that note**
 	* Select a tag with `⏎` to display & search all notes with that tag.
 	* In the following list of your notes, all the modifiers (`⌘/⌃/⌥/fn/⇧ + ⏎`)
 	  apply the same way as they do with the `o` search.
-	* Press `⌘ + ⏎` instead to open Obsidian's search pane and search for the tag there.
+	* Press `⌘ + ⏎` instead to open Obsidian's search pane and search for the
+	  tag there.
 - Use the workflow configuration to set whether nested tags should be merged
   with their parent or not.
 
@@ -236,7 +247,8 @@ that note**
 
 ### Search recent files
 **`or`: Open `r`ecent Files**
-- All the modifiers (`⌘/⌃/⌥/fn/⇧ + ⏎`) apply the same way as with the main `o` search.
+- All the modifiers (`⌘/⌃/⌥/fn/⇧ + ⏎`) apply the same way as with the main `o`
+  search.
 - Only the 10 most recent files are displayed.
 
 ### Search for attachments
@@ -323,18 +335,32 @@ works for Markdown and requires some minor setup.
 <!-- LTeX: enabled=false -->
 **`on`: Create a `n`ew note.**
 <!-- LTeX: enabled=true -->
-- **File Name:** Anything you type after the keyword `on` (for example, `on foobar`) becomes the file name of the new note (for example, `foobar.md`). (Note that the [Filename Heading Sync Plugin](https://obsidian.md/plugins?id=obsidian-filename-heading-sync) may interfere with this.)
+- **File Name:** Anything you type after the keyword `on` (for example, `on
+  foobar`) becomes the file name of the new note (for example, `foobar.md`).
+  (Note that the [Filename Heading Sync
+  Plugin](https://obsidian.md/plugins?id=obsidian-filename-heading-sync) may
+  interfere with this.)
 	* When triggered via `cmd + ⏎`, the new note is created in a new tab.
-- **Content:** You can select a template note to use in the workflow configuration. Only `{{title}}` is supported as placeholder and is replaced with the file name. Be aware that the template might be overridden by Folder Templates from the [Templater plugin](https://obsidian.md/plugins?id=templater-obsidian).
-- **Location:** The new note is placed in the folder specified in the workflow configuration. If the configuration is empty, it is placed in your vault root.
-- 💡 There are various settings for creating new notes in the workflow configuration.
+- **Content:** You can select a template note to use in the workflow
+  configuration. Only `{{title}}` is supported as placeholder and is replaced
+  with the file name. Be aware that the template might be overridden by Folder
+  Templates from the [Templater
+  plugin](https://obsidian.md/plugins?id=templater-obsidian).
+- **Location:** The new note is placed in the folder specified in the workflow
+  configuration. If the configuration is empty, it is placed in your vault root.
+- 💡 There are various settings for creating new notes in the workflow
+  configuration.
 
 ### Scratchpad
 **`oo` or `triggered via hotkey`: Append to your Scratchpad Note**
-- Quickly add text to the note set in the workflow configuration. (This command is basically a quicker version of the `fn + ⏎` mode of the [Alfred-based Quick Switcher](Alfred-based%20Quick%20Switcher.md#search-for-notes).)
+- Quickly add text to the note set in the workflow configuration. (This command
+  is basically a quicker version of the `fn + ⏎` mode of the [Alfred-based Quick
+  Switcher](Alfred-based%20Quick%20Switcher.md#search-for-notes).)
 	* When using `oo foobar`, appends `foobar` to the note.
 	* Triggered via **hotkey**, appends the current selection.
-	* When you add `#foobar` (for example, `Inbox/Scratchpad-Note#Thoughts`) to path of the scratchpad file in the workflow configuration, the text is appended to the section with the heading "foobar."
+	* When you add `#foobar` (for example, `Inbox/Scratchpad-Note#Thoughts`) to
+	  path of the scratchpad file in the workflow configuration, the text is
+	  appended to the section with the heading "foobar."
 
 > [!TIP]
 > There are various settings for the scratchpad in the workflow configuration.
@@ -351,14 +377,17 @@ works for Markdown and requires some minor setup.
   of your screen for a screenshot. However, instead of saving a screenshot, a
   new note is created which contains the OCR'ed content of the selection.
 - For best results, you should set the languages to be recognized in the
-  workflow settings, such as `eng+deu` for English and German. You can find out the
+  workflow settings, such as `eng+deu` for English and German. You can find out
+  the
   code for your languages in [this
   list](https://tesseract-ocr.github.io/tessdoc/Data-Files-in-different-versions.html).
 - 💡 There are various settings in the workflow configurations for
   OCR-screenshots.
 
 **Requirement**  
-For the OCR-Screenshot Feature, you need to install [Tesseract](https://tesseract-ocr.github.io/tessdoc/Installation.html). If you use Homebrew, you can do so with the following command:
+For the OCR-Screenshot Feature, you need to install
+[Tesseract](https://tesseract-ocr.github.io/tessdoc/Installation.html). If you
+use Homebrew, you can do so with the following command:
 
 ```bash
 brew install tesseract tesseract-lang
@@ -383,7 +412,8 @@ brew install tesseract tesseract-lang
   the images instead.
 - If the file `Images.md` already exists in your vault root, any subsequent
   screenshots are instead appended to this note. This is intended for taking
-  screenshots in quick succession, for instance during a live lecture or presentation.
+  screenshots in quick succession, for instance during a live lecture or
+  presentation.
 - 💡 There are various settings in the workflow configurations for screenshots.
 
 ## Utility features
@@ -393,9 +423,11 @@ brew install tesseract tesseract-lang
 - Displays a list of your workspaces. Select one to open the workspace.
 - You can also manage your Workspaces from here, that is, saving, loading &
   deleting a workspace.
-- Unsurprisingly, this workflow requires the [Workspaces Core Plugin](https://help.obsidian.md/Plugins/Workspaces) to be enabled.
+- Unsurprisingly, this workflow requires the [Workspaces Core
+  Plugin](https://help.obsidian.md/Plugins/Workspaces) to be enabled.
 
-<img alt="workspace" width=60% src="https://user-images.githubusercontent.com/73286100/133615940-a56731e5-6b60-4d28-b877-7ea48d10225e.gif">
+<img alt="workspace" width=60%
+src="https://user-images.githubusercontent.com/73286100/133615940-a56731e5-6b60-4d28-b877-7ea48d10225e.gif">
 
 ### Vault switcher
 **`ov`: Open `V`aults in Obsidian, Finder, or the Terminal**
@@ -428,7 +460,8 @@ brew install tesseract tesseract-lang
 
 ```applescript
 tell application id "com.runningwithcrayons.Alfred"
-	run trigger "backup-obsidian" in workflow "de.chris-grieser.shimmering-obsidian"
+	run trigger "backup-obsidian" in workflow
+	"de.chris-grieser.shimmering-obsidian"
 end tell
 # pass 'no sound' as argument to turn off backup confirmation sound
 ```
@@ -447,7 +480,8 @@ end tell
 - Open a CSS snippet in your default text editor.
 
 ### Open various folders
-- `o.obsidian`: The hidden `.obsidian` folder located in your vault root is opened in Finder.
+- `o.obsidian`: The hidden `.obsidian` folder located in your vault root is
+  opened in Finder.
 - `o.trash`: Open the hidden [`.trash`
   folder](https://help.obsidian.md/Advanced+topics/Deleting+files) located in
   your vault root is opened in Finder. (Note that you have to select `Move to
@@ -473,7 +507,8 @@ end tell
 	* Press `⌥ + ⏎` to copy the plugin URI (`obsidian://show-plugin?id=…`) to
 	  your clipboard.
 	* `⌘⌥ + ⏎`: Copy the plugin link together with a description.
-	* `fn + ⏎`: open the plugin's page at [Obsidian Stats](https://www.moritzjung.dev/obsidian-stats/).
+	* `fn + ⏎`: open the plugin's page at [Obsidian
+	  Stats](https://www.moritzjung.dev/obsidian-stats/).
 - Only plugins officially included in the community plugins are displayed —
   plugins solely available via GitHub or still in review are not shown.
 - Add `plugin` to the search query to only display plugin, for example, use `op
@@ -492,7 +527,8 @@ end tell
 	* `⌘⌥ + ⏎`: Copy the plugin link together with a description.
 	* Use `⇧` or `⌘ + Y` to open a Quick Look Preview of the theme's promo
 	  screenshot. Press `⇧` or `⌘ + Y` again to close the preview.
-	* `fn + ⏎` to open the theme's page at [Obsidian Stats](https://www.moritzjung.dev/obsidian-stats/).
+	* `fn + ⏎` to open the theme's page at [Obsidian
+	  Stats](https://www.moritzjung.dev/obsidian-stats/).
 - Only themes officially included in the community themes are displayed — themes
   solely available via GitHub or still in review are not shown.
 - Add `theme` to the search query to only display themes, for instance use `op
@@ -501,7 +537,8 @@ end tell
   query `op JaneDoe` returns all themes (and plugins) authored by the user
   `JaneDoe`.
 
-<img alt="plugin search" width=60% src="https://user-images.githubusercontent.com/73286100/131027623-5e8b3667-d00d-47dc-ba49-6938686e2aca.gif">
+<img alt="plugin search" width=60%
+src="https://user-images.githubusercontent.com/73286100/131027623-5e8b3667-d00d-47dc-ba49-6938686e2aca.gif">
 
 ### Settings & local plugins
 **`o,`: Search and directly open specific setting tabs.[^1]**
@@ -524,7 +561,9 @@ end tell
 
 ### Official documentation
 <!-- LTeX: enabled=false -->
-**`oh`: Get `h`elp by searching the official [Obsidian documentation](https://help.obsidian.md/Start+here) and the [Obsidian Hub](https://publish.obsidian.md/hub).**
+**`oh`: Get `h`elp by searching the official [Obsidian
+documentation](https://help.obsidian.md/Start+here) and the [Obsidian
+Hub](https://publish.obsidian.md/hub).**
 <!-- LTeX: enabled=true -->
 - This command mimics the search behavior on the official documentation site,
   meaning that it also searches for headings inside individual documentation
@@ -537,7 +576,8 @@ end tell
   recreation can take a minute, depending on your internet connection. You
   are notified when it is done.)
 
-**`odv`: Search the [dataview](https://blacksmithgu.github.io/obsidian-dataview/) documentation.**
+**`odv`: Search the
+[dataview](https://blacksmithgu.github.io/obsidian-dataview/) documentation.**
 - Press `⏎` to open in your default browser.
 - Use `⌥ + ⏎` to copy the link to your clipboard.
 
