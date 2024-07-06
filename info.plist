@@ -7718,7 +7718,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>description</key>
 			<string>When appending to a note (`fn ↵`), the note will automatically be opened afterwards. Also applies to the Scratchpad feature.</string>
 			<key>label</key>
-			<string>Open note after appending?</string>
+			<string>Open note after appending</string>
 			<key>type</key>
 			<string>checkbox</string>
 			<key>variable</key>

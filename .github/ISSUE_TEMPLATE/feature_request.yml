@@ -21,8 +21,8 @@ body:
             already](https://github.com/hauselin/obsidian-alfred)."
           required: true
         - label:
-            "If you are looking for a way to trigger a specific Obsidian command from outside Obsidian,
-            [see this comment explaining how you can easily create such a workflow
+            "If you are looking for a way to trigger a specific Obsidian command from outside
+            Obsidian, [see this comment explaining how you can easily create such a workflow
             yourself.](https://github.com/chrisgrieser/shimmering-obsidian/issues/172#issuecomment-2066890678)"
           required: true
   - type: textarea
@@ -37,8 +37,8 @@ body:
     attributes:
       label: Alternatives considered
       description:
-        Especially when there is already an Obsidian plugin doing that, please explain why it makes sense
-        to have such a feature available via Alfred.
+        Especially when there is already an Obsidian plugin doing that, please explain why it makes
+        sense to have such a feature available via Alfred.
     validations:
       required: true
   - type: textarea
