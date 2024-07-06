@@ -91,7 +91,8 @@ This keyword searches all your notes, aliases, folders, and headings combined.
 This works similar to Obsidian's built-in *Quick Switcher*, but can be triggered
 without Obsidian running (in which case it opens Obsidian with the selected
 note). Press `⏎` to open the selected file in Obsidian.
-- `⌘ + ⏎`: Open the file in a new tab (requires Obsidian 0.16).
+- `⌘ + ⏎`: Open the file in a new tab. (Can be configured in the workflow
+  settings to open in a new window or split instead.)
 - `⌥ + ⏎`: Reveal the file in Finder.
 - `fn + ⏎`: Append the content to the selected note.
 - `⌃ + ⏎`: Copy the [Obsidian-URI to the selected file](https://help.obsidian.md/Advanced+topics/Using+obsidian+URI#Action+`hook-get-address`).

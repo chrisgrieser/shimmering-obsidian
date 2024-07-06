@@ -25,7 +25,6 @@ function camelCaseMatch(str) {
 // biome-ignore lint/correctness/noUnusedVariables: Alfred run
 function run() {
 	const currentVault = $.getenv("vault_path");
-	// biome-ignore lint/nursery/useTopLevelRegex: not necessary
 	const vaultNameEnc = encodeURIComponent(currentVault.replace(/.*\//, ""));
 
 	// get vault paths
@@ -37,7 +36,6 @@ function run() {
 
 	/** @type {AlfredItem[]} */
 	const vaults = vaultPaths.map((vaultPath) => {
-		// biome-ignore lint/nursery/useTopLevelRegex: not necessary
 		const vaultName = vaultPath.replace(/.*\//, "");
 		const vaultURI = "obsidian://open?vault=" + encodeURIComponent(vaultName);
 
@@ -45,7 +43,6 @@ function run() {
 		let currentIcon = "";
 		if (currentVault === vaultPath) currentIcon = "✅ ";
 		if (vaultName === "Obsidian Sandbox") currentIcon += "🏖 ";
-		// biome-ignore lint/nursery/useTopLevelRegex: not necessary
 		const tildePath = vaultPath.replace(/\/Users\/[^/]*/, "~");
 		const shortParentPath = tildePath.slice(0, -(vaultName.length + 1));
 

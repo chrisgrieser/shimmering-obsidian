@@ -5,9 +5,8 @@ app.includeStandardAdditions = true;
 //──────────────────────────────────────────────────────────────────────────────
 
 function noObsiWinOpen() {
-	return (
-		Application("System Events").applicationProcesses.byName("Obsidian").windows().length === 0
-	);
+	const obsiWins = Application("System Events").applicationProcesses.byName("Obsidian").windows();
+	return obsiWins.length === 0;
 }
 
 //──────────────────────────────────────────────────────────────────────────────
@@ -23,16 +22,21 @@ function run(argv) {
 	const heading = input.split("#")[1];
 	const lineNum = input.split(":")[1]; // used by `oe` external link search to open at line
 
+	// DOCS https://vinzent03.github.io/obsidian-advanced-uri/concepts/navigation_parameters#open-mode
+	const openMode = $.NSProcessInfo.processInfo.environment.objectForKey("open_mode").js;
+
 	// construct URI scheme
 	// https://help.obsidian.md/Extending+Obsidian/Obsidian+URI
 	// https://vinzent03.github.io/obsidian-advanced-uri/actions/navigation
-	const urlScheme =
-		"obsidian://advanced-uri?" +
-		`vault=${vaultNameEnc}` +
-		`&filepath=${encodeURIComponent(relativePath)}` +
-		(heading ? "&heading=" + encodeURIComponent(heading) : "") +
-		(lineNum ? "&line=" + encodeURIComponent(lineNum) : "");
-	console.log("❗ urlScheme:", urlScheme);
+	const urlComponents = [
+		"obsidian://advanced-uri?",
+		`vault=${vaultNameEnc}`,
+		`&filepath=${encodeURIComponent(relativePath)}`,
+		heading ? "&heading=" + encodeURIComponent(heading) : "",
+		lineNum ? "&line=" + encodeURIComponent(lineNum) : "",
+		openMode ? "&openmode=" + openMode : "",
+	];
+	const urlScheme = urlComponents.join("");
 
 	// OPEN FILE
 	// delay opening URI scheme until Obsidian is running, URIs do not open

@@ -128,19 +128,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>21AA977D-B161-4D09-BC2C-C8A26504140F</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>10873427-2384-4E8F-8D59-A9D1EB95EFC2</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>23310407-0757-4547-AC30-83A9AF365D9D</key>
 		<array>
 			<dict>
@@ -259,6 +246,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>A5ADC808-2010-447C-9B0A-B4C14C3801EB</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>2D4BA51D-6800-4FC8-AD72-926C8167987B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>76EF97C3-981D-466E-BA90-47D34129BE96</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -521,7 +521,7 @@
 				<key>modifiers</key>
 				<integer>1048576</integer>
 				<key>modifiersubtext</key>
-				<string>⌘: Open in New Tab</string>
+				<string>⌘: Open in New {var:open_note_in_new}</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -595,16 +595,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>76EF97C3-981D-466E-BA90-47D34129BE96</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>128F4E9D-FB3F-475D-9000-21AE4B38569D</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -778,7 +768,7 @@
 				<key>modifiers</key>
 				<integer>1048576</integer>
 				<key>modifiersubtext</key>
-				<string>⌘: Open in New Tab</string>
+				<string>⌘: Open in new {var:open_note_in_new}</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -1040,7 +1030,18 @@
 		<key>76BE7619-FDB9-4324-81C7-6570B534A123</key>
 		<array/>
 		<key>76EF97C3-981D-466E-BA90-47D34129BE96</key>
-		<array/>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>F0F119BB-A0B3-49A6-964E-DFE5D7CAD2FF</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>7954C22E-D0FB-4539-87D1-D62DF328DBB2</key>
 		<array>
 			<dict>
@@ -1201,7 +1202,7 @@
 				<key>modifiers</key>
 				<integer>1048576</integer>
 				<key>modifiersubtext</key>
-				<string>⌘: Open in New Tab</string>
+				<string>⌘: Open in New {var:open_note_in_new}</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -1256,19 +1257,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>B9AC24F9-316C-4D05-903D-7ED21EA0A3C8</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>994FC5F6-BF71-4B6D-8E8B-794A453AC62D</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>21AA977D-B161-4D09-BC2C-C8A26504140F</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1335,7 +1323,7 @@
 				<key>modifiers</key>
 				<integer>1048576</integer>
 				<key>modifiersubtext</key>
-				<string>⌘: Open in New Tab</string>
+				<string>⌘: Open in New {var:open_note_in_new}</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -1740,6 +1728,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>1E26935C-F1F3-4C69-AEFA-3A0D9D18291F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>D7853046-09BE-4679-B4FC-DB918A36331E</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>2D4BA51D-6800-4FC8-AD72-926C8167987B</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -2196,6 +2197,19 @@ tesseract "$temp_image" stdout -l $ocr_languages 2&gt;&amp;1</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>unstackview</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.hidealfred</string>
+			<key>uid</key>
+			<string>F0F119BB-A0B3-49A6-964E-DFE5D7CAD2FF</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>externaltriggerid</key>
 				<string>open-relative-path-in-obsidian</string>
 				<key>passinputasargument</key>
@@ -2241,19 +2255,6 @@ tesseract "$temp_image" stdout -l $ocr_languages 2&gt;&amp;1</string>
 			<string>alfred.workflow.utility.conditional</string>
 			<key>uid</key>
 			<string>B5F538F8-D47B-47E8-A7C8-5C9C149A58CC</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>unstackview</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.hidealfred</string>
-			<key>uid</key>
-			<string>128F4E9D-FB3F-475D-9000-21AE4B38569D</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -2356,51 +2357,35 @@ tesseract "$temp_image" stdout -l $ocr_languages 2&gt;&amp;1</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>script</key>
-				<string></string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string>scripts/reveal-or-open.sh</string>
-				<key>type</key>
-				<integer>8</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>65A519DF-2E95-46AA-BD21-64E5ECE9759D</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>availableviaurlhandler</key>
 				<false/>
 				<key>triggerid</key>
-				<string>reveal-in-finder</string>
+				<string>open-in-new</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.trigger.external</string>
 			<key>uid</key>
-			<string>7BA55F56-BE3A-483A-9CA6-CEE173CF2357</string>
+			<string>D7853046-09BE-4679-B4FC-DB918A36331E</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>unstackview</key>
-				<false/>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<true/>
+				<key>variables</key>
+				<dict>
+					<key>open_mode</key>
+					<string>{var:open_note_in_new}</string>
+				</dict>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.utility.hidealfred</string>
+			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
-			<string>4B017801-8C1B-40FF-972D-EA7CA117420C</string>
+			<string>2D4BA51D-6800-4FC8-AD72-926C8167987B</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -2459,6 +2444,44 @@ tesseract "$temp_image" stdout -l $ocr_languages 2&gt;&amp;1</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>scripts/reveal-or-open.sh</string>
+				<key>type</key>
+				<integer>8</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>65A519DF-2E95-46AA-BD21-64E5ECE9759D</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>availableviaurlhandler</key>
+				<false/>
+				<key>triggerid</key>
+				<string>reveal-in-finder</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.external</string>
+			<key>uid</key>
+			<string>7BA55F56-BE3A-483A-9CA6-CEE173CF2357</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>conditions</key>
 				<array>
 					<dict>
@@ -2485,6 +2508,38 @@ tesseract "$temp_image" stdout -l $ocr_languages 2&gt;&amp;1</string>
 			<string>alfred.workflow.utility.conditional</string>
 			<key>uid</key>
 			<string>27BE592C-7FFD-4F99-8501-204EB94A4138</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>unstackview</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.hidealfred</string>
+			<key>uid</key>
+			<string>4B017801-8C1B-40FF-972D-EA7CA117420C</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>externaltriggerid</key>
+				<string>append-to-scratchpad</string>
+				<key>passinputasargument</key>
+				<true/>
+				<key>passvariables</key>
+				<true/>
+				<key>workflowbundleid</key>
+				<string>self</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>FB086126-9F30-4945-BECD-2AC877385CC2</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -2561,19 +2616,21 @@ return hook;
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>externaltriggerid</key>
-				<string>append-to-scratchpad</string>
-				<key>passinputasargument</key>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>oo</string>
+				<key>subtext</key>
+				<string>'{var:scratchpad_append_prefix}{query}'</string>
+				<key>text</key>
+				<string>Append to Scratchpad</string>
+				<key>withspace</key>
 				<true/>
-				<key>passvariables</key>
-				<true/>
-				<key>workflowbundleid</key>
-				<string>self</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.output.callexternaltrigger</string>
+			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
-			<string>FB086126-9F30-4945-BECD-2AC877385CC2</string>
+			<string>EE4720A7-4048-4A92-B0AA-8F811AE57C1E</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -2617,20 +2674,39 @@ return hook;
 			<key>config</key>
 			<dict>
 				<key>argumenttype</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>keyword</key>
 				<string>oo</string>
 				<key>subtext</key>
-				<string>'{var:scratchpad_append_prefix}{query}'</string>
+				<string>{var:scratchpad_note_path}</string>
 				<key>text</key>
-				<string>Append to Scratchpad</string>
+				<string>Open Scratchpad</string>
 				<key>withspace</key>
 				<true/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
-			<string>EE4720A7-4048-4A92-B0AA-8F811AE57C1E</string>
+			<string>60A87101-8D59-46BF-BCAE-A9195D6A034E</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>externaltriggerid</key>
+				<string>open-relative-path-in-obsidian</string>
+				<key>passinputasargument</key>
+				<true/>
+				<key>passvariables</key>
+				<true/>
+				<key>workflowbundleid</key>
+				<string>self</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>30FE564E-5E90-4F98-87D8-EAEB63CECFB3</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -2729,6 +2805,44 @@ return hook;
 			<key>config</key>
 			<dict>
 				<key>argument</key>
+				<string>{var:scratchpad_note_path}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>3CC54A98-B297-4BE8-8F53-22C52A7247B6</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{var:appendedText}</string>
+				<key>title</key>
+				<string>✅ Appended</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>1E497866-1199-4947-BC1A-AC23ADDD6C82</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
 				<string></string>
 				<key>passthroughargument</key>
 				<true/>
@@ -2765,27 +2879,6 @@ return hook;
 			<string>FBC5BD0C-F69A-4171-A33D-6548860B3119</string>
 			<key>version</key>
 			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<false/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string>{var:appendedText}</string>
-				<key>title</key>
-				<string>✅ Appended</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>1E497866-1199-4947-BC1A-AC23ADDD6C82</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -2856,46 +2949,6 @@ return hook;
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>keyword</key>
-				<string>oo</string>
-				<key>subtext</key>
-				<string>{var:scratchpad_note_path}</string>
-				<key>text</key>
-				<string>Open Scratchpad</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>60A87101-8D59-46BF-BCAE-A9195D6A034E</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>externaltriggerid</key>
-				<string>open-relative-path-in-obsidian</string>
-				<key>passinputasargument</key>
-				<true/>
-				<key>passvariables</key>
-				<true/>
-				<key>workflowbundleid</key>
-				<string>self</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.callexternaltrigger</string>
-			<key>uid</key>
-			<string>30FE564E-5E90-4F98-87D8-EAEB63CECFB3</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argument</key>
 				<string></string>
 				<key>passthroughargument</key>
@@ -2912,40 +2965,6 @@ return hook;
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
 			<string>A5BA80AA-D2FF-43BC-AE70-4C34D0BB4E20</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string>{var:scratchpad_note_path}</string>
-				<key>passthroughargument</key>
-				<false/>
-				<key>variables</key>
-				<dict/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>3CC54A98-B297-4BE8-8F53-22C52A7247B6</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string>{clipboard}</string>
-				<key>passthroughargument</key>
-				<false/>
-				<key>variables</key>
-				<dict/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>88723AC0-4348-4B23-AFD7-FEFE6C532A94</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -3043,44 +3062,19 @@ return hook;
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>availableviaurlhandler</key>
+				<key>argument</key>
+				<string>{clipboard}</string>
+				<key>passthroughargument</key>
 				<false/>
-				<key>triggerid</key>
-				<string>open-in-new-tab</string>
+				<key>variables</key>
+				<dict/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.trigger.external</string>
+			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
-			<string>994FC5F6-BF71-4B6D-8E8B-794A453AC62D</string>
+			<string>88723AC0-4348-4B23-AFD7-FEFE6C532A94</string>
 			<key>version</key>
 			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>68</integer>
-				<key>script</key>
-				<string>tell application "Obsidian" to open location "obsidian://advanced-uri?commandid=workspace%253Anew-tab"
-
-delay 0.2 # delay for detault new tab plugin
-
-return "{query}"</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>6</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>21AA977D-B161-4D09-BC2C-C8A26504140F</string>
-			<key>version</key>
-			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -3869,7 +3863,7 @@ set parameter to do shell script "echo " &amp; quoted form of (system attribute 
 			<key>config</key>
 			<dict>
 				<key>externaltriggerid</key>
-				<string>open-in-new-tab</string>
+				<string>open-in-new</string>
 				<key>passinputasargument</key>
 				<true/>
 				<key>passvariables</key>
@@ -4501,7 +4495,7 @@ set parameter to do shell script "echo " &amp; quoted form of (system attribute 
 			<key>config</key>
 			<dict>
 				<key>externaltriggerid</key>
-				<string>open-in-new-tab</string>
+				<string>open-in-new</string>
 				<key>passinputasargument</key>
 				<true/>
 				<key>passvariables</key>
@@ -4603,7 +4597,7 @@ set parameter to do shell script "echo " &amp; quoted form of (system attribute 
 			<key>config</key>
 			<dict>
 				<key>externaltriggerid</key>
-				<string>open-in-new-tab</string>
+				<string>open-in-new</string>
 				<key>passinputasargument</key>
 				<true/>
 				<key>passvariables</key>
@@ -5928,7 +5922,7 @@ curl -sL "https://raw.githubusercontent.com/chrisgrieser/shimmering-obsidian/mai
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>## 1️⃣ Setting up this workflow for the first time (required)
+	<string>## 1️⃣ Setting up this workflow for the first time
 1. Install the Obsidian plugins [Advanced URI](https://obsidian.md/plugins?id=obsidian-advanced-uri) &amp; [Metadata Extractor](https://obsidian.md/plugins?id=metadata-extractor). Enable both plugins.
 2. Set your vault path in the configuration to the left.
 3. Run the Alfred Command `osetup`. Obsidian will then restart.
@@ -5985,7 +5979,7 @@ curl -sL "https://raw.githubusercontent.com/chrisgrieser/shimmering-obsidian/mai
 			<key>xpos</key>
 			<real>1495</real>
 			<key>ypos</key>
-			<real>470</real>
+			<real>610</real>
 		</dict>
 		<key>07C4D3F5-5CBC-4BAF-9004-B506BEF11C23</key>
 		<dict>
@@ -6099,15 +6093,6 @@ curl -sL "https://raw.githubusercontent.com/chrisgrieser/shimmering-obsidian/mai
 			<key>ypos</key>
 			<real>5595</real>
 		</dict>
-		<key>128F4E9D-FB3F-475D-9000-21AE4B38569D</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>6</integer>
-			<key>xpos</key>
-			<real>1685</real>
-			<key>ypos</key>
-			<real>180</real>
-		</dict>
 		<key>164B20C3-4277-490E-9EB2-DCE923784B89</key>
 		<dict>
 			<key>colorindex</key>
@@ -6158,20 +6143,9 @@ curl -sL "https://raw.githubusercontent.com/chrisgrieser/shimmering-obsidian/mai
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<real>2480</real>
+			<real>2485</real>
 			<key>ypos</key>
-			<real>730</real>
-		</dict>
-		<key>21AA977D-B161-4D09-BC2C-C8A26504140F</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>note</key>
-			<string>open new tab</string>
-			<key>xpos</key>
-			<real>1740</real>
-			<key>ypos</key>
-			<real>980</real>
+			<real>840</real>
 		</dict>
 		<key>23310407-0757-4547-AC30-83A9AF365D9D</key>
 		<dict>
@@ -6230,6 +6204,17 @@ curl -sL "https://raw.githubusercontent.com/chrisgrieser/shimmering-obsidian/mai
 			<real>355</real>
 			<key>ypos</key>
 			<real>3985</real>
+		</dict>
+		<key>2D4BA51D-6800-4FC8-AD72-926C8167987B</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>6</integer>
+			<key>note</key>
+			<string>set location where to open</string>
+			<key>xpos</key>
+			<real>1640</real>
+			<key>ypos</key>
+			<real>305</real>
 		</dict>
 		<key>2FD76964-F91F-4EEB-B136-70238A407628</key>
 		<dict>
@@ -6336,7 +6321,7 @@ curl -sL "https://raw.githubusercontent.com/chrisgrieser/shimmering-obsidian/mai
 			<key>xpos</key>
 			<real>1880</real>
 			<key>ypos</key>
-			<real>675</real>
+			<real>815</real>
 		</dict>
 		<key>3CC54A98-B297-4BE8-8F53-22C52A7247B6</key>
 		<dict>
@@ -6414,7 +6399,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>xpos</key>
 			<real>1870</real>
 			<key>ypos</key>
-			<real>335</real>
+			<real>475</real>
 		</dict>
 		<key>4D2CDFC0-FABC-4A89-AB61-3BEB278DE479</key>
 		<dict>
@@ -6463,7 +6448,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>xpos</key>
 			<real>1741</real>
 			<key>ypos</key>
-			<real>790</real>
+			<real>930</real>
 		</dict>
 		<key>4EDC4109-AB66-4380-88C8-400F76EF7874</key>
 		<dict>
@@ -6514,7 +6499,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>xpos</key>
 			<real>1490</real>
 			<key>ypos</key>
-			<real>770</real>
+			<real>910</real>
 		</dict>
 		<key>52C6C47D-3998-4DF9-B9A4-04E586CC8380</key>
 		<dict>
@@ -6608,7 +6593,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>xpos</key>
 			<real>2315</real>
 			<key>ypos</key>
-			<real>685</real>
+			<real>825</real>
 		</dict>
 		<key>5F6CE94A-26BF-4826-8A67-2E02353646DB</key>
 		<dict>
@@ -6661,7 +6646,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>xpos</key>
 			<real>1680</real>
 			<key>ypos</key>
-			<real>305</real>
+			<real>445</real>
 		</dict>
 		<key>65F857FA-3AC7-4FF7-8F59-083ADF0CDADE</key>
 		<dict>
@@ -6762,7 +6747,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>note</key>
 			<string>open note / heading</string>
 			<key>xpos</key>
-			<real>1675</real>
+			<real>1710</real>
 			<key>ypos</key>
 			<real>35</real>
 		</dict>
@@ -6804,7 +6789,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>xpos</key>
 			<real>1495</real>
 			<key>ypos</key>
-			<real>305</real>
+			<real>445</real>
 		</dict>
 		<key>7D288B7C-5CB7-4A0E-B99D-3A2D9186DEC5</key>
 		<dict>
@@ -6882,7 +6867,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>xpos</key>
 			<real>1885</real>
 			<key>ypos</key>
-			<real>875</real>
+			<real>1015</real>
 		</dict>
 		<key>89E2FCF0-5A14-4078-8D1F-C0FCAC339F63</key>
 		<dict>
@@ -6936,7 +6921,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>xpos</key>
 			<real>1845</real>
 			<key>ypos</key>
-			<real>470</real>
+			<real>610</real>
 		</dict>
 		<key>92A31C69-A00D-4696-8552-B6092758941D</key>
 		<dict>
@@ -6956,16 +6941,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>xpos</key>
 			<real>2040</real>
 			<key>ypos</key>
-			<real>710</real>
-		</dict>
-		<key>994FC5F6-BF71-4B6D-8E8B-794A453AC62D</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>6</integer>
-			<key>xpos</key>
-			<real>1490</real>
-			<key>ypos</key>
-			<real>980</real>
+			<real>850</real>
 		</dict>
 		<key>99CFB472-ADBD-4D50-9A4E-70BCE3B09355</key>
 		<dict>
@@ -7036,7 +7012,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>xpos</key>
 			<real>1645</real>
 			<key>ypos</key>
-			<real>800</real>
+			<real>940</real>
 		</dict>
 		<key>A6F41657-5917-4CD1-A28F-7C4B2519781B</key>
 		<dict>
@@ -7072,9 +7048,9 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<real>2480</real>
+			<real>2485</real>
 			<key>ypos</key>
-			<real>610</real>
+			<real>720</real>
 		</dict>
 		<key>B0AB019E-6AC5-494E-9F31-F818F9BFEE21</key>
 		<dict>
@@ -7165,7 +7141,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>xpos</key>
 			<real>2105</real>
 			<key>ypos</key>
-			<real>680</real>
+			<real>820</real>
 		</dict>
 		<key>BF0363F9-98FD-4C0C-A592-BAD4319D51E2</key>
 		<dict>
@@ -7207,7 +7183,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>xpos</key>
 			<real>1680</real>
 			<key>ypos</key>
-			<real>470</real>
+			<real>610</real>
 		</dict>
 		<key>C029ADE5-A2BF-4B0B-A849-3298F05959F8</key>
 		<dict>
@@ -7329,6 +7305,15 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>ypos</key>
 			<real>3460</real>
 		</dict>
+		<key>D7853046-09BE-4679-B4FC-DB918A36331E</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>6</integer>
+			<key>xpos</key>
+			<real>1490</real>
+			<key>ypos</key>
+			<real>275</real>
+		</dict>
 		<key>D967483C-9C29-4D50-912B-0D6FA38D25ED</key>
 		<dict>
 			<key>colorindex</key>
@@ -7345,7 +7330,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>xpos</key>
 			<real>1850</real>
 			<key>ypos</key>
-			<real>740</real>
+			<real>880</real>
 		</dict>
 		<key>DD45D94E-9E2C-4477-9E37-66338FDCF4D0</key>
 		<dict>
@@ -7414,7 +7399,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>xpos</key>
 			<real>1565</real>
 			<key>ypos</key>
-			<real>645</real>
+			<real>785</real>
 		</dict>
 		<key>E5C2C637-CB7C-4C29-8829-6DD7F2901728</key>
 		<dict>
@@ -7530,6 +7515,15 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>ypos</key>
 			<real>210</real>
 		</dict>
+		<key>F0F119BB-A0B3-49A6-964E-DFE5D7CAD2FF</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>6</integer>
+			<key>xpos</key>
+			<real>1860</real>
+			<key>ypos</key>
+			<real>65</real>
+		</dict>
 		<key>F117FF8C-E6E5-4B0E-9FCE-DDB0A6476CAB</key>
 		<dict>
 			<key>colorindex</key>
@@ -7584,7 +7578,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>xpos</key>
 			<real>2245</real>
 			<key>ypos</key>
-			<real>710</real>
+			<real>850</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
@@ -7781,6 +7775,36 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>config</key>
 			<dict>
 				<key>default</key>
+				<string>tab</string>
+				<key>pairs</key>
+				<array>
+					<array>
+						<string>tab</string>
+						<string>tab</string>
+					</array>
+					<array>
+						<string>window</string>
+						<string>window</string>
+					</array>
+					<array>
+						<string>split</string>
+						<string>split</string>
+					</array>
+				</array>
+			</dict>
+			<key>description</key>
+			<string>where`⌘⏎` should open the note</string>
+			<key>label</key>
+			<string>Open in new</string>
+			<key>type</key>
+			<string>popupbutton</string>
+			<key>variable</key>
+			<string>open_note_in_new</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
 				<string>Markdown Link</string>
 				<key>pairs</key>
 				<array>
@@ -7828,27 +7852,6 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 				<key>default</key>
 				<string></string>
 				<key>placeholder</key>
-				<string>/Templates/Template Note.md</string>
-				<key>required</key>
-				<false/>
-				<key>trim</key>
-				<true/>
-			</dict>
-			<key>description</key>
-			<string>Vault-relative path to the template note to use when creating new notes with the `on` command or when browsing a folder via `o`. Any `{{title}}` placeholders in the template will be replaced with the name of the file. (Be aware that the template will be ignored when you use Folder Templates from the Templater Plugin.)</string>
-			<key>label</key>
-			<string>New Note Template</string>
-			<key>type</key>
-			<string>textfield</string>
-			<key>variable</key>
-			<string>template_note_path</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>default</key>
-				<string></string>
-				<key>placeholder</key>
 				<string>Inbox</string>
 				<key>required</key>
 				<false/>
@@ -7863,6 +7866,27 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<string>textfield</string>
 			<key>variable</key>
 			<string>new_note_location</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string></string>
+				<key>placeholder</key>
+				<string>/Templates/Template Note.md</string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>Vault-relative path to the template note to use when creating new notes with the `on` command or when browsing a folder via `o`. Any `{{title}}` placeholders in the template will be replaced with the name of the file. (Be aware that the template will be ignored when you use Folder Templates from the Templater Plugin.)</string>
+			<key>label</key>
+			<string>New Note Template</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>template_note_path</string>
 		</dict>
 		<dict>
 			<key>config</key>
