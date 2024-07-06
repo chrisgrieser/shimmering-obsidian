@@ -12,7 +12,7 @@ body:
           required: true
         - label:
             I have checked the [feature
-            overview](https://github.com/chrisgrieser/shimmering-obsidian#feature-overview) and the
+            overview](https://github.com/chrisgrieser/shimmering-obsidian#table-of-contents) and the
             feature doesn't already exist.
           required: true
         - label:

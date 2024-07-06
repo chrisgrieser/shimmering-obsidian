@@ -9,6 +9,8 @@ Alfred workflow with dozens of features for controlling your
 
 <img alt="Promo Video" width=70% src="https://user-images.githubusercontent.com/73286100/139678407-9ac39baa-5f49-42a0-9622-0fbaf68540b2.gif">
 
+## Table of Contents
+
 <!-- toc -->
 
 - [Installation](#installation)
