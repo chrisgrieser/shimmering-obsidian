@@ -5121,6 +5121,27 @@ curl -sL "https://raw.githubusercontent.com/chrisgrieser/shimmering-obsidian/mai
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>keyword</key>
+				<string>oupdate</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>🔁 Manually Refresh Metadata</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>4F356F57-A6AA-4277-B742-27DC8EE84450</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>lastpathcomponent</key>
 				<false/>
 				<key>onlyshowifquerypopulated</key>
@@ -5174,27 +5195,6 @@ curl -sL "https://raw.githubusercontent.com/chrisgrieser/shimmering-obsidian/mai
 			<string>alfred.workflow.output.playsound</string>
 			<key>uid</key>
 			<string>2FD866C2-DDB1-4C2D-A420-3A580FBC60D2</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>keyword</key>
-				<string>oupdate</string>
-				<key>subtext</key>
-				<string></string>
-				<key>text</key>
-				<string>🔁 Manually Refresh Metadata</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>4F356F57-A6AA-4277-B742-27DC8EE84450</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -7657,9 +7657,9 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 				<string>enabled</string>
 			</dict>
 			<key>description</key>
-			<string>While enabled, all Notes with the cssclass "private" will be censored. This setting is meant to be enabled temporarily when sharing the screen.</string>
+			<string>While enabled, all notes with the cssclass "private" will be censored. This setting is meant to be enabled temporarily when sharing the screen.</string>
 			<key>label</key>
-			<string>Privacy Mode</string>
+			<string>Privacy mode</string>
 			<key>type</key>
 			<string>checkbox</string>
 			<key>variable</key>
@@ -7676,7 +7676,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 				<string></string>
 			</dict>
 			<key>description</key>
-			<string>Reduces the number of emojis used throughout the workflow. (This does not apply to emojis you have explicitly added yourself with the Supercharged Icons feature further below.)</string>
+			<string>Reduces the number of emojis used throughout the workflow. (This does not apply to emojis you have explicitly added yourself with the "Supercharged icons" feature further below.)</string>
 			<key>label</key>
 			<string>Remove emojis</string>
 			<key>type</key>
@@ -7699,7 +7699,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>description</key>
 			<string>Heading Levels to Ignore for the main search `o`. Example: `h4 h5 h6` will only show h1, h2 and h3.</string>
 			<key>label</key>
-			<string>Ignore Heading Levels</string>
+			<string>Ignore heading levels</string>
 			<key>type</key>
 			<string>textfield</string>
 			<key>variable</key>
@@ -7716,9 +7716,9 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 				<string></string>
 			</dict>
 			<key>description</key>
-			<string>When appending to a note (`fn + ↵`), the note will automatically be opened afterwards. Also applies to the Scratchpad feature.</string>
+			<string>When appending to a note (`fn ↵`), the note will automatically be opened afterwards. Also applies to the Scratchpad feature.</string>
 			<key>label</key>
-			<string>Open Note after Appending</string>
+			<string>Open note after appending?</string>
 			<key>type</key>
 			<string>checkbox</string>
 			<key>variable</key>
@@ -7742,9 +7742,9 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 				</array>
 			</dict>
 			<key>description</key>
-			<string>When appending via `fn + ↵`, should the clipboard be appended or should there be a prompt for text to append</string>
+			<string>When appending via `fn ↵`, whether to append prompt for text or to append the clipboard content.</string>
 			<key>label</key>
-			<string>Appending Content</string>
+			<string>Appending content</string>
 			<key>type</key>
 			<string>popupbutton</string>
 			<key>variable</key>
@@ -7763,9 +7763,9 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 				<false/>
 			</dict>
 			<key>description</key>
-			<string>String to insert before content appended to a note via the Alfred-based Quick-Switchers (`fn + ↵`).</string>
+			<string>text to insert before text appended via `fn ↵`</string>
 			<key>label</key>
-			<string>Appending Prefix</string>
+			<string>Appending prefix</string>
 			<key>type</key>
 			<string>textfield</string>
 			<key>variable</key>
@@ -7819,9 +7819,9 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 				</array>
 			</dict>
 			<key>description</key>
-			<string>when using `control+return`</string>
+			<string>when using `⌃⏎`</string>
 			<key>label</key>
-			<string>Type of Link to Copy</string>
+			<string>Type of link to copy</string>
 			<key>type</key>
 			<string>popupbutton</string>
 			<key>variable</key>
@@ -7840,7 +7840,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>description</key>
 			<string>Merge Nested Tags for the tag-search `ot`. Example: `#inbox/to-read` and `#inbox/later` would both be subsumed under `#inbox`.</string>
 			<key>label</key>
-			<string>Merge Nested Tags</string>
+			<string>Merge nested tags</string>
 			<key>type</key>
 			<string>checkbox</string>
 			<key>variable</key>
@@ -7882,7 +7882,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>description</key>
 			<string>Vault-relative path to the template note to use when creating new notes with the `on` command or when browsing a folder via `o`. Any `{{title}}` placeholders in the template will be replaced with the name of the file. (Be aware that the template will be ignored when you use Folder Templates from the Templater Plugin.)</string>
 			<key>label</key>
-			<string>New Note Template</string>
+			<string>New note template</string>
 			<key>type</key>
 			<string>textfield</string>
 			<key>variable</key>
@@ -7903,7 +7903,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>description</key>
 			<string>To append/prepend icons to your search results, similar to the Supercharged Links Plugin. Consult the documentation for further information.</string>
 			<key>label</key>
-			<string>Supercharged Icons</string>
+			<string>Supercharged icons</string>
 			<key>type</key>
 			<string>filepicker</string>
 			<key>variable</key>
@@ -7924,7 +7924,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>description</key>
 			<string>Vault-relative path to your Scratchpad Note. When you append `#foobar`, the text will be appended to the section with the heading "foobar".</string>
 			<key>label</key>
-			<string>Scratchpad Note Path</string>
+			<string>Scratchpad note path</string>
 			<key>type</key>
 			<string>textfield</string>
 			<key>variable</key>
@@ -7945,7 +7945,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>description</key>
 			<string>String to insert before content appended to the Scratchpad.</string>
 			<key>label</key>
-			<string>Scratchpad Append Prefix</string>
+			<string>Scratchpad append prefix</string>
 			<key>type</key>
 			<string>textfield</string>
 			<key>variable</key>
@@ -7966,7 +7966,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>description</key>
 			<string>Set language codes for Tesseract, e.g., `eng+deu` for English and German. You can find out the code for your language(s) here: https://tesseract-ocr.github.io/tessdoc/Data-Files-in-different-versions.html</string>
 			<key>label</key>
-			<string>OCR Languages</string>
+			<string>OCR languages</string>
 			<key>type</key>
 			<string>textfield</string>
 			<key>variable</key>
@@ -7987,7 +7987,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>description</key>
 			<string>String to insert before OCR'ed content.</string>
 			<key>label</key>
-			<string>OCR Screenshot Prefix</string>
+			<string>OCR screenshot prefix</string>
 			<key>type</key>
 			<string>textfield</string>
 			<key>variable</key>
@@ -8008,7 +8008,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>description</key>
 			<string>Markdown file where the ORC'ed text will be saved to. When empty, will save/append to the file `{vault-path}/OCR-Screenshots.md`. Can be a markdown file outside your note and be used independently from Obsidian.</string>
 			<key>label</key>
-			<string>OCR Screenshot Note</string>
+			<string>OCR screenshot note</string>
 			<key>type</key>
 			<string>filepicker</string>
 			<key>variable</key>
@@ -8029,7 +8029,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>description</key>
 			<string>Folder where the image screenshots should be saved to. When empty, will save the images in `{vault-path}/screenshots/`.</string>
 			<key>label</key>
-			<string>Screenshot Path</string>
+			<string>Screenshot path</string>
 			<key>type</key>
 			<string>filepicker</string>
 			<key>variable</key>
@@ -8048,7 +8048,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>description</key>
 			<string>Open note after screenshot or OCR screenshot. (Disable this to be able to take screenshots in quick succession without opening Obsidian.)</string>
 			<key>label</key>
-			<string>Open after (OCR) Screenshot</string>
+			<string>Open after (OCR) screenshot</string>
 			<key>type</key>
 			<string>checkbox</string>
 			<key>variable</key>
@@ -8069,7 +8069,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>description</key>
 			<string>Folder where the backups done by the `obackup` command should be saved. Recommended to be a folder outside your vault.</string>
 			<key>label</key>
-			<string>Backup Destination</string>
+			<string>Backup destination</string>
 			<key>type</key>
 			<string>filepicker</string>
 			<key>variable</key>
