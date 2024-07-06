@@ -2843,13 +2843,13 @@ return hook;
 			<key>config</key>
 			<dict>
 				<key>argument</key>
-				<string></string>
+				<string>{var:append_prefix}{query}</string>
 				<key>passthroughargument</key>
-				<true/>
+				<false/>
 				<key>variables</key>
 				<dict>
 					<key>appendedText</key>
-					<string>{var:prefix}{query}</string>
+					<string>{var:append_prefix}{query}</string>
 				</dict>
 			</dict>
 			<key>type</key>
@@ -2888,7 +2888,7 @@ return hook;
 				<key>subtext</key>
 				<string>to note: {var:relative_path}</string>
 				<key>text</key>
-				<string>Append: '{query}'</string>
+				<string>Append: '{var:append_prefix}{query}'</string>
 				<key>withspace</key>
 				<false/>
 			</dict>
@@ -7742,7 +7742,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 				</array>
 			</dict>
 			<key>description</key>
-			<string>When appending via `fn ↵`, whether to append prompt for text or to append the clipboard content.</string>
+			<string>When appending via `fn ↵`, whether to prompt for text or to append the clipboard content.</string>
 			<key>label</key>
 			<string>Appending content</string>
 			<key>type</key>
@@ -7763,7 +7763,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 				<false/>
 			</dict>
 			<key>description</key>
-			<string>text to insert before text appended via `fn ↵`</string>
+			<string>Text to insert before text appended via `fn ↵`. Supports Alfred's "Dynamic Placeholders" to insert things like a date.</string>
 			<key>label</key>
 			<string>Appending prefix</string>
 			<key>type</key>
@@ -7943,7 +7943,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 				<false/>
 			</dict>
 			<key>description</key>
-			<string>String to insert before content appended to the Scratchpad.</string>
+			<string>Text to insert before content appended to the Scratchpad. Supports Alfred's "Dynamic Placeholders" to insert things like a date.</string>
 			<key>label</key>
 			<string>Scratchpad append prefix</string>
 			<key>type</key>

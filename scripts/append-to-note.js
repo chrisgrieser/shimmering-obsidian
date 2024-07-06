@@ -46,7 +46,7 @@ function run(argv) {
 	// PREPARE AND READ FILE
 	let heading = "";
 	let relativePath = $.getenv("relative_path");
-	const toAppend = $.getenv("prefix") + argv[0];
+	const toAppend = argv[0];
 
 	const notePathHasHeading = /#[^ ][^/]*$/.test(relativePath);
 	if (notePathHasHeading) {
@@ -65,7 +65,10 @@ function run(argv) {
 	// APPEND TO FILE
 
 	if (!notePathHasHeading) {
-		writeToFile(absolutePath, noteContent + "\n" + toAppend);
+		// only trim last line if it's a single blank
+		// (in other cases, it might be deliberately left blank by the user)
+		const trimmed = noteContent.replace(/([^\n])\n$/, "$1");
+		writeToFile(absolutePath, trimmed + "\n" + toAppend);
 		return relativePath; // return for opening function
 	}
 
