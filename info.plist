@@ -1139,7 +1139,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>956AC463-0D84-45FF-B72B-80E2C495EC71</string>
+				<string>E665A5F1-443E-4F6C-8FF5-806376E9C750</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1753,7 +1753,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>956AC463-0D84-45FF-B72B-80E2C495EC71</string>
+				<string>E665A5F1-443E-4F6C-8FF5-806376E9C750</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1905,6 +1905,19 @@
 		</array>
 		<key>E60130DC-8A6E-4892-8516-B79153DC480B</key>
 		<array/>
+		<key>E665A5F1-443E-4F6C-8FF5-806376E9C750</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>956AC463-0D84-45FF-B72B-80E2C495EC71</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>E6C3B3BC-E42C-40AC-89D3-4E7905BC4C9C</key>
 		<array>
 			<dict>
@@ -2714,13 +2727,11 @@ return hook;
 			<key>config</key>
 			<dict>
 				<key>argument</key>
-				<string></string>
+				<string>{var:scratchpad_append_prefix}{query}</string>
 				<key>passthroughargument</key>
-				<true/>
+				<false/>
 				<key>variables</key>
 				<dict>
-					<key>prefix</key>
-					<string>{var:scratchpad_append_prefix}</string>
 					<key>relative_path</key>
 					<string>{var:scratchpad_note_path}</string>
 				</dict>
@@ -2729,6 +2740,27 @@ return hook;
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
 			<string>3AB54AFB-E09E-4F9E-9436-2B3F830B87B0</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{var:appendedText}</string>
+				<key>title</key>
+				<string>✅ Appended</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>1E497866-1199-4947-BC1A-AC23ADDD6C82</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -2784,7 +2816,7 @@ return hook;
 						<key>matchstring</key>
 						<string>0</string>
 						<key>outputlabel</key>
-						<string>notify</string>
+						<string>not opening</string>
 						<key>uid</key>
 						<string>B631E15C-B7B7-4471-BFF6-701FEA2FCA69</string>
 					</dict>
@@ -2821,35 +2853,14 @@ return hook;
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<false/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string>{var:appendedText}</string>
-				<key>title</key>
-				<string>✅ Appended</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>1E497866-1199-4947-BC1A-AC23ADDD6C82</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argument</key>
-				<string>{var:append_prefix}{query}</string>
+				<string></string>
 				<key>passthroughargument</key>
-				<false/>
+				<true/>
 				<key>variables</key>
 				<dict>
 					<key>appendedText</key>
-					<string>{var:append_prefix}{query}</string>
+					<string>{query}</string>
 				</dict>
 			</dict>
 			<key>type</key>
@@ -2955,8 +2966,6 @@ return hook;
 				<false/>
 				<key>variables</key>
 				<dict>
-					<key>prefix</key>
-					<string>{var:append_prefix}</string>
 					<key>relative_path</key>
 					<string>{query}</string>
 				</dict>
@@ -2965,6 +2974,23 @@ return hook;
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
 			<string>A5BA80AA-D2FF-43BC-AE70-4C34D0BB4E20</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{var:append_prefix}{query}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>E665A5F1-443E-4F6C-8FF5-806376E9C750</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -5121,27 +5147,6 @@ curl -sL "https://raw.githubusercontent.com/chrisgrieser/shimmering-obsidian/mai
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>keyword</key>
-				<string>oupdate</string>
-				<key>subtext</key>
-				<string></string>
-				<key>text</key>
-				<string>🔁 Manually Refresh Metadata</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>4F356F57-A6AA-4277-B742-27DC8EE84450</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>lastpathcomponent</key>
 				<false/>
 				<key>onlyshowifquerypopulated</key>
@@ -5195,6 +5200,27 @@ curl -sL "https://raw.githubusercontent.com/chrisgrieser/shimmering-obsidian/mai
 			<string>alfred.workflow.output.playsound</string>
 			<key>uid</key>
 			<string>2FD866C2-DDB1-4C2D-A420-3A580FBC60D2</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>keyword</key>
+				<string>oupdate</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>🔁 Manually Refresh Metadata</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>4F356F57-A6AA-4277-B742-27DC8EE84450</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -6143,9 +6169,9 @@ curl -sL "https://raw.githubusercontent.com/chrisgrieser/shimmering-obsidian/mai
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<real>2485</real>
+			<real>2480</real>
 			<key>ypos</key>
-			<real>840</real>
+			<real>820</real>
 		</dict>
 		<key>23310407-0757-4547-AC30-83A9AF365D9D</key>
 		<dict>
@@ -6317,9 +6343,9 @@ curl -sL "https://raw.githubusercontent.com/chrisgrieser/shimmering-obsidian/mai
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>note</key>
-			<string>set vars</string>
+			<string>set path, insert prefix</string>
 			<key>xpos</key>
-			<real>1880</real>
+			<real>1720</real>
 			<key>ypos</key>
 			<real>815</real>
 		</dict>
@@ -6446,7 +6472,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>note</key>
 			<string>input</string>
 			<key>xpos</key>
-			<real>1741</real>
+			<real>1721</real>
 			<key>ypos</key>
 			<real>930</real>
 		</dict>
@@ -6497,7 +6523,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>colorindex</key>
 			<integer>6</integer>
 			<key>xpos</key>
-			<real>1490</real>
+			<real>1495</real>
 			<key>ypos</key>
 			<real>910</real>
 		</dict>
@@ -6591,7 +6617,7 @@ takes RELATIVE path (with or without heading) and opens it correctly</string>
 			<key>note</key>
 			<string>open after</string>
 			<key>xpos</key>
-			<real>2315</real>
+			<real>2370</real>
 			<key>ypos</key>
 			<real>825</real>
 		</dict>
@@ -6865,7 +6891,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>note</key>
 			<string>pass clipboard</string>
 			<key>xpos</key>
-			<real>1885</real>
+			<real>1865</real>
 			<key>ypos</key>
 			<real>1015</real>
 		</dict>
@@ -6910,7 +6936,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>colorindex</key>
 			<integer>11</integer>
 			<key>xpos</key>
-			<real>1470</real>
+			<real>1465</real>
 			<key>ypos</key>
 			<real>2380</real>
 		</dict>
@@ -6939,7 +6965,7 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>note</key>
 			<string>save appended text for notification</string>
 			<key>xpos</key>
-			<real>2040</real>
+			<real>2080</real>
 			<key>ypos</key>
 			<real>850</real>
 		</dict>
@@ -7008,9 +7034,9 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>note</key>
-			<string>set vars</string>
+			<string>save path</string>
 			<key>xpos</key>
-			<real>1645</real>
+			<real>1640</real>
 			<key>ypos</key>
 			<real>940</real>
 		</dict>
@@ -7048,9 +7074,9 @@ DOUBLE CLICK THIS to set Hotkey.</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<real>2485</real>
+			<real>2480</real>
 			<key>ypos</key>
-			<real>720</real>
+			<real>710</real>
 		</dict>
 		<key>B0AB019E-6AC5-494E-9F31-F818F9BFEE21</key>
 		<dict>
@@ -7139,7 +7165,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>note</key>
 			<string>append to note</string>
 			<key>xpos</key>
-			<real>2105</real>
+			<real>2155</real>
 			<key>ypos</key>
 			<real>820</real>
 		</dict>
@@ -7328,7 +7354,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<real>1850</real>
+			<real>1825</real>
 			<key>ypos</key>
 			<real>880</real>
 		</dict>
@@ -7397,7 +7423,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>colorindex</key>
 			<integer>6</integer>
 			<key>xpos</key>
-			<real>1565</real>
+			<real>1530</real>
 			<key>ypos</key>
 			<real>785</real>
 		</dict>
@@ -7418,6 +7444,17 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<real>1885</real>
 			<key>ypos</key>
 			<real>2540</real>
+		</dict>
+		<key>E665A5F1-443E-4F6C-8FF5-806376E9C750</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>9</integer>
+			<key>note</key>
+			<string>insert prefix</string>
+			<key>xpos</key>
+			<real>1980</real>
+			<key>ypos</key>
+			<real>945</real>
 		</dict>
 		<key>E6C3B3BC-E42C-40AC-89D3-4E7905BC4C9C</key>
 		<dict>
@@ -7576,7 +7613,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>note</key>
 			<string>remove \n</string>
 			<key>xpos</key>
-			<real>2245</real>
+			<real>2295</real>
 			<key>ypos</key>
 			<real>850</real>
 		</dict>
