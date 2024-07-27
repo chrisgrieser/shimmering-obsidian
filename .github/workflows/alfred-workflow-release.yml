@@ -44,7 +44,7 @@ jobs:
         run: |
           zip --recurse-paths --symlinks "${{ env.WORKFLOW_NAME }}.alfredworkflow" . \
             --exclude ".git*" "Justfile" ".build-and-release.sh" "README.md" \
-            "assets/*" ".rsync-exclude"
+            ".rsync-exclude" ".editorconfig"
 
       # DOCS https://github.com/softprops/action-gh-release?tab=readme-ov-file#%EF%B8%8F-uploading-release-assets
       - name: Release
