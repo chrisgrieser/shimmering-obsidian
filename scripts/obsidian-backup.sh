@@ -10,11 +10,12 @@ backup="$backup_destination/Obsidian-Backup_$timestamp.zip"
 # therefore explicitly naming the three hidden files that should be backuped
 mkdir -p "$backup_destination"
 cd "$vault_path" || exit 1
-zip -r --quiet "$backup" ./* ./.{trash,obsidian,gitignore}
+zip --recurse-paths --symlinks --quiet "$backup" .
 
 # restrict number of backups
 actual_number=$((max_number_of_bkps + 1))
 cd "$backup_destination" || exit 1
+# shellcheck disable=2012
 ls -t | tail -n +$actual_number | tr '\n' '\0' | xargs -0 rm
 
 # for notification
