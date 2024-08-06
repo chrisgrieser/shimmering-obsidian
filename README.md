@@ -2,7 +2,7 @@
 Alfred workflow with dozens of features for controlling your
 [Obsidian](https://obsidian.md/) vault.
 
-[⭐Featured in the Alfred
+[⭐ Featured in the Alfred
 Gallery.](https://alfred.app/workflows/chrisgrieser/shimmering-obsidian/)
 
 ![Download count](https://img.shields.io/github/downloads/chrisgrieser/shimmering-obsidian/total?label=Downloads&style=plastic)
@@ -625,10 +625,11 @@ compatibility. If you are interested in this subject, feel free to get in touch.
 - [Mastodon](https://pkm.social/@pseudometa)
 - [LinkedIn](https://www.linkedin.com/in/christopher-grieser-ba693b17a/)
 
-*Note that for questions, bug reports, or feature requests for this workflow,
-please open a [GitHub
-issue](https://github.com/chrisgrieser/shimmering-obsidian/issues), since it is
-better suited for technical support.*
+> [!IMPORTANT]
+> Note that for questions, bug reports, or feature requests for this workflow,
+> please open a [GitHub
+> issue](https://github.com/chrisgrieser/shimmering-obsidian/issues), since it is
+> better suited for technical support.
 
 <a href='https://ko-fi.com/Y8Y86SQ91' target='_blank'><img height='36'
 style='border:0px;height:36px;' src='https://cdn.ko-fi.com/cdn/kofi1.png?v=3'
