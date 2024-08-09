@@ -5,6 +5,7 @@
 
 mkdir -p "$screenshot_path"
 imageFileName="Screenshot $(date '+%Y-%m-%d %H-%M-%S').png"
+imagePath="$screenshot_path/$imageFileName"
 
 screencapture -i "$screenshot_path/$imageFileName"
 echo "![[$imageFileName]]" >> "$vault_path/Images.md"
