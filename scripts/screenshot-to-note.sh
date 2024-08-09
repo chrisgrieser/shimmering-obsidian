@@ -5,8 +5,12 @@
 
 mkdir -p "$screenshot_path"
 imageFileName="Screenshot $(date '+%Y-%m-%d %H-%M-%S').png"
+imagePath="$screenshot_path/$imageFileName"
 
-screencapture -i "$screenshot_path/$imageFileName"
-echo "![[$imageFileName]]" >> "$vault_path/Images.md"
+screencapture -i "$imagePath"
 
-[[ -e "$imagePath" ]] && echo -n "Screenshot made"
+if [[ -e "$imagePath" ]] ; then
+    echo "![[$imageFileName]]" >> "$vault_path/Images.md"
+
+    echo -n "Screenshot made"
+fi
