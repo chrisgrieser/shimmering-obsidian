@@ -6,7 +6,7 @@ on:
     - cron: "14 14 14 * *"
 
   # allow triggering manually
-  workflow_dispatch: 
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -27,7 +27,14 @@ jobs:
 
       - name: update documentation search index
         run: |
-          node ./.github/doc-search-cache/re-index-documentation.mjs > ./.github/doc-search-cache/cache.json
+          for i in {1..5}; do
+            echo "Attempt #$i"
+            node ./.github/doc-search-cache/re-index-documentation.mjs \
+              > ./.github/doc-search-cache/cache.json && exit 0
+            sleep 30
+          done
+          echo "Multiple attempts to re-index the Obsidian docs failed. Aborting."
+          exit 1
 
       - name: commit
         uses: stefanzweifel/git-auto-commit-action@v4

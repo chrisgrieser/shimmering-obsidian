@@ -28,6 +28,7 @@ async function run() {
 	const officialDocsJSON = await getOnlineJson(
 		"https://api.github.com/repos/obsidianmd/obsidian-docs/git/trees/master?recursive=1",
 	);
+
 	const rawGitHubURL = "https://raw.githubusercontent.com/obsidianmd/obsidian-docs/master/";
 	const hubPagesURL = "https://publish.obsidian.md/hub/";
 	const hubPagesJSON = await getOnlineJson(
