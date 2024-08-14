@@ -6,7 +6,7 @@ on:
     - cron: "14 14 14 * *"
 
   # allow triggering manually
-  workflow_dispatch: {}
+  workflow_dispatch: 
 
 permissions:
   contents: write
@@ -17,18 +17,20 @@ jobs:
   build:
     runs-on: macos-latest
     steps:
-      - name: Checkout
+      - name: checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node
+      - name: setup node
         uses: actions/setup-node@v4
         with:
-          node-version: "21.x"
+          node-version: "22.x"
 
-      - name: Update Documentation Search Index
+      - name: update documentation search index
         run: |
           node ./.github/doc-search-cache/re-index-documentation.mjs > ./.github/doc-search-cache/cache.json
-          git add ./.github/doc-search-cache/cache.json
-          [[ -z "$(git status --short)" ]] && exit 0 # no update needed
-          git commit -m "chore: Updated documentation index" --author="🤖 Automated GitHub Action<cron@job>"
-          git push
+
+      - name: commit
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "chore: Updated documentation index"
+          branch: ${{ github.head_ref }}
