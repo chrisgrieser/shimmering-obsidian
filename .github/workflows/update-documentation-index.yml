@@ -37,7 +37,7 @@ jobs:
           exit 1
 
       - name: commit
-        uses: stefanzweifel/git-auto-commit-action@v4
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: Updated documentation index"
           branch: ${{ github.head_ref }}
