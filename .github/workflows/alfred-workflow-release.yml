@@ -25,7 +25,7 @@ jobs:
           fetch-depth: 0 # 0 = all history
           fetch-tags: true
 
-      - name: Create Changelog
+      - name: Create changelog
         run: |
           count_tags="$(git tag | wc -l)"
           if [[ $count_tags -ge 2 ]]; then 
@@ -49,7 +49,7 @@ jobs:
 
       # DOCS https://github.com/softprops/action-gh-release?tab=readme-ov-file#%EF%B8%8F-uploading-release-assets
       - name: Release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         with:
           token: ${{ env.GITHUB_TOKEN }}
           body_path: CHANGELOG.txt
