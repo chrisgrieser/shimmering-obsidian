@@ -561,20 +561,14 @@ src="https://user-images.githubusercontent.com/73286100/131027623-5e8b3667-d00d-
 
 ### Official documentation
 <!-- LTeX: enabled=false -->
-**`oh`: Get `h`elp by searching the official [Obsidian
-documentation](https://help.obsidian.md/Start+here) and the [Obsidian
-Hub](https://publish.obsidian.md/hub).**
+**`oh`: Search the official [Obsidian help
+(documentation)](https://help.obsidian.md/Start+here)
 <!-- LTeX: enabled=true -->
 - This command mimics the search behavior on the official documentation site,
   meaning that it also searches for headings inside individual documentation
   pages.
 	* Press `⏎` to open in your default browser.
 	* Use `⌥ + ⏎` to copy the link to your clipboard.
-- After major updates of the Obsidian documentation, this Alfred workflow needs
-  to recreate its index of the Obsidian documentation. You can do so by
-  selecting the respective option when typing keyword `oupdate`. (Index
-  recreation can take a minute, depending on your internet connection. You
-  are notified when it is done.)
 
 **`odv`: Search the
 [dataview](https://blacksmithgu.github.io/obsidian-dataview/) documentation.**

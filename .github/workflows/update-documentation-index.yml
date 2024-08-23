@@ -5,8 +5,14 @@ on:
   schedule:
     - cron: "14 14 14 * *"
 
-  # allow triggering manually
+  # triggering manually
   workflow_dispatch:
+
+  # when this file or the script for re-indexing is changed
+  push:
+    paths:
+      - .github/doc-search-cache/re-index-documentation.mjs
+      - .github/workflows/update-documentation-index.yml
 
 permissions:
   contents: write
