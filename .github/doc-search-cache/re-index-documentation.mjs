@@ -49,6 +49,7 @@ async function run() {
 			subtitle: area,
 			uid: url,
 			arg: url,
+			quicklookurl: url,
 		});
 
 		// HEADINGS of Official Docs
@@ -69,6 +70,7 @@ async function run() {
 					uid: url,
 					match: alfredMatcher(headerName),
 					arg: url,
+					quicklookurl: url,
 				});
 			});
 	};
