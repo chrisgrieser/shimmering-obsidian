@@ -1,4 +1,5 @@
 .rsync-exclude
+.editorconfig
 .gitignore
 .git/
 .github/
@@ -9,10 +10,9 @@ README.md
 LICENSE
 Justfile
 .build-and-release.sh
-.editorconfig
 .markdownlint.yaml
-.typos.toml
 
-alfred.d.ts
-jsconfig.json
+# symlinks
 jxa-globals.d.ts
+jsconfig.json
+alfred.d.ts

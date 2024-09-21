@@ -1,21 +1,14 @@
-# yaml-language-server: $schema=https://raw.githubusercontent.com/DavidAnson/markdownlint/main/schema/markdownlint-config-schema.json
-#───────────────────────────────────────────────────────────────────────────────
 # Defaults https://github.com/DavidAnson/markdownlint/blob/main/schema/.markdownlint.yaml
 # DOCS https://github.com/markdownlint/markdownlint/blob/main/docs/RULES.md
 #───────────────────────────────────────────────────────────────────────────────
 
 # MODIFIED SETTINGS
-blanks-around-headings:
-  lines_below: 0 # space waster
+blanks-around-headings: { lines_below: 0 } # rule of proximity
 ul-style: { style: sublist }
 
-# not autofixable
-ol-prefix: { style: ordered } 
-line-length:
-  tables: false
-  code_blocks: false
-no-inline-html:
-  allowed_elements: [img, details, summary, kbd, a, br]
+ol-prefix: { style: ordered }
+line-length: { tables: false, code_blocks: false }
+no-inline-html: { allowed_elements: [img, details, summary, kbd, a, br] }
 
 #─────────────────────────────────────────────────────────────────────────────
 # DISABLED
