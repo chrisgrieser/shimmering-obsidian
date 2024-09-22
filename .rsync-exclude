@@ -1,18 +1,28 @@
-.rsync-exclude
-.editorconfig
-.gitignore
-.git/
-.github/
-docs/
-assets/
-prefs.plist
-README.md
-LICENSE
-Justfile
-.build-and-release.sh
-.markdownlint.yaml
+# vim: ft=gitignore
+#───────────────────────────────────────────────────────────────────────────────
 
-# symlinks
+# git
+.git/
+.gitignore
+
+# Alfred
+prefs.plist
+.rsync-exclude
+
+# docs
+docs/
+LICENSE
+# INFO leading `/` -> ignore only the README in the root, not in subfolders
+/README.md
+
+# build
+Justfile
+.github/
+.build-and-release.sh
+
+# linter & types
+.editorconfig
+.markdownlint.yaml
 jxa-globals.d.ts
 jsconfig.json
 alfred.d.ts
