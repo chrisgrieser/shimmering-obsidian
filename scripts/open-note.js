@@ -4,13 +4,6 @@ const app = Application.currentApplication();
 app.includeStandardAdditions = true;
 //──────────────────────────────────────────────────────────────────────────────
 
-function noObsiWinOpen() {
-	const obsiWins = Application("System Events").applicationProcesses.byName("Obsidian").windows();
-	return obsiWins.length === 0;
-}
-
-//──────────────────────────────────────────────────────────────────────────────
-
 /** @type {AlfredRun} */
 // biome-ignore lint/correctness/noUnusedVariables: Alfred run
 function run(argv) {
@@ -36,23 +29,18 @@ function run(argv) {
 		lineNum ? "&line=" + encodeURIComponent(lineNum) : "",
 		openMode ? "&openmode=" + openMode : "",
 	];
-	const urlScheme = urlComponents.join("");
+	const uri = urlComponents.join("");
 
 	// OPEN FILE
-	// delay opening URI scheme until Obsidian is running, URIs do not open
-	// reliably when vault is not open. (also applies to Obsidian core's URIs)
-	// cannot use "window exists" condition as check, since windows already exist
-	// before Obsidian is able to accept URIs
-	const vaultStartUpDelay = 2; // CONFIG
+	// - Delay opening URI scheme until Obsidian is running, URIs do not open
+	//   reliably when vault is not open. (also applies to Obsidian core's URIs)
+	// - Do not count windows, since it requires somewhat the macOS accessibility
+	//   perrmission, which often appears to be bit buggy (see #191).
 	if (!Application("Obsidian").running()) {
 		Application("Obsidian").launch();
-		delay(vaultStartUpDelay);
-	} else if (noObsiWinOpen()) {
-		// open correct vault first
-		app.openLocation("obsidian://open?vault=" + vaultNameEnc);
-		// less delay, since Obsidian process is already running
-		delay(vaultStartUpDelay - 0.5);
+		delay(1.5);
 	}
-	app.openLocation(urlScheme);
+	app.openLocation(uri);
+	console.log("URI opened:", uri);
 	return;
 }
