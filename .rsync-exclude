@@ -21,6 +21,7 @@ Justfile
 .build-and-release.sh
 
 # linter & types
+.typos.toml
 .editorconfig
 .markdownlint.yaml
 jxa-globals.d.ts
