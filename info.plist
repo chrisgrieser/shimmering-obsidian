@@ -5112,12 +5112,11 @@ echo "$backup"</string>
 				<string>Loading...</string>
 				<key>script</key>
 				<string># INFO
-# - has Alfred caching enabled, so curling here is fine
-# - updated 1x per month via cronjob
+# - has Alfred caching enabled, so just using `curl` here is fine
+# - updated regularly via cronjob
+# - maintained at the "Search ALL the docs" repo
 
-curl -sL "https://raw.githubusercontent.com/chrisgrieser/shimmering-obsidian/main/.github/doc-search-cache/cache.json"
-
-</string>
+curl -sL "https://raw.githubusercontent.com/chrisgrieser/alfred-docs-searches/.github/caches/obsidian-help-index.json"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
