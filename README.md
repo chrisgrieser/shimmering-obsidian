@@ -1,12 +1,13 @@
 # Shimmering Obsidian 🎩
+![GitHub Downloads](https://img.shields.io/github/downloads/chrisgrieser/shimmering-obsidian/total?label=GitHub%20Downloads&style=plastic&logo=github)
+![Alfred Gallery Downloads](https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fchrisgrieser%2F.config%2Frefs%2Fheads%2Fmain%2FAlfred.alfredpreferences%2Falfred-workflow-download-count.yaml&query=shimmering-obsidian&style=plastic&logo=alfred&label=Gallery%20Downloads&color=%235C1F87)
+![Latest Release](https://img.shields.io/github/v/release/chrisgrieser/shimmering-obsidian?label=Latest%20Release&style=plastic)
+
 Alfred workflow with dozens of features for controlling your
 [Obsidian](https://obsidian.md/) vault.
 
 [⭐ Featured in the Alfred
 Gallery.](https://alfred.app/workflows/chrisgrieser/shimmering-obsidian/)
-
-![Download count](https://img.shields.io/github/downloads/chrisgrieser/shimmering-obsidian/total?label=Downloads&style=plastic)
-![Last release](https://img.shields.io/github/v/release/chrisgrieser/shimmering-obsidian?label=Latest%20Release&style=plastic)
 
 <img alt="Promo Video" width=70% src="https://user-images.githubusercontent.com/73286100/139678407-9ac39baa-5f49-42a0-9622-0fbaf68540b2.gif">
 
