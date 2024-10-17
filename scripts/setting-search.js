@@ -1,6 +1,5 @@
 #!/usr/bin/env osascript -l JavaScript
 ObjC.import("stdlib");
-ObjC.import("Foundation");
 const app = Application.currentApplication();
 app.includeStandardAdditions = true;
 //──────────────────────────────────────────────────────────────────────────────
@@ -49,11 +48,12 @@ function run() {
 	//──────────────────────────────────────────────────────────────────────────────
 	const settings = [];
 
-	enabledCorePlugins.forEach((/** @type {string} */ pluginID) => {
+	for (const [pluginID, enabled] of Object.entries(enabledCorePlugins)) {
+		if (!enabled) continue;
 		const hasSettings = corePluginsWithSettings
 			.map((/** @type {{ id: string; }} */ p) => p.id)
 			.includes(pluginID);
-		if (!hasSettings) return;
+		if (!hasSettings) continue;
 
 		const pluginName = corePluginsWithSettings.filter(
 			(/** @type {{ id: string; }} */ item) => item.id === pluginID,
@@ -77,7 +77,7 @@ function run() {
 				},
 			},
 		});
-	});
+	}
 
 	standardSettings.forEach(
 		(/** @type {{ id: string; title: string; match: string; }} */ setting) => {
