@@ -1,10 +1,8 @@
 #!/usr/bin/env osascript -l JavaScript
-
 ObjC.import("stdlib");
 ObjC.import("Foundation");
 const app = Application.currentApplication();
 app.includeStandardAdditions = true;
-
 //──────────────────────────────────────────────────────────────────────────────
 
 /** @param {string} path */
@@ -27,14 +25,26 @@ function run() {
 
 	const standardSettings = JSON.parse(readFile("./data/settings-database.json"));
 
-	const installedPlugins = app.doShellScript(`ls -1 "${vaultPath}/${configFolder}/plugins/"`).split("\r");
-	const enabledComPlugins = JSON.parse(readFile(`${vaultPath}/${configFolder}/community-plugins.json`));
+	const installedPlugins = app
+		.doShellScript(`ls -1 "${vaultPath}/${configFolder}/plugins/"`)
+		.split("\r");
+	const enabledComPlugins = JSON.parse(
+		readFile(`${vaultPath}/${configFolder}/community-plugins.json`),
+	);
 
-	const corePluginsWithSettings = JSON.parse(readFile("./data/core-plugins-with-settings-database.json"));
-	const enabledCorePlugins = JSON.parse(readFile(`${vaultPath}/${configFolder}/core-plugins.json`));
+	const corePluginsWithSettings = JSON.parse(
+		readFile("./data/core-plugins-with-settings-database.json"),
+	);
+	const enabledCorePlugins = JSON.parse(
+		readFile(`${vaultPath}/${configFolder}/core-plugins.json`),
+	);
 
 	const deprecated = JSON.parse(readFile("./data/deprecated-plugins.json"));
-	const deprecatedPlugins = [...deprecated.sherlocked, ...deprecated.dysfunct, ...deprecated.deprecated];
+	const deprecatedPlugins = [
+		...deprecated.sherlocked,
+		...deprecated.dysfunct,
+		...deprecated.deprecated,
+	];
 
 	//──────────────────────────────────────────────────────────────────────────────
 	const settings = [];
@@ -69,23 +79,25 @@ function run() {
 		});
 	});
 
-	standardSettings.forEach((/** @type {{ id: string; title: string; match: string; }} */ setting) => {
-		let URI = uriStart + "&settingid=" + setting.id;
-		if (setting.id === "updateplugins") URI = uriStart + "&updateplugins=true";
+	standardSettings.forEach(
+		(/** @type {{ id: string; title: string; match: string; }} */ setting) => {
+			let URI = uriStart + "&settingid=" + setting.id;
+			if (setting.id === "updateplugins") URI = uriStart + "&updateplugins=true";
 
-		settings.push({
-			title: setting.title,
-			match: setting.match,
-			uid: setting.id,
-			arg: URI,
-			mods: {
-				alt: { valid: false },
-				cmd: { valid: false },
-				ctrl: { valid: false },
-				fn: { valid: false },
-			},
-		});
-	});
+			settings.push({
+				title: setting.title,
+				match: setting.match,
+				uid: setting.id,
+				arg: URI,
+				mods: {
+					alt: { valid: false },
+					cmd: { valid: false },
+					ctrl: { valid: false },
+					fn: { valid: false },
+				},
+			});
+		},
+	);
 
 	installedPlugins.forEach((pluginFolder) => {
 		const pluginFolderPath = `${vaultPath}/${configFolder}/plugins/${pluginFolder}`;
