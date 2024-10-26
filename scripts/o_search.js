@@ -42,12 +42,8 @@ function run() {
 	const starredJSON = `${vaultConfig}/starred.json`;
 	const bookmarkJSON = `${vaultConfig}/bookmarks.json`;
 	const excludeFilterJSON = `${vaultConfig}/app.json`;
-	const superIconFile = $.getenv("supercharged_icon_file");
 	const removeEmojis = $.getenv("remove_emojis") === "1";
 	const subtitleType = $.getenv("main_search_subtitle");
-	// exclude cssclass: private
-	const censorChar = $.getenv("censor_char");
-	const privacyModeOn = $.getenv("privacy_mode") === "1";
 
 	let recentJSON = `${vaultConfig}/workspace.json`;
 	if (!fileExists(recentJSON)) recentJSON = recentJSON.slice(0, -5); // Obsidian 0.16 uses workspace.json → https://discord.com/channels/686053708261228577/716028884885307432/1013906018578743478
@@ -66,7 +62,7 @@ function run() {
 				{
 					title: "🚫 No vault metadata found.",
 					subtitle:
-						"Please run the Alfred command `osetup` first. This only has to be done once.",
+						"Please run the Alfred command `osetup` first. This has to be done only once.",
 					valid: false,
 				},
 			],
@@ -107,16 +103,6 @@ function run() {
 		bmFlatten(bookm, bookmarks);
 	}
 	const starsAndBookmarks = [...new Set([...stars, ...bookmarks])];
-
-	//──────────────────────────────────────────────────────────────────────────────
-	// ICONS
-	/** @type {string[]} */
-	let superIconList = [];
-	if (superIconFile && fileExists(superIconFile)) {
-		superIconList = readFile(superIconFile)
-			.split("\n")
-			.filter((line) => line.length > 0);
-	}
 
 	//──────────────────────────────────────────────────────────────────────────────
 	// DETERMINE PATH TO SEARCH
@@ -173,7 +159,6 @@ function run() {
 		});
 	}
 
-	// @ts-expect-error
 	folderArray = applyExcludeFilter(folderArray, true);
 	canvasArray = applyExcludeFilter(canvasArray, false);
 	fileArray = applyExcludeFilter(fileArray, false);
@@ -217,30 +202,14 @@ function run() {
 		if (filename.toLowerCase().includes("kanban")) iconpath = "icons/kanban.png";
 		if (removeEmojis) emoji = "";
 
-		let superchargedIcon = "";
-		let superchargedIcon2 = "";
-		if (superIconList.length > 0 && file.tags) {
-			for (const pair of superIconList) {
-				let [tag, icon, icon2] = pair.split(",");
-				tag = tag.toLowerCase().replaceAll("#", "");
-				if (file.tags.includes(tag) && icon) superchargedIcon = icon + " ";
-				else if (file.tags.includes(tag) && icon2) superchargedIcon2 = " " + icon2;
-			}
-		}
-
-		// censor note?
-		const isPrivateNote = file.frontmatter?.cssclass?.includes("private");
-		const applyCensoring = isPrivateNote && privacyModeOn;
-		const displayName = applyCensoring ? filename.replace(/./g, censorChar) : filename;
-
 		const subtitle =
 			subtitleType === "parent"
 				? parentFolder(relativePath)
-				: (file.tags || []).map((t) => "#" + t).join(" ");
+				: (file.tags || []).map((/** @type {string} */ t) => "#" + t).join(" ");
 
 		// Notes (file names)
 		resultsArr[insertVia]({
-			title: emoji + superchargedIcon + displayName + superchargedIcon2,
+			title: emoji + filename,
 			match: camelCaseMatch(filename) + tagMatcher + " filename name title" + additionalMatcher,
 			subtitle: subtitle,
 			arg: relativePath,
@@ -253,11 +222,10 @@ function run() {
 		// Aliases
 		if (file.aliases) {
 			for (const alias of file.aliases) {
-				const displayAlias = applyCensoring ? alias.replace(/./g, censorChar) : alias;
 				resultsArr[insertVia]({
-					title: emoji + superchargedIcon + displayAlias + superchargedIcon2,
+					title: emoji + alias,
 					match: camelCaseMatch(alias) + "alias",
-					subtitle: "↪ " + displayName,
+					subtitle: "↪ " + alias,
 					arg: relativePath,
 					quicklookurl: absolutePath,
 					type: "file:skipcheck",
@@ -275,12 +243,11 @@ function run() {
 			if (headingIgnore[hLevel]) continue; // skips iteration if heading has been configured as ignore
 			const headingIconpath = `icons/headings/h${hLevel}.png`;
 			const matchStr = camelCaseMatch(hName) + `h${hLevel}`;
-			const displayHeading = applyCensoring ? hName.replace(/./g, censorChar) : hName;
 
 			resultsArr[insertVia]({
-				title: displayHeading,
+				title: hName,
 				match: matchStr,
-				subtitle: "➣ " + displayName,
+				subtitle: "➣ " + filename,
 				arg: relativePath + "#" + hName,
 				uid: relativePath + "#" + hName,
 				quicklookurl: absolutePath,

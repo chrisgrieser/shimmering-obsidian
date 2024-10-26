@@ -32,14 +32,6 @@ function run() {
 
 	const tagsJSON = `${vaultPath}/${configFolder}/plugins/metadata-extractor/tags.json`;
 	const mergeNestedTags = $.getenv("merge_nested_tags") === "1";
-	const superIconFile = $.getenv("supercharged_icon_file");
-
-	let superIconList = [];
-	if (superIconFile && fileExists(superIconFile)) {
-		superIconList = readFile(superIconFile)
-			.split("\n")
-			.filter((line) => line.length !== 0);
-	}
 
 	//───────────────────────────────────────────────────────────────────────────
 	// GUARD: metadata does not exist since user has not run `osetup`
@@ -102,22 +94,10 @@ function run() {
 			}
 			if (tagName.includes("/")) extraMatcher += " nested child";
 
-			let superchargedIcon = "";
-			let superchargedIcon2 = "";
-			if (superIconList) {
-				superIconList.forEach((pair) => {
-					const tag = pair.split(",")[0].toLowerCase().replaceAll("#", "");
-					const icon = pair.split(",")[1];
-					const icon2 = pair.split(",")[2];
-					if (tagName === tag && icon) superchargedIcon = icon + " ";
-					else if (tagName === tag && icon2) superchargedIcon2 = " " + icon2;
-				});
-			}
-
 			const tagCountStr = tagData.tagCount ? `${tagData.tagCount}x` : "";
 
 			return {
-				title: superchargedIcon + "#" + tagName + superchargedIcon2,
+				title: "#" + tagName,
 				subtitle: tagCountStr + mergeInfo,
 				match: camelCaseMatch("#" + tagName) + extraMatcher,
 				uid: tagName,
@@ -131,9 +111,6 @@ function run() {
 
 	return JSON.stringify({
 		items: tagsArray,
-		cache: {
-			seconds: 600,
-			loosereload: true,
-		},
+		cache: { seconds: 600, loosereload: true },
 	});
 }

@@ -17,44 +17,42 @@ Gallery.](https://alfred.app/workflows/chrisgrieser/shimmering-obsidian/)
 
 - [Installation](#installation)
 - [Alfred-based quick switcher](#alfred-based-quick-switcher)
-	* [How the search works](#how-the-search-works)
-	* [Main search](#main-search)
-		+ [Search for notes](#search-for-notes)
-		+ [Smart queries](#smart-queries)
-		+ [Search for aliases](#search-for-aliases)
-		+ [Search for folders](#search-for-folders)
-		+ [Search for headings](#search-for-headings)
-		+ [Browse links of a note](#browse-links-of-a-note)
-	* [Search notes by their tags](#search-notes-by-their-tags)
-	* [Search bookmarked files](#search-bookmarked-files)
-	* [Search recent files](#search-recent-files)
-	* [Search for attachments](#search-for-attachments)
-	* [Search all external links in the entire vault](#search-all-external-links-in-the-entire-vault)
-	* [Extra features](#extra-features)
-		+ [Supercharged icons](#supercharged-icons)
-		+ [Privacy mode](#privacy-mode)
-		+ [Vault search as Alfred fallback](#vault-search-as-alfred-fallback)
-		+ [Previewing notes via QuickLook](#previewing-notes-via-quicklook)
+  * [How the search works](#how-the-search-works)
+  * [Main search](#main-search)
+    + [Search for notes](#search-for-notes)
+    + [Smart queries](#smart-queries)
+    + [Search for aliases](#search-for-aliases)
+    + [Search for folders](#search-for-folders)
+    + [Search for headings](#search-for-headings)
+    + [Browse links of a note](#browse-links-of-a-note)
+  * [Search notes by their tags](#search-notes-by-their-tags)
+  * [Search bookmarked files](#search-bookmarked-files)
+  * [Search recent files](#search-recent-files)
+  * [Search for attachments](#search-for-attachments)
+  * [Search all external links in the entire vault](#search-all-external-links-in-the-entire-vault)
+  * [Extra features](#extra-features)
+    + [Vault search as Alfred fallback](#vault-search-as-alfred-fallback)
+    + [Previewing notes via QuickLook](#previewing-notes-via-quicklook)
 - [Note-related features](#note-related-features)
-	* [Create a new note](#create-a-new-note)
-	* [Scratchpad](#scratchpad)
+  * [Create a new note](#create-a-new-note)
+  * [Scratchpad](#scratchpad)
 - [Screenshot features](#screenshot-features)
-	* [OCR screenshots](#ocr-screenshots)
-	* [Image screenshot](#image-screenshot)
+  * [OCR screenshots](#ocr-screenshots)
+  * [Image screenshot](#image-screenshot)
 - [Utility features](#utility-features)
-	* [Workspace switcher](#workspace-switcher)
-	* [Vault switcher](#vault-switcher)
-	* [Back up your vault](#back-up-your-vault)
-	* [CSS files](#css-files)
-	* [Open various folders](#open-various-folders)
-	* [Update plugins & metadata](#update-plugins--metadata)
+  * [Workspace switcher](#workspace-switcher)
+  * [Vault switcher](#vault-switcher)
+  * [Back up your vault](#back-up-your-vault)
+  * [CSS files](#css-files)
+  * [Open various folders](#open-various-folders)
+  * [Update plugins & metadata](#update-plugins--metadata)
 - [Plugins, themes, and settings](#plugins-themes-and-settings)
-	* [Plugins](#plugins)
-	* [Themes](#themes)
-	* [Settings & local plugins](#settings--local-plugins)
+  * [Plugins](#plugins)
+  * [Themes](#themes)
+  * [Settings & local plugins](#settings--local-plugins)
 - [Documentation searches](#documentation-searches)
-	* [Official documentation](#official-documentation)
-	* [Plugin developer documentation](#plugin-developer-documentation)
+  * [Official documentation](#official-documentation)
+  * [Plugin developer documentation](#plugin-developer-documentation)
 - [Cheatsheet](#cheatsheet)
 - [Credits](#credits)
 - [About the developer](#about-the-developer)
@@ -271,39 +269,6 @@ the file simply is opened in your default app.)
 
 ### Extra features
 
-#### Supercharged icons
-You can prepend or append icons to the results of any search based on the notes'
-tags, similar to the [Supercharged Links
-Plugin](https://obsidian.md/plugins?id=supercharged-links-obsidian).
-- To do so, you have to add a file containing your emojis to the workflow
-  configuration `Supercharged Icons`.
-- Every line of the file should represent a pair of tag and emoji to be
-  assigned, separated by `,`. Use `,,` so that the emoji gets appended instead
-  of prepended.
-
-**Example**
-
-```csv
-coding,💻
-person,👤
-seedling,,🌱
-pkm,🧠,💡
-```
-
-…results in:
-
-```text
-💻 Filename1
-👤 Filename2
-Filename3 🌱
-🧠 Filename4 💡
-```
-
-#### Privacy mode
-When the "Privacy Mode" checkbox is enabled, all notes with the `cssclass`
-`private` are censored when performing a search. This setting is meant to be
-enabled temporarily, for example during screen-sharing.
-
 #### Vault search as Alfred fallback
 The main search (`o`) can also be used as [Fallback Search for
 Alfred](https://www.alfredapp.com/help/features/default-results/fallback-searches/),
@@ -312,7 +277,7 @@ basically a search that shows up when any Alfred search has no result.
 #### Previewing notes via QuickLook
 To avoid accidentally triggering the Quick Look feature, it is suggested you
 turn off activating QuickLook via shift and use `⌘ + Y` instead. You can do so
-with in the Alfred Settings under `Features → Previews`:
+in the Alfred Settings under `Features → Previews`:
 
 [QLmarkdown](https://github.com/sbarex/QLMarkdown) and
 [Peek](https://apps.apple.com/app/peek-quick-look-extension/id1554235898) both

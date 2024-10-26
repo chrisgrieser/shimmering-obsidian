@@ -7710,25 +7710,6 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 				<key>required</key>
 				<false/>
 				<key>text</key>
-				<string>Privacy mode</string>
-			</dict>
-			<key>description</key>
-			<string>While enabled, all notes with the cssclass "private" will be censored. This setting is meant to be enabled temporarily when sharing the screen.</string>
-			<key>label</key>
-			<string></string>
-			<key>type</key>
-			<string>checkbox</string>
-			<key>variable</key>
-			<string>privacy_mode</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>default</key>
-				<false/>
-				<key>required</key>
-				<false/>
-				<key>text</key>
 				<string>Remove emojis</string>
 			</dict>
 			<key>description</key>
@@ -7949,27 +7930,6 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<dict>
 				<key>default</key>
 				<string></string>
-				<key>filtermode</key>
-				<integer>2</integer>
-				<key>placeholder</key>
-				<string></string>
-				<key>required</key>
-				<false/>
-			</dict>
-			<key>description</key>
-			<string>To append/prepend icons to your search results, similar to the Supercharged Links Plugin. Consult the documentation for further information.</string>
-			<key>label</key>
-			<string>Supercharged icons</string>
-			<key>type</key>
-			<string>filepicker</string>
-			<key>variable</key>
-			<string>supercharged_icon_file</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>default</key>
-				<string></string>
 				<key>placeholder</key>
 				<string>Inbox/Scratchpad-Note#Thoughts</string>
 				<key>required</key>
@@ -8153,11 +8113,6 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<string>max_number_of_bkps</string>
 		</dict>
 	</array>
-	<key>variables</key>
-	<dict>
-		<key>censor_char</key>
-		<string>▉</string>
-	</dict>
 	<key>version</key>
 	<string>4.10.3</string>
 	<key>webaddress</key>
