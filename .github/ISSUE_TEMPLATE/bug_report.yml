@@ -15,7 +15,7 @@ body:
           required: true
         - label: I have read the documentation of the feature I am having problems with.
           required: true
-        - label: I am using Alfred 5. (Alfred 4 is not supported by this workflow anymore.)
+        - label: I am using Alfred 5.5 (lower versions are not supported).
           required: true
         - label:
             I have updated to the latest version of the Metadata-Extractor and the Advanced URI plugin.
@@ -57,8 +57,8 @@ body:
       label: Debugging Log
       description: >
         You can get a debugging log by opening the workflow in Alfred preferences and pressing `cmd + D`.
-        A small window will open up. At the  top of the window, change `All Information` to `Core
-        Information`. Use  the malfunctioning part of the workflow once more, copy the content of  the
+        A small window will open up. At the top of the window, change `All Information` to `Core
+        Information`. Use the malfunctioning part of the workflow once more, copy the content of  the
         log window, and paste it here.
       render: Text
     validations: { required: true }
@@ -66,10 +66,7 @@ body:
     id: workflow-configuration
     attributes:
       label: Workflow Configuration
-      description:
-        'Please add a screenshot of all your [workflow
-        configuration](https://www.alfredapp.com/help/workflows/user-configuration/) (clicking "Configure
-        Workflow")'
+      description: Any related workflow configuration you have changed from the default.
     validations: { required: true }
   - type: checkboxes
     id: compatibility-mode
