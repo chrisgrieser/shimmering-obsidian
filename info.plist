@@ -8049,7 +8049,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 		</dict>
 	</array>
 	<key>version</key>
-	<string>4.10.3</string>
+	<string>4.11.0</string>
 	<key>webaddress</key>
 	<string>https://chris-grieser.de/</string>
 </dict>
