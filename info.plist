@@ -420,19 +420,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>44ACD8E5-CFE0-4D48-98F9-DD31AFBC7362</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>47CB6610-109D-41E0-BBFF-BF83FB0FC8CE</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>4666F95D-B06C-48CD-8FA2-9A795FAF23D7</key>
 		<array>
 			<dict>
@@ -446,8 +433,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>47CB6610-109D-41E0-BBFF-BF83FB0FC8CE</key>
-		<array/>
 		<key>48992F43-A163-41CB-9AD0-ED130267D058</key>
 		<array>
 			<dict>
@@ -5903,42 +5888,6 @@ curl -sL "https://raw.githubusercontent.com/chrisgrieser/alfred-docs-searches/ma
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>openwith</key>
-				<string></string>
-				<key>sourcefile</key>
-				<string>~/Library/Application Support/obsidian</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openfile</string>
-			<key>uid</key>
-			<string>47CB6610-109D-41E0-BBFF-BF83FB0FC8CE</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>keyword</key>
-				<string>oapplicationsupport</string>
-				<key>subtext</key>
-				<string>~/Library/Application Support/obsidian</string>
-				<key>text</key>
-				<string>Open Application Support folder</string>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>44ACD8E5-CFE0-4D48-98F9-DD31AFBC7362</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
 	</array>
 	<key>readme</key>
 	<string>## 1️⃣ Setting up this workflow for the first time
@@ -6375,15 +6324,6 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<key>ypos</key>
 			<real>3690</real>
 		</dict>
-		<key>44ACD8E5-CFE0-4D48-98F9-DD31AFBC7362</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>xpos</key>
-			<real>35</real>
-			<key>ypos</key>
-			<real>6655</real>
-		</dict>
 		<key>4666F95D-B06C-48CD-8FA2-9A795FAF23D7</key>
 		<dict>
 			<key>colorindex</key>
@@ -6392,15 +6332,6 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 2</string>
 			<real>395</real>
 			<key>ypos</key>
 			<real>5475</real>
-		</dict>
-		<key>47CB6610-109D-41E0-BBFF-BF83FB0FC8CE</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>xpos</key>
-			<real>205</real>
-			<key>ypos</key>
-			<real>6655</real>
 		</dict>
 		<key>48992F43-A163-41CB-9AD0-ED130267D058</key>
 		<dict>
@@ -7628,7 +7559,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>description</key>
 			<string>Path to the vault that you want to control with this Alfred workflow.</string>
 			<key>label</key>
-			<string>Vault Path</string>
+			<string>Vault path</string>
 			<key>type</key>
 			<string>filepicker</string>
 			<key>variable</key>
@@ -7649,7 +7580,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>description</key>
 			<string>Advanced users: If you use a different config folder than the default one.</string>
 			<key>label</key>
-			<string>override config folder</string>
+			<string>Config folder</string>
 			<key>type</key>
 			<string>textfield</string>
 			<key>variable</key>
@@ -7670,7 +7601,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>description</key>
 			<string>Keyword</string>
 			<key>label</key>
-			<string>main search</string>
+			<string>Main search</string>
 			<key>type</key>
 			<string>textfield</string>
 			<key>variable</key>
@@ -7684,11 +7615,11 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 				<key>pairs</key>
 				<array>
 					<array>
-						<string>Parent Directory</string>
+						<string>Parent directory</string>
 						<string>parent</string>
 					</array>
 					<array>
-						<string>#tags</string>
+						<string>Tags</string>
 						<string>tags</string>
 					</array>
 				</array>
@@ -7746,72 +7677,6 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>config</key>
 			<dict>
 				<key>default</key>
-				<true/>
-				<key>required</key>
-				<false/>
-				<key>text</key>
-				<string></string>
-			</dict>
-			<key>description</key>
-			<string>When appending to a note (`fn ↵`), the note will automatically be opened afterwards. Also applies to the Scratchpad feature.</string>
-			<key>label</key>
-			<string>Open note after appending</string>
-			<key>type</key>
-			<string>checkbox</string>
-			<key>variable</key>
-			<string>open_after_appending</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>default</key>
-				<string>manual</string>
-				<key>pairs</key>
-				<array>
-					<array>
-						<string>prompt</string>
-						<string>manual</string>
-					</array>
-					<array>
-						<string>clipboard</string>
-						<string>clipboard</string>
-					</array>
-				</array>
-			</dict>
-			<key>description</key>
-			<string>When appending via `fn ↵`, whether to prompt for text or to append the clipboard content.</string>
-			<key>label</key>
-			<string>Appending content</string>
-			<key>type</key>
-			<string>popupbutton</string>
-			<key>variable</key>
-			<string>input_append</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>default</key>
-				<string></string>
-				<key>placeholder</key>
-				<string>e.g. -</string>
-				<key>required</key>
-				<false/>
-				<key>trim</key>
-				<false/>
-			</dict>
-			<key>description</key>
-			<string>Text to insert before text appended via `fn ↵`. Supports Alfred's "Dynamic Placeholders" to insert things like a date.</string>
-			<key>label</key>
-			<string>Appending prefix</string>
-			<key>type</key>
-			<string>textfield</string>
-			<key>variable</key>
-			<string>append_prefix</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>default</key>
 				<string>tab</string>
 				<key>pairs</key>
 				<array>
@@ -7832,7 +7697,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>description</key>
 			<string>where`⌘⏎` should open the note</string>
 			<key>label</key>
-			<string>Open in new</string>
+			<string></string>
 			<key>type</key>
 			<string>popupbutton</string>
 			<key>variable</key>
@@ -7856,9 +7721,9 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 				</array>
 			</dict>
 			<key>description</key>
-			<string>when using `⌃⏎`</string>
+			<string>Type of link to copy when using `⌃⏎`</string>
 			<key>label</key>
-			<string>Type of link to copy</string>
+			<string></string>
 			<key>type</key>
 			<string>popupbutton</string>
 			<key>variable</key>
@@ -7868,16 +7733,82 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>config</key>
 			<dict>
 				<key>default</key>
+				<true/>
+				<key>required</key>
+				<false/>
+				<key>text</key>
+				<string>open afterwards</string>
+			</dict>
+			<key>description</key>
+			<string>Also applies to the Scratchpad feature.</string>
+			<key>label</key>
+			<string>Appending</string>
+			<key>type</key>
+			<string>checkbox</string>
+			<key>variable</key>
+			<string>open_after_appending</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>manual</string>
+				<key>pairs</key>
+				<array>
+					<array>
+						<string>prompt</string>
+						<string>manual</string>
+					</array>
+					<array>
+						<string>clipboard</string>
+						<string>clipboard</string>
+					</array>
+				</array>
+			</dict>
+			<key>description</key>
+			<string>Whether to prompt for text or to append the clipboard content.</string>
+			<key>label</key>
+			<string></string>
+			<key>type</key>
+			<string>popupbutton</string>
+			<key>variable</key>
+			<string>input_append</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string></string>
+				<key>placeholder</key>
+				<string>e.g. -</string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<false/>
+			</dict>
+			<key>description</key>
+			<string>Prefix text to insert before text appended. Supports Alfred's "Dynamic Placeholders" to insert things like a date.</string>
+			<key>label</key>
+			<string></string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>append_prefix</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
 				<false/>
 				<key>required</key>
 				<false/>
 				<key>text</key>
-				<string></string>
+				<string>Merge nested tags</string>
 			</dict>
 			<key>description</key>
-			<string>Merge Nested Tags for the tag-search `ot`. Example: `#inbox/to-read` and `#inbox/later` would both be subsumed under `#inbox`.</string>
+			<string>Example: `#inbox/to-read` and `#inbox/later` would both be subsumed under `#inbox`.</string>
 			<key>label</key>
-			<string>Merge nested tags</string>
+			<string>Tag search</string>
 			<key>type</key>
 			<string>checkbox</string>
 			<key>variable</key>
@@ -7896,9 +7827,9 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 				<true/>
 			</dict>
 			<key>description</key>
-			<string>Vault-relative path to a folder where new notes created by `on` should be created. Leave empty to create the new note in the vault root.</string>
+			<string>Location: vault-relative path to a folder where new notes created by `on` should be created. Leave empty to create the new note in the vault root.</string>
 			<key>label</key>
-			<string>New Note Location</string>
+			<string>New note</string>
 			<key>type</key>
 			<string>textfield</string>
 			<key>variable</key>
@@ -7917,9 +7848,9 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 				<true/>
 			</dict>
 			<key>description</key>
-			<string>Vault-relative path to the template note to use when creating new notes with the `on` command or when browsing a folder via `o`. Any `{{title}}` placeholders in the template will be replaced with the name of the file. (Be aware that the template will be ignored when you use Folder Templates from the Templater Plugin.)</string>
+			<string>Template: Vault-relative path to the template note to use when creating new notes with the `on` command or when browsing a folder via `o`. Any `{{title}}` placeholders in the template will be replaced with the name of the file. (Be aware that the template will be ignored when you use Folder Templates from the Templater Plugin.)</string>
 			<key>label</key>
-			<string>New note template</string>
+			<string></string>
 			<key>type</key>
 			<string>textfield</string>
 			<key>variable</key>
@@ -7938,9 +7869,9 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 				<true/>
 			</dict>
 			<key>description</key>
-			<string>Vault-relative path to your Scratchpad Note. When you append `#foobar`, the text will be appended to the section with the heading "foobar".</string>
+			<string>Vault-relative path to your Scratchpad note. When you append `#foobar`, the text will be appended to the section with the heading "foobar".</string>
 			<key>label</key>
-			<string>Scratchpad note path</string>
+			<string>Scratchpad</string>
 			<key>type</key>
 			<string>textfield</string>
 			<key>variable</key>
@@ -7959,9 +7890,9 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 				<false/>
 			</dict>
 			<key>description</key>
-			<string>Text to insert before content appended to the Scratchpad. Supports Alfred's "Dynamic Placeholders" to insert things like a date.</string>
+			<string>Prefix text to insert before content appended to the Scratchpad. Supports Alfred's "Dynamic Placeholders" to insert things like a date.</string>
 			<key>label</key>
-			<string>Scratchpad append prefix</string>
+			<string></string>
 			<key>type</key>
 			<string>textfield</string>
 			<key>variable</key>
@@ -7980,9 +7911,9 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 				<true/>
 			</dict>
 			<key>description</key>
-			<string>Set language codes for Tesseract, e.g., `eng+deu` for English and German. You can find out the code for your language(s) here: https://tesseract-ocr.github.io/tessdoc/Data-Files-in-different-versions.html</string>
+			<string>Language codes for Tesseract, e.g., `eng+deu` for English and German. You can find out the code for your language(s) here: https://tesseract-ocr.github.io/tessdoc/Data-Files-in-different-versions.html</string>
 			<key>label</key>
-			<string>OCR languages</string>
+			<string>OCR &amp; screenshots</string>
 			<key>type</key>
 			<string>textfield</string>
 			<key>variable</key>
@@ -8001,9 +7932,9 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 				<true/>
 			</dict>
 			<key>description</key>
-			<string>String to insert before OCR'ed content.</string>
+			<string>Prefix to insert before OCR content.</string>
 			<key>label</key>
-			<string>OCR screenshot prefix</string>
+			<string></string>
 			<key>type</key>
 			<string>textfield</string>
 			<key>variable</key>
@@ -8022,9 +7953,9 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 				<false/>
 			</dict>
 			<key>description</key>
-			<string>Markdown file where the ORC'ed text will be saved to. When empty, will save/append to the file `{vault-path}/OCR-Screenshots.md`. Can be a markdown file outside your note and be used independently from Obsidian.</string>
+			<string>Markdown file where the ORC-text will be saved to. When empty, will save/append to the file `{vault-path}/OCR-Screenshots.md`. Can be a markdown file outside your note and be used independently from Obsidian.</string>
 			<key>label</key>
-			<string>OCR screenshot note</string>
+			<string></string>
 			<key>type</key>
 			<string>filepicker</string>
 			<key>variable</key>
@@ -8045,7 +7976,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>description</key>
 			<string>Folder where the image screenshots should be saved to. When empty, will save the images in `{vault-path}/screenshots/`.</string>
 			<key>label</key>
-			<string>Screenshot path</string>
+			<string></string>
 			<key>type</key>
 			<string>filepicker</string>
 			<key>variable</key>
@@ -8059,12 +7990,12 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 				<key>required</key>
 				<false/>
 				<key>text</key>
-				<string></string>
+				<string>open after</string>
 			</dict>
 			<key>description</key>
-			<string>Open note after screenshot or OCR screenshot. (Disable this to be able to take screenshots in quick succession without opening Obsidian.)</string>
+			<string>Whether to open note after screenshot or OCR screenshot. (Disable this to be able to take screenshots in quick succession without opening Obsidian.)</string>
 			<key>label</key>
-			<string>Open after (OCR) screenshot</string>
+			<string></string>
 			<key>type</key>
 			<string>checkbox</string>
 			<key>variable</key>
@@ -8083,9 +8014,9 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 				<true/>
 			</dict>
 			<key>description</key>
-			<string>Folder where the backups done by the `obackup` command should be saved. Recommended to be a folder outside your vault.</string>
+			<string>Destination: Folder where the backups done by the `obackup` command should be saved. Recommended to be a folder outside your vault.</string>
 			<key>label</key>
-			<string>Backup destination</string>
+			<string>Backup</string>
 			<key>type</key>
 			<string>filepicker</string>
 			<key>variable</key>
@@ -8094,21 +8025,25 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>default</key>
-				<string>20</string>
-				<key>placeholder</key>
-				<string>20</string>
-				<key>required</key>
+				<key>defaultvalue</key>
+				<integer>20</integer>
+				<key>markercount</key>
+				<integer>20</integer>
+				<key>maxvalue</key>
+				<integer>100</integer>
+				<key>minvalue</key>
+				<integer>5</integer>
+				<key>onlystoponmarkers</key>
 				<true/>
-				<key>trim</key>
+				<key>showmarkers</key>
 				<true/>
 			</dict>
 			<key>description</key>
-			<string>Must be an integer. Maximum number of backups that should be stored at the backup destination folder. When the number is reached, every new backup causes the oldest backup to be deleted. (Decrease this number, when your backup folder becomes too big.)</string>
+			<string>Maximum number of backups that should be stored at the backup destination folder. When the number is reached, every new backup causes the oldest backup to be deleted. (Decrease this number, when your backup folder becomes too big.)</string>
 			<key>label</key>
-			<string>Maximum number of backups</string>
+			<string></string>
 			<key>type</key>
-			<string>textfield</string>
+			<string>slider</string>
 			<key>variable</key>
 			<string>max_number_of_bkps</string>
 		</dict>
