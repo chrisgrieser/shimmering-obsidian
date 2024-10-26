@@ -44,6 +44,7 @@ function run() {
 	const excludeFilterJSON = `${vaultConfig}/app.json`;
 	const superIconFile = $.getenv("supercharged_icon_file");
 	const removeEmojis = $.getenv("remove_emojis") === "1";
+	const subtitleType = $.getenv("main_search_subtitle");
 	// exclude cssclass: private
 	const censorChar = $.getenv("censor_char");
 	const privacyModeOn = $.getenv("privacy_mode") === "1";
@@ -64,7 +65,8 @@ function run() {
 			items: [
 				{
 					title: "🚫 No vault metadata found.",
-					subtitle: "Please run the Alfred command `osetup` first. This only has to be done once.",
+					subtitle:
+						"Please run the Alfred command `osetup` first. This only has to be done once.",
 					valid: false,
 				},
 			],
@@ -231,11 +233,16 @@ function run() {
 		const applyCensoring = isPrivateNote && privacyModeOn;
 		const displayName = applyCensoring ? filename.replace(/./g, censorChar) : filename;
 
+		const subtitle =
+			subtitleType === "parent"
+				? parentFolder(relativePath)
+				: (file.tags || []).map((t) => "#" + t).join(" ");
+
 		// Notes (file names)
 		resultsArr[insertVia]({
 			title: emoji + superchargedIcon + displayName + superchargedIcon2,
 			match: camelCaseMatch(filename) + tagMatcher + " filename name title" + additionalMatcher,
-			subtitle: "▸ " + parentFolder(relativePath),
+			subtitle: subtitle,
 			arg: relativePath,
 			quicklookurl: absolutePath,
 			type: "file:skipcheck",

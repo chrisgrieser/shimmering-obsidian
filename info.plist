@@ -7668,9 +7668,9 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 				<true/>
 			</dict>
 			<key>description</key>
-			<string>Alfred keyword for the main search (Alfred-based Quick Switcher)</string>
+			<string>Keyword</string>
 			<key>label</key>
-			<string>keyword for the main search</string>
+			<string>main search</string>
 			<key>type</key>
 			<string>textfield</string>
 			<key>variable</key>
@@ -7680,16 +7680,42 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>config</key>
 			<dict>
 				<key>default</key>
+				<string>parent</string>
+				<key>pairs</key>
+				<array>
+					<array>
+						<string>Parent Directory</string>
+						<string>parent</string>
+					</array>
+					<array>
+						<string>#tags</string>
+						<string>tags</string>
+					</array>
+				</array>
+			</dict>
+			<key>description</key>
+			<string>Subtitle</string>
+			<key>label</key>
+			<string></string>
+			<key>type</key>
+			<string>popupbutton</string>
+			<key>variable</key>
+			<string>main_search_subtitle</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
 				<false/>
 				<key>required</key>
 				<false/>
 				<key>text</key>
-				<string>enabled</string>
+				<string>Privacy mode</string>
 			</dict>
 			<key>description</key>
 			<string>While enabled, all notes with the cssclass "private" will be censored. This setting is meant to be enabled temporarily when sharing the screen.</string>
 			<key>label</key>
-			<string>Privacy mode</string>
+			<string></string>
 			<key>type</key>
 			<string>checkbox</string>
 			<key>variable</key>
@@ -7703,12 +7729,12 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 				<key>required</key>
 				<false/>
 				<key>text</key>
-				<string></string>
+				<string>Remove emojis</string>
 			</dict>
 			<key>description</key>
 			<string>Reduces the number of emojis used throughout the workflow. (This does not apply to emojis you have explicitly added yourself with the "Supercharged icons" feature further below.)</string>
 			<key>label</key>
-			<string>Remove emojis</string>
+			<string></string>
 			<key>type</key>
 			<string>checkbox</string>
 			<key>variable</key>
@@ -7727,9 +7753,9 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 				<true/>
 			</dict>
 			<key>description</key>
-			<string>Heading Levels to Ignore for the main search `o`. Example: `h4 h5 h6` will only show h1, h2 and h3.</string>
+			<string>Heading levels to ignore. Example: `h4 h5 h6` will only show h1, h2 and h3.</string>
 			<key>label</key>
-			<string>Ignore heading levels</string>
+			<string></string>
 			<key>type</key>
 			<string>textfield</string>
 			<key>variable</key>
