@@ -112,7 +112,7 @@ function run(argv) {
 
 			const subtitle =
 				subtitleType === "parent"
-					? parentFolder(relativePath)
+					? "▸ " + parentFolder(relativePath)
 					: (file.tags || []).map((/** @type {string} */ t) => "#" + t).join(" ");
 
 			// push result

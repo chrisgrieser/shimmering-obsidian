@@ -30,7 +30,7 @@ function run() {
 	const metadataJSON = `${vaultPath}/${configFolder}/plugins/metadata-extractor/metadata.json`;
 	const starredJSON = `${vaultPath}/${configFolder}/starred.json`;
 	const bookmarkJSON = `${vaultPath}/${configFolder}/bookmarks.json`;
-	const superIconFile = $.getenv("supercharged_icon_file");
+	const subtitleType = $.getenv("main_search_subtitle");
 
 	let recentJSON = `${vaultPath}/${configFolder}/workspace.json`;
 	if (!fileExists(recentJSON)) recentJSON = recentJSON.slice(0, -5); // Obsidian 0.16 uses workspace.json → https://discord.com/channels/686053708261228577/716028884885307432/1013906018578743478
@@ -65,14 +65,6 @@ function run() {
 	const starsAndBookmarks = [...new Set([...stars, ...bookmarks])];
 
 	//───────────────────────────────────────────────────────────────────────────
-
-	let superIconList = [];
-	if (superIconFile && fileExists(superIconFile)) {
-		superIconList = readFile(superIconFile)
-			.split("\n")
-			.filter((l) => l.length !== 0);
-	}
-	console.log("superIconList length: " + superIconList.length);
 
 	const jsonArray = [];
 
@@ -123,31 +115,16 @@ function run() {
 			if ($.getenv("remove_emojis") === "1") emoji = "";
 			if (filename.toLowerCase().includes("kanban")) iconpath = "icons/kanban.png";
 
-			let superchargedIcon = "";
-			let superchargedIcon2 = "";
-			if (superIconList.length > 0 && file.tags) {
-				superIconList.forEach((pair) => {
-					const tag = pair.split(",")[0].toLowerCase().replaceAll("#", "");
-					const icon = pair.split(",")[1];
-					const icon2 = pair.split(",")[2];
-					if (file.tags.includes(tag) && icon) superchargedIcon = icon + " ";
-					else if (file.tags.includes(tag) && icon2) superchargedIcon2 = " " + icon2;
-				});
-			}
-
-			// exclude cssclass: private
-			let displayName = filename;
-			const censorChar = $.getenv("censor_char");
-			const isPrivateNote = file.frontmatter?.cssclass?.includes("private");
-			const privacyModeOn = $.getenv("privacy_mode") === "1";
-			const applyCensoring = isPrivateNote && privacyModeOn;
-			if (applyCensoring) displayName = filename.replace(/./g, censorChar);
+			const subtitle =
+				subtitleType === "parent"
+					? "▸ " + parentFolder(relativePath)
+					: (file.tags || []).map((/** @type {string} */ t) => "#" + t).join(" ");
 
 			// push result
 			jsonArray.push({
-				title: emoji + superchargedIcon + displayName + superchargedIcon2,
+				title: emoji + filename,
 				match: additionalMatcher + alfredMatcher(filename),
-				subtitle: "▸ " + parentFolder(relativePath),
+				subtitle: subtitle,
 				arg: relativePath,
 				quicklookurl: vaultPath + "/" + relativePath,
 				type: "file:skipcheck",

@@ -204,7 +204,7 @@ function run() {
 
 		const subtitle =
 			subtitleType === "parent"
-				? parentFolder(relativePath)
+				? "▸ " + parentFolder(relativePath)
 				: (file.tags || []).map((/** @type {string} */ t) => "#" + t).join(" ");
 
 		// Notes (file names)
