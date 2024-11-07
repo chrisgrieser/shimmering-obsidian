@@ -59,18 +59,20 @@ function run() {
 			(/** @type {{ id: string; }} */ item) => item.id === pluginID,
 		)[0].title;
 
-		const URI = uriStart + "&settingid=" + pluginID;
+		const uri = uriStart + "&settingid=" + pluginID;
+		const invalid = { valid: false, subtitle: "Not available for core plugins." };
 
 		settings.push({
 			title: pluginName,
 			uid: pluginID,
 			match: pluginName,
-			arg: URI,
+			arg: uri,
 			icon: { path: "icons/plugin.png" },
 			mods: {
-				alt: { valid: false },
-				cmd: { valid: false },
-				fn: { valid: false },
+				alt: invalid,
+				cmd: invalid,
+				fn: invalid,
+				shift: invalid,
 				ctrl: {
 					arg: pluginID,
 					subtitle: "⌃: Copy plugin ID '" + pluginID + "'",
@@ -81,19 +83,22 @@ function run() {
 
 	standardSettings.forEach(
 		(/** @type {{ id: string; title: string; match: string; }} */ setting) => {
-			let URI = uriStart + "&settingid=" + setting.id;
-			if (setting.id === "updateplugins") URI = uriStart + "&updateplugins=true";
+			let uri = uriStart + "&settingid=" + setting.id;
+			if (setting.id === "updateplugins") uri = uriStart + "&updateplugins=true";
+
+			const invalid = { valid: false, subtitle: "Not available for settings." };
 
 			settings.push({
 				title: setting.title,
 				match: setting.match,
 				uid: setting.id,
-				arg: URI,
+				arg: uri,
 				mods: {
-					alt: { valid: false },
-					cmd: { valid: false },
-					ctrl: { valid: false },
-					fn: { valid: false },
+					alt: invalid,
+					cmd: invalid,
+					shift: invalid,
+					ctrl: invalid,
+					fn: invalid,
 				},
 			});
 		},
@@ -114,7 +119,7 @@ function run() {
 		}
 		const name = manifest.name;
 		const pluginID = manifest.id;
-		const URI = `${uriStart}&settingid=${pluginID}`;
+		const uri = `${uriStart}&settingid=${pluginID}`;
 
 		// toggling
 		const pluginEnabled = enabledComPlugins.includes(pluginID);
@@ -138,14 +143,13 @@ function run() {
 			title: name + icons,
 			uid: pluginID,
 			subtitle: subtitleIcons + settingSubtitle,
-			arg: URI,
+			arg: uri,
 			icon: { path: "icons/plugin.png" },
 			mods: {
 				alt: { arg: pluginFolderPath },
 				cmd: { arg: pluginFolderPath },
 				shift: {
 					arg: toggleURI,
-					valid: true,
 					subtitle: toggleSubtitle,
 				},
 				ctrl: {
