@@ -468,13 +468,11 @@ end tell
 ### Plugins
 **`op`: combined Search of community `p`lugins and community themes.**
 - Press `⏎` to open the plugin's GitHub repository.
-	* Use `⌘ + ⏎` to open .the plugin in Obsidian's Community Plugin Browser
+	* Use `⌘ + ⏎` to open the plugin in Obsidian's Community Plugin Browser
 	  instead.
 	* Press `⌥ + ⏎` to copy the plugin URI (`obsidian://show-plugin?id=…`) to
 	  your clipboard.
 	* `⌘⌥ + ⏎`: Copy the plugin link together with a description.
-	* `fn + ⏎`: open the plugin's page at [Obsidian
-	  Stats](https://www.moritzjung.dev/obsidian-stats/).
 - Only plugins officially included in the community plugins are displayed —
   plugins solely available via GitHub or still in review are not shown.
 - Add `plugin` to the search query to only display plugin, for example, use `op
@@ -493,8 +491,6 @@ end tell
 	* `⌘⌥ + ⏎`: Copy the plugin link together with a description.
 	* Use `⇧` or `⌘ + Y` to open a Quick Look Preview of the theme's promo
 	  screenshot. Press `⇧` or `⌘ + Y` again to close the preview.
-	* `fn + ⏎` to open the theme's page at [Obsidian
-	  Stats](https://www.moritzjung.dev/obsidian-stats/).
 - Only themes officially included in the community themes are displayed — themes
   solely available via GitHub or still in review are not shown.
 - Add `theme` to the search query to only display themes, for instance use `op
