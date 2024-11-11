@@ -2533,20 +2533,9 @@ tesseract "$temp_image" stdout -l $ocr_languages 2&gt;&amp;1</string>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
-				<integer>68</integer>
+				<integer>0</integer>
 				<key>script</key>
-				<string>function run() {
-
-var path="{query}";
-
-var urlscheme = "obsidian://open?path=" + encodeURIComponent(path);
-var name = path.replace (/.*\/(.*?)$/,"$1");
-
-var hook = "[" + name + "](" + urlscheme + ")";
-
-return hook;
-
-}</string>
+				<string></string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -7688,6 +7677,25 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<string>popupbutton</string>
 			<key>variable</key>
 			<string>link_type_to_copy</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<false/>
+				<key>required</key>
+				<false/>
+				<key>text</key>
+				<string>Paste directly</string>
+			</dict>
+			<key>description</key>
+			<string>Paste instead of copy when using `⌃⏎`</string>
+			<key>label</key>
+			<string></string>
+			<key>type</key>
+			<string>checkbox</string>
+			<key>variable</key>
+			<string>paste_instead_of_copy</string>
 		</dict>
 		<dict>
 			<key>config</key>

@@ -1,15 +1,14 @@
 #!/usr/bin/env osascript -l JavaScript
-
 ObjC.import("stdlib");
 const app = Application.currentApplication();
 app.includeStandardAdditions = true;
-
 //───────────────────────────────────────────────────────────────────────────
 
 /** @type {AlfredRun} */
 // biome-ignore lint/correctness/noUnusedVariables: Alfred run
 function run(argv) {
 	const vaultPath = $.getenv("vault_path");
+	const pasteInstead = $.getenv("paste_instead_of_copy") === "1";
 	const vaultNameEnc = encodeURIComponent(vaultPath.replace(/.*\//, ""));
 
 	// import variables
@@ -37,5 +36,11 @@ function run(argv) {
 	}
 
 	app.setTheClipboardTo(toCopy);
-	return toCopy; // also return for the notification
+
+	if (pasteInstead) {
+		delay(0.1); // for wait clipboard to be updated
+		Application("System Events").keystroke("v", { using: "command down" });
+	} else {
+		return toCopy; // notification only when copying
+	}
 }
