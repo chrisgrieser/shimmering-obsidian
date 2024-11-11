@@ -16,6 +16,10 @@ body:
             feature doesn't already exist.
           required: true
         - label:
+            "If it is an entirely new feature: The requested feature makes more sense to be
+            implemented in Alfred than in a plugin. Please also explain why."
+          required: true
+        - label:
             "Feature Requests regarding daily notes will not be implemented, since there are [other
             Alfred workflows that do focus on daily notes
             already](https://github.com/hauselin/obsidian-alfred)."
