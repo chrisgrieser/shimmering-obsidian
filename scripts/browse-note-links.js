@@ -53,21 +53,12 @@ function run() {
 	const bookmarkJSON = `${vaultPath}/${configFolder}/bookmarks.json`;
 	let recentJSON = `${vaultPath}/${configFolder}/workspace.json`;
 	if (!fileExists(recentJSON)) recentJSON = recentJSON.slice(0, -5); // Obsidian 0.16 uses workspace.json → https://discord.com/channels/686053708261228577/716028884885307432/1013906018578743478
-	const superIconFile = $.getenv("supercharged_icon_file");
 
 	//───────────────────────────────────────────────────────────────────────────
 
 	// ICONS
 	// Recent Files
 	const recentFiles = fileExists(recentJSON) ? JSON.parse(readFile(recentJSON)).lastOpenFiles : [];
-
-	// Supercharged Icons File
-	let superIconList = [];
-	if (superIconFile && fileExists(superIconFile)) {
-		superIconList = readFile(superIconFile)
-			.split("\n")
-			.filter((line) => line.length !== 0);
-	}
 
 	// bookmarks & stars
 	let stars = [];
@@ -171,33 +162,13 @@ function run() {
 				if ($.getenv("remove_emojis") === "1") emoji = "";
 				if (filename.toLowerCase().includes("kanban")) iconpath = "icons/kanban.png";
 
-				let superchargedIcon = "";
-				let superchargedIcon2 = "";
-				if (superIconList.length > 0 && file.tags) {
-					superIconList.forEach((pair) => {
-						const tag = pair.split(",")[0].toLowerCase().replaceAll("#", "");
-						const icon = pair.split(",")[1];
-						const icon2 = pair.split(",")[2];
-						if (file.tags.includes(tag) && icon) superchargedIcon = icon + " ";
-						else if (file.tags.includes(tag) && icon2) superchargedIcon2 = " " + icon2;
-					});
-				}
-
 				// emojis dependent on link type
 				let linkIcon = "";
 				if (linkList.includes(relativePath)) linkIcon += "🔗 ";
 				if (backlinkList.includes(relativePath)) linkIcon += "⬅️ ";
 
-				// exclude cssclass: private
-				let displayName = filename;
-				const censorChar = $.getenv("censor_char");
-				const isPrivateNote = file.frontmatter?.cssclass?.includes("private");
-				const privacyModeOn = $.getenv("privacy_mode") === "1";
-				const applyCensoring = isPrivateNote && privacyModeOn;
-				if (applyCensoring) displayName = filename.replace(/./g, censorChar);
-
 				allLinksArr.push({
-					title: linkIcon + emoji + superchargedIcon + displayName + superchargedIcon2,
+					title: linkIcon + emoji + filename,
 					match: additionalMatcher + alfredMatcher(filename),
 					subtitle: "▸ " + parentFolder(relativePath),
 					type: "file:skipcheck",
