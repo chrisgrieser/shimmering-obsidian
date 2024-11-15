@@ -4,12 +4,33 @@ const app = Application.currentApplication();
 app.includeStandardAdditions = true;
 //──────────────────────────────────────────────────────────────────────────────
 
+const fileExists = (/** @type {string} */ filePath) => Application("Finder").exists(Path(filePath));
+
+/** @param {string} path */
+function readFile(path) {
+	const data = $.NSFileManager.defaultManager.contentsAtPath(path);
+	const str = $.NSString.alloc.initWithDataEncoding(data, $.NSUTF8StringEncoding);
+	return ObjC.unwrap(str);
+}
+
+//──────────────────────────────────────────────────────────────────────────────
+
 /** @type {AlfredRun} */
 // biome-ignore lint/correctness/noUnusedVariables: Alfred run
 function run(argv) {
 	const vaultPath = $.getenv("vault_path");
 	const vaultNameEnc = encodeURIComponent(vaultPath.replace(/.*\//, ""));
 
+	// VALIDATE that `Advanced URI` is installed and enabled
+	const configFolder = $.getenv("config_folder");
+	const aUriInstalled = fileExists(`${vaultPath}/${configFolder}/plugins/obsidian-advanced-uri`);
+	const pluginList = readFile(`${vaultPath}/${configFolder}/community-plugins.json`);
+	const aUriEnabled = JSON.parse(pluginList).includes("obsidian-advanced-uri");
+	if (!aUriInstalled || !aUriEnabled) {
+		return '"Advanced URI" plugin not installed or not enabled.';
+	}
+
+	// determine input
 	const input = (argv[0] || "").trim(); // trim to remove trailing \n
 	const relativePath = (input.split("#")[0] || "").split(":")[0] || "";
 	const heading = input.split("#")[1];

@@ -22,18 +22,27 @@ body:
           required: true
         - label:
             If the `o…` main search does not work, I made sure that I haven't changed any of the default
-            settings of the Metadata-Extractor. Furthermore, I have tried rerunning `osetup` and it still
-            does not work.
-          required: true
-        - label:
-            If notes in general can be found, but recently created or renamed notes cannot, I used the
-            `oupdate` command to manually update the metadata.
+            settings of the Metadata-Extractor. 
           required: true
   - type: textarea
     id: bug-description
     attributes:
       label: Bug Description
       description: Which part of the workflow is not working and in what way?
+    validations: { required: true }
+  - type: input
+    id: alfred-version-info
+    attributes:
+      label: Alfred version
+      description: Open the `Alfred Preferences.app`, go to the `General` tab. The version number is shown at the top left.
+      placeholder: 5.5 [2251]
+    validations: { required: true }
+  - type: input
+    id: macos-version-info
+    attributes:
+      label: macOS version
+      description: Click on the  symbol in the menu bar and select `About This Mac`.
+      placeholder: Sonoma 14.3
     validations: { required: true }
   - type: textarea
     id: screenshot
@@ -76,14 +85,3 @@ body:
       options:
         - label: "I am using Compatibility Mode."
           required: false
-  - type: textarea
-    id: version-info
-    attributes:
-      label: "Version & System Information"
-      description: >
-        Please run the command `oinfo` in Alfred. It will copy various version information into your
-        clipboard. Paste the result here. (If the command `oinfo` itself also does not work, please state
-        so and follow [the instructions
-        here.](https://github.com/chrisgrieser/shimmering-obsidian/issues/98#issuecomment-1247370074))
-      render: Text
-    validations: { required: true }

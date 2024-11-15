@@ -1,7 +1,7 @@
 # Shimmering Obsidian 🎩
-![GitHub Downloads](https://img.shields.io/github/downloads/chrisgrieser/shimmering-obsidian/total?label=GitHub%20Downloads&style=plastic&logo=github)
-![Alfred Gallery Downloads](https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fchrisgrieser%2F.config%2Frefs%2Fheads%2Fmain%2FAlfred.alfredpreferences%2Falfred-workflow-download-count.yaml&query=shimmering-obsidian&style=plastic&logo=alfred&label=Gallery%20Downloads&color=%235C1F87)
-![Latest Release](https://img.shields.io/github/v/release/chrisgrieser/shimmering-obsidian?label=Latest%20Release&style=plastic)
+![GitHub downloads](https://img.shields.io/github/downloads/chrisgrieser/shimmering-obsidian/total?label=GitHub%20Downloads&style=plastic&logo=github)
+![Alfred gallery downloads](https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fchrisgrieser%2F.config%2Frefs%2Fheads%2Fmain%2FAlfred.alfredpreferences%2Falfred-workflow-download-count.yaml&query=shimmering-obsidian&style=plastic&logo=alfred&label=Gallery%20Downloads&color=%235C1F87)
+![Latest release](https://img.shields.io/github/v/release/chrisgrieser/shimmering-obsidian?label=Latest%20Release&style=plastic)
 
 Alfred workflow with dozens of features for controlling your
 [Obsidian](https://obsidian.md/) vault.
@@ -11,7 +11,7 @@ Gallery.](https://alfred.app/workflows/chrisgrieser/shimmering-obsidian/)
 
 <img alt="Promo Video" width=70% src="https://user-images.githubusercontent.com/73286100/139678407-9ac39baa-5f49-42a0-9622-0fbaf68540b2.gif">
 
-## Table of Contents
+## Table of contents
 
 <!-- toc -->
 
@@ -64,13 +64,18 @@ Gallery.](https://alfred.app/workflows/chrisgrieser/shimmering-obsidian/)
 [Powerpack](https://www.alfredapp.com/powerpack/).*
 1. Install the Obsidian plugins [Advanced
    URI](https://obsidian.md/plugins?id=obsidian-advanced-uri) & [Metadata
-   Extractor](https://obsidian.md/plugins?id=metadata-extractor). Enable both
-   plugins.
-2. Download the [latest release at
+   Extractor](https://obsidian.md/plugins?id=metadata-extractor). 
+2. Enable both plugins.
+3. Download the [latest release at
    GitHub](https://github.com/chrisgrieser/shimmering-obsidian/releases/latest).
    Double-click the `.alfredworkflow` file to install it.
-3. Set your vault path in the workflow configuration.
-4. Run the Alfred Command `osetup`. Obsidian then restarts.
+4. Set your vault path in the workflow configuration.
+
+**In the Obsidian plugin settings for the "Metadata Extractor"**
+- Enable `Write JSON files automatically when Obsidian launches`.
+- Set `Configure frequency for writing the three JSON files` to how often you
+  want the Metadata to be updated. A value like 30 minutes is reasonable.
+- Do not change any of the other settings.
 
 ## Alfred-based quick switcher
 The Alfred-based Quick Switcher is basically an enhanced version of [Obsidian's
@@ -405,8 +410,9 @@ src="https://user-images.githubusercontent.com/73286100/133615940-a56731e5-6b60-
 - `⇧ ⏎` Control this vault with Alfred.
 
 > [!NOTE]
-> The `Metadata Extractor` and the `Advanced URI` plugin need to be installed in
-> every vault you want to control, and `osetup` needs to be run once.
+> The `Metadata Extractor` and the `Advanced URI` plugin need to be installed
+> and enabled in every vault you want to control. The `Metadata Extractor` needs
+> to be configured in every vault as well.
 
 ### Back up your vault
 **`obackup`: Create a `backup` of your vault.**
@@ -531,11 +537,6 @@ src="https://user-images.githubusercontent.com/73286100/131027623-5e8b3667-d00d-
   pages.
 	* Press `⏎` to open in your default browser.
 	* Use `⌥ + ⏎` to copy the link to your clipboard.
-
-**`odv`: Search the
-[dataview](https://blacksmithgu.github.io/obsidian-dataview/) documentation.**
-- Press `⏎` to open in your default browser.
-- Use `⌥ + ⏎` to copy the link to your clipboard.
 
 ### Plugin developer documentation
 <!-- LTeX: enabled=false -->
