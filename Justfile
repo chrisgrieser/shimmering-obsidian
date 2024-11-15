@@ -17,6 +17,7 @@ transfer-changes-TO-local:
     #!/usr/bin/env zsh
     rsync --archive --delete --exclude-from="$PWD/.rsync-exclude" "$PWD/" "{{ local_workflow }}"
     cd "{{ local_workflow }}"
+    print "\e[1;34mChanges at the local workflow:\e[0m"
     git status --short .
 
 [macos]
