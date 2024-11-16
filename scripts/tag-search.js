@@ -33,22 +33,14 @@ function run() {
 	const tagsJSON = `${vaultPath}/${configFolder}/plugins/metadata-extractor/tags.json`;
 	const mergeNestedTags = $.getenv("merge_nested_tags") === "1";
 
-	//───────────────────────────────────────────────────────────────────────────
-	// GUARD: metadata does not exist since user has not run `osetup`
 	if (!fileExists(tagsJSON)) {
-		return JSON.stringify({
-			items: [
-				{
-					title: "⚠️ No vault metadata found.",
-					subtitle:
-						"Please run the Alfred command `osetup` first. This only has to be done once.",
-					valid: false,
-				},
-			],
-		});
+		const errorItem = {
+			title: "🚫 No vault metadata found.",
+			subtitle: 'Please setup the "Metadata Extractor" as described in the README.',
+			valid: false,
+		};
+		return JSON.stringify({ items: [errorItem] });
 	}
-
-	//──────────────────────────────────────────────────────────────────────────────
 
 	let tagsArray = JSON.parse(readFile(tagsJSON)).map((/** @type {{ merged: boolean; }} */ tag) => {
 		tag.merged = false;
@@ -58,7 +50,7 @@ function run() {
 	//──────────────────────────────────────────────────────────────────────────────
 
 	if (mergeNestedTags) {
-		// reduce tag-key to the parent-tag.
+		// reduce tag-key to the parent-tag
 		tagsArray = tagsArray.map((/** @type {{ tag: string; }} */ tag) => {
 			tag.tag = tag.tag.split("/")[0];
 			return tag;

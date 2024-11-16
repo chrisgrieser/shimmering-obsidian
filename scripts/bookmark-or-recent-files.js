@@ -35,22 +35,15 @@ function run(argv) {
 
 	let recentJSON = vaultPath + `/${configFolder}/workspace.json`;
 	if (!fileExists(recentJSON)) recentJSON = recentJSON.slice(0, -5); // Obsidian 1.0 uses workspace.json → https://discord.com/channels/686053708261228577/716028884885307432/1013906018578743478
-
 	const recentFiles = fileExists(recentJSON) ? JSON.parse(readFile(recentJSON)).lastOpenFiles : [];
 
-	//───────────────────────────────────────────────────────────────────────────
-	// GUARD: metadata does not exist since user has not run `osetup`
 	if (!fileExists(metadataJSON)) {
-		return JSON.stringify({
-			items: [
-				{
-					title: "⚠️ No vault metadata found.",
-					subtitle:
-						"Please run the Alfred command `osetup` first. This only has to be done once.",
-					valid: false,
-				},
-			],
-		});
+		const errorItem = {
+			title: "🚫 No vault metadata found.",
+			subtitle: 'Please setup the "Metadata Extractor" as described in the README.',
+			valid: false,
+		};
+		return JSON.stringify({ items: [errorItem] });
 	}
 
 	//──────────────────────────────────────────────────────────────────────────────
@@ -63,10 +56,7 @@ function run(argv) {
 			.map((/** @type {{ path: string; }} */ item) => item.path);
 	}
 
-	/**
-	 * @param {any[]} input
-	 * @param {any[]} collector
-	 */
+	/** @param {any[]} input @param {any[]} collector */
 	function bmFlatten(input, collector) {
 		input.forEach((item) => {
 			if (item.type === "file") collector.push(item.path);

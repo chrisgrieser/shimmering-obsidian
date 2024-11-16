@@ -57,16 +57,12 @@ function run() {
 	//───────────────────────────────────────────────────────────────────────────
 	// Main Metadata
 	if (!fileExists(metadataJSON)) {
-		return JSON.stringify({
-			items: [
-				{
-					title: "🚫 No vault metadata found.",
-					subtitle:
-						"Please run the Alfred command `osetup` first. This has to be done only once.",
-					valid: false,
-				},
-			],
-		});
+		const errorItem = {
+			title: "🚫 No vault metadata found.",
+			subtitle: 'Please setup the "Metadata Extractor" as described in the README.',
+			valid: false,
+		};
+		return JSON.stringify({ items: [errorItem] });
 	}
 	let fileArray = JSON.parse(readFile(metadataJSON));
 
@@ -87,10 +83,7 @@ function run() {
 			.map((/** @type {{ path: string; }} */ item) => item.path);
 	}
 
-	/**
-	 * @param {Bookmark[]} input
-	 * @param {string[]} collector
-	 */
+	/** @param {Bookmark[]} input @param {string[]} collector */
 	function bmFlatten(input, collector) {
 		for (const item of input) {
 			if (item.type === "file") collector.push(item.path);
