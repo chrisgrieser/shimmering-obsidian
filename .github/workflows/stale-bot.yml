@@ -1,8 +1,7 @@
 name: "Close stale issues and PRs"
 on:
-  workflow_dispatch: 
   schedule:
-    - cron: "18 04 * * *" 
+    - cron: "18 04 * * 3" 
 
 permissions:
   issues: write
@@ -13,10 +12,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Close Stale Issues
-        uses: actions/stale@v8
+        uses: actions/stale@v9
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-          days-before-stale: 180
+
+          # DOCS https://github.com/actions/stale?tab=readme-ov-file#all-options
+          days-before-stale: 180 # ~6 months
+          days-before-close: 7
           stale-issue-label: "Stale"
           stale-issue-message: |
             This issue has been automatically marked as stale.
