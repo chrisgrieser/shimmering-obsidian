@@ -404,14 +404,12 @@ end tell
 # pass 'no sound' as argument to turn off backup confirmation sound
 ```
 
-<!-- vale Google.FirstPerson = NO -->
 > [!WARNING]
 > Please be aware that this is a simplistic backup solution. While I did not
 > have any problems with it, this workflow comes without any warranties, as
-> stated in [the
-> license](https://github.com/chrisgrieser/shimmering-obsidian/blob/main/LICENSE).
-> If you want 100% safety, please use a professional backup solution.
-<!-- vale Google.FirstPerson = YES -->
+> stated in the
+> [license](https://github.com/chrisgrieser/shimmering-obsidian/blob/main/LICENSE).
+> If you care about safety, please use a professional backup solution.
 
 ### CSS files
 **`ocss`: Access your `css` files.**
@@ -496,7 +494,7 @@ src="https://user-images.githubusercontent.com/73286100/131027623-5e8b3667-d00d-
 ### Official documentation
 <!-- LTeX: enabled=false -->
 **`oh`: Search the official [Obsidian help
-(documentation)](https://help.obsidian.md/Start+here)
+(documentation)](https://help.obsidian.md/Start+here)**
 <!-- LTeX: enabled=true -->
 - This command mimics the search behavior on the official documentation site,
   meaning that it also searches for headings inside individual documentation
@@ -527,7 +525,7 @@ Search the official [Obsidian developer docs](https://docs.obsidian.md/Home).
 - `ocss`: Open CSS snippets
 
 ## Credits
-- Big shout-out to [@kometenstaub](https://github.com/kometenstaub) for
+- Thanks to [@kometenstaub](https://github.com/kometenstaub) for
   developing the [metadata extractor
   plugin](https://github.com/kometenstaub/metadata-extractor), as this workflow
   is its main client.
@@ -536,23 +534,21 @@ Search the official [Obsidian developer docs](https://docs.obsidian.md/Home).
   which enables Alfred to control various aspects of Obsidian.
 - Most icons created by [Freepik (Flaticon)](https://www.flaticon.com/authors/freepik).
 
-<!-- vale Google.FirstPerson = NO -->
 ## About the developer
 In my day job, I am a sociologist studying the social mechanisms underlying the
 digital economy. For my PhD project, I investigate the governance of the app
 economy and how software ecosystems manage the tension between innovation and
 compatibility. If you are interested in this subject, feel free to get in touch.
 
-- [Academic Website](https://chris-grieser.de/)
+- [Website](https://chris-grieser.de/)
 - [ResearchGate](https://www.researchgate.net/profile/Christopher-Grieser)
 - [Mastodon](https://pkm.social/@pseudometa)
 - [LinkedIn](https://www.linkedin.com/in/christopher-grieser-ba693b17a/)
 
 > [!IMPORTANT]
-> Note that for questions, bug reports, or feature requests for this workflow,
+> For questions, bug reports, or feature requests for this workflow,
 > please open a [GitHub
-> issue](https://github.com/chrisgrieser/shimmering-obsidian/issues), since it is
-> better suited for technical support.
+> issue](https://github.com/chrisgrieser/shimmering-obsidian/issues).
 
 <a href='https://ko-fi.com/Y8Y86SQ91' target='_blank'><img height='36'
 style='border:0px;height:36px;' src='https://cdn.ko-fi.com/cdn/kofi1.png?v=3'
