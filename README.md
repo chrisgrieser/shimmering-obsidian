@@ -99,21 +99,21 @@ This keyword searches all your notes, aliases, folders, and headings combined.
 #### Search for notes
 This works similar to Obsidian's built-in *Quick Switcher*, but can be triggered
 without Obsidian running (in which case it opens Obsidian with the selected
-note). Press `⏎` to open the selected file in Obsidian.
+note). 
+- `⏎`: Open the selected file in Obsidian.
 - `⌘ + ⏎`: Open the file in a new tab. (Can be configured in the workflow
   settings to open in a new window or split instead.)
 - `⌥ + ⏎`: Reveal the file in Finder.
-- `fn + ⏎`: Append the content to the selected note.
-- `⌃ + ⏎`: Copy the [Obsidian-URI to the selected file](https://help.obsidian.md/Advanced+topics/Using+obsidian+URI#Action+`hook-get-address`).
+- `fn + ⏎`: Append content to the selected note. (Prompt for text or clipboard content)
+- `⌃ + ⏎`: Copy the [Obsidian-URI](https://help.obsidian.md/Advanced+topics/Using+obsidian+URI#Action+`hook-get-address`) to the selected file.
 - `⇧ + ⏎`: Browse a list of all links of the selected note (outgoing links,
   backlinks, external links.) See at the [section "Browse Links"
   below](#browse-links-of-a-note) for further information.
 - Press `⇧` or `⌘ y` to preview the selected note via macOS' Quick Look feature.
   Press `⇧` or `⌘ y` again to close the preview. This feature requires
-  [QLMarkdown or Peek](#previewing-notes-via-quicklook) being installed.
-- 💡 The `o`-search respects the `Excluded Files` setting from Obsidian and
-  ignore files and folders added there. (Regex-Filters do not work properly
-  though.)
+  [QLMarkdown or Peek](#previewing-notes-via-quicklook) to be installed.
+- 💡 The `o`-search respects the `Excluded files` setting from Obsidian and
+  ignore files and folders added there. (Regex-filters do not work though.)
 
 > [!TIP]
 > There are various settings for appending and opening notes, which can be
@@ -143,37 +143,20 @@ note). Press `⏎` to open the selected file in Obsidian.
 This command also looks for **aliases**, when they are [defined in the
 YAML-Header](https://help.obsidian.md/How+to/Add+aliases+to+note#Set+aliases).
 - Add `alias` to your search query, to only display aliases, for example, `o
-  obsidian alias` only displays notes that have the *alias* `obsidian`.# Search
-  for Aliases
-This command also looks for **aliases**, when they are [defined in the
-YAML-Header](https://help.obsidian.md/How+to/Add+aliases+to+note#Set+aliases).
-- Add `alias` to your search query, to only display aliases, for example, `o
   obsidian alias` only displays notes that have the *alias* `obsidian`.
 
 #### Search for folders
-When **selecting a folder**, you **"browse"** the selected folder—this means
+When **selecting a folder**, you can "browse" the selected folder—this means
 that you are now searching only for files and folders inside that folder.
 - When browsing a folder, you also have the option to create a new note *in that
-  folder*. Uses the template note defined with the setting `template_note_path`.
+  folder*. Uses the template note defined in the workflow configuration.
 - Furthermore, you can go up and browse the *parent* folder of the current
   folder. Basically, you can fully explore the folder structure of your vault
   via Alfred.
 - Add `folder` to your search query, to only display folders, for example, `o
-  foobar folder` only displays *folder* that have `foobar` in their name.
-- When you are browsing inside a folder, use the query `..` or the `new` to
-  quickly access the item for going up to the parent folder or creating a new
-  note in that folder, respectively.# Search for Folders
-When **selecting a folder**, you **"browse"** the selected folder—this means
-that you are now searching only for files and folders inside that folder.
-- When browsing a folder, you also have the option to create a new note *in that
-  folder*. Uses the template note defined with the setting `template_note_path`.
-- Furthermore, you can go up and browse the *parent* folder of the current
-  folder. Basically, you can fully explore the folder structure of your vault
-  via Alfred.
-- Add `folder` to your search query, to only display folders, for example, `o
-  foobar folder` only displays *folder* that have `foobar` in their name.
-- When you are browsing inside a folder, use the query `..` or the `new` to
-  quickly access the item for going up to the parent folder or creating a new
+  foobar folder` only displays *folders* that have `foobar` in their name.
+- When you are browsing inside a folder, use the query `..` to go up to the
+  parent folder or `new` to create a new
   note in that folder, respectively.
 
 #### Search for headings
@@ -192,25 +175,8 @@ Selecting a heading with `⏎` opens the file *at the respective heading*.
   configuration.
 
 > [!TIP]
-> Add more heading levels to `h_lvl_ignore` if your search results become too
-> crowded.## Search for Headings
-Displayed alongside the other search results are all headings in your vault.
-Selecting a heading with `⏎` opens the file *at the respective heading*.
-- `⌃ + ⏎`: Copies either a Markdown link [that uses the Obsidian
-  URI](https://help.obsidian.md/Advanced+topics/Using+obsidian+URI#Action+%60hook-get-address%60)
-  or the wikilink to the selected file, depending on the setting. Also work with
-  headings.
-- Add `heading` to your search query, to only display headings, for example, `o
-  foobar heading` only displays *headings* that include `foobar`.
-- Add `h1`, `h2`, … to your search query, to only display headings of a certain
-  level, for example, `o obsidian h2` only displays *level 2 headings* that
-  include `obsidian`.
-- You can ignore certain (or all) heading levels with the respective workflow
-  configuration.
-
-> [!TIP]
-> Add more heading levels to `h_lvl_ignore` if your search results become too
-> crowded.
+> If the search results become too crowded, you can ignore certain heading levels
+> in the workflow configuration.
 
 #### Browse links of a note
 **Use `⇧ + ⏎` on any search result of the main `o` search to browse the links of
@@ -306,7 +272,7 @@ works for Markdown and requires some minor setup.
 <!-- LTeX: enabled=false -->
 **`on`: Create a `n`ew note.**
 <!-- LTeX: enabled=true -->
-- **File Name:** Anything you type after the keyword `on` (for example, `on
+- **File name:** Anything you type after the keyword `on` (for example, `on
   foobar`) becomes the file name of the new note (for example, `foobar.md`).
   (Note that the [Filename Heading Sync
   Plugin](https://obsidian.md/plugins?id=obsidian-filename-heading-sync) may
