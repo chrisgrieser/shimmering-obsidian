@@ -1,4 +1,4 @@
-name: "Close stale issues and PRs"
+name: Stale bot
 on:
   schedule:
     - cron: "18 04 * * 3" 
@@ -11,13 +11,13 @@ jobs:
   stale:
     runs-on: ubuntu-latest
     steps:
-      - name: Close Stale Issues
+      - name: Close stale issues
         uses: actions/stale@v9
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
 
-          # DOCS https://github.com/actions/stale?tab=readme-ov-file#all-options
-          days-before-stale: 180 # ~6 months
+          # DOCS https://github.com/actions/stale#all-options
+          days-before-stale: 180
           days-before-close: 7
           stale-issue-label: "Stale"
           stale-issue-message: |

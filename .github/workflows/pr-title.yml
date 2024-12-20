@@ -1,21 +1,29 @@
-name: Ensure Conventional Commits-like PR titles
+name: PR title
 
 on:
   pull_request_target:
-    types: [opened, edited, synchronize]
+    types:
+      - opened
+      - edited
+      - synchronize
+      - reopened
+      - ready_for_review
 
 permissions:
   pull-requests: read
 
 jobs:
   semantic-pull-request:
-    name: Validate PR title
+    name: Check PR title
     runs-on: ubuntu-latest
     steps:
       - uses: amannn/action-semantic-pull-request@v5
-        # add `improv` to the list of allowed types
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          types: |
+          requireScope: false
+          subjectPattern: ^(?![A-Z]).+$ # disallow title starting with capital
+          types: | # add `improv` to the list of allowed types
             improv
             fix
             feat
@@ -29,5 +37,3 @@ jobs:
             docs
             break
             revert
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
