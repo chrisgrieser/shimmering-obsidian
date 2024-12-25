@@ -1,0 +1,17 @@
+name: Markdownlint check
+
+on:
+  push:
+    branches: [main]
+    paths: ["**.md"]
+  pull_request:
+
+jobs:
+  markdownlint:
+    name: Markdownlint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: DavidAnson/markdownlint-cli2-action@v18
+        with:
+          globs: "**/*.md"

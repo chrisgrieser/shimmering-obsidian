@@ -3,12 +3,17 @@
 #───────────────────────────────────────────────────────────────────────────────
 
 # MODIFIED SETTINGS
-blanks-around-headings: { lines_below: 0 } # rule of proximity
+blanks-around-headings:
+  lines_below: 0 # space waster
 ul-style: { style: sublist }
 
+# not autofixable
 ol-prefix: { style: ordered }
-line-length: { tables: false, code_blocks: false }
-no-inline-html: { allowed_elements: [img, details, summary, kbd, a, br] }
+line-length:
+  tables: false
+  code_blocks: false
+no-inline-html:
+  allowed_elements: [img, details, summary, kbd, a, br]
 
 #─────────────────────────────────────────────────────────────────────────────
 # DISABLED
