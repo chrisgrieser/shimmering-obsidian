@@ -64,7 +64,7 @@ Gallery.](https://alfred.app/workflows/chrisgrieser/shimmering-obsidian/)
 [Powerpack](https://www.alfredapp.com/powerpack/).*
 1. Install the Obsidian plugins [Advanced
    URI](https://obsidian.md/plugins?id=obsidian-advanced-uri) & [Metadata
-   Extractor](https://obsidian.md/plugins?id=metadata-extractor). 
+   Extractor](https://obsidian.md/plugins?id=metadata-extractor).
 2. Enable both plugins.
 3. Download the [latest release at
    GitHub](https://github.com/chrisgrieser/shimmering-obsidian/releases/latest).
@@ -99,13 +99,15 @@ This keyword searches all your notes, aliases, folders, and headings combined.
 #### Search for notes
 This works similar to Obsidian's built-in *Quick Switcher*, but can be triggered
 without Obsidian running (in which case it opens Obsidian with the selected
-note). 
+note).
 - `⏎`: Open the selected file in Obsidian.
 - `⌘ + ⏎`: Open the file in a new tab. (Can be configured in the workflow
   settings to open in a new window or split instead.)
 - `⌥ + ⏎`: Reveal the file in Finder.
 - `fn + ⏎`: Append content to the selected note. (Prompt for text or clipboard content)
-- `⌃ + ⏎`: Copy the [Obsidian-URI](https://help.obsidian.md/Advanced+topics/Using+obsidian+URI#Action+`hook-get-address`) to the selected file.
+- `⌃ + ⏎`: Copy the
+  [Obsidian-URI](https://help.obsidian.md/Advanced+topics/Using+obsidian+URI#Action+`hook-get-address`)
+  to the selected file.
 - `⇧ + ⏎`: Browse a list of all links of the selected note (outgoing links,
   backlinks, external links.) See at the [section "Browse Links"
   below](#browse-links-of-a-note) for further information.
@@ -335,7 +337,9 @@ brew install tesseract tesseract-lang
 > give Alfred permission to record your screen. You can do so under the macOS
 > system settings.
 >
-> <img src="https://user-images.githubusercontent.com/73286100/131231644-a800c0b0-8dc2-4ae9-bd41-c3937741b94a.png" alt="Permissions for OCR Screenshots" width=35%>
+> <img
+> src="https://user-images.githubusercontent.com/73286100/131231644-a800c0b0-8dc2-4ae9-bd41-c3937741b94a.png"
+> alt="Permissions for OCR Screenshots" width=35%>
 
 ### Image screenshot
 **`Triggered via Hotkey`: Take an image screenshot.**
