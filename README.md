@@ -17,42 +17,42 @@ Gallery.](https://alfred.app/workflows/chrisgrieser/shimmering-obsidian/)
 
 - [Installation](#installation)
 - [Alfred-based quick switcher](#alfred-based-quick-switcher)
-  * [How the search works](#how-the-search-works)
-  * [Main search](#main-search)
-    + [Search for notes](#search-for-notes)
-    + [Smart queries](#smart-queries)
-    + [Search for aliases](#search-for-aliases)
-    + [Search for folders](#search-for-folders)
-    + [Search for headings](#search-for-headings)
-    + [Browse links of a note](#browse-links-of-a-note)
-  * [Search notes by their tags](#search-notes-by-their-tags)
-  * [Search bookmarked files](#search-bookmarked-files)
-  * [Search recent files](#search-recent-files)
-  * [Search for attachments](#search-for-attachments)
-  * [Search all external links in the entire vault](#search-all-external-links-in-the-entire-vault)
-  * [Extra features](#extra-features)
-    + [Vault search as Alfred fallback](#vault-search-as-alfred-fallback)
-    + [Previewing notes via QuickLook](#previewing-notes-via-quicklook)
+	* [How the search works](#how-the-search-works)
+	* [Main search](#main-search)
+		+ [Search for notes](#search-for-notes)
+		+ [Smart queries](#smart-queries)
+		+ [Search for aliases](#search-for-aliases)
+		+ [Search for folders](#search-for-folders)
+		+ [Search for headings](#search-for-headings)
+		+ [Browse links of a note](#browse-links-of-a-note)
+	* [Search notes by their tags](#search-notes-by-their-tags)
+	* [Search bookmarked files](#search-bookmarked-files)
+	* [Search recent files](#search-recent-files)
+	* [Search for attachments](#search-for-attachments)
+	* [Search all external links in the entire vault](#search-all-external-links-in-the-entire-vault)
+	* [Extra features](#extra-features)
+		+ [Vault search as Alfred fallback](#vault-search-as-alfred-fallback)
+		+ [Previewing notes via QuickLook](#previewing-notes-via-quicklook)
 - [Note-related features](#note-related-features)
-  * [Create a new note](#create-a-new-note)
-  * [Scratchpad](#scratchpad)
+	* [Create a new note](#create-a-new-note)
+	* [Scratchpad](#scratchpad)
 - [Screenshot features](#screenshot-features)
-  * [OCR screenshots](#ocr-screenshots)
-  * [Image screenshot](#image-screenshot)
+	* [OCR screenshots](#ocr-screenshots)
+	* [Image screenshot](#image-screenshot)
 - [Utility features](#utility-features)
-  * [Workspace switcher](#workspace-switcher)
-  * [Vault switcher](#vault-switcher)
-  * [Back up your vault](#back-up-your-vault)
-  * [CSS files](#css-files)
-  * [Open various folders](#open-various-folders)
-  * [Update plugins & metadata](#update-plugins--metadata)
+	* [Workspace switcher](#workspace-switcher)
+	* [Vault switcher](#vault-switcher)
+	* [Back up your vault](#back-up-your-vault)
+	* [CSS files](#css-files)
+	* [Open various folders](#open-various-folders)
+	* [Update plugins & metadata](#update-plugins--metadata)
 - [Plugins, themes, and settings](#plugins-themes-and-settings)
-  * [Plugins](#plugins)
-  * [Themes](#themes)
-  * [Settings & local plugins](#settings--local-plugins)
+	* [Plugins](#plugins)
+	* [Themes](#themes)
+	* [Settings & local plugins](#settings--local-plugins)
 - [Documentation searches](#documentation-searches)
-  * [Official documentation](#official-documentation)
-  * [Plugin developer documentation](#plugin-developer-documentation)
+	* [Official documentation](#official-documentation)
+	* [Plugin developer documentation](#plugin-developer-documentation)
 - [Cheatsheet](#cheatsheet)
 - [Credits](#credits)
 - [About the developer](#about-the-developer)
@@ -118,8 +118,8 @@ note).
   ignore files and folders added there. (Regex-filters do not work though.)
 
 > [!TIP]
-> There are various settings for appending and opening notes, which can be
-  found in the workflow configuration.
+> There are various settings for appending and opening notes, which can be found
+> in the workflow configuration.
 
 #### Smart queries
 - Add `filename` or `title` to your search query, to display only files and no
@@ -400,7 +400,7 @@ end tell
 ```
 
 > [!WARNING]
-> Please be aware that this is a simplistic backup solution. While I did not
+> Please be aware that this is a simplistic backup solution. While I do not
 > have any problems with it, this workflow comes without any warranties, as
 > stated in the
 > [license](https://github.com/chrisgrieser/shimmering-obsidian/blob/main/LICENSE).
@@ -423,7 +423,7 @@ end tell
 - `opthemes`: The theme folder in `.obsidian` is opened in Finder.
 
 ### Update plugins & metadata
-**`oupdate`: Update Plugins and Metadata used by this workflow**
+**`oupdate`: Update plugins and metadata used by this workflow**
 - Update your community plugins (and beta plugins installed via [the BRAT
   Plugin](https://github.com/TfTHacker/obsidian42-brat)).
 - Refresh the metadata used for this workflow manually.
@@ -468,7 +468,7 @@ end tell
 src="https://user-images.githubusercontent.com/73286100/131027623-5e8b3667-d00d-47dc-ba49-6938686e2aca.gif">
 
 ### Settings & local plugins
-**`o,`: Search and directly open specific setting tabs.[^1]**
+**`o,`: Search and directly open specific setting tabs.**
 - The search includes Obsidian main settings, quick access to the plugin and
   theme browser, as well as settings for plugins. Press `⏎` to open the
   respective setting *directly*.
@@ -487,10 +487,8 @@ src="https://user-images.githubusercontent.com/73286100/131027623-5e8b3667-d00d-
 ## Documentation searches
 
 ### Official documentation
-<!-- LTeX: enabled=false -->
 **`oh`: Search the official [Obsidian help
 (documentation)](https://help.obsidian.md/Start+here)**
-<!-- LTeX: enabled=true -->
 - This command mimics the search behavior on the official documentation site,
   meaning that it also searches for headings inside individual documentation
   pages.
