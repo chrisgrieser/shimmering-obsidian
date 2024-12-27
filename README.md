@@ -112,8 +112,8 @@ note).
   backlinks, external links.) See at the [section "Browse Links"
   below](#browse-links-of-a-note) for further information.
 - Press `⇧` or `⌘ y` to preview the selected note via macOS' Quick Look feature.
-  Press `⇧` or `⌘ y` again to close the preview. This feature requires
-  [QLMarkdown or Peek](#previewing-notes-via-quicklook) to be installed.
+  Press it again to close the preview. This feature requires [QLMarkdown or
+  Peek](#previewing-notes-via-quicklook) to be installed.
 - 💡 The `o`-search respects the `Excluded files` setting from Obsidian and
   ignore files and folders added there. (Regex-filters do not work though.)
 
@@ -122,15 +122,6 @@ note).
   found in the workflow configuration.
 
 #### Smart queries
-- Add `filename` or `title` to your search query, to display only files and no
-  aliases, folders, or headings. For example, `o obsidian filename` displays
-  only notes that have the `obsidian` in their filename.
-- Add `canvas` to your search to only display canvases (Obsidian 1.1).
-- Similarly, you can also filter for starred or recent files by adding `starred`
-  or `recent` to your query.
-- You can add `#tag` to your search query to search only for files with a
-  specific tag, for example, `o foobar #moc` only displays notes with the name
-  `foobar` that are also tagged with `#moc`.## Smart Queries
 - Add `filename` or `title` to your search query, to display only files and no
   aliases, folders, or headings. For example, `o obsidian filename` displays
   only notes that have the `obsidian` in their filename.
