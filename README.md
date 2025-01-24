@@ -283,20 +283,20 @@ works for Markdown and requires some minor setup.
 
 ### Scratchpad
 **`oo` or `triggered via hotkey`: Append to your Scratchpad Note**
-- Quickly add text to the note set in the workflow configuration. (This command
-  is basically a quicker version of the `fn + ⏎` mode of the [Alfred-based Quick
-  Switcher](Alfred-based%20Quick%20Switcher.md#search-for-notes).)
-	* When using `oo foobar`, appends `foobar` to the note.
-	* Triggered via **hotkey**, appends the current selection.
-	* When you add `#foobar` (for example, `Inbox/Scratchpad-Note#Thoughts`) to
-	  path of the scratchpad file in the workflow configuration, the text is
-	  appended to the section with the heading "foobar."
+Quickly add text to the note set in the workflow configuration. (This command is
+basically a quicker version of the `fn + ⏎` mode of the [Alfred-based Quick
+Switcher](Alfred-based%20Quick%20Switcher.md#search-for-notes).)
+- When using `oo foobar`, appends `foobar` to the note.
+- Triggered via **hotkey**, appends the current selection.
+- When you add `#foobar` (for example, `Inbox/Scratchpad-Note#Thoughts`) to path
+  of the scratchpad file in the workflow configuration, the text is appended to
+  the section with the heading "foobar."
 
 > [!TIP]
 > There are various settings for the scratchpad in the workflow configuration.
 > You can, for instance, use [Alfred's Dynamic
 > Placeholders](https://www.alfredapp.com/help/workflows/advanced/placeholders/)
-> to prefix the current date and time.
+> to prefix the current date and time, or use a dynamic path to a daily note.
 
 ## Screenshot features
 <img src="https://i.imgur.com/xwdl1N5.gif" alt="OCR Screenshot" width=50%>

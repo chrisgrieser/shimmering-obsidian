@@ -1883,6 +1883,27 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string></string>
+				<key>title</key>
+				<string>📸 OCR Text saved</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>260919C7-A9E6-4442-AEF6-E62D271910BF</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -1908,27 +1929,6 @@ tesseract "$temp_image" stdout -l $ocr_languages 2&gt;&amp;1</string>
 			<string>5F6CE94A-26BF-4826-8A67-2E02353646DB</string>
 			<key>version</key>
 			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<true/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string></string>
-				<key>title</key>
-				<string>📸 OCR Text saved</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>260919C7-A9E6-4442-AEF6-E62D271910BF</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1964,6 +1964,10 @@ tesseract "$temp_image" stdout -l $ocr_languages 2&gt;&amp;1</string>
 				<false/>
 				<key>focusedappvariablename</key>
 				<string></string>
+				<key>hotkey</key>
+				<integer>0</integer>
+				<key>hotmod</key>
+				<integer>0</integer>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -1977,6 +1981,21 @@ tesseract "$temp_image" stdout -l $ocr_languages 2&gt;&amp;1</string>
 			<string>B68030A9-77F0-45C0-8293-0659C6970C5D</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>availableviaurlhandler</key>
+				<false/>
+				<key>triggerid</key>
+				<string>open-relative-path-in-obsidian</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.external</string>
+			<key>uid</key>
+			<string>503B3F91-98A0-4357-92F2-A88BD6EDB404</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -2000,21 +2019,6 @@ tesseract "$temp_image" stdout -l $ocr_languages 2&gt;&amp;1</string>
 			<string>76EF97C3-981D-466E-BA90-47D34129BE96</string>
 			<key>version</key>
 			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>availableviaurlhandler</key>
-				<false/>
-				<key>triggerid</key>
-				<string>open-relative-path-in-obsidian</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.external</string>
-			<key>uid</key>
-			<string>503B3F91-98A0-4357-92F2-A88BD6EDB404</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -2121,6 +2125,35 @@ tesseract "$temp_image" stdout -l $ocr_languages 2&gt;&amp;1</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>63</integer>
+				<key>script</key>
+				<string>export PATH=/usr/local/bin/:/opt/homebrew/bin/:$PATH
+
+temp_image="$alfred_workflow_cache""/temp_ocr_snapshot.png"
+mkdir -p "$alfred_workflow_cache"
+screencapture -i "$temp_image"
+
+tesseract "$temp_image" stdout -l $ocr_languages 2&gt;&amp;1</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>scripts/screenshot-to-note.sh</string>
+				<key>type</key>
+				<integer>8</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>EFED0DE3-D836-408A-A4AE-2E363E5A7F38</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>lastpathcomponent</key>
 				<false/>
 				<key>onlyshowifquerypopulated</key>
@@ -2150,6 +2183,10 @@ tesseract "$temp_image" stdout -l $ocr_languages 2&gt;&amp;1</string>
 				<false/>
 				<key>focusedappvariablename</key>
 				<string></string>
+				<key>hotkey</key>
+				<integer>0</integer>
+				<key>hotmod</key>
+				<integer>0</integer>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -2161,35 +2198,6 @@ tesseract "$temp_image" stdout -l $ocr_languages 2&gt;&amp;1</string>
 			<string>alfred.workflow.trigger.hotkey</string>
 			<key>uid</key>
 			<string>3FDC367F-3E6F-4DAD-B146-E80044D686E8</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>63</integer>
-				<key>script</key>
-				<string>export PATH=/usr/local/bin/:/opt/homebrew/bin/:$PATH
-
-temp_image="$alfred_workflow_cache""/temp_ocr_snapshot.png"
-mkdir -p "$alfred_workflow_cache"
-screencapture -i "$temp_image"
-
-tesseract "$temp_image" stdout -l $ocr_languages 2&gt;&amp;1</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string>scripts/screenshot-to-note.sh</string>
-				<key>type</key>
-				<integer>8</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>EFED0DE3-D836-408A-A4AE-2E363E5A7F38</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -2277,6 +2285,10 @@ tesseract "$temp_image" stdout -l $ocr_languages 2&gt;&amp;1</string>
 				<false/>
 				<key>focusedappvariablename</key>
 				<string></string>
+				<key>hotkey</key>
+				<integer>0</integer>
+				<key>hotmod</key>
+				<integer>0</integer>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -2396,21 +2408,6 @@ tesseract "$temp_image" stdout -l $ocr_languages 2&gt;&amp;1</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>availableviaurlhandler</key>
-				<false/>
-				<key>triggerid</key>
-				<string>copy-markdown-link</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.external</string>
-			<key>uid</key>
-			<string>0645AAB4-66F5-4149-A92B-C58A80B649C7</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -2430,6 +2427,21 @@ tesseract "$temp_image" stdout -l $ocr_languages 2&gt;&amp;1</string>
 			<string>BFF5266E-FA2A-455F-9C52-3A0480BAFF2F</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>availableviaurlhandler</key>
+				<false/>
+				<key>triggerid</key>
+				<string>copy-markdown-link</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.external</string>
+			<key>uid</key>
+			<string>0645AAB4-66F5-4149-A92B-C58A80B649C7</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -2512,6 +2524,25 @@ tesseract "$temp_image" stdout -l $ocr_languages 2&gt;&amp;1</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>externaltriggerid</key>
+				<string>open-relative-path-in-obsidian</string>
+				<key>passinputasargument</key>
+				<true/>
+				<key>passvariables</key>
+				<true/>
+				<key>workflowbundleid</key>
+				<string>self</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>30FE564E-5E90-4F98-87D8-EAEB63CECFB3</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>keyword</key>
@@ -2527,25 +2558,6 @@ tesseract "$temp_image" stdout -l $ocr_languages 2&gt;&amp;1</string>
 			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
 			<string>60A87101-8D59-46BF-BCAE-A9195D6A034E</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>externaltriggerid</key>
-				<string>open-relative-path-in-obsidian</string>
-				<key>passinputasargument</key>
-				<true/>
-				<key>passvariables</key>
-				<true/>
-				<key>workflowbundleid</key>
-				<string>self</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.callexternaltrigger</string>
-			<key>uid</key>
-			<string>30FE564E-5E90-4F98-87D8-EAEB63CECFB3</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -2679,26 +2691,6 @@ tesseract "$temp_image" stdout -l $ocr_languages 2&gt;&amp;1</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argument</key>
-				<string></string>
-				<key>passthroughargument</key>
-				<true/>
-				<key>variables</key>
-				<dict>
-					<key>appendedText</key>
-					<string>{query}</string>
-				</dict>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>956AC463-0D84-45FF-B72B-80E2C495EC71</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>matchmode</key>
 				<integer>1</integer>
 				<key>matchstring</key>
@@ -2716,6 +2708,26 @@ tesseract "$temp_image" stdout -l $ocr_languages 2&gt;&amp;1</string>
 			<string>FBC5BD0C-F69A-4171-A33D-6548860B3119</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<true/>
+				<key>variables</key>
+				<dict>
+					<key>appendedText</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>956AC463-0D84-45FF-B72B-80E2C495EC71</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -2823,25 +2835,6 @@ tesseract "$temp_image" stdout -l $ocr_languages 2&gt;&amp;1</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>externaltriggerid</key>
-				<string>open-relative-path-in-obsidian</string>
-				<key>passinputasargument</key>
-				<true/>
-				<key>passvariables</key>
-				<true/>
-				<key>workflowbundleid</key>
-				<string>self</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.callexternaltrigger</string>
-			<key>uid</key>
-			<string>10873427-2384-4E8F-8D59-A9D1EB95EFC2</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -2861,6 +2854,25 @@ tesseract "$temp_image" stdout -l $ocr_languages 2&gt;&amp;1</string>
 			<string>D3E8EE70-EB5F-4B58-B533-0A177A30C472</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>externaltriggerid</key>
+				<string>open-relative-path-in-obsidian</string>
+				<key>passinputasargument</key>
+				<true/>
+				<key>passvariables</key>
+				<true/>
+				<key>workflowbundleid</key>
+				<string>self</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>10873427-2384-4E8F-8D59-A9D1EB95EFC2</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -3339,6 +3351,25 @@ set parameter to do shell script "echo " &amp; quoted form of (system attribute 
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>E6C3B3BC-E42C-40AC-89D3-4E7905BC4C9C</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>lastpathcomponent</key>
 				<false/>
 				<key>onlyshowifquerypopulated</key>
@@ -3356,25 +3387,6 @@ set parameter to do shell script "echo " &amp; quoted form of (system attribute 
 			<string>D967483C-9C29-4D50-912B-0D6FA38D25ED</string>
 			<key>version</key>
 			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>autopaste</key>
-				<false/>
-				<key>clipboardtext</key>
-				<string>{query}</string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>transient</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>E6C3B3BC-E42C-40AC-89D3-4E7905BC4C9C</string>
-			<key>version</key>
-			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -3455,6 +3467,21 @@ set parameter to do shell script "echo " &amp; quoted form of (system attribute 
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>availableviaurlhandler</key>
+				<false/>
+				<key>triggerid</key>
+				<string>note-link-list</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.external</string>
+			<key>uid</key>
+			<string>586CA10A-CD8A-4C01-8388-351A83CC9B09</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>alfredfiltersresults</key>
 				<true/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -3498,21 +3525,6 @@ set parameter to do shell script "echo " &amp; quoted form of (system attribute 
 			<string>D3A85314-C314-49E8-BA70-08DD01FC2E21</string>
 			<key>version</key>
 			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>availableviaurlhandler</key>
-				<false/>
-				<key>triggerid</key>
-				<string>note-link-list</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.external</string>
-			<key>uid</key>
-			<string>586CA10A-CD8A-4C01-8388-351A83CC9B09</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -3623,25 +3635,6 @@ set parameter to do shell script "echo " &amp; quoted form of (system attribute 
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>autopaste</key>
-				<false/>
-				<key>clipboardtext</key>
-				<string>{query}</string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>transient</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>7E35A968-B0D2-449B-B6F5-ECCE886E4BE8</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>lastpathcomponent</key>
 				<false/>
 				<key>onlyshowifquerypopulated</key>
@@ -3659,6 +3652,25 @@ set parameter to do shell script "echo " &amp; quoted form of (system attribute 
 			<string>B81BA4E7-D57D-4746-9387-926DEA6386F9</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>7E35A968-B0D2-449B-B6F5-ECCE886E4BE8</string>
+			<key>version</key>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -4294,6 +4306,21 @@ set parameter to do shell script "echo " &amp; quoted form of (system attribute 
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>soundname</key>
+				<string>Blow</string>
+				<key>systemsound</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.playsound</string>
+			<key>uid</key>
+			<string>F8FA8843-EC3D-45BB-AD77-1F99F2E82DD8</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -4332,21 +4359,6 @@ echo "$backup"</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>soundname</key>
-				<string>Blow</string>
-				<key>systemsound</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.playsound</string>
-			<key>uid</key>
-			<string>F8FA8843-EC3D-45BB-AD77-1F99F2E82DD8</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>lastpathcomponent</key>
 				<false/>
 				<key>onlyshowifquerypopulated</key>
@@ -4368,27 +4380,6 @@ echo "$backup"</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>keyword</key>
-				<string>obackup</string>
-				<key>subtext</key>
-				<string></string>
-				<key>text</key>
-				<string>Backup: Obsidian Vault</string>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>C5E65176-674E-4553-A255-37A40EB99342</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>lastpathcomponent</key>
 				<true/>
 				<key>onlyshowifquerypopulated</key>
@@ -4404,6 +4395,27 @@ echo "$backup"</string>
 			<string>alfred.workflow.output.notification</string>
 			<key>uid</key>
 			<string>7954C22E-D0FB-4539-87D1-D62DF328DBB2</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>obackup</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>Backup: Obsidian Vault</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>C5E65176-674E-4553-A255-37A40EB99342</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -4438,6 +4450,21 @@ echo "$backup"</string>
 			<string>7EC2835E-B407-4A6D-9104-B7BFDDF811B9</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>openwith</key>
+				<string></string>
+				<key>sourcefile</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openfile</string>
+			<key>uid</key>
+			<string>76BE7619-FDB9-4324-81C7-6570B534A123</string>
+			<key>version</key>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -4498,21 +4525,6 @@ echo "$backup"</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>openwith</key>
-				<string></string>
-				<key>sourcefile</key>
-				<string></string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openfile</string>
-			<key>uid</key>
-			<string>76BE7619-FDB9-4324-81C7-6570B534A123</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>alfredfiltersresults</key>
 				<true/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -4562,25 +4574,6 @@ echo "$backup"</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>autopaste</key>
-				<false/>
-				<key>clipboardtext</key>
-				<string>{query}</string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>transient</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>2BB4DFA9-6E15-4EE5-8E69-7E1AE14AA2EC</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>lastpathcomponent</key>
 				<false/>
 				<key>onlyshowifquerypopulated</key>
@@ -4598,6 +4591,25 @@ echo "$backup"</string>
 			<string>A5ADC808-2010-447C-9B0A-B4C14C3801EB</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>2BB4DFA9-6E15-4EE5-8E69-7E1AE14AA2EC</string>
+			<key>version</key>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -4677,21 +4689,36 @@ curl -sL "https://raw.githubusercontent.com/chrisgrieser/alfred-docs-searches/ma
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<false/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>keyword</key>
+				<string>oupdate</string>
+				<key>subtext</key>
 				<string></string>
-				<key>title</key>
-				<string>✅ Metadata updated</string>
+				<key>text</key>
+				<string>🔁 Manually Refresh Metadata</string>
+				<key>withspace</key>
+				<true/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
+			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
-			<string>099D27EE-A12C-4248-B4EC-C46C34F5415E</string>
+			<string>4F356F57-A6AA-4277-B742-27DC8EE84450</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>soundname</key>
+				<string>Blow</string>
+				<key>systemsound</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.playsound</string>
+			<key>uid</key>
+			<string>2FD866C2-DDB1-4C2D-A420-3A580FBC60D2</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -4721,15 +4748,21 @@ curl -sL "https://raw.githubusercontent.com/chrisgrieser/alfred-docs-searches/ma
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>soundname</key>
-				<string>Blow</string>
-				<key>systemsound</key>
-				<true/>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string></string>
+				<key>title</key>
+				<string>✅ Metadata updated</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.output.playsound</string>
+			<string>alfred.workflow.output.notification</string>
 			<key>uid</key>
-			<string>2FD866C2-DDB1-4C2D-A420-3A580FBC60D2</string>
+			<string>099D27EE-A12C-4248-B4EC-C46C34F5415E</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -4741,16 +4774,16 @@ curl -sL "https://raw.githubusercontent.com/chrisgrieser/alfred-docs-searches/ma
 				<key>keyword</key>
 				<string>oupdate</string>
 				<key>subtext</key>
-				<string></string>
+				<string>and Beta Plugins, if BRAT is installed</string>
 				<key>text</key>
-				<string>🔁 Manually Refresh Metadata</string>
+				<string>⚙️ Update all Plugins</string>
 				<key>withspace</key>
 				<true/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
-			<string>4F356F57-A6AA-4277-B742-27DC8EE84450</string>
+			<string>392642B8-A259-495D-A715-AD6FE5DBE992</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -4780,27 +4813,6 @@ curl -sL "https://raw.githubusercontent.com/chrisgrieser/alfred-docs-searches/ma
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>keyword</key>
-				<string>oupdate</string>
-				<key>subtext</key>
-				<string>and Beta Plugins, if BRAT is installed</string>
-				<key>text</key>
-				<string>⚙️ Update all Plugins</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>392642B8-A259-495D-A715-AD6FE5DBE992</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>browser</key>
 				<string></string>
 				<key>skipqueryencode</key>
@@ -4820,8 +4832,6 @@ curl -sL "https://raw.githubusercontent.com/chrisgrieser/alfred-docs-searches/ma
 			<integer>1</integer>
 		</dict>
 		<dict>
-			<key>config</key>
-			<dict/>
 			<key>type</key>
 			<string>alfred.workflow.utility.junction</string>
 			<key>uid</key>
@@ -4932,8 +4942,6 @@ curl -sL "https://raw.githubusercontent.com/chrisgrieser/alfred-docs-searches/ma
 			<integer>3</integer>
 		</dict>
 		<dict>
-			<key>config</key>
-			<dict/>
 			<key>type</key>
 			<string>alfred.workflow.utility.junction</string>
 			<key>uid</key>
@@ -4942,8 +4950,6 @@ curl -sL "https://raw.githubusercontent.com/chrisgrieser/alfred-docs-searches/ma
 			<integer>1</integer>
 		</dict>
 		<dict>
-			<key>config</key>
-			<dict/>
 			<key>type</key>
 			<string>alfred.workflow.utility.junction</string>
 			<key>uid</key>
@@ -5132,6 +5138,27 @@ curl -sL "https://raw.githubusercontent.com/chrisgrieser/alfred-docs-searches/ma
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>skipqueryencode</key>
+				<false/>
+				<key>skipvarencode</key>
+				<false/>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>BF2C7CBD-67E0-45CC-8948-E68291FF2B50</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>alfredfiltersresults</key>
 				<true/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -5177,27 +5204,6 @@ curl -sL "https://raw.githubusercontent.com/chrisgrieser/alfred-docs-searches/ma
 			<string>E24806C9-408F-4504-B601-DED0239F88FD</string>
 			<key>version</key>
 			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>browser</key>
-				<string></string>
-				<key>skipqueryencode</key>
-				<false/>
-				<key>skipvarencode</key>
-				<false/>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string></string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
-			<key>uid</key>
-			<string>BF2C7CBD-67E0-45CC-8948-E68291FF2B50</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -7330,7 +7336,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 				<true/>
 			</dict>
 			<key>description</key>
-			<string>Vault-relative path to your Scratchpad note. When you append `#foobar`, the text will be appended to the section with the heading "foobar".</string>
+			<string>Vault-relative path to your Scratchpad note. When you append `#foobar`, the text will be appended to the section with the heading "foobar". Also supports Alfred's "Dynamic Placeholders" to insert things like a date.</string>
 			<key>label</key>
 			<string>Scratchpad</string>
 			<key>type</key>
