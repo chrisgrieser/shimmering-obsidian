@@ -287,10 +287,11 @@ Quickly add text to the note set in the workflow configuration. (This command is
 basically a quicker version of the `fn + ⏎` mode of the [Alfred-based Quick
 Switcher](Alfred-based%20Quick%20Switcher.md#search-for-notes).)
 - When using `oo foobar`, appends `foobar` to the note.
+- Using just `oo`, you can also directly open the Scratchpad.
 - Triggered via **hotkey**, appends the current selection.
-- When you add `#foobar` (for example, `Inbox/Scratchpad-Note#Thoughts`) to path
-  of the scratchpad file in the workflow configuration, the text is appended to
-  the section with the heading "foobar."
+- When you add `#foobar` to path of the scratchpad file in the workflow
+  configuration (for example, `Inbox/Scratchpad-Note#Thoughts`), the text is
+  appended to the section with the heading "foobar."
 
 > [!TIP]
 > There are various settings for the scratchpad in the workflow configuration.
