@@ -421,7 +421,7 @@ end tell
   deleted files can be found here.)
 - `oapplicationsupport`: Open Obsidian's Application Support folder.
 - `oplugins`: The plugin folder in `.obsidian` is opened in Finder.
-- `opthemes`: The theme folder in `.obsidian` is opened in Finder.
+- `othemes`: The theme folder in `.obsidian` is opened in Finder.
 
 ### Update plugins & metadata
 **`oupdate`: Update plugins and metadata used by this workflow**
