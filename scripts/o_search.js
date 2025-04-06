@@ -251,6 +251,30 @@ function run() {
 				},
 			});
 		}
+
+		// Blocks
+		if (!file.blocks) continue; // skips iteration if no blocks
+		for (const block of file.blocks) {
+			const bTitle = block.block;
+			const bId = block.id;
+			const blockIconpath = `icons/link.png`;
+			const matchStr = camelCaseMatch(bTitle) + `${bId}`;
+
+			resultsArr[insertVia]({
+				title: bTitle,
+				match: matchStr,
+				subtitle: "➣ " + filename + "(" + bId + ")",
+				arg: relativePath + "#^" + bId,
+				uid: relativePath + "#^" + bId,
+				quicklookurl: absolutePath,
+				icon: { path: blockIconpath },
+				mods: {
+					alt: { arg: relativePath },
+					shift: { arg: relativePath },
+				},
+			});
+		}
+
 	}
 
 	// CANVASES

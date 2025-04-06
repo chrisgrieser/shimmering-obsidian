@@ -94,7 +94,7 @@ change the metadata refresh rate via the Metadata Extractor Plugin's settings.
 
 ### Main search
 **`o`: Open files in your vault.**
-This keyword searches all your notes, aliases, folders, and headings combined.
+This keyword searches all your notes, aliases, folders, blocks, and headings combined.
 
 #### Search for notes
 This works similar to Obsidian's built-in *Quick Switcher*, but can be triggered
@@ -123,7 +123,7 @@ note).
 
 #### Smart queries
 - Add `filename` or `title` to your search query, to display only files and no
-  aliases, folders, or headings. For example, `o obsidian filename` displays
+  aliases, folders, blocks, or headings. For example, `o obsidian filename` displays
   only notes that have the `obsidian` in their filename.
 - Add `canvas` to your search to only display canvases (Obsidian 1.1).
 - Similarly, you can also filter for starred or recent files by adding `starred`

@@ -33,7 +33,10 @@ function run(argv) {
 	// determine input
 	const input = (argv[0] || "").trim(); // trim to remove trailing \n
 	const relativePath = (input.split("#")[0] || "").split(":")[0] || "";
-	const heading = input.split("#")[1];
+ let heading = input.split("#")[1];
+	const block = input.split("#^")[1];
+	// if we have a block ,then unset the heading
+	if (block) heading = null
 	const lineNum = input.split(":")[1]; // used by `oe` external link search to open at line
 
 	// DOCS https://vinzent03.github.io/obsidian-advanced-uri/concepts/navigation_parameters#open-mode
@@ -47,6 +50,7 @@ function run(argv) {
 		`vault=${vaultNameEnc}`,
 		`&filepath=${encodeURIComponent(relativePath)}`,
 		heading ? "&heading=" + encodeURIComponent(heading) : "",
+		block ? "&block=" + encodeURIComponent(block) : "",
 		lineNum ? "&line=" + encodeURIComponent(lineNum) : "",
 		openMode ? "&openmode=" + openMode : "",
 	];
