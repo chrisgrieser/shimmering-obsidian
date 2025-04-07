@@ -33,6 +33,7 @@ if [[ -f "$local_info_plist" ]] ; then
 	plutil -replace version -string "$next_version" "$local_info_plist"
 else
 	print "\033[1;33mCould not increment version, local \`info.plist\` not found: '$local_info_plist'\033[0m"
+	return 1
 fi
 
 # copy download link for current version
