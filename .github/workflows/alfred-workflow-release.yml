@@ -32,6 +32,11 @@ jobs:
           mode: "COMMIT"
           configurationJson: |
             {
+              "label_extractor": [{
+                "pattern": "^(\\w+){1}(\\([\\w\\-\\.]+\\))?(!)?: ([\\w ])+([\\s\\S]*)",
+                "on_property": "title",
+                "target": "$1"
+              }],
               "categories": [
                 { "title": "## 🚀 New features", "labels": ["feat", "improv"] },
                 { "title": "## 🛠️ Fixes", "labels": ["fix"] },
