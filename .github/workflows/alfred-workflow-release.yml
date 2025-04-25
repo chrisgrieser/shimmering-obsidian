@@ -33,7 +33,7 @@ jobs:
           configurationJson: |
             {
               "label_extractor": [{
-                "pattern": "^(\\w+){1}(\\([\\w\\-\\.]+\\))?(!)?: ([\\w ])+([\\s\\S]*)",
+                "pattern": "^(\\w+)(\\([\\w\\-\\.]+\\))?(!)?: .+",
                 "on_property": "title",
                 "target": "$1"
               }],
