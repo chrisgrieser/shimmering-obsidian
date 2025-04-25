@@ -62,6 +62,7 @@ Gallery.](https://alfred.app/workflows/chrisgrieser/shimmering-obsidian/)
 ## Installation
 *This workflow requires Alfred 5 with
 [Powerpack](https://www.alfredapp.com/powerpack/).*
+
 1. Install the Obsidian plugins [Advanced
    URI](https://obsidian.md/plugins?id=obsidian-advanced-uri) & [Metadata
    Extractor](https://obsidian.md/plugins?id=metadata-extractor).
@@ -74,8 +75,9 @@ Gallery.](https://alfred.app/workflows/chrisgrieser/shimmering-obsidian/)
 **In the Obsidian plugin settings for the "Metadata Extractor"**
 - Enable `Write JSON files automatically when Obsidian launches`.
 - Set `Configure frequency for writing the three JSON files` to how often you
-  want the Metadata to be updated. A value like 30 minutes is reasonable.
-- Do not change any of the other settings.
+  want the Metadata to be updated. A value like 30 minutes is reasonable. Do
+  **not** change any of the other settings.
+- Restart Obsidian.
 
 ## Alfred-based quick switcher
 The Alfred-based Quick Switcher is basically an enhanced version of [Obsidian's

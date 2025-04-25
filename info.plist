@@ -5449,13 +5449,14 @@ curl -sL "https://raw.githubusercontent.com/chrisgrieser/alfred-docs-searches/ma
 	<string>## 1️⃣ Setting up this workflow for the first time
 1. Install the Obsidian plugins [Advanced URI](https://obsidian.md/plugins?id=obsidian-advanced-uri) &amp; [Metadata Extractor](https://obsidian.md/plugins?id=metadata-extractor). 
 2. Enable both plugins.
-4. Set your vault path in the configuration to the left.
+3. Set your vault path in the configuration to the left.
 
 **In the Obsidian plugin settings for the "Metadata Extractor"**
 - Enable `Write JSON files automatically when Obsidian launches`.
 - Set `Configure frequency for writing the three JSON files` to how often you
-  want the Metadata to be updated. A value like 30 minutes is reasonable.
-- Do not change any of the other settings.
+  want the Metadata to be updated. A value like 30 minutes is reasonable. Do
+  **not** change any of the other settings.
+- Restart Obsidian.
 
 ## ⚙️ Workflow Configuration
 - **Some features require additional configuration to the left.** You can get further information on those features at the respective sections of the [documentation](https://github.com/chrisgrieser/shimmering-obsidian/blob/main/README.md).
@@ -5486,8 +5487,8 @@ curl -sL "https://raw.githubusercontent.com/chrisgrieser/alfred-docs-searches/ma
 
 ---
 
-**This Alfred plugin has been created by Chris Grieser (aka pseudometa).**
-- [Academic Website](https://chris-grieser.de/)
+**This workflow has been created by Chris Grieser (aka pseudometa).**
+- [Website](https://chris-grieser.de/)
 - [ResearchGate](https://www.researchgate.net/profile/Christopher-Grieser)
 - [Mastodon](https://pkm.social/@pseudometa)
 - [LinkedIn](https://www.linkedin.com/in/christopher-grieser-ba693b17a/)</string>

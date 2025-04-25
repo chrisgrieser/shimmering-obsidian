@@ -28,7 +28,6 @@ function camelCaseMatch(str) {
 const fileExists = (/** @type {string} */ filePath) => Application("Finder").exists(Path(filePath));
 
 //──────────────────────────────────────────────────────────────────────────────
-// Read and Parse data
 
 /** @type {AlfredRun} */
 // biome-ignore lint/correctness/noUnusedVariables: Alfred run
@@ -36,6 +35,15 @@ function run() {
 	const vaultPath = $.getenv("vault_path");
 	const configFolder = $.getenv("config_folder");
 	const vaultConfig = `${vaultPath}/${configFolder}`;
+
+	if (!fileExists(vaultConfig)) {
+		const errorItem = {
+			title: `🚫 Vault config folder "${configFolder}" not found.`,
+			subtitle: "Set the correct config folder in the workflow configuration.",
+			valid: false,
+		};
+		return JSON.stringify({ items: [errorItem] });
+	}
 
 	const metadataJSON = `${vaultConfig}/plugins/metadata-extractor/metadata.json`;
 	const canvasJSON = `${vaultConfig}/plugins/metadata-extractor/canvas.json`;
