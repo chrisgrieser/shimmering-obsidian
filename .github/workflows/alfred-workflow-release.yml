@@ -38,8 +38,9 @@ jobs:
                 "target": "$1"
               }],
               "categories": [
+                { "title": "## ⚠️ Breaking changes", "labels": ["break"] },
                 { "title": "## 🚀 New features", "labels": ["feat", "improv"] },
-                { "title": "## 🛠️ Fixes", "labels": ["fix"] },
+                { "title": "## 🛠️ Fixes", "labels": ["fix", "perf", "chore"] },
                 { "title": "## 👾 Other", "labels": [] }
               ],
               "ignore_labels": ["release", "bump"]
