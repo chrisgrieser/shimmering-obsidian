@@ -7160,7 +7160,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 				<key>pairs</key>
 				<array>
 					<array>
-						<string>Markdown Link</string>
+						<string>Markdown Link with Obsidian URI</string>
 						<string>Markdown Link</string>
 					</array>
 					<array>
