@@ -35,6 +35,10 @@ function run(argv) {
 		toCopy = `[[${filenameNoExt}#${heading}]]`;
 	} else if (linkType === "Wikilink") {
 		toCopy = `[[${filenameNoExt}]]`;
+	} else if (linkType === "Obsidian URI" && heading) {
+		toCopy = `obsidian://advanced-uri?vault=${vaultNameEnc}&filepath=${relativeEncodedPath}&heading=${heading}`;
+	} else if (linkType === "Obsidian URI") {
+		toCopy= `obsidian://open?vault=${vaultNameEnc}&file=${relativeEncodedPath}`;
 	} else {
 		toCopy = "error: link type not found";
 	}

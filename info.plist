@@ -6609,7 +6609,7 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>note</key>
-			<string>Copy Markdown Link / wikilink</string>
+			<string>Copy link</string>
 			<key>xpos</key>
 			<real>1680</real>
 			<key>ypos</key>
@@ -7166,6 +7166,10 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 					<array>
 						<string>Wikilink</string>
 						<string>Wikilink</string>
+					</array>
+					<array>
+						<string>Obsidian URI</string>
+						<string>Obsidian URI</string>
 					</array>
 				</array>
 			</dict>
