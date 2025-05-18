@@ -13,33 +13,37 @@ function run(argv) {
 
 	// import variables
 	let [relativePath, heading] = argv[0].split("#");
-	relativeEncodedPath = encodeURIComponent(relativePath);
-	heading = encodeURIComponent(heading);
+	const relativeEncodedPath = encodeURIComponent(relativePath);
+	heading = heading ? encodeURIComponent(heading) : "";
 	const linkType = $.getenv("link_type_to_copy");
 
 	//───────────────────────────────────────────────────────────────────────────
 
-	let filenameNoExt = relativePath.split("/").pop().replace(/\.\w+$/, "");
+	const filenameNoExt = relativePath
+		.split("/")
+		.pop()
+		?.replace(/\.\w+$/, "") || "error: path not found";
 	let toCopy;
 
-	if (linkType === "Markdown Link" && heading && heading != 'undefined' ) {
+	if (linkType === "Markdown Link" && heading) {
 		const urlScheme = `obsidian://advanced-uri?vault=${vaultNameEnc}&filepath=${relativeEncodedPath}&heading=${heading}`;
-		filenameNoExt += "|" + heading;
-		toCopy = `[${filenameNoExt}](${urlScheme})`;
+		toCopy = `[${filenameNoExt}|${heading}](${urlScheme})`;
 	} else if (linkType === "Markdown Link") {
 		const urlScheme = `obsidian://open?vault=${vaultNameEnc}&file=${relativeEncodedPath}`;
 		toCopy = `[${filenameNoExt}](${urlScheme})`;
-	} else if (linkType === "Wikilink" && heading && heading != 'undefined' ) {
+	} else if (linkType === "Wikilink" && heading) {
 		toCopy = `[[${filenameNoExt}#${heading}]]`;
 	} else if (linkType === "Wikilink") {
 		toCopy = `[[${filenameNoExt}]]`;
+	} else {
+		toCopy = "error: link type not found";
 	}
 
 	app.setTheClipboardTo(toCopy);
 
 	if (pasteInstead) {
 		delay(0.1); // for wait clipboard to be updated
-		Application("System Events").keystroke("v", { using: "command down" });
+		Application("System Events").keystroke("v", { using: ["command down"] });
 	} else {
 		return toCopy; // notification only when copying
 	}
