@@ -24,6 +24,8 @@ body:
             If the `o…` main search does not work, I made sure that I haven't changed any of the default
             settings of the Metadata-Extractor. 
           required: true
+        - label: I have searched the existing issues for this workflow.
+          required: true
   - type: textarea
     id: bug-description
     attributes:

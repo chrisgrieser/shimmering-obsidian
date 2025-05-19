@@ -15,6 +15,8 @@ body:
             overview](https://github.com/chrisgrieser/shimmering-obsidian#table-of-contents) and the
             feature doesn't already exist.
           required: true
+        - label: I have searched the existing issues for this workflow.
+          required: true
         - label:
             "If it is an entirely new feature: The requested feature makes more sense to be
             implemented in Alfred than in a plugin. Please also explain why."
