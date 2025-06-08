@@ -4,6 +4,7 @@
 # git
 .git/
 .gitignore
+.gitattributes
 
 # Alfred
 prefs.plist
