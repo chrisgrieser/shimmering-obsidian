@@ -23,32 +23,9 @@ jobs:
             --exclude "README.md" ".git*" "Justfile" ".build-and-release.sh" \
             ".rsync-exclude" ".editorconfig" ".typos.toml" ".markdownlint.*"
 
-      - name: Create release notes
-        id: release_notes
-        uses: mikepenz/release-changelog-builder-action@v5
-        env:
-          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-        with:
-          mode: "COMMIT"
-          configurationJson: |
-            {
-              "label_extractor": [{
-                "pattern": "^(\\w+)(\\([\\w\\-\\.]+\\))?(!)?: .+",
-                "on_property": "title",
-                "target": "$1"
-              }],
-              "categories": [
-                { "title": "## ⚠️ Breaking changes", "labels": ["break"] },
-                { "title": "## 🚀 New features", "labels": ["feat", "improv"] },
-                { "title": "## 🛠️ Fixes", "labels": ["fix", "perf"] },
-                { "title": "## 👾 Other", "labels": [] }
-              ],
-              "ignore_labels": ["release", "bump"]
-            }
-
       - name: Release
         uses: softprops/action-gh-release@v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          body: ${{ steps.release_notes.outputs.changelog }}
+          generate_release_notes: true
           files: ${{ env.WORKFLOW_NAME }}.alfredworkflow
