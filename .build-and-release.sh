@@ -54,7 +54,8 @@ if [[ -z "$last_release_commit" ]]; then
 fi
 changelog=$(git log "$last_release_commit"..HEAD --format='- %s' |
 	grep --extended-regexp --invert-match '^- (build|ci|release|chore|test)' |
-	sed -E "s/^- ([^ ]+): /- **\1**: /")
+	sed -Ee "s/^- ([^ ]+): /- **\1**: /" |
+	jq --raw-input --slurp --null-input --raw-output 'input | @uri') # url-encode
 if [[ -n "$changelog" ]]; then
 	repo=$(git remote --verbose | head -n1 | sed -E 's/.*github.com:([^[:space:]]*).*/\1/')
 	gallery_url="https://github.com/$repo" # github-url also okay for Alfred devs
