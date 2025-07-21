@@ -53,7 +53,7 @@ if [[ -z "$last_release_commit" ]]; then
 	last_release_commit=$root_commit
 fi
 changelog=$(git log "$last_release_commit"..HEAD --format='- %s' |
-	grep --extended-regexp --invert-match '^- (build|ci|release|chore|test)' |
+	grep --extended-regexp --invert-match '^- (build|ci|release|chore|test|style)' |
 	jq --raw-input --slurp --null-input --raw-output 'input | @uri') # url-encode
 if [[ -n "$changelog" ]]; then
 	repo=$(git remote --verbose | head -n1 | sed -E 's/.*github.com:([^[:space:]]*).*/\1/')
