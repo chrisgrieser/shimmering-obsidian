@@ -8,76 +8,72 @@ body:
     attributes:
       label: Make sure you have done the following
       options:
-        - label:
-            I have [updated to the latest
-            version](https://github.com/chrisgrieser/shimmering-obsidian/releases/latest) of this
-            workflow.
+        - label: I have updated to the [latest version of this workflow](./releases/latest).
+          required: true
+        - label: I am using Alfred 5.5 or later.
           required: true
         - label: I have read the documentation of the feature I am having problems with.
           required: true
-        - label: I am using Alfred 5.5 (lower versions are not supported).
+        - label:
+            I have updated to the latest version of the Metadata-Extractor and the Advanced URI
+            plugin.
           required: true
         - label:
-            I have updated to the latest version of the Metadata-Extractor and the Advanced URI plugin.
-          required: true
-        - label:
-            If the `o…` main search does not work, I made sure that I haven't changed any of the default
-            settings of the Metadata-Extractor. 
+            If the `o…` main search does not work, I made sure that I haven't changed any of the
+            default settings of the Metadata-Extractor.
           required: true
         - label: I have searched the existing issues for this workflow.
           required: true
   - type: textarea
     id: bug-description
     attributes:
-      label: Bug Description
-      description: Which part of the workflow is not working and in what way?
-    validations: { required: true }
-  - type: input
-    id: alfred-version-info
-    attributes:
-      label: Alfred version
-      description: Open the `Alfred Preferences.app`, go to the `General` tab. The version number is shown at the top left.
-      placeholder: 5.5 [2251]
-    validations: { required: true }
-  - type: input
-    id: macos-version-info
-    attributes:
-      label: macOS version
-      description: Click on the  symbol in the menu bar and select `About This Mac`.
-      placeholder: Sonoma 14.3
+      label: Bug description
+      description: A clear and concise description of the bug.
     validations: { required: true }
   - type: textarea
     id: screenshot
     attributes:
-      label: Relevant Screenshot
-      description: If applicable, add screenshots or a screen recording to help explain your problem.
+      label: Relevant screenshot
+      description:
+        If applicable, add screenshots or a screen recording to help explain your problem.
   - type: textarea
     id: reproduction-steps
     attributes:
-      label: To Reproduce
-      description: Steps to reproduce the problem.
+      label: To reproduce
+      description: Steps to reproduce the problem
       placeholder: |
         For example:
-        1. Go to…
-        2. Use the keyword…
+        1. Open Alfred.
+        2. Run the keyword…
         3. Select…
     validations: { required: true }
   - type: textarea
     id: debugging-log
     attributes:
-      label: Debugging Log
+      label: Debugging log
       description: >
-        You can get a debugging log by opening the workflow in Alfred preferences and pressing `cmd + D`.
-        A small window will open up. At the top of the window, change `All Information` to `Core
-        Information`. Use the malfunctioning part of the workflow once more, copy the content of  the
-        log window, and paste it here.
+        You can get a debugging log by opening the workflow in Alfred preferences and pressing `⌘ +
+        D`. A small window will open up which will log everything happening during the execution of
+        the Workflow. Use the malfunctioning part of the workflow once more, copy the content of the
+        log window, and paste it here. If the debugging log is long, please attach it as file
+        instead of pasting everything in here.
       render: Text
     validations: { required: true }
   - type: textarea
     id: workflow-configuration
     attributes:
-      label: Workflow Configuration
-      description: Any related workflow configuration you have changed from the default.
+      label: Workflow configuration
+      description:
+        Post a screenshot of your workflow configuration & note what you changed from the defaults.
+    validations: { required: true }
+  - type: input
+    id: alfred-version-info
+    attributes:
+      label: Alfred version
+      description:
+        Open the `Alfred Preferences.app`, go to the `General` tab. The version number is shown at
+        the top left.
+      placeholder: 5.5 [2251]
     validations: { required: true }
   - type: checkboxes
     id: compatibility-mode
@@ -85,5 +81,12 @@ body:
       label: Are you using Alfred in Compatibility Mode?
       description: Alfred Appearance settings > Options > Focusing
       options:
-        - label: "I am using Compatibility Mode."
+        - label: I am using Compatibility Mode.
           required: false
+  - type: input
+    id: macos-version-info
+    attributes:
+      label: macOS version
+      description: Click on the  symbol in the menu bar and select `About This Mac`.
+      placeholder: Sonoma 14.3
+    validations: { required: true }
