@@ -8,7 +8,7 @@ blanks-around-headings: { lines_below: 0 } # rule of proximity
 ul-style: { style: sublist }
 ol-prefix: { style: ordered }
 line-length: { tables: false, code_block_line_length: 90 }
-no-inline-html: { allowed_elements: [img, details, summary, kbd, a, table, tr, td] }
+no-inline-html: { allowed_elements: [img, details, summary, kbd, a, table, tr, th, td] }
 
 #-DISABLED----------------------------------------------------------------------
 ul-indent: false # not compatible with using tabs
