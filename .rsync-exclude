@@ -22,6 +22,7 @@ Justfile
 .build-and-release.sh
 
 # linter & types
+.harper-dictionary.txt
 .typos.toml
 .editorconfig
 .markdownlint.yaml
