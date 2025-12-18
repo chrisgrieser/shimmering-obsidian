@@ -9,7 +9,7 @@ disable = [
 
 # ------------------------------------------------------------------------------
 
-[MD007] # ul-indent
+[MD007]  # ul-indent
 indent = 4  # consistent with .editorconfig
 
 [MD013]  # line-length
@@ -32,4 +32,5 @@ style = "sentence_case"
 # ------------------------------------------------------------------------------
 
 [per-file-ignores]
-".github/pull_request_template.md" = ["MD041"]  # does not need to start with h1
+# does not need to start with h1
+".github/pull_request_template.md" = ["MD041"]
