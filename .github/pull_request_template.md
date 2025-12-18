@@ -5,8 +5,8 @@
 <!-- Explain how this PR resolves the problem. -->
 
 ## AI usage disclosure
-<!-- If you used AI beyond simple autocomplete, describe how. 
-AI-assisted code is not discouraged if it has been properly reviewed; 
+<!-- If you used AI beyond simple autocomplete, describe how.
+AI-assisted code is not discouraged if it has been properly reviewed;
 this disclosure is for transparency. -->
 
 ## Checklist

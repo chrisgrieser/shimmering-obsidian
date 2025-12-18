@@ -1,0 +1,35 @@
+# DOCS https://github.com/rvben/rumdl/blob/main/docs/global-settings.md
+# ------------------------------------------------------------------------------
+
+[global]
+line-length = 80
+disable = [
+  "MD032",  # blanks-around-lists: space waster
+]
+
+# ------------------------------------------------------------------------------
+
+[MD007] # ul-indent
+indent = 4  # consistent with .editorconfig
+
+[MD013]  # line-length
+code-blocks = false
+reflow = true  # enable auto-formatting
+reflow-mode = "default"  # default|normalize|sentence-per-line
+
+[MD022]  # blanks-around-headings
+lines-below = 0  # rule of proximity
+
+[MD029]  # ol-prefix
+style = "ordered"
+
+[MD033]  # inline-html
+allowed-elements = ["a", "img", "kbd"]  # badges
+
+[MD063]  # heading-capitalization
+style = "sentence_case"
+
+# ------------------------------------------------------------------------------
+
+[per-file-ignores]
+".github/pull_request_template.md" = ["MD041"]  # does not need to start with h1

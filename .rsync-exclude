@@ -25,7 +25,8 @@ Justfile
 .harper-dictionary.txt
 .typos.toml
 .editorconfig
-.markdownlint.yaml
+.rumdl.toml
+.rumdl_cache
 jxa-globals.d.ts
 jsconfig.json
 alfred.d.ts

@@ -1,0 +1,22 @@
+name: Markdown linting via rumdl
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "**/*.md"
+      - ".github/workflows/markdown-linting.yml"
+      - ".rumdl.toml"
+  pull_request:
+    paths:
+      - "**/*.md"
+
+jobs:
+  rumdl:
+    name: rumdl
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: rvben/rumdl@v0
+        with:
+          report-type: annotations

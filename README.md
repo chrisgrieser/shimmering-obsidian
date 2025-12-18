@@ -17,42 +17,42 @@ Gallery.](https://alfred.app/workflows/chrisgrieser/shimmering-obsidian/)
 
 - [Installation](#installation)
 - [Alfred-based quick switcher](#alfred-based-quick-switcher)
-	* [How the search works](#how-the-search-works)
-	* [Main search](#main-search)
-		+ [Search for notes](#search-for-notes)
-		+ [Smart queries](#smart-queries)
-		+ [Search for aliases](#search-for-aliases)
-		+ [Search for folders](#search-for-folders)
-		+ [Search for headings](#search-for-headings)
-		+ [Browse links of a note](#browse-links-of-a-note)
-	* [Search notes by their tags](#search-notes-by-their-tags)
-	* [Search bookmarked files](#search-bookmarked-files)
-	* [Search recent files](#search-recent-files)
-	* [Search for attachments](#search-for-attachments)
-	* [Search all external links in the entire vault](#search-all-external-links-in-the-entire-vault)
-	* [Extra features](#extra-features)
-		+ [Vault search as Alfred fallback](#vault-search-as-alfred-fallback)
-		+ [Previewing notes via QuickLook](#previewing-notes-via-quicklook)
+    - [How the search works](#how-the-search-works)
+    - [Main search](#main-search)
+        - [Search for notes](#search-for-notes)
+        - [Smart queries](#smart-queries)
+        - [Search for aliases](#search-for-aliases)
+        - [Search for folders](#search-for-folders)
+        - [Search for headings](#search-for-headings)
+        - [Browse links of a note](#browse-links-of-a-note)
+    - [Search notes by their tags](#search-notes-by-their-tags)
+    - [Search bookmarked files](#search-bookmarked-files)
+    - [Search recent files](#search-recent-files)
+    - [Search for attachments](#search-for-attachments)
+    - [Search all external links in the entire vault](#search-all-external-links-in-the-entire-vault)
+    - [Extra features](#extra-features)
+        - [Vault search as Alfred fallback](#vault-search-as-alfred-fallback)
+        - [Previewing notes via QuickLook](#previewing-notes-via-quicklook)
 - [Note-related features](#note-related-features)
-	* [Create a new note](#create-a-new-note)
-	* [Scratchpad](#scratchpad)
+    - [Create a new note](#create-a-new-note)
+    - [Scratchpad](#scratchpad)
 - [Screenshot features](#screenshot-features)
-	* [OCR screenshots](#ocr-screenshots)
-	* [Image screenshot](#image-screenshot)
+    - [OCR screenshots](#ocr-screenshots)
+    - [Image screenshot](#image-screenshot)
 - [Utility features](#utility-features)
-	* [Workspace switcher](#workspace-switcher)
-	* [Vault switcher](#vault-switcher)
-	* [Back up your vault](#back-up-your-vault)
-	* [CSS files](#css-files)
-	* [Open various folders](#open-various-folders)
-	* [Update plugins & metadata](#update-plugins--metadata)
+    - [Workspace switcher](#workspace-switcher)
+    - [Vault switcher](#vault-switcher)
+    - [Back up your vault](#back-up-your-vault)
+    - [CSS files](#css-files)
+    - [Open various folders](#open-various-folders)
+    - [Update plugins & metadata](#update-plugins--metadata)
 - [Plugins, themes, and settings](#plugins-themes-and-settings)
-	* [Plugins](#plugins)
-	* [Themes](#themes)
-	* [Settings & local plugins](#settings--local-plugins)
+    - [Plugins](#plugins)
+    - [Themes](#themes)
+    - [Settings & local plugins](#settings--local-plugins)
 - [Documentation searches](#documentation-searches)
-	* [Official documentation](#official-documentation)
-	* [Plugin developer documentation](#plugin-developer-documentation)
+    - [Official documentation](#official-documentation)
+    - [Plugin developer documentation](#plugin-developer-documentation)
 - [Cheatsheet](#cheatsheet)
 - [Credits](#credits)
 - [About the developer](#about-the-developer)
@@ -106,7 +106,8 @@ note).
 - `⌘ + ⏎`: Open the file in a new tab. (Can be configured in the workflow
   settings to open in a new window or split instead.)
 - `⌥ + ⏎`: Reveal the file in Finder.
-- `fn + ⏎`: Append content to the selected note. (Prompt for text or clipboard content)
+- `fn + ⏎`: Append content to the selected note. (Prompt for text or clipboard
+  content)
 - `⌃ + ⏎`: Copy the
   [Obsidian-URI](https://help.obsidian.md/Advanced+topics/Using+obsidian+URI#Action+`hook-get-address`)
   to the selected file.
@@ -181,23 +182,23 @@ that note**
   external links. (As of now, unresolved internal links are not displayed
   though.)
 - Selecting an outgoing link or backlink opens the respective note.
-	* All the modifiers (`⌘/⌃/⌥/fn/⇧ + ⏎`) apply the same way as with the main
-	  `o` search.
-	* *Yes, this means you can repeatedly use `⇧ + ⏎` to basically traverse
-	  your graph via Alfred. 😎*
+    - All the modifiers (`⌘/⌃/⌥/fn/⇧ + ⏎`) apply the same way as with the main
+      `o` search.
+    - *Yes, this means you can repeatedly use `⇧ + ⏎` to basically traverse
+      your graph via Alfred. 😎*
 - for external links:
-	* Selecting an external link with `⏎` opens the link in the default browser.
-	* Press `⌥ + ⏎` on an external link to copy the URL to the clipboard
-	  instead.
+    - Selecting an external link with `⏎` opens the link in the default browser.
+    - Press `⌥ + ⏎` on an external link to copy the URL to the clipboard
+      instead.
 
 ### Search notes by their tags
 **`ot`: Search `t`ags and subsequently files with that tag**
 - Display and search a full list of all tags in your vault.
-	* Select a tag with `⏎` to display & search all notes with that tag.
-	* In the following list of your notes, all the modifiers (`⌘/⌃/⌥/fn/⇧ + ⏎`)
-	  apply the same way as they do with the `o` search.
-	* Press `⌘ + ⏎` instead to open Obsidian's search pane and search for the
-	  tag there.
+    - Select a tag with `⏎` to display & search all notes with that tag.
+    - In the following list of your notes, all the modifiers (`⌘/⌃/⌥/fn/⇧ + ⏎`)
+      apply the same way as they do with the `o` search.
+    - Press `⌘ + ⏎` instead to open Obsidian's search pane and search for the
+      tag there.
 - Use the workflow configuration to set whether nested tags should be merged
   with their parent or not.
 
@@ -272,7 +273,7 @@ works for Markdown and requires some minor setup.
   (Note that the [Filename Heading Sync
   Plugin](https://obsidian.md/plugins?id=obsidian-filename-heading-sync) may
   interfere with this.)
-	* When triggered via `cmd + ⏎`, the new note is created in a new tab.
+    - When triggered via `cmd + ⏎`, the new note is created in a new tab.
 - **Content:** You can select a template note to use in the workflow
   configuration. Only `{{title}}` is supported as placeholder and is replaced
   with the file name. Be aware that the template might be overridden by Folder
@@ -332,7 +333,7 @@ brew install tesseract tesseract-lang
 > system settings.
 >
 > <img
-> src="https://user-images.githubusercontent.com/73286100/131231644-a800c0b0-8dc2-4ae9-bd41-c3937741b94a.png"
+> src="<https://user-images.githubusercontent.com/73286100/131231644-a800c0b0-8dc2-4ae9-bd41-c3937741b94a.png>"
 > alt="Permissions for OCR Screenshots" width=35%>
 
 ### Image screenshot
@@ -436,11 +437,11 @@ end tell
 ### Plugins
 **`op`: combined Search of community `p`lugins and community themes.**
 - Press `⏎` to open the plugin's GitHub repository.
-	* Use `⌘ + ⏎` to open the plugin in Obsidian's Community Plugin Browser
-	  instead.
-	* Press `⌥ + ⏎` to copy the plugin URI (`obsidian://show-plugin?id=…`) to
-	  your clipboard.
-	* `⌘⌥ + ⏎`: Copy the plugin link together with a description.
+    - Use `⌘ + ⏎` to open the plugin in Obsidian's Community Plugin Browser
+      instead.
+    - Press `⌥ + ⏎` to copy the plugin URI (`obsidian://show-plugin?id=…`) to
+      your clipboard.
+    - `⌘⌥ + ⏎`: Copy the plugin link together with a description.
 - Only plugins officially included in the community plugins are displayed —
   plugins solely available via GitHub or still in review are not shown.
 - Add `plugin` to the search query to only display plugin, for example, use `op
@@ -452,13 +453,13 @@ end tell
 ### Themes
 **`op`: Combined Search of community `p`lugins and community themes.**
 - Press `⏎` to open the theme's GitHub repository in the browser.
-	* Use `⌘ + ⏎` to open the theme browser instead. (There are no separate
-	  theme pages in Obsidian Theme Browser that can be opened.)
-	* Press `⌥ + ⏎` to copy the theme URI (`obsidian://show-theme?id=…`) to your
-	  clipboard.
-	* `⌘⌥ + ⏎`: Copy the plugin link together with a description.
-	* Use `⇧` or `⌘ + Y` to open a Quick Look Preview of the theme's promo
-	  screenshot. Press `⇧` or `⌘ + Y` again to close the preview.
+    - Use `⌘ + ⏎` to open the theme browser instead. (There are no separate
+      theme pages in Obsidian Theme Browser that can be opened.)
+    - Press `⌥ + ⏎` to copy the theme URI (`obsidian://show-theme?id=…`) to your
+      clipboard.
+    - `⌘⌥ + ⏎`: Copy the plugin link together with a description.
+    - Use `⇧` or `⌘ + Y` to open a Quick Look Preview of the theme's promo
+      screenshot. Press `⇧` or `⌘ + Y` again to close the preview.
 - Only themes officially included in the community themes are displayed — themes
   solely available via GitHub or still in review are not shown.
 - Add `theme` to the search query to only display themes, for instance use `op
@@ -478,11 +479,11 @@ src="https://user-images.githubusercontent.com/73286100/131027623-5e8b3667-d00d-
 - `⌥ + ⏎` opens the local plugin folder in `.obsidian/plugins/` in Finder.
 - `⇧ + ⏎` enables/disables the plugin.
 - *⚙️ For developers:*
-	* `⌘ + ⏎` opens the local plugin folder in your default Terminal.
-	  (You can [change the default terminal in the Alfred
-	  Settings](https://www.alfredapp.com/help/features/terminal/).)
-	* `⌃ + ⏎` copies the plugin's ID. (Hold `⌃` to see the plugin's id.)
-	* `fn + ⏎` runs `git pull` in the plugin's directory.
+    - `⌘ + ⏎` opens the local plugin folder in your default Terminal.
+      (You can [change the default terminal in the Alfred
+      Settings](https://www.alfredapp.com/help/features/terminal/).)
+    - `⌃ + ⏎` copies the plugin's ID. (Hold `⌃` to see the plugin's id.)
+    - `fn + ⏎` runs `git pull` in the plugin's directory.
 
 > [!TIP]
 > `o,` refers to the `⌘ ,` shortcut used to open the settings.
@@ -495,8 +496,8 @@ src="https://user-images.githubusercontent.com/73286100/131027623-5e8b3667-d00d-
 - This command mimics the search behavior on the official documentation site,
   meaning that it also searches for headings inside individual documentation
   pages.
-	* Press `⏎` to open in your default browser.
-	* Use `⌥ + ⏎` to copy the link to your clipboard.
+    - Press `⏎` to open in your default browser.
+    - Use `⌥ + ⏎` to copy the link to your clipboard.
 
 ### Plugin developer documentation
 <!-- LTeX: enabled=false -->
