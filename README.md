@@ -53,7 +53,7 @@ Gallery.](https://alfred.app/workflows/chrisgrieser/shimmering-obsidian/)
 - [Documentation searches](#documentation-searches)
     - [Official documentation](#official-documentation)
     - [Plugin developer documentation](#plugin-developer-documentation)
-- [Cheatsheet](#cheatsheet)
+- [Cheatsheet](#cheat-sheet)
 - [Credits](#credits)
 - [About the developer](#about-the-developer)
 
@@ -72,6 +72,7 @@ Gallery.](https://alfred.app/workflows/chrisgrieser/shimmering-obsidian/)
    Double-click the `.alfredworkflow` file to install it.
 4. Set your vault path in the workflow configuration.
 
+<!-- rumdl-disable-next-line MD036 -->
 **In the Obsidian plugin settings for the "Metadata Extractor"**
 - Enable `Write JSON files automatically when Obsidian launches`.
 - Set `Configure frequency for writing the three JSON files` to how often you
@@ -157,7 +158,7 @@ that you are now searching only for files and folders inside that folder.
 
 #### Search for headings
 Displayed alongside the other search results are all headings in your vault.
-Selecting a heading with `⏎` opens the file *at the respective heading*.
+Selecting headings with `⏎` opens the file *at the respective heading*.
 - `⌃ + ⏎`: Copies either a Markdown link [that uses the Obsidian
   URI](https://help.obsidian.md/Advanced+topics/Using+obsidian+URI#Action+%60hook-get-address%60)
   or the wikilink to the selected file, depending on the setting. Also work with
@@ -192,6 +193,7 @@ that note**
       instead.
 
 ### Search notes by their tags
+<!-- harper: ignore -->
 **`ot`: Search `t`ags and subsequently files with that tag**
 - Display and search a full list of all tags in your vault.
     - Select a tag with `⏎` to display & search all notes with that tag.
@@ -249,10 +251,10 @@ in the Alfred Settings under `Features → Previews`:
 [QLmarkdown](https://github.com/sbarex/QLMarkdown) and
 [Peek](https://apps.apple.com/app/peek-quick-look-extension/id1554235898) both
 enable previewing of Markdown documents. Peek works with a wide range of other
-file types than Markdown, but costs around €5. `QLMarkdown` is free, but only
+filetypes than Markdown, but costs around €5. `QLMarkdown` is free, but only
 works for Markdown and requires some minor setup.
 
-<details>
+<details> <!-- rumdl-disable-line MD033 -->
 - The app `QLMarkdown.app` must be started at least once. You may need to
   right-click the app and select `open`, to be able to allow macOS to trust the
   app.
@@ -269,14 +271,14 @@ works for Markdown and requires some minor setup.
 **`on`: Create a `n`ew note.**
 <!-- LTeX: enabled=true -->
 - **File name:** Anything you type after the keyword `on` (for example, `on
-  foobar`) becomes the file name of the new note (for example, `foobar.md`).
+  foobar`) becomes the filename of the new note (for example, `foobar.md`).
   (Note that the [Filename Heading Sync
   Plugin](https://obsidian.md/plugins?id=obsidian-filename-heading-sync) may
   interfere with this.)
     - When triggered via `cmd + ⏎`, the new note is created in a new tab.
 - **Content:** You can select a template note to use in the workflow
   configuration. Only `{{title}}` is supported as placeholder and is replaced
-  with the file name. Be aware that the template might be overridden by Folder
+  with the filename. Be aware that the template might be overridden by Folder
   Templates from the [Templater
   plugin](https://obsidian.md/plugins?id=templater-obsidian).
 - **Location:** The new note is placed in the folder specified in the workflow
@@ -288,7 +290,7 @@ works for Markdown and requires some minor setup.
 **`oo` or `triggered via hotkey`: Append to your Scratchpad Note**
 Quickly add text to the note set in the workflow configuration. (This command is
 basically a quicker version of the `fn + ⏎` mode of the [Alfred-based Quick
-Switcher](Alfred-based%20Quick%20Switcher.md#search-for-notes).)
+Switcher](#alfred-based-quick-switcher).)
 - When using `oo foobar`, appends `foobar` to the note.
 - Using just `oo`, you can also directly open the Scratchpad.
 - Triggered via **hotkey**, appends the current selection.
@@ -309,7 +311,7 @@ Switcher](Alfred-based%20Quick%20Switcher.md#search-for-notes).)
 **`Triggered via Hotkey`: Take an OCR Screenshot.**
 - Similar to the default Mac Hotkey `⌘ ⇧ + 4`, you are able to select part
   of your screen for a screenshot. However, instead of saving a screenshot, a
-  new note is created which contains the OCR'ed content of the selection.
+  new note is created which contains the OCR-ed content of the selection.
 - For best results, you should set the languages to be recognized in the
   workflow settings, such as `eng+deu` for English and German. You can find out
   the
@@ -318,7 +320,7 @@ Switcher](Alfred-based%20Quick%20Switcher.md#search-for-notes).)
 - 💡 There are various settings in the workflow configurations for
   OCR-screenshots.
 
-**Requirement**  
+**Requirement** <!-- rumdl-disable-line MD036 -->
 For the OCR-Screenshot Feature, you need to install
 [Tesseract](https://tesseract-ocr.github.io/tessdoc/Installation.html). If you
 use Homebrew, you can do so with the following command:
@@ -328,7 +330,7 @@ brew install tesseract tesseract-lang
 ```
 
 > [!TIP]
-> The first time you use the OCR or image screenshot feature, you might need to
+> The first time you use the OCR or image screenshot feature, you might have to
 > give Alfred permission to record your screen. You can do so under the macOS
 > system settings.
 >
@@ -340,7 +342,7 @@ brew install tesseract tesseract-lang
 **`Triggered via Hotkey`: Take an image screenshot.**
 - Similar to the default Mac Hotkey `⌘ ⇧ + 4`, you are able to select part
   of your screen for a screenshot. The image is directly saved in your
-  vault with the file name `Screenshot {date} {time}.png` and the image is
+  vault with the filename `Screenshot {date} {time}.png` and the image is
   embedded (`![[image_file_name.png]]`) in the note `Images.md` in your vault
   root.
 - The images are saved in `{vault-path}/screenshots/` by default. You can
@@ -375,7 +377,7 @@ src="https://user-images.githubusercontent.com/73286100/133615940-a56731e5-6b60-
 - `⇧ ⏎` Control this vault with Alfred.
 
 > [!NOTE]
-> The `Metadata Extractor` and the `Advanced URI` plugin need to be installed
+> The `Metadata Extractor` and the `Advanced URI` plugins need to be installed
 > and enabled in every vault you want to control. The `Metadata Extractor` needs
 > to be configured in every vault as well.
 
@@ -505,7 +507,7 @@ src="https://user-images.githubusercontent.com/73286100/131027623-5e8b3667-d00d-
 <!-- LTeX: enabled=true -->
 Search the official [Obsidian developer docs](https://docs.obsidian.md/Home).
 
-## Cheatsheet
+## Cheat sheet
 - `o`: All notes
 - `oe`: All external links
 - `ot`: Tags
