@@ -5,8 +5,13 @@ line-length = 80
 disable = [
   "MD032",  # blanks-around-lists: space waster
 ]
+# PENDING https://github.com/rvben/rumdl/issues/208
+exclude = [".github/pull_request_template.md"]
 
 # ------------------------------------------------------------------------------
+
+[MD004]  # ul-style
+style = "dash"  # GitHub default & quicker to type
 
 [MD007]  # ul-indent
 indent = 4  # consistent with .editorconfig
@@ -22,9 +27,13 @@ lines-below = 0  # rule of proximity
 style = "ordered"
 
 [MD033]  # inline-html
-allowed-elements = ["a", "img", "kbd"]  # badges and `kbd` for hotkey instructions
+# badges and `kbd` for hotkey instructions
+allowed-elements = ["a", "img", "kbd"]
 
-[MD049]  # emphasis style
+[MD049]  # emphasis-style
+style = "asterisk"  # better than underscore, since it's not considered a word-char
+
+[MD050]  # strong-style
 style = "asterisk"  # better than underscore, since it's not considered a word-char
 
 [MD063]  # heading-capitalization

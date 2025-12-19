@@ -5,7 +5,7 @@ on:
     branches: [main]
     paths:
       - "**/*.md"
-      - ".github/workflows/markdown-linting.yml"
+      - ".github/workflows/rumdl-lint.yml"
       - ".rumdl.toml"
   pull_request:
     paths:
