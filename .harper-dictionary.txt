@@ -1,3 +1,6 @@
 QuickLook
+ags
 backlink
 backlinks
+lugins
+xternal

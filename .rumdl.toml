@@ -35,10 +35,12 @@ style = "asterisk"  # better than underscore, since it's not considered a word-c
 style = "asterisk"  # better than underscore, since it's not considered a word-char
 
 [MD060]  # auto-format tables
-enabled = true  # opt-in, since rule still experimental
+enabled = true  # opt-in, since disabled by default
 
 [MD063]  # heading-capitalization
+enabled = true  # opt-in, since disabled by default
 style = "sentence_case"
+ignore-words = ["Alfred"]
 
 # ------------------------------------------------------------------------------
 

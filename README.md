@@ -1,4 +1,4 @@
-# Shimmering Obsidian 🎩
+# Shimmering Obsidian 🎩 <!-- rumdl-disable-line MD063 -->
 ![GitHub downloads](https://img.shields.io/github/downloads/chrisgrieser/shimmering-obsidian/total?label=GitHub%20Downloads&style=plastic&logo=github)
 ![Alfred gallery downloads](https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fchrisgrieser%2F.config%2Frefs%2Fheads%2Fmain%2FAlfred.alfredpreferences%2Falfred-gallery-downloads.yaml&query=shimmering-obsidian&style=plastic&logo=alfred&label=Gallery%20Downloads&color=%235C1F87)
 ![Latest release](https://img.shields.io/github/v/release/chrisgrieser/shimmering-obsidian?label=Latest%20Release&style=plastic)
@@ -267,9 +267,7 @@ works for Markdown and requires some minor setup.
 ## Note-related features
 
 ### Create a new note
-<!-- LTeX: enabled=false -->
 **`on`: Create a `n`ew note.**
-<!-- LTeX: enabled=true -->
 - **File name:** Anything you type after the keyword `on` (for example, `on
   foobar`) becomes the filename of the new note (for example, `foobar.md`).
   (Note that the [Filename Heading Sync
@@ -502,9 +500,7 @@ src="https://user-images.githubusercontent.com/73286100/131027623-5e8b3667-d00d-
     - Use `⌥ + ⏎` to copy the link to your clipboard.
 
 ### Plugin developer documentation
-<!-- LTeX: enabled=false -->
 **`odd`: `o`bsidian `d`eveloper `d`ocumentation Search**
-<!-- LTeX: enabled=true -->
 Search the official [Obsidian developer docs](https://docs.obsidian.md/Home).
 
 ## Cheat sheet
