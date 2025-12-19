@@ -1,5 +1,4 @@
 # DOCS https://github.com/rvben/rumdl/blob/main/docs/global-settings.md
-# ------------------------------------------------------------------------------
 
 [global]
 line-length = 80
@@ -15,7 +14,6 @@ indent = 4  # consistent with .editorconfig
 [MD013]  # line-length
 code-blocks = false
 reflow = true  # enable auto-formatting
-reflow-mode = "default"  # default|normalize|sentence-per-line
 
 [MD022]  # blanks-around-headings
 lines-below = 0  # rule of proximity
@@ -24,7 +22,10 @@ lines-below = 0  # rule of proximity
 style = "ordered"
 
 [MD033]  # inline-html
-allowed-elements = ["a", "img", "kbd"]  # badges
+allowed-elements = ["a", "img", "kbd"]  # badges and `kbd` for hotkey instructions
+
+[MD049]  # emphasis style
+style = "asterisk"  # better than underscore, since it's not considered a word-char
 
 [MD063]  # heading-capitalization
 style = "sentence_case"
