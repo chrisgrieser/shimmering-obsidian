@@ -30,3 +30,6 @@ Justfile
 jxa-globals.d.ts
 jsconfig.json
 alfred.d.ts
+
+# other
+*.shortcut
