@@ -2,48 +2,44 @@
 
 [global]
 line-length = 80
-disable = [
-  "MD032",  # blanks-around-lists: space waster
-]
+disable = ["blanks-around-lists"]  # rule of proximity
 
 # ------------------------------------------------------------------------------
 
-[MD004]  # ul-style
+[ul-style]
 style = "dash"  # GitHub default & quicker to type
 
-[MD007]  # ul-indent
+[ul-indent]
 indent = 4  # consistent with .editorconfig
 
-[MD013]  # line-length
+[line-length]
 code-blocks = false
 reflow = true  # enable auto-formatting
 
-[MD022]  # blanks-around-headings
+[blanks-around-headings]
 lines-below = 0  # rule of proximity
 
-[MD029]  # ol-prefix
+[ol-prefix]
 style = "ordered"
 
-[MD033]  # inline-html
-# badges and `kbd` for hotkey instructions
-allowed-elements = ["a", "img", "kbd"]
+[no-inline-html]
+allowed-elements = ["a", "img", "kbd"]  # badges
 
-[MD049]  # emphasis-style
-style = "asterisk"  # better than underscore, since it's not considered a word-char
+[emphasis-style]
+style = "asterisk"  # better than underscore, since not considered a word-char
 
-[MD050]  # strong-style
-style = "asterisk"  # better than underscore, since it's not considered a word-char
+[strong-style]
+style = "asterisk"
 
-[MD060]  # auto-format tables
-enabled = true  # opt-in, since disabled by default
+[table-format]
+enabled = true  # opt-in rule
 
-[MD063]  # heading-capitalization
-enabled = true  # opt-in, since disabled by default
+[heading-capitalization]
+enabled = true  # opt-in rule
 style = "sentence_case"
-ignore-words = ["Alfred"]
+ignore-words = ["nvim", "Obsidian", "Alfred"]
 
 # ------------------------------------------------------------------------------
 
 [per-file-ignores]
-# does not need to start with h1
-".github/pull_request_template.md" = ["MD041"]
+".github/pull_request_template.md" = ["first-line-h1"]
