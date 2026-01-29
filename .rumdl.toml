@@ -39,6 +39,9 @@ enabled = true  # opt-in rule
 style = "sentence_case"
 ignore-words = ["nvim", "Obsidian", "Alfred"]
 
+[toc-validation]
+enabled = true  # opt-in rule
+
 # ------------------------------------------------------------------------------
 
 [per-file-ignores]

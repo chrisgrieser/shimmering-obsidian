@@ -14,7 +14,6 @@ Gallery.](https://alfred.app/workflows/chrisgrieser/shimmering-obsidian/)
 ## Table of contents
 
 <!-- toc -->
-
 - [Installation](#installation)
 - [Alfred-based quick switcher](#alfred-based-quick-switcher)
     - [How the search works](#how-the-search-works)
@@ -53,10 +52,9 @@ Gallery.](https://alfred.app/workflows/chrisgrieser/shimmering-obsidian/)
 - [Documentation searches](#documentation-searches)
     - [Official documentation](#official-documentation)
     - [Plugin developer documentation](#plugin-developer-documentation)
-- [Cheatsheet](#cheat-sheet)
+- [Cheat sheet](#cheat-sheet)
 - [Credits](#credits)
 - [About the developer](#about-the-developer)
-
 <!-- tocstop -->
 
 ## Installation
