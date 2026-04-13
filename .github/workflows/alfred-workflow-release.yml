@@ -24,7 +24,7 @@ jobs:
             ".rsync-exclude" ".editorconfig" ".typos.toml" ".markdownlint.*"
 
       - name: Release
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           generate_release_notes: true
