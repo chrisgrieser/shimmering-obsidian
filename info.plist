@@ -3118,6 +3118,8 @@ set parameter to do shell script "echo " &amp; quoted form of (system attribute 
 				<true/>
 				<key>variables</key>
 				<dict>
+					<key>current_vault_path</key>
+					<string>{var:folder_vault_path}</string>
 					<key>current_folder</key>
 					<string>{var:browse_folder}</string>
 				</dict>
@@ -5447,7 +5449,7 @@ curl -sL "https://raw.githubusercontent.com/chrisgrieser/alfred-docs-searches/ma
 	</array>
 	<key>readme</key>
 	<string>## 1️⃣ Setting up this workflow for the first time
-1. Install the Obsidian plugins [Advanced URI](https://obsidian.md/plugins?id=obsidian-advanced-uri) &amp; [Metadata Extractor](https://obsidian.md/plugins?id=metadata-extractor). 
+1. Install the Obsidian plugins [Advanced URI](https://obsidian.md/plugins?id=obsidian-advanced-uri) &amp; [Metadata Extractor](https://obsidian.md/plugins?id=metadata-extractor).
 2. Enable both plugins.
 3. Set your vault path in the configuration to the left.
 
@@ -5460,7 +5462,7 @@ curl -sL "https://raw.githubusercontent.com/chrisgrieser/alfred-docs-searches/ma
 
 ## ⚙️ Workflow Configuration
 - **Some features require additional configuration to the left.** You can get further information on those features at the respective sections of the [documentation](https://github.com/chrisgrieser/shimmering-obsidian/blob/main/README.md).
-- To configure the hotkeys, double-click the [sky-blue fields](https://i.imgur.com/wlpht7f.png) at the top left of the workflow window. 
+- To configure the hotkeys, double-click the [sky-blue fields](https://i.imgur.com/wlpht7f.png) at the top left of the workflow window.
 
 ## Links
 - 📙 [Changelog](https://github.com/chrisgrieser/shimmering-obsidian/releases)
@@ -7100,6 +7102,25 @@ DOUBLE CLICK THIS to set Hotkey. Suggested Hotkey: cmd + shift + 1</string>
 			<string>checkbox</string>
 			<key>variable</key>
 			<string>remove_emojis</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<false/>
+				<key>required</key>
+				<false/>
+				<key>text</key>
+				<string>Search all vaults</string>
+			</dict>
+			<key>description</key>
+			<string>Search for notes and canvases across all of your Obsidian vaults rather than just the active one.</string>
+			<key>label</key>
+			<string></string>
+			<key>type</key>
+			<string>checkbox</string>
+			<key>variable</key>
+			<string>search_all_vaults</string>
 		</dict>
 		<dict>
 			<key>config</key>
