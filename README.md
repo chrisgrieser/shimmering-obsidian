@@ -120,7 +120,9 @@ note).
 
 > [!TIP]
 > There are various settings for appending and opening notes, which can be found
-> in the workflow configuration.
+> in the workflow configuration. You can also configure the workflow to search
+> across all of your Obsidian vaults rather than just the active one by enabling
+> the `Search all vaults` setting.
 
 #### Smart queries
 - Add `filename` or `title` to your search query, to display only files and no

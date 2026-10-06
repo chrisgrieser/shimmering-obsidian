@@ -25,7 +25,7 @@ const fileExists = (/** @type {string} */ filePath) => Application("Finder").exi
 /** @type {AlfredRun} */
 // biome-ignore lint/correctness/noUnusedVariables: Alfred run
 function run() {
-	const vaultPath = $.getenv("vault_path");
+	const vaultPath = $.getenv("current_vault_path");
 	const vaultNameEnc = encodeURIComponent(vaultPath.replace(/.*\//, ""));
 	const relativePath = $.getenv("current_folder") + "/Untitled.md";
 	let newNoteAbsPath = `${vaultPath}/${relativePath}`;
